@@ -23,19 +23,20 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
       <div className="container flex justify-between items-center">
-        <a href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter">
+        <a href="/" className="flex items-center gap-2 text-2xl font-black tracking-tighter hover:scale-105 transition-transform duration-300">
           <Rocket className="text-accent-primary" size={28} />
-          <span>GOODMAN<span className="text-accent-primary">SEO</span></span>
+          <span className="gradient-text">GOODMANSEO</span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-10 items-center">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="text-sm font-medium hover:text-accent-primary transition-colors">
+            <a key={link.name} href={link.href} className="text-sm font-semibold text-text-muted hover:text-white transition-colors relative group">
               {link.name}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
-          <a href="/contact" className="px-6 py-2 rounded-full glass border-accent-primary text-accent-primary text-sm font-bold hover:bg-accent-primary hover:text-white transition-all">
+          <a href="/contact" className="px-7 py-2.5 rounded-full glass border border-accent-primary/50 text-white text-sm font-bold hover:bg-accent-primary/20 hover:border-accent-primary transition-all shadow-[0_0_15px_rgba(0,242,255,0.1)] hover:shadow-[0_0_20px_rgba(0,242,255,0.3)]">
             무료 상담하기
           </a>
         </div>
