@@ -49,8 +49,8 @@ const Home = () => {
                   <Sparkles size={24} /> 패키지 시작하기
                 </span>
               </a>
-              <a href="/portfolio" className="px-10 py-5 glass border-white/10 text-white font-bold text-lg rounded-full hover:bg-white/5 transition-all flex items-center justify-center gap-2 hover:border-white/30">
-                포트폴리오 보기 <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
+              <a href="/blog" className="px-10 py-5 glass border-white/10 text-white font-bold text-lg rounded-full hover:bg-white/5 transition-all flex items-center justify-center gap-2 hover:border-white/30">
+                블로그 보기 <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </motion.div>

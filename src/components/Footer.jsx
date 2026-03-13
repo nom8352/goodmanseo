@@ -29,7 +29,7 @@ const Footer = () => {
           <ul className="flex flex-col gap-4">
             <li><a href="/" className="text-text-muted hover:text-accent-primary">홈</a></li>
             <li><a href="/starter-package" className="text-text-muted hover:text-accent-primary">스타터 패키지</a></li>
-            <li><a href="/portfolio" className="text-text-muted hover:text-accent-primary">포트폴리오</a></li>
+            <li><a href="/blog" className="text-text-muted hover:text-accent-primary">블로그</a></li>
             <li><a href="/contact" className="text-text-muted hover:text-accent-primary">상담 신청</a></li>
           </ul>
         </div>

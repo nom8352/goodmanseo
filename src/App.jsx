@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import StarterPackage from './pages/StarterPackage';
-import Portfolio from './pages/Portfolio';
+import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
 // Scroll to top on route change
@@ -26,7 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/starter-package" element={<StarterPackage />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
