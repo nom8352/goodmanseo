@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight, BookOpen } from 'lucide-react';
 import { Tilt } from 'react-tilt';
+import blog1 from '../assets/blog1.png';
+import blog3 from '../assets/blog3.png';
 
 const Blog = () => {
   const posts = [
@@ -19,7 +21,7 @@ const Blog = () => {
 구글 마이비즈니스(Google My Business) 세팅은 온라인 마케팅의 가장 기본이자, 고객이 우리 매장으로 문을 열고 들어오게 만드는 '온라인 간판'입니다. 하지만 많은 사장님들이 바쁜 생업에 쫓겨 이 중요한 기본기를 놓치고 계십니다.
 
 복잡한 검색어 최적화(SEO) 이론을 공부하실 필요는 없습니다. 저희 Goodman SEO는 비즈니스 성격에 맞는 최적화된 구글 세팅은 물론, 고객의 시선을 사로잡는 퀄리티 높은 매장/제품 사진을 통해 첫인상부터 신뢰를 주는 완벽한 온라인 기반을 만들어 드립니다.`,
-      image: '/src/assets/blog1.png'
+      image: blog1
     },
     {
       id: 2,
@@ -51,7 +53,7 @@ SNS가 사람들에게 전단지를 나눠주며 호기심을 끄는 역할이�
 Goodman SEO는 불필요한 거품을 뺐습니다. 비즈니스 초기에 반드시 세팅해야 하는 3가지 핵심 요소인 1) 트렌디한 웹사이트 제작, 2) 구글 검색(GMB) 최적화, 3) SNS 비즈니스 계정 세팅을 하나의 패키지로 묶었습니다.
 
 월 $500이라는 합리적인 비용으로 기초 공사는 물론, 6개월간 든든하게 사이트와 온라인 채널이 원활하게 굴러가도록 밀착 관리해 드립니다. 사장님은 본업인 비즈니스에만 집중하세요. 복잡하고 머리 아픈 온라인 기본기 세팅은 저희가 확실하게 책임지겠습니다.`,
-      image: '/src/assets/blog3.png'
+      image: blog3
     }
   ];
 
