@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Check, Info, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
@@ -85,7 +86,7 @@ const StarterPackage = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .text-accent-primary { color: var(--accent-primary); }
         .bg-accent-primary { background: var(--accent-primary); }
         .text-text-muted { color: var(--text-muted); }

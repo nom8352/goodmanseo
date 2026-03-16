@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { Menu, X, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -49,7 +50,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#030014]/fb backdrop-blur-2xl py-12 flex flex-col items-center gap-8 animate-in fade-in slide-in-from-top-4 duration-300 border-b border-white/5 shadow-2xl">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#030014]/95 backdrop-blur-2xl py-12 flex flex-col items-center gap-8 animate-in fade-in slide-in-from-top-4 duration-300 border-b border-white/5 shadow-2xl">
           {navLinks.map((link) => (
             <Link key={link.name} to={link.href} className="text-xl font-bold hover:text-accent-primary transition-colors" onClick={() => setIsMenuOpen(false)}>
               {link.name}
@@ -61,7 +62,7 @@ const Navbar = () => {
         </div>
       )}
       
-      <style jsx>{`
+      <style>{`
         .text-accent-primary { color: var(--accent-primary); }
         .bg-accent-primary { background: var(--accent-primary); }
         .border-accent-primary { border-color: var(--accent-primary); }

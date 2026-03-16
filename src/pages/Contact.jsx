@@ -1,6 +1,7 @@
 import { Send, Phone, Mail, MapPin, Sparkles } from 'lucide-react';
 import { Tilt } from 'react-tilt';
 import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
 const Contact = () => {
   return (
@@ -118,7 +119,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .text-accent-primary { color: var(--accent-primary); }
         .bg-accent-primary { background: var(--accent-primary); }
         .border-accent-primary { border-color: var(--accent-primary); }

@@ -52,7 +52,7 @@ const Footer = () => {
         <p>© 2026 GOODMANSEO. All Rights Reserved.</p>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .text-accent-primary { color: var(--accent-primary); }
         .text-text-muted { color: var(--text-muted); }
         .border-glass-border { border-color: var(--glass-border); }

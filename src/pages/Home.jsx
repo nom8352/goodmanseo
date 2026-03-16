@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero3D from '../components/Hero3D';
 import { Layout, MapPin, Share2, ChevronRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
