@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
 import { Send, Phone, Mail, MapPin, Sparkles } from 'lucide-react';
 import { Tilt } from 'react-tilt';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
     <div className="pt-32 pb-24">
       <div className="container">
-        <div className="text-center mb-20">
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">상담 <span className="gradient-text">신청</span></h1>
-          <p className="text-xl md:text-2xl text-text-muted font-medium">어려운 마케팅 고민, 굿맨SEO가 완벽하게 해결해 드립니다.</p>
+        <div className="text-center mb-12 sm:mb-20">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 sm:mb-6 tracking-tighter px-4">상담 <span className="gradient-text">신청</span></h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-text-muted font-medium px-6">어려운 마케팅 고민, 굿맨SEO가 완벽하게 해결해 드립니다.</p>
         </div>
 
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Info Side */}
           <div className="space-y-10">
-            <div>
-              <h2 className="text-3xl font-black mb-8 tracking-tight">빠른 상담 문의</h2>
+            <div className="text-center md:text-left">
+              <h2 className="text-2xl sm:text-3xl font-black mb-6 sm:mb-8 tracking-tight">빠른 상담 문의</h2>
               <div className="space-y-6">
                 <Tilt options={{ max: 5, scale: 1.02, speed: 400 }}>
                   <div className="flex items-center gap-6 p-6 glass rounded-3xl border-transparent hover:border-white/10 transition-colors group">
@@ -35,8 +35,8 @@ const Contact = () => {
                       <Mail size={24} className="group-hover:scale-110 transition-transform" />
                     </div>
                     <div>
-                      <p className="text-text-muted text-sm mb-1 font-medium">이메일 접수</p>
-                      <p className="text-xl font-bold tracking-tight">goodmanseo.sydney@gmail.com</p>
+                      <p className="text-text-muted text-xs sm:text-sm mb-1 font-medium">이메일 접수</p>
+                      <p className="text-sm sm:text-xl font-bold tracking-tight break-all">goodmanseo.sydney@gmail.com</p>
                     </div>
                   </div>
                 </Tilt>
@@ -55,21 +55,21 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="glass p-8 rounded-[32px] border-white/10 relative overflow-hidden group">
+            <div className="glass p-6 sm:p-8 rounded-2xl sm:rounded-[32px] border-white/10 relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <h3 className="text-xl font-bold mb-4 text-accent-primary">상담 안내사항</h3>
-              <p className="text-text-muted leading-relaxed">
-                신청해 주시면 24시간 이내에 담당자가 연락을 드립니다.<br />
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-accent-primary">상담 안내사항</h3>
+              <p className="text-text-muted leading-relaxed text-sm sm:text-base">
+                신청해 주시면 24시간 이내에 담당자가 연락을 드립니다.<br className="hidden sm:block" />
                 간단한 현재 비즈니스 상황을 남겨주시면 더욱 명확한 상담이 가능합니다.
               </p>
             </div>
           </div>
 
           {/* Form Side */}
-          <div className="glass p-10 md:p-14 rounded-[40px] relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-tertiary rounded-[42px] blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+          <div className="glass p-8 sm:p-14 rounded-[32px] sm:rounded-[40px] relative">
+            <div className="absolute -inset-1 bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-tertiary rounded-[34px] sm:rounded-[42px] blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold mb-8">상담 신청서 작성</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center sm:text-left">상담 신청서 작성</h3>
               <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                 <div className="group/input">
                   <label className="block text-sm font-bold mb-2 ml-2 text-white/80 group-focus-within/input:text-accent-primary transition-colors">업체명 (상호)</label>

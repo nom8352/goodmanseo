@@ -62,19 +62,19 @@ Goodman SEO는 불필요한 거품을 뺐습니다. 비즈니스 초기에 반�
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-primary text-sm font-bold mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-white/10 text-accent-primary text-xs sm:text-sm font-bold mb-4 sm:mb-6"
           >
-            <BookOpen size={16} /> Insight & News
+            <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4" /> Insight & News
           </motion.div>
-          <h1 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-black mb-4 sm:mb-6 tracking-tighter px-4">
             굿맨 <span className="gradient-text">블로그</span>
           </h1>
-          <p className="text-xl md:text-2xl text-text-muted font-medium max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl md:text-2xl text-text-muted font-medium max-w-2xl mx-auto px-6">
             사장님들의 비즈니스 성장을 위한 실질적인 마케팅 가이드를 전해드립니다.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-0">
           {posts.map((post, index) => (
             <Tilt key={post.id} options={{ max: 10, scale: 1.02, speed: 400 }}>
               <motion.div
