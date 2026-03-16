@@ -62,15 +62,7 @@ const Navbar = () => {
         </div>
       )}
       
-      <style>{`
-        .text-accent-primary { color: var(--accent-primary); }
-        .bg-accent-primary { background: var(--accent-primary); }
-        .border-accent-primary { border-color: var(--accent-primary); }
-        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; }
-        nav { display: flex; align-items: center; box-sizing: border-box; }
-        .animate-in { animation: fadeIn 0.3s ease-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-      `}</style>
+
     </nav>
   );
 };

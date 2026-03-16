@@ -86,11 +86,7 @@ const StarterPackage = () => {
         </div>
       </div>
 
-      <style>{`
-        .text-accent-primary { color: var(--accent-primary); }
-        .bg-accent-primary { background: var(--accent-primary); }
-        .text-text-muted { color: var(--text-muted); }
-      `}</style>
+
     </div>
   );
 };
