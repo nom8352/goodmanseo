@@ -6,8 +6,7 @@ const Footer = () => {
     <footer className="bg-[#0a0a0a] py-16 border-t border-glass-border">
       <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center sm:text-left">
         <div className="md:col-span-2">
-          <a href="/" className="flex items-center gap-2 text-2xl font-black tracking-tighter mb-6 relative group inline-flex w-max">
-            <Rocket className="text-accent-primary group-hover:rotate-12 transition-transform duration-300" size={28} />
+          <a href="/" className="flex items-center text-4xl font-black tracking-tighter mb-6 relative group inline-flex w-max transition-transform duration-300 hover:scale-105">
             <span className="gradient-text">GOODMANSEO</span>
           </a>
           <p className="text-text-muted max-w-[400px] mx-auto sm:mx-0 leading-relaxed mb-8">

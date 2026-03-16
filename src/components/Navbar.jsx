@@ -24,8 +24,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
       <div className="container flex justify-between items-center px-6 md:px-4">
-        <Link to="/" className="flex items-center gap-2 text-2xl font-black tracking-tighter hover:scale-105 transition-transform duration-300">
-          <Rocket className="text-accent-primary" size={28} />
+        <Link to="/" className="flex items-center text-4xl sm:text-5xl font-black tracking-tighter hover:scale-105 transition-transform duration-300">
           <span className="gradient-text">GOODMANSEO</span>
         </Link>
 
