@@ -4,9 +4,11 @@ import { ArrowRight, CircleCheckBig, Layout, MapPin, Share2, Sparkles } from 'lu
 import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
 import Hero3D from '../components/Hero3D';
+import Seo from '../components/Seo';
 import heroImage from '../assets/hero.png';
 import blog1 from '../assets/blog1.png';
 import blog3 from '../assets/blog3.png';
+import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 
 const serviceCards = [
   {
@@ -76,6 +78,13 @@ const process = [
 const Home = () => {
   return (
     <div className="overflow-hidden">
+      <Seo
+        title="홈"
+        description="Goodman SEO는 소상공인을 위해 웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결을 월 $500 스타터 패키지로 제공합니다."
+        path="/"
+        keywords={['Goodman SEO', '소상공인 홈페이지 제작', '구글 비즈니스 프로필', '시드니 SEO', '스타터 패키지']}
+        jsonLd={[organizationJsonLd, websiteJsonLd]}
+      />
       <section className="hero-shell pt-28 sm:pt-32">
         <Hero3D />
         <div className="container relative z-10">

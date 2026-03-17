@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { ArrowLeft, Calendar, User } from 'lucide-react';
+import Seo from '../components/Seo';
 import { getBlogPostById } from '../data/blogPosts';
 
 const BlogDetail = () => {
@@ -11,8 +12,34 @@ const BlogDetail = () => {
     return <Navigate to="/blog" replace />;
   }
 
+  const publishedDate = post.date.replaceAll('.', '-').slice(0, 10);
+
   return (
     <div className="pt-32 pb-24">
+      <Seo
+        title={post.title}
+        description={post.excerpt}
+        path={`/blog/${post.id}`}
+        keywords={['굿맨SEO', post.category, post.title, '소상공인 마케팅', '구글 비즈니스 프로필']}
+        type="article"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: post.title,
+          description: post.excerpt,
+          image: post.image,
+          author: {
+            '@type': 'Organization',
+            name: post.author,
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Goodman SEO',
+          },
+          datePublished: publishedDate,
+          mainEntityOfPage: `https://goodmanseo.com/blog/${post.id}`,
+        }}
+      />
       <div className="container">
         <Link to="/blog" className="secondary-button secondary-button--compact inline-flex">
           <ArrowLeft size={16} />

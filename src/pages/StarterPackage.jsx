@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheckBig, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Seo from '../components/Seo';
 
 const inclusions = [
   '트렌디한 모바일 최적화 웹사이트 제작',
@@ -22,6 +23,12 @@ const support = [
 const StarterPackage = () => {
   return (
     <div className="pt-32 pb-24">
+      <Seo
+        title="스타터 패키지"
+        description="웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결과 운영 지원을 포함한 Goodman SEO의 월 $500 스타터 패키지 안내 페이지입니다."
+        path="/starter-package"
+        keywords={['스타터 패키지', '월 500달러 홈페이지', '구글 지도 세팅', '소상공인 마케팅 패키지']}
+      />
       <div className="container">
         <div className="section-heading max-w-4xl">
           <p className="section-kicker">Pricing package</p>

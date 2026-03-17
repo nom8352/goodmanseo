@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Calendar, User } from 'lucide-react';
+import Seo from '../components/Seo';
 import { blogPosts } from '../data/blogPosts';
 
 const Blog = () => {
@@ -9,6 +10,12 @@ const Blog = () => {
 
   return (
     <div className="pt-32 pb-24">
+      <Seo
+        title="블로그"
+        description="소상공인을 위한 Goodman SEO의 블로그입니다. 구글 노출, 홈페이지 기본기, SNS 연결에 대한 실용적인 가이드를 제공합니다."
+        path="/blog"
+        keywords={['굿맨SEO 블로그', '구글 노출 가이드', '소상공인 홈페이지', 'SNS 마케팅 기본기']}
+      />
       <div className="container">
         <div className="section-heading max-w-4xl">
           <div className="eyebrow-chip w-fit">
