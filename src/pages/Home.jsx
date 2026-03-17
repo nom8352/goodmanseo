@@ -1,98 +1,236 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Hero3D from '../components/Hero3D';
-import { Layout, MapPin, Share2, ChevronRight, Sparkles } from 'lucide-react';
+import { ArrowRight, CircleCheckBig, Layout, MapPin, Share2, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
+import Hero3D from '../components/Hero3D';
+import heroImage from '../assets/hero.png';
+
+const serviceCards = [
+  {
+    icon: <Layout size={30} className="text-accent-primary" />,
+    title: 'Website',
+    desc: '브랜드 첫인상을 만드는 반응형 홈페이지를 감각적으로 제작합니다.',
+  },
+  {
+    icon: <MapPin size={30} className="text-accent-primary" />,
+    title: 'Google Business',
+    desc: '구글 검색과 지도에서 비즈니스가 더 잘 보이도록 기본기를 정리합니다.',
+  },
+  {
+    icon: <Share2 size={30} className="text-accent-primary" />,
+    title: 'Social Setup',
+    desc: '인스타그램과 페이스북 동선을 정리해 문의가 자연스럽게 이어지게 만듭니다.',
+  },
+];
+
+const metrics = ['월 $500', '기본 6개월', '웹 + 구글 + SNS', '운영 지원 포함'];
+
+const process = [
+  {
+    step: '01',
+    title: '상담',
+    desc: '업종과 현재 상태를 짧게 확인하고 필요한 범위만 정리합니다.',
+  },
+  {
+    step: '02',
+    title: '세팅',
+    desc: '사이트, 구글 비즈니스 프로필, SNS 채널을 한 흐름으로 연결합니다.',
+  },
+  {
+    step: '03',
+    title: '운영 시작',
+    desc: '수정과 관리까지 이어지도록 안정적인 운영 기반을 함께 만듭니다.',
+  },
+];
 
 const Home = () => {
-  const services = [
-    {
-      icon: <Layout size={40} className="text-accent-primary" />,
-      title: '트렌디한 웹사이트',
-      desc: '모바일 최적화는 기본, 고객의 시선을 사로잡는 모던한 디자인으로 브랜드의 가치를 높입니다.'
-    },
-    {
-      icon: <MapPin size={40} className="text-accent-primary" />,
-      title: '구글 마이비즈니스',
-      desc: '로컬 지도 검색 상위 노출을 위한 완벽한 세팅으로 주변 고객이 우리 매장을 가장 먼저 발견하게 합니다.'
-    },
-    {
-      icon: <Share2 size={44} className="text-accent-tertiary" />,
-      title: 'SNS 비즈니스 세팅',
-      desc: '인스타그램과 페이스북을 웹사이트와 완벽히 연동하여 자연스러운 고객 유입 경로를 구축합니다.'
-    }
-  ];
-
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center pt-0">
+      <section className="hero-shell pt-28 sm:pt-32">
         <Hero3D />
-        <div className="container text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black mb-8 leading-tight tracking-tighter">
-              비즈니스의 시작, <br className="sm:hidden" />
-              <span className="gradient-text">굿맨SEO</span>와 함께.
-            </h1>
-            <p className="text-xl md:text-2xl text-text-muted mb-12 max-w-[800px] mx-auto leading-relaxed font-medium">
-              홈페이지 제작부터 구글 노출, SNS 세팅까지.<br />
-              <span className="text-white font-bold">올인원 스타터 패키지</span>로 복잡한 마케팅을 한 번에 끝내세요.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-stretch sm:items-center px-4 sm:px-0">
-              <Link to="/starter-package" className="group relative px-6 sm:px-10 py-4 sm:py-5 bg-white text-black font-black text-lg sm:text-xl rounded-full hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] flex items-center justify-center gap-2 overflow-hidden">
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-tertiary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" /> 패키지 시작하기
-                </span>
-              </Link>
-              <Link to="/blog" className="px-6 sm:px-10 py-4 sm:py-5 glass border-white/10 text-white font-bold text-base sm:text-lg rounded-full hover:bg-white/5 transition-all flex items-center justify-center gap-2 hover:border-white/30">
-                블로그 보기 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </motion.div>
+        <div className="container relative z-10">
+          <div className="grid items-end gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="eyebrow-chip mb-6">
+                <Sparkles size={16} />
+                Small business starter package
+              </div>
+              <h1 className="max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.06em] sm:text-7xl md:text-[6.4rem]">
+                월 $500으로
+                <br />
+                온라인 기본기를
+                <br />
+                <span className="gradient-text">제대로 세팅합니다</span>
+              </h1>
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-text-muted sm:text-xl">
+                홈페이지, 구글 비즈니스 프로필, SNS 세팅까지. 복잡한 마케팅 용어 대신
+                사장님에게 바로 필요한 것만 한 패키지로 정리했습니다.
+              </p>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+                <Link to="/starter-package" className="primary-button">
+                  패키지 보기
+                  <ArrowRight size={18} />
+                </Link>
+                <Link to="/contact" className="secondary-button">
+                  무료 상담 신청
+                </Link>
+              </div>
+              <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                {metrics.map((item) => (
+                  <div key={item} className="metric-pill">
+                    <CircleCheckBig size={16} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9, delay: 0.15 }}
+              className="hero-card-wrap"
+            >
+              <div className="hero-proof-card">
+                <div className="hero-proof-top">
+                  <span className="eyebrow-chip">Starter package</span>
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-text-soft">
+                    One plan. Clear scope.
+                  </p>
+                </div>
+                <div className="mt-8 flex items-end justify-between gap-6">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.24em] text-text-soft">Monthly</p>
+                    <p className="mt-2 text-6xl font-black tracking-[-0.08em]">$500</p>
+                  </div>
+                  <div className="max-w-[160px] text-right text-sm leading-relaxed text-text-muted">
+                    웹 제작부터 운영 시작까지 가장 필요한 흐름만 담았습니다.
+                  </div>
+                </div>
+                <div className="mt-10 overflow-hidden rounded-[28px] border border-white/10">
+                  <img src={heroImage} alt="Goodman SEO package preview" className="h-[260px] w-full object-cover" />
+                </div>
+                <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                  {['반응형 웹사이트', '구글 지도/검색 세팅', 'SNS 비즈니스 연결', '운영 지원 포함'].map((item) => (
+                    <div key={item} className="mini-feature">
+                      <CircleCheckBig size={16} className="text-accent-primary" />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-40 relative z-10">
+      <section className="section-block">
         <div className="container">
-          <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">3대 핵심 서비스</h2>
-            <div className="w-24 h-1.5 bg-gradient-to-r from-accent-primary to-accent-secondary mx-auto rounded-full" />
+          <div className="section-heading">
+            <p className="section-kicker">What we set up</p>
+            <h2 className="section-title">딱 필요한 세 가지를 한 번에</h2>
+            <p className="section-copy">
+              더 많은 기능보다 더 중요한 것은 흐름입니다. 고객이 검색하고, 확인하고,
+              문의하게 되는 기본 동선을 먼저 완성합니다.
+            </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {services.map((service, index) => (
-              <Tilt key={service.title} options={{ max: 15, scale: 1.02, speed: 400, glare: true, 'max-glare': 0.2 }}>
-                <motion.div
-                  className="glass p-10 h-full rounded-[32px] group hover:border-accent-primary/50 transition-colors duration-500 relative overflow-hidden"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <div className="relative z-10">
-                    <div className="mb-8 p-4 bg-white/5 inline-block rounded-2xl group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500 shadow-xl">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                    <p className="text-text-muted leading-relaxed text-lg font-medium">
-                      {service.desc}
-                    </p>
-                  </div>
-                </motion.div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {serviceCards.map((service, index) => (
+              <Tilt key={service.title} options={{ max: 8, scale: 1.01, speed: 300 }}>
+                <motion.article
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="feature-card"
+                >
+                  <div className="feature-icon">{service.icon}</div>
+                  <h3 className="mt-10 text-3xl font-black tracking-[-0.04em]">{service.title}</h3>
+                  <p className="mt-4 text-base leading-relaxed text-text-muted">{service.desc}</p>
+                </motion.article>
               </Tilt>
             ))}
           </div>
         </div>
       </section>
 
+      <section className="section-block">
+        <div className="container">
+          <div className="showcase-panel">
+            <div className="section-heading max-w-2xl">
+              <p className="section-kicker">Simple pricing</p>
+              <h2 className="section-title">복잡한 옵션 없이, 한 패키지로 시작</h2>
+              <p className="section-copy">
+                가격은 단순하게, 포함 내역은 명확하게. 처음 시작하는 소상공인이 부담 없이
+                결정할 수 있는 구조로 설계했습니다.
+              </p>
+            </div>
+            <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+              <div className="pricing-spotlight">
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">Starter</p>
+                <div className="mt-6 flex items-end gap-2">
+                  <span className="text-6xl font-black tracking-[-0.08em]">$500</span>
+                  <span className="pb-2 text-lg text-text-muted">/ month</span>
+                </div>
+                <p className="mt-5 text-base leading-relaxed text-text-muted">
+                  브랜드 첫 세팅에 필요한 핵심만 담았습니다. 고정된 패키지라 비교가 쉽고,
+                  시작이 빠릅니다.
+                </p>
+                <Link to="/starter-package" className="primary-button mt-8 inline-flex">
+                  포함 내역 자세히 보기
+                  <ArrowRight size={18} />
+                </Link>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  '모바일 최적화 웹사이트 제작',
+                  'Google Business Profile 세팅',
+                  'Instagram / Facebook 연결',
+                  '기본 6개월 관리 포함',
+                  '월간 성과 요약 리포트',
+                  '텍스트와 이미지 수정 지원',
+                ].map((item) => (
+                  <div key={item} className="benefit-row">
+                    <CircleCheckBig size={18} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="container">
+          <div className="section-heading">
+            <p className="section-kicker">How it works</p>
+            <h2 className="section-title">빠르게 시작하고, 안정적으로 운영하기</h2>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {process.map((item, index) => (
+              <motion.div
+                key={item.step}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="process-card"
+              >
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">{item.step}</p>
+                <h3 className="mt-5 text-3xl font-black tracking-[-0.04em]">{item.title}</h3>
+                <p className="mt-4 max-w-sm text-base leading-relaxed text-text-muted">{item.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

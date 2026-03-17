@@ -1,92 +1,109 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Check, Info, Sparkles } from 'lucide-react';
+import { ArrowRight, CircleCheckBig, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
+
+const inclusions = [
+  '트렌디한 모바일 최적화 웹사이트 제작',
+  '구글 비즈니스 프로필 로컬 검색 및 지도 세팅',
+  '인스타그램 & 페이스북 비즈니스 계정 연결',
+  '매월 성과 요약 리포트 제공',
+  'Google Business 최신화 및 관리 지원',
+  '웹사이트 텍스트/이미지 수정 지원',
+];
+
+const support = [
+  '처음 시작하는 로컬 비즈니스',
+  '기존 사이트가 오래되어 정리가 필요한 업종',
+  'SNS와 홈페이지가 따로 놀고 있는 상황',
+  '구글 지도에서 가게 노출을 더 명확히 만들고 싶은 경우',
+];
 
 const StarterPackage = () => {
-  const inclusions = [
-    '트렌디한 모바일 최적화 웹사이트 제작',
-    '구글 마이비즈니스(GMB) 로컬 검색 및 지도 완벽 세팅',
-    '인스타그램 & 페이스북 비즈니스 계정 세팅 및 연동',
-    '매월 성과 요약 리포트 제공 (구글, 웹 데이터)',
-    'GMB 최신화 및 관리 지원',
-    '웹사이트 텍스트/이미지 유지보수 (무제한)'
-  ];
-
   return (
     <div className="pt-32 pb-24">
       <div className="container">
-        <div className="text-center mb-12 sm:mb-16">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 sm:mb-6 tracking-tighter">올인원 <span className="gradient-text">스타터 패키지</span></h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-text-muted font-medium px-4">성공적인 비즈니스의 시작을 위한 단 하나의 프리미엄 솔루션</p>
+        <div className="section-heading max-w-4xl">
+          <p className="section-kicker">Pricing package</p>
+          <h1 className="section-title max-w-4xl">
+            하나의 패키지로,
+            <br />
+            필요한 기본기만 정확하게
+          </h1>
+          <p className="section-copy max-w-2xl">
+            가격은 단순하게, 포함 내역은 명확하게. 처음 시작하는 사장님이 비교하기 쉽고
+            결정하기 쉬운 구조로 만들었습니다.
+          </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <Tilt options={{ max: 5, scale: 1.01, speed: 400, glare: true, 'max-glare': 0.1 }}>
-            <div className="glass rounded-[40px] overflow-hidden relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-tertiary opacity-0 group-hover:opacity-20 transition-opacity duration-1000"></div>
-              
-              <div className="p-10 md:p-16 border-b border-white/5 bg-gradient-to-br from-white/5 to-transparent relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-                  <div className="text-center md:text-left">
-                    <h2 className="text-2xl sm:text-3xl font-black mb-2 tracking-tight">단일 올인원 패키지</h2>
-                    <p className="text-text-muted font-medium text-sm sm:text-base">웹사이트 제작 + 필수 SNS 세팅 + 6개월 밀착 관리</p>
-                  </div>
-                  <div className="text-center md:text-right">
-                    <div className="text-white text-4xl sm:text-6xl font-black mb-1 tracking-tighter">$500 <span className="text-xl sm:text-2xl font-normal text-text-muted">/ 월</span></div>
-                    <p className="text-xs sm:text-sm text-accent-primary font-bold tracking-wide uppercase">(기본 6개월 관리 포함)</p>
-                  </div>
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.55 }}
+          className="showcase-panel"
+        >
+          <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+            <aside className="pricing-spotlight">
+              <div className="eyebrow-chip w-fit">
+                <Sparkles size={14} />
+                Goodman SEO starter
+              </div>
+              <h2 className="mt-8 text-4xl font-black tracking-[-0.06em] sm:text-5xl">올인원 스타터 패키지</h2>
+              <div className="mt-10 flex items-end gap-2">
+                <span className="text-7xl font-black tracking-[-0.08em]">$500</span>
+                <span className="pb-3 text-xl text-text-muted">/ 월</span>
+              </div>
+              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent-primary">
+                기본 6개월 관리 포함
+              </p>
+              <p className="mt-8 text-base leading-relaxed text-text-muted">
+                웹사이트 제작, 구글 검색 기반 세팅, SNS 연결과 운영 지원까지 한 번에
+                정리합니다. 옵션을 늘리기보다 시작에 꼭 필요한 범위만 담았습니다.
+              </p>
+              <Link to="/contact" className="primary-button mt-8 inline-flex">
+                이 패키지로 시작하기
+                <ArrowRight size={18} />
+              </Link>
+            </aside>
+
+            <div className="grid gap-10">
+              <div>
+                <h3 className="text-2xl font-black tracking-[-0.04em]">포함 내역</h3>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {inclusions.map((item) => (
+                    <div key={item} className="benefit-row">
+                      <CircleCheckBig size={18} className="text-accent-primary" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
 
-              <div className="p-10 md:p-16 relative z-10">
-                <h3 className="text-xl font-bold mb-10 flex items-center gap-2 text-white/90">
-                  <Info size={22} className="text-accent-secondary" />
-                  프리미엄 패키지 포함 내역
-                </h3>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 sm:gap-y-8 gap-x-12">
-                  {inclusions.map((item, index) => (
-                    <motion.div 
-                      key={index} 
-                      className="flex items-start gap-3 sm:gap-4 group/item"
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      <div className="mt-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-accent-primary/10 flex items-center justify-center text-accent-primary shrink-0 group-hover/item:scale-110 group-hover/item:bg-accent-primary/20 transition-all duration-300">
-                        <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5" strokeWidth={4} />
+              <div className="grid gap-6 lg:grid-cols-2">
+                <div className="soft-panel">
+                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Who it is for</p>
+                  <div className="mt-5 space-y-3">
+                    {support.map((item) => (
+                      <div key={item} className="mini-feature">
+                        <CircleCheckBig size={16} className="text-accent-primary" />
+                        <span>{item}</span>
                       </div>
-                      <span className="text-base sm:text-lg leading-snug font-medium text-white/80 group-hover/item:text-white transition-colors">{item}</span>
-                    </motion.div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-
-                <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-white/5 border border-white/10 relative overflow-hidden group/quote">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accent-tertiary/10 to-transparent opacity-0 group-hover/quote:opacity-100 transition-opacity duration-500"></div>
-                  <p className="text-text-muted leading-relaxed font-medium relative z-10 text-base sm:text-lg">
-                    "대부분의 마케팅 대행사는 관리 비용을 따로 받거나, 초기 세팅 비용을 과도하게 요구합니다.<br className="hidden sm:block" />
-                    <span className="text-white font-bold">굿맨SEO</span>는 소상공인분들의 부담을 덜어드리기 위해 월 500불이라는 파격적인 가격으로<br className="hidden sm:block" />
-                    기획부터 제작, 운영까지 모든 기본기를 완벽하게 챙겨드립니다."
+                <div className="soft-panel">
+                  <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Why this works</p>
+                  <p className="mt-5 text-base leading-relaxed text-text-muted">
+                    대부분의 소상공인은 거창한 마케팅보다 기본 세팅의 완성도가 더 중요합니다.
+                    검색에서 보이고, 사이트에서 신뢰를 주고, SNS에서 문의로 이어지는 흐름을
+                    먼저 안정화하면 이후 확장이 훨씬 쉬워집니다.
                   </p>
-                </div>
-
-                <div className="mt-12 sm:mt-16 text-center">
-                  <Link to="/contact" className="group relative inline-flex w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-6 bg-white text-black font-black text-lg sm:text-xl rounded-full hover:scale-105 transition-all shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_rgba(255,255,255,0.4)] items-center justify-center gap-3 overflow-hidden">
-                    <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-accent-primary via-accent-secondary to-accent-tertiary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
-                    <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-2">
-                       <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" /> 패키지 지금 시작하기
-                    </span>
-                  </Link>
                 </div>
               </div>
             </div>
-          </Tilt>
-        </div>
+          </div>
+        </motion.div>
       </div>
-
-
     </div>
   );
 };

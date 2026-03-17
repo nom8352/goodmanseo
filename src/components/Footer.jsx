@@ -1,40 +1,45 @@
 import React from 'react';
-import { Rocket, Mail, Phone, Instagram, Facebook } from 'lucide-react';
+import { ArrowUpRight, Facebook, Instagram, Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0a0a0a] py-16 border-t border-glass-border">
-      <div className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center sm:text-left">
+    <footer className="border-t border-white/10 bg-[#090d13] py-16">
+      <div className="container grid grid-cols-1 gap-12 text-center sm:grid-cols-2 sm:text-left md:grid-cols-4">
         <div className="md:col-span-2">
-          <a href="/" className="flex items-center text-4xl font-black tracking-tighter mb-6 relative group inline-flex w-max transition-transform duration-300 hover:scale-105">
+          <Link to="/" className="inline-flex w-max items-center text-4xl font-black tracking-[-0.08em]">
             <span className="gradient-text">GOODMANSEO</span>
-          </a>
-          <p className="text-text-muted max-w-[400px] mx-auto sm:mx-0 leading-relaxed mb-8">
-            복잡한 마케팅에서 벗어나 비즈니스 성장에 집중하세요.<br />
-            굿맨SEO가 여러분의 온라인 기본기를 완벽하게 세팅해 드립니다.
+          </Link>
+          <p className="mt-6 max-w-[430px] leading-relaxed text-text-muted">
+            복잡한 설명보다 결과가 보이는 기본 세팅에 집중합니다. 작은 비즈니스가
+            온라인에서 더 잘 보이도록 필요한 흐름만 정리해 드립니다.
           </p>
-          <div className="flex gap-4">
-            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-accent-primary transition-all">
+          <Link to="/starter-package" className="secondary-button secondary-button--compact mt-8 inline-flex">
+            패키지 보기
+            <ArrowUpRight size={16} />
+          </Link>
+          <div className="mt-8 flex gap-4">
+            <a href="#" className="social-pill">
               <Instagram size={20} />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full glass flex items-center justify-center hover:text-accent-primary transition-all">
+            <a href="#" className="social-pill">
               <Facebook size={20} />
             </a>
           </div>
         </div>
 
         <div>
-          <h4 className="text-lg font-bold mb-6">바로가기</h4>
+          <h4 className="mb-6 text-lg font-bold">바로가기</h4>
           <ul className="flex flex-col gap-4">
-            <li><a href="/" className="text-text-muted hover:text-accent-primary">홈</a></li>
-            <li><a href="/starter-package" className="text-text-muted hover:text-accent-primary">스타터 패키지</a></li>
-            <li><a href="/blog" className="text-text-muted hover:text-accent-primary">블로그</a></li>
-            <li><a href="/contact" className="text-text-muted hover:text-accent-primary">상담 신청</a></li>
+            <li><Link to="/" className="text-text-muted hover:text-accent-primary">홈</Link></li>
+            <li><Link to="/starter-package" className="text-text-muted hover:text-accent-primary">스타터 패키지</Link></li>
+            <li><Link to="/blog" className="text-text-muted hover:text-accent-primary">블로그</Link></li>
+            <li><Link to="/contact" className="text-text-muted hover:text-accent-primary">상담 신청</Link></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-lg font-bold mb-6">고객 센터</h4>
+          <h4 className="mb-6 text-lg font-bold">고객 센터</h4>
           <ul className="flex flex-col gap-4">
             <li className="flex items-center gap-2 text-text-muted">
               <Phone size={16} /> 0434-920-114
@@ -46,12 +51,10 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      
-      <div className="container mt-16 pt-8 border-t border-glass-border text-center text-text-muted text-sm">
+
+      <div className="container mt-16 border-t border-white/10 pt-8 text-center text-sm text-text-muted">
         <p>© 2026 GOODMANSEO. All Rights Reserved.</p>
       </div>
-
-
     </footer>
   );
 };
