@@ -1,40 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, BookOpen, Calendar, User } from 'lucide-react';
-import blog1 from '../assets/blog1.png';
-import blog3 from '../assets/blog3.png';
-
-const posts = [
-  {
-    id: 1,
-    date: '2024.03.13',
-    author: 'Goodman SEO',
-    title: '구글 지도에서 우리 매장이 안 보인다면? 지금 당장 세팅해야 하는 이유',
-    excerpt: '고객이 가게를 찾는 첫 순간은 이미 오프라인이 아니라 검색창에서 시작됩니다.',
-    image: blog1,
-    category: 'Google visibility',
-  },
-  {
-    id: 2,
-    date: '2024.03.12',
-    author: 'Goodman SEO',
-    title: "인스타그램만 열심히 하면 될까? 내 비즈니스에 '진짜' 홈페이지가 필요한 이유",
-    excerpt: 'SNS가 관심을 끈다면, 홈페이지는 그 관심을 신뢰와 문의로 바꾸는 공간입니다.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200',
-    category: 'Website basics',
-  },
-  {
-    id: 3,
-    date: '2024.03.11',
-    author: 'Goodman SEO',
-    title: "비싼 마케팅 업체에 속지 마세요. 소상공인에게 진짜 필요한 '온라인 기본기'",
-    excerpt: '거창한 용어보다 먼저 필요한 것은 검색되고, 신뢰를 주고, 문의받는 구조입니다.',
-    image: blog3,
-    category: 'Starter strategy',
-  },
-];
+import { blogPosts } from '../data/blogPosts';
 
 const Blog = () => {
+  const [featuredPost, ...secondaryPosts] = blogPosts;
+
   return (
     <div className="pt-32 pb-24">
       <div className="container">
@@ -62,23 +34,23 @@ const Blog = () => {
             className="editorial-card"
           >
             <div className="overflow-hidden rounded-[1.5rem] border border-white/10">
-              <img src={posts[0].image} alt={posts[0].title} className="h-[360px] w-full object-cover" />
+              <img src={featuredPost.image} alt={featuredPost.title} className="h-[360px] w-full object-cover" />
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-soft">
-              <span className="eyebrow-chip">{posts[0].category}</span>
-              <span className="inline-flex items-center gap-2"><Calendar size={14} /> {posts[0].date}</span>
-              <span className="inline-flex items-center gap-2"><User size={14} /> {posts[0].author}</span>
+              <span className="eyebrow-chip">{featuredPost.category}</span>
+              <span className="inline-flex items-center gap-2"><Calendar size={14} /> {featuredPost.date}</span>
+              <span className="inline-flex items-center gap-2"><User size={14} /> {featuredPost.author}</span>
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-[-0.05em]">{posts[0].title}</h2>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-text-muted">{posts[0].excerpt}</p>
-            <button className="secondary-button secondary-button--compact mt-8">
+            <h2 className="mt-6 text-4xl font-black tracking-[-0.05em]">{featuredPost.title}</h2>
+            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-text-muted">{featuredPost.excerpt}</p>
+            <Link to={`/blog/${featuredPost.id}`} className="secondary-button secondary-button--compact mt-8 inline-flex">
               더 읽어보기
               <ArrowRight size={16} />
-            </button>
+            </Link>
           </motion.article>
 
           <div className="grid gap-6">
-            {posts.slice(1).map((post, index) => (
+            {secondaryPosts.map((post, index) => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 24 }}
@@ -98,6 +70,10 @@ const Blog = () => {
                     <span className="inline-flex items-center gap-2"><Calendar size={14} /> {post.date}</span>
                     <span className="inline-flex items-center gap-2"><User size={14} /> {post.author}</span>
                   </div>
+                  <Link to={`/blog/${post.id}`} className="secondary-button secondary-button--compact mt-6 inline-flex">
+                    아티클 열기
+                    <ArrowRight size={16} />
+                  </Link>
                 </div>
               </motion.article>
             ))}

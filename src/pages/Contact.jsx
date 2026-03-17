@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Mail, MapPin, Phone, Send, Sparkles } from 'lucide-react';
 
 const contactItems = [
@@ -19,7 +19,74 @@ const contactItems = [
   },
 ];
 
+const initialForm = {
+  company: '',
+  name: '',
+  phone: '',
+  businessType: '',
+  message: '',
+  'bot-field': '',
+};
+
+const encode = (data) =>
+  Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+
+const buildMailtoLink = ({ company, name, phone, businessType, message }) => {
+  const subject = `[Goodman SEO] ${company || '새 상담 문의'}`;
+  const body = [
+    `업체명: ${company || '-'}`,
+    `담당자: ${name || '-'}`,
+    `연락처: ${phone || '-'}`,
+    `업종/지역: ${businessType || '-'}`,
+    '',
+    '문의 내용:',
+    message || '-',
+  ].join('\n');
+
+  return `mailto:goodmanseo.sydney@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+};
+
 const Contact = () => {
+  const [form, setForm] = useState(initialForm);
+  const [status, setStatus] = useState('idle');
+  const [notice, setNotice] = useState('');
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setForm((current) => ({ ...current, [name]: value }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus('submitting');
+    setNotice('');
+
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          ...form,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Submission failed');
+      }
+
+      setStatus('success');
+      setNotice('상담 신청이 접수되었습니다. 24시간 이내에 확인 후 연락드리겠습니다.');
+      setForm(initialForm);
+    } catch (error) {
+      setStatus('fallback');
+      setNotice('자동 접수가 원활하지 않아 이메일 앱으로 이어집니다. 보내기만 완료해 주세요.');
+      window.location.href = buildMailtoLink(form);
+    }
+  };
+
   return (
     <div className="pt-32 pb-24">
       <div className="container">
@@ -47,15 +114,15 @@ const Contact = () => {
                   {item.icon}
                 </div>
                 <p className="mt-5 text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">{item.label}</p>
-                <p className="mt-3 text-2xl font-black tracking-[-0.04em] break-all">{item.value}</p>
+                <p className="mt-3 break-all text-2xl font-black tracking-[-0.04em]">{item.value}</p>
               </div>
             ))}
 
             <div className="soft-panel">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Quick note</p>
               <p className="mt-4 text-base leading-relaxed text-text-muted">
-                거창한 제안서보다 빠른 시작이 중요하다면, 업체명과 연락처 그리고 지금 가장
-                답답한 한 가지를 적어주세요. 필요한 범위만 먼저 정리해 드립니다.
+                자동 접수는 정적 호스팅용 폼 처리에 맞춰 연결했습니다. 배포 환경에서 폼 처리
+                지원이 없더라도 이메일 작성 화면으로 바로 이어지도록 대비해 두었습니다.
               </p>
             </div>
           </div>
@@ -66,40 +133,50 @@ const Contact = () => {
               <h2 className="mt-4 text-4xl font-black tracking-[-0.05em]">상담 신청서</h2>
             </div>
 
-            <form className="mt-8 grid gap-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="mt-8 grid gap-5" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" value={form['bot-field']} onChange={handleChange} />
+
               <div className="grid gap-5 md:grid-cols-2">
                 <label className="form-field">
                   <span>업체명</span>
-                  <input type="text" placeholder="예: Goodman Bakery" />
+                  <input name="company" type="text" placeholder="예: Goodman Bakery" value={form.company} onChange={handleChange} required />
                 </label>
                 <label className="form-field">
                   <span>담당자 성함</span>
-                  <input type="text" placeholder="성함을 입력해 주세요" />
+                  <input name="name" type="text" placeholder="성함을 입력해 주세요" value={form.name} onChange={handleChange} required />
                 </label>
               </div>
 
               <div className="grid gap-5 md:grid-cols-2">
                 <label className="form-field">
                   <span>연락처</span>
-                  <input type="tel" placeholder="연락 가능한 번호" />
+                  <input name="phone" type="tel" placeholder="연락 가능한 번호" value={form.phone} onChange={handleChange} required />
                 </label>
                 <label className="form-field">
                   <span>업종 또는 지역</span>
-                  <input type="text" placeholder="예: 시드니 카페 / 뷰티샵" />
+                  <input name="businessType" type="text" placeholder="예: 시드니 카페 / 뷰티샵" value={form.businessType} onChange={handleChange} />
                 </label>
               </div>
 
               <label className="form-field">
                 <span>현재 가장 고민인 부분</span>
-                <textarea rows="5" placeholder="예: 구글 지도 노출이 약해요, 홈페이지가 오래됐어요, SNS와 사이트가 연결되지 않아요" />
+                <textarea name="message" rows="5" placeholder="예: 구글 지도 노출이 약해요, 홈페이지가 오래됐어요, SNS와 사이트가 연결되지 않아요" value={form.message} onChange={handleChange} required />
               </label>
+
+              {notice ? (
+                <p className={`rounded-2xl border px-4 py-3 text-sm leading-relaxed ${status === 'success' ? 'border-[rgba(216,255,114,0.35)] bg-[rgba(216,255,114,0.08)] text-white' : 'border-white/10 bg-white/5 text-text-muted'}`}>
+                  {notice}
+                </p>
+              ) : null}
 
               <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-xl text-sm leading-relaxed text-text-muted">
-                  현재는 폼 디자인만 정리된 상태입니다. 실제 메일 전송이나 저장 기능은 다음 단계에서 연결할 수 있습니다.
+                  배포 환경에서 폼 처리 기능이 지원되면 바로 접수되고, 그렇지 않으면 이메일
+                  앱으로 이어져 문의 내용이 그대로 채워집니다.
                 </p>
-                <button type="submit" className="primary-button">
-                  상담 신청하기
+                <button type="submit" className="primary-button" disabled={status === 'submitting'}>
+                  {status === 'submitting' ? '전송 중...' : '상담 신청하기'}
                   <Send size={18} />
                 </button>
               </div>
