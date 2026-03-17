@@ -408,6 +408,99 @@ section {
   border-color: rgba(216, 255, 114, 0.3);
 }
 
+.gallery-card,
+.editorial-card,
+.article-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(9, 13, 19, 0.78);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+
+.gallery-card {
+  min-height: 320px;
+}
+
+.gallery-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 9, 14, 0.92), rgba(7, 9, 14, 0.08));
+}
+
+.gallery-card__content {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+.editorial-card {
+  padding: 2rem;
+}
+
+.article-card {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.2rem;
+}
+
+.article-card__thumb {
+  overflow: hidden;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 220px;
+}
+
+.article-card__body {
+  padding: 0.25rem 0.35rem 0.4rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.form-field span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-main);
+  padding: 1rem 1.1rem;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: rgba(245, 247, 251, 0.34);
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: rgba(216, 255, 114, 0.45);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 4px rgba(216, 255, 114, 0.08);
+}
+
 .text-text-soft {
   color: var(--text-soft);
 }
@@ -457,5 +550,10 @@ section {
   .hero-proof-top {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .editorial-card,
+  .article-card {
+    padding: 1.2rem;
   }
 }

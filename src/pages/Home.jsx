@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { Tilt } from 'react-tilt';
 import Hero3D from '../components/Hero3D';
 import heroImage from '../assets/hero.png';
+import blog1 from '../assets/blog1.png';
+import blog3 from '../assets/blog3.png';
 
 const serviceCards = [
   {
@@ -25,6 +27,33 @@ const serviceCards = [
 ];
 
 const metrics = ['월 $500', '기본 6개월', '웹 + 구글 + SNS', '운영 지원 포함'];
+
+const proofGallery = [
+  {
+    title: '브랜드 첫 화면',
+    subtitle: 'Bold landing page',
+    image: heroImage,
+    size: 'lg:col-span-7',
+  },
+  {
+    title: '로컬 비즈니스 촬영컷',
+    subtitle: 'Photo-led trust',
+    image: blog1,
+    size: 'lg:col-span-5',
+  },
+  {
+    title: '콘텐츠와 안내 구조',
+    subtitle: 'Clear information flow',
+    image: blog3,
+    size: 'lg:col-span-4',
+  },
+  {
+    title: '패키지 중심 제안',
+    subtitle: 'Simple pricing story',
+    image: heroImage,
+    size: 'lg:col-span-8',
+  },
+];
 
 const process = [
   {
@@ -155,6 +184,38 @@ const Home = () => {
                   <p className="mt-4 text-base leading-relaxed text-text-muted">{service.desc}</p>
                 </motion.article>
               </Tilt>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="container">
+          <div className="section-heading">
+            <p className="section-kicker">Visual proof</p>
+            <h2 className="section-title">작업물과 분위기가 먼저 신뢰를 만듭니다</h2>
+            <p className="section-copy">
+              Humaan처럼 넓은 여백과 사진 중심의 화면으로, 실제 비즈니스가 더 고급스럽게
+              보이도록 레이아웃을 설계할 수 있습니다.
+            </p>
+          </div>
+          <div className="grid gap-6 lg:grid-cols-12">
+            {proofGallery.map((item, index) => (
+              <motion.article
+                key={`${item.title}-${index}`}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className={`gallery-card ${item.size}`}
+              >
+                <img src={item.image} alt={item.title} className="gallery-card__image" />
+                <div className="gallery-card__overlay" />
+                <div className="gallery-card__content">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-text-soft">{item.subtitle}</p>
+                  <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">{item.title}</h3>
+                </div>
+              </motion.article>
             ))}
           </div>
         </div>
