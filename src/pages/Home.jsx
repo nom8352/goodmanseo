@@ -116,11 +116,11 @@ const Home = () => {
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link to="/starter-package" className="primary-button">
-                  홈페이지 내용 보기
+                  795 홈페이지 보기
                   <ArrowRight size={18} />
                 </Link>
                 <Link to="/pricing" className="secondary-button">
-                  가격 보기
+                  서비스 및 가격
                 </Link>
               </div>
               <div className="mt-10 grid grid-cols-2 gap-3 xl:grid-cols-4">
@@ -264,7 +264,7 @@ const Home = () => {
                   기본 세팅부터 시작합니다.
                 </p>
                 <Link to="/pricing" className="primary-button mt-8 inline-flex">
-                  가격과 옵션 보기
+                  서비스 및 가격 보기
                   <ArrowRight size={18} />
                 </Link>
               </div>

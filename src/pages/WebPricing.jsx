@@ -92,18 +92,18 @@ const WebPricing = () => {
   return (
     <div className="pt-32 pb-24">
       <Seo
-        title="제작 가격 안내"
-        description="Goodman SEO의 홈페이지 제작 가격 안내 페이지입니다. 기본 홈페이지 $795부터 시작하고, 구글 지도/검색 등록과 추가 마케팅 서비스까지 확인할 수 있습니다."
+        title="서비스 및 가격"
+        description="Goodman SEO의 서비스 및 가격 안내 페이지입니다. 기본 홈페이지 $795부터 시작하고, 구글 지도/검색 등록과 추가 마케팅 서비스까지 확인할 수 있습니다."
         path="/pricing"
         keywords={['홈페이지 제작 가격', '홈페이지 제작 795', '구글 지도 등록', '시드니 홈페이지 제작', 'Goodman SEO 가격']}
       />
       <div className="container">
         <div className="section-heading max-w-5xl">
-          <p className="section-kicker">Website Pricing</p>
+          <p className="section-kicker">Services & Pricing</p>
           <h1 className="section-title max-w-5xl">
             필요한 수준에 맞는
             <br />
-            홈페이지 제작 가격
+            서비스 및 가격
           </h1>
           <p className="section-copy max-w-2xl">
             작은 비즈니스는 가볍게 시작하고,

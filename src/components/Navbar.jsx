@@ -17,8 +17,8 @@ const Navbar = () => {
 
   const navLinks = [
     { name: '홈', href: '/' },
-    { name: '홈페이지 제작', href: '/starter-package' },
-    { name: '제작 가격', href: '/pricing' },
+    { name: '795 홈페이지', href: '/starter-package' },
+    { name: '서비스 및 가격', href: '/pricing' },
     { name: '블로그', href: '/blog' },
     { name: '상담 신청', href: '/contact' },
   ];
