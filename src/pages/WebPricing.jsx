@@ -5,66 +5,86 @@ import Seo from '../components/Seo';
 
 const packages = [
   {
-    name: 'Basic Package',
-    korean: '베이직 패키지',
-    price: 'From $2,000 + GST',
-    label: '간단한 소개형',
-    target: '처음 시작하는 작은 가게나 서비스',
+    name: 'Basic Website',
+    korean: '기본 홈페이지',
+    price: '$795',
+    label: '가볍게 시작',
+    target: '처음 시작하는 작은 비즈니스',
     features: [
-      '기존 템플릿을 깔끔하게 맞춤 제작',
-      '최대 5개 기본 페이지',
-      '모바일 반응형 기본 적용',
-      '보내주신 글과 사진 정리',
-      '구글 비즈니스 프로필 기본 세팅',
+      '간단한 홈페이지 제작',
+      '휴대폰에서도 잘 보이게',
+      '문의 버튼 또는 문의폼 연결',
+      '구글 지도/검색 등록',
+      '홈페이지 방문 확인 연결',
     ],
   },
   {
-    name: 'Standard Custom',
-    korean: '스탠다드 맞춤형',
-    price: 'From $4,000 + GST',
-    label: '브랜드를 살리는 맞춤형',
-    target: '브랜딩이 중요한 로컬 비즈니스',
+    name: 'Business Website',
+    korean: '맞춤형 비즈니스 홈페이지',
+    price: 'From $2,000 + GST',
+    label: '페이지가 더 필요한 경우',
+    target: '서비스 소개와 페이지 구성이 더 필요한 업체',
     features: [
-      '맞춤형 화면 디자인',
-      '5~10개 상세 페이지 구성',
+      '업체에 맞춘 화면 구성',
+      '5~10개 페이지 구성',
       '구글 검색 기본 세팅',
       '블로그 직접 수정 가능',
-      '구글 분석 도구 연결',
+      '방문 확인 도구 연결',
     ],
   },
   {
-    name: 'E-commerce & Premium',
-    korean: '이커머스 / 고급형',
-    price: 'From $10,000 + GST',
+    name: 'Advanced Build',
+    korean: '쇼핑몰 / 예약 / 고급 기능',
+    price: 'From $4,000 + GST',
     label: '판매·예약 기능까지',
-    target: '쇼핑몰, 예약, 맞춤 기능이 필요한 업체',
+    target: '쇼핑몰, 예약, 외부 연결이 필요한 업체',
     features: [
-      'Shopify 또는 WooCommerce 구축',
-      '상품과 카테고리 관리 정리',
+      '온라인 결제 또는 예약 기능',
+      '상품과 카테고리 관리',
       '예약·문의·외부 시스템 연동',
-      '문의 전환 개선 상담',
-      '이메일 자동화 연동 상담',
+      '광고와 전환 흐름 상담',
+      '운영 구조 맞춤 안내',
     ],
   },
 ];
 
 const addOns = [
   {
-    name: 'SNS 시작 세팅',
-    price: '$500~',
-    desc: '오픈에 맞춰 프로필과 첫 콘텐츠 방향을 정리합니다.',
+    name: '인스타그램 세팅',
+    price: '+$190',
+    desc: '프로필, 링크, 소개 문구를 가게 정보에 맞게 정리합니다.',
   },
   {
-    name: '월 관리 서비스',
-    price: '$150/mo~',
-    desc: '보안 업데이트, 백업, 수정 지원으로 운영 부담을 줄입니다.',
+    name: '페이스북 세팅',
+    price: '+$190',
+    desc: '페이지 정보와 홈페이지 연결을 기본에 맞게 정리합니다.',
+  },
+  {
+    name: '인스타그램 + 페이스북',
+    price: '+$290',
+    desc: '두 채널을 한 번에 정리하고 연결 흐름까지 맞춰드립니다.',
+  },
+  {
+    name: '구글 광고 시작 세팅',
+    price: '별도 문의',
+    desc: '키워드 광고를 시작할 수 있게 기본 구조와 방향을 잡아드립니다.',
+  },
+  {
+    name: '인스타/페이스북 광고 시작 세팅',
+    price: '별도 문의',
+    desc: '광고를 바로 시작할 수 있게 계정과 기본 흐름을 정리합니다.',
+  },
+  {
+    name: '운영 노하우 가이드',
+    price: '별도 안내',
+    desc: '직접 운영하실 수 있도록 예산과 순서를 쉽게 설명해드립니다.',
   },
 ];
 
 const reasons = [
-  '호주 로컬 비즈니스 흐름을 이해하고 만듭니다.',
-  '숨겨진 비용 없이 시작 가격을 먼저 안내합니다.',
-  '예쁜 화면보다 검색과 문의 흐름을 먼저 생각합니다.',
+  '기본만 잘 잡아도 고객 문의가 시작될 수 있습니다.',
+  '예쁜 화면보다 실제 유입과 매출 흐름을 먼저 봅니다.',
+  '필요한 것만 먼저 하고, 원하면 광고까지 이어갈 수 있습니다.',
 ];
 
 const WebPricing = () => {
@@ -72,22 +92,22 @@ const WebPricing = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="제작 가격 안내"
-        description="Goodman SEO의 웹사이트 제작 가격 안내 페이지입니다. 베이직, 맞춤형, 이커머스 패키지와 추가 옵션을 확인할 수 있습니다."
+        description="Goodman SEO의 홈페이지 제작 가격 안내 페이지입니다. 기본 홈페이지 $795부터 시작하고, 구글 지도/검색 등록과 추가 마케팅 서비스까지 확인할 수 있습니다."
         path="/pricing"
-        keywords={['홈페이지 제작 가격', '웹사이트 제작 패키지', '이커머스 제작', '호주 홈페이지 제작', 'Goodman SEO 가격']}
+        keywords={['홈페이지 제작 가격', '홈페이지 제작 795', '구글 지도 등록', '시드니 홈페이지 제작', 'Goodman SEO 가격']}
       />
       <div className="container">
         <div className="section-heading max-w-5xl">
           <p className="section-kicker">Website Pricing</p>
           <h1 className="section-title max-w-5xl">
-            사업 단계에 맞는
+            필요한 수준에 맞는
             <br />
             홈페이지 제작 가격
           </h1>
           <p className="section-copy max-w-2xl">
-            복잡하게 고를 필요 없습니다.
+            작은 비즈니스는 가볍게 시작하고,
             <br />
-            필요한 수준에 맞는 패키지를 보면 됩니다.
+            필요할 때 더하는 방식이 가장 쉽습니다.
           </p>
         </div>
 
@@ -114,8 +134,8 @@ const WebPricing = () => {
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
           <div className="showcase-panel">
             <p className="section-kicker">Add-ons</p>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">필요하면 더할 수 있는 옵션</h2>
-            <div className="mt-8 grid gap-4">
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">필요하면 더할 수 있는 서비스</h2>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {addOns.map((item) => (
                 <div key={item.name} className="soft-panel">
                   <p className="text-sm font-semibold tracking-[0.04em] text-text-soft">{item.name}</p>
@@ -128,7 +148,7 @@ const WebPricing = () => {
 
           <div className="showcase-panel">
             <p className="section-kicker">Why Goodman SEO</p>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">이렇게 진행합니다</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">이런 분께 잘 맞습니다</h2>
             <div className="mt-8 grid gap-3">
               {reasons.map((reason) => (
                 <div key={reason} className="benefit-row">
@@ -138,7 +158,7 @@ const WebPricing = () => {
               ))}
             </div>
             <p className="mt-8 max-w-[30rem] text-base leading-relaxed text-text-muted">
-              먼저 필요한 범위를 같이 정리하고, 그다음에 맞는 제작 방식과 견적을 안내해드립니다.
+              먼저 홈페이지와 구글 기본을 잡고, 원하시면 SNS와 광고 시작 세팅까지 이어서 도와드립니다.
             </p>
             <Link to="/contact" className="primary-button mt-8 inline-flex">
               무료 견적 문의하기

@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: '홈', href: '/' },
-    { name: '스타터 패키지', href: '/starter-package' },
+    { name: '홈페이지 제작', href: '/starter-package' },
     { name: '제작 가격', href: '/pricing' },
     { name: '블로그', href: '/blog' },
     { name: '상담 신청', href: '/contact' },
@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between gap-6 px-6 md:px-4">
         <Link to="/" className="site-mark">
           <span className="site-mark__title gradient-text">GOODMANSEO</span>
-          <span className="site-mark__meta">starter package for small business</span>
+          <span className="site-mark__meta">작은 비즈니스 홈페이지와 마케팅 시작</span>
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

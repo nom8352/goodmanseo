@@ -10,31 +10,31 @@ const routePages = [
     route: '/',
     title: '홈 | Goodman SEO',
     description:
-      'Goodman SEO는 소상공인을 위해 웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결을 월 $500 + GST, 최소 6개월 계약 스타터 패키지로 제공합니다.',
+      'Goodman SEO는 작은 비즈니스를 위해 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다.',
     canonical: 'https://goodmanseo.com/',
     type: 'website',
     keywords:
-      'Goodman SEO, 소상공인 홈페이지 제작, 구글 비즈니스 프로필, 시드니 SEO, 스타터 패키지',
+      'Goodman SEO, 소상공인 홈페이지 제작, 구글 지도 등록, 시드니 홈페이지 제작, 작은 비즈니스 홈페이지',
   },
   {
     route: '/starter-package',
-    title: '스타터 패키지 | Goodman SEO',
+    title: '홈페이지 제작 | Goodman SEO',
     description:
-      '웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결과 운영 지원을 포함한 Goodman SEO의 월 $500 + GST, 최소 6개월 계약 스타터 패키지 안내 페이지입니다.',
+      'Goodman SEO의 작은 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 포함됩니다.',
     canonical: 'https://goodmanseo.com/starter-package',
     type: 'website',
     keywords:
-      '스타터 패키지, 월 500달러 홈페이지, 구글 지도 세팅, 소상공인 마케팅 패키지',
+      '홈페이지 제작 795, 구글 지도 등록, 작은 비즈니스 홈페이지, 시드니 홈페이지 제작, 소상공인 홈페이지',
   },
   {
     route: '/pricing',
     title: '제작 가격 안내 | Goodman SEO',
     description:
-      '베이직, 맞춤형, 이커머스까지 사업 단계에 맞는 Goodman SEO의 홈페이지 제작 가격을 확인할 수 있습니다.',
+      'Goodman SEO의 홈페이지 제작 가격 안내 페이지입니다. 기본 홈페이지 $795부터 시작하고, 구글 지도/검색 등록과 추가 마케팅 서비스까지 확인할 수 있습니다.',
     canonical: 'https://goodmanseo.com/pricing',
     type: 'website',
     keywords:
-      '홈페이지 제작 가격, 웹사이트 제작 패키지, 맞춤형 홈페이지, 이커머스 제작, 굿맨SEO 가격',
+      '홈페이지 제작 가격, 홈페이지 제작 795, 구글 지도 등록, 시드니 홈페이지 제작, 굿맨SEO 가격',
   },
   {
     route: '/blog',
@@ -182,6 +182,8 @@ run().catch((error) => {
   console.error('Failed to generate static pages.', error);
   process.exit(1);
 });
+
+
 
 
 
