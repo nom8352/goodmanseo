@@ -27,6 +27,16 @@ const routePages = [
       '스타터 패키지, 월 500달러 홈페이지, 구글 지도 세팅, 소상공인 마케팅 패키지',
   },
   {
+    route: '/pricing',
+    title: '제작 가격 안내 | Goodman SEO',
+    description:
+      '베이직, 맞춤형, 이커머스까지 사업 단계에 맞는 Goodman SEO의 홈페이지 제작 가격을 확인할 수 있습니다.',
+    canonical: 'https://goodmanseo.com/pricing',
+    type: 'website',
+    keywords:
+      '홈페이지 제작 가격, 웹사이트 제작 패키지, 맞춤형 홈페이지, 이커머스 제작, 굿맨SEO 가격',
+  },
+  {
     route: '/blog',
     title: '블로그 | Goodman SEO',
     description:
@@ -172,3 +182,6 @@ run().catch((error) => {
   console.error('Failed to generate static pages.', error);
   process.exit(1);
 });
+
+
+

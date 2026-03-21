@@ -18,6 +18,7 @@ const Navbar = () => {
   const navLinks = [
     { name: '홈', href: '/' },
     { name: '스타터 패키지', href: '/starter-package' },
+    { name: '제작 가격', href: '/pricing' },
     { name: '블로그', href: '/blog' },
     { name: '상담 신청', href: '/contact' },
   ];

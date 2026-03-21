@@ -39,6 +39,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-4">
               <li><Link to="/" className="text-text-muted hover:text-accent-primary">홈</Link></li>
               <li><Link to="/starter-package" className="text-text-muted hover:text-accent-primary">스타터 패키지</Link></li>
+              <li><Link to="/pricing" className="text-text-muted hover:text-accent-primary">제작 가격</Link></li>
               <li><Link to="/blog" className="text-text-muted hover:text-accent-primary">블로그</Link></li>
               <li><Link to="/contact" className="text-text-muted hover:text-accent-primary">상담 신청</Link></li>
             </ul>
