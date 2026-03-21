@@ -35,6 +35,7 @@ const Seo = ({
   description,
   path = '/',
   image = DEFAULT_IMAGE,
+  imageAlt = `${SITE_NAME} 대표 이미지`,
   type = 'website',
   keywords = [],
   jsonLd,
@@ -81,6 +82,10 @@ const Seo = ({
       property: 'og:image',
       content: image,
     });
+    ensureMetaTag('meta[property="og:image:alt"]', {
+      property: 'og:image:alt',
+      content: imageAlt,
+    });
     ensureMetaTag('meta[name="twitter:card"]', {
       name: 'twitter:card',
       content: 'summary_large_image',
@@ -96,6 +101,10 @@ const Seo = ({
     ensureMetaTag('meta[name="twitter:image"]', {
       name: 'twitter:image',
       content: image,
+    });
+    ensureMetaTag('meta[name="twitter:image:alt"]', {
+      name: 'twitter:image:alt',
+      content: imageAlt,
     });
 
     ensureLinkTag('link[rel="canonical"]', {
@@ -115,7 +124,7 @@ const Seo = ({
       script.textContent = JSON.stringify(jsonLd);
       document.head.appendChild(script);
     }
-  }, [description, image, jsonLd, keywords, path, title, type]);
+  }, [description, image, imageAlt, jsonLd, keywords, path, title, type]);
 
   return null;
 };

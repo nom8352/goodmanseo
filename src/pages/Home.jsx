@@ -82,9 +82,9 @@ const Home = () => {
     <div className="overflow-hidden">
       <Seo
         title="홈"
-        description="Goodman SEO는 작은 비즈니스를 위해 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다."
+        description="Goodman SEO는 비즈니스를 위해 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다."
         path="/"
-        keywords={['Goodman SEO', '소상공인 홈페이지 제작', '구글 지도 등록', '시드니 홈페이지 제작', '작은 비즈니스 홈페이지']}
+        keywords={['Goodman SEO', '비즈니스 홈페이지 제작', '구글 지도 등록', '시드니 홈페이지 제작', '홈페이지 제작 795']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
       <section className="hero-shell hero-shell--home pt-28 sm:pt-32">

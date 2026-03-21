@@ -105,7 +105,7 @@ const WebPricing = () => {
         title="서비스 및 가격"
         description="Goodman SEO의 서비스 및 가격 안내 페이지입니다. 기본 홈페이지 $795부터 시작하고, 구글 지도/검색 등록과 추가 마케팅 서비스까지 확인할 수 있습니다."
         path="/pricing"
-        keywords={['홈페이지 제작 가격', '홈페이지 제작 795', '구글 지도 등록', '시드니 홈페이지 제작', 'Goodman SEO 가격']}
+        keywords={['홈페이지 제작 가격', '홈페이지 제작 795', '구글 지도 등록', '시드니 홈페이지 제작', '서비스 및 가격']}
       />
       <div className="container">
         <div className="section-heading max-w-5xl">

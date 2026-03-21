@@ -12,15 +12,15 @@ const Blog = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="블로그"
-        description="소상공인을 위한 Goodman SEO의 블로그입니다. 구글 노출, 홈페이지 기본기, SNS 연결에 대한 실용적인 가이드를 제공합니다."
+        description="비즈니스를 위한 Goodman SEO의 블로그입니다. 구글 지도/검색 등록, 홈페이지 기본기, 고객 유입에 대한 쉬운 가이드를 제공합니다."
         path="/blog"
-        keywords={['굿맨SEO 블로그', '구글 노출 가이드', '소상공인 홈페이지', 'SNS 마케팅 기본기']}
+        keywords={['굿맨SEO 블로그', '구글 지도 등록 가이드', '비즈니스 홈페이지', '고객 유입 기본기']}
       />
       <div className="container">
         <div className="section-heading max-w-5xl">
           <div className="eyebrow-chip w-fit">
             <BookOpen size={15} />
-            Insights for small business
+            비즈니스를 위한 쉬운 가이드
           </div>
           <h1 className="section-title mt-6 max-w-5xl">
             읽기 쉬운 언어로 정리한

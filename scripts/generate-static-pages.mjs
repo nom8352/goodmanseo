@@ -10,27 +10,27 @@ const routePages = [
     route: '/',
     title: '홈 | Goodman SEO',
     description:
-      'Goodman SEO는 작은 비즈니스를 위해 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다.',
+      'Goodman SEO는 비즈니스를 위해 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다.',
     canonical: 'https://goodmanseo.com/',
     type: 'website',
     keywords:
-      'Goodman SEO, 소상공인 홈페이지 제작, 구글 지도 등록, 시드니 홈페이지 제작, 작은 비즈니스 홈페이지',
+      'Goodman SEO, 비즈니스 홈페이지 제작, 구글 지도 등록, 시드니 홈페이지 제작, 홈페이지 제작 795',
   },
   {
     route: '/starter-package',
     title: '홈페이지 제작 | Goodman SEO',
     description:
-      'Goodman SEO의 작은 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 포함됩니다.',
+      'Goodman SEO의 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 포함됩니다.',
     canonical: 'https://goodmanseo.com/starter-package',
     type: 'website',
     keywords:
-      '홈페이지 제작 795, 구글 지도 등록, 작은 비즈니스 홈페이지, 시드니 홈페이지 제작, 소상공인 홈페이지',
+      '홈페이지 제작 795, 구글 지도 등록, 비즈니스 홈페이지, 시드니 홈페이지 제작, 홈페이지 상담',
   },
   {
     route: '/pricing',
     title: '서비스 및 가격 | Goodman SEO',
     description:
-      'Goodman SEO의 홈페이지 제작 가격 안내 페이지입니다. 기본 홈페이지 $795부터 시작하고, 구글 지도/검색 등록과 추가 마케팅 서비스까지 확인할 수 있습니다.',
+      'Goodman SEO의 서비스 및 가격 안내 페이지입니다. 기본 홈페이지 $795부터 시작하고, 구글 지도/검색 등록과 추가 마케팅 서비스까지 확인할 수 있습니다.',
     canonical: 'https://goodmanseo.com/pricing',
     type: 'website',
     keywords:
@@ -40,11 +40,11 @@ const routePages = [
     route: '/blog',
     title: '블로그 | Goodman SEO',
     description:
-      '소상공인을 위한 Goodman SEO의 블로그입니다. 구글 노출, 홈페이지 기본기, SNS 연결에 대한 실용적인 가이드를 제공합니다.',
+      '비즈니스를 위한 Goodman SEO의 블로그입니다. 구글 지도/검색 등록, 홈페이지 기본기, 고객 유입에 대한 쉬운 가이드를 제공합니다.',
     canonical: 'https://goodmanseo.com/blog',
     type: 'website',
     keywords:
-      '굿맨SEO 블로그, 구글 노출 가이드, 소상공인 홈페이지, SNS 마케팅 기본기',
+      '굿맨SEO 블로그, 구글 지도 등록 가이드, 비즈니스 홈페이지, 고객 유입 기본기',
   },
   {
     route: '/blog/google-maps-setup',
@@ -54,7 +54,7 @@ const routePages = [
     canonical: 'https://goodmanseo.com/blog/google-maps-setup',
     type: 'article',
     keywords:
-      '굿맨SEO, Google visibility, 구글 지도 세팅, 소상공인 마케팅, 구글 비즈니스 프로필',
+      '굿맨SEO, 구글 지도 검색, 구글 지도 등록, 비즈니스 마케팅, 가게 정보 등록',
   },
   {
     route: '/blog/why-business-needs-website',
@@ -64,7 +64,7 @@ const routePages = [
     canonical: 'https://goodmanseo.com/blog/why-business-needs-website',
     type: 'article',
     keywords:
-      '굿맨SEO, Website basics, 소상공인 홈페이지, SNS 마케팅, 홈페이지 필요성',
+      '굿맨SEO, 홈페이지 기본기, 비즈니스 홈페이지, 홈페이지 필요성, 고객 문의',
   },
   {
     route: '/blog/online-basics-for-small-business',
@@ -74,17 +74,17 @@ const routePages = [
     canonical: 'https://goodmanseo.com/blog/online-basics-for-small-business',
     type: 'article',
     keywords:
-      '굿맨SEO, Starter strategy, 소상공인 마케팅, 온라인 기본기, 구글 비즈니스 프로필',
+      '굿맨SEO, 온라인 기본 세팅, 비즈니스 마케팅, 온라인 기본기, 구글 지도 등록',
   },
   {
     route: '/contact',
     title: '상담 신청 | Goodman SEO',
     description:
-      'Goodman SEO 상담 신청 페이지입니다. 홈페이지 제작, 구글 비즈니스 프로필 세팅, SNS 연결이 필요한 소상공인을 위한 문의를 받고 있습니다.',
+      'Goodman SEO 상담 신청 페이지입니다. 홈페이지 제작, 구글 지도/검색 등록, SNS와 광고 시작 세팅이 필요한 비즈니스를 위한 문의를 받고 있습니다.',
     canonical: 'https://goodmanseo.com/contact',
     type: 'website',
     keywords:
-      '굿맨SEO 문의, 홈페이지 상담, 구글 비즈니스 프로필 상담, 시드니 소상공인 마케팅',
+      '굿맨SEO 문의, 홈페이지 상담, 구글 지도 등록 상담, 시드니 비즈니스 마케팅',
   },
 ];
 
@@ -182,6 +182,9 @@ run().catch((error) => {
   console.error('Failed to generate static pages.', error);
   process.exit(1);
 });
+
+
+
 
 
 

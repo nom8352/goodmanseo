@@ -20,7 +20,8 @@ const BlogDetail = () => {
         title={post.title}
         description={post.excerpt}
         path={`/blog/${post.id}`}
-        keywords={['굿맨SEO', post.category, post.title, '소상공인 마케팅', '구글 비즈니스 프로필']}
+        keywords={['굿맨SEO', post.category, post.title, '비즈니스 마케팅', '구글 지도/검색 등록']}
+        imageAlt={post.title}
         type="article"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -35,6 +36,10 @@ const BlogDetail = () => {
           publisher: {
             '@type': 'Organization',
             name: 'Goodman SEO',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://goodmanseo.com/favicon.png',
+            },
           },
           datePublished: publishedDate,
           mainEntityOfPage: `https://goodmanseo.com/blog/${post.id}`,

@@ -109,9 +109,9 @@ const Contact = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="상담 신청"
-        description="Goodman SEO 상담 신청 페이지입니다. 홈페이지 제작, 구글 비즈니스 프로필 세팅, SNS 연결이 필요한 소상공인을 위한 문의를 받고 있습니다."
+        description="Goodman SEO 상담 신청 페이지입니다. 홈페이지 제작, 구글 지도/검색 등록, SNS와 광고 시작 세팅이 필요한 비즈니스를 위한 문의를 받고 있습니다."
         path="/contact"
-        keywords={['굿맨SEO 문의', '홈페이지 상담', '구글 비즈니스 프로필 상담', '시드니 소상공인 마케팅']}
+        keywords={['굿맨SEO 문의', '홈페이지 상담', '구글 지도 등록 상담', '시드니 비즈니스 마케팅']}
       />
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
