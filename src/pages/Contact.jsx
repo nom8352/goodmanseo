@@ -29,6 +29,8 @@ const initialForm = {
   'bot-field': '',
 };
 
+const FORM_ENDPOINT = 'https://formsubmit.co/ajax/goodmanseo.sydney@gmail.com';
+
 const encode = (data) =>
   Object.keys(data)
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
@@ -61,20 +63,35 @@ const Contact = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (form['bot-field']) {
+      setStatus('success');
+      setNotice('상담 신청이 접수되었습니다. 확인 후 연락드리겠습니다.');
+      return;
+    }
+
     setStatus('submitting');
     setNotice('');
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          Accept: 'application/json',
+        },
         body: encode({
-          'form-name': 'contact',
+          _subject: `[Goodman SEO] ${form.company || '새 상담 문의'}`,
+          _template: 'table',
+          _captcha: 'false',
+          _honey: form['bot-field'],
           ...form,
         }),
       });
 
-      if (!response.ok) {
+      const result = await response.json().catch(() => null);
+
+      if (!response.ok || (result && result.success === false)) {
         throw new Error('Submission failed');
       }
 
@@ -153,9 +170,18 @@ const Contact = () => {
               <h2 className="mt-4 text-4xl font-black tracking-[-0.05em]">상담 신청서</h2>
             </div>
 
-            <form className="mt-8 grid gap-5" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit}>
+            <form
+              className="mt-8 grid gap-5"
+              name="contact"
+              method="POST"
+              action="https://formsubmit.co/goodmanseo.sydney@gmail.com"
+              onSubmit={handleSubmit}
+            >
               <input type="hidden" name="form-name" value="contact" />
               <input type="hidden" name="bot-field" value={form['bot-field']} onChange={handleChange} />
+              <input type="hidden" name="_subject" value={form.company ? `[Goodman SEO] ${form.company}` : '[Goodman SEO] 새 상담 문의'} />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
 
               <div className="grid gap-5 md:grid-cols-2">
                 <label className="form-field">
