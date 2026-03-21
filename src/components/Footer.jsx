@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="footer-meta">
             <p className="section-kicker">Start small, look premium</p>
             <h2 className="mt-3 text-3xl font-black tracking-[-0.06em] sm:text-4xl">
-              웹사이트, 구글 노출, SNS 흐름을
+              웹사이트, 구글, SNS를
               <br />
-              한 번에 정리할 준비가 되어 있습니다.
+              한 번에 정리해드립니다.
             </h2>
           </div>
           <Link to="/contact" className="primary-button">
@@ -28,8 +28,9 @@ const Footer = () => {
               <span className="site-mark__meta">starter package for small business</span>
             </Link>
             <p className="mt-6 max-w-[30rem] leading-relaxed text-text-muted">
-              복잡한 설명보다 결과가 보이는 기본 세팅에 집중합니다. 작은 비즈니스가
-              온라인에서 더 잘 보이도록 필요한 흐름만 정리해 드립니다.
+              필요한 것만 쉽게,
+              <br />
+              보기 좋게 정리해드립니다.
             </p>
           </div>
 

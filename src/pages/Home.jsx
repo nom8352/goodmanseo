@@ -13,19 +13,19 @@ const serviceCards = [
   {
     icon: <Layout size={30} className="text-accent-primary" />,
     title: 'Website',
-    desc: '브랜드 첫인상을 만드는 반응형 홈페이지를 감각적으로 제작합니다.',
+    desc: '깔끔한 홈페이지를 만듭니다.',
     size: 'lg:col-span-5',
   },
   {
     icon: <MapPin size={30} className="text-accent-primary" />,
     title: 'Google Business',
-    desc: '구글 검색과 지도에서 비즈니스가 더 잘 보이도록 기본기를 정리합니다.',
+    desc: '구글 검색과 지도 노출을 정리합니다.',
     size: 'lg:col-span-3',
   },
   {
     icon: <Share2 size={30} className="text-accent-primary" />,
     title: 'Social Setup',
-    desc: '인스타그램과 페이스북 동선을 정리해 문의가 자연스럽게 이어지게 만듭니다.',
+    desc: 'SNS를 문의 흐름에 맞게 연결합니다.',
     size: 'lg:col-span-4',
   },
 ];
@@ -63,17 +63,17 @@ const process = [
   {
     step: '01',
     title: '상담',
-    desc: '업종과 현재 상태를 짧게 확인하고 필요한 범위만 정리합니다.',
+    desc: '상황을 듣고 바로 정리합니다.',
   },
   {
     step: '02',
     title: '세팅',
-    desc: '사이트, 구글 비즈니스 프로필, SNS 채널을 한 흐름으로 연결합니다.',
+    desc: '웹, 구글, SNS를 연결합니다.',
   },
   {
     step: '03',
     title: '운영 시작',
-    desc: '수정과 관리까지 이어지도록 안정적인 운영 기반을 함께 만듭니다.',
+    desc: '바로 운영할 수 있게 맞춥니다.',
   },
 ];
 
@@ -108,8 +108,9 @@ const Home = () => {
                 <span className="gradient-text">제대로 세팅합니다</span>
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-text-muted sm:text-xl">
-                홈페이지, 구글 비즈니스 프로필, SNS 세팅까지. 복잡한 마케팅 용어 대신
-                사장님에게 바로 필요한 것만 한 패키지로 정리했습니다.
+                홈페이지, 구글, SNS.
+                <br />
+                필요한 것만 한 번에 정리해드립니다.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link to="/starter-package" className="primary-button">
@@ -149,7 +150,7 @@ const Home = () => {
                     <p className="mt-2 text-6xl font-black tracking-[-0.08em]">$500</p>
                   </div>
                   <div className="max-w-[160px] text-right text-sm leading-relaxed text-text-muted">
-                    웹 제작부터 운영 시작까지 가장 필요한 흐름만 담았습니다.
+                    처음 시작할 때 필요한 것만 담았습니다.
                   </div>
                 </div>
                 <div className="mt-10 overflow-hidden rounded-[28px] border border-white/10">
@@ -175,8 +176,9 @@ const Home = () => {
             <p className="section-kicker">What we set up</p>
             <h2 className="section-title">딱 필요한 세 가지를 한 번에</h2>
             <p className="section-copy">
-              더 많은 기능보다 더 중요한 것은 흐름입니다. 고객이 검색하고, 확인하고,
-              문의하게 되는 기본 동선을 먼저 완성합니다.
+              복잡하게 하지 않습니다.
+              <br />
+              가장 필요한 세 가지만 먼저 잡습니다.
             </p>
           </div>
 
@@ -203,10 +205,11 @@ const Home = () => {
         <div className="container">
           <div className="section-heading">
             <p className="section-kicker">Visual proof</p>
-            <h2 className="section-title">작업물과 분위기가 먼저 신뢰를 만듭니다</h2>
+            <h2 className="section-title">첫인상부터 믿음이 가게</h2>
             <p className="section-copy">
-              Humaan처럼 넓은 여백과 사진 중심의 화면으로, 실제 비즈니스가 더 고급스럽게
-              보이도록 레이아웃을 설계할 수 있습니다.
+              사진, 화면, 분위기까지
+              <br />
+              보기 좋게 정리합니다.
             </p>
           </div>
           <div className="grid gap-6 lg:grid-cols-12">
@@ -238,8 +241,9 @@ const Home = () => {
               <p className="section-kicker">Simple pricing</p>
               <h2 className="section-title">복잡한 옵션 없이, 한 패키지로 시작</h2>
               <p className="section-copy">
-                가격은 단순하게, 포함 내역은 명확하게. 처음 시작하는 소상공인이 부담 없이
-                결정할 수 있는 구조로 설계했습니다.
+                가격은 하나,
+                <br />
+                해야 할 일도 명확합니다.
               </p>
             </div>
             <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
@@ -250,8 +254,7 @@ const Home = () => {
                   <span className="pb-2 text-lg text-text-muted">/ month</span>
                 </div>
                 <p className="mt-5 text-base leading-relaxed text-text-muted">
-                  브랜드 첫 세팅에 필요한 핵심만 담았습니다. 고정된 패키지라 비교가 쉽고,
-                  시작이 빠릅니다.
+                  필요한 것만 담은 시작 패키지입니다.
                 </p>
                 <Link to="/starter-package" className="primary-button mt-8 inline-flex">
                   포함 내역 자세히 보기

@@ -103,16 +103,17 @@ const Contact = () => {
               <Sparkles size={15} />
               Contact Goodman SEO
             </div>
-            <h1 className="section-title mt-6 max-w-5xl">
-              복잡하게 쓰지 않아도 됩니다.
-              <br />
-              현재 상황만 알려주세요.
-            </h1>
-            <p className="section-copy max-w-2xl">
-              홈페이지가 필요한지, 구글 지도 노출이 약한지, SNS가 정리되지 않았는지.
-              지금 고민만 짧게 남겨주시면 24시간 이내에 연락드릴 수 있도록 준비했습니다.
-            </p>
-          </div>
+          <h1 className="section-title mt-6 max-w-5xl">
+            복잡하게 쓰지 않아도 됩니다.
+            <br />
+            현재 상황만 알려주세요.
+          </h1>
+          <p className="section-copy max-w-2xl">
+            지금 불편한 점만
+            <br />
+            짧게 남겨주시면 됩니다.
+          </p>
+        </div>
 
           <div className="package-matrix">
             {['24시간 내 답변', '소상공인 맞춤 상담', '불필요한 옵션 없이 제안', '이메일 fallback 지원'].map((item) => (
@@ -139,8 +140,9 @@ const Contact = () => {
             <div className="soft-panel">
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Quick note</p>
               <p className="mt-4 text-base leading-relaxed text-text-muted">
-                자동 접수는 정적 호스팅용 폼 처리에 맞춰 연결했습니다. 배포 환경에서 폼 처리
-                지원이 없더라도 이메일 작성 화면으로 바로 이어지도록 대비해 두었습니다.
+                접수가 안 되면
+                <br />
+                이메일로 바로 이어집니다.
               </p>
             </div>
           </div>
@@ -190,8 +192,9 @@ const Contact = () => {
 
               <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-xl text-sm leading-relaxed text-text-muted">
-                  배포 환경에서 폼 처리 기능이 지원되면 바로 접수되고, 그렇지 않으면 이메일
-                  앱으로 이어져 문의 내용이 그대로 채워집니다.
+                  안 되면 메일 작성창으로
+                  <br />
+                  바로 이어집니다.
                 </p>
                 <button type="submit" className="primary-button" disabled={status === 'submitting'}>
                   {status === 'submitting' ? '전송 중...' : '상담 신청하기'}

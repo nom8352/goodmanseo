@@ -55,8 +55,7 @@ const BlogDetail = () => {
               <p className="inline-flex items-center gap-2"><User size={15} className="text-accent-primary" /> {post.author}</p>
             </div>
             <p className="mt-8 text-base leading-relaxed text-text-muted">
-              지금 당장 필요한 기준을 짧고 분명하게 정리한 글입니다. 읽고 나서 바로
-              상담으로 이어질 수 있도록 흐름을 설계했습니다.
+              짧고 쉽게 읽을 수 있는 글입니다.
             </p>
             <Link to="/contact" className="primary-button mt-8 inline-flex">
               상담 이어가기

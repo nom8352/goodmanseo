@@ -5,19 +5,19 @@ import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
 const inclusions = [
-  '트렌디한 모바일 최적화 웹사이트 제작',
-  '구글 비즈니스 프로필 로컬 검색 및 지도 세팅',
-  '인스타그램 & 페이스북 비즈니스 계정 연결',
-  '매월 성과 요약 리포트 제공',
-  'Google Business 최신화 및 관리 지원',
-  '웹사이트 텍스트/이미지 수정 지원',
+  '모바일 홈페이지 제작',
+  '구글 비즈니스 세팅',
+  '인스타그램 & 페이스북 연결',
+  '월간 요약 리포트',
+  '구글 정보 관리 지원',
+  '텍스트/이미지 수정 지원',
 ];
 
 const support = [
-  '처음 시작하는 로컬 비즈니스',
-  '기존 사이트가 오래되어 정리가 필요한 업종',
-  'SNS와 홈페이지가 따로 놀고 있는 상황',
-  '구글 지도에서 가게 노출을 더 명확히 만들고 싶은 경우',
+  '처음 시작하는 가게',
+  '사이트가 오래된 업종',
+  'SNS가 따로 노는 상태',
+  '구글 지도 노출이 약한 경우',
 ];
 
 const stats = [
@@ -46,8 +46,9 @@ const StarterPackage = () => {
               필요한 기본기만 정확하게
             </h1>
             <p className="section-copy max-w-2xl">
-              옵션을 늘리는 대신 시작에 필요한 흐름만 정리했습니다. 가격은 단순하게,
-              범위는 명확하게 보여드리는 구조입니다.
+              복잡한 옵션 없이
+              <br />
+              필요한 것만 묶었습니다.
             </p>
           </div>
 
@@ -82,14 +83,16 @@ const StarterPackage = () => {
                 기본 6개월 관리 포함
               </p>
               <p className="mt-8 text-base leading-relaxed text-text-muted">
-                웹사이트 제작, 구글 검색 기반 세팅, SNS 연결과 운영 지원까지 한 번에
-                정리합니다. 비교가 쉽고 결정이 빠른 단일 패키지 구조입니다.
+                웹, 구글, SNS를
+                <br />
+                한 번에 정리하는 패키지입니다.
               </p>
               <div className="package-note mt-8">
                 <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">For owners who want clarity</p>
                 <p className="mt-3 text-base leading-relaxed text-text-muted">
-                  무엇을 해야 할지 헷갈리는 상태에서 출발하더라도, 가장 먼저 정리해야 할
-                  화면과 채널만 정확하게 잡아드립니다.
+                  뭘 먼저 해야 할지 모르겠다면
+                  <br />
+                  이 패키지로 시작하시면 됩니다.
                 </p>
               </div>
               <Link to="/contact" className="primary-button mt-8 inline-flex">
@@ -126,9 +129,11 @@ const StarterPackage = () => {
                 <div className="soft-panel">
                   <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Why this works</p>
                   <p className="mt-5 text-base leading-relaxed text-text-muted">
-                    대부분의 소상공인은 거창한 마케팅보다 기본 세팅의 완성도가 더 중요합니다.
-                    검색에서 보이고, 사이트에서 신뢰를 주고, SNS에서 문의로 이어지는 흐름을
-                    먼저 안정화하면 이후 확장이 훨씬 쉬워집니다.
+                    먼저 보여야 하고,
+                    <br />
+                    보기 좋아야 하고,
+                    <br />
+                    문의가 와야 합니다.
                   </p>
                 </div>
               </div>
