@@ -120,9 +120,6 @@ const Home = () => {
                   795 홈페이지 보기
                   <ArrowRight size={18} />
                 </Link>
-                <Link to="/pricing" className="secondary-button">
-                  서비스 및 가격
-                </Link>
               </div>
               <div className="mt-10 grid grid-cols-2 gap-3 xl:grid-cols-4">
                 {metrics.map((item) => (
