@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheckBig, Layout, MapPin, Share2, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { Tilt } from 'react-tilt';
 import Hero3D from '../components/Hero3D';
 import Seo from '../components/Seo';
 import heroImage from '../assets/hero.png';
@@ -88,10 +87,10 @@ const Home = () => {
         keywords={['Goodman SEO', '소상공인 홈페이지 제작', '구글 비즈니스 프로필', '시드니 SEO', '스타터 패키지']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
-      <section className="hero-shell pt-28 sm:pt-32">
+      <section className="hero-shell hero-shell--home pt-28 sm:pt-32">
         <Hero3D />
         <div className="container relative z-10">
-          <div className="grid items-end gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -183,19 +182,18 @@ const Home = () => {
 
           <div className="grid gap-6 lg:grid-cols-12">
             {serviceCards.map((service, index) => (
-              <Tilt key={service.title} options={{ max: 8, scale: 1.01, speed: 300 }}>
-                <motion.article
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.45, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`feature-card ${service.size}`}
-                >
-                  <div className="feature-icon">{service.icon}</div>
-                  <h3 className="mt-10 text-3xl font-black tracking-[-0.04em]">{service.title}</h3>
-                  <p className="mt-4 text-base leading-relaxed text-text-muted">{service.desc}</p>
-                </motion.article>
-              </Tilt>
+              <motion.article
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`feature-card ${service.size}`}
+              >
+                <div className="feature-icon">{service.icon}</div>
+                <h3 className="mt-10 text-3xl font-black tracking-[-0.04em]">{service.title}</h3>
+                <p className="mt-4 text-base leading-relaxed text-text-muted">{service.desc}</p>
+              </motion.article>
             ))}
           </div>
         </div>

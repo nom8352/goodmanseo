@@ -195,6 +195,11 @@ section {
   align-items: center;
 }
 
+.hero-shell--home {
+  min-height: clamp(760px, 82dvh, 920px);
+  padding-bottom: 3rem;
+}
+
 .hero-orb {
   position: absolute;
   border-radius: 9999px;
@@ -722,5 +727,10 @@ section {
 
   .site-mark__meta {
     display: none;
+  }
+
+  .hero-shell--home {
+    min-height: 100dvh;
+    padding-bottom: 0;
   }
 }
