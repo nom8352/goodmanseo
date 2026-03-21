@@ -117,7 +117,7 @@ const Home = () => {
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link to="/starter-package" className="primary-button">
-                  795 홈페이지 보기
+                  상세히 보기
                   <ArrowRight size={18} />
                 </Link>
               </div>
