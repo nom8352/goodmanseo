@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { ArrowLeft, Calendar, User } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, User } from 'lucide-react';
 import Seo from '../components/Seo';
 import { getBlogPostById } from '../data/blogPosts';
 
@@ -46,26 +46,45 @@ const BlogDetail = () => {
           블로그로 돌아가기
         </Link>
 
-        <article className="detail-shell mt-8">
-          <div className="overflow-hidden rounded-[2rem] border border-white/10">
-            <img src={post.image} alt={post.title} className="h-[360px] w-full object-cover sm:h-[460px]" />
-          </div>
+        <div className="detail-layout mt-8">
+          <aside className="detail-aside">
+            <p className="section-kicker">Article overview</p>
+            <h2 className="mt-4 text-3xl font-black tracking-[-0.05em]">{post.category}</h2>
+            <div className="mt-8 grid gap-4 text-sm text-text-muted">
+              <p className="inline-flex items-center gap-2"><Calendar size={15} className="text-accent-primary" /> {post.date}</p>
+              <p className="inline-flex items-center gap-2"><User size={15} className="text-accent-primary" /> {post.author}</p>
+            </div>
+            <p className="mt-8 text-base leading-relaxed text-text-muted">
+              지금 당장 필요한 기준을 짧고 분명하게 정리한 글입니다. 읽고 나서 바로
+              상담으로 이어질 수 있도록 흐름을 설계했습니다.
+            </p>
+            <Link to="/contact" className="primary-button mt-8 inline-flex">
+              상담 이어가기
+              <ArrowRight size={18} />
+            </Link>
+          </aside>
 
-          <div className="mt-10 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-soft">
-            <span className="eyebrow-chip">{post.category}</span>
-            <span className="inline-flex items-center gap-2"><Calendar size={14} /> {post.date}</span>
-            <span className="inline-flex items-center gap-2"><User size={14} /> {post.author}</span>
-          </div>
+          <article className="detail-content">
+            <div className="overflow-hidden rounded-[2rem] border border-white/10">
+              <img src={post.image} alt={post.title} className="h-[360px] w-full object-cover sm:h-[460px]" />
+            </div>
 
-          <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-[-0.06em] sm:text-6xl">{post.title}</h1>
-          <p className="mt-6 max-w-3xl text-xl leading-relaxed text-text-muted">{post.excerpt}</p>
+            <div className="mt-10 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-soft">
+              <span className="eyebrow-chip">{post.category}</span>
+              <span className="inline-flex items-center gap-2"><Calendar size={14} /> {post.date}</span>
+              <span className="inline-flex items-center gap-2"><User size={14} /> {post.author}</span>
+            </div>
 
-          <div className="detail-body mt-10">
-            {post.content.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </article>
+            <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-[-0.06em] sm:text-6xl">{post.title}</h1>
+            <p className="mt-6 max-w-3xl text-xl leading-relaxed text-text-muted">{post.excerpt}</p>
+
+            <div className="detail-body mt-10">
+              {post.content.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </article>
+        </div>
       </div>
     </div>
   );

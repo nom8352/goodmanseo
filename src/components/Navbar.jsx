@@ -25,8 +25,9 @@ const Navbar = () => {
   return (
     <nav className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'nav-shell nav-shell--solid' : 'nav-shell'}`}>
       <div className="container flex items-center justify-between gap-6 px-6 md:px-4">
-        <Link to="/" className="flex items-center text-2xl font-black tracking-[-0.08em] sm:text-3xl">
-          <span className="gradient-text">GOODMANSEO</span>
+        <Link to="/" className="site-mark">
+          <span className="site-mark__title gradient-text">GOODMANSEO</span>
+          <span className="site-mark__meta">starter package for small business</span>
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

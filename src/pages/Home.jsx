@@ -15,16 +15,19 @@ const serviceCards = [
     icon: <Layout size={30} className="text-accent-primary" />,
     title: 'Website',
     desc: '브랜드 첫인상을 만드는 반응형 홈페이지를 감각적으로 제작합니다.',
+    size: 'lg:col-span-5',
   },
   {
     icon: <MapPin size={30} className="text-accent-primary" />,
     title: 'Google Business',
     desc: '구글 검색과 지도에서 비즈니스가 더 잘 보이도록 기본기를 정리합니다.',
+    size: 'lg:col-span-3',
   },
   {
     icon: <Share2 size={30} className="text-accent-primary" />,
     title: 'Social Setup',
     desc: '인스타그램과 페이스북 동선을 정리해 문의가 자연스럽게 이어지게 만듭니다.',
+    size: 'lg:col-span-4',
   },
 ];
 
@@ -178,7 +181,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-12">
             {serviceCards.map((service, index) => (
               <Tilt key={service.title} options={{ max: 8, scale: 1.01, speed: 300 }}>
                 <motion.article
@@ -186,7 +189,7 @@ const Home = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.45, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="feature-card"
+                  className={`feature-card ${service.size}`}
                 >
                   <div className="feature-icon">{service.icon}</div>
                   <h3 className="mt-10 text-3xl font-black tracking-[-0.04em]">{service.title}</h3>

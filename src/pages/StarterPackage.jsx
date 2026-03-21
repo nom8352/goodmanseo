@@ -20,6 +20,13 @@ const support = [
   '구글 지도에서 가게 노출을 더 명확히 만들고 싶은 경우',
 ];
 
+const stats = [
+  { label: '월 비용', value: '$500' },
+  { label: '기본 관리', value: '6개월' },
+  { label: '핵심 영역', value: '3가지' },
+  { label: '시작 속도', value: '빠르게' },
+];
+
 const StarterPackage = () => {
   return (
     <div className="pt-32 pb-24">
@@ -30,26 +37,37 @@ const StarterPackage = () => {
         keywords={['스타터 패키지', '월 500달러 홈페이지', '구글 지도 세팅', '소상공인 마케팅 패키지']}
       />
       <div className="container">
-        <div className="section-heading max-w-4xl">
-          <p className="section-kicker">Pricing package</p>
-          <h1 className="section-title max-w-4xl">
-            하나의 패키지로,
-            <br />
-            필요한 기본기만 정확하게
-          </h1>
-          <p className="section-copy max-w-2xl">
-            가격은 단순하게, 포함 내역은 명확하게. 처음 시작하는 사장님이 비교하기 쉽고
-            결정하기 쉬운 구조로 만들었습니다.
-          </p>
+        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+          <div className="section-heading mb-0 max-w-4xl">
+            <p className="section-kicker">Pricing package</p>
+            <h1 className="section-title max-w-4xl">
+              하나의 패키지로,
+              <br />
+              필요한 기본기만 정확하게
+            </h1>
+            <p className="section-copy max-w-2xl">
+              옵션을 늘리는 대신 시작에 필요한 흐름만 정리했습니다. 가격은 단순하게,
+              범위는 명확하게 보여드리는 구조입니다.
+            </p>
+          </div>
+
+          <div className="package-matrix">
+            {stats.map((stat) => (
+              <div key={stat.label} className="package-stat">
+                <span className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">{stat.label}</span>
+                <strong>{stat.value}</strong>
+              </div>
+            ))}
+          </div>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
-          className="showcase-panel"
+          className="showcase-panel mt-10"
         >
-          <div className="grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+          <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr]">
             <aside className="pricing-spotlight">
               <div className="eyebrow-chip w-fit">
                 <Sparkles size={14} />
@@ -65,8 +83,15 @@ const StarterPackage = () => {
               </p>
               <p className="mt-8 text-base leading-relaxed text-text-muted">
                 웹사이트 제작, 구글 검색 기반 세팅, SNS 연결과 운영 지원까지 한 번에
-                정리합니다. 옵션을 늘리기보다 시작에 꼭 필요한 범위만 담았습니다.
+                정리합니다. 비교가 쉽고 결정이 빠른 단일 패키지 구조입니다.
               </p>
+              <div className="package-note mt-8">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">For owners who want clarity</p>
+                <p className="mt-3 text-base leading-relaxed text-text-muted">
+                  무엇을 해야 할지 헷갈리는 상태에서 출발하더라도, 가장 먼저 정리해야 할
+                  화면과 채널만 정확하게 잡아드립니다.
+                </p>
+              </div>
               <Link to="/contact" className="primary-button mt-8 inline-flex">
                 이 패키지로 시작하기
                 <ArrowRight size={18} />
@@ -86,7 +111,7 @@ const StarterPackage = () => {
                 </div>
               </div>
 
-              <div className="grid gap-6 lg:grid-cols-2">
+              <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
                 <div className="soft-panel">
                   <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Who it is for</p>
                   <div className="mt-5 space-y-3">

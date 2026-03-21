@@ -17,7 +17,7 @@ const Blog = () => {
         keywords={['굿맨SEO 블로그', '구글 노출 가이드', '소상공인 홈페이지', 'SNS 마케팅 기본기']}
       />
       <div className="container">
-        <div className="section-heading max-w-4xl">
+        <div className="section-heading max-w-5xl">
           <div className="eyebrow-chip w-fit">
             <BookOpen size={15} />
             Insights for small business
@@ -33,7 +33,7 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
           <motion.article
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -41,14 +41,14 @@ const Blog = () => {
             className="editorial-card"
           >
             <div className="overflow-hidden rounded-[1.5rem] border border-white/10">
-              <img src={featuredPost.image} alt={featuredPost.title} className="h-[360px] w-full object-cover" />
+              <img src={featuredPost.image} alt={featuredPost.title} className="h-[420px] w-full object-cover" />
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-soft">
               <span className="eyebrow-chip">{featuredPost.category}</span>
               <span className="inline-flex items-center gap-2"><Calendar size={14} /> {featuredPost.date}</span>
               <span className="inline-flex items-center gap-2"><User size={14} /> {featuredPost.author}</span>
             </div>
-            <h2 className="mt-6 text-4xl font-black tracking-[-0.05em]">{featuredPost.title}</h2>
+            <h2 className="mt-6 max-w-3xl text-4xl font-black tracking-[-0.05em] sm:text-5xl">{featuredPost.title}</h2>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-text-muted">{featuredPost.excerpt}</p>
             <Link to={`/blog/${featuredPost.id}`} className="secondary-button secondary-button--compact mt-8 inline-flex">
               더 읽어보기

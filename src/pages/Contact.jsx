@@ -97,23 +97,34 @@ const Contact = () => {
         keywords={['굿맨SEO 문의', '홈페이지 상담', '구글 비즈니스 프로필 상담', '시드니 소상공인 마케팅']}
       />
       <div className="container">
-        <div className="section-heading max-w-4xl">
-          <div className="eyebrow-chip w-fit">
-            <Sparkles size={15} />
-            Contact Goodman SEO
+        <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
+          <div className="section-heading mb-0 max-w-4xl">
+            <div className="eyebrow-chip w-fit">
+              <Sparkles size={15} />
+              Contact Goodman SEO
+            </div>
+            <h1 className="section-title mt-6 max-w-5xl">
+              복잡하게 쓰지 않아도 됩니다.
+              <br />
+              현재 상황만 알려주세요.
+            </h1>
+            <p className="section-copy max-w-2xl">
+              홈페이지가 필요한지, 구글 지도 노출이 약한지, SNS가 정리되지 않았는지.
+              지금 고민만 짧게 남겨주시면 24시간 이내에 연락드릴 수 있도록 준비했습니다.
+            </p>
           </div>
-          <h1 className="section-title mt-6 max-w-5xl">
-            복잡하게 쓰지 않아도 됩니다.
-            <br />
-            현재 상황만 알려주세요.
-          </h1>
-          <p className="section-copy max-w-2xl">
-            홈페이지가 필요한지, 구글 지도 노출이 약한지, SNS가 정리되지 않았는지.
-            지금 고민만 짧게 남겨주시면 24시간 이내에 연락드릴 수 있도록 준비했습니다.
-          </p>
+
+          <div className="package-matrix">
+            {['24시간 내 답변', '소상공인 맞춤 상담', '불필요한 옵션 없이 제안', '이메일 fallback 지원'].map((item) => (
+              <div key={item} className="package-stat">
+                <span className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Support</span>
+                <strong className="text-[1.6rem]">{item}</strong>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+        <div className="mt-10 grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
           <div className="grid gap-6">
             {contactItems.map((item) => (
               <div key={item.label} className="soft-panel">
@@ -188,15 +199,6 @@ const Contact = () => {
                 </button>
               </div>
             </form>
-
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {['24시간 내 답변', '소상공인 맞춤 상담', '불필요한 옵션 없이 제안'].map((item) => (
-                <div key={item} className="mini-feature">
-                  <ArrowRight size={16} className="text-accent-primary" />
-                  {item}
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
