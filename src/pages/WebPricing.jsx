@@ -80,6 +80,16 @@ const addOns = [
     price: '별도 안내',
     desc: '직접 운영하실 수 있도록 예산과 순서를 쉽게 설명해드립니다.',
   },
+  {
+    name: '로컬 비즈니스 디렉토리 등록 5개',
+    price: '$90',
+    desc: '비즈니스 정보를 5개 로컬 디렉토리에 등록해 기본 노출 기반을 넓혀드립니다.',
+  },
+  {
+    name: '로컬 비즈니스 디렉토리 등록 10개',
+    price: '$150',
+    desc: '비즈니스 정보를 10개 로컬 디렉토리에 등록해 더 넓게 노출될 수 있게 도와드립니다.',
+  },
 ];
 
 const reasons = [
@@ -134,8 +144,8 @@ const WebPricing = () => {
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
           <div className="showcase-panel">
-            <p className="section-kicker">Add-ons</p>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">필요하면 더할 수 있는 서비스</h2>
+            <p className="section-kicker">Extra services</p>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">추가서비스</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {addOns.map((item) => (
                 <div key={item.name} className="soft-panel">
