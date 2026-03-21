@@ -20,7 +20,7 @@ const BlogDetail = () => {
         title={post.title}
         description={post.excerpt}
         path={`/blog/${post.id}`}
-        keywords={['굿맨SEO', post.category, post.title, '비즈니스 마케팅', '구글 지도/검색 등록']}
+        keywords={['호주 비즈니스 마케팅', '시드니 비즈니스 마케팅', post.category, post.title, '구글 지도/검색 등록']}
         imageAlt={post.title}
         type="article"
         jsonLd={{

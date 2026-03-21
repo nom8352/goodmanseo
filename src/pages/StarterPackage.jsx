@@ -75,9 +75,9 @@ const StarterPackage = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="홈페이지 제작"
-        description="Goodman SEO의 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 홈페이지 제작 $795, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 포함됩니다."
+        description="Goodman SEO의 호주와 시드니 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 구글 지도/검색 등록과 홈페이지 방문 확인 연결까지 포함됩니다."
         path="/starter-package"
-        keywords={['홈페이지 제작 795', '구글 지도 등록', '비즈니스 홈페이지', '시드니 홈페이지 제작', '홈페이지 상담']}
+        keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', '호주 비즈니스 홈페이지', '구글 지도 등록 포함 홈페이지', '호주 홈페이지 상담']}
       />
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">

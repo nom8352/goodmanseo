@@ -12,9 +12,9 @@ const Blog = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="블로그"
-        description="비즈니스를 위한 Goodman SEO의 블로그입니다. 구글 지도/검색 등록, 홈페이지 기본기, 고객 유입에 대한 쉬운 가이드를 제공합니다."
+        description="호주와 시드니 비즈니스를 위한 Goodman SEO의 블로그입니다. 구글 지도/검색 등록, 홈페이지 기본기, 고객 유입에 대한 쉬운 가이드를 제공합니다."
         path="/blog"
-        keywords={['굿맨SEO 블로그', '구글 지도 등록 가이드', '비즈니스 홈페이지', '고객 유입 기본기']}
+        keywords={['호주 구글 지도 등록 가이드', '시드니 홈페이지 제작 가이드', '비즈니스 홈페이지', '고객 유입 기본기']}
       />
       <div className="container">
         <div className="section-heading max-w-5xl">
