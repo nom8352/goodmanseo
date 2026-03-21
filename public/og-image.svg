@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Goodman SEO Open Graph Image">
+  <defs>
+    <linearGradient id="bgGrad" x1="120" x2="1040" y1="70" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#101826" />
+      <stop offset="1" stop-color="#090d13" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="264" x2="903" y1="135" y2="538" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8ad7ff" />
+      <stop offset="1" stop-color="#d8ff72" />
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="40" />
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="#0b0f16" />
+  <rect x="26" y="26" width="1148" height="578" rx="34" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.12)" />
+  <circle cx="215" cy="118" r="124" fill="#8ad7ff" opacity="0.14" filter="url(#blur)" />
+  <circle cx="1010" cy="112" r="116" fill="#d8ff72" opacity="0.14" filter="url(#blur)" />
+  <circle cx="885" cy="500" r="148" fill="#8ad7ff" opacity="0.08" filter="url(#blur)" />
+  <g transform="translate(86 82)">
+    <rect x="0" y="0" width="180" height="46" rx="23" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" />
+    <text x="24" y="29" fill="#f1efe8" font-family="Outfit, Pretendard, sans-serif" font-size="19" font-weight="700" letter-spacing="3">GOODMAN SEO</text>
+  </g>
+  <text x="86" y="242" fill="#f5f7fb" font-family="Outfit, Pretendard, sans-serif" font-size="86" font-weight="800" letter-spacing="-4">
+    월 $500으로
+  </text>
+  <text x="86" y="334" fill="#f5f7fb" font-family="Outfit, Pretendard, sans-serif" font-size="86" font-weight="800" letter-spacing="-4">
+    온라인 기본기를
+  </text>
+  <text x="86" y="426" fill="url(#accentGrad)" font-family="Outfit, Pretendard, sans-serif" font-size="86" font-weight="800" letter-spacing="-4">
+    제대로 세팅합니다
+  </text>
+  <text x="88" y="496" fill="#a8b1c7" font-family="Pretendard, sans-serif" font-size="30" font-weight="500">
+    홈페이지 제작, 구글 비즈니스 프로필, SNS 세팅까지
+  </text>
+  <text x="88" y="538" fill="#a8b1c7" font-family="Pretendard, sans-serif" font-size="30" font-weight="500">
+    소상공인을 위한 올인원 스타터 패키지
+  </text>
+  <g transform="translate(862 160)">
+    <rect x="0" y="0" width="236" height="280" rx="26" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" />
+    <text x="30" y="62" fill="#7f8ba3" font-family="Outfit, Pretendard, sans-serif" font-size="21" font-weight="700" letter-spacing="4">STARTER</text>
+    <text x="30" y="150" fill="#f5f7fb" font-family="Outfit, Pretendard, sans-serif" font-size="92" font-weight="800" letter-spacing="-6">$500</text>
+    <text x="34" y="199" fill="#a8b1c7" font-family="Pretendard, sans-serif" font-size="28" font-weight="500">/ month</text>
+    <rect x="30" y="224" width="176" height="34" rx="17" fill="rgba(216,255,114,0.12)" />
+    <text x="46" y="247" fill="#d8ff72" font-family="Outfit, Pretendard, sans-serif" font-size="16" font-weight="700" letter-spacing="2">6 MONTHS INCLUDED</text>
+  </g>
+</svg>

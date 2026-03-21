@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const SITE_NAME = 'Goodman SEO';
 const SITE_URL = 'https://goodmanseo.com';
-const DEFAULT_IMAGE = `${SITE_URL}/favicon.svg`;
+const DEFAULT_IMAGE = `${SITE_URL}/og-image.svg`;
 
 const ensureMetaTag = (selector, attributes) => {
   let element = document.head.querySelector(selector);

@@ -719,4 +719,8 @@ section {
   .package-matrix {
     grid-template-columns: 1fr;
   }
+
+  .site-mark__meta {
+    display: none;
+  }
 }

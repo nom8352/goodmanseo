@@ -121,7 +121,7 @@ const Home = () => {
                   무료 상담 신청
                 </Link>
               </div>
-              <div className="mt-10 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+              <div className="mt-10 grid grid-cols-2 gap-3 xl:grid-cols-4">
                 {metrics.map((item) => (
                   <div key={item} className="metric-pill">
                     <CircleCheckBig size={16} className="text-accent-primary" />

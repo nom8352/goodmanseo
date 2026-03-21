@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const distDir = path.resolve('dist');
 const indexPath = path.join(distDir, 'index.html');
-const defaultImage = 'https://goodmanseo.com/favicon.svg';
+const defaultImage = 'https://goodmanseo.com/og-image.svg';
 
 const routePages = [
   {
