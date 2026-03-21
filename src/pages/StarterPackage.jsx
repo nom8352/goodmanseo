@@ -24,7 +24,7 @@ const stats = [
   { label: '제작비', value: '$795' },
   { label: '형태', value: '간단한 홈페이지' },
   { label: '포함', value: '구글 지도/검색 등록' },
-  { label: '운영', value: '부담 낮게 시작' },
+  { label: '호스팅', value: '별도 비용 없이 시작 가능' },
 ];
 
 const extras = [
@@ -121,11 +121,11 @@ const StarterPackage = () => {
                 고객이 찾고 문의할 수 있는 출발점이 됩니다.
               </p>
               <div className="package-note mt-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">운영비 부담도 낮게</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">별도 호스팅비 없이 시작</p>
                 <p className="mt-3 text-base leading-relaxed text-text-muted">
                   간단한 홈페이지는
                   <br />
-                  운영비 부담을 낮춘 방식으로 안내해드립니다.
+                  별도 호스팅비 없이 시작 가능한 구조로 안내해드립니다.
                 </p>
               </div>
               <Link to="/contact" className="primary-button mt-8 inline-flex">

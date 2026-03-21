@@ -30,7 +30,7 @@ const serviceCards = [
   },
 ];
 
-const metrics = ['홈페이지 제작 $795', '구글 지도/검색 등록 포함', '방문 확인 연결 포함', '운영비 부담 낮게 시작'];
+const metrics = ['홈페이지 제작 $795', '구글 지도/검색 등록 포함', '방문 확인 연결 포함', '별도 호스팅비 없이 시작 가능'];
 
 const proofGallery = [
   {
@@ -275,7 +275,7 @@ const Home = () => {
                   '구글 지도/검색 등록',
                   '홈페이지 방문 확인 연결',
                   '구글 검색 확인 연결',
-                  '필요하면 SNS와 광고 세팅 추가 가능',
+                  '별도 호스팅비 없이 시작 가능',
                 ].map((item) => (
                   <div key={item} className="benefit-row">
                     <CircleCheckBig size={18} className="text-accent-primary" />
