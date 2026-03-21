@@ -30,7 +30,7 @@ const serviceCards = [
   },
 ];
 
-const metrics = ['월 $500', '기본 6개월', '웹 + 구글 + SNS', '운영 지원 포함'];
+const metrics = ['월 $500 + GST', '최소 6개월 계약', '웹 + 구글 + SNS', '운영 지원 포함'];
 
 const proofGallery = [
   {
@@ -82,7 +82,7 @@ const Home = () => {
     <div className="overflow-hidden">
       <Seo
         title="홈"
-        description="Goodman SEO는 소상공인을 위해 웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결을 월 $500 스타터 패키지로 제공합니다."
+        description="Goodman SEO는 소상공인을 위해 웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결을 월 $500 + GST, 최소 6개월 계약 스타터 패키지로 제공합니다."
         path="/"
         keywords={['Goodman SEO', '소상공인 홈페이지 제작', '구글 비즈니스 프로필', '시드니 SEO', '스타터 패키지']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
@@ -111,6 +111,8 @@ const Home = () => {
                 홈페이지, 구글, SNS.
                 <br />
                 필요한 것만 한 번에 정리해드립니다.
+                <br />
+                최소 6개월 계약으로 진행됩니다.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link to="/starter-package" className="primary-button">
@@ -253,6 +255,9 @@ const Home = () => {
                   <span className="text-6xl font-black tracking-[-0.08em]">$500</span>
                   <span className="pb-2 text-lg text-text-muted">/ month</span>
                 </div>
+                <p className="mt-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent-primary">
+                  최소 6개월 계약
+                </p>
                 <p className="mt-5 text-base leading-relaxed text-text-muted">
                   필요한 것만 담은 시작 패키지입니다.
                 </p>
@@ -266,7 +271,7 @@ const Home = () => {
                   '모바일 최적화 웹사이트 제작',
                   'Google Business Profile 세팅',
                   'Instagram / Facebook 연결',
-                  '기본 6개월 관리 포함',
+                  '최소 6개월 계약',
                   '월간 성과 요약 리포트',
                   '텍스트와 이미지 수정 지원',
                 ].map((item) => (

@@ -10,7 +10,7 @@ const routePages = [
     route: '/',
     title: '홈 | Goodman SEO',
     description:
-      'Goodman SEO는 소상공인을 위해 웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결을 월 $500 스타터 패키지로 제공합니다.',
+      'Goodman SEO는 소상공인을 위해 웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결을 월 $500 + GST, 최소 6개월 계약 스타터 패키지로 제공합니다.',
     canonical: 'https://goodmanseo.com/',
     type: 'website',
     keywords:
@@ -20,7 +20,7 @@ const routePages = [
     route: '/starter-package',
     title: '스타터 패키지 | Goodman SEO',
     description:
-      '웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결과 운영 지원을 포함한 Goodman SEO의 월 $500 스타터 패키지 안내 페이지입니다.',
+      '웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결과 운영 지원을 포함한 Goodman SEO의 월 $500 + GST, 최소 6개월 계약 스타터 패키지 안내 페이지입니다.',
     canonical: 'https://goodmanseo.com/starter-package',
     type: 'website',
     keywords:
@@ -182,6 +182,8 @@ run().catch((error) => {
   console.error('Failed to generate static pages.', error);
   process.exit(1);
 });
+
+
 
 
 

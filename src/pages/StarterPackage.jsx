@@ -21,8 +21,8 @@ const support = [
 ];
 
 const stats = [
-  { label: '월 비용', value: '$500' },
-  { label: '기본 관리', value: '6개월' },
+  { label: '월 비용', value: '$500 + GST' },
+  { label: '계약 기간', value: '최소 6개월' },
   { label: '핵심 영역', value: '3가지' },
   { label: '시작 속도', value: '빠르게' },
 ];
@@ -32,7 +32,7 @@ const StarterPackage = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="스타터 패키지"
-        description="웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결과 운영 지원을 포함한 Goodman SEO의 월 $500 스타터 패키지 안내 페이지입니다."
+        description="웹사이트 제작, 구글 비즈니스 프로필 세팅, SNS 연결과 운영 지원을 포함한 Goodman SEO의 월 $500 + GST, 최소 6개월 계약 스타터 패키지 안내 페이지입니다."
         path="/starter-package"
         keywords={['스타터 패키지', '월 500달러 홈페이지', '구글 지도 세팅', '소상공인 마케팅 패키지']}
       />
@@ -80,7 +80,7 @@ const StarterPackage = () => {
                 <span className="pb-3 text-xl text-text-muted">/ 월</span>
               </div>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent-primary">
-                기본 6개월 관리 포함
+                최소 6개월 계약
               </p>
               <p className="mt-8 text-base leading-relaxed text-text-muted">
                 웹, 구글, SNS를
