@@ -98,21 +98,22 @@ const Home = () => {
             >
               <div className="eyebrow-chip mb-6">
                 <Sparkles size={16} />
-                작은 비즈니스를 위한 기본 홈페이지
+                비즈니스를 위한 기본 홈페이지
               </div>
               <h1 className="max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.06em] sm:text-7xl md:text-[6.4rem]">
-                작은 비즈니스를 위한
+                온라인에 집 한 채
                 <br />
-                홈페이지 제작
-                <br />
-                <span className="gradient-text">$795</span>
+                <span className="gradient-text">지으시죠?</span>
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-text-muted sm:text-xl">
-                예쁘게만 보이는 화면보다,
+                고객이 찾고 문의할 수 있는
                 <br />
-                구글에서 보이고 문의가 들어오게
+                홈페이지와 구글 기본 세팅부터
                 <br />
-                기본부터 쉽게 정리해드립니다.
+                도와드립니다.
+              </p>
+              <p className="mt-5 text-base font-semibold leading-relaxed text-accent-primary sm:text-lg">
+                지금 시작하기 부담 없는 가격, 홈페이지 제작 $795
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link to="/starter-package" className="primary-button">
@@ -142,7 +143,7 @@ const Home = () => {
               <div className="hero-proof-card">
                 <div className="hero-proof-top">
                   <span className="eyebrow-chip">홈페이지 기본 세팅</span>
-                  <p className="text-sm font-semibold tracking-[0.04em] text-text-soft">처음 시작하는 가게에 맞는 가장 쉬운 구성</p>
+                  <p className="text-sm font-semibold tracking-[0.04em] text-text-soft">처음 시작할 때 필요한 기본만 담았습니다</p>
                 </div>
                 <div className="mt-8 flex items-end justify-between gap-6">
                   <div>
