@@ -41,22 +41,10 @@ const situations = [
   '무엇부터 해야 할지 몰라 계속 미루고 있습니다.',
 ];
 
-const losses = [
-  {
-    number: '검색',
-    title: '찾지 못하는 가게',
-    desc: '가게 정보가 정리되지 않으면 고객은 경쟁업체를 먼저 보게 됩니다.',
-  },
-  {
-    number: '문의',
-    title: '놓치는 고객 연락',
-    desc: '가격, 위치, 서비스 안내가 흩어져 있으면 문의까지 이어지기 어렵습니다.',
-  },
-  {
-    number: '신뢰',
-    title: '약해지는 첫인상',
-    desc: '검색 결과와 실제 화면이 정리되지 않으면 가게 신뢰도도 함께 떨어집니다.',
-  },
+const consequences = [
+  '검색에 안 보이면 고객은 다른 가게를 먼저 보게 됩니다.',
+  '서비스와 가격이 흩어져 있으면 문의까지 이어지기 어렵습니다.',
+  '첫 화면이 정리되지 않으면 가게 신뢰도도 약해집니다.',
 ];
 
 const results = [
@@ -93,24 +81,6 @@ const proofGallery = [
   },
 ];
 
-const process = [
-  {
-    step: '01',
-    title: '인스타그램 세팅',
-    desc: '프로필, 링크, 소개 문구를 가게 정보에 맞게 정리합니다.',
-  },
-  {
-    step: '02',
-    title: '페이스북 세팅',
-    desc: '페이지 정보와 홈페이지 연결까지 한 번에 맞춰드립니다.',
-  },
-  {
-    step: '03',
-    title: '광고 시작 세팅',
-    desc: '구글 광고, 인스타/페이스북 광고 시작 구조도 안내합니다.',
-  },
-];
-
 const Home = () => {
   return (
     <div className="overflow-hidden">
@@ -121,6 +91,7 @@ const Home = () => {
         keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', '호주 구글 지도 등록', '시드니 구글 지도 등록', '비즈니스 홈페이지 제작']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
+
       <section className="hero-shell hero-shell--home pt-28 sm:pt-32">
         <Hero3D />
         <div className="container relative z-10">
@@ -237,7 +208,7 @@ const Home = () => {
 
             <div className="showcase-panel">
               <p className="section-kicker">Why it matters</p>
-              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">비워두면 고객을 놓칩니다</h3>
+              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">비워두면 고객을 놓치게 됩니다</h3>
               <p className="mt-6 text-base leading-relaxed text-text-muted">
                 요즘 고객은 먼저 검색합니다.
                 <br />
@@ -245,42 +216,15 @@ const Home = () => {
                 <br />
                 좋은 가게도 그냥 지나치게 됩니다.
               </p>
-              <Link to="/starter-package" className="primary-button mt-8 inline-flex">
-                상세히 보기
-                <ArrowRight size={18} />
-              </Link>
+              <div className="mt-8 grid gap-3">
+                {consequences.map((item) => (
+                  <div key={item} className="benefit-row">
+                    <CircleCheckBig size={18} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-block">
-        <div className="container">
-          <div className="section-heading">
-            <p className="section-kicker">The real cost</p>
-            <h2 className="section-title">온라인을 비워두면 생기는 일</h2>
-            <p className="section-copy">
-              거창한 마케팅보다 먼저,
-              <br />
-              놓치고 있는 기본부터 보는 게 중요합니다.
-            </p>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-3">
-            {losses.map((item, index) => (
-              <motion.article
-                key={item.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="process-card"
-              >
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">{item.number}</p>
-                <h3 className="mt-5 text-3xl font-black tracking-[-0.04em]">{item.title}</h3>
-                <p className="mt-4 text-base leading-relaxed text-text-muted">{item.desc}</p>
-              </motion.article>
-            ))}
           </div>
         </div>
       </section>
@@ -410,18 +354,15 @@ const Home = () => {
                   <span className="pb-2 text-lg text-text-muted">한 번</span>
                 </div>
                 <p className="mt-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent-primary">
-                  작은 비즈니스를 위한 시작 가격
+                  지금 시작하기 좋은 기본 가격
                 </p>
                 <p className="mt-5 text-base leading-relaxed text-text-muted">
                   구글에서 보이고 고객이 찾을 수 있는
                   <br />
                   기본 세팅부터 시작합니다.
                 </p>
-                <Link to="/pricing" className="primary-button mt-8 inline-flex">
-                  서비스 및 가격 보기
-                  <ArrowRight size={18} />
-                </Link>
               </div>
+
               <div className="grid gap-3 sm:grid-cols-2">
                 {[
                   '간단한 홈페이지 제작',
@@ -438,60 +379,23 @@ const Home = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="section-block">
-        <div className="container">
-          <div className="section-heading">
-            <p className="section-kicker">Extra services</p>
-            <h2 className="section-title">원하시면 여기까지 도와드립니다</h2>
-            <p className="section-copy">
-              홈페이지를 만든 뒤에도
-              <br />
-              광고와 SNS 시작까지 이어갈 수 있습니다.
-            </p>
-          </div>
-          <div className="grid gap-6 lg:grid-cols-3">
-            {process.map((item, index) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="process-card"
-              >
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">{item.step}</p>
-                <h3 className="mt-5 text-3xl font-black tracking-[-0.04em]">{item.title}</h3>
-                <p className="mt-4 max-w-sm text-base leading-relaxed text-text-muted">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-block">
-        <div className="container">
-          <div className="showcase-panel">
-            <div className="section-heading max-w-3xl">
-              <p className="section-kicker">10 minute consultation</p>
-              <h2 className="section-title">10분 상담으로 방향부터 정리해보세요</h2>
-              <p className="section-copy">
-                홈페이지, 구글 지도/검색 등록, 광고 시작까지
-                <br />
-                무엇부터 해야 할지 쉽게 정리해드립니다.
-              </p>
-            </div>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link to="/contact" className="primary-button inline-flex">
-                무료 상담 신청하기
-                <ArrowRight size={18} />
-              </Link>
-              <p className="text-sm leading-relaxed text-text-muted">
-                복잡한 건 저희가 정리해드립니다.
-              </p>
+            <div className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">10 minute consultation</p>
+                <p className="mt-3 text-base leading-relaxed text-text-muted">
+                  10분 상담으로 무엇부터 해야 할지 방향부터 정리해드립니다.
+                </p>
+              </div>
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <Link to="/contact" className="primary-button inline-flex">
+                  무료 상담 신청하기
+                  <ArrowRight size={18} />
+                </Link>
+                <Link to="/pricing" className="secondary-button">
+                  서비스 및 가격 보기
+                </Link>
+              </div>
             </div>
           </div>
         </div>
