@@ -21,13 +21,13 @@ const serviceCards = [
   {
     icon: <MapPin size={30} className="text-accent-primary" />,
     title: '동네 검색에서 더 잘 보이게 됩니다',
-    desc: '호주 고객들이 근처 식당, 근처 청소업체를 찾을 때 가게 정보가 더 잘 정리되고 눈에 띄게 보여 선택받기 쉬워집니다.',
+    desc: '호주 고객들이 근처 비즈니스를 찾을 때 정보가 더 잘 정리되고 눈에 띄게 보여 선택받기 쉬워집니다.',
     size: 'lg:col-span-3',
   },
   {
     icon: <Share2 size={30} className="text-accent-primary" />,
-    title: '제값을 받을 수 있는 분위기를 만듭니다',
-    desc: '매장과 작업물 사진이 더 정돈되고 보기 좋게 세팅되면, 싼 곳처럼 보이던 인상에서 벗어나 제대로 된 가치를 보여줄 수 있습니다.',
+    title: '저가 경쟁 탈피, 브랜드화',
+    desc: '고퀄리티 사진과 세련된 세팅으로 내 비즈니스의 진짜 가치를 인정받고 제값을 받습니다.',
     size: 'lg:col-span-4',
   },
 ];
