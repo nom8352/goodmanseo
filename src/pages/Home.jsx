@@ -14,20 +14,20 @@ import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 const serviceCards = [
   {
     icon: <Layout size={30} className="text-accent-primary" />,
-    title: '홈페이지 제작',
-    desc: '가게 소개가 한눈에 보이게 만듭니다.',
+    title: '이탈하던 고객이 문의로 이어집니다',
+    desc: '허술한 SNS나 비어 있는 구글 정보만 보고 지나가던 고객도, 깔끔하게 정리된 홈페이지를 보면 더 쉽게 신뢰하고 문의를 남기게 됩니다.',
     size: 'lg:col-span-5',
   },
   {
     icon: <MapPin size={30} className="text-accent-primary" />,
-    title: '구글 지도/검색 등록',
-    desc: '고객이 찾을 수 있게 가게 정보를 정리합니다.',
+    title: '동네 검색에서 더 잘 보이게 됩니다',
+    desc: '호주 고객들이 근처 식당, 근처 청소업체를 찾을 때 가게 정보가 더 잘 정리되고 눈에 띄게 보여 선택받기 쉬워집니다.',
     size: 'lg:col-span-3',
   },
   {
     icon: <Share2 size={30} className="text-accent-primary" />,
-    title: '추가 마케팅',
-    desc: '원하면 SNS와 광고 시작 세팅도 도와드립니다.',
+    title: '제값을 받을 수 있는 분위기를 만듭니다',
+    desc: '매장과 작업물 사진이 더 정돈되고 보기 좋게 세팅되면, 싼 곳처럼 보이던 인상에서 벗어나 제대로 된 가치를 보여줄 수 있습니다.',
     size: 'lg:col-span-4',
   },
 ];
