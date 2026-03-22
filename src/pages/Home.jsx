@@ -47,13 +47,6 @@ const consequences = [
   '첫 화면이 정리되지 않으면 가게 신뢰도도 약해집니다.',
 ];
 
-const results = [
-  '구글에서 가게를 찾을 수 있게 됩니다.',
-  '서비스와 가격, 연락 방법이 한눈에 보이게 됩니다.',
-  '인스타와 홈페이지가 따로 놀지 않고 연결됩니다.',
-  '문의 버튼과 폼이 바로 이어져 고객이 덜 헷갈립니다.',
-];
-
 const proofGallery = [
   {
     title: '실제 매장 앞에서 신뢰가 가게',
@@ -232,40 +225,25 @@ const Home = () => {
             <p className="section-copy">
               고객이 찾고, 보고, 문의하기 쉬운
               <br />
-              구조부터 정리합니다.
+              구조부터 정리해서 매출이 발생하고, 증가하도록 만들어드립니다.
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="grid gap-6 lg:grid-cols-12">
-              {serviceCards.map((service, index) => (
-                <motion.article
-                  key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.45, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`feature-card ${service.size}`}
-                >
-                  <div className="feature-icon">{service.icon}</div>
-                  <h3 className="mt-10 text-3xl font-black tracking-[-0.04em]">{service.title}</h3>
-                  <p className="mt-4 text-base leading-relaxed text-text-muted">{service.desc}</p>
-                </motion.article>
-              ))}
-            </div>
-
-            <div className="showcase-panel">
-              <p className="section-kicker">Expected result</p>
-              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">이런 흐름을 만드는 게 목표입니다</h3>
-              <div className="mt-8 grid gap-3">
-                {results.map((item) => (
-                  <div key={item} className="benefit-row">
-                    <CircleCheckBig size={18} className="text-accent-primary" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="grid gap-6 lg:grid-cols-12">
+            {serviceCards.map((service, index) => (
+              <motion.article
+                key={service.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`feature-card ${service.size}`}
+              >
+                <div className="feature-icon">{service.icon}</div>
+                <h3 className="mt-10 text-3xl font-black tracking-[-0.04em]">{service.title}</h3>
+                <p className="mt-4 text-base leading-relaxed text-text-muted">{service.desc}</p>
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>
