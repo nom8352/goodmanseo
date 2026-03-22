@@ -4,9 +4,11 @@ import { ArrowRight, CircleCheckBig, Layout, MapPin, Share2, Sparkles } from 'lu
 import { motion } from 'framer-motion';
 import Hero3D from '../components/Hero3D';
 import Seo from '../components/Seo';
-import heroImage from '../assets/hero.png';
-import blog1 from '../assets/blog1.png';
-import blog3 from '../assets/blog3.png';
+import heroOwner from '../assets/depositphotos/hero-owner.jpg';
+import storefrontOwner from '../assets/depositphotos/storefront-owner.jpg';
+import cleaningWorker from '../assets/depositphotos/cleaning-worker.jpg';
+import cafeOwners from '../assets/depositphotos/cafe-owners.jpg';
+import restaurantDoorway from '../assets/depositphotos/restaurant-doorway.jpg';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 
 const serviceCards = [
@@ -66,27 +68,27 @@ const results = [
 
 const proofGallery = [
   {
-    title: '브랜드 첫 화면',
-    subtitle: 'Bold landing page',
-    image: heroImage,
+    title: '실제 매장 앞에서 신뢰가 가게',
+    subtitle: 'Real storefront portrait',
+    image: storefrontOwner,
     size: 'lg:col-span-7',
   },
   {
-    title: '로컬 비즈니스 촬영컷',
-    subtitle: 'Photo-led trust',
-    image: blog1,
+    title: '부부 운영 매장도 따뜻하게',
+    subtitle: 'Warm owner portrait',
+    image: cafeOwners,
     size: 'lg:col-span-5',
   },
   {
-    title: '콘텐츠와 안내 구조',
-    subtitle: 'Clear information flow',
-    image: blog3,
+    title: '서비스업도 전문적으로',
+    subtitle: 'Service business portrait',
+    image: cleaningWorker,
     size: 'lg:col-span-4',
   },
   {
-    title: '패키지 중심 제안',
-    subtitle: 'Simple pricing story',
-    image: heroImage,
+    title: '가게 분위기가 바로 보이게',
+    subtitle: 'Local business entrance',
+    image: restaurantDoorway,
     size: 'lg:col-span-8',
   },
 ];
@@ -186,7 +188,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="mt-10 overflow-hidden rounded-[28px] border border-white/10">
-                  <img src={heroImage} alt="Goodman SEO package preview" className="h-[260px] w-full object-cover" />
+                  <img src={heroOwner} alt="비즈니스 대표 이미지 예시" className="h-[260px] w-full object-cover" />
                 </div>
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   {['간단한 홈페이지 제작', '구글 지도/검색 등록', '홈페이지 방문 확인 연결', '구글 검색 확인 연결'].map((item) => (
@@ -332,32 +334,58 @@ const Home = () => {
       <section className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="section-kicker">Visual proof</p>
-            <h2 className="section-title">첫인상부터 믿음이 가게</h2>
+            <p className="section-kicker">Portfolio</p>
+            <h2 className="section-title">실제 사진과 로컬 작업물 중심으로 보여드립니다</h2>
             <p className="section-copy">
-              사진, 화면, 분위기까지
+              스톡 이미지보다
               <br />
-              보기 좋게 정리합니다.
+              실제 매장 사진과 작업물 분위기를 더 중요하게 봅니다.
             </p>
           </div>
-          <div className="grid gap-6 lg:grid-cols-12">
-            {proofGallery.map((item, index) => (
-              <motion.article
-                key={`${item.title}-${index}`}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
-                viewport={{ once: true }}
-                className={`gallery-card ${item.size}`}
-              >
-                <img src={item.image} alt={item.title} className="gallery-card__image" />
-                <div className="gallery-card__overlay" />
-                <div className="gallery-card__content">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-text-soft">{item.subtitle}</p>
-                  <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">{item.title}</h3>
-                </div>
-              </motion.article>
-            ))}
+
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="showcase-panel">
+              <p className="section-kicker">How we show your business</p>
+              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">그냥 예쁜 화면보다 더 중요한 것</h3>
+              <div className="mt-8 grid gap-3">
+                {[
+                  '실제 매장 사진, 작업 현장 사진을 우선 사용합니다.',
+                  '보내주신 사진도 색감과 분위기를 더 보기 좋게 정리합니다.',
+                  '가게 성격이 바로 보이도록 화면 첫인상을 맞춥니다.',
+                  '가격, 위치, 문의 방법이 한눈에 보이게 정리합니다.',
+                ].map((item) => (
+                  <div key={item} className="benefit-row">
+                    <CircleCheckBig size={18} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-8 text-base leading-relaxed text-text-muted">
+                식당, 뷰티샵, 타일, 청소, 로컬 서비스 업종처럼
+                <br />
+                사진과 첫인상이 중요한 비즈니스에 특히 잘 맞습니다.
+              </p>
+            </div>
+
+            <div className="grid gap-6 lg:grid-cols-12">
+              {proofGallery.map((item, index) => (
+                <motion.article
+                  key={`${item.title}-${index}`}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: index * 0.08 }}
+                  viewport={{ once: true }}
+                  className={`gallery-card ${item.size}`}
+                >
+                  <img src={item.image} alt={item.title} className="gallery-card__image" />
+                  <div className="gallery-card__overlay" />
+                  <div className="gallery-card__content">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-text-soft">{item.subtitle}</p>
+                    <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">{item.title}</h3>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
