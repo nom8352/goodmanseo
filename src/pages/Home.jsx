@@ -49,28 +49,28 @@ const consequences = [
 
 const proofGallery = [
   {
-    title: '실제 매장 앞에서 신뢰가 가게',
-    subtitle: 'Real storefront portrait',
+    title: '방문을 유도하는 직관적인 세팅',
+    subtitle: '방문 유도',
     image: storefrontOwner,
     size: 'lg:col-span-7',
   },
   {
-    title: '부부 운영 매장도 따뜻하게',
-    subtitle: 'Warm owner portrait',
+    title: '신뢰도를 높여 객단가 상승',
+    subtitle: '객단가 상승',
     image: cafeOwners,
     size: 'lg:col-span-5',
   },
   {
-    title: '서비스업도 전문적으로',
-    subtitle: 'Service business portrait',
+    title: '이탈률 0%의 예약 유도 동선',
+    subtitle: '예약 유도',
     image: cleaningWorker,
-    size: 'lg:col-span-4',
+    size: 'lg:col-span-5',
   },
   {
-    title: '가게 분위기가 바로 보이게',
-    subtitle: 'Local business entrance',
+    title: '첫 방문을 부르는 매장 분위기',
+    subtitle: '브랜드 첫인상',
     image: restaurantDoorway,
-    size: 'lg:col-span-8',
+    size: 'lg:col-span-7',
   },
 ];
 
@@ -259,49 +259,24 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="showcase-panel">
-              <p className="section-kicker">How we show your business</p>
-              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">그냥 예쁜 화면보다 더 중요한 것</h3>
-              <div className="mt-8 grid gap-3">
-                {[
-                  '실제 매장 사진, 작업 현장 사진을 우선 사용합니다.',
-                  '보내주신 사진도 색감과 분위기를 더 보기 좋게 정리합니다.',
-                  '가게 성격이 바로 보이도록 화면 첫인상을 맞춥니다.',
-                  '가격, 위치, 문의 방법이 한눈에 보이게 정리합니다.',
-                ].map((item) => (
-                  <div key={item} className="benefit-row">
-                    <CircleCheckBig size={18} className="text-accent-primary" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-8 text-base leading-relaxed text-text-muted">
-                식당, 뷰티샵, 타일, 청소, 로컬 서비스 업종처럼
-                <br />
-                사진과 첫인상이 중요한 비즈니스에 특히 잘 맞습니다.
-              </p>
-            </div>
-
-            <div className="grid gap-6 lg:grid-cols-12">
-              {proofGallery.map((item, index) => (
-                <motion.article
-                  key={`${item.title}-${index}`}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.45, delay: index * 0.08 }}
-                  viewport={{ once: true }}
-                  className={`gallery-card ${item.size}`}
-                >
-                  <img src={item.image} alt={item.title} className="gallery-card__image" />
-                  <div className="gallery-card__overlay" />
-                  <div className="gallery-card__content">
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-text-soft">{item.subtitle}</p>
-                    <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">{item.title}</h3>
-                  </div>
-                </motion.article>
-              ))}
-            </div>
+          <div className="grid gap-6 lg:grid-cols-12">
+            {proofGallery.map((item, index) => (
+              <motion.article
+                key={`${item.title}-${index}`}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className={`gallery-card ${item.size}`}
+              >
+                <img src={item.image} alt={item.title} className="gallery-card__image" />
+                <div className="gallery-card__overlay" />
+                <div className="gallery-card__content">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-text-soft">{item.subtitle}</p>
+                  <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">{item.title}</h3>
+                </div>
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>
