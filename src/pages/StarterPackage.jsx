@@ -11,6 +11,7 @@ const inclusions = [
   '구글 지도/검색 등록',
   '홈페이지 방문 확인 연결',
   '구글 검색 확인 연결',
+  '초기 3개월 안심 유지보수',
 ];
 
 const support = [
@@ -21,9 +22,9 @@ const support = [
 ];
 
 const stats = [
-  { label: '제작비', value: '$795' },
+  { label: '제작비', value: '$795 일시불' },
   { label: '형태', value: '간단한 홈페이지' },
-  { label: '포함', value: '구글 지도/검색 등록' },
+  { label: '유지보수', value: '3개월 포함' },
   { label: '호스팅', value: '별도 비용 없이 시작 가능' },
 ];
 
@@ -75,7 +76,7 @@ const StarterPackage = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="홈페이지 제작"
-        description="Goodman SEO의 호주와 시드니 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 구글 지도/검색 등록과 홈페이지 방문 확인 연결까지 포함됩니다."
+        description="Goodman SEO의 호주와 시드니 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수까지 포함됩니다."
         path="/starter-package"
         keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', '호주 비즈니스 홈페이지', '구글 지도 등록 포함 홈페이지', '호주 홈페이지 상담']}
       />
@@ -120,10 +121,10 @@ const StarterPackage = () => {
               <h2 className="mt-8 text-4xl font-black tracking-[-0.06em] sm:text-5xl">기본 홈페이지 제작</h2>
               <div className="mt-10 flex items-end gap-2">
                 <span className="text-7xl font-black tracking-[-0.08em]">$795</span>
-                <span className="pb-3 text-xl text-text-muted">한 번</span>
+                <span className="pb-3 text-xl text-text-muted">일시불</span>
               </div>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent-primary">
-                작게 시작하는 기본 가격
+                3개월 안심 유지보수 포함
               </p>
               <p className="mt-8 text-base leading-relaxed text-text-muted">
                 작은 비즈니스는 이 정도 기본만 잘 잡아도
@@ -131,11 +132,11 @@ const StarterPackage = () => {
                 고객이 찾고 문의할 수 있는 출발점이 됩니다.
               </p>
               <div className="package-note mt-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">별도 호스팅비 없이 시작</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">오픈 후에도 안심할 수 있게</p>
                 <p className="mt-3 text-base leading-relaxed text-text-muted">
-                  간단한 홈페이지는
+                  초기 3개월은 안심하고 운영하실 수 있도록 도와드리고,
                   <br />
-                  별도 호스팅비 없이 시작 가능한 구조로 안내해드립니다.
+                  이후 유지보수는 필요할 때만 선택하실 수 있습니다.
                 </p>
               </div>
               <Link to="/contact" className="primary-button mt-8 inline-flex">

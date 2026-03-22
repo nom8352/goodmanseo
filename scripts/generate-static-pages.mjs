@@ -10,7 +10,7 @@ const routePages = [
     route: '/',
     title: '홈 | Goodman SEO',
     description:
-      'Goodman SEO는 호주와 시드니 비즈니스를 위해 홈페이지 제작, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다.',
+      'Goodman SEO는 호주와 시드니 비즈니스를 위해 홈페이지 제작, 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다.',
     canonical: 'https://goodmanseo.com/',
     type: 'website',
     keywords:
@@ -20,7 +20,7 @@ const routePages = [
     route: '/starter-package',
     title: '홈페이지 제작 | Goodman SEO',
     description:
-      'Goodman SEO의 호주와 시드니 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 구글 지도/검색 등록과 홈페이지 방문 확인 연결까지 포함됩니다.',
+      'Goodman SEO의 호주와 시드니 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수까지 포함됩니다.',
     canonical: 'https://goodmanseo.com/starter-package',
     type: 'website',
     keywords:
@@ -30,7 +30,7 @@ const routePages = [
     route: '/pricing',
     title: '서비스 및 가격 | Goodman SEO',
     description:
-      'Goodman SEO의 호주와 시드니 비즈니스를 위한 서비스 및 가격 안내 페이지입니다. 홈페이지 제작, 구글 지도/검색 등록, 추가 마케팅 서비스 가격을 확인할 수 있습니다.',
+      'Goodman SEO의 호주와 시드니 비즈니스를 위한 서비스 및 가격 안내 페이지입니다. 홈페이지 제작, 3개월 안심 유지보수, 구글 지도/검색 등록, 추가 마케팅 서비스 가격을 확인할 수 있습니다.',
     canonical: 'https://goodmanseo.com/pricing',
     type: 'website',
     keywords:
@@ -182,6 +182,7 @@ run().catch((error) => {
   console.error('Failed to generate static pages.', error);
   process.exit(1);
 });
+
 
 
 

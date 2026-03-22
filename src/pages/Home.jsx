@@ -32,7 +32,7 @@ const serviceCards = [
   },
 ];
 
-const metrics = ['홈페이지 제작 $795', '구글 지도/검색 등록 포함', '방문 확인 연결 포함', '별도 호스팅비 없이 시작 가능'];
+const metrics = ['홈페이지 제작 $795', '3개월 안심 유지보수 포함', '구글 지도/검색 등록 포함', '별도 호스팅비 없이 시작 가능'];
 
 const situations = [
   '가게는 운영 중인데 온라인에는 정리된 정보가 없습니다.',
@@ -86,7 +86,7 @@ const Home = () => {
     <div className="overflow-hidden">
       <Seo
         title="홈"
-        description="Goodman SEO는 호주와 시드니 비즈니스를 위해 홈페이지 제작, 구글 지도/검색 등록, 홈페이지 방문 확인 연결까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다."
+        description="Goodman SEO는 호주와 시드니 비즈니스를 위해 홈페이지 제작, 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다."
         path="/"
         keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', '호주 구글 지도 등록', '시드니 구글 지도 등록', '비즈니스 홈페이지 제작']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
@@ -118,7 +118,7 @@ const Home = () => {
                 도와드립니다.
               </p>
               <p className="mt-5 text-base font-semibold leading-relaxed text-accent-primary sm:text-lg">
-                지금 시작하기 부담 없는 가격, 홈페이지 제작 $795
+                지금 시작하기 부담 없는 가격, 홈페이지 제작 $795 일시불
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link to="/starter-package" className="primary-button">
@@ -162,7 +162,7 @@ const Home = () => {
                   <img src={heroOwner} alt="비즈니스 대표 이미지 예시" className="h-[260px] w-full object-cover" />
                 </div>
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                  {['간단한 홈페이지 제작', '구글 지도/검색 등록', '홈페이지 방문 확인 연결', '구글 검색 확인 연결'].map((item) => (
+                  {['간단한 홈페이지 제작', '구글 지도/검색 등록', '홈페이지 방문 확인 연결', '3개월 안심 유지보수'].map((item) => (
                     <div key={item} className="mini-feature">
                       <CircleCheckBig size={16} className="text-accent-primary" />
                       {item}
@@ -354,7 +354,7 @@ const Home = () => {
                   <span className="pb-2 text-lg text-text-muted">한 번</span>
                 </div>
                 <p className="mt-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent-primary">
-                  지금 시작하기 좋은 기본 가격
+                  3개월 안심 유지보수 포함
                 </p>
                 <p className="mt-5 text-base leading-relaxed text-text-muted">
                   구글에서 보이고 고객이 찾을 수 있는
@@ -369,8 +369,8 @@ const Home = () => {
                   '휴대폰에서도 잘 보이게',
                   '구글 지도/검색 등록',
                   '홈페이지 방문 확인 연결',
-                  '구글 검색 확인 연결',
-                  '별도 호스팅비 없이 시작 가능',
+                  '3개월 안심 유지보수 포함',
+                  '이후 유지보수는 필요 시 선택 가능',
                 ].map((item) => (
                   <div key={item} className="benefit-row">
                     <CircleCheckBig size={18} className="text-accent-primary" />
