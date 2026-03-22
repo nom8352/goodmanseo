@@ -443,6 +443,31 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="section-block">
+        <div className="container">
+          <div className="showcase-panel">
+            <div className="section-heading max-w-3xl">
+              <p className="section-kicker">10 minute consultation</p>
+              <h2 className="section-title">10분 상담으로 방향부터 정리해보세요</h2>
+              <p className="section-copy">
+                홈페이지, 구글 지도/검색 등록, 광고 시작까지
+                <br />
+                무엇부터 해야 할지 쉽게 정리해드립니다.
+              </p>
+            </div>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <Link to="/contact" className="primary-button inline-flex">
+                무료 상담 신청하기
+                <ArrowRight size={18} />
+              </Link>
+              <p className="text-sm leading-relaxed text-text-muted">
+                복잡한 건 저희가 정리해드립니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

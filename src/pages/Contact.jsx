@@ -121,19 +121,19 @@ const Contact = () => {
               Contact Goodman SEO
             </div>
           <h1 className="section-title mt-6 max-w-5xl">
-            복잡하게 쓰지 않아도 됩니다.
+            10분 상담으로
             <br />
-            현재 상황만 알려주세요.
+            방향부터 정리해보세요.
           </h1>
           <p className="section-copy max-w-2xl">
-            지금 불편한 점만
+            복잡하게 쓰지 않아도 됩니다.
             <br />
-            짧게 남겨주시면 됩니다.
+            현재 상황만 알려주시면 됩니다.
           </p>
         </div>
 
           <div className="package-matrix">
-            {['24시간 내 답변', '소상공인 맞춤 상담', '불필요한 옵션 없이 제안', '이메일 fallback 지원'].map((item) => (
+            {['10분 상담으로 방향 정리', '24시간 내 답변', '불필요한 옵션 없이 제안', '이메일 fallback 지원'].map((item) => (
               <div key={item} className="package-stat">
                 <span className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Support</span>
                 <strong className="text-[1.6rem]">{item}</strong>
