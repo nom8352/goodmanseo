@@ -32,6 +32,38 @@ const serviceCards = [
 
 const metrics = ['홈페이지 제작 $795', '구글 지도/검색 등록 포함', '방문 확인 연결 포함', '별도 호스팅비 없이 시작 가능'];
 
+const situations = [
+  '가게는 운영 중인데 온라인에는 정리된 정보가 없습니다.',
+  '구글에서 가게가 잘 안 보이거나 정보가 비어 있습니다.',
+  '인스타는 있는데 홈페이지가 없어 문의가 이어지지 않습니다.',
+  '무엇부터 해야 할지 몰라 계속 미루고 있습니다.',
+];
+
+const losses = [
+  {
+    number: '검색',
+    title: '찾지 못하는 가게',
+    desc: '가게 정보가 정리되지 않으면 고객은 경쟁업체를 먼저 보게 됩니다.',
+  },
+  {
+    number: '문의',
+    title: '놓치는 고객 연락',
+    desc: '가격, 위치, 서비스 안내가 흩어져 있으면 문의까지 이어지기 어렵습니다.',
+  },
+  {
+    number: '신뢰',
+    title: '약해지는 첫인상',
+    desc: '검색 결과와 실제 화면이 정리되지 않으면 가게 신뢰도도 함께 떨어집니다.',
+  },
+];
+
+const results = [
+  '구글에서 가게를 찾을 수 있게 됩니다.',
+  '서비스와 가격, 연락 방법이 한눈에 보이게 됩니다.',
+  '인스타와 홈페이지가 따로 놀지 않고 연결됩니다.',
+  '문의 버튼과 폼이 바로 이어져 고객이 덜 헷갈립니다.',
+];
+
 const proofGallery = [
   {
     title: '브랜드 첫 화면',
@@ -173,30 +205,126 @@ const Home = () => {
       <section className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="section-kicker">What we set up</p>
-            <h2 className="section-title">작은 비즈니스에 딱 필요한 기본부터</h2>
+            <p className="section-kicker">Your situation</p>
+            <h2 className="section-title">혹시 이런 상황이신가요?</h2>
             <p className="section-copy">
-              복잡하게 하지 않습니다.
+              하나라도 해당되면
               <br />
-              고객이 찾고 문의할 수 있는 구조부터 먼저 잡습니다.
+              온라인 기본 세팅이 필요한 상태입니다.
             </p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-12">
-            {serviceCards.map((service, index) => (
+          <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+            <div className="grid gap-4">
+              {situations.map((item, index) => (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: index * 0.08 }}
+                  viewport={{ once: true }}
+                  className="soft-panel"
+                >
+                  <div className="benefit-row">
+                    <CircleCheckBig size={18} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="showcase-panel">
+              <p className="section-kicker">Why it matters</p>
+              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">비워두면 고객을 놓칩니다</h3>
+              <p className="mt-6 text-base leading-relaxed text-text-muted">
+                요즘 고객은 먼저 검색합니다.
+                <br />
+                검색에서 안 보이거나 정보가 정리되지 않으면
+                <br />
+                좋은 가게도 그냥 지나치게 됩니다.
+              </p>
+              <Link to="/starter-package" className="primary-button mt-8 inline-flex">
+                상세히 보기
+                <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="container">
+          <div className="section-heading">
+            <p className="section-kicker">The real cost</p>
+            <h2 className="section-title">온라인을 비워두면 생기는 일</h2>
+            <p className="section-copy">
+              거창한 마케팅보다 먼저,
+              <br />
+              놓치고 있는 기본부터 보는 게 중요합니다.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-3">
+            {losses.map((item, index) => (
               <motion.article
-                key={service.title}
+                key={item.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.45, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`feature-card ${service.size}`}
+                className="process-card"
               >
-                <div className="feature-icon">{service.icon}</div>
-                <h3 className="mt-10 text-3xl font-black tracking-[-0.04em]">{service.title}</h3>
-                <p className="mt-4 text-base leading-relaxed text-text-muted">{service.desc}</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">{item.number}</p>
+                <h3 className="mt-5 text-3xl font-black tracking-[-0.04em]">{item.title}</h3>
+                <p className="mt-4 text-base leading-relaxed text-text-muted">{item.desc}</p>
               </motion.article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="container">
+          <div className="section-heading">
+            <p className="section-kicker">What we set up</p>
+            <h2 className="section-title">기본만 잘 잡아도 이렇게 달라집니다</h2>
+            <p className="section-copy">
+              고객이 찾고, 보고, 문의하기 쉬운
+              <br />
+              구조부터 정리합니다.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="grid gap-6 lg:grid-cols-12">
+              {serviceCards.map((service, index) => (
+                <motion.article
+                  key={service.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`feature-card ${service.size}`}
+                >
+                  <div className="feature-icon">{service.icon}</div>
+                  <h3 className="mt-10 text-3xl font-black tracking-[-0.04em]">{service.title}</h3>
+                  <p className="mt-4 text-base leading-relaxed text-text-muted">{service.desc}</p>
+                </motion.article>
+              ))}
+            </div>
+
+            <div className="showcase-panel">
+              <p className="section-kicker">Expected result</p>
+              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">이런 흐름을 만드는 게 목표입니다</h3>
+              <div className="mt-8 grid gap-3">
+                {results.map((item) => (
+                  <div key={item} className="benefit-row">
+                    <CircleCheckBig size={18} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
