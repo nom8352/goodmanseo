@@ -99,19 +99,18 @@ const Home = () => {
                 비즈니스를 위한 기본 홈페이지
               </div>
               <h1 className="max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.06em] sm:text-7xl md:text-[6.4rem]">
-                온라인에 집 한 채
+                24시간 쉬지 않는
                 <br />
-                <span className="gradient-text">지으시죠?</span>
+                <span className="gradient-text">온라인 영업사원을</span>
+                <br />
+                고용하세요.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-text-muted sm:text-xl">
-                고객이 찾고 문의할 수 있는
+                잘 만들어진 홈페이지와 구글 지도는
                 <br />
-                홈페이지와 구글 기본 세팅부터
+                사장님이 주무시는 동안에도 호주 현지 손님을
                 <br />
-                도와드립니다.
-              </p>
-              <p className="mt-5 text-base font-semibold leading-relaxed text-accent-primary sm:text-lg">
-                지금 시작하기 부담 없는 가격, 홈페이지 제작 $795 일시불
+                알아서 끌어옵니다. 단 $795로 완벽한 온라인 자동 영업망을 세팅하세요.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link to="/starter-package" className="primary-button">
