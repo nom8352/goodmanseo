@@ -251,11 +251,11 @@ const Home = () => {
         <div className="container">
           <div className="section-heading">
             <p className="section-kicker">Portfolio</p>
-            <h2 className="section-title">실제 사진과 로컬 작업물 중심으로 보여드립니다</h2>
+            <h2 className="section-title">방문자를 '단골 손님'으로 만드는 최적의 세팅</h2>
             <p className="section-copy">
-              스톡 이미지보다
+              단순히 보기 좋은 사이트가 아닙니다.
               <br />
-              실제 매장 사진과 작업물 분위기를 더 중요하게 봅니다.
+              호주 현지 고객이 가장 문의하기 쉽고, 예약하기 편한 동선으로 철저하게 기획된 작업물입니다.
             </p>
           </div>
 
