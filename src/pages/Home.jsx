@@ -147,27 +147,22 @@ const Home = () => {
                   <span className="eyebrow-chip">홈페이지 기본 세팅</span>
                   <p className="text-sm font-semibold tracking-[0.04em] text-text-soft">처음 시작할 때 필요한 기본만 담았습니다</p>
                 </div>
-                <div className="mt-8 flex items-end justify-between gap-6">
-                  <div>
-                    <p className="text-sm tracking-[0.04em] text-text-soft">한 번 제작비</p>
-                    <p className="mt-2 text-6xl font-black tracking-[-0.08em]">$795</p>
-                  </div>
-                  <div className="max-w-[160px] text-right text-sm leading-relaxed text-text-muted">
-                    필요한 것만 먼저 만들고,
-                    <br />
-                    원하면 나중에 더할 수 있습니다.
-                  </div>
+                <div className="mt-10">
+                  <p className="text-sm tracking-[0.04em] text-text-soft">한 번 제작비</p>
+                  <p className="mt-3 text-7xl font-black leading-none tracking-[-0.1em] sm:text-[5.5rem]">$795</p>
+                  <p className="mt-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent-primary">
+                    3개월 안심 유지보수 포함
+                  </p>
                 </div>
                 <div className="mt-10 overflow-hidden rounded-[28px] border border-white/10">
                   <img src={heroOwner} alt="비즈니스 대표 이미지 예시" className="h-[260px] w-full object-cover" />
                 </div>
-                <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                  {['간단한 홈페이지 제작', '구글 지도/검색 등록', '홈페이지 방문 확인 연결', '3개월 안심 유지보수'].map((item) => (
-                    <div key={item} className="mini-feature">
-                      <CircleCheckBig size={16} className="text-accent-primary" />
-                      {item}
-                    </div>
-                  ))}
+                <div className="mt-8 rounded-[24px] border border-white/10 bg-white/[0.03] px-5 py-5">
+                  <p className="text-base leading-relaxed text-text-muted">
+                    필요한 것만 먼저 만들고,
+                    <br />
+                    오픈 후 3개월은 안심하고 운영하실 수 있게 도와드립니다.
+                  </p>
                 </div>
               </div>
             </motion.div>
