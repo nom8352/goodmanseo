@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-cta">
           <div className="footer-meta">
-            <p className="section-kicker">Start small, look premium</p>
+            <p className="section-kicker">작게 시작해도, 신뢰감 있게</p>
             <h2 className="mt-3 text-3xl font-black tracking-[-0.06em] sm:text-4xl">
               홈페이지, 구글, 광고 시작까지
               <br />
@@ -38,7 +38,7 @@ const Footer = () => {
             <h4 className="mb-6 text-lg font-bold">바로가기</h4>
             <ul className="flex flex-col gap-4">
               <li><Link to="/" className="text-text-muted hover:text-accent-primary">홈</Link></li>
-              <li><Link to="/starter-package" className="text-text-muted hover:text-accent-primary">795 홈페이지</Link></li>
+              <li><Link to="/starter-package" className="text-text-muted hover:text-accent-primary">기본 홈페이지</Link></li>
               <li><Link to="/pricing" className="text-text-muted hover:text-accent-primary">서비스 및 가격</Link></li>
               <li><Link to="/blog" className="text-text-muted hover:text-accent-primary">블로그</Link></li>
               <li><Link to="/contact" className="text-text-muted hover:text-accent-primary">상담 신청</Link></li>
