@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheckBig, Layout, MapPin, Share2, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ContactForm from '../components/ContactForm';
 import Hero3D from '../components/Hero3D';
 import Seo from '../components/Seo';
 import heroOwner from '../assets/depositphotos/hero-owner.jpg';
@@ -233,68 +234,17 @@ const Home = () => {
       <section className="section-block">
         <div className="container">
           <div className="showcase-panel">
-            <div className="section-heading max-w-2xl">
-              <p className="section-kicker">가격 안내</p>
-              <h2 className="section-title">처음 시작하기 좋은 기본 홈페이지</h2>
+            <div className="section-heading max-w-2xl mb-0">
+              <p className="section-kicker">무료 상담 신청</p>
+              <h2 className="section-title">어떤 비즈니스인지 알려주시면 바로 안내해드립니다</h2>
               <p className="section-copy">
-                처음부터 크게 만들 필요는 없습니다.
+                기본 홈페이지는 $795부터 시작합니다.
                 <br />
-                지금 필요한 내용부터 차근차근 시작하면 됩니다.
+                필요한 범위만 확인해서 부담 없이 안내해드립니다.
               </p>
             </div>
-            <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-              <div className="pricing-spotlight">
-                <p className="text-sm font-semibold uppercase tracking-[0.24em] text-text-soft">기본 홈페이지</p>
-                <div className="mt-6 flex items-end gap-2">
-                  <span className="text-6xl font-black tracking-[-0.08em]">$795</span>
-                  <span className="pb-2 text-lg text-text-muted">한 번</span>
-                </div>
-                <p className="mt-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent-primary">
-                  3개월 안심 유지보수 포함
-                </p>
-                <p className="mt-5 text-base leading-relaxed text-text-muted">
-                  구글에서 찾기 쉽고 고객이 바로 연락할 수 있는
-                  <br />
-                  기본 구조부터 준비해드립니다.
-                </p>
-              </div>
 
-              <div className="grid gap-3 sm:grid-cols-2">
-                {[
-                  '간단한 홈페이지 제작',
-                  '휴대폰에서도 잘 보이게',
-                  '구글 지도/검색 등록',
-                  '홈페이지 방문자 확인 설정',
-                  '3개월 안심 유지보수 포함',
-                  '이후 유지보수는 필요 시 선택 가능',
-                ].map((item) => (
-                  <div key={item} className="benefit-row">
-                    <CircleCheckBig size={18} className="text-accent-primary" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">10분 상담</p>
-                <p className="mt-3 text-base leading-relaxed text-text-muted">
-                  어떤 내용이 필요한지,
-                  <br />
-                  지금 무엇부터 하면 좋은지 10분 안에 같이 정리해드립니다.
-                </p>
-              </div>
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                <Link to="/contact" className="primary-button inline-flex">
-                  무료 상담 신청하기
-                  <ArrowRight size={18} />
-                </Link>
-                <Link to="/pricing" className="secondary-button">
-                  서비스 및 가격 보기
-                </Link>
-              </div>
-            </div>
+            <ContactForm className="mt-10" footerText="문의가 접수되면 확인 후 연락드리겠습니다. 메일로도 바로 이어집니다." />
           </div>
         </div>
       </section>
@@ -303,4 +253,3 @@ const Home = () => {
 };
 
 export default Home;
-
