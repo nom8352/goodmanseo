@@ -13,7 +13,7 @@ import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 
 const heroSteps = [
   '필요한 내용을 10분 상담으로 함께 정리합니다.',
-  '가게 소개와 연락 흐름이 보이게 홈페이지를 제작합니다.',
+  '비즈니스 소개와 연락 흐름이 보이게 홈페이지를 제작합니다.',
   '구글 지도·검색 등록과 기본 설정까지 마무리합니다.',
   '오픈 후 3개월은 편하게 운영하실 수 있게 도와드립니다.',
 ];
@@ -22,13 +22,13 @@ const serviceCards = [
   {
     icon: <Layout size={30} className="text-accent-primary" />,
     title: '고객이 연락하기 쉬워집니다',
-    desc: '가게 소개, 연락처, 서비스 내용을 한곳에 모아두면 고객이 망설이지 않고 바로 문의할 수 있습니다.',
+    desc: '비즈니스 소개, 연락처, 서비스 내용을 한곳에 모아두면 고객이 망설이지 않고 바로 문의할 수 있습니다.',
     size: 'lg:col-span-5',
   },
   {
     icon: <MapPin size={30} className="text-accent-primary" />,
     title: '구글에서 찾기 쉬워집니다',
-    desc: '가게 위치, 서비스, 연락처를 분명하게 보여드려 근처 고객이 더 쉽게 찾을 수 있게 돕습니다.',
+    desc: '위치, 서비스, 연락처를 분명하게 보여드려 근처 고객이 더 쉽게 찾을 수 있게 돕습니다.',
     size: 'lg:col-span-3',
   },
   {
@@ -43,13 +43,13 @@ const metrics = ['제작비 $795부터', '구글 지도·검색 등록 포함', 
 
 const situations = [
   '비즈니스는 운영 중인데, 온라인에 제대로 소개된 곳이 없습니다.',
-  '구글에서 가게가 잘 안 보이거나 정보가 오래됐습니다.',
+  '구글에서 비즈니스가 잘 안 보이거나 정보가 오래됐습니다.',
   '인스타그램은 있지만, 고객이 한눈에 볼 홈페이지가 없습니다.',
   '무엇부터 해야 할지 몰라 계속 미루고 있습니다.',
 ];
 
 const consequences = [
-  '검색에 잘 보이지 않으면 고객은 다른 가게를 먼저 찾게 됩니다.',
+  '검색에 잘 보이지 않으면 고객은 다른 비즈니스를 먼저 찾게 됩니다.',
   '서비스와 연락 방법이 흩어져 있으면 문의로 이어지기 어렵습니다.',
   '첫 화면이 어수선하면 실제보다 덜 믿음직하게 보일 수 있습니다.',
 ];
@@ -106,12 +106,12 @@ const Home = () => {
                 호주 한인 소상공인을 위한 홈페이지 제작
               </div>
               <h1 className="max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.06em] sm:text-7xl md:text-[6.4rem]">
-                가게를 믿고 찾게 만드는 홈페이지,
+                비즈니스를 믿고 찾게 만드는 홈페이지,
                 <br />
                 부담 없이 시작하세요.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-text-muted sm:text-xl">
-                고객이 가게를 쉽게 찾고 바로 연락할 수 있도록
+                고객이 비즈니스를 쉽게 찾고 바로 연락할 수 있도록
                 <br />
                 필요한 내용만 담은 홈페이지를 만들어드립니다.
                 <br />
@@ -209,13 +209,13 @@ const Home = () => {
 
             <div className="showcase-panel">
               <p className="section-kicker">왜 중요한지</p>
-              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">온라인에 안 보이면 좋은 가게도 지나칩니다</h3>
+              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">온라인에 안 보이면 좋은 비즈니스도 지나칩니다</h3>
               <p className="mt-6 text-base leading-relaxed text-text-muted">
                 요즘 고객은 먼저 검색하고 비교합니다.
                 <br />
                 온라인 정보가 없거나 흐릿하면,
                 <br />
-                가게를 알기 전에 다른 곳으로 넘어갑니다.
+                비즈니스를 알기 전에 다른 곳으로 넘어갑니다.
               </p>
               <div className="mt-8 grid gap-3">
                 {consequences.map((item) => (
@@ -236,7 +236,7 @@ const Home = () => {
             <p className="section-kicker">무엇을 해드리나요</p>
             <h2 className="section-title">고객이 찾고 연락하기 쉬운 구조를 만듭니다</h2>
             <p className="section-copy">
-              가게 소개, 연락 방법, 구글 노출까지
+              비즈니스 소개, 연락 방법, 구글 노출까지
               <br />
               기본 흐름을 한 번에 정리해드립니다.
             </p>
@@ -368,3 +368,4 @@ const Home = () => {
 };
 
 export default Home;
+
