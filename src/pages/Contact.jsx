@@ -4,17 +4,17 @@ import Seo from '../components/Seo';
 
 const contactItems = [
   {
-    icon: <Phone size={22} />,
+    icon: <Phone size={18} />,
     label: '전화',
     value: '0434-920-114',
   },
   {
-    icon: <Mail size={22} />,
+    icon: <Mail size={18} />,
     label: '이메일',
     value: 'goodmanseo.sydney@gmail.com',
   },
   {
-    icon: <MapPin size={22} />,
+    icon: <MapPin size={18} />,
     label: '지역',
     value: 'Sydney, Australia',
   },
@@ -114,7 +114,7 @@ const Contact = () => {
         keywords={['호주 홈페이지 상담', '시드니 홈페이지 상담', '호주 구글 지도 등록 상담', '비즈니스 홈페이지 문의']}
       />
       <div className="container">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           <div className="section-heading mb-0 max-w-4xl">
             <div className="eyebrow-chip w-fit">
               <Sparkles size={15} />
@@ -130,29 +130,16 @@ const Contact = () => {
               <br />
               길게 쓰지 않으셔도 됩니다.
             </p>
-          </div>
 
-          <div className="package-matrix">
-            {['빠른 답변', '불필요한 옵션 없음', '이메일로도 가능', '10분 상담'].map((item) => (
-              <div key={item} className="package-stat">
-                <span className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">상담 포인트</span>
-                <strong className="text-[1.6rem]">{item}</strong>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-10 grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
-          <div className="grid gap-6">
-            {contactItems.map((item) => (
-              <div key={item.label} className="soft-panel">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-accent-primary">
-                  {item.icon}
-                </div>
-                <p className="mt-5 text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">{item.label}</p>
-                <p className="mt-3 break-all text-2xl font-black tracking-[-0.04em]">{item.value}</p>
-              </div>
-            ))}
+            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm text-text-muted">
+              {contactItems.map((item) => (
+                <span key={item.label} className="inline-flex items-center gap-2">
+                  <span className="text-accent-primary">{item.icon}</span>
+                  <span className="font-semibold text-text-soft">{item.label}</span>
+                  <span>{item.value}</span>
+                </span>
+              ))}
+            </div>
           </div>
 
           <div className="showcase-panel">
@@ -209,9 +196,7 @@ const Contact = () => {
 
               <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-xl text-sm leading-relaxed text-text-muted">
-                  안 되면 이메일 작성창으로
-                  <br />
-                  바로 이어집니다.
+                  메일로도 바로 이어집니다.
                 </p>
                 <button type="submit" className="primary-button" disabled={status === 'submitting'}>
                   {status === 'submitting' ? '전송 중...' : '상담 보내기'}
