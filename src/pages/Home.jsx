@@ -5,10 +5,6 @@ import { motion } from 'framer-motion';
 import Hero3D from '../components/Hero3D';
 import Seo from '../components/Seo';
 import heroOwner from '../assets/depositphotos/hero-owner.jpg';
-import storefrontOwner from '../assets/depositphotos/storefront-owner.jpg';
-import cleaningWorker from '../assets/depositphotos/cleaning-worker.jpg';
-import cafeOwners from '../assets/depositphotos/cafe-owners.jpg';
-import restaurantDoorway from '../assets/depositphotos/restaurant-doorway.jpg';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 
 const heroSteps = [
@@ -52,33 +48,6 @@ const consequences = [
   '검색에 잘 보이지 않으면 고객은 다른 비즈니스를 먼저 찾게 됩니다.',
   '서비스와 연락 방법이 흩어져 있으면 문의로 이어지기 어렵습니다.',
   '첫 화면이 어수선하면 실제보다 덜 믿음직하게 보일 수 있습니다.',
-];
-
-const proofGallery = [
-  {
-    title: '매장 분위기가 잘 보이는 첫 화면',
-    subtitle: '방문 유도',
-    image: storefrontOwner,
-    size: 'lg:col-span-7',
-  },
-  {
-    title: '서비스를 믿고 볼 수 있는 소개',
-    subtitle: '신뢰 형성',
-    image: cafeOwners,
-    size: 'lg:col-span-5',
-  },
-  {
-    title: '예약 문의가 바로 보이는 구성',
-    subtitle: '예약 흐름',
-    image: cleaningWorker,
-    size: 'lg:col-span-5',
-  },
-  {
-    title: '업종에 맞게 정리한 첫인상',
-    subtitle: '브랜드 인상',
-    image: restaurantDoorway,
-    size: 'lg:col-span-7',
-  },
 ];
 
 const Home = () => {
@@ -263,40 +232,6 @@ const Home = () => {
 
       <section className="section-block">
         <div className="container">
-          <div className="section-heading">
-            <p className="section-kicker">제작 예시</p>
-            <h2 className="section-title">업종에 따라 이런 느낌으로 제작할 수 있습니다</h2>
-            <p className="section-copy">
-              업종에 따라 고객이 먼저 보고 싶어하는 정보가 다릅니다.
-              <br />
-              그래서 화면 구성과 문의 흐름도 업종에 맞게 달라집니다.
-            </p>
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-12">
-            {proofGallery.map((item, index) => (
-              <motion.article
-                key={`${item.title}-${index}`}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
-                viewport={{ once: true }}
-                className={`gallery-card ${item.size}`}
-              >
-                <img src={item.image} alt={item.title} className="gallery-card__image" />
-                <div className="gallery-card__overlay" />
-                <div className="gallery-card__content">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-text-soft">{item.subtitle}</p>
-                  <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">{item.title}</h3>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-block">
-        <div className="container">
           <div className="showcase-panel">
             <div className="section-heading max-w-2xl">
               <p className="section-kicker">가격 안내</p>
@@ -368,4 +303,3 @@ const Home = () => {
 };
 
 export default Home;
-
