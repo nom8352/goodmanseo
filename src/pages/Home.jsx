@@ -75,7 +75,7 @@ const Home = () => {
                 호주 한인 소상공인을 위한 홈페이지 제작
               </div>
               <h1 className="max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.06em] sm:text-7xl md:text-[6.4rem]">
-                비즈니스를 믿고 찾게 만드는 홈페이지,
+                비즈니스 홈페이지,
                 <br />
                 부담 없이 시작하세요.
               </h1>
@@ -303,3 +303,4 @@ const Home = () => {
 };
 
 export default Home;
+
