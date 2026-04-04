@@ -5,17 +5,17 @@ import Seo from '../components/Seo';
 const contactItems = [
   {
     icon: <Phone size={22} />,
-    label: '직통 문의전화',
+    label: '전화',
     value: '0434-920-114',
   },
   {
     icon: <Mail size={22} />,
-    label: '이메일 접수',
+    label: '이메일',
     value: 'goodmanseo.sydney@gmail.com',
   },
   {
     icon: <MapPin size={22} />,
-    label: '기반 지역',
+    label: '지역',
     value: 'Sydney, Australia',
   },
 ];
@@ -96,11 +96,11 @@ const Contact = () => {
       }
 
       setStatus('success');
-      setNotice('상담 신청이 접수되었습니다. 24시간 이내에 확인 후 연락드리겠습니다.');
+      setNotice('상담 신청이 접수되었습니다. 확인 후 연락드리겠습니다.');
       setForm(initialForm);
     } catch (error) {
       setStatus('fallback');
-      setNotice('자동 접수가 원활하지 않아 이메일 앱으로 이어집니다. 보내기만 완료해 주세요.');
+      setNotice('자동 접수가 원활하지 않아 이메일로 이어집니다. 보내기만 완료해 주세요.');
       window.location.href = buildMailtoLink(form);
     }
   };
@@ -108,8 +108,8 @@ const Contact = () => {
   return (
     <div className="pt-32 pb-24">
       <Seo
-        title="상담 신청"
-        description="Goodman SEO 상담 신청 페이지입니다. 호주와 시드니 비즈니스를 위한 홈페이지 제작, 구글 지도/검색 등록, SNS와 광고 시작 세팅 문의를 받고 있습니다."
+        title="상담 문의"
+        description="Goodman SEO 상담 신청 페이지입니다. 홈페이지 제작, 구글 지도/검색 등록, SNS 세팅 문의를 받고 있습니다."
         path="/contact"
         keywords={['호주 홈페이지 상담', '시드니 홈페이지 상담', '호주 구글 지도 등록 상담', '비즈니스 홈페이지 문의']}
       />
@@ -118,12 +118,12 @@ const Contact = () => {
           <div className="section-heading mb-0 max-w-4xl">
             <div className="eyebrow-chip w-fit">
               <Sparkles size={15} />
-              Contact Goodman SEO
+              상담 문의
             </div>
           <h1 className="section-title mt-6 max-w-5xl">
             10분 상담으로
             <br />
-            방향부터 정리해보세요.
+            시작만 같이 정리해보세요.
           </h1>
           <p className="section-copy max-w-2xl">
             복잡하게 쓰지 않아도 됩니다.
@@ -133,9 +133,9 @@ const Contact = () => {
         </div>
 
           <div className="package-matrix">
-            {['10분 상담으로 방향 정리', '24시간 내 답변', '불필요한 옵션 없이 제안', '이메일 fallback 지원'].map((item) => (
+            {['10분 상담으로 방향 정리', '빠른 답변', '불필요한 옵션 없이 제안', '이메일로 이어짐'].map((item) => (
               <div key={item} className="package-stat">
-                <span className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Support</span>
+                <span className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">상담 포인트</span>
                 <strong className="text-[1.6rem]">{item}</strong>
               </div>
             ))}
@@ -155,7 +155,7 @@ const Contact = () => {
             ))}
 
             <div className="soft-panel">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Quick note</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">참고</p>
               <p className="mt-4 text-base leading-relaxed text-text-muted">
                 접수가 안 되면
                 <br />
@@ -166,8 +166,8 @@ const Contact = () => {
 
           <div className="showcase-panel">
             <div className="max-w-2xl">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">Simple inquiry form</p>
-              <h2 className="mt-4 text-4xl font-black tracking-[-0.05em]">상담 신청서</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">문의 폼</p>
+              <h2 className="mt-4 text-4xl font-black tracking-[-0.05em]">상담 신청</h2>
             </div>
 
             <form
@@ -189,8 +189,8 @@ const Contact = () => {
                   <input name="company" type="text" placeholder="예: Goodman Bakery" value={form.company} onChange={handleChange} required />
                 </label>
                 <label className="form-field">
-                  <span>담당자 성함</span>
-                  <input name="name" type="text" placeholder="성함을 입력해 주세요" value={form.name} onChange={handleChange} required />
+                  <span>담당자 이름</span>
+                  <input name="name" type="text" placeholder="이름을 입력해 주세요" value={form.name} onChange={handleChange} required />
                 </label>
               </div>
 
@@ -200,14 +200,14 @@ const Contact = () => {
                   <input name="phone" type="tel" placeholder="연락 가능한 번호" value={form.phone} onChange={handleChange} required />
                 </label>
                 <label className="form-field">
-                  <span>업종 또는 지역</span>
-                  <input name="businessType" type="text" placeholder="예: 시드니 카페 / 뷰티샵" value={form.businessType} onChange={handleChange} />
+                  <span>업종 / 지역</span>
+                  <input name="businessType" type="text" placeholder="예: 시드니 카페, 뷰티샵" value={form.businessType} onChange={handleChange} />
                 </label>
               </div>
 
               <label className="form-field">
-                <span>현재 가장 고민인 부분</span>
-                <textarea name="message" rows="5" placeholder="예: 구글 지도 노출이 약해요, 홈페이지가 오래됐어요, SNS와 사이트가 연결되지 않아요" value={form.message} onChange={handleChange} required />
+                <span>현재 가장 고민인 점</span>
+                <textarea name="message" rows="5" placeholder="예: 구글 노출이 약해요, 홈페이지가 오래됐어요" value={form.message} onChange={handleChange} required />
               </label>
 
               {notice ? (
@@ -223,7 +223,7 @@ const Contact = () => {
                   바로 이어집니다.
                 </p>
                 <button type="submit" className="primary-button" disabled={status === 'submitting'}>
-                  {status === 'submitting' ? '전송 중...' : '상담 신청하기'}
+                  {status === 'submitting' ? '전송 중...' : '상담 보내기'}
                   <Send size={18} />
                 </button>
               </div>

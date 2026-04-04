@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const distDir = path.resolve('dist');
 const indexPath = path.join(distDir, 'index.html');
-const defaultImage = 'https://goodmanseo.com/og-image.svg';
+const defaultImage = 'https://goodmanseo.com/og-image.png';
 
 const routePages = [
   {
@@ -182,6 +182,7 @@ run().catch((error) => {
   console.error('Failed to generate static pages.', error);
   process.exit(1);
 });
+
 
 
 

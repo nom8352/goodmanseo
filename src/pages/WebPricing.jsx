@@ -5,7 +5,7 @@ import Seo from '../components/Seo';
 
 const packages = [
   {
-    name: 'Basic Website',
+    name: '기본 홈페이지',
     korean: '기본 홈페이지',
     price: '$795 일시불',
     label: '3개월 안심 유지보수 포함',
@@ -21,8 +21,8 @@ const packages = [
     ],
   },
   {
-    name: 'Business Website',
-    korean: '맞춤형 비즈니스 홈페이지',
+    name: '맞춤형 홈페이지',
+    korean: '맞춤형 홈페이지',
     price: 'From $2,000 + GST',
     label: '페이지가 더 필요한 경우',
     target: '서비스 소개와 페이지 구성이 더 필요한 업체',
@@ -35,8 +35,8 @@ const packages = [
     ],
   },
   {
-    name: 'Advanced Build',
-    korean: '쇼핑몰 / 예약 / 고급 기능',
+    name: '고급 기능 홈페이지',
+    korean: '고급 기능 홈페이지',
     price: 'From $4,000 + GST',
     label: '판매·예약 기능까지',
     target: '쇼핑몰, 예약, 외부 연결이 필요한 업체',
@@ -109,17 +109,17 @@ const WebPricing = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="서비스 및 가격"
-        description="Goodman SEO의 호주와 시드니 비즈니스를 위한 서비스 및 가격 안내 페이지입니다. 홈페이지 제작, 3개월 안심 유지보수, 구글 지도/검색 등록, 추가 마케팅 서비스 가격을 확인할 수 있습니다."
+        description="Goodman SEO의 서비스 및 가격 안내 페이지입니다. 홈페이지 제작, 3개월 안심 유지보수, 구글 지도/검색 등록, 추가 서비스 가격을 확인할 수 있습니다."
         path="/pricing"
         keywords={['호주 홈페이지 제작 가격', '시드니 홈페이지 제작 가격', '호주 홈페이지 비용', '비즈니스 홈페이지 가격', '구글 지도 등록 가격']}
       />
       <div className="container">
         <div className="section-heading max-w-5xl">
-          <p className="section-kicker">Services & Pricing</p>
+          <p className="section-kicker">서비스 및 가격</p>
           <h1 className="section-title max-w-5xl">
-            필요한 수준에 맞는
+            필요한 것만
             <br />
-            서비스 및 가격
+            가볍게 시작하세요.
           </h1>
           <p className="section-copy max-w-2xl">
             작은 비즈니스는 가볍게 시작하고,
@@ -150,8 +150,8 @@ const WebPricing = () => {
 
         <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
           <div className="showcase-panel">
-            <p className="section-kicker">Extra services</p>
-            <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">추가서비스</h2>
+            <p className="section-kicker">추가 서비스</p>
+            <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">추가 서비스</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               {addOns.map((item) => (
                 <div key={item.name} className="soft-panel">
@@ -164,7 +164,7 @@ const WebPricing = () => {
           </div>
 
           <div className="showcase-panel">
-            <p className="section-kicker">Why Goodman SEO</p>
+            <p className="section-kicker">왜 Goodman SEO인가요</p>
             <h2 className="mt-3 text-3xl font-black tracking-[-0.05em]">이런 분께 잘 맞습니다</h2>
             <div className="mt-8 grid gap-3">
               {reasons.map((reason) => (
@@ -178,7 +178,7 @@ const WebPricing = () => {
               먼저 홈페이지와 구글 기본을 잡고, 원하시면 SNS와 광고 시작 세팅까지 이어서 도와드립니다.
             </p>
             <Link to="/contact" className="primary-button mt-8 inline-flex">
-              무료 견적 문의하기
+              무료 상담하기
               <ArrowRight size={18} />
             </Link>
           </div>

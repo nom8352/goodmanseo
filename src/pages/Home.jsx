@@ -14,20 +14,20 @@ import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 const serviceCards = [
   {
     icon: <Layout size={30} className="text-accent-primary" />,
-    title: '이탈하던 고객이 문의로 이어집니다',
-    desc: '허술한 SNS나 비어 있는 구글 정보만 보고 지나가던 고객도, 깔끔하게 정리된 홈페이지를 보면 더 쉽게 신뢰하고 문의를 남기게 됩니다.',
+    title: '고객이 문의로 이어집니다',
+    desc: '인스타만 있거나 구글 정보가 비어 있어도, 홈페이지가 정리돼 있으면 더 쉽게 신뢰하고 문의합니다.',
     size: 'lg:col-span-5',
   },
   {
     icon: <MapPin size={30} className="text-accent-primary" />,
-    title: '동네 검색에서 더 잘 보이게 됩니다',
-    desc: '호주 고객들이 근처 비즈니스를 찾을 때 정보가 더 잘 정리되고 눈에 띄게 보여 선택받기 쉬워집니다.',
+    title: '검색에서 더 잘 보입니다',
+    desc: '근처 비즈니스를 찾는 고객이 봤을 때 정보가 한눈에 정리되도록 맞춰드립니다.',
     size: 'lg:col-span-3',
   },
   {
     icon: <Share2 size={30} className="text-accent-primary" />,
-    title: '저가 경쟁 탈피, 브랜드화',
-    desc: '고퀄리티 사진과 세련된 세팅으로 내 비즈니스의 진짜 가치를 인정받고 제값을 받습니다.',
+    title: '가게 느낌이 더 또렷해집니다',
+    desc: '사진과 구성만 잘 정리해도 비즈니스가 더 믿음 있게 보입니다.',
     size: 'lg:col-span-4',
   },
 ];
@@ -49,25 +49,25 @@ const consequences = [
 
 const proofGallery = [
   {
-    title: '방문을 유도하는 직관적인 세팅',
+    title: '방문을 유도하는 세팅',
     subtitle: '방문 유도',
     image: storefrontOwner,
     size: 'lg:col-span-7',
   },
   {
-    title: '신뢰도를 높여 객단가 상승',
-    subtitle: '객단가 상승',
+    title: '신뢰감을 높이는 세팅',
+    subtitle: '신뢰감',
     image: cafeOwners,
     size: 'lg:col-span-5',
   },
   {
-    title: '이탈률 0%의 예약 유도 동선',
+    title: '예약이 쉬운 동선',
     subtitle: '예약 유도',
     image: cleaningWorker,
     size: 'lg:col-span-5',
   },
   {
-    title: '첫 방문을 부르는 매장 분위기',
+    title: '첫인상이 좋은 매장',
     subtitle: '브랜드 첫인상',
     image: restaurantDoorway,
     size: 'lg:col-span-7',
@@ -96,25 +96,23 @@ const Home = () => {
             >
               <div className="eyebrow-chip mb-6">
                 <Sparkles size={16} />
-                비즈니스를 위한 기본 홈페이지
+                소상공인을 위한 기본 홈페이지
               </div>
               <h1 className="max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.06em] sm:text-7xl md:text-[6.4rem]">
-                24시간 쉬지 않는
+                비즈니스 홈페이지,
                 <br />
-                <span className="gradient-text">온라인 영업사원을</span>
-                <br />
-                고용하세요.
+                어렵지 않게 시작하세요.
               </h1>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed text-text-muted sm:text-xl">
-                잘 만들어진 홈페이지와 구글 지도는
+                구글 지도와 검색에서 보이게 하고,
                 <br />
-                사장님이 주무시는 동안에도 호주 현지 손님을
+                고객이 바로 문의할 수 있게 정리해드립니다.
                 <br />
-                알아서 끌어옵니다. 단 $795로 완벽한 온라인 자동 영업망을 세팅하세요.
+                기본 홈페이지는 $795부터 시작합니다.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Link to="/starter-package" className="primary-button">
-                  상세히 보기
+                  서비스 보기
                   <ArrowRight size={18} />
                 </Link>
               </div>
@@ -140,7 +138,7 @@ const Home = () => {
                   <p className="text-sm font-semibold tracking-[0.04em] text-text-soft">처음 시작할 때 필요한 기본만 담았습니다</p>
                 </div>
                 <div className="mt-10">
-                  <p className="text-sm tracking-[0.04em] text-text-soft">한 번 제작비</p>
+                  <p className="text-sm tracking-[0.04em] text-text-soft">기본 홈페이지</p>
                   <p className="mt-3 text-7xl font-black leading-none tracking-[-0.1em] sm:text-[5.5rem]">$795</p>
                   <p className="mt-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent-primary">
                     3개월 안심 유지보수 포함
@@ -165,12 +163,12 @@ const Home = () => {
       <section className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="section-kicker">Your situation</p>
+            <p className="section-kicker">현재 상황</p>
             <h2 className="section-title">혹시 이런 상황이신가요?</h2>
             <p className="section-copy">
               하나라도 해당되면
               <br />
-              온라인 기본 세팅이 필요한 상태입니다.
+              홈페이지부터 정리할 타이밍입니다.
             </p>
           </div>
 
@@ -194,14 +192,14 @@ const Home = () => {
             </div>
 
             <div className="showcase-panel">
-              <p className="section-kicker">Why it matters</p>
-              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">비워두면 고객을 놓치게 됩니다</h3>
+              <p className="section-kicker">왜 중요한지</p>
+              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">비워두면 고객이 그냥 지나갑니다</h3>
               <p className="mt-6 text-base leading-relaxed text-text-muted">
                 요즘 고객은 먼저 검색합니다.
                 <br />
-                검색에서 안 보이거나 정보가 정리되지 않으면
+                정보가 안 보이거나 정리가 안 되어 있으면
                 <br />
-                좋은 가게도 그냥 지나치게 됩니다.
+                좋은 가게도 먼저 지나갑니다.
               </p>
               <div className="mt-8 grid gap-3">
                 {consequences.map((item) => (
@@ -219,12 +217,12 @@ const Home = () => {
       <section className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="section-kicker">What we set up</p>
-            <h2 className="section-title">기본만 잘 잡아도 이렇게 달라집니다</h2>
+            <p className="section-kicker">무엇을 해드리나요</p>
+            <h2 className="section-title">기본만 잘 잡아도 달라집니다</h2>
             <p className="section-copy">
               고객이 찾고, 보고, 문의하기 쉬운
               <br />
-              구조부터 정리해서 매출이 발생하고, 증가하도록 만들어드립니다.
+              구조부터 정리해드립니다.
             </p>
           </div>
 
@@ -250,12 +248,12 @@ const Home = () => {
       <section className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="section-kicker">Portfolio</p>
-            <h2 className="section-title">방문자를 '단골 손님'으로 만드는 최적의 세팅</h2>
+            <p className="section-kicker">포트폴리오</p>
+            <h2 className="section-title">업종별로 어떤 느낌인지 먼저 보세요</h2>
             <p className="section-copy">
-              단순히 보기 좋은 사이트가 아닙니다.
+              실제로는 이런 느낌으로 보일 수 있습니다.
               <br />
-              호주 현지 고객이 가장 문의하기 쉽고, 예약하기 편한 동선으로 철저하게 기획된 작업물입니다.
+              업종에 따라 첫인상과 문의 동선을 다르게 잡습니다.
             </p>
           </div>
 
@@ -285,7 +283,7 @@ const Home = () => {
         <div className="container">
           <div className="showcase-panel">
             <div className="section-heading max-w-2xl">
-              <p className="section-kicker">Simple pricing</p>
+              <p className="section-kicker">가격 안내</p>
               <h2 className="section-title">가볍게 시작하는 기본 홈페이지</h2>
               <p className="section-copy">
                 처음에는 크게 만들 필요 없습니다.
@@ -329,9 +327,9 @@ const Home = () => {
 
             <div className="mt-10 flex flex-col gap-6 border-t border-white/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">10 minute consultation</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">10분 상담</p>
                 <p className="mt-3 text-base leading-relaxed text-text-muted">
-                  10분 상담으로 무엇부터 해야 할지 방향부터 정리해드립니다.
+                  10분 상담으로 무엇부터 해야 할지 같이 정리해드립니다.
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center">

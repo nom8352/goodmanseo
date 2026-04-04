@@ -76,18 +76,18 @@ const StarterPackage = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="홈페이지 제작"
-        description="Goodman SEO의 호주와 시드니 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수까지 포함됩니다."
+        description="Goodman SEO의 기본 홈페이지 안내 페이지입니다. 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수가 포함됩니다."
         path="/starter-package"
         keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', '호주 비즈니스 홈페이지', '구글 지도 등록 포함 홈페이지', '호주 홈페이지 상담']}
       />
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div className="section-heading mb-0 max-w-4xl">
-            <p className="section-kicker">Homepage package</p>
+            <p className="section-kicker">기본 홈페이지</p>
             <h1 className="section-title max-w-4xl">
-              작은 비즈니스를 위한
+              기본 홈페이지,
               <br />
-              홈페이지 제작
+              가볍게 시작하세요.
             </h1>
             <p className="section-copy max-w-2xl">
               처음에는 복잡할 필요 없습니다.
@@ -116,9 +116,9 @@ const StarterPackage = () => {
             <aside className="pricing-spotlight">
               <div className="eyebrow-chip w-fit">
                 <Sparkles size={14} />
-                Goodman SEO basic website
+                Goodman SEO 기본 홈페이지
               </div>
-              <h2 className="mt-8 text-4xl font-black tracking-[-0.06em] sm:text-5xl">기본 홈페이지 제작</h2>
+              <h2 className="mt-8 text-4xl font-black tracking-[-0.06em] sm:text-5xl">기본 홈페이지</h2>
               <div className="mt-10 flex items-end gap-2">
                 <span className="text-7xl font-black tracking-[-0.08em]">$795</span>
                 <span className="pb-3 text-xl text-text-muted">일시불</span>
@@ -132,9 +132,9 @@ const StarterPackage = () => {
                 고객이 찾고 문의할 수 있는 출발점이 됩니다.
               </p>
               <div className="package-note mt-8">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">오픈 후에도 안심할 수 있게</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">오픈 후에도 안심</p>
                 <p className="mt-3 text-base leading-relaxed text-text-muted">
-                  초기 3개월은 안심하고 운영하실 수 있도록 도와드리고,
+                  초기 3개월은 안심하고 운영하실 수 있게 도와드리고,
                   <br />
                   이후 유지보수는 필요할 때만 선택하실 수 있습니다.
                 </p>
