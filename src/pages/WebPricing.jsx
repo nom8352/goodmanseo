@@ -11,7 +11,7 @@ const packages = [
     label: '3개월 안심 유지보수 포함',
     target: '처음 시작하는 작은 비즈니스',
     features: [
-      '간단한 홈페이지 제작',
+      '기본 5페이지까지 제작 가능',
       '휴대폰에서도 잘 보이게',
       '문의 버튼 또는 문의폼 연결',
       '구글 지도/검색 등록',
@@ -126,6 +126,11 @@ const WebPricing = () => {
             <br />
             필요할 때 더하는 방식이 가장 쉽습니다.
           </p>
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-muted">
+            기본 홈페이지는 보통 Home, About, Services, Gallery, Contact처럼
+            <br />
+            비즈니스 소개에 필요한 5페이지까지 구성할 수 있습니다.
+          </p>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -189,3 +194,4 @@ const WebPricing = () => {
 };
 
 export default WebPricing;
+

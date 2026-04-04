@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
 const inclusions = [
-  '간단한 홈페이지 제작',
+  '기본 5페이지까지 제작 가능',
   '휴대폰에서도 잘 보이게',
   '문의 버튼 또는 문의폼 연결',
   '구글 지도/검색 등록',
@@ -23,7 +23,7 @@ const support = [
 
 const stats = [
   { label: '제작비', value: '$795 일시불' },
-  { label: '형태', value: '간단한 홈페이지' },
+  { label: '구성', value: '기본 5페이지' },
   { label: '유지보수', value: '3개월 포함' },
   { label: '호스팅', value: '별도 비용 없이 시작 가능' },
 ];
@@ -210,3 +210,4 @@ const StarterPackage = () => {
 };
 
 export default StarterPackage;
+
