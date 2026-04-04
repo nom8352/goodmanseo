@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Mail, MapPin, Phone, Send, Sparkles } from 'lucide-react';
+import { Mail, MapPin, Phone, Send, Sparkles } from 'lucide-react';
 import Seo from '../components/Seo';
 
 const contactItems = [
@@ -66,7 +66,7 @@ const Contact = () => {
 
     if (form['bot-field']) {
       setStatus('success');
-      setNotice('상담 신청이 접수되었습니다. 확인 후 연락드리겠습니다.');
+      setNotice('문의가 접수되었습니다. 확인 후 연락드리겠습니다.');
       return;
     }
 
@@ -96,11 +96,11 @@ const Contact = () => {
       }
 
       setStatus('success');
-      setNotice('상담 신청이 접수되었습니다. 확인 후 연락드리겠습니다.');
+      setNotice('문의가 접수되었습니다. 확인 후 연락드리겠습니다.');
       setForm(initialForm);
     } catch (error) {
       setStatus('fallback');
-      setNotice('자동 접수가 원활하지 않아 이메일로 이어집니다. 보내기만 완료해 주세요.');
+      setNotice('자동 접수가 안 되어 이메일로 이어집니다.');
       window.location.href = buildMailtoLink(form);
     }
   };
@@ -109,31 +109,31 @@ const Contact = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="상담 문의"
-        description="Goodman SEO 상담 신청 페이지입니다. 홈페이지 제작, 구글 지도/검색 등록, SNS 세팅 문의를 받고 있습니다."
+        description="Goodman SEO 상담 문의 페이지입니다. 홈페이지 제작, 구글 지도/검색 등록, SNS 세팅 문의를 받습니다."
         path="/contact"
         keywords={['호주 홈페이지 상담', '시드니 홈페이지 상담', '호주 구글 지도 등록 상담', '비즈니스 홈페이지 문의']}
       />
       <div className="container">
-        <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-end">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div className="section-heading mb-0 max-w-4xl">
             <div className="eyebrow-chip w-fit">
               <Sparkles size={15} />
               상담 문의
             </div>
-          <h1 className="section-title mt-6 max-w-5xl">
-            10분 상담으로
-            <br />
-            시작만 같이 정리해보세요.
-          </h1>
-          <p className="section-copy max-w-2xl">
-            복잡하게 쓰지 않아도 됩니다.
-            <br />
-            현재 상황만 알려주시면 됩니다.
-          </p>
-        </div>
+            <h1 className="section-title mt-6 max-w-5xl">
+              10분이면
+              <br />
+              방향이 보입니다.
+            </h1>
+            <p className="section-copy max-w-2xl">
+              현재 상황만 간단히 적어주세요.
+              <br />
+              길게 쓰지 않으셔도 됩니다.
+            </p>
+          </div>
 
           <div className="package-matrix">
-            {['10분 상담으로 방향 정리', '빠른 답변', '불필요한 옵션 없이 제안', '이메일로 이어짐'].map((item) => (
+            {['빠른 답변', '불필요한 옵션 없음', '이메일로도 가능', '10분 상담'].map((item) => (
               <div key={item} className="package-stat">
                 <span className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">상담 포인트</span>
                 <strong className="text-[1.6rem]">{item}</strong>
@@ -153,15 +153,6 @@ const Contact = () => {
                 <p className="mt-3 break-all text-2xl font-black tracking-[-0.04em]">{item.value}</p>
               </div>
             ))}
-
-            <div className="soft-panel">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">참고</p>
-              <p className="mt-4 text-base leading-relaxed text-text-muted">
-                접수가 안 되면
-                <br />
-                이메일로 바로 이어집니다.
-              </p>
-            </div>
           </div>
 
           <div className="showcase-panel">
@@ -218,7 +209,7 @@ const Contact = () => {
 
               <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-xl text-sm leading-relaxed text-text-muted">
-                  안 되면 메일 작성창으로
+                  안 되면 이메일 작성창으로
                   <br />
                   바로 이어집니다.
                 </p>
