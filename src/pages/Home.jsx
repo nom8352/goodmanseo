@@ -2,63 +2,109 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheckBig, Layout, MapPin, Share2, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-import ContactForm from '../components/ContactForm';
 import Hero3D from '../components/Hero3D';
 import Seo from '../components/Seo';
 import heroOwner from '../assets/depositphotos/hero-owner.jpg';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 
-const heroSteps = [
-  '필요한 내용을 10분 상담으로 함께 정리합니다.',
-  '비즈니스 소개와 연락 흐름이 보이게 홈페이지를 제작합니다.',
-  '구글 지도·검색 등록과 기본 설정까지 마무리합니다.',
-  '오픈 후 3개월은 편하게 운영하실 수 있게 도와드립니다.',
+const heroPoints = [
+  '웹사이트, 구글, 메시지, 문의 동선을 함께 봅니다.',
+  '퀵 진단 또는 온라인 올인원 진단으로 현재 상태를 먼저 확인할 수 있습니다.',
+  '진단 후에는 필요한 것만 선택해 진행할 수 있습니다.',
+  '한국어·영어 지원 · 호주 전역 · 전 세계 원격 작업 가능',
 ];
 
-const serviceCards = [
+const problemSignals = [
+  '사이트는 있는데 문의가 거의 없다',
+  'Google Business Profile은 있지만 제대로 관리되지 않는다',
+  '인스타그램, 페이스북, 웹사이트가 따로 논다',
+  '설명은 많은데 고객이 무엇을 해야 할지 명확하지 않다',
+];
+
+const scopeCards = [
   {
     icon: <Layout size={30} className="text-accent-primary" />,
-    title: '고객이 연락하기 쉬워집니다',
-    desc: '비즈니스 소개, 연락처, 서비스 내용을 한곳에 모아두면 고객이 망설이지 않고 바로 문의할 수 있습니다.',
-    size: 'lg:col-span-5',
+    title: '웹사이트 구조',
+    desc: '메시지, 정보 배치, CTA 흐름이 실제 문의로 이어지는지 함께 봅니다.',
+    size: 'lg:col-span-4',
   },
   {
     icon: <MapPin size={30} className="text-accent-primary" />,
-    title: '구글에서 찾기 쉬워집니다',
-    desc: '위치, 서비스, 연락처를 분명하게 보여드려 근처 고객이 더 쉽게 찾을 수 있게 돕습니다.',
-    size: 'lg:col-span-3',
+    title: 'Google Business Profile',
+    desc: '프로필 설정, 노출 상태, 핵심 정보 정리 여부를 확인합니다.',
+    size: 'lg:col-span-4',
   },
   {
     icon: <Share2 size={30} className="text-accent-primary" />,
-    title: '처음 보는 고객에게 더 믿음 있게 보입니다',
-    desc: '사진과 문구를 업종에 맞게 정리해, 처음 방문한 고객에게도 안정감 있고 믿을 수 있는 인상을 전합니다.',
+    title: '메시지와 채널 연결',
+    desc: '온페이지 SEO, 인스타그램, 페이스북, 비즈니스 포지셔닝까지 연결해 전체 흐름을 봅니다.',
     size: 'lg:col-span-4',
   },
 ];
 
-const metrics = ['제작비 $795부터', '구글 지도·검색 등록 포함', '3개월 유지보수 포함'];
-
-const situations = [
-  '비즈니스는 운영 중인데, 온라인에 제대로 소개된 곳이 없습니다.',
-  '구글에서 비즈니스가 잘 안 보이거나 정보가 오래됐습니다.',
-  '인스타그램은 있지만, 고객이 한눈에 볼 홈페이지가 없습니다.',
-  '무엇부터 해야 할지 몰라 계속 미루고 있습니다.',
+const diagnosticCards = [
+  {
+    title: '퀵 진단',
+    price: 'AUD 149',
+    description:
+      '웹사이트, Google Business Profile, 온페이지 SEO를 중심으로 현재 구조를 빠르게 점검하고 우선순위를 정리해드립니다.',
+    points: [
+      '홈페이지 구조 분석',
+      'Google Business Profile 분석',
+      '온페이지 SEO 기본 분석',
+      '핵심 문제 1~3개 정리',
+    ],
+    cta: '퀵 진단 보기',
+  },
+  {
+    title: '온라인 올인원 진단',
+    price: 'AUD 289',
+    description:
+      '퀵 진단 범위에 더해 인스타그램, 페이스북, 비즈니스 포지셔닝까지 함께 분석해 전체 온라인 존재감을 정리해드립니다.',
+    points: [
+      '퀵 진단 전체 포함',
+      '인스타그램 / 페이스북 분석',
+      '비즈니스 포지셔닝 점검',
+      '채널 간 일관성 분석',
+    ],
+    cta: '온라인 올인원 진단 보기',
+  },
 ];
 
-const consequences = [
-  '검색에 잘 보이지 않으면 고객은 다른 비즈니스를 먼저 찾게 됩니다.',
-  '서비스와 연락 방법이 흩어져 있으면 문의로 이어지기 어렵습니다.',
-  '첫 화면이 어수선하면 실제보다 덜 믿음직하게 보일 수 있습니다.',
+const executionPaths = [
+  {
+    title: '홈페이지 실행',
+    description: '스타터 / 비즈니스 / 성장형 홈페이지 중 현재 단계에 맞는 옵션으로 진행할 수 있습니다.',
+  },
+  {
+    title: 'SEO 실행',
+    description: 'SEO All-in-One 패키지 또는 SEO 월관리로 검색 구조를 따로 정리할 수 있습니다.',
+  },
+  {
+    title: 'Google Business Profile 정리',
+    description: '프로필 세팅이나 월관리처럼 로컬 검색에 집중한 별도 옵션도 선택할 수 있습니다.',
+  },
+  {
+    title: '운영 지원 / AI 전수',
+    description: '직접 하기 부담스러우면 관리로, 직접 운영하고 싶다면 AI 활용 전수로 이어질 수 있습니다.',
+  },
+];
+
+const trustPoints = [
+  '필요한 것만 선택해 진행하는 구조',
+  '한국어·영어 지원',
+  '호주 전역 및 전 세계 원격 작업 가능',
+  '구축 이후 운영과 AI 전수까지 확장 가능',
 ];
 
 const Home = () => {
   return (
     <div className="overflow-hidden">
       <Seo
-        title="홈"
-        description="Goodman SEO는 호주 한인 소상공인을 위해 홈페이지 제작, 구글 지도·검색 등록, 홈페이지 방문자 확인 설정, 3개월 유지보수까지 한 번에 도와드립니다."
+        title="온라인 구조 진단"
+        description="GoodmanSEO는 웹사이트, 구글, 메시지, 문의 동선을 점검해 실제 문의로 이어지는 온라인 구조를 진단하고 정리합니다. 한국어·영어 지원, 호주 전역 및 전 세계 원격 작업이 가능합니다."
         path="/"
-        keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', '호주 구글 지도 등록', '시드니 구글 지도 등록', '비즈니스 홈페이지 제작']}
+        keywords={['온라인 구조 진단', '웹사이트 진단', 'Google Business Profile', '온페이지 SEO', '비즈니스 홈페이지', 'SEO 패키지']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
 
@@ -73,31 +119,31 @@ const Home = () => {
             >
               <div className="eyebrow-chip mb-6">
                 <Sparkles size={16} />
-                호주 한인 소상공인을 위한 홈페이지 제작
+                온라인 구조 진단 & 실행
               </div>
-              <h1 className="max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.06em] sm:text-7xl md:text-[6.4rem]">
-                비즈니스 홈페이지,
+              <h1 className="max-w-5xl text-4xl font-black leading-[0.94] tracking-[-0.06em] sm:text-6xl md:text-[4.8rem]">
+                예쁜 사이트보다 먼저,
                 <br />
-                부담 없이 시작하세요.
+                문의가 생기는 구조부터 점검합니다.
               </h1>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-text-muted sm:text-xl">
-                고객이 비즈니스를 쉽게 찾고 바로 연락할 수 있도록
+              <p className="mt-6 max-w-2xl text-base leading-relaxed text-text-muted sm:text-lg">
+                웹사이트가 있든 없든,
                 <br />
-                필요한 내용만 담은 홈페이지를 만들어드립니다.
+                고객이 검색하고 이해하고 문의하게 되는 온라인 구조를 먼저 진단한 뒤,
                 <br />
-                기본 홈페이지는 $795부터 시작합니다.
+                필요한 실행만 선택할 수 있도록 정리해드립니다.
               </p>
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Link to="/contact" className="primary-button">
-                  무료 상담 신청하기
+                <Link to="/pricing" className="primary-button">
+                  퀵 진단 보기
                   <ArrowRight size={18} />
                 </Link>
                 <Link to="/pricing" className="secondary-button">
-                  서비스 및 가격 보기
+                  온라인 올인원 진단 보기
                 </Link>
               </div>
               <div className="mt-10 grid gap-3 sm:grid-cols-3">
-                {metrics.map((item) => (
+                {['퀵 진단 AUD 149', '온라인 올인원 진단 AUD 289', '호주 전역 · 전 세계 원격'].map((item) => (
                   <div key={item} className="metric-pill">
                     <CircleCheckBig size={16} className="text-accent-primary" />
                     <span>{item}</span>
@@ -114,13 +160,13 @@ const Home = () => {
             >
               <div className="hero-proof-card">
                 <div className="hero-proof-top">
-                  <span className="eyebrow-chip">처음 만드는 분께 추천</span>
-                  <p className="text-sm font-semibold tracking-[0.04em] text-text-soft">상담부터 오픈까지 복잡하지 않게 진행합니다</p>
+                  <span className="eyebrow-chip">먼저 보는 범위</span>
+                  <p className="text-sm font-semibold tracking-[0.04em] text-text-soft">온라인 구조를 이렇게 함께 봅니다</p>
                 </div>
                 <div className="mt-10">
-                  <p className="text-sm tracking-[0.04em] text-text-soft">이렇게 진행됩니다</p>
+                  <p className="text-sm tracking-[0.04em] text-text-soft">GoodmanSEO가 먼저 확인하는 것</p>
                   <div className="mt-6 grid gap-3">
-                    {heroSteps.map((item) => (
+                    {heroPoints.map((item) => (
                       <div key={item} className="benefit-row">
                         <CircleCheckBig size={18} className="text-accent-primary" />
                         <span>{item}</span>
@@ -129,15 +175,15 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="mt-10 overflow-hidden rounded-[28px] border border-white/10">
-                  <img src={heroOwner} alt="비즈니스 대표 이미지 예시" className="h-[260px] w-full object-cover" />
+                  <img src={heroOwner} alt="온라인 구조를 점검하는 비즈니스 운영 이미지" className="h-[220px] w-full object-cover" />
                 </div>
                 <div className="mt-8 rounded-[24px] border border-white/10 bg-white/[0.03] px-5 py-5">
                   <p className="text-base leading-relaxed text-text-muted">
-                    무엇이 필요한지 아직 정리되지 않아도 괜찮습니다.
+                    무엇부터 손봐야 할지 아직 정리되지 않아도 괜찮습니다.
                     <br />
-                    바쁜 사장님도 바로 이해하실 수 있게
+                    먼저 진단으로 현재 상태를 보고,
                     <br />
-                    필요한 순서대로 차분히 도와드립니다.
+                    그다음 필요한 실행만 선택할 수 있게 도와드립니다.
                   </p>
                 </div>
               </div>
@@ -149,18 +195,18 @@ const Home = () => {
       <section className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="section-kicker">이런 고민이 있다면</p>
-            <h2 className="section-title">혹시 이런 고민이 있으신가요?</h2>
+            <p className="section-kicker">문제 공감</p>
+            <h2 className="section-title">혹시 이런 상태라면, 구조부터 다시 볼 필요가 있습니다</h2>
             <p className="section-copy">
-              하나라도 해당된다면,
+              사이트가 있든 없든,
               <br />
-              지금 온라인 첫인상을 정리할 때입니다.
+              문의로 이어지지 않는 이유는 구조 전체에 있을 수 있습니다.
             </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="grid gap-4">
-              {situations.map((item, index) => (
+              {problemSignals.map((item, index) => (
                 <motion.div
                   key={item}
                   initial={{ opacity: 0, y: 24 }}
@@ -178,17 +224,21 @@ const Home = () => {
             </div>
 
             <div className="showcase-panel">
-              <p className="section-kicker">왜 중요한지</p>
-              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">온라인에 안 보이면 좋은 비즈니스도 지나칩니다</h3>
+              <p className="section-kicker">왜 먼저 봐야 하는지</p>
+              <h3 className="mt-3 text-3xl font-black tracking-[-0.05em]">문제는 사이트가 없어서가 아니라, 구조가 문의로 이어지지 않기 때문일 수 있습니다</h3>
               <p className="mt-6 text-base leading-relaxed text-text-muted">
-                요즘 고객은 먼저 검색하고 비교합니다.
+                고객은 먼저 검색하고 비교합니다.
                 <br />
-                온라인 정보가 없거나 흐릿하면,
+                정보가 흩어져 있거나 흐름이 어색하면,
                 <br />
-                비즈니스를 알기 전에 다른 곳으로 넘어갑니다.
+                좋은 서비스도 문의로 연결되기 전에 놓칠 수 있습니다.
               </p>
               <div className="mt-8 grid gap-3">
-                {consequences.map((item) => (
+                {[
+                  '검색은 되는데 실제 연락으로 이어지지 않는다',
+                  '채널마다 메시지가 달라 신뢰가 약해질 수 있다',
+                  'CTA가 약하면 고객이 무엇을 해야 할지 모른다',
+                ].map((item) => (
                   <div key={item} className="benefit-row">
                     <CircleCheckBig size={18} className="text-accent-primary" />
                     <span>{item}</span>
@@ -203,17 +253,17 @@ const Home = () => {
       <section className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="section-kicker">무엇을 해드리나요</p>
-            <h2 className="section-title">고객이 찾고 연락하기 쉬운 구조를 만듭니다</h2>
+            <p className="section-kicker">무엇을 함께 보는지</p>
+            <h2 className="section-title">GoodmanSEO는 이런 부분을 함께 봅니다</h2>
             <p className="section-copy">
-              비즈니스 소개, 연락 방법, 구글 노출까지
+              하나의 채널만 따로 보는 것이 아니라,
               <br />
-              기본 흐름을 한 번에 정리해드립니다.
+              고객이 검색하고 이해하고 문의하게 되는 흐름 전체를 함께 봅니다.
             </p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-12">
-            {serviceCards.map((service, index) => (
+            {scopeCards.map((service, index) => (
               <motion.article
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -233,18 +283,144 @@ const Home = () => {
 
       <section className="section-block">
         <div className="container">
-          <div className="showcase-panel">
-            <div className="section-heading max-w-2xl mb-0">
-              <p className="section-kicker">무료 상담 신청</p>
-              <h2 className="section-title">어떤 비즈니스인지 알려주시면 바로 안내해드립니다</h2>
-              <p className="section-copy">
-                기본 홈페이지는 $795부터 시작합니다.
+          <div className="section-heading">
+            <p className="section-kicker">진단 상품</p>
+            <h2 className="section-title">무엇부터 손봐야 할지 모르겠다면, 진단부터 시작하세요</h2>
+            <p className="section-copy">
+              현재 구조를 빠르게 보거나,
+              <br />
+              조금 더 넓고 깊게 종합적으로 볼 수 있는 두 가지 진단 옵션이 있습니다.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            {diagnosticCards.map((card, index) => (
+              <motion.article
+                key={card.title}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="feature-card"
+              >
+                <p className="section-kicker">{card.title}</p>
+                <div className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-text-muted">
+                  {card.price}
+                </div>
+                <p className="mt-6 text-base leading-relaxed text-text-muted">{card.description}</p>
+                <div className="mt-8 grid gap-3">
+                  {card.points.map((item) => (
+                    <div key={item} className="benefit-row">
+                      <CircleCheckBig size={18} className="text-accent-primary" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link to="/pricing" className="primary-button mt-8">
+                  {card.cta}
+                  <ArrowRight size={18} />
+                </Link>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="container">
+          <div className="section-heading">
+            <p className="section-kicker">진단 후 실행</p>
+            <h2 className="section-title">진단 후에는 필요한 것만 선택해 진행할 수 있습니다</h2>
+            <p className="section-copy">
+              홈페이지가 필요한 경우도 있고,
+              <br />
+              SEO 정리나 Google Business Profile 관리가 먼저 필요한 경우도 있습니다.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            {executionPaths.map((path, index) => (
+              <motion.div
+                key={path.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="soft-panel"
+              >
+                <p className="section-kicker">{path.title}</p>
+                <p className="mt-4 text-lg font-semibold leading-relaxed text-text-main">{path.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="container">
+          <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="showcase-panel">
+              <p className="section-kicker">운영 및 AI 전수</p>
+              <h2 className="section-title !max-w-none">구축 이후 운영까지 이어질 수 있습니다</h2>
+              <p className="section-copy !max-w-none">
+                홈페이지를 만들어드리는 것에서 끝나지 않고,
                 <br />
-                필요한 범위만 확인해서 부담 없이 안내해드립니다.
+                원하시면 직접 운영할 수 있도록 AI 활용 방법까지 전수해드립니다.
               </p>
+              <div className="mt-8 grid gap-3">
+                {[
+                  '직접 하기 부담스러우면 홈페이지 관리로 이어질 수 있습니다',
+                  '직접 운영하고 싶다면 AI 활용 비즈니스 운영 & 홈페이지 관리 전수로 확장할 수 있습니다',
+                  '구축 이후에도 장기적으로 운영 가능한 구조를 함께 설계합니다',
+                ].map((item) => (
+                  <div key={item} className="benefit-row">
+                    <CircleCheckBig size={18} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <ContactForm className="mt-10" footerText="문의가 접수되면 확인 후 연락드리겠습니다. 메일로도 바로 이어집니다." />
+            <div className="hero-proof-card">
+              <p className="section-kicker">신뢰 요소</p>
+              <h3 className="mt-4 text-3xl font-black tracking-[-0.05em]">필요한 것부터 차근차근 정리합니다</h3>
+              <div className="mt-8 grid gap-3">
+                {trustPoints.map((item) => (
+                  <div key={item} className="benefit-row">
+                    <CircleCheckBig size={18} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 overflow-hidden rounded-[28px] border border-white/10">
+                <img src={heroOwner} alt="GoodmanSEO 작업 예시 이미지" className="h-[220px] w-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block">
+        <div className="container">
+          <div className="showcase-panel">
+            <div className="section-heading mb-0 max-w-2xl">
+              <p className="section-kicker">다음 단계</p>
+              <h2 className="section-title">어디서 시작해야 할지 모르겠다면, 먼저 진단부터 시작하세요</h2>
+              <p className="section-copy">
+                퀵 진단으로 핵심만 빠르게 볼 수도 있고,
+                <br />
+                온라인 올인원 진단으로 전체 구조를 더 넓게 볼 수도 있습니다.
+              </p>
+            </div>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link to="/pricing" className="primary-button">
+                진단부터 시작하기
+                <ArrowRight size={18} />
+              </Link>
+              <Link to="/contact" className="secondary-button">
+                문의하기
+              </Link>
+            </div>
           </div>
         </div>
       </section>
