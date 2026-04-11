@@ -87,10 +87,10 @@ const supportPackages = [
   },
 ];
 
-const pricingPrinciples = [
-  '무료 점검 후 필요한 서비스만 선택해 진행할 수 있습니다.',
-  '홈페이지, SEO, 구글 비즈니스 프로필, 운영 지원을 각각 분리해 안내합니다.',
-  '무조건 큰 패키지를 먼저 권하기보다 지금 필요한 것부터 차례대로 진행합니다.',
+const freeCheckPoints = [
+  '구글 비즈니스 프로필, 홈페이지, 인스타그램, 페이스북 상태를 함께 확인합니다.',
+  '비어 있는 정보, 채널 간 연결 부족, 첫인상을 약하게 만드는 부분을 먼저 봅니다.',
+  '무료 점검 후에는 지금 필요한 작업만 정리해 다음 단계로 안내해드립니다.',
 ];
 
 const WebPricing = () => {
@@ -98,7 +98,7 @@ const WebPricing = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="서비스 및 가격"
-        description="무료 점검 후 GoodmanSEO의 진단, 홈페이지, SEO, 구글 비즈니스 프로필, 운영 지원 옵션을 확인할 수 있습니다."
+        description="무료 점검에서 무엇을 보는지 먼저 확인하고, 이후 GoodmanSEO의 진단, 홈페이지, SEO, 구글 비즈니스 프로필, 운영 지원 옵션으로 이어질 수 있습니다."
         path="/pricing"
         keywords={['서비스 및 가격', '퀵 진단', '온라인 올인원 진단', '비즈니스 홈페이지', 'SEO 패키지', '구글 비즈니스 프로필']}
       />
@@ -107,21 +107,23 @@ const WebPricing = () => {
         <div className="section-heading max-w-5xl">
           <p className="section-kicker">서비스 및 가격</p>
           <h1 className="section-title max-w-5xl">
-            무료 점검 후,
+            무료 점검에서
             <br />
-            맞는 서비스부터 이어서 진행할 수 있습니다
+            무엇을 먼저 보는지
+            <br />
+            먼저 확인해보세요
           </h1>
           <p className="section-copy max-w-[42rem]">
-            구글, 홈페이지, 인스타그램, 페이스북을 먼저 함께 보고,
+            구글, 홈페이지, 인스타그램, 페이스북을 함께 보고,
             <br />
-            필요한 서비스만 선택할 수 있도록 정리해드립니다.
+            어디가 비어 있는지와 무엇부터 손봐야 하는지 먼저 정리해드립니다.
           </p>
         </div>
 
         <div className="showcase-panel">
-          <p className="section-kicker">먼저 알고 가면 좋은 점</p>
+          <p className="section-kicker">무료 점검에서 보는 것</p>
           <div className="mt-5 grid gap-3 md:grid-cols-3">
-            {pricingPrinciples.map((item) => (
+            {freeCheckPoints.map((item) => (
               <div key={item} className="benefit-row">
                 <CircleCheckBig size={16} className="text-accent-primary" />
                 <span>{item}</span>
