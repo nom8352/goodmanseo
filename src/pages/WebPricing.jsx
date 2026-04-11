@@ -108,13 +108,7 @@ const WebPricing = () => {
       <div className="container">
         <div className="section-heading max-w-5xl">
           <p className="section-kicker">서비스 및 가격</p>
-          <h1 className="section-title max-w-5xl">
-            무료 점검으로
-            <br />
-            지금 어디가 비어 있는지
-            <br />
-            먼저 확인해보세요
-          </h1>
+          <h1 className="section-title max-w-5xl">무료 점검</h1>
           <p className="section-copy max-w-[42rem]">
             구글 비즈니스 프로필, 홈페이지, 인스타그램, 페이스북을 함께 보고,
             <br />
@@ -285,3 +279,4 @@ const WebPricing = () => {
 };
 
 export default WebPricing;
+
