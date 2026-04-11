@@ -104,7 +104,7 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
     }
   };
 
-  const submitLabel = form.generalInquiry ? '일반 문의 보내기' : '무료 점검 신청하기';
+  const submitLabel = '보내기';
 
   return (
     <form
