@@ -615,8 +615,18 @@ section {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) repeat(2, minmax(0, 0.7fr));
-  gap: 2.2rem;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+  align-items: start;
+  gap: 2.6rem;
+}
+
+.footer-brand {
+  max-width: 34rem;
+}
+
+.footer-links {
+  justify-self: end;
+  width: min(100%, 240px);
 }
 
 .form-field {

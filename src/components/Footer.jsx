@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="border-t border-white/10 bg-[#090d13] py-16">
       <div className="container">
         <div className="footer-grid">
-          <div>
+          <div className="footer-brand">
             <Link to="/" className="site-mark">
               <span className="site-mark__title gradient-text">GOODMANSEO</span>
               <span className="site-mark__meta">구글 · 홈페이지 · SNS 무료 점검</span>
@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div>
+          <div className="footer-links">
             <h4 className="mb-6 text-lg font-bold">바로가기</h4>
             <ul className="flex flex-col gap-4">
               <li><Link to="/" className="text-text-muted hover:text-accent-primary">홈</Link></li>
