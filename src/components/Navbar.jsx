@@ -28,7 +28,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between gap-6 px-6 md:px-4">
         <Link to="/" className="site-mark">
           <span className="site-mark__title gradient-text">GOODMANSEO</span>
-          <span className="site-mark__meta">작은 비즈니스 홈페이지와 마케팅 시작</span>
+          <span className="site-mark__meta">구글 · 홈페이지 · SNS 무료 점검</span>
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">
