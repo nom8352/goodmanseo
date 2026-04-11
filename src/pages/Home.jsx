@@ -15,80 +15,43 @@ const problemSignals = [
 
 const scopeCards = [
   {
-    icon: <Layout size={24} className="text-accent-primary" />,
+    icon: <Layout size={22} className="text-accent-primary" />,
     title: '홈페이지',
-    desc: '홈페이지가 있는 경우에는 현재 상태와 정보 노출을 함께 점검합니다.',
+    desc: '정보 구성과 문의 동선이 제대로 작동하는지 확인합니다.',
   },
   {
-    icon: <MapPin size={24} className="text-accent-primary" />,
+    icon: <MapPin size={22} className="text-accent-primary" />,
     title: 'Google Business Profile',
-    desc: '프로필 설정, 노출 상태, 핵심 정보 정리 여부를 함께 확인합니다.',
+    desc: '검색 노출 상태와 핵심 정보 정리 여부를 점검합니다.',
   },
   {
-    icon: <Share2 size={24} className="text-accent-primary" />,
-    title: '인스타그램 & 페이스북',
-    desc: 'SNS 채널이 구글과 홈페이지와 따로 놀지 않는지 함께 확인합니다.',
-  },
-];
-
-const diagnosticCards = [
-  {
-    title: '퀵 진단',
-    price: 'AUD 149',
-    description:
-      '웹사이트, Google Business Profile, 온페이지 SEO를 중심으로 현재 상태를 빠르게 점검하고 우선순위를 정리해드립니다.',
-    points: ['홈페이지 상태 분석', 'Google Business Profile 분석', '온페이지 SEO 기본 분석'],
-    cta: '퀵 진단 보기',
-  },
-  {
-    title: '온라인 올인원 진단',
-    price: 'AUD 289',
-    description:
-      '퀵 진단 범위에 더해 인스타그램, 페이스북, 비즈니스 포지셔닝까지 함께 분석해 전체 온라인 상태를 정리해드립니다.',
-    points: ['퀵 진단 전체 포함', '인스타그램 / 페이스북 분석', '비즈니스 포지셔닝 점검'],
-    cta: '온라인 올인원 진단 보기',
+    icon: <Share2 size={22} className="text-accent-primary" />,
+    title: 'Instagram & Facebook',
+    desc: '프로필 정보와 다른 채널과의 연결이 맞는지 확인합니다.',
   },
 ];
 
 const executionPaths = [
-  {
-    title: '홈페이지',
-    description: '스타터 / 비즈니스 / 성장형 홈페이지 중 현재 단계에 맞는 옵션으로 진행할 수 있습니다.',
-  },
-  {
-    title: 'SEO',
-    description: 'SEO All-in-One 패키지 또는 SEO 월관리로 검색 관련 작업을 따로 정리할 수 있습니다.',
-  },
-  {
-    title: 'Google Business Profile',
-    description: '프로필 세팅이나 월관리처럼 로컬 검색에 집중한 별도 옵션도 선택할 수 있습니다.',
-  },
-  {
-    title: '운영 지원 / AI 전수',
-    description: '직접 하기 부담스러우면 관리로, 직접 운영하고 싶다면 AI 활용 전수로 이어질 수 있습니다.',
-  },
+  { title: '홈페이지 제작', desc: '스타터부터 맞춤형까지' },
+  { title: 'SEO', desc: '검색 노출 기본 세팅' },
+  { title: 'Google Business Profile', desc: '로컬 검색 최적화' },
+  { title: 'SNS & 광고', desc: '채널 세팅과 운영 지원' },
 ];
 
-const trustPoints = [
-  '무료 온라인 점검 가능',
-  '한국어·영어 지원',
-  '호주 전역 및 전 세계 원격 작업 가능',
-  '구축 이후 운영과 AI 전수까지 확장 가능',
-];
-
-const quickChips = ['구글', '홈페이지', '인스타그램', '페이스북', '무료 온라인 점검', '전 세계 원격'];
+const quickChips = ['Google', '홈페이지', 'Instagram', 'Facebook', '한국어 상담'];
 
 const Home = () => {
   return (
     <div className="overflow-hidden">
       <Seo
         title="온라인 점검"
-        description="GoodmanSEO는 구글, 홈페이지, 인스타그램, 페이스북 상태를 함께 보고 고객 눈에 어떻게 보이는지 무료로 점검해드립니다. 한국어·영어 지원, 호주 전역 및 전 세계 원격 작업이 가능합니다."
+        description="GoodmanSEO는 구글, 홈페이지, 인스타그램, 페이스북 상태를 함께 보고 어디가 비어 있는지 무료로 점검해드립니다. 한국어·영어 지원, 호주 전역 및 전 세계 원격 작업 가능합니다."
         path="/"
         keywords={['온라인 점검', 'Google Business Profile', '온페이지 SEO', '비즈니스 홈페이지', '인스타그램 점검', '페이스북 점검']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
 
+      {/* ── Hero ── */}
       <section className="hero-shell hero-shell--home pt-28 sm:pt-32">
         <Hero3D />
         <div className="container relative z-10">
@@ -96,33 +59,35 @@ const Home = () => {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75 }}
-            className="max-w-[58rem]"
+            className="max-w-[62rem]"
           >
             <div className="eyebrow-chip mb-5">
               <Sparkles size={14} />
               한국어·영어 지원 · 호주 전역 · 전 세계 원격 작업 가능
             </div>
-            <h1 className="max-w-[14ch] text-[2.9rem] font-black leading-[0.95] tracking-[-0.07em] sm:text-[4.2rem] md:text-[5rem]">
+
+            <h1 className="text-[3.4rem] font-black leading-[0.93] tracking-[-0.07em] sm:text-[5.2rem] md:text-[6.4rem]">
               지금 내 비즈니스,
               <br />
-              온라인에서 어떻게 보일까요?
-            </h1>
-            <p className="mt-5 max-w-[42rem] text-[1.02rem] leading-[1.7] text-text-muted sm:text-[1.08rem]">
-              구글, 홈페이지, 인스타그램, 페이스북 상태를 함께 보고,
+              온라인에서 어떻게
               <br />
-              어디가 비어 있는지 무료로 점검해드립니다.
+              보일까요?
+            </h1>
+
+            <p className="mt-6 max-w-[38rem] text-[1rem] leading-[1.65] text-text-muted">
+              구글, 홈페이지, 인스타그램, 페이스북 — 어디가 비어 있는지 무료로 점검해드립니다.
             </p>
 
-            <div className="mt-7 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-2">
               {quickChips.map((item) => (
                 <div key={item} className="metric-pill">
-                  <CircleCheckBig size={14} className="text-accent-primary" />
+                  <CircleCheckBig size={13} className="text-accent-primary" />
                   <span>{item}</span>
                 </div>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <Link to="/contact" className="primary-button">
                 무료 점검 신청하기
                 <ArrowRight size={16} />
@@ -135,204 +100,94 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── Problem ── */}
       <section className="section-block">
         <div className="container">
           <div className="section-heading">
-            <p className="section-kicker">문제 공감</p>
-            <h2 className="section-title">혹시 온라인 채널이 따로 놀고 있나요?</h2>
-            <p className="section-copy">
-              고객이 보는 온라인 인상이 채널마다 다르거나 비어 있으면,
-              <br />
-              비즈니스 전체 인상이 약해질 수 있습니다.
-            </p>
+            <h2 className="section-title">채널이 따로 놀면<br />고객은 그냥 지나칩니다</h2>
+            <p className="section-copy">한 곳만 잘 돼 있어도 연결이 끊기면 문의는 오지 않습니다.</p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-            <div className="grid gap-3">
-              {problemSignals.map((item, index) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.06 }}
-                  viewport={{ once: true }}
-                  className="soft-panel"
-                >
-                  <div className="benefit-row">
-                    <CircleCheckBig size={16} className="text-accent-primary" />
-                    <span>{item}</span>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="showcase-panel">
-              <p className="section-kicker">왜 먼저 봐야 하는지</p>
-              <h3 className="mt-3 text-[1.9rem] font-black tracking-[-0.05em] leading-[1.08]">홈페이지가 아직 없어도, 온라인 점검은 먼저 시작할 수 있습니다</h3>
-              <p className="mt-5 text-[0.96rem] leading-[1.75] text-text-muted">
-                고객은 먼저 구글과 SNS, 홈페이지를 함께 봅니다.
-                <br />
-                그중 일부만 비어 있거나 연결이 어색해도,
-                <br />
-                비즈니스 전체 인상이 약해질 수 있습니다.
-              </p>
-              <div className="mt-6 grid gap-3">
-                {[
-                  'Google Business Profile만 있고 홈페이지가 없다',
-                  '인스타그램은 있는데 구글 정보가 비어 있다',
-                  '채널마다 정보와 인상이 달라 신뢰가 약해질 수 있다',
-                ].map((item) => (
-                  <div key={item} className="benefit-row">
-                    <CircleCheckBig size={16} className="text-accent-primary" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-block">
-        <div className="container">
-          <div className="section-heading">
-            <p className="section-kicker">무료 점검 범위</p>
-            <h2 className="section-title">GoodmanSEO는 온라인에 구현된 채널을 함께 봅니다</h2>
-            <p className="section-copy">
-              홈페이지가 있든 없든,
-              <br />
-              구글, 홈페이지, 인스타그램, 페이스북이 어떻게 보이는지 함께 점검합니다.
-            </p>
-          </div>
-
-          <div className="grid gap-4 lg:grid-cols-3">
-            {scopeCards.map((service, index) => (
-              <motion.article
-                key={service.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                viewport={{ once: true }}
-                className="feature-card"
-              >
-                <div className="feature-icon">{service.icon}</div>
-                <h3 className="mt-7 text-[1.55rem] font-black tracking-[-0.04em] leading-[1.1]">{service.title}</h3>
-                <p className="mt-3 text-[0.95rem] leading-[1.7] text-text-muted">{service.desc}</p>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-block">
-        <div className="container">
-          <div className="section-heading">
-            <p className="section-kicker">유료 진단 옵션</p>
-            <h2 className="section-title">무료 점검 후, 더 자세히 보고 싶다면</h2>
-            <p className="section-copy">
-              먼저 무료 점검으로 전체 상태를 보고,
-              <br />
-              필요하면 조금 더 깊게 살펴보는 옵션으로 이어질 수 있습니다.
-            </p>
-          </div>
-
-          <div className="grid gap-4 lg:grid-cols-2">
-            {diagnosticCards.map((card, index) => (
-              <motion.article
-                key={card.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.08 }}
-                viewport={{ once: true }}
-                className="feature-card"
-              >
-                <p className="section-kicker">{card.title}</p>
-                <div className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold text-text-muted">
-                  {card.price}
-                </div>
-                <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{card.description}</p>
-                <div className="mt-6 grid gap-3">
-                  {card.points.map((item) => (
-                    <div key={item} className="benefit-row">
-                      <CircleCheckBig size={16} className="text-accent-primary" />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <Link to="/pricing" className="primary-button mt-7">
-                  {card.cta}
-                  <ArrowRight size={16} />
-                </Link>
-              </motion.article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-block">
-        <div className="container">
-          <div className="section-heading">
-            <p className="section-kicker">점검 후 실행</p>
-            <h2 className="section-title">점검 후에는 필요한 것만 선택해 진행할 수 있습니다</h2>
-            <p className="section-copy">
-              무료 점검 결과에 따라 홈페이지가 필요할 수도 있고,
-              <br />
-              SEO, Google Business Profile, 운영 지원이 먼저 필요할 수도 있습니다.
-            </p>
-          </div>
-
-          <div className="grid gap-4 lg:grid-cols-2">
-            {executionPaths.map((path, index) => (
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {problemSignals.map((item, index) => (
               <motion.div
-                key={path.title}
-                initial={{ opacity: 0, y: 20 }}
+                key={item}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.06 }}
+                transition={{ duration: 0.35, delay: index * 0.06 }}
                 viewport={{ once: true }}
                 className="soft-panel"
               >
-                <p className="section-kicker">{path.title}</p>
-                <p className="mt-3 text-[1rem] font-semibold leading-[1.65] text-text-main">{path.description}</p>
+                <div className="benefit-row">
+                  <CircleCheckBig size={15} className="text-accent-primary" />
+                  <span>{item}</span>
+                </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* ── Scope ── */}
       <section className="section-block">
         <div className="container">
-          <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="showcase-panel">
-              <p className="section-kicker">운영 및 AI 전수</p>
-              <h2 className="section-title !max-w-none">구축 이후 운영까지 이어질 수 있습니다</h2>
-              <p className="section-copy !max-w-none">
-                홈페이지를 만들어드리는 것에서 끝나지 않고,
-                <br />
-                원하시면 직접 운영할 수 있도록 AI 활용 방법까지 전수해드립니다.
-              </p>
-              <div className="mt-6 grid gap-3">
-                {[
-                  '직접 하기 부담스러우면 홈페이지 관리로 이어질 수 있습니다',
-                  '직접 운영하고 싶다면 AI 활용 비즈니스 운영 & 홈페이지 관리 전수로 확장할 수 있습니다',
-                  '구축 이후에도 장기적으로 운영 가능한 방향을 함께 설계합니다',
-                ].map((item) => (
-                  <div key={item} className="benefit-row">
-                    <CircleCheckBig size={16} className="text-accent-primary" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="section-heading">
+            <h2 className="section-title">구글, 홈페이지, SNS를<br />한 번에 봅니다</h2>
+            <p className="section-copy">채널 하나만 보는 게 아니라 전체 흐름을 함께 점검합니다.</p>
+          </div>
 
-            <div className="hero-proof-card">
-              <p className="section-kicker">신뢰 요소</p>
-              <h3 className="mt-3 text-[1.9rem] font-black tracking-[-0.05em] leading-[1.08]">필요한 것부터 차근차근 정리합니다</h3>
-              <div className="mt-6 grid gap-3">
-                {trustPoints.map((item) => (
-                  <div key={item} className="benefit-row">
-                    <CircleCheckBig size={16} className="text-accent-primary" />
-                    <span>{item}</span>
-                  </div>
+          <div className="grid gap-4 lg:grid-cols-3">
+            {scopeCards.map((card, index) => (
+              <motion.article
+                key={card.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.38, delay: index * 0.08 }}
+                viewport={{ once: true }}
+                className="feature-card"
+              >
+                <div className="feature-icon">{card.icon}</div>
+                <h3 className="mt-6 text-[1.45rem] font-black tracking-[-0.04em]">{card.title}</h3>
+                <p className="mt-2 text-[0.93rem] leading-[1.65] text-text-muted">{card.desc}</p>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── After inspection ── */}
+      <section className="section-block">
+        <div className="container">
+          <div className="showcase-panel">
+            <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+              <div>
+                <h2 className="text-[clamp(2rem,3.4vw,3.2rem)] font-black leading-[1.0] tracking-[-0.06em]">
+                  점검 후, 필요한 것만
+                  <br />
+                  선택해 진행합니다
+                </h2>
+                <p className="mt-4 text-[0.93rem] leading-[1.65] text-text-muted">
+                  홈페이지, SEO, GBP, SNS 중 결과에 맞는 것만 선택해 진행할 수 있습니다.
+                </p>
+                <Link to="/pricing" className="primary-button mt-7 inline-flex">
+                  서비스 및 가격 보기
+                  <ArrowRight size={16} />
+                </Link>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                {executionPaths.map((path, index) => (
+                  <motion.div
+                    key={path.title}
+                    initial={{ opacity: 0, y: 14 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.32, delay: index * 0.07 }}
+                    viewport={{ once: true }}
+                    className="soft-panel"
+                  >
+                    <p className="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-text-soft">{path.title}</p>
+                    <p className="mt-2 text-[0.9rem] text-text-muted">{path.desc}</p>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -340,19 +195,15 @@ const Home = () => {
         </div>
       </section>
 
+      {/* ── Final CTA ── */}
       <section className="section-block">
         <div className="container">
-          <div className="showcase-panel">
-            <div className="section-heading mb-0 max-w-2xl">
-              <p className="section-kicker">다음 단계</p>
-              <h2 className="section-title">무료 점검으로 지금 상태부터 확인해보세요</h2>
-              <p className="section-copy">
-                구글, 홈페이지, 인스타그램, 페이스북 상태를 함께 보고,
-                <br />
-                어디가 비어 있는지 먼저 확인해드립니다.
-              </p>
-            </div>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="showcase-panel text-center">
+            <h2 className="section-title mx-auto">무료 점검으로<br />지금 상태부터 확인해보세요</h2>
+            <p className="section-copy mx-auto">
+              구글, 홈페이지, 인스타그램, 페이스북 — 어디가 비어 있는지 먼저 확인해드립니다.
+            </p>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Link to="/contact" className="primary-button">
                 무료 점검 신청하기
                 <ArrowRight size={16} />

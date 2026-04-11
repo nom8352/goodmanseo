@@ -165,7 +165,7 @@ button {
 }
 
 section {
-  padding: 108px 20px;
+  padding: 72px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -436,7 +436,7 @@ section {
 }
 
 .feature-card {
-  min-height: 17rem;
+  min-height: 13rem;
 }
 
 .feature-icon {
@@ -492,13 +492,13 @@ section {
 }
 
 .benefit-row {
-  min-height: 3.4rem;
-  padding: 0.85rem 0.95rem;
-  border-radius: 1rem;
+  min-height: 2.6rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.9rem;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.9rem;
-  line-height: 1.55;
+  line-height: 1.5;
   font-weight: 600;
 }
 
@@ -695,7 +695,7 @@ section {
 
 @media (max-width: 768px) {
   section {
-    padding: 56px 14px;
+    padding: 48px 14px;
   }
 
   .container {
