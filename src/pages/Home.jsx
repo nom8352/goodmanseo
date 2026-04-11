@@ -6,6 +6,32 @@ import Hero3D from '../components/Hero3D';
 import Seo from '../components/Seo';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 
+/* ─── 공통 easing ─── */
+const ease = [0.16, 1, 0.3, 1];
+
+/* ─── 재사용 variants ─── */
+const fadeUp = (delay = 0, y = 48) => ({
+  initial: { opacity: 0, y },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.72, delay, ease },
+  viewport: { once: true, amount: 0.25 },
+});
+
+const fadeLeft = (delay = 0) => ({
+  initial: { opacity: 0, x: -40 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.68, delay, ease },
+  viewport: { once: true, amount: 0.25 },
+});
+
+const fadeRight = (delay = 0) => ({
+  initial: { opacity: 0, x: 40 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.68, delay, ease },
+  viewport: { once: true, amount: 0.25 },
+});
+
+/* ─── 데이터 ─── */
 const problemSignals = [
   '구글에는 나오지만 홈페이지 정보가 약하다',
   '홈페이지는 있는데 Google Business Profile이 비어 있다',
@@ -40,6 +66,7 @@ const executionPaths = [
 
 const quickChips = ['Google', '홈페이지', 'Instagram', 'Facebook', '한국어 상담'];
 
+/* ─── Component ─── */
 const Home = () => {
   return (
     <div className="overflow-hidden">
@@ -51,43 +78,77 @@ const Home = () => {
         jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
 
-      {/* ── Hero ── */}
+      {/* ══════════════════════════════════════
+          1. HERO
+      ══════════════════════════════════════ */}
       <section className="hero-shell hero-shell--home pt-28 sm:pt-32">
         <Hero3D />
         <div className="container relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
             className="max-w-[62rem]"
           >
-            <div className="eyebrow-chip mb-5">
+            {/* eyebrow */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1, ease }}
+              className="eyebrow-chip mb-5"
+            >
               <Sparkles size={14} />
               한국어·영어 지원 · 호주 전역 · 전 세계 원격 작업 가능
+            </motion.div>
+
+            {/* H1 — 줄마다 순차 등장 */}
+            <div className="overflow-hidden">
+              {['지금 내 비즈니스,', '온라인에서 어떻게', '보일까요?'].map((line, i) => (
+                <motion.div
+                  key={line}
+                  initial={{ y: '110%', opacity: 0 }}
+                  animate={{ y: '0%', opacity: 1 }}
+                  transition={{ duration: 0.75, delay: 0.18 + i * 0.12, ease }}
+                >
+                  <h1 className="text-[3.4rem] font-black leading-[0.93] tracking-[-0.07em] sm:text-[5.2rem] md:text-[6.4rem]">
+                    {line}
+                  </h1>
+                </motion.div>
+              ))}
             </div>
 
-            <h1 className="text-[3.4rem] font-black leading-[0.93] tracking-[-0.07em] sm:text-[5.2rem] md:text-[6.4rem]">
-              지금 내 비즈니스,
-              <br />
-              온라인에서 어떻게
-              <br />
-              보일까요?
-            </h1>
-
-            <p className="mt-6 max-w-[38rem] text-[1rem] leading-[1.65] text-text-muted">
+            {/* body */}
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: 0.6, ease }}
+              className="mt-6 max-w-[38rem] text-[1rem] leading-[1.65] text-text-muted"
+            >
               구글, 홈페이지, 인스타그램, 페이스북 — 어디가 비어 있는지 무료로 점검해드립니다.
-            </p>
+            </motion.p>
 
-            <div className="mt-6 flex flex-wrap gap-2">
+            {/* chips */}
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.72, ease }}
+              className="mt-6 flex flex-wrap gap-2"
+            >
               {quickChips.map((item) => (
                 <div key={item} className="metric-pill">
                   <CircleCheckBig size={13} className="text-accent-primary" />
                   <span>{item}</span>
                 </div>
               ))}
-            </div>
+            </motion.div>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.84, ease }}
+              className="mt-7 flex flex-col gap-3 sm:flex-row"
+            >
               <Link to="/contact" className="primary-button">
                 무료 점검 신청하기
                 <ArrowRight size={16} />
@@ -95,27 +156,28 @@ const Home = () => {
               <Link to="/pricing" className="secondary-button">
                 서비스 및 가격 보기
               </Link>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* ── Problem ── */}
+      {/* ══════════════════════════════════════
+          2. PROBLEM
+      ══════════════════════════════════════ */}
       <section className="section-block">
-        <div className="container">
-          <div className="section-heading">
+        <div className="container w-full">
+          {/* heading */}
+          <motion.div {...fadeUp(0)} className="section-heading">
             <h2 className="section-title">채널이 따로 놀면<br />고객은 그냥 지나칩니다</h2>
             <p className="section-copy">한 곳만 잘 돼 있어도 연결이 끊기면 문의는 오지 않습니다.</p>
-          </div>
+          </motion.div>
 
+          {/* 4 cards — 순차 등장 */}
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {problemSignals.map((item, index) => (
+            {problemSignals.map((item, i) => (
               <motion.div
                 key={item}
-                initial={{ opacity: 0, y: 16 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, delay: index * 0.06 }}
-                viewport={{ once: true }}
+                {...fadeUp(i * 0.1 + 0.15)}
                 className="soft-panel"
               >
                 <div className="benefit-row">
@@ -128,22 +190,23 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── Scope ── */}
+      {/* ══════════════════════════════════════
+          3. SCOPE
+      ══════════════════════════════════════ */}
       <section className="section-block">
-        <div className="container">
-          <div className="section-heading">
+        <div className="container w-full">
+          {/* heading — 왼쪽에서 */}
+          <motion.div {...fadeLeft(0)} className="section-heading">
             <h2 className="section-title">구글, 홈페이지, SNS를<br />한 번에 봅니다</h2>
             <p className="section-copy">채널 하나만 보는 게 아니라 전체 흐름을 함께 점검합니다.</p>
-          </div>
+          </motion.div>
 
+          {/* 3 cards — 아래서 순차 */}
           <div className="grid gap-4 lg:grid-cols-3">
-            {scopeCards.map((card, index) => (
+            {scopeCards.map((card, i) => (
               <motion.article
                 key={card.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.38, delay: index * 0.08 }}
-                viewport={{ once: true }}
+                {...fadeUp(i * 0.14 + 0.1, 56)}
                 className="feature-card"
               >
                 <div className="feature-icon">{card.icon}</div>
@@ -155,12 +218,16 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── After inspection ── */}
+      {/* ══════════════════════════════════════
+          4. AFTER INSPECTION
+      ══════════════════════════════════════ */}
       <section className="section-block">
-        <div className="container">
+        <div className="container w-full">
           <div className="showcase-panel">
             <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-              <div>
+
+              {/* 왼쪽 — 왼쪽에서 슬라이드 */}
+              <motion.div {...fadeLeft(0.05)}>
                 <h2 className="text-[clamp(2rem,3.4vw,3.2rem)] font-black leading-[1.0] tracking-[-0.06em]">
                   점검 후, 필요한 것만
                   <br />
@@ -173,16 +240,14 @@ const Home = () => {
                   서비스 및 가격 보기
                   <ArrowRight size={16} />
                 </Link>
-              </div>
+              </motion.div>
 
+              {/* 오른쪽 — 오른쪽에서 슬라이드 + 카드 순차 */}
               <div className="grid grid-cols-2 gap-3">
-                {executionPaths.map((path, index) => (
+                {executionPaths.map((path, i) => (
                   <motion.div
                     key={path.title}
-                    initial={{ opacity: 0, y: 14 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.32, delay: index * 0.07 }}
-                    viewport={{ once: true }}
+                    {...fadeRight(i * 0.1 + 0.15)}
                     className="soft-panel"
                   >
                     <p className="text-[0.78rem] font-semibold uppercase tracking-[0.18em] text-text-soft">{path.title}</p>
@@ -190,20 +255,29 @@ const Home = () => {
                   </motion.div>
                 ))}
               </div>
+
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Final CTA ── */}
+      {/* ══════════════════════════════════════
+          5. FINAL CTA
+      ══════════════════════════════════════ */}
       <section className="section-block">
-        <div className="container">
-          <div className="showcase-panel text-center">
+        <div className="container w-full">
+          <motion.div {...fadeUp(0, 40)} className="showcase-panel text-center">
             <h2 className="section-title mx-auto">무료 점검으로<br />지금 상태부터 확인해보세요</h2>
             <p className="section-copy mx-auto">
               구글, 홈페이지, 인스타그램, 페이스북 — 어디가 비어 있는지 먼저 확인해드립니다.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.2, ease }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+            >
               <Link to="/contact" className="primary-button">
                 무료 점검 신청하기
                 <ArrowRight size={16} />
@@ -211,8 +285,8 @@ const Home = () => {
               <Link to="/pricing" className="secondary-button">
                 서비스 및 가격 보기
               </Link>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>

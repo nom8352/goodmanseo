@@ -393,6 +393,9 @@ section {
 .section-block {
   position: relative;
   z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .section-heading {
