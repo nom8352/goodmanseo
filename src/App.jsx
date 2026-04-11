@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import StarterPackage from './pages/StarterPackage';
+import AIBusiness from './pages/AIBusiness';
 import WebPricing from './pages/WebPricing';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
@@ -29,6 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/starter-package" element={<StarterPackage />} />
+            <Route path="/ai-business" element={<AIBusiness />} />
             <Route path="/pricing" element={<WebPricing />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:postId" element={<BlogDetail />} />

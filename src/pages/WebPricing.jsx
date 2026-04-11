@@ -75,11 +75,15 @@ const supportPackages = [
     title: '홈페이지 관리',
     price: 'AUD 200 / month',
     description: '직접 운영은 부담스럽지만 텍스트 수정, 이미지 교체, 간단한 업데이트가 필요한 경우에 적합합니다.',
+    cta: '문의하기',
+    href: '/contact',
   },
   {
-    title: 'AI 활용 비즈니스 운영 & 홈페이지 관리 전수',
+    title: 'AI 비즈니스 운영 전수',
     price: 'AUD 2,500 · Online',
-    description: '직접 운영하고 싶은 분을 위해 AI를 활용한 홈페이지·콘텐츠·운영 방법을 온라인으로 전수합니다.',
+    description: 'AI를 활용해 홈페이지 수정, 콘텐츠 작성, 구글 비즈니스 프로필 관리, SNS 운영을 직접 할 수 있도록 실무에 맞게 전수해드립니다.',
+    cta: '자세히 보기',
+    href: '/ai-business',
   },
 ];
 
@@ -150,7 +154,7 @@ const WebPricing = () => {
                     ))}
                   </div>
                   <Link to="/contact" className="primary-button mt-7 inline-flex">
-                    문의하기
+                    무료 점검 신청하기
                     <ArrowRight size={16} />
                   </Link>
                 </article>
@@ -244,8 +248,8 @@ const WebPricing = () => {
                     {item.price}
                   </p>
                   <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                  <Link to="/contact" className="primary-button mt-7 inline-flex">
-                    문의하기
+                  <Link to={item.href} className="primary-button mt-7 inline-flex">
+                    {item.cta}
                     <ArrowRight size={16} />
                   </Link>
                 </article>

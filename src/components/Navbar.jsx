@@ -17,10 +17,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: '홈', href: '/' },
-    { name: '기본 홈페이지', href: '/starter-package' },
+    { name: 'AI 운영 전수', href: '/ai-business' },
     { name: '서비스 및 가격', href: '/pricing' },
     { name: '블로그', href: '/blog' },
-    { name: '상담 신청', href: '/contact' },
+    { name: '무료 점검 신청', href: '/contact' },
   ];
 
   return (
@@ -38,7 +38,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/contact" className="secondary-button secondary-button--compact">
-            무료 상담하기
+            무료 점검 신청
             <ArrowUpRight size={16} />
           </Link>
         </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link to="/contact" className="primary-button" onClick={() => setIsMenuOpen(false)}>
-              무료 상담하기
+              무료 점검 신청
             </Link>
           </div>
         </div>
