@@ -6,7 +6,12 @@ const initialForm = {
   name: '',
   phone: '',
   businessType: '',
+  websiteUrl: '',
+  googleBusinessUrl: '',
+  instagramUrl: '',
+  facebookUrl: '',
   message: '',
+  generalInquiry: false,
   'bot-field': '',
 };
 
@@ -17,15 +22,23 @@ const encode = (data) =>
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
 
-const buildMailtoLink = ({ company, name, phone, businessType, message }) => {
-  const subject = `[Goodman SEO] ${company || '새 상담 문의'}`;
+const getInquiryLabel = (form) => (form.generalInquiry ? '일반 문의' : '무료 점검 신청');
+
+const buildMailtoLink = ({ company, name, phone, businessType, websiteUrl, googleBusinessUrl, instagramUrl, facebookUrl, message, generalInquiry }) => {
+  const inquiryLabel = generalInquiry ? '일반 문의' : '무료 점검 신청';
+  const subject = `[Goodman SEO] ${inquiryLabel}${company ? ` - ${company}` : ''}`;
   const body = [
+    `문의 유형: ${inquiryLabel}`,
     `업체명: ${company || '-'}`,
     `담당자: ${name || '-'}`,
     `연락처: ${phone || '-'}`,
     `업종/지역: ${businessType || '-'}`,
+    `홈페이지: ${websiteUrl || '-'}`,
+    `Google Business Profile: ${googleBusinessUrl || '-'}`,
+    `Instagram: ${instagramUrl || '-'}`,
+    `Facebook: ${facebookUrl || '-'}`,
     '',
-    '문의 내용:',
+    generalInquiry ? '문의 내용:' : '현재 가장 고민인 점:',
     message || '-',
   ].join('\n');
 
@@ -38,8 +51,11 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
   const [notice, setNotice] = useState('');
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    setForm((current) => ({ ...current, [name]: value }));
+    const { name, value, type, checked } = event.target;
+    setForm((current) => ({
+      ...current,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
   };
 
   const handleSubmit = async (event) => {
@@ -47,7 +63,7 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
 
     if (form['bot-field']) {
       setStatus('success');
-      setNotice('문의가 접수되었습니다. 확인 후 연락드리겠습니다.');
+      setNotice(`${getInquiryLabel(form)}이 접수되었습니다. 확인 후 연락드리겠습니다.`);
       return;
     }
 
@@ -55,6 +71,7 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
     setNotice('');
 
     try {
+      const inquiryLabel = getInquiryLabel(form);
       const response = await fetch(FORM_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -62,10 +79,11 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
           Accept: 'application/json',
         },
         body: encode({
-          _subject: `[Goodman SEO] ${form.company || '새 상담 문의'}`,
+          _subject: `[Goodman SEO] ${inquiryLabel}${form.company ? ` - ${form.company}` : ''}`,
           _template: 'table',
           _captcha: 'false',
           _honey: form['bot-field'],
+          inquiryType: inquiryLabel,
           ...form,
         }),
       });
@@ -77,7 +95,7 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
       }
 
       setStatus('success');
-      setNotice('문의가 접수되었습니다. 확인 후 연락드리겠습니다.');
+      setNotice(`${inquiryLabel}이 접수되었습니다. 확인 후 연락드리겠습니다.`);
       setForm(initialForm);
     } catch (error) {
       setStatus('fallback');
@@ -85,6 +103,8 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
       window.location.href = buildMailtoLink(form);
     }
   };
+
+  const submitLabel = form.generalInquiry ? '일반 문의 보내기' : '무료 점검 신청하기';
 
   return (
     <form
@@ -96,9 +116,28 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="bot-field" value={form['bot-field']} onChange={handleChange} />
-      <input type="hidden" name="_subject" value={form.company ? `[Goodman SEO] ${form.company}` : '[Goodman SEO] 새 상담 문의'} />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
+      <input
+        type="hidden"
+        name="_subject"
+        value={`[Goodman SEO] ${getInquiryLabel(form)}${form.company ? ` - ${form.company}` : ''}`}
+      />
+
+      <label className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm leading-relaxed text-text-muted">
+        <input
+          type="checkbox"
+          name="generalInquiry"
+          checked={form.generalInquiry}
+          onChange={handleChange}
+          className="mt-1 h-4 w-4 accent-lime-300"
+        />
+        <span>
+          무료 점검 신청이 아니라면 체크해주세요.
+          <br />
+          체크하면 일반 문의로 접수됩니다.
+        </span>
+      </label>
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="form-field">
@@ -122,9 +161,37 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
         </label>
       </div>
 
+      {!form.generalInquiry ? (
+        <div className="grid gap-5 md:grid-cols-2">
+          <label className="form-field">
+            <span>홈페이지 주소</span>
+            <input name="websiteUrl" type="url" placeholder="https://..." value={form.websiteUrl} onChange={handleChange} />
+          </label>
+          <label className="form-field">
+            <span>Google Business Profile 링크</span>
+            <input name="googleBusinessUrl" type="url" placeholder="https://..." value={form.googleBusinessUrl} onChange={handleChange} />
+          </label>
+          <label className="form-field">
+            <span>Instagram 링크</span>
+            <input name="instagramUrl" type="url" placeholder="https://instagram.com/..." value={form.instagramUrl} onChange={handleChange} />
+          </label>
+          <label className="form-field">
+            <span>Facebook 링크</span>
+            <input name="facebookUrl" type="url" placeholder="https://facebook.com/..." value={form.facebookUrl} onChange={handleChange} />
+          </label>
+        </div>
+      ) : null}
+
       <label className="form-field">
-        <span>현재 가장 고민인 점</span>
-        <textarea name="message" rows="5" placeholder="예: 구글 노출이 약해요, 홈페이지가 오래됐어요" value={form.message} onChange={handleChange} required />
+        <span>{form.generalInquiry ? '문의 내용' : '현재 가장 고민인 점'}</span>
+        <textarea
+          name="message"
+          rows="5"
+          placeholder={form.generalInquiry ? '문의하실 내용을 적어주세요' : '예: 구글 노출이 약해요, 홈페이지가 오래됐어요'}
+          value={form.message}
+          onChange={handleChange}
+          required
+        />
       </label>
 
       {notice ? (
@@ -136,7 +203,7 @@ const ContactForm = ({ className = 'mt-8', formName = 'contact', footerText = '�
       <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-xl text-sm leading-relaxed text-text-muted">{footerText}</p>
         <button type="submit" className="primary-button" disabled={status === 'submitting'}>
-          {status === 'submitting' ? '전송 중...' : '상담 보내기'}
+          {status === 'submitting' ? '전송 중...' : submitLabel}
           <Send size={18} />
         </button>
       </div>
