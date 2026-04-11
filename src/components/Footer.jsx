@@ -9,12 +9,12 @@ const Footer = () => {
           <div>
             <Link to="/" className="site-mark">
               <span className="site-mark__title gradient-text">GOODMANSEO</span>
-              <span className="site-mark__meta">작은 비즈니스 홈페이지와 마케팅 시작</span>
+              <span className="site-mark__meta">구글 · 홈페이지 · SNS 무료 점검</span>
             </Link>
             <p className="mt-6 max-w-[30rem] leading-relaxed text-text-muted">
-              작은 비즈니스가
+              구글, 홈페이지, 인스타그램, 페이스북을 함께 보고
               <br />
-              가볍게 시작할 수 있게 도와드립니다.
+              부족한 부분이 어디인지 점검해드립니다.
             </p>
           </div>
 

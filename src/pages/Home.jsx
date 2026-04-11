@@ -6,10 +6,8 @@ import Hero3D from '../components/Hero3D';
 import Seo from '../components/Seo';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 
-/* ─── 공통 easing ─── */
 const ease = [0.16, 1, 0.3, 1];
 
-/* ─── 재사용 variants ─── */
 const fadeUp = (delay = 0, y = 48) => ({
   initial: { opacity: 0, y },
   whileInView: { opacity: 1, y: 0 },
@@ -31,56 +29,51 @@ const fadeRight = (delay = 0) => ({
   viewport: { once: true, amount: 0.25 },
 });
 
-/* ─── 데이터 ─── */
 const problemSignals = [
-  '구글에는 나오지만 홈페이지 정보가 약하다',
-  '홈페이지는 있는데 Google Business Profile이 비어 있다',
-  '인스타그램, 페이스북, 홈페이지가 따로 논다',
-  '채널마다 정보와 인상이 달라 신뢰가 약해진다',
+  '구글에는 나오지만 홈페이지 정보가 충분하지 않다',
+  '홈페이지는 있는데 구글 비즈니스 프로필 정보가 비어 있다',
+  '인스타그램, 페이스북, 홈페이지 정보가 연결되지 않는다',
+  '채널마다 정보가 달라 고객이 헷갈릴 수 있다',
 ];
 
 const scopeCards = [
   {
     icon: <Layout size={22} className="text-accent-primary" />,
     title: '홈페이지',
-    desc: '정보 구성과 문의 동선이 제대로 작동하는지 확인합니다.',
+    desc: '홈페이지가 있다면 정보가 잘 정리되어 있는지 함께 확인합니다.',
   },
   {
     icon: <MapPin size={22} className="text-accent-primary" />,
-    title: 'Google Business Profile',
-    desc: '검색 노출 상태와 핵심 정보 정리 여부를 점검합니다.',
+    title: '구글 비즈니스 프로필',
+    desc: '구글에서 보이는 정보와 기본 설정 상태를 함께 점검합니다.',
   },
   {
     icon: <Share2 size={22} className="text-accent-primary" />,
-    title: 'Instagram & Facebook',
-    desc: '프로필 정보와 다른 채널과의 연결이 맞는지 확인합니다.',
+    title: '인스타그램 · 페이스북',
+    desc: 'SNS 정보가 다른 채널과 어긋나지 않는지 함께 확인합니다.',
   },
 ];
 
 const executionPaths = [
-  { title: '홈페이지 제작', desc: '스타터부터 맞춤형까지' },
-  { title: 'SEO', desc: '검색 노출 기본 세팅' },
-  { title: 'Google Business Profile', desc: '로컬 검색 최적화' },
-  { title: 'SNS & 광고', desc: '채널 세팅과 운영 지원' },
+  { title: '홈페이지 제작', desc: '홈페이지가 필요하다면 단계에 맞는 옵션으로 진행합니다.' },
+  { title: 'SEO 세팅', desc: '검색 노출을 위한 기본 세팅부터 차근차근 시작합니다.' },
+  { title: '구글 비즈니스 프로필 관리', desc: '구글에서 보이는 정보와 상태를 따로 정리할 수 있습니다.' },
+  { title: 'SNS 및 운영 지원', desc: 'SNS 운영과 이후 관리가 필요하면 이어서 도와드립니다.' },
 ];
 
 const quickChips = ['Google', '홈페이지', 'Instagram', 'Facebook', '한국어 상담'];
 
-/* ─── Component ─── */
 const Home = () => {
   return (
     <div className="overflow-hidden">
       <Seo
         title="온라인 점검"
-        description="GoodmanSEO는 구글, 홈페이지, 인스타그램, 페이스북 상태를 함께 보고 어디가 비어 있는지 무료로 점검해드립니다. 한국어·영어 지원, 호주 전역 및 전 세계 원격 작업 가능합니다."
+        description="GoodmanSEO는 구글, 홈페이지, 인스타그램, 페이스북을 함께 보고 부족한 부분이 어디인지 무료로 점검해드립니다. 한국어·영어 지원, 호주 전역 작업 가능합니다."
         path="/"
         keywords={['온라인 점검', 'Google Business Profile', '온페이지 SEO', '비즈니스 홈페이지', '인스타그램 점검', '페이스북 점검']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
 
-      {/* ══════════════════════════════════════
-          1. HERO
-      ══════════════════════════════════════ */}
       <section className="hero-shell hero-shell--home pt-28 sm:pt-32">
         <Hero3D />
         <div className="container relative z-10">
@@ -90,7 +83,6 @@ const Home = () => {
             transition={{ duration: 0.4 }}
             className="max-w-[62rem]"
           >
-            {/* eyebrow */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -101,7 +93,6 @@ const Home = () => {
               한국어 · 영어 · 호주 전역
             </motion.div>
 
-            {/* H1 — 줄마다 순차 등장 */}
             <div className="overflow-hidden">
               {['지금 내 비즈니스,', '온라인에서 어떻게', '보일까요?'].map((line, i) => (
                 <motion.div
@@ -117,17 +108,17 @@ const Home = () => {
               ))}
             </div>
 
-            {/* body */}
             <motion.p
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.6, ease }}
               className="mt-6 max-w-[38rem] text-[1rem] leading-[1.65] text-text-muted"
             >
-              구글, 홈페이지, 인스타그램, 페이스북 — 어디가 비어 있는지 무료로 점검해드립니다.
+              구글, 홈페이지, 인스타그램, 페이스북을 함께 보고
+              <br />
+              부족한 부분이 어디인지 무료로 점검해드립니다.
             </motion.p>
 
-            {/* chips */}
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -142,7 +133,6 @@ const Home = () => {
               ))}
             </motion.div>
 
-            {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
@@ -161,18 +151,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          2. PROBLEM
-      ══════════════════════════════════════ */}
       <section className="section-block">
         <div className="container w-full">
-          {/* heading */}
           <motion.div {...fadeUp(0)} className="section-heading">
-            <h2 className="section-title">채널이 따로 놀면<br />고객은 그냥 지나칩니다</h2>
-            <p className="section-copy">한 곳만 잘 돼 있어도 연결이 끊기면 문의는 오지 않습니다.</p>
+            <h2 className="section-title">온라인 정보가 제각각이면<br />고객은 망설입니다</h2>
+            <p className="section-copy">구글, 홈페이지, SNS 정보가 서로 다르면 비즈니스 전체 인상이 흐려질 수 있습니다.</p>
           </motion.div>
 
-          {/* 4 cards — 순차 등장 */}
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {problemSignals.map((item, i) => (
               <motion.div
@@ -190,18 +175,13 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          3. SCOPE
-      ══════════════════════════════════════ */}
       <section className="section-block">
         <div className="container w-full">
-          {/* heading — 왼쪽에서 */}
           <motion.div {...fadeLeft(0)} className="section-heading">
-            <h2 className="section-title">구글, 홈페이지, SNS를<br />한 번에 봅니다</h2>
-            <p className="section-copy">채널 하나만 보는 게 아니라 전체 흐름을 함께 점검합니다.</p>
+            <h2 className="section-title">온라인에 보이는 모습을<br />함께 점검합니다</h2>
+            <p className="section-copy">한 채널만 따로 보는 게 아니라 고객이 실제로 보게 되는 온라인 인상을 함께 확인합니다.</p>
           </motion.div>
 
-          {/* 3 cards — 아래서 순차 */}
           <div className="grid gap-4 lg:grid-cols-3">
             {scopeCards.map((card, i) => (
               <motion.article
@@ -218,23 +198,19 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          4. AFTER INSPECTION
-      ══════════════════════════════════════ */}
       <section className="section-block">
         <div className="container w-full">
           <div className="showcase-panel">
             <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-center">
-
-              {/* 왼쪽 — 왼쪽에서 슬라이드 */}
               <motion.div {...fadeLeft(0.05)}>
                 <h2 className="text-[clamp(2rem,3.4vw,3.2rem)] font-black leading-[1.0] tracking-[-0.06em]">
-                  점검 후, 필요한 것만
+                  점검 후, 맞는 서비스부터
                   <br />
-                  선택해 진행합니다
+                  이어서 진행할 수 있습니다
                 </h2>
                 <p className="mt-4 text-[0.93rem] leading-[1.65] text-text-muted">
-                  홈페이지, SEO, GBP, SNS 중 결과에 맞는 것만 선택해 진행할 수 있습니다.
+                  점검 결과에 따라 홈페이지, SEO, 구글 비즈니스 프로필, SNS 운영 중
+                  지금 필요한 것부터 차례대로 안내해드립니다.
                 </p>
                 <Link to="/pricing" className="primary-button mt-7 inline-flex">
                   서비스 및 가격 보기
@@ -242,7 +218,6 @@ const Home = () => {
                 </Link>
               </motion.div>
 
-              {/* 오른쪽 — 오른쪽에서 슬라이드 + 카드 순차 */}
               <div className="grid grid-cols-2 gap-3">
                 {executionPaths.map((path, i) => (
                   <motion.div
@@ -255,21 +230,19 @@ const Home = () => {
                   </motion.div>
                 ))}
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══════════════════════════════════════
-          5. FINAL CTA
-      ══════════════════════════════════════ */}
       <section className="section-block">
         <div className="container w-full">
           <motion.div {...fadeUp(0, 40)} className="showcase-panel text-center">
             <h2 className="section-title mx-auto">무료 점검으로<br />지금 상태부터 확인해보세요</h2>
             <p className="section-copy mx-auto">
-              구글, 홈페이지, 인스타그램, 페이스북 — 어디가 비어 있는지 먼저 확인해드립니다.
+              구글, 홈페이지, 인스타그램, 페이스북을 함께 보고
+              <br />
+              부족한 부분이 어디인지 먼저 확인해드립니다.
             </p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
