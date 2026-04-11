@@ -79,9 +79,9 @@ const supportPackages = [
     href: '/contact',
   },
   {
-    title: 'AI 비즈니스 운영 전수',
+    title: 'AI 온라인 운영 전수',
     price: 'AUD 2,500 · Online',
-    description: 'AI를 활용해 홈페이지 수정, 콘텐츠 작성, 구글 비즈니스 프로필 관리, SNS 운영을 직접 할 수 있도록 실무에 맞게 전수해드립니다.',
+    description: 'AI를 활용해 홈페이지, 구글 비즈니스 프로필, SNS, 쇼핑몰 관리까지 실제 운영에 맞게 적용할 수 있도록 전수해드립니다.',
     cta: '자세히 보기',
     href: '/ai-business',
   },

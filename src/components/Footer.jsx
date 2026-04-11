@@ -22,7 +22,7 @@ const Footer = () => {
             <h4 className="mb-6 text-lg font-bold">바로가기</h4>
             <ul className="flex flex-col gap-4">
               <li><Link to="/" className="text-text-muted hover:text-accent-primary">홈</Link></li>
-              <li><Link to="/ai-business" className="text-text-muted hover:text-accent-primary">AI 운영 전수</Link></li>
+              <li><Link to="/ai-business" className="text-text-muted hover:text-accent-primary">AI 온라인 운영 전수</Link></li>
               <li><Link to="/pricing" className="text-text-muted hover:text-accent-primary">서비스 및 가격</Link></li>
               <li><Link to="/blog" className="text-text-muted hover:text-accent-primary">블로그</Link></li>
               <li><Link to="/contact" className="text-text-muted hover:text-accent-primary">무료 점검 신청</Link></li>

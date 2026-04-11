@@ -17,7 +17,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: '홈', href: '/' },
-    { name: 'AI 운영 전수', href: '/ai-business' },
+    { name: 'AI 온라인 운영 전수', href: '/ai-business' },
     { name: '서비스 및 가격', href: '/pricing' },
     { name: '블로그', href: '/blog' },
   ];
