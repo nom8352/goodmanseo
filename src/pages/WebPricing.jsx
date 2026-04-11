@@ -8,15 +8,17 @@ const diagnostics = [
     title: '퀵 진단',
     price: 'AUD 149',
     description:
-      '웹사이트, 구글 비즈니스 프로필, 온페이지 SEO를 중심으로 현재 상태를 빠르게 점검하고 우선순위를 정리해드립니다.',
+      '홈페이지, 구글 비즈니스 프로필, 온페이지 SEO를 먼저 점검하고 지금 가장 먼저 손봐야 할 핵심 문제를 정리합니다.',
     points: ['홈페이지 상태 분석', '구글 비즈니스 프로필 분석', '온페이지 SEO 기본 분석', '핵심 문제 1~3개 정리'],
+    cta: '퀵 진단 문의하기',
   },
   {
     title: '온라인 올인원 진단',
     price: 'AUD 289',
     description:
-      '퀵 진단 범위에 더해 인스타그램, 페이스북, 비즈니스 포지셔닝까지 함께 분석해 전체 온라인 상태를 정리해드립니다.',
+      '퀵 진단 범위에 더해 인스타그램, 페이스북, 비즈니스 포지셔닝까지 함께 보고 채널 전체 흐름을 더 자세히 정리합니다.',
     points: ['퀵 진단 전체 포함', '인스타그램 · 페이스북 분석', '비즈니스 포지셔닝 점검', '채널 간 일관성 확인'],
+    cta: '온라인 올인원 진단 문의하기',
   },
 ];
 
@@ -25,21 +27,21 @@ const websitePackages = [
     title: '스타터 홈페이지',
     price: 'AUD 795',
     label: '현재 이벤트 혜택 포함',
-    description: '가볍게 시작할 수 있는 기본 홈페이지 패키지입니다.',
+    description: '가게 소개와 문의 연결이 먼저 필요한 경우 가장 가볍게 시작할 수 있는 기본 홈페이지입니다.',
     points: ['최대 3페이지', '기본 홈페이지 구성', 'AUD 300 상당 구글 비즈니스 프로필 세팅 포함'],
   },
   {
     title: '비즈니스 홈페이지',
     price: 'AUD 1,890',
     label: '메인 실행 패키지',
-    description: '페이지 수와 범위를 조금 더 확장하고, 검색과 채널 연결까지 함께 정리합니다.',
+    description: '서비스 소개, 검색 노출, 구글 비즈니스 프로필 연결까지 함께 정리하고 싶은 경우에 적합합니다.',
     points: ['최대 5페이지', '로컬 SEO 포함', '구글 비즈니스 프로필 포함', '원할 경우 인스타그램 · 페이스북 세팅 포함'],
   },
   {
     title: '성장형 홈페이지',
     price: 'AUD 3,500',
     label: '확장형 패키지',
-    description: '홈페이지뿐 아니라 검색 기본 세팅까지 한 번에 시작하고 싶은 경우에 적합합니다.',
+    description: '홈페이지 제작과 검색 기본 세팅을 한 번에 잡고 싶은 경우에 적합합니다.',
     points: ['비즈니스 홈페이지 범위 포함', 'SEO All-in-One 패키지 포함'],
   },
 ];
@@ -48,12 +50,12 @@ const seoPackages = [
   {
     title: 'SEO All-in-One 패키지',
     price: 'AUD 950',
-    description: '검색 노출을 위한 기본 세팅을 한 번에 정리하고 싶은 경우에 적합합니다.',
+    description: '검색 노출을 위한 기본 세팅을 한 번에 잡고 싶은 경우 선택할 수 있습니다.',
   },
   {
     title: 'SEO 월관리',
     price: 'AUD 795 / month',
-    description: '초기 세팅 이후 검색 관련 작업을 계속 이어가고 싶은 경우에 적합합니다.',
+    description: '초기 세팅 이후 검색 노출 작업을 꾸준히 이어가고 싶은 경우 적합합니다.',
   },
 ];
 
@@ -61,12 +63,12 @@ const gbpPackages = [
   {
     title: '구글 비즈니스 프로필 세팅',
     price: 'AUD 300',
-    description: '홈페이지 작업 없이 구글에서 보이는 정보와 기본 상태를 먼저 정리하고 싶은 경우에 적합합니다.',
+    description: '홈페이지를 새로 만들기 전에 구글에서 보이는 정보와 기본 신뢰도를 먼저 정리하고 싶은 경우 적합합니다.',
   },
   {
     title: '구글 비즈니스 프로필 월관리',
     price: 'AUD 95 / month',
-    description: '기본 세팅 이후 업데이트와 유지 관리가 필요한 경우에 적합합니다.',
+    description: '기본 세팅 이후 업데이트와 유지 관리가 계속 필요한 경우 적합합니다.',
   },
 ];
 
@@ -74,14 +76,14 @@ const supportPackages = [
   {
     title: '홈페이지 관리',
     price: 'AUD 200 / month',
-    description: '직접 운영은 부담스럽지만 텍스트 수정, 이미지 교체, 간단한 업데이트가 필요한 경우에 적합합니다.',
+    description: '직접 수정할 시간은 없지만 텍스트 변경, 이미지 교체, 기본 업데이트는 계속 필요한 경우 적합합니다.',
     cta: '문의하기',
     href: '/contact',
   },
   {
     title: 'AI 온라인 운영 전수',
     price: 'AUD 2,500 · Online',
-    description: 'AI를 활용해 홈페이지, 구글 비즈니스 프로필, SNS, 쇼핑몰 관리까지 실제 운영에 맞게 적용할 수 있도록 전수해드립니다.',
+    description: '홈페이지, 구글 비즈니스 프로필, SNS 운영을 직접 해보고 싶지만 방법이 막막한 분을 위한 실전 교육입니다.',
     cta: '자세히 보기',
     href: '/ai-business',
   },
@@ -90,7 +92,7 @@ const supportPackages = [
 const freeCheckPoints = [
   '구글 비즈니스 프로필, 홈페이지, 인스타그램, 페이스북 상태를 함께 확인합니다.',
   '비어 있는 정보, 채널 간 연결 부족, 첫인상을 약하게 만드는 부분을 먼저 봅니다.',
-  '무료 점검 후에는 지금 필요한 작업만 정리해 다음 단계로 안내해드립니다.',
+  '채널마다 정보가 다르거나 빠진 곳이 있는지, 지금 가장 먼저 손봐야 할 순서를 정리합니다.',
 ];
 
 const WebPricing = () => {
@@ -98,7 +100,7 @@ const WebPricing = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="서비스 및 가격"
-        description="무료 점검에서 무엇을 보는지 먼저 확인하고, 이후 GoodmanSEO의 진단, 홈페이지, SEO, 구글 비즈니스 프로필, 운영 지원 옵션으로 이어질 수 있습니다."
+        description="무료 점검, 유료 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다."
         path="/pricing"
         keywords={['서비스 및 가격', '퀵 진단', '온라인 올인원 진단', '비즈니스 홈페이지', 'SEO 패키지', '구글 비즈니스 프로필']}
       />
@@ -107,16 +109,16 @@ const WebPricing = () => {
         <div className="section-heading max-w-5xl">
           <p className="section-kicker">서비스 및 가격</p>
           <h1 className="section-title max-w-5xl">
-            무료 점검에서
+            무료 점검으로
             <br />
-            무엇을 먼저 보는지
+            지금 어디가 비어 있는지
             <br />
             먼저 확인해보세요
           </h1>
           <p className="section-copy max-w-[42rem]">
-            구글, 홈페이지, 인스타그램, 페이스북을 함께 보고,
+            구글 비즈니스 프로필, 홈페이지, 인스타그램, 페이스북을 함께 보고,
             <br />
-            어디가 비어 있는지와 무엇부터 손봐야 하는지 먼저 정리해드립니다.
+            고객이 보기 전에 비어 있는 부분과 연결이 약한 부분을 먼저 정리해드립니다.
           </p>
         </div>
 
@@ -135,8 +137,8 @@ const WebPricing = () => {
         <section className="section-block !min-h-0 px-0">
           <div className="w-full">
             <div className="section-heading">
-              <h2 className="section-title">더 자세히 보고 싶다면,<br />유료 진단으로 이어질 수 있습니다</h2>
-              <p className="section-copy">무료 점검 후 현재 상태를 조금 더 정확하게 보고 싶은 경우 선택할 수 있는 옵션입니다.</p>
+              <h2 className="section-title">유료 진단</h2>
+              <p className="section-copy">무료 점검만으로 부족하다면, 더 자세한 분석으로 현재 상태와 우선순위를 구체적으로 확인할 수 있습니다.</p>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-2">
@@ -156,7 +158,7 @@ const WebPricing = () => {
                     ))}
                   </div>
                   <Link to="/contact" className="primary-button mt-7 inline-flex">
-                    무료 점검 신청하기
+                    {item.cta}
                     <ArrowRight size={16} />
                   </Link>
                 </article>
@@ -168,8 +170,8 @@ const WebPricing = () => {
         <section className="section-block !min-h-0 px-0">
           <div className="w-full">
             <div className="section-heading">
-              <h2 className="section-title">홈페이지가 필요하다면,<br />이렇게 진행할 수 있습니다</h2>
-              <p className="section-copy">현재 단계와 필요한 범위에 따라 홈페이지 옵션을 선택할 수 있습니다.</p>
+              <h2 className="section-title">홈페이지 제작</h2>
+              <p className="section-copy">가볍게 시작할지, 검색과 채널 연결까지 함께 정리할지, 필요한 범위에 따라 선택할 수 있습니다.</p>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-3">
@@ -199,8 +201,8 @@ const WebPricing = () => {
           <div className="w-full grid gap-4 lg:grid-cols-2">
             <div>
               <div className="section-heading">
-                <h2 className="section-title">SEO가 필요하다면</h2>
-                <p className="section-copy">검색 노출 관련 작업만 따로 정리하고 싶은 경우를 위한 옵션입니다.</p>
+                <h2 className="section-title">SEO 패키지</h2>
+                <p className="section-copy">홈페이지는 그대로 두고 검색 노출부터 개선하고 싶은 경우 선택할 수 있습니다.</p>
               </div>
               <div className="grid gap-4">
                 {seoPackages.map((item) => (
@@ -217,8 +219,8 @@ const WebPricing = () => {
 
             <div>
               <div className="section-heading">
-                <h2 className="section-title">구글 비즈니스 프로필만<br />따로 정리하고 싶다면</h2>
-                <p className="section-copy">홈페이지 작업과 별개로 구글 비즈니스 프로필만 먼저 관리하고 싶은 경우를 위한 옵션입니다.</p>
+                <h2 className="section-title">구글 비즈니스 프로필</h2>
+                <p className="section-copy">홈페이지를 새로 만들기 전에, 구글에서 보이는 정보와 신뢰도부터 먼저 정리하고 싶은 경우 적합합니다.</p>
               </div>
               <div className="grid gap-4">
                 {gbpPackages.map((item) => (
@@ -238,8 +240,8 @@ const WebPricing = () => {
         <section className="section-block !min-h-0 px-0">
           <div className="w-full">
             <div className="section-heading">
-              <h2 className="section-title">구축 이후 운영까지<br />이어가고 싶다면</h2>
-              <p className="section-copy">직접 운영할지, 관리를 맡길지, AI를 활용해 운영하는 법까지 배울지 선택할 수 있습니다.</p>
+              <h2 className="section-title">추가 관리</h2>
+              <p className="section-copy">구축 후 운영을 맡기거나, 직접 운영할 수 있도록 배우는 옵션까지 이어갈 수 있습니다.</p>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-2">
@@ -261,11 +263,11 @@ const WebPricing = () => {
         </section>
 
         <div className="showcase-panel text-center mt-6">
-          <h2 className="section-title mx-auto">어디서 시작해야 할지 모르겠다면,<br />먼저 무료 점검부터 받아보세요</h2>
+          <h2 className="section-title mx-auto">어디부터 손봐야 할지 헷갈린다면,<br />무료 점검부터 시작해보세요</h2>
           <p className="section-copy mx-auto">
-            무료 점검 후 현재 상태를 먼저 보고,
+            지금 상태를 먼저 보고,
             <br />
-            그다음 맞는 서비스부터 차근차근 이어가실 수 있습니다.
+            홈페이지가 필요한지, 구글 프로필을 먼저 정리해야 하는지, SEO가 필요한지 순서부터 안내해드립니다.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link to="/contact" className="primary-button">
