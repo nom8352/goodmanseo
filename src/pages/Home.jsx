@@ -98,7 +98,7 @@ const Home = () => {
               className="eyebrow-chip mb-5"
             >
               <Sparkles size={14} />
-              한국어·영어 지원 · 호주 전역 · 전 세계 원격 작업 가능
+              한국어 · 영어 · 호주 전역
             </motion.div>
 
             {/* H1 — 줄마다 순차 등장 */}
