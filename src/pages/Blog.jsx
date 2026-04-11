@@ -1,89 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight, BookOpen, Calendar, User } from 'lucide-react';
+import { ArrowRight, BookOpen } from 'lucide-react';
 import Seo from '../components/Seo';
 import { blogPosts } from '../data/blogPosts';
 
 const Blog = () => {
-  const [featuredPost, ...secondaryPosts] = blogPosts;
-
   return (
     <div className="pt-32 pb-24">
       <Seo
         title="블로그"
-        description="호주와 시드니 비즈니스를 위한 Goodman SEO의 블로그입니다. 구글 지도/검색 등록, 홈페이지 기본기, 고객 유입에 대한 쉬운 가이드를 제공합니다."
+        description="GoodmanSEO 블로그입니다. 구글 비즈니스 프로필, 홈페이지, SEO, 온라인 운영에 관한 실용적인 글을 정리합니다."
         path="/blog"
-        keywords={['호주 구글 지도 등록 가이드', '시드니 홈페이지 제작 가이드', '비즈니스 홈페이지', '고객 유입 기본기']}
+        keywords={['굿맨SEO 블로그', '구글 비즈니스 프로필', '홈페이지 점검', 'SEO 기본 세팅', '온라인 운영']}
       />
-      <div className="container">
-        <div className="section-heading max-w-5xl">
+      <div className="container max-w-5xl">
+        <div className="section-heading max-w-4xl">
           <div className="eyebrow-chip w-fit">
             <BookOpen size={15} />
-            비즈니스를 위한 쉬운 가이드
+            Blog
           </div>
-          <h1 className="section-title mt-6 max-w-5xl">
-            읽기 쉬운 언어로 정리한
-            <br />
-            굿맨SEO 인사이트
-          </h1>
+          <h1 className="section-title mt-6 max-w-4xl">블로그</h1>
           <p className="section-copy max-w-2xl">
-            어려운 말은 빼고
+            구글, 홈페이지, SEO, 온라인 운영에 대해
             <br />
-            꼭 필요한 내용만 정리했습니다.
+            실제로 바로 참고할 수 있는 내용만 정리합니다.
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
-          <motion.article
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="editorial-card"
-          >
-            <div className="overflow-hidden rounded-[1.5rem] border border-white/10">
-              <img src={featuredPost.image} alt={featuredPost.title} className="h-[420px] w-full object-cover" />
-            </div>
-            <div className="mt-8 flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-soft">
-              <span className="eyebrow-chip">{featuredPost.category}</span>
-              <span className="inline-flex items-center gap-2"><Calendar size={14} /> {featuredPost.date}</span>
-              <span className="inline-flex items-center gap-2"><User size={14} /> {featuredPost.author}</span>
-            </div>
-            <h2 className="mt-6 max-w-3xl text-4xl font-black tracking-[-0.05em] sm:text-5xl">{featuredPost.title}</h2>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-text-muted">{featuredPost.excerpt}</p>
-            <Link to={`/blog/${featuredPost.id}`} className="secondary-button secondary-button--compact mt-8 inline-flex">
-              더 읽어보기
-              <ArrowRight size={16} />
-            </Link>
-          </motion.article>
-
-          <div className="grid gap-6">
-            {secondaryPosts.map((post, index) => (
-              <motion.article
+        <div className="showcase-panel mt-10">
+          <div className="grid gap-2">
+            {blogPosts.map((post) => (
+              <Link
                 key={post.id}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay: index * 0.08 }}
-                viewport={{ once: true }}
-                className="article-card"
+                to={`/blog/${post.id}`}
+                className="group flex items-center justify-between gap-4 rounded-[1.25rem] border border-white/8 px-5 py-5 transition duration-200 hover:border-white/15 hover:bg-white/[0.03]"
               >
-                <div className="article-card__thumb">
-                  <img src={post.image} alt={post.title} className="h-full w-full object-cover" />
-                </div>
-                <div className="article-card__body">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-text-soft">{post.category}</p>
-                  <h3 className="mt-3 text-2xl font-black tracking-[-0.04em]">{post.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-text-muted">{post.excerpt}</p>
-                  <div className="mt-5 flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-[0.18em] text-text-soft">
-                    <span className="inline-flex items-center gap-2"><Calendar size={14} /> {post.date}</span>
-                    <span className="inline-flex items-center gap-2"><User size={14} /> {post.author}</span>
-                  </div>
-                  <Link to={`/blog/${post.id}`} className="secondary-button secondary-button--compact mt-6 inline-flex">
-                    아티클 열기
-                    <ArrowRight size={16} />
-                  </Link>
-                </div>
-              </motion.article>
+                <span className="text-lg font-bold tracking-[-0.03em] text-text-main transition group-hover:text-accent-primary sm:text-[1.35rem]">
+                  {post.title}
+                </span>
+                <ArrowRight size={18} className="shrink-0 text-text-soft transition group-hover:translate-x-1 group-hover:text-accent-primary" />
+              </Link>
             ))}
           </div>
         </div>
