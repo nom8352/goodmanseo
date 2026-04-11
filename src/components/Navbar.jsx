@@ -37,7 +37,7 @@ const Navbar = () => {
             </Link>
           ))}
           <Link to="/contact" className="secondary-button secondary-button--compact">
-            무료 점검 신청
+            무료 점검 신청 / 문의
             <ArrowUpRight size={16} />
           </Link>
         </div>
@@ -56,7 +56,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link to="/contact" className="primary-button" onClick={() => setIsMenuOpen(false)}>
-              무료 점검 신청
+              무료 점검 신청 / 문의
             </Link>
           </div>
         </div>
