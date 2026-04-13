@@ -11,6 +11,7 @@ const diagnostics = [
       '홈페이지, 구글 비즈니스 프로필, 온페이지 SEO를 먼저 점검하고 지금 가장 먼저 손봐야 할 핵심 문제를 정리합니다.',
     points: ['홈페이지 상태 분석', '구글 비즈니스 프로필 분석', '온페이지 SEO 기본 분석', '핵심 문제 1~3개 정리'],
     cta: '퀵 진단 문의하기',
+    href: '/contact?type=quick-diagnosis',
   },
   {
     title: '온라인 올인원 진단',
@@ -19,6 +20,7 @@ const diagnostics = [
       '퀵 진단 범위에 더해 인스타그램, 페이스북, 비즈니스 포지셔닝까지 함께 보고 채널 전체 흐름을 더 자세히 정리합니다.',
     points: ['퀵 진단 전체 포함', '인스타그램 · 페이스북 분석', '비즈니스 포지셔닝 점검', '채널 간 일관성 확인'],
     cta: '온라인 올인원 진단 문의하기',
+    href: '/contact?type=all-in-one-diagnosis',
   },
 ];
 
@@ -78,7 +80,7 @@ const supportPackages = [
     price: 'AUD 200 / month',
     description: '직접 수정할 시간은 없지만 텍스트 변경, 이미지 교체, 기본 업데이트는 계속 필요한 경우 적합합니다.',
     cta: '문의하기',
-    href: '/contact',
+    href: '/contact?type=general-inquiry',
   },
   {
     title: 'AI 온라인 운영 전수',
@@ -151,7 +153,7 @@ const WebPricing = () => {
                       </div>
                     ))}
                   </div>
-                  <Link to="/contact" className="primary-button mt-7 inline-flex">
+                  <Link to={item.href} className="primary-button mt-7 inline-flex">
                     {item.cta}
                     <ArrowRight size={16} />
                   </Link>
@@ -264,7 +266,7 @@ const WebPricing = () => {
             홈페이지가 필요한지, 구글 프로필을 먼저 정리해야 하는지, SEO가 필요한지 순서부터 안내해드립니다.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link to="/contact" className="primary-button">
+            <Link to="/contact?type=free-check" className="primary-button">
               무료 점검 신청하기
               <ArrowRight size={16} />
             </Link>
@@ -279,4 +281,3 @@ const WebPricing = () => {
 };
 
 export default WebPricing;
-
