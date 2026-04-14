@@ -1,138 +1,231 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheckBig, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
-const learnItems = [
-  '홈페이지 문구와 안내 문구 직접 수정하기',
-  '블로그, 서비스 소개글, 공지 글 초안 만들기',
-  '구글 비즈니스 프로필 게시물과 소개 문구 정리하기',
-  '리뷰 답변과 고객 응대 초안 만들기',
-  '인스타그램과 페이스북 콘텐츠 초안 만들기',
-  '상품 설명, 카테고리 정리, 쇼핑몰 운영 보조하기',
-  '내 비즈니스에 맞는 프롬프트와 운영 템플릿 정리하기',
-];
-
-const outcomes = [
-  '외주 없이도 자주 손봐야 하는 내용을 직접 수정할 수 있게 됩니다.',
-  '홈페이지, 구글, SNS를 더 빠르게 관리할 수 있게 됩니다.',
-  '쇼핑몰 관리나 상품 업데이트 같은 반복 업무도 더 수월해집니다.',
-  'AI를 그냥 써보는 수준이 아니라 내 온라인 운영 실무에 바로 붙일 수 있게 됩니다.',
-];
+const ease = [0.16, 1, 0.3, 1];
 
 const fitFor = [
-  '직접 운영하고 싶은 사장님',
-  '외주에만 의존하지 않고 직접 관리하고 싶은 분',
-  '홈페이지와 온라인 채널을 더 자주 손보고 싶은 분',
-  '쇼핑몰이나 상품 운영까지 직접 관리하고 싶은 분',
-  'AI를 실제 온라인 운영에 붙여보고 싶은 분',
+  '쇼핑몰을 운영하는데 상품 등록, 설명 작성에 시간이 너무 많이 걸리는 분',
+  '고객 문의 응대를 매번 직접 쓰는 분',
+  'SNS 콘텐츠를 꾸준히 올려야 하는데 항상 막히는 분',
+  '직원 없이 혼자 운영하면서 반복 업무가 쌓이는 분',
+  'AI를 써보고 싶은데 내 비즈니스에 어떻게 붙일지 모르겠는 분',
+];
+
+const automationExamples = [
+  '상품 설명 초안 자동 생성',
+  '고객 문의 · 리뷰 답변 초안',
+  '인스타그램 · 페이스북 콘텐츠 초안',
+  '구글 비즈니스 프로필 게시물',
+  '주문 확인 · 안내 메일 템플릿',
+  '재고 · 운영 현황 정리 자동화',
+];
+
+const sessions = [
+  {
+    num: '1',
+    title: '현재 업무 파악',
+    desc: '반복되는 업무를 함께 정리하고 자동화 가능한 것부터 추립니다.',
+  },
+  {
+    num: '2',
+    title: 'AI 적용 + 템플릿 제작',
+    desc: '실제 업무에 AI를 붙이고 바로 쓸 수 있는 프롬프트 · 템플릿을 만듭니다.',
+  },
+  {
+    num: '3',
+    title: '운영 루틴 완성',
+    desc: '직접 써보면서 완성하고, 이후 혼자 운영할 수 있는 루틴으로 정리합니다.',
+  },
 ];
 
 const AIBusiness = () => {
   return (
     <div className="pt-32 pb-24">
       <Seo
-        title="AI 온라인 운영 전수"
-        description="AI를 활용해 홈페이지, 구글 비즈니스 프로필, SNS, 쇼핑몰 관리까지 실제 운영에 맞게 적용할 수 있도록 전수해드립니다."
+        title="AI 비즈니스 자동화 전수"
+        description="상품 설명, 고객 응대, SNS 콘텐츠, 재고 관리 — 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 1:1 전수 및 오프라인 그룹 워크숍 운영."
         path="/ai-business"
-        keywords={['AI 온라인 운영 전수', 'AI 실무 운영 전수', 'AI 홈페이지 운영', 'AI 구글 비즈니스 프로필', 'AI SNS 운영', 'AI 쇼핑몰 관리']}
+        keywords={['AI 비즈니스 자동화', 'AI 쇼핑몰 운영', 'AI 업무 자동화', 'AI 온라인 운영', '호주 AI 전수']}
       />
+
       <div className="container">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
-          <div className="section-heading mb-0 max-w-4xl">
+
+        {/* ── Hero ── */}
+        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease }}
+            className="section-heading mb-0 max-w-4xl"
+          >
             <div className="eyebrow-chip w-fit">
               <Sparkles size={14} />
-              AI 온라인 운영 전수
+              맞춤형 AI 비즈니스 자동화
             </div>
             <h1 className="section-title mt-6 max-w-5xl">
-              AI를 온라인 운영 실무에 붙이는 법,
+              반복 업무를 AI로 자동화하면
               <br />
-              직접 전수해드립니다.
+              사장님 시간이 남습니다
             </h1>
             <p className="section-copy max-w-2xl">
-              강의처럼 듣고 끝나는 설명이 아니라,
+              상품 설명, 고객 응대, SNS 콘텐츠, 재고 관리 —
               <br />
-              홈페이지 수정, 콘텐츠 작성, 구글 비즈니스 프로필 관리, SNS 운영,
+              매번 직접 하던 일을 AI로 처리하는 구조를 만들어드립니다.
               <br />
-              쇼핑몰 관리까지 실제 운영에 바로 써볼 수 있게 온라인으로 전수해드립니다.
+              강의가 아니라 내 비즈니스에 바로 붙이는 맞춤 작업입니다.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="pricing-spotlight">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">AI 온라인 운영 전수</p>
-            <h2 className="mt-4 text-5xl font-black tracking-[-0.06em]">AUD 2,500</h2>
-            <p className="mt-4 text-sm font-semibold uppercase tracking-[0.22em] text-accent-primary">Online 진행</p>
-            <p className="mt-6 text-base leading-relaxed text-text-muted">
-              AI를 활용해 직접 운영하고 싶은 분을 위한
-              <br />
-              실무 적용형 전수 프로그램입니다.
-            </p>
-            <Link to="/contact" className="primary-button mt-8 inline-flex">
-              문의하기
-              <ArrowRight size={16} />
-            </Link>
-          </div>
+          {/* ── 가격 블록 ── */}
+          <motion.div
+            initial={{ opacity: 0, x: 24 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease }}
+            className="grid gap-4"
+          >
+            {/* 온라인 1:1 */}
+            <div className="pricing-spotlight">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">온라인 1:1 맞춤 전수</p>
+              <p className="mt-4 text-5xl font-black tracking-[-0.06em]">AUD 2,500</p>
+              <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent-primary">
+                2시간 × 3세션 · 맞춤 진행
+              </p>
+              <p className="mt-5 text-[0.93rem] leading-[1.65] text-text-muted">
+                내 쇼핑몰, 내 비즈니스 기준으로 시작합니다.
+                <br />
+                실제 업무에 바로 쓸 수 있는 구조를 함께 만듭니다.
+              </p>
+              <Link to="/contact" className="primary-button mt-7 inline-flex">
+                문의하기
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            {/* 오프라인 그룹 */}
+            <div className="soft-panel">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">오프라인 그룹 워크숍</p>
+              <p className="mt-3 text-4xl font-black tracking-[-0.06em]">
+                AUD 250
+                <span className="text-xl text-text-muted"> / 인</span>
+              </p>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent-primary">
+                3시간 · 단체 진행 · 시드니
+              </p>
+              <p className="mt-4 text-[0.93rem] leading-[1.65] text-text-muted">
+                그룹으로 함께 배우는 AI 비즈니스 자동화 워크숍입니다.
+              </p>
+              <Link to="/contact" className="secondary-button mt-5 inline-flex">
+                워크숍 문의하기
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </motion.div>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="showcase-panel">
-            <h2 className="text-3xl font-black tracking-[-0.05em]">전수 내용</h2>
-            <div className="mt-6 grid gap-3">
-              {learnItems.map((item) => (
-                <div key={item} className="benefit-row">
-                  <CircleCheckBig size={16} className="text-accent-primary" />
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="showcase-panel">
-            <h2 className="text-3xl font-black tracking-[-0.05em]">추천 대상</h2>
+        {/* ── 추천 대상 + 자동화 예시 ── */}
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="showcase-panel"
+          >
+            <h2 className="text-[1.75rem] font-black tracking-[-0.05em]">이런 분께 맞습니다</h2>
             <div className="mt-6 grid gap-3">
               {fitFor.map((item) => (
                 <div key={item} className="benefit-row">
-                  <CircleCheckBig size={16} className="text-accent-primary" />
+                  <CircleCheckBig size={15} className="text-accent-primary" />
                   <span>{item}</span>
                 </div>
               ))}
             </div>
-          </div>
-        </div>
+          </motion.div>
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-[0.92fr_1.08fr]">
-          <div className="showcase-panel">
-            <h2 className="text-3xl font-black tracking-[-0.05em]">왜 필요한가</h2>
-            <p className="mt-5 text-base leading-relaxed text-text-muted">
-              홈페이지와 채널을 만들어도, 실제 운영에서는 문구 수정, 게시물 작성, 프로필 정리,
-              <br />
-              상품 업데이트처럼 자주 손봐야 하는 일이 계속 생깁니다.
-            </p>
-            <p className="mt-5 text-base leading-relaxed text-text-muted">
-              이런 일을 매번 외주에만 맡기면 속도도 느리고 비용도 계속 쌓일 수 있습니다.
-              <br />
-              이 전수는 그런 작업을 AI로 직접 처리할 수 있게 만들어,
-              <br />
-              내 온라인 운영을 더 빠르고 유연하게 가져가도록 돕는 데 목적이 있습니다.
-            </p>
-          </div>
-
-          <div className="showcase-panel">
-            <h2 className="text-3xl font-black tracking-[-0.05em]">기대 효과</h2>
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1, ease }}
+            viewport={{ once: true, amount: 0.2 }}
+            className="showcase-panel"
+          >
+            <h2 className="text-[1.75rem] font-black tracking-[-0.05em]">자동화 가능한 업무 예시</h2>
             <div className="mt-6 grid gap-3">
-              {outcomes.map((item) => (
+              {automationExamples.map((item) => (
                 <div key={item} className="benefit-row">
-                  <CircleCheckBig size={16} className="text-accent-primary" />
+                  <CircleCheckBig size={15} className="text-accent-primary" />
                   <span>{item}</span>
                 </div>
               ))}
             </div>
-            <Link to="/contact" className="primary-button mt-8 inline-flex">
-              AI 전수 문의하기
-              <ArrowRight size={16} />
-            </Link>
-          </div>
+          </motion.div>
         </div>
+
+        {/* ── 3세션 진행 방식 ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-6 showcase-panel"
+        >
+          <h2 className="text-[1.75rem] font-black tracking-[-0.05em]">3세션 진행 방식</h2>
+          <p className="mt-2 text-[0.93rem] text-text-muted">온라인 1:1 맞춤 전수 기준입니다.</p>
+          <div className="mt-8 grid gap-4 lg:grid-cols-3">
+            {sessions.map((s, i) => (
+              <motion.div
+                key={s.num}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: i * 0.1, ease }}
+                viewport={{ once: true }}
+                className="soft-panel"
+              >
+                <p className="text-[2rem] font-black tracking-[-0.06em] text-accent-primary">{s.num}</p>
+                <h3 className="mt-3 text-[1.1rem] font-black tracking-[-0.03em]">{s.title}</h3>
+                <p className="mt-2 text-[0.9rem] leading-[1.65] text-text-muted">{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* ── 왜 맞춤인가 ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-6 showcase-panel"
+        >
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+            <div>
+              <h2 className="text-[clamp(1.8rem,3vw,2.8rem)] font-black leading-[1.05] tracking-[-0.06em]">
+                강의가 아니라
+                <br />
+                내 비즈니스에
+                <br />
+                바로 붙입니다
+              </h2>
+            </div>
+            <div>
+              <p className="text-[0.95rem] leading-[1.75] text-text-muted">
+                시중에 AI 강의는 많습니다. 하지만 대부분 일반 사용법 수준에서 끝납니다.
+              </p>
+              <p className="mt-4 text-[0.95rem] leading-[1.75] text-text-muted">
+                이 전수는 처음부터 내 쇼핑몰, 내 비즈니스 기준으로 시작합니다.
+                3세션 동안 실제 업무에 바로 쓸 수 있는 구조를 함께 만듭니다.
+              </p>
+              <Link to="/contact" className="primary-button mt-7 inline-flex">
+                문의하기
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+
       </div>
     </div>
   );
