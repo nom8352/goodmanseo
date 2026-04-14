@@ -114,6 +114,9 @@ const AIBusiness = () => {
               <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent-primary">
                 3시간 · 단체 진행 · 브리즈번
               </p>
+              <p className="mt-3 text-sm font-semibold text-accent-primary">
+                비지니스 유료진단 - 올인원 진단 체험 포함
+              </p>
               <p className="mt-4 text-[0.93rem] leading-[1.65] text-text-muted">
                 그룹으로 함께 배우는 AI 비즈니스 자동화 워크숍입니다.
               </p>
