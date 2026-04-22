@@ -34,7 +34,7 @@ const websitePackages = [
     priceNote: '1회 결제',
     label: '가볍게 시작하는 패키지',
     description: '가게 소개와 문의 연결이 먼저 필요한 경우 가장 가볍게 시작할 수 있는 기본 홈페이지입니다.',
-    points: ['최대 3페이지', '기본 홈페이지 구성', 'AUD 300 상당 구글 비즈니스 프로필 세팅 포함'],
+    points: ['최대 3페이지', '기본 홈페이지 구성', '로컬 SEO 포함', 'AUD 300 상당 구글 비즈니스 프로필 세팅 포함'],
     cta: '스타터 홈페이지 문의하기',
     href: '/contact?type=starter-homepage',
   },
@@ -79,7 +79,7 @@ const websiteComparisonRows = [
   },
   {
     label: '로컬 SEO',
-    values: ['-', '포함', '포함'],
+    values: ['포함', '포함', '포함'],
   },
   {
     label: 'SEO 스타트 패키지',
