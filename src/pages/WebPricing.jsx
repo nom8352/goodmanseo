@@ -33,7 +33,7 @@ const websitePackages = [
     price: 'AUD 795',
     priceNote: '1회 결제',
     label: '가볍게 시작하는 패키지',
-    description: '가게 소개와 문의 연결이 먼저 필요한 경우 가장 가볍게 시작할 수 있는 기본 홈페이지입니다.',
+    description: '비지니스 소개와 문의 연결이 먼저 필요한 경우 가장 가볍게 시작할 수 있는 기본 홈페이지입니다.',
     points: ['최대 3페이지', '기본 홈페이지 구성', '로컬 SEO 포함', 'AUD 300 상당 구글 비즈니스 프로필 세팅 포함'],
     cta: '스타터 홈페이지 문의하기',
     href: '/contact?type=starter-homepage',
@@ -44,7 +44,7 @@ const websitePackages = [
     priceNote: '1회 결제',
     label: '메인 실행 패키지',
     description: '서비스 소개, 검색 노출, 구글 비즈니스 프로필 연결까지 함께 정리하고 싶은 경우에 적합합니다.',
-    points: ['최대 10페이지', '로컬 SEO 포함', '구글 비즈니스 프로필 포함', '원할 경우 인스타그램 · 페이스북 세팅 포함'],
+    points: ['최대 7페이지', '로컬 SEO 포함', '구글 비즈니스 프로필 포함', '원할 경우 인스타그램 · 페이스북 세팅 포함'],
     cta: '비즈니스 홈페이지 문의하기',
     href: '/contact?type=business-homepage',
   },
@@ -62,16 +62,12 @@ const websitePackages = [
 
 const websiteComparisonRows = [
   {
-    label: '추천',
-    values: ['가볍게 시작', '메인 실행', '확장 운영'],
-  },
-  {
     label: '페이지 수',
-    values: ['최대 3페이지', '최대 10페이지', '10페이지 이상'],
+    values: ['최대 3페이지', '최대 7페이지', '10페이지 이상'],
   },
   {
-    label: '홈페이지 구성',
-    values: ['기본 구성', '확장 구성', '맞춤 확장'],
+    label: '유료진단 포함',
+    values: ['퀵진단 포함', '퀵진단 포함', '올인원진단 포함'],
   },
   {
     label: '구글 비즈니스 프로필',
@@ -82,7 +78,7 @@ const websiteComparisonRows = [
     values: ['포함', '포함', '포함'],
   },
   {
-    label: 'SEO 스타트 패키지',
+    label: 'SEO All-in-One 스타트 패키지',
     values: ['-', '-', '포함'],
   },
   {
