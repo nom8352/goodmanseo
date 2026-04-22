@@ -62,11 +62,12 @@ const websitePackages = [
 
 const seoPackages = [
   {
-    title: '스타트 패키지',
+    title: 'SEO All-in-One 스타트 패키지',
     price: 'AUD 950',
     priceNote: '1회 결제',
     description: '검색 노출을 위한 기본 세팅을 한 번에 잡고 싶은 경우 선택할 수 있습니다. 유료진단 포함.',
-    cta: '스타트 패키지 문의하기',
+    points: ['유료진단 포함', '지금 먼저 고쳐야 할 SEO 문제 정리', '메인 키워드 정리', '메타 타이틀 · 설명 기본 세팅', '검색 노출을 위한 기본 구조 점검'],
+    cta: 'SEO All-in-One 스타트 패키지 문의하기',
     href: '/contact?type=seo-start-package',
   },
   {
@@ -74,6 +75,7 @@ const seoPackages = [
     price: 'AUD 795 / month',
     priceNote: '월간 관리',
     description: '초기 세팅 이후 검색 노출 작업을 꾸준히 이어가고 싶은 경우 적합합니다.',
+    points: ['매달 우선순위 점검', '페이지와 콘텐츠 보완', '검색 노출 작업 지속 관리'],
     cta: 'SEO 월관리 문의하기',
     href: '/contact?type=seo-monthly',
   },
@@ -258,6 +260,16 @@ const WebPricing = () => {
                     <p className="section-kicker">{item.title}</p>
                     <PriceDisplay item={item} />
                     <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
+                    {item.points && (
+                      <div className="mt-6 grid gap-3">
+                        {item.points.map((point) => (
+                          <div key={point} className="benefit-row">
+                            <CircleCheckBig size={16} className="text-accent-primary" />
+                            <span>{point}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                     <Link to={item.href} className="primary-button mt-7 inline-flex">
                       {item.cta}
                       <ArrowRight size={16} />
