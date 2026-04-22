@@ -26,6 +26,37 @@ const diagnostics = [
   },
 ];
 
+const diagnosticsComparisonRows = [
+  {
+    label: '홈페이지 점검',
+    values: ['기본 확인', '포함', '포함'],
+  },
+  {
+    label: '구글 비즈니스 프로필 점검',
+    values: ['기본 확인', '포함', '포함'],
+  },
+  {
+    label: '인스타그램 · 페이스북 점검',
+    values: ['기본 확인', '포함', '포함'],
+  },
+  {
+    label: '온페이지 SEO 기본 점검',
+    values: ['기본 확인', '포함', '포함'],
+  },
+  {
+    label: '비지니스 포지셔닝 점검',
+    values: ['-', '기본 확인', '포함'],
+  },
+  {
+    label: '키워드',
+    values: ['-', '핵심 키워드 3개 추천', '키워드 리서치 포함'],
+  },
+  {
+    label: '채널 간 일관성 확인',
+    values: ['기본 확인', '포함', '포함'],
+  },
+];
+
 const websitePackages = [
   {
     title: '스타터 홈페이지',
@@ -276,26 +307,65 @@ const WebPricing = () => {
               <p className="section-copy">무료 점검만으로 부족하다면, 더 자세한 분석으로 현재 상태와 우선순위를 구체적으로 확인할 수 있습니다.</p>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-2">
-              {diagnostics.map((item) => (
-                <article key={item.title} className="feature-card">
-                  <p className="section-kicker">{item.title}</p>
-                  <PriceDisplay item={item} />
-                  <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                  <div className="mt-6 grid gap-3">
-                    {item.points.map((point) => (
-                      <div key={point} className="benefit-row">
-                        <CircleCheckBig size={16} className="text-accent-primary" />
-                        <span>{point}</span>
-                      </div>
+            <div className="overflow-x-auto">
+              <div className="min-w-[1080px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="w-[220px] px-6 py-6 text-left text-sm font-semibold text-text-soft">항목</th>
+                      <th className="border-l border-white/10 px-6 py-6 text-left align-top">
+                        <p className="section-kicker">무료 점검</p>
+                        <p className="mt-5 text-[2rem] font-black tracking-[-0.06em] text-white">무료</p>
+                        <p className="mt-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-text-soft">
+                          기본 확인
+                        </p>
+                        <p className="mt-4 text-sm leading-[1.7] text-text-muted">
+                          온라인 채널 상태를 먼저 가볍게 확인하고 싶은 경우 적합합니다.
+                        </p>
+                      </th>
+                      {diagnostics.map((item) => (
+                        <th key={item.title} className="border-l border-white/10 px-6 py-6 text-left align-top">
+                          <p className="section-kicker">{item.title}</p>
+                          <PriceDisplay item={item} />
+                          <p className="mt-4 text-sm leading-[1.7] text-text-muted">{item.description}</p>
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {diagnosticsComparisonRows.map((row) => (
+                      <tr key={row.label} className="border-b border-white/10 last:border-b-0">
+                        <th className="px-6 py-5 text-left text-sm font-semibold text-text-soft">{row.label}</th>
+                        {row.values.map((value, index) => (
+                          <td
+                            key={`${row.label}-${index}`}
+                            className="border-l border-white/10 px-6 py-5 text-sm font-medium text-white"
+                          >
+                            {value}
+                          </td>
+                        ))}
+                      </tr>
                     ))}
-                  </div>
-                  <Link to={item.href} className="primary-button mt-7 inline-flex">
-                    {item.cta}
-                    <ArrowRight size={16} />
-                  </Link>
-                </article>
-              ))}
+                    <tr>
+                      <th className="px-6 py-6 text-left text-sm font-semibold text-text-soft">문의</th>
+                      <td className="border-l border-white/10 px-6 py-6">
+                        <Link to="/contact?type=free-check" className="primary-button inline-flex">
+                          무료 점검 신청하기
+                          <ArrowRight size={16} />
+                        </Link>
+                      </td>
+                      {diagnostics.map((item) => (
+                        <td key={`${item.title}-cta`} className="border-l border-white/10 px-6 py-6">
+                          <Link to={item.href} className="primary-button inline-flex">
+                            {item.cta}
+                            <ArrowRight size={16} />
+                          </Link>
+                        </td>
+                      ))}
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </section>
