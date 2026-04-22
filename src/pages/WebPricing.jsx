@@ -26,6 +26,16 @@ const diagnostics = [
   },
 ];
 
+const freeCheckCard = {
+  title: '무료 점검',
+  price: '무료',
+  priceNote: '기본 확인',
+  description: '온라인 채널 상태를 먼저 가볍게 확인하고 싶은 경우 적합합니다.',
+  points: ['홈페이지 기본 확인', '구글 비즈니스 프로필 기본 확인', '인스타그램 · 페이스북 기본 확인', '채널 간 일관성 기본 확인'],
+  cta: '무료 점검 신청하기',
+  href: '/contact?type=free-check',
+};
+
 const diagnosticsComparisonRows = [
   {
     label: '홈페이지 점검',
@@ -44,7 +54,7 @@ const diagnosticsComparisonRows = [
     values: ['기본 확인', '포함', '포함'],
   },
   {
-    label: '비지니스 포지셔닝 점검',
+    label: '비즈니스 포지셔닝 점검',
     values: ['-', '기본 확인', '포함'],
   },
   {
@@ -63,8 +73,9 @@ const websitePackages = [
     originalPrice: 'AUD 1,095',
     price: 'AUD 795',
     priceNote: '1회 결제',
+    promoLabel: '2026년 런칭 프로모션',
     label: '가볍게 시작하는 패키지',
-    description: '비지니스 소개와 문의 연결이 먼저 필요한 경우 가장 가볍게 시작할 수 있는 기본 홈페이지입니다.',
+    description: '비즈니스 소개와 문의 연결이 먼저 필요한 경우 가장 가볍게 시작할 수 있는 기본 홈페이지입니다.',
     points: ['최대 3페이지', '기본 홈페이지 구성', '로컬 SEO 포함', 'AUD 300 상당 구글 비즈니스 프로필 세팅 포함'],
     cta: '스타터 홈페이지 문의하기',
     href: '/contact?type=starter-homepage',
@@ -85,7 +96,7 @@ const websitePackages = [
     priceNote: '1회 결제',
     label: '확장형 패키지',
     description: '홈페이지 제작과 검색 기본 세팅을 한 번에 잡고 싶은 경우에 적합합니다.',
-    points: ['10페이지 이상', '비즈니스 홈페이지 범위 포함', 'SEO All-in-One 패키지 포함', 'AI 관리 지원 3개월 포함'],
+    points: ['10페이지 이상', '비즈니스 홈페이지 범위 포함', 'SEO All-in-One 패키지 포함', '인스타, 페이스북 진단, 셋업 지원', 'AI 관리 지원 3개월 포함'],
     cta: '성장형 홈페이지 문의하기',
     href: '/contact?type=growth-homepage',
   },
@@ -180,19 +191,19 @@ const supportPackages = [
 const faqItems = [
   {
     question: '작업 기간은 얼마나 걸리나요?',
-    answer: '범위에 따라 다르지만, 진단은 비교적 빠르게 진행할 수 있고 홈페이지 제작은 페이지 수와 준비 자료에 따라 기간이 달라집니다. 문의 주시면 현재 상황 기준으로 예상 일정을 먼저 안내해드립니다.',
+    answer: '보통 퀵 진단은 2~3일, 온라인 올인원 진단은 5~7일 정도를 기준으로 안내드립니다. 홈페이지 제작은 스타터 홈페이지 2~3주, 비즈니스 홈페이지 4~6주 정도를 예상하시면 됩니다.',
   },
   {
     question: '수정은 몇 번까지 가능한가요?',
-    answer: '기본 수정 범위 안에서 함께 조정하며 진행합니다. 패키지와 작업 범위에 따라 달라질 수 있어서, 시작 전에 수정 범위를 명확히 안내해드립니다.',
+    answer: '기본 수정 범위 안에서 함께 조정하며 진행합니다. 작은 문구 수정이나 이미지 교체 수준은 일반적으로 함께 맞춰가고, 범위가 커지는 추가 작업은 미리 상의드린 뒤 진행합니다.',
   },
   {
     question: '결제는 어떻게 하나요?',
-    answer: '작업 성격에 따라 일시 결제 또는 분할 결제가 가능합니다. 큰 작업은 보통 단계에 맞춰 나누어 진행할 수 있도록 안내해드립니다.',
+    answer: '작업 성격에 따라 일시 결제 또는 분할 결제가 가능합니다. 큰 작업은 보통 50/50 또는 50/30/20 방식으로 나누어 진행하며, 시작 전에 결제 기준을 먼저 안내해드립니다.',
   },
   {
     question: '환불 정책이 있나요?',
-    answer: '진행 단계와 이미 들어간 작업 범위에 따라 달라집니다. 착수 전에는 기준을 먼저 안내드리고, 진행 중인 경우에는 현재 단계 기준으로 조정 가능한 범위를 설명해드립니다.',
+    answer: '환불 가능 범위는 착수 여부와 이미 진행된 작업 단계에 따라 달라집니다. 작업 시작 전에는 기준을 먼저 안내드리고, 진행 중인 경우에는 현재 단계 기준으로 조정 가능한 범위를 설명해드립니다.',
   },
   {
     question: '호주 외 지역도 가능한가요?',
@@ -202,8 +213,13 @@ const faqItems = [
 
 const PriceDisplay = ({ item }) => (
   <div className="mt-5">
+    {item.promoLabel && (
+      <p className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-accent-primary">
+        {item.promoLabel}
+      </p>
+    )}
     {item.originalPrice && (
-      <p className="text-sm font-semibold text-text-soft line-through opacity-80">
+      <p className="mt-2 text-sm font-semibold text-text-soft line-through opacity-80">
         {item.originalPrice}
       </p>
     )}
@@ -249,7 +265,35 @@ const WebPricing = () => {
               <p className="section-copy">가볍게 시작할지, 검색과 채널 연결까지 함께 정리할지, 필요한 범위에 따라 선택할 수 있습니다.</p>
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="grid gap-4 lg:hidden">
+              {websitePackages.map((item, index) => (
+                <article key={`${item.title}-mobile`} className={index === 1 ? 'pricing-spotlight' : 'feature-card'}>
+                  <p className="section-kicker">{item.title}</p>
+                  {index === 1 && (
+                    <p className="mt-3 inline-flex rounded-full border border-[rgba(138,215,255,0.28)] bg-[rgba(138,215,255,0.12)] px-3 py-1 text-[0.68rem] font-semibold tracking-[0.08em] text-accent-secondary">
+                      가장 많이 선택하는 패키지
+                    </p>
+                  )}
+                  <PriceDisplay item={item} />
+                  <p className="mt-3 text-sm font-semibold text-accent-primary">{item.label}</p>
+                  <p className="mt-4 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
+                  <div className="mt-6 grid gap-3">
+                    {item.points.map((point) => (
+                      <div key={`${item.title}-${point}`} className="benefit-row">
+                        <CircleCheckBig size={16} className="text-accent-primary" />
+                        <span>{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link to={item.href} className="primary-button mt-7 inline-flex">
+                    {item.cta}
+                    <ArrowRight size={16} />
+                  </Link>
+                </article>
+              ))}
+            </div>
+
+            <div className="hidden overflow-x-auto lg:block">
               <div className="min-w-[980px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
                 <table className="w-full border-collapse">
                   <thead>
@@ -258,9 +302,16 @@ const WebPricing = () => {
                       {websitePackages.map((item, index) => (
                         <th
                           key={item.title}
-                          className={`px-6 py-6 text-left align-top ${index !== websitePackages.length - 1 ? 'border-l border-white/10' : 'border-l border-white/10'}`}
+                          className={`px-6 py-6 text-left align-top border-l border-white/10 ${
+                            index === 1 ? 'bg-[rgba(138,215,255,0.06)]' : ''
+                          }`}
                         >
                           <p className="section-kicker">{item.title}</p>
+                          {index === 1 && (
+                            <p className="mt-3 inline-flex rounded-full border border-[rgba(138,215,255,0.28)] bg-[rgba(138,215,255,0.12)] px-3 py-1 text-[0.68rem] font-semibold tracking-[0.08em] text-accent-secondary">
+                              가장 많이 선택하는 패키지
+                            </p>
+                          )}
                           <PriceDisplay item={item} />
                           <p className="mt-3 text-sm font-semibold text-accent-primary">{item.label}</p>
                           <p className="mt-4 text-sm leading-[1.7] text-text-muted">{item.description}</p>
@@ -275,7 +326,9 @@ const WebPricing = () => {
                         {row.values.map((value, index) => (
                           <td
                             key={`${row.label}-${index}`}
-                            className="border-l border-white/10 px-6 py-5 text-sm font-medium text-white"
+                            className={`border-l border-white/10 px-6 py-5 text-sm font-medium text-white ${
+                              index === 1 ? 'bg-[rgba(138,215,255,0.06)]' : ''
+                            }`}
                           >
                             {value}
                           </td>
@@ -285,7 +338,12 @@ const WebPricing = () => {
                     <tr>
                       <th className="px-6 py-6 text-left text-sm font-semibold text-text-soft">문의</th>
                       {websitePackages.map((item) => (
-                        <td key={`${item.title}-cta`} className="border-l border-white/10 px-6 py-6">
+                        <td
+                          key={`${item.title}-cta`}
+                          className={`border-l border-white/10 px-6 py-6 ${
+                            item.title === '비즈니스 홈페이지' ? 'bg-[rgba(138,215,255,0.06)]' : ''
+                          }`}
+                        >
                           <Link to={item.href} className="primary-button inline-flex">
                             {item.cta}
                             <ArrowRight size={16} />
@@ -303,11 +361,37 @@ const WebPricing = () => {
         <section id="diagnostics" className="section-block !min-h-0 px-0">
           <div className="w-full">
             <div className="section-heading">
-              <h2 className="section-title">유료 진단</h2>
+              <h2 className="section-title">점검 · 진단</h2>
               <p className="section-copy">무료 점검만으로 부족하다면, 더 자세한 분석으로 현재 상태와 우선순위를 구체적으로 확인할 수 있습니다.</p>
             </div>
 
-            <div className="overflow-x-auto">
+            <div className="mb-5 inline-flex rounded-[1rem] border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-medium text-text-muted">
+              기본 확인 = 문제 여부 확인 / 포함 = 원인 분석 + 해결안 정리
+            </div>
+
+            <div className="grid gap-4 lg:hidden">
+              {[freeCheckCard, ...diagnostics].map((item) => (
+                <article key={`${item.title}-mobile`} className="feature-card">
+                  <p className="section-kicker">{item.title}</p>
+                  <PriceDisplay item={item} />
+                  <p className="mt-4 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
+                  <div className="mt-6 grid gap-3">
+                    {item.points.map((point) => (
+                      <div key={`${item.title}-${point}`} className="benefit-row">
+                        <CircleCheckBig size={16} className="text-accent-primary" />
+                        <span>{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link to={item.href} className="primary-button mt-7 inline-flex">
+                    {item.cta}
+                    <ArrowRight size={16} />
+                  </Link>
+                </article>
+              ))}
+            </div>
+
+            <div className="hidden overflow-x-auto lg:block">
               <div className="min-w-[1080px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
                 <table className="w-full border-collapse">
                   <thead>
