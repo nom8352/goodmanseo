@@ -7,6 +7,7 @@ const diagnostics = [
   {
     title: '퀵 진단',
     price: 'AUD 149',
+    priceNote: '1회 결제',
     description:
       '홈페이지, 구글 비즈니스 프로필, 온페이지 SEO를 먼저 점검하고 지금 가장 먼저 손봐야 할 핵심 문제를 정리합니다.',
     points: ['홈페이지 상태 분석', '구글 비즈니스 프로필 분석', '온페이지 SEO 기본 분석', '핵심 문제 1~3개 정리'],
@@ -16,6 +17,7 @@ const diagnostics = [
   {
     title: '온라인 올인원 진단',
     price: 'AUD 289',
+    priceNote: '1회 결제',
     description:
       '퀵 진단 범위에 더해 인스타그램, 페이스북, 비즈니스 포지셔닝까지 함께 보고 채널 전체 흐름을 더 자세히 정리합니다.',
     points: ['퀵 진단 전체 포함', '인스타그램 · 페이스북 분석', '비즈니스 포지셔닝 점검', '채널 간 일관성 확인'],
@@ -27,24 +29,34 @@ const diagnostics = [
 const websitePackages = [
   {
     title: '스타터 홈페이지',
+    originalPrice: 'AUD 1,095',
     price: 'AUD 795',
-    label: '현재 이벤트 혜택 포함',
+    priceNote: '1회 결제',
+    label: '가볍게 시작하는 패키지',
     description: '가게 소개와 문의 연결이 먼저 필요한 경우 가장 가볍게 시작할 수 있는 기본 홈페이지입니다.',
     points: ['최대 3페이지', '기본 홈페이지 구성', 'AUD 300 상당 구글 비즈니스 프로필 세팅 포함'],
+    cta: '스타터 홈페이지 문의하기',
+    href: '/contact?type=starter-homepage',
   },
   {
     title: '비즈니스 홈페이지',
     price: 'AUD 1,890',
+    priceNote: '1회 결제',
     label: '메인 실행 패키지',
     description: '서비스 소개, 검색 노출, 구글 비즈니스 프로필 연결까지 함께 정리하고 싶은 경우에 적합합니다.',
-    points: ['최대 5페이지', '로컬 SEO 포함', '구글 비즈니스 프로필 포함', '원할 경우 인스타그램 · 페이스북 세팅 포함'],
+    points: ['최대 10페이지', '로컬 SEO 포함', '구글 비즈니스 프로필 포함', '원할 경우 인스타그램 · 페이스북 세팅 포함'],
+    cta: '비즈니스 홈페이지 문의하기',
+    href: '/contact?type=business-homepage',
   },
   {
     title: '성장형 홈페이지',
     price: 'AUD 3,500',
+    priceNote: '1회 결제',
     label: '확장형 패키지',
     description: '홈페이지 제작과 검색 기본 세팅을 한 번에 잡고 싶은 경우에 적합합니다.',
-    points: ['비즈니스 홈페이지 범위 포함', 'SEO All-in-One 패키지 포함'],
+    points: ['10페이지 이상', '비즈니스 홈페이지 범위 포함', 'SEO All-in-One 패키지 포함', 'AI 관리 지원 3개월 포함'],
+    cta: '성장형 홈페이지 문의하기',
+    href: '/contact?type=growth-homepage',
   },
 ];
 
@@ -52,12 +64,18 @@ const seoPackages = [
   {
     title: 'SEO All-in-One 패키지',
     price: 'AUD 950',
+    priceNote: '1회 결제',
     description: '검색 노출을 위한 기본 세팅을 한 번에 잡고 싶은 경우 선택할 수 있습니다.',
+    cta: 'SEO All-in-One 문의하기',
+    href: '/contact?type=seo-all-in-one',
   },
   {
     title: 'SEO 월관리',
     price: 'AUD 795 / month',
+    priceNote: '월간 관리',
     description: '초기 세팅 이후 검색 노출 작업을 꾸준히 이어가고 싶은 경우 적합합니다.',
+    cta: 'SEO 월관리 문의하기',
+    href: '/contact?type=seo-monthly',
   },
 ];
 
@@ -65,12 +83,18 @@ const gbpPackages = [
   {
     title: '구글 비즈니스 프로필 세팅',
     price: 'AUD 300',
+    priceNote: '1회 결제',
     description: '홈페이지를 새로 만들기 전에 구글에서 보이는 정보와 기본 신뢰도를 먼저 정리하고 싶은 경우 적합합니다.',
+    cta: '구글 비즈니스 프로필 세팅 문의하기',
+    href: '/contact?type=gbp-setup',
   },
   {
     title: '구글 비즈니스 프로필 월관리',
     price: 'AUD 95 / month',
+    priceNote: '월간 관리',
     description: '기본 세팅 이후 업데이트와 유지 관리가 계속 필요한 경우 적합합니다.',
+    cta: '구글 비즈니스 프로필 월관리 문의하기',
+    href: '/contact?type=gbp-monthly',
   },
 ];
 
@@ -78,13 +102,15 @@ const supportPackages = [
   {
     title: '홈페이지 관리',
     price: 'AUD 200 / month',
+    priceNote: '월간 관리',
     description: '직접 수정할 시간은 없지만 텍스트 변경, 이미지 교체, 기본 업데이트는 계속 필요한 경우 적합합니다.',
     cta: '문의하기',
     href: '/contact?type=general-inquiry',
   },
   {
     title: 'AI 온라인 운영 전수',
-    price: 'AUD 2,500 · Online',
+    price: 'AUD 2,500 (온라인)',
+    priceNote: '1회 교육 프로그램',
     description: '홈페이지, 구글 비즈니스 프로필, SNS 운영을 직접 해보고 싶지만 방법이 막막한 분을 위한 실전 교육입니다.',
     cta: '자세히 보기',
     href: '/ai-business',
@@ -96,6 +122,55 @@ const freeCheckPoints = [
   '비어 있는 정보, 채널 간 연결 부족, 첫인상을 약하게 만드는 부분을 먼저 봅니다.',
   '채널마다 정보가 다르거나 빠진 곳이 있는지, 지금 가장 먼저 손봐야 할 순서를 정리합니다.',
 ];
+
+const faqItems = [
+  {
+    question: '작업 기간은 얼마나 걸리나요?',
+    answer: '범위에 따라 다르지만, 진단은 비교적 빠르게 진행할 수 있고 홈페이지 제작은 페이지 수와 준비 자료에 따라 기간이 달라집니다. 문의 주시면 현재 상황 기준으로 예상 일정을 먼저 안내해드립니다.',
+  },
+  {
+    question: '수정은 몇 번까지 가능한가요?',
+    answer: '기본 수정 범위 안에서 함께 조정하며 진행합니다. 패키지와 작업 범위에 따라 달라질 수 있어서, 시작 전에 수정 범위를 명확히 안내해드립니다.',
+  },
+  {
+    question: '결제는 어떻게 하나요?',
+    answer: '작업 성격에 따라 일시 결제 또는 분할 결제가 가능합니다. 큰 작업은 보통 단계에 맞춰 나누어 진행할 수 있도록 안내해드립니다.',
+  },
+  {
+    question: '환불 정책이 있나요?',
+    answer: '진행 단계와 이미 들어간 작업 범위에 따라 달라집니다. 착수 전에는 기준을 먼저 안내드리고, 진행 중인 경우에는 현재 단계 기준으로 조정 가능한 범위를 설명해드립니다.',
+  },
+  {
+    question: '호주 외 지역도 가능한가요?',
+    answer: '가능합니다. 기본적으로 호주 전역 작업이 가능하고, 호주 외 지역도 온라인으로 진행할 수 있습니다. 한국어 상담과 영어 커뮤니케이션 모두 가능합니다.',
+  },
+];
+
+const pricingAnchors = [
+  { label: '홈페이지', href: '#website-packages' },
+  { label: '유료 진단', href: '#diagnostics' },
+  { label: 'SEO', href: '#seo-packages' },
+  { label: 'GBP', href: '#gbp-packages' },
+  { label: '관리', href: '#support-programs' },
+];
+
+const PriceDisplay = ({ item }) => (
+  <div className="mt-5">
+    {item.originalPrice && (
+      <p className="text-sm font-semibold text-text-soft line-through opacity-80">
+        {item.originalPrice}
+      </p>
+    )}
+    <p className="mt-1 text-[2rem] font-black tracking-[-0.06em] text-white">
+      {item.price}
+    </p>
+    {item.priceNote && (
+      <p className="mt-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-text-soft">
+        AUD · {item.priceNote}
+      </p>
+    )}
+  </div>
+);
 
 const WebPricing = () => {
   return (
@@ -110,12 +185,15 @@ const WebPricing = () => {
       <div className="container">
         <div className="section-heading max-w-5xl">
           <p className="section-kicker">서비스 및 가격</p>
-          <h1 className="section-title max-w-5xl">무료 점검</h1>
+          <h1 className="section-title max-w-5xl">서비스 및 가격</h1>
           <p className="section-copy max-w-[42rem]">
-            구글 비즈니스 프로필, 홈페이지, 인스타그램, 페이스북을 함께 보고,
+            무료 점검부터 유료 진단, 홈페이지 제작, SEO, 구글 비즈니스 프로필 관리까지
             <br />
-            고객이 보기 전에 비어 있는 부분과 연결이 약한 부분을 먼저 정리해드립니다.
+            지금 필요한 단계에 따라 선택할 수 있도록 한눈에 정리해두었습니다.
           </p>
+          <div className="mt-5 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-text-muted">
+            한국어 상담 가능 · 호주 전역 작업 가능
+          </div>
         </div>
 
         <div className="showcase-panel">
@@ -130,40 +208,21 @@ const WebPricing = () => {
           </div>
         </div>
 
-        <section className="section-block !min-h-0 px-0">
-          <div className="w-full">
-            <div className="section-heading">
-              <h2 className="section-title">유료 진단</h2>
-              <p className="section-copy">무료 점검만으로 부족하다면, 더 자세한 분석으로 현재 상태와 우선순위를 구체적으로 확인할 수 있습니다.</p>
-            </div>
-
-            <div className="grid gap-4 lg:grid-cols-2">
-              {diagnostics.map((item) => (
-                <article key={item.title} className="feature-card">
-                  <p className="section-kicker">{item.title}</p>
-                  <div className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold text-text-muted">
-                    {item.price}
-                  </div>
-                  <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                  <div className="mt-6 grid gap-3">
-                    {item.points.map((point) => (
-                      <div key={point} className="benefit-row">
-                        <CircleCheckBig size={16} className="text-accent-primary" />
-                        <span>{point}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Link to={item.href} className="primary-button mt-7 inline-flex">
-                    {item.cta}
-                    <ArrowRight size={16} />
-                  </Link>
-                </article>
-              ))}
-            </div>
+        <div className="sticky top-20 z-20 mt-6">
+          <div className="inline-flex flex-wrap gap-2 rounded-[1.4rem] border border-white/10 bg-[#0d1117]/88 px-3 py-3 backdrop-blur-xl">
+            {pricingAnchors.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-text-muted transition-colors hover:text-white"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
-        </section>
+        </div>
 
-        <section className="section-block !min-h-0 px-0">
+        <section id="website-packages" className="section-block !min-h-0 px-0">
           <div className="w-full">
             <div className="section-heading">
               <h2 className="section-title">홈페이지 제작</h2>
@@ -174,9 +233,7 @@ const WebPricing = () => {
               {websitePackages.map((item, index) => (
                 <article key={item.title} className={index === 1 ? 'pricing-spotlight' : 'feature-card'}>
                   <p className="section-kicker">{item.title}</p>
-                  <p className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold text-text-muted">
-                    {item.price}
-                  </p>
+                  <PriceDisplay item={item} />
                   <p className="mt-4 text-sm font-semibold text-accent-primary">{item.label}</p>
                   <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
                   <div className="mt-6 grid gap-3">
@@ -187,6 +244,41 @@ const WebPricing = () => {
                       </div>
                     ))}
                   </div>
+                  <Link to={item.href} className="primary-button mt-7 inline-flex">
+                    {item.cta}
+                    <ArrowRight size={16} />
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="diagnostics" className="section-block !min-h-0 px-0">
+          <div className="w-full">
+            <div className="section-heading">
+              <h2 className="section-title">유료 진단</h2>
+              <p className="section-copy">무료 점검만으로 부족하다면, 더 자세한 분석으로 현재 상태와 우선순위를 구체적으로 확인할 수 있습니다.</p>
+            </div>
+
+            <div className="grid gap-4 lg:grid-cols-2">
+              {diagnostics.map((item) => (
+                <article key={item.title} className="feature-card">
+                  <p className="section-kicker">{item.title}</p>
+                  <PriceDisplay item={item} />
+                  <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
+                  <div className="mt-6 grid gap-3">
+                    {item.points.map((point) => (
+                      <div key={point} className="benefit-row">
+                        <CircleCheckBig size={16} className="text-accent-primary" />
+                        <span>{point}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link to={item.href} className="primary-button mt-7 inline-flex">
+                    {item.cta}
+                    <ArrowRight size={16} />
+                  </Link>
                 </article>
               ))}
             </div>
@@ -195,7 +287,7 @@ const WebPricing = () => {
 
         <section className="section-block !min-h-0 px-0">
           <div className="w-full grid gap-4 lg:grid-cols-2">
-            <div>
+            <div id="seo-packages">
               <div className="section-heading">
                 <h2 className="section-title">SEO 패키지</h2>
                 <p className="section-copy">홈페이지는 그대로 두고 검색 노출부터 개선하고 싶은 경우 선택할 수 있습니다.</p>
@@ -204,16 +296,18 @@ const WebPricing = () => {
                 {seoPackages.map((item) => (
                   <article key={item.title} className="soft-panel">
                     <p className="section-kicker">{item.title}</p>
-                    <p className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold text-text-muted">
-                      {item.price}
-                    </p>
+                    <PriceDisplay item={item} />
                     <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
+                    <Link to={item.href} className="primary-button mt-7 inline-flex">
+                      {item.cta}
+                      <ArrowRight size={16} />
+                    </Link>
                   </article>
                 ))}
               </div>
             </div>
 
-            <div>
+            <div id="gbp-packages">
               <div className="section-heading">
                 <h2 className="section-title">구글 비즈니스 프로필</h2>
                 <p className="section-copy">홈페이지를 새로 만들기 전에, 구글에서 보이는 정보와 신뢰도부터 먼저 정리하고 싶은 경우 적합합니다.</p>
@@ -222,10 +316,12 @@ const WebPricing = () => {
                 {gbpPackages.map((item) => (
                   <article key={item.title} className="soft-panel">
                     <p className="section-kicker">{item.title}</p>
-                    <p className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold text-text-muted">
-                      {item.price}
-                    </p>
+                    <PriceDisplay item={item} />
                     <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
+                    <Link to={item.href} className="primary-button mt-7 inline-flex">
+                      {item.cta}
+                      <ArrowRight size={16} />
+                    </Link>
                   </article>
                 ))}
               </div>
@@ -233,25 +329,57 @@ const WebPricing = () => {
           </div>
         </section>
 
+        <section id="support-programs" className="section-block !min-h-0 px-0">
+          <div className="w-full grid gap-4 lg:grid-cols-2">
+            <div>
+              <div className="section-heading">
+                <h2 className="section-title">월간 관리</h2>
+                <p className="section-copy">구축 후에도 수정과 기본 운영 지원이 꾸준히 필요한 경우 선택할 수 있습니다.</p>
+              </div>
+
+              <article className="feature-card">
+                <p className="section-kicker">{supportPackages[0].title}</p>
+                <PriceDisplay item={supportPackages[0]} />
+                <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{supportPackages[0].description}</p>
+                <Link to={supportPackages[0].href} className="primary-button mt-7 inline-flex">
+                  {supportPackages[0].cta}
+                  <ArrowRight size={16} />
+                </Link>
+              </article>
+            </div>
+
+            <div>
+              <div className="section-heading">
+                <h2 className="section-title">교육 프로그램</h2>
+                <p className="section-copy">운영을 맡기는 대신 직접 배우고 활용하고 싶은 경우 선택할 수 있습니다.</p>
+              </div>
+
+              <article className="feature-card">
+                <p className="section-kicker">{supportPackages[1].title}</p>
+                <PriceDisplay item={supportPackages[1]} />
+                <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{supportPackages[1].description}</p>
+                <Link to={supportPackages[1].href} className="primary-button mt-7 inline-flex">
+                  {supportPackages[1].cta}
+                  <ArrowRight size={16} />
+                </Link>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section className="section-block !min-h-0 px-0">
           <div className="w-full">
             <div className="section-heading">
-              <h2 className="section-title">추가 관리</h2>
-              <p className="section-copy">구축 후 운영을 맡기거나, 직접 운영할 수 있도록 배우는 옵션까지 이어갈 수 있습니다.</p>
+              <h2 className="section-title">자주 묻는 질문</h2>
+              <p className="section-copy">가격과 진행 방식에서 자주 나오는 질문을 먼저 정리해두었습니다.</p>
             </div>
 
             <div className="grid gap-4 lg:grid-cols-2">
-              {supportPackages.map((item) => (
-                <article key={item.title} className="feature-card">
-                  <p className="section-kicker">{item.title}</p>
-                  <p className="mt-4 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-semibold text-text-muted">
-                    {item.price}
-                  </p>
-                  <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                  <Link to={item.href} className="primary-button mt-7 inline-flex">
-                    {item.cta}
-                    <ArrowRight size={16} />
-                  </Link>
+              {faqItems.map((item) => (
+                <article key={item.question} className="soft-panel">
+                  <p className="section-kicker">FAQ</p>
+                  <h3 className="mt-4 text-[1.2rem] font-black tracking-[-0.04em]">{item.question}</h3>
+                  <p className="mt-4 text-[0.95rem] leading-[1.72] text-text-muted">{item.answer}</p>
                 </article>
               ))}
             </div>
@@ -269,9 +397,6 @@ const WebPricing = () => {
             <Link to="/contact?type=free-check" className="primary-button">
               무료 점검 신청하기
               <ArrowRight size={16} />
-            </Link>
-            <Link to="/" className="secondary-button">
-              메인페이지 보기
             </Link>
           </div>
         </div>
