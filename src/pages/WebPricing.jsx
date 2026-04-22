@@ -60,6 +60,37 @@ const websitePackages = [
   },
 ];
 
+const websiteComparisonRows = [
+  {
+    label: '추천',
+    values: ['가볍게 시작', '메인 실행', '확장 운영'],
+  },
+  {
+    label: '페이지 수',
+    values: ['최대 3페이지', '최대 10페이지', '10페이지 이상'],
+  },
+  {
+    label: '홈페이지 구성',
+    values: ['기본 구성', '확장 구성', '맞춤 확장'],
+  },
+  {
+    label: '구글 비즈니스 프로필',
+    values: ['포함', '포함', '포함'],
+  },
+  {
+    label: '로컬 SEO',
+    values: ['-', '포함', '포함'],
+  },
+  {
+    label: 'SEO 스타트 패키지',
+    values: ['-', '-', '포함'],
+  },
+  {
+    label: 'AI 관리 지원',
+    values: ['-', '-', '3개월 포함'],
+  },
+];
+
 const seoPackages = [
   {
     title: 'SEO All-in-One 스타트 패키지',
@@ -191,27 +222,53 @@ const WebPricing = () => {
               <p className="section-copy">가볍게 시작할지, 검색과 채널 연결까지 함께 정리할지, 필요한 범위에 따라 선택할 수 있습니다.</p>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-3">
-              {websitePackages.map((item, index) => (
-                <article key={item.title} className={index === 1 ? 'pricing-spotlight' : 'feature-card'}>
-                  <p className="section-kicker">{item.title}</p>
-                  <PriceDisplay item={item} />
-                  <p className="mt-4 text-sm font-semibold text-accent-primary">{item.label}</p>
-                  <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                  <div className="mt-6 grid gap-3">
-                    {item.points.map((point) => (
-                      <div key={point} className="benefit-row">
-                        <CircleCheckBig size={16} className="text-accent-primary" />
-                        <span>{point}</span>
-                      </div>
+            <div className="overflow-x-auto">
+              <div className="min-w-[980px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b border-white/10">
+                      <th className="w-[180px] px-6 py-6 text-left text-sm font-semibold text-text-soft">항목</th>
+                      {websitePackages.map((item, index) => (
+                        <th
+                          key={item.title}
+                          className={`px-6 py-6 text-left align-top ${index !== websitePackages.length - 1 ? 'border-l border-white/10' : 'border-l border-white/10'}`}
+                        >
+                          <p className="section-kicker">{item.title}</p>
+                          <PriceDisplay item={item} />
+                          <p className="mt-3 text-sm font-semibold text-accent-primary">{item.label}</p>
+                          <p className="mt-4 text-sm leading-[1.7] text-text-muted">{item.description}</p>
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {websiteComparisonRows.map((row) => (
+                      <tr key={row.label} className="border-b border-white/10 last:border-b-0">
+                        <th className="px-6 py-5 text-left text-sm font-semibold text-text-soft">{row.label}</th>
+                        {row.values.map((value, index) => (
+                          <td
+                            key={`${row.label}-${index}`}
+                            className="border-l border-white/10 px-6 py-5 text-sm font-medium text-white"
+                          >
+                            {value}
+                          </td>
+                        ))}
+                      </tr>
                     ))}
-                  </div>
-                  <Link to={item.href} className="primary-button mt-7 inline-flex">
-                    {item.cta}
-                    <ArrowRight size={16} />
-                  </Link>
-                </article>
-              ))}
+                    <tr>
+                      <th className="px-6 py-6 text-left text-sm font-semibold text-text-soft">문의</th>
+                      {websitePackages.map((item) => (
+                        <td key={`${item.title}-cta`} className="border-l border-white/10 px-6 py-6">
+                          <Link to={item.href} className="primary-button inline-flex">
+                            {item.cta}
+                            <ArrowRight size={16} />
+                          </Link>
+                        </td>
+                      ))}
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </section>
