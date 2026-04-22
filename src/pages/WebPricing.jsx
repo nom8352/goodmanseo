@@ -140,14 +140,6 @@ const faqItems = [
   },
 ];
 
-const pricingAnchors = [
-  { label: '홈페이지', href: '#website-packages' },
-  { label: '유료 진단', href: '#diagnostics' },
-  { label: 'SEO', href: '#seo-packages' },
-  { label: 'GBP', href: '#gbp-packages' },
-  { label: '관리', href: '#support-programs' },
-];
-
 const PriceDisplay = ({ item }) => (
   <div className="mt-5">
     {item.originalPrice && (
@@ -187,20 +179,6 @@ const WebPricing = () => {
           </p>
           <div className="mt-5 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-text-muted">
             한국어 상담 가능 · 호주 전역 작업 가능
-          </div>
-        </div>
-
-        <div className="sticky top-20 z-20 mt-6">
-          <div className="inline-flex flex-wrap gap-2 rounded-[1.4rem] border border-white/10 bg-[#0d1117]/88 px-3 py-3 backdrop-blur-xl">
-            {pricingAnchors.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-text-muted transition-colors hover:text-white"
-              >
-                {item.label}
-              </a>
-            ))}
           </div>
         </div>
 
