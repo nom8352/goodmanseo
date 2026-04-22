@@ -62,12 +62,12 @@ const websitePackages = [
 
 const seoPackages = [
   {
-    title: 'SEO All-in-One 패키지',
+    title: '스타트 패키지',
     price: 'AUD 950',
     priceNote: '1회 결제',
-    description: '검색 노출을 위한 기본 세팅을 한 번에 잡고 싶은 경우 선택할 수 있습니다.',
-    cta: 'SEO All-in-One 문의하기',
-    href: '/contact?type=seo-all-in-one',
+    description: '검색 노출을 위한 기본 세팅을 한 번에 잡고 싶은 경우 선택할 수 있습니다. 유료진단 포함.',
+    cta: '스타트 패키지 문의하기',
+    href: '/contact?type=seo-start-package',
   },
   {
     title: 'SEO 월관리',
@@ -115,12 +115,6 @@ const supportPackages = [
     cta: '자세히 보기',
     href: '/ai-business',
   },
-];
-
-const freeCheckPoints = [
-  '구글 비즈니스 프로필, 홈페이지, 인스타그램, 페이스북 상태를 함께 확인합니다.',
-  '비어 있는 정보, 채널 간 연결 부족, 첫인상을 약하게 만드는 부분을 먼저 봅니다.',
-  '채널마다 정보가 다르거나 빠진 곳이 있는지, 지금 가장 먼저 손봐야 할 순서를 정리합니다.',
 ];
 
 const faqItems = [
@@ -193,18 +187,6 @@ const WebPricing = () => {
           </p>
           <div className="mt-5 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-text-muted">
             한국어 상담 가능 · 호주 전역 작업 가능
-          </div>
-        </div>
-
-        <div className="showcase-panel">
-          <p className="section-kicker">무료 점검에서 보는 것</p>
-          <div className="mt-5 grid gap-3 md:grid-cols-3">
-            {freeCheckPoints.map((item) => (
-              <div key={item} className="benefit-row">
-                <CircleCheckBig size={16} className="text-accent-primary" />
-                <span>{item}</span>
-              </div>
-            ))}
           </div>
         </div>
 
@@ -310,7 +292,7 @@ const WebPricing = () => {
             <div id="gbp-packages">
               <div className="section-heading">
                 <h2 className="section-title">구글 비즈니스 프로필</h2>
-                <p className="section-copy">홈페이지를 새로 만들기 전에, 구글에서 보이는 정보와 신뢰도부터 먼저 정리하고 싶은 경우 적합합니다.</p>
+                <p className="section-copy">구글에서 보이는 정보와 신뢰도부터 먼저 정리하고 싶은 경우 적합합니다.</p>
               </div>
               <div className="grid gap-4">
                 {gbpPackages.map((item) => (
