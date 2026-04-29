@@ -19,7 +19,7 @@ const Navbar = () => {
     { name: '홈', href: '/' },
     { name: '서비스 및 가격', href: '/pricing' },
     { name: '블로그', href: '/blog' },
-    { name: 'AI 온라인 운영 전수', href: '/ai-business' },
+    { name: 'AI 실전 멘토링', href: '/ai-business' },
   ];
 
   return (

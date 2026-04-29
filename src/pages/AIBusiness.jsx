@@ -45,10 +45,10 @@ const AIBusiness = () => {
   return (
     <div className="pt-32 pb-24">
       <Seo
-        title="AI 비즈니스 자동화 전수"
-        description="상품 설명, 고객 응대, SNS 콘텐츠, 재고 관리 — 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 1:1 전수 및 오프라인 그룹 워크숍 운영."
+        title="AI 실전 멘토링"
+        description="상품 설명, 고객 응대, SNS 콘텐츠, 재고 관리 — 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 1:1 AI 실전 멘토링 및 오프라인 그룹 워크숍 운영."
         path="/ai-business"
-        keywords={['AI 비즈니스 자동화', 'AI 쇼핑몰 운영', 'AI 업무 자동화', 'AI 온라인 운영', '호주 AI 전수']}
+        keywords={['AI 실전 멘토링', 'AI 비즈니스 자동화', 'AI 쇼핑몰 운영', 'AI 업무 자동화', 'AI 온라인 운영', '호주 AI 멘토링']}
       />
 
       <div className="container">
@@ -63,7 +63,7 @@ const AIBusiness = () => {
           >
             <div className="eyebrow-chip w-fit">
               <Sparkles size={14} />
-              맞춤형 AI 비즈니스 자동화
+              AI 실전 멘토링
             </div>
             <h1 className="section-title mt-6 max-w-5xl">
               반복 업무를 AI로 자동화하면
@@ -88,7 +88,7 @@ const AIBusiness = () => {
           >
             {/* 온라인 1:1 */}
             <div className="pricing-spotlight">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">온라인 1:1 맞춤 전수</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">온라인 1:1 실전 멘토링</p>
               <p className="mt-4 text-5xl font-black tracking-[-0.06em]">AUD 2,500</p>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-accent-primary">
                 2시간 × 3세션 · 맞춤 진행
@@ -176,7 +176,7 @@ const AIBusiness = () => {
           className="mt-6 showcase-panel"
         >
           <h2 className="text-[1.75rem] font-black tracking-[-0.05em]">3세션 진행 방식</h2>
-          <p className="mt-2 text-[0.93rem] text-text-muted">온라인 1:1 맞춤 전수 기준입니다.</p>
+          <p className="mt-2 text-[0.93rem] text-text-muted">온라인 1:1 실전 멘토링 기준입니다.</p>
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
             {sessions.map((s, i) => (
               <motion.div
@@ -218,7 +218,7 @@ const AIBusiness = () => {
                 시중에 AI 강의는 많습니다. 하지만 대부분 일반 사용법 수준에서 끝납니다.
               </p>
               <p className="mt-4 text-[0.95rem] leading-[1.75] text-text-muted">
-                이 전수는 처음부터 내 쇼핑몰, 내 비즈니스 기준으로 시작합니다.
+                이 멘토링은 처음부터 내 쇼핑몰, 내 비즈니스 기준으로 시작합니다.
                 3세션 동안 실제 업무에 바로 쓸 수 있는 구조를 함께 만듭니다.
               </p>
               <Link to="/contact" className="primary-button mt-7 inline-flex">

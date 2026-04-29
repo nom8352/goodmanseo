@@ -179,10 +179,10 @@ const supportPackages = [
     href: '/contact?type=general-inquiry',
   },
   {
-    title: 'AI 온라인 운영 전수',
+    title: 'AI 실전 멘토링',
     price: 'AUD 2,500 (온라인)',
-    priceNote: '1회 교육 프로그램',
-    description: '홈페이지, 구글 비즈니스 프로필, SNS 운영을 직접 해보고 싶지만 방법이 막막한 분을 위한 실전 교육입니다.',
+    priceNote: '1:1 실전 프로그램',
+    description: '홈페이지, 구글 비즈니스 프로필, SNS 운영과 반복 업무에 AI를 붙여 실제로 쓸 수 있는 루틴을 함께 만드는 멘토링입니다.',
     cta: '자세히 보기',
     href: '/ai-business',
   },
