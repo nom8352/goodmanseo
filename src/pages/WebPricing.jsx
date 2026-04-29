@@ -179,6 +179,16 @@ const supportPackages = [
     href: '/contact?type=general-inquiry',
   },
   {
+    title: 'AI 실전 스터디그룹',
+    originalPrice: 'AUD 690',
+    price: 'AUD 590',
+    priceNote: '런칭가 · 온라인 3주 과정',
+    promoLabel: '주 1회 2시간 · 총 6시간',
+    description: '혼자 하면 흐지부지되기 쉬운 AI 활용을 온라인 소그룹에서 3주 동안 함께 실습하며 내 업무에 적용하는 과정입니다.',
+    cta: '자세히 보기',
+    href: '/ai-business',
+  },
+  {
     title: 'AI 실전 멘토링',
     price: 'AUD 2,500 (온라인)',
     priceNote: '1:1 실전 프로그램',
@@ -530,18 +540,22 @@ const WebPricing = () => {
             <div>
               <div className="section-heading">
                 <h2 className="section-title">교육 프로그램</h2>
-                <p className="section-copy">운영을 맡기는 대신 직접 배우고 활용하고 싶은 경우 선택할 수 있습니다.</p>
+                <p className="section-copy">혼자 배우기 어렵다면 온라인 소그룹으로 시작하고, 맞춤 적용이 필요하면 1:1로 깊게 진행할 수 있습니다.</p>
               </div>
 
-              <article className="feature-card">
-                <p className="section-kicker">{supportPackages[1].title}</p>
-                <PriceDisplay item={supportPackages[1]} />
-                <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{supportPackages[1].description}</p>
-                <Link to={supportPackages[1].href} className="primary-button mt-7 inline-flex">
-                  {supportPackages[1].cta}
-                  <ArrowRight size={16} />
-                </Link>
-              </article>
+              <div className="grid gap-4">
+                {supportPackages.slice(1).map((item) => (
+                  <article key={item.title} className="feature-card">
+                    <p className="section-kicker">{item.title}</p>
+                    <PriceDisplay item={item} />
+                    <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
+                    <Link to={item.href} className="primary-button mt-7 inline-flex">
+                      {item.cta}
+                      <ArrowRight size={16} />
+                    </Link>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>

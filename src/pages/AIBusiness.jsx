@@ -41,14 +41,32 @@ const sessions = [
   },
 ];
 
+const studyGroupWeeks = [
+  {
+    num: '1',
+    title: '반복 업무 찾기',
+    desc: '내 사업에서 AI로 줄일 수 있는 업무를 찾고 우선순위를 정합니다.',
+  },
+  {
+    num: '2',
+    title: '응대 템플릿 만들기',
+    desc: '고객 문의, 리뷰 답변, 안내문에 바로 쓸 수 있는 템플릿을 만듭니다.',
+  },
+  {
+    num: '3',
+    title: '콘텐츠 + 운영 루틴',
+    desc: 'SNS, 블로그, 구글 비즈니스 프로필 콘텐츠와 혼자 이어갈 운영 루틴을 정리합니다.',
+  },
+];
+
 const AIBusiness = () => {
   return (
     <div className="pt-32 pb-24">
       <Seo
         title="AI 실전 멘토링"
-        description="상품 설명, 고객 응대, SNS 콘텐츠, 재고 관리 — 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 1:1 AI 실전 멘토링 및 오프라인 그룹 워크숍 운영."
+        description="상품 설명, 고객 응대, SNS 콘텐츠, 재고 관리 — 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 스터디그룹, 온라인 1:1 AI 실전 멘토링, 오프라인 그룹 워크숍 운영."
         path="/ai-business"
-        keywords={['AI 실전 멘토링', 'AI 비즈니스 자동화', 'AI 쇼핑몰 운영', 'AI 업무 자동화', 'AI 온라인 운영', '호주 AI 멘토링']}
+        keywords={['AI 실전 멘토링', 'AI 스터디그룹', 'AI 비즈니스 자동화', 'AI 쇼핑몰 운영', 'AI 업무 자동화', 'AI 온라인 운영', '호주 AI 멘토링']}
       />
 
       <div className="container">
@@ -98,8 +116,32 @@ const AIBusiness = () => {
                 <br />
                 실제 업무에 바로 쓸 수 있는 구조를 함께 만듭니다.
               </p>
-              <Link to="/contact" className="primary-button mt-7 inline-flex">
-                문의하기
+              <Link to="/contact?type=ai-mentoring" className="primary-button mt-7 inline-flex">
+                1:1 멘토링 문의하기
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+
+            {/* 온라인 스터디그룹 */}
+            <div className="soft-panel">
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-text-soft">온라인 스터디그룹</p>
+              <p className="mt-3 text-4xl font-black tracking-[-0.06em]">
+                AUD 590
+                <span className="text-xl text-text-muted"> / 인</span>
+              </p>
+              <p className="mt-2 text-sm font-semibold uppercase tracking-[0.18em] text-accent-primary">
+                런칭가 · 정상가 AUD 690
+              </p>
+              <p className="mt-3 text-sm font-semibold text-accent-primary">
+                주 1회 2시간 · 3주 과정 · 온라인 소그룹
+              </p>
+              <p className="mt-4 text-[0.93rem] leading-[1.65] text-text-muted">
+                혼자 하면 흐지부지되기 쉬운 AI 활용을
+                <br />
+                3주 동안 함께 실습하며 내 업무에 적용합니다.
+              </p>
+              <Link to="/contact?type=ai-study-group" className="secondary-button mt-5 inline-flex">
+                스터디그룹 문의하기
                 <ArrowRight size={16} />
               </Link>
             </div>
@@ -120,7 +162,7 @@ const AIBusiness = () => {
               <p className="mt-4 text-[0.93rem] leading-[1.65] text-text-muted">
                 그룹으로 함께 배우는 AI 비즈니스 자동화 워크숍입니다.
               </p>
-              <Link to="/contact" className="secondary-button mt-5 inline-flex">
+              <Link to="/contact?type=ai-workshop" className="secondary-button mt-5 inline-flex">
                 워크숍 문의하기
                 <ArrowRight size={16} />
               </Link>
@@ -192,6 +234,48 @@ const AIBusiness = () => {
                 <p className="mt-2 text-[0.9rem] leading-[1.65] text-text-muted">{s.desc}</p>
               </motion.div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* ── 온라인 스터디그룹 ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="mt-6 showcase-panel"
+        >
+          <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div>
+              <p className="section-kicker">AI 실전 스터디그룹</p>
+              <h2 className="mt-4 text-[clamp(1.8rem,3vw,2.8rem)] font-black leading-[1.05] tracking-[-0.06em]">
+                3주 동안
+                <br />
+                같이 실습하고
+                <br />
+                내 업무에 적용합니다
+              </h2>
+              <p className="mt-5 text-[0.95rem] leading-[1.75] text-text-muted">
+                주 1회 2시간씩, 총 6시간 동안 온라인 소그룹으로 진행합니다.
+                혼자 배우다 멈추는 것이 아니라 매주 실제 결과물을 만들며 따라올 수 있게 구성했습니다.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2">
+              {studyGroupWeeks.map((week, i) => (
+                <motion.div
+                  key={week.num}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.45, delay: i * 0.08, ease }}
+                  viewport={{ once: true }}
+                  className="soft-panel"
+                >
+                  <p className="text-[2rem] font-black tracking-[-0.06em] text-accent-primary">{week.num}</p>
+                  <h3 className="mt-3 text-[1.1rem] font-black tracking-[-0.03em]">{week.title}</h3>
+                  <p className="mt-2 text-[0.9rem] leading-[1.65] text-text-muted">{week.desc}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
