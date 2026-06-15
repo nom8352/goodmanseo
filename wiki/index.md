@@ -1,0 +1,56 @@
+# GoodmanSEO LLM Wiki
+
+Last updated: 2026-06-16
+
+This is the project memory layer for GoodmanSEO. Use it as the first structured map after reading `CLAUDE.md` and `docs/current-status.md`.
+
+## What This Project Is
+
+GoodmanSEO is a Korean/English service for Australia-based local service businesses. The current positioning is:
+
+> How does my business look online right now?
+
+The service reviews Google Business Profile, website, Instagram, and Facebook together, finds what is missing, and helps the owner improve inquiry flow.
+
+## Current Source Layers
+
+- `CLAUDE.md`: primary project context and messaging guardrails
+- `AGENTS.md`: local agent read order and project guardrails
+- `PRODUCT.md`: official Impeccable strategic product context
+- `DESIGN.md`: official Impeccable visual design system
+- `docs/current-status.md`: latest operating status, priorities, social schedule, and known local-only changes
+- `docs/cardnews-inventory.md`: confirmed social/card-news asset inventory
+- `docs/goodmanseo마감.md`: YouTube/Notion wrap-up context from 2026-04-22
+- `src/`: live React/Vite website source
+- `.codex-social/planner-assets/`: social planner image/copy assets
+- `deisngMD/`: external design-system analysis references
+
+## Wiki Map
+
+- [Schema](schema.md): how wiki claims, sources, workflows, and open questions should be recorded
+- [Log](log.md): change log for wiki updates
+- [Project Memory Sources](sources/project-memory.md): local docs and what each one is for
+- [Site Code Map](sources/site-code-map.md): routes, components, data files, and build commands
+- [Social Assets](sources/social-assets.md): Instagram/card-news files and format status
+- [Positioning](concepts/positioning.md): durable messaging rules
+- [Design Context](concepts/design-context.md): official Impeccable context and UX principles
+- [Service Offers](concepts/service-offers.md): current offer hierarchy and prices visible in source
+- [Content System](concepts/content-system.md): blog, social, and YouTube/Notion content layers
+- [Resume Workflow](workflows/resume.md): how to start future GoodmanSEO threads
+- [Ingest Workflow](workflows/ingest.md): how to add new evidence to this wiki
+- [Verification Workflow](workflows/verification.md): lightweight checks before relying on wiki claims
+
+## Current Practical Next Step
+
+The strongest next project step remains:
+
+1. Review local-only `src/pages/StarterPackage.jsx`.
+2. Review local-only `src/components/ContactForm.jsx`.
+3. Decide whether the starter package page should be kept, redirected, or merged into pricing.
+4. Align contact/inquiry flow with the current free-check positioning.
+
+## Do Not Forget
+
+- Treat existing uncommitted/untracked files as user work unless the user asks to clean them.
+- Do not assume card-news exists as Markdown. The confirmed persistent card-news set is mostly image/TXT assets.
+- Keep new copy practical, owner-focused, and non-salesy.

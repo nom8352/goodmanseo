@@ -151,17 +151,7 @@ button {
 }
 
 .gradient-text {
-  background: linear-gradient(120deg, var(--accent-tertiary), var(--accent-secondary), var(--accent-primary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  animation: shine 5s linear infinite;
-}
-
-@keyframes shine {
-  to {
-    background-position: 200% center;
-  }
+  color: var(--accent-tertiary);
 }
 
 section {
@@ -260,7 +250,7 @@ section {
   font-family: var(--font-display);
   font-size: clamp(1.45rem, 1.7vw, 1.75rem);
   font-weight: 800;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.04em;
 }
 
 .site-mark__meta {
@@ -398,6 +388,12 @@ section {
   align-items: center;
 }
 
+.section-block--compact {
+  min-height: auto;
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
+
 .section-heading {
   margin-bottom: 2.75rem;
 }
@@ -415,7 +411,7 @@ section {
   max-width: 18ch;
   font-size: clamp(2.2rem, 3.4vw, 3.6rem);
   line-height: 0.95;
-  letter-spacing: -0.07em;
+  letter-spacing: -0.04em;
 }
 
 .section-copy {
@@ -507,6 +503,10 @@ section {
 
 .soft-panel {
   background: rgba(255, 255, 255, 0.03);
+}
+
+.home-scope-item {
+  min-height: 9rem;
 }
 
 .process-card {
@@ -743,9 +743,8 @@ section {
   }
 
   .hero-shell--home {
-    min-height: 100dvh;
-    padding-bottom: 0;
+    align-items: flex-start;
+    min-height: auto;
+    padding-bottom: 4rem;
   }
 }
-
-
