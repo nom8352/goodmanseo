@@ -38,11 +38,11 @@ Use `PRODUCT.md` and `DESIGN.md` as the canonical design context. `.impeccable.m
 
 The preferred homepage message direction is:
 
-`How does my business look online right now?`
+`고객은 검색하고, 신뢰는 결과로 만듭니다`
 
 Preferred supporting message:
 
-`We review your Google profile, website, Instagram, and Facebook together and check what is missing for free.`
+`구글, 홈페이지, SNS를 함께 점검하고 정리해 고객이 안심하고 문의할 수 있는 온라인 환경을 만듭니다.`
 
 ## Messaging Principles
 
@@ -88,6 +88,7 @@ Homepage update on 2026-06-16:
 
 - `$impeccable distill homepage` was applied to reduce repeated copy and simplify the flow
 - `$impeccable clarify homepage` was applied to make remaining copy more specific and actionable
+- homepage hero was updated to the new trust/search headline and a right-side channel mockup visual
 - homepage now centers on: online appearance, four checked channels, one next step
 - H1 was consolidated into one semantic heading
 - homepage typography was adjusted away from overly tight display letter spacing

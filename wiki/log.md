@@ -13,3 +13,4 @@
 - Marked `.impeccable.md` as legacy context.
 - Applied `$impeccable distill homepage`: reduced repeated homepage copy, simplified the flow, removed gradient text warning, and verified desktop/mobile render.
 - Applied `$impeccable clarify homepage`: made homepage copy more specific about checked channels, inquiry flow, and next-step guidance.
+- Updated homepage hero to the new search/trust headline and added a right-side channel mockup visual for Google, website, and SNS.

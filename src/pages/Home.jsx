@@ -1,6 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CircleCheckBig, Sparkles } from 'lucide-react';
+import {
+  ArrowRight,
+  CircleCheckBig,
+  Facebook,
+  Globe2,
+  Instagram,
+  Laptop,
+  MapPin,
+  MessageCircle,
+  Search,
+  Smartphone,
+  Sparkles,
+  Star,
+} from 'lucide-react';
 import { motion } from 'framer-motion';
 import Hero3D from '../components/Hero3D';
 import Seo from '../components/Seo';
@@ -35,6 +48,97 @@ const nextSteps = [
   '문의 전에 준비할 것',
 ];
 
+const HeroChannelVisual = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 36, scale: 0.98 }}
+      animate={{ opacity: 1, x: 0, scale: 1 }}
+      transition={{ duration: 0.8, delay: 0.35, ease }}
+      className="home-hero-visual"
+      aria-label="구글, 홈페이지, SNS 채널이 함께 정리되는 화면 예시"
+    >
+      <div className="channel-badge channel-badge--google">G</div>
+      <div className="channel-badge channel-badge--instagram">
+        <Instagram size={18} />
+      </div>
+      <div className="channel-badge channel-badge--facebook">
+        <Facebook size={17} />
+      </div>
+
+      <div className="laptop-mock">
+        <div className="laptop-screen">
+          <div className="screen-topbar">
+            <span className="screen-logo">goodmanSEO</span>
+            <span />
+            <span />
+          </div>
+          <div className="site-preview">
+            <p>믿을 수 있는</p>
+            <strong>우리 동네 비즈니스</strong>
+            <div className="site-preview__lines">
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
+          <div className="site-photo">
+            <Globe2 size={28} />
+          </div>
+        </div>
+        <div className="laptop-base" />
+      </div>
+
+      <div className="phone-mock phone-mock--search">
+        <div className="phone-speaker" />
+        <div className="phone-search-bar">
+          <Search size={12} />
+          <span>GoodmanSEO</span>
+        </div>
+        <div className="business-card-preview">
+          <div>
+            <strong>구글 비즈니스 프로필</strong>
+            <p>주소 · 영업시간 · 문의 버튼</p>
+          </div>
+          <MapPin size={15} />
+        </div>
+        <div className="rating-row">
+          {[0, 1, 2, 3, 4].map((item) => (
+            <Star key={item} size={12} fill="currentColor" />
+          ))}
+        </div>
+        <div className="quick-actions">
+          <span>전화</span>
+          <span>길찾기</span>
+          <span>문의</span>
+        </div>
+      </div>
+
+      <div className="phone-mock phone-mock--social">
+        <div className="phone-speaker" />
+        <div className="social-header">
+          <Smartphone size={14} />
+          <span>SNS 정리</span>
+        </div>
+        <div className="social-grid-preview">
+          {Array.from({ length: 9 }).map((_, index) => (
+            <span key={index} />
+          ))}
+        </div>
+        <div className="message-strip">
+          <MessageCircle size={13} />
+          <span>문의 흐름 확인</span>
+        </div>
+      </div>
+
+      <div className="visual-proof-strip">
+        <span><Laptop size={14} /> 홈페이지</span>
+        <span><Search size={14} /> 구글</span>
+        <span><Instagram size={14} /> SNS</span>
+      </div>
+    </motion.div>
+  );
+};
+
 const Home = () => {
   return (
     <div className="overflow-hidden">
@@ -49,78 +153,87 @@ const Home = () => {
       <section className="hero-shell hero-shell--home pt-28 sm:pt-32">
         <Hero3D />
         <div className="container relative z-10">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.4 }}
-            className="max-w-[62rem]"
-          >
+          <div className="home-hero-layout">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1, ease }}
-              className="eyebrow-chip mb-5"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
+              className="home-hero-copy"
             >
-              <Sparkles size={14} />
-              한국어 · 영어 · 호주 전역
-            </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1, ease }}
+                className="eyebrow-chip mb-5"
+              >
+                <Sparkles size={14} />
+                한국어 · 영어 · 호주 전역
+              </motion.div>
 
-            <div className="overflow-hidden">
-              <h1 className="text-[3.4rem] font-black leading-[0.93] tracking-[-0.04em] sm:text-[5.2rem] md:text-[6rem]">
-                {['온라인에서', '내 비즈니스가', '어떻게 보일까요?'].map((line, i) => (
+              <div className="overflow-hidden">
+                <h1 className="home-hero-title">
                   <motion.span
-                    key={line}
                     initial={{ y: '110%', opacity: 0 }}
                     animate={{ y: '0%', opacity: 1 }}
-                    transition={{ duration: 0.75, delay: 0.18 + i * 0.12, ease }}
+                    transition={{ duration: 0.75, delay: 0.18, ease }}
                     className="block"
                   >
-                    {line}
+                    고객은 검색하고,
                   </motion.span>
+                  <motion.span
+                    initial={{ y: '110%', opacity: 0 }}
+                    animate={{ y: '0%', opacity: 1 }}
+                    transition={{ duration: 0.75, delay: 0.3, ease }}
+                    className="block"
+                  >
+                    <span className="hero-title-accent">신뢰는 결과로</span> 만듭니다
+                  </motion.span>
+                </h1>
+              </div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.65, delay: 0.55, ease }}
+                className="mt-6 max-w-[38rem] text-[1rem] leading-[1.65] text-text-muted"
+              >
+                구글, 홈페이지, SNS를 함께 점검하고 정리해
+                <br />
+                고객이 안심하고 문의할 수 있는 온라인 환경을 만듭니다.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: 0.66, ease }}
+                className="mt-6 flex flex-wrap gap-2"
+              >
+                {checkItems.map((item) => (
+                  <div key={item} className="metric-pill">
+                    <CircleCheckBig size={13} className="text-accent-primary" />
+                    <span>{item}</span>
+                  </div>
                 ))}
-              </h1>
-            </div>
+              </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, delay: 0.6, ease }}
-              className="mt-6 max-w-[38rem] text-[1rem] leading-[1.65] text-text-muted"
-            >
-              고객이 확인하는 네 곳을 보고
-              <br />
-              먼저 고칠 부분을 짚어드립니다.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.72, ease }}
-              className="mt-6 flex flex-wrap gap-2"
-            >
-              {checkItems.map((item) => (
-                <div key={item} className="metric-pill">
-                  <CircleCheckBig size={13} className="text-accent-primary" />
-                  <span>{item}</span>
-                </div>
-              ))}
+              <motion.div
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay: 0.78, ease }}
+                className="mt-7 flex flex-col gap-3 sm:flex-row"
+              >
+                <Link to="/contact" className="primary-button">
+                  무료 점검 신청하기
+                  <ArrowRight size={16} />
+                </Link>
+                <Link to="/pricing" className="secondary-button">
+                  서비스 및 가격 보기
+                </Link>
+              </motion.div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.84, ease }}
-              className="mt-7 flex flex-col gap-3 sm:flex-row"
-            >
-              <Link to="/contact" className="primary-button">
-                무료 점검 신청하기
-                <ArrowRight size={16} />
-              </Link>
-              <Link to="/pricing" className="secondary-button">
-                서비스 및 가격 보기
-              </Link>
-            </motion.div>
-          </motion.div>
+            <HeroChannelVisual />
+          </div>
         </div>
       </section>
 
