@@ -210,4 +210,3 @@ const StarterPackage = () => {
 };
 
 export default StarterPackage;
-
