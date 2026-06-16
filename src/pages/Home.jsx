@@ -522,8 +522,8 @@ const Home = () => {
                   className="rounded-2xl border border-[var(--glass-border)] bg-white p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--bg-darker)] text-[var(--accent-primary)] mb-5">
-                      <Icon size={20} />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--bg-darker)] text-[var(--accent-primary)] mb-5">
+                      <Icon size={20} className="block shrink-0" />
                     </div>
                     <h3 className="text-lg font-bold tracking-[-0.03em] text-[var(--text-main)]">{svc.title}</h3>
                     <p className="mt-3 text-xs leading-relaxed text-[var(--text-muted)]">{svc.desc}</p>
