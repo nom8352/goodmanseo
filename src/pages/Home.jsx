@@ -519,10 +519,10 @@ const Home = () => {
                 <motion.div
                   key={svc.title}
                   {...fadeUp(i * 0.08, 24)}
-                  className="rounded-2xl border border-[var(--glass-border)] bg-white p-6 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                  className="rounded-2xl border border-[var(--glass-border)] bg-white p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-between"
                 >
-                  <div>
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--bg-darker)] text-[var(--accent-primary)] mb-5">
+                  <div className="flex flex-col items-center">
+                    <div className="mb-5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--bg-darker)] text-[var(--accent-primary)]">
                       <Icon size={20} className="block shrink-0" />
                     </div>
                     <h3 className="text-lg font-bold tracking-[-0.03em] text-[var(--text-main)]">{svc.title}</h3>
