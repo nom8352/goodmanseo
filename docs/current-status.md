@@ -4,13 +4,36 @@ Last updated: 2026-06-16
 
 ## Current Project Direction
 
-GoodmanSEO is currently being framed as:
+GoodmanSEO is currently framed as a practical online-channel review and cleanup service:
 
-`A service that reviews Google, website, Instagram, and Facebook together, finds what is missing, and helps local businesses improve inquiry flow.`
+`Google, website, Instagram, and Facebook are reviewed together so a local business can see what is missing and what to fix first.`
+
+The website is also moving into a lighter "integrated digital solution" presentation, but the positioning guardrail remains:
+
+- start from a free online check / free diagnosis
+- keep Google Business Profile, website, Instagram, and Facebook connected
+- explain what customers see before they inquire
+- help the owner choose the next practical step
+
+Avoid turning GoodmanSEO into a generic website agency or abstract marketing consultancy.
+
+## Latest Work Summary Source
+
+`docs/work-summary.md` was added as a project report on 2026-06-16. It records:
+
+- light aqua / Mediterranean-style visual redesign
+- build verification claim: `npm run build` passed
+- quality audit claim: `19.5 / 20`
+- SEO audit claim: `100 / 100`
+- new legal pages: `/privacy`, `/terms`
+- new static prerender and sitemap entries for `/ai-business`, `/privacy`, `/terms`
+- design-system sync for `DESIGN.md` and `.impeccable/design.json`
+
+Treat those scores as report claims unless re-verified in the current thread.
 
 ## Local Wiki Status
 
-Karpathy-style LLM wiki initialized on 2026-06-16:
+Karpathy-style LLM wiki initialized and updated on 2026-06-16:
 
 - `wiki/index.md`
 - `wiki/schema.md`
@@ -23,9 +46,7 @@ Use this wiki as the structured project memory layer after reading `CLAUDE.md` a
 
 ## Impeccable Status
 
-Official `pbakaus/impeccable` project-local Codex setup was aligned on 2026-06-16.
-
-Current Impeccable files:
+Official `pbakaus/impeccable` project-local Codex setup is present:
 
 - `.agents/skills/impeccable/`
 - `.codex/hooks.json`
@@ -34,77 +55,64 @@ Current Impeccable files:
 - `.impeccable/design.json`
 - `.impeccable/live/config.json`
 
-Use `PRODUCT.md` and `DESIGN.md` as the canonical design context. `.impeccable.md` is retained only as legacy context.
+Use `PRODUCT.md` and `DESIGN.md` as canonical design context. `.impeccable.md` is legacy context only.
 
-The preferred homepage message direction is:
+Current design context from `DESIGN.md`:
 
-`고객은 검색하고, 신뢰는 결과로 만듭니다`
-
-Preferred supporting message:
-
-`구글, 홈페이지, SNS를 함께 점검하고 정리해 고객이 안심하고 문의할 수 있는 온라인 환경을 만듭니다.`
-
-## Messaging Principles
-
-Prefer:
-
-- practical language
-- clear small-business language
-- online channels together
-- free check
-- inquiry flow
-- what is missing
-- what to fix first
-
-Avoid:
-
-- vague strategic wording
-- abstract "structure" language as the lead message
-- making GoodmanSEO sound like a generic website agency
+- clear light theme, not the older dark theme
+- aqua teal accent `#007a8c`
+- deep muted ocean `#005b70`
+- white cards over soft aqua gradients
+- Pretendard body text, Outfit display headings
+- accessible mobile targets and explicit ARIA labels
 
 ## Website Status
 
-Recently completed and pushed to `main`:
+Current source-level site changes visible on 2026-06-16:
 
-- pricing page copy was reworked to use short category-style section titles
-- pricing hero title was simplified to `무료 점검`
-- pricing copy now explains when to choose each service instead of using long explanatory headings
-- AI business page was repositioned around practical AI automation for small business operations
-- AI business page now includes online 1:1 pricing plus an offline group workshop offer in Brisbane
-- AI business page audience copy and automation examples were rewritten to sound more practical and owner-focused
-- AI business offer naming is now `AI 실전 멘토링` instead of `AI 온라인 운영 전수`
-- blog was rebuilt as a text-first section with no images in the list or detail pages
-- blog now has 10 practical articles aligned with the current GoodmanSEO positioning
+- homepage now uses a code-built `HeroDevicesVisual` device/dashboard visual, not the older imported `src/assets/home-hero-channels.png`
+- homepage H1 rotates through problem-led phrases:
+  - `비즈니스, 홈페이지가 없나요?`
+  - `구글에서, 검색이 안 되시나요?`
+  - `인스타, 페북 시작하기 힘드신가요?`
+- homepage support copy says Google, homepage, and SNS are managed together to create a trusted online environment
+- homepage CTA language is now `무료 진단 신청`
+- pricing page hero is now `고객의 성장을 만드는 통합 디지털 솔루션`
+- pricing page is focused on homepage packages, diagnostics, SEO & marketing, and FAQ
+- AI page is now a light-theme service page around `AI 실전 멘토링`, `스튜디오 그룹`, and `워크숍 & 교육`
+- contact page/form now prefers `무료 진단` in the form selector while some pricing copy still says `무료 점검`
+- footer now links to `/privacy` and `/terms`
+- `src/App.jsx` includes `/privacy` and `/terms`
+- `scripts/generate-static-pages.mjs` and `public/sitemap.xml` include `/ai-business`, `/privacy`, and `/terms`
 
-Current website direction:
+## Current Offer Snapshot
 
-- homepage should lead with free check messaging
-- pricing should stay simple and scannable
-- AI business page should read as a practical automation service, not a generic AI lecture page
-- AI offer naming should use `AI 실전 멘토링` across navigation, pricing, SEO, and page copy
-- blog should support trust, search intent, and conversion rather than act like a magazine
+Visible in current source:
 
-Homepage update on 2026-06-16:
+- 무료 점검 / 무료 진단: free entry check
+- 퀵 진단: `AUD 149`
+- 온라인 올인원 진단: `AUD 289`
+- 스타터 홈페이지: `AUD 795`, original `AUD 1,095`
+- 비즈니스 홈페이지: `AUD 1,890`
+- 성장형 홈페이지: `AUD 3,500`
+- SEO All-in-One 스타트 패키지: `AUD 950`
+- SEO 월관리: `AUD 795 / month`
+- 구글 비즈니스 프로필: `AUD 300`
+- GBP maintenance add-on: `AUD 95 / month`
 
-- `$impeccable distill homepage` was applied to reduce repeated copy and simplify the flow
-- `$impeccable clarify homepage` was applied to make remaining copy more specific and actionable
-- homepage hero was updated to the new trust/search headline and a right-side channel mockup visual
-- homepage now centers on: online appearance, four checked channels, one next step
-- H1 was consolidated into one semantic heading
-- homepage typography was adjusted away from overly tight display letter spacing
+AI page currently shows service cards rather than public prices.
 
-## AI Business Page Notes
+## Legal / SEO Status
 
-Current page path:
+New legal routes:
 
-- `src/pages/AIBusiness.jsx`
+- `/privacy`: 개인정보처리방침, 시행일자 2026년 6월 16일
+- `/terms`: 이용약관, 시행일자 2026년 6월 16일
 
-Current direction for this page:
+Static/SEO updates:
 
-- lead with time-saving automation for owner-operators
-- use specific examples like product descriptions, customer replies, SNS drafts, GBP posts, and operating docs
-- keep the offer split clear between online 1:1 and offline group workshop
-- offline workshop location is currently `브리즈번`
+- `/ai-business`, `/privacy`, and `/terms` are registered in `scripts/generate-static-pages.mjs`
+- `/ai-business`, `/privacy`, and `/terms` are registered in `public/sitemap.xml`
 
 ## Blog Status
 
@@ -112,24 +120,13 @@ Current blog structure:
 
 - image-free title-first list layout
 - image-free detail pages
-- 10 new articles written and published in code
+- 10 practical articles aligned with Google Business Profile, homepage, SEO, channel consistency, and online operations
 
-Current article topics:
-
-1. Why an empty Google Business Profile hurts
-2. Five online basics to check before a new website
-3. Trust gaps when only Instagram is active
-4. Why a website may not convert inquiries
-5. Problems caused by mismatched info across channels
-6. What to fix first for a small business online
-7. What the free check includes
-8. What to verify before starting SEO
-9. What to review before rebuilding a website
-10. How to manage online operations without outsourcing everything
+The blog remains supporting content for trust, search intent, and conversion rather than a magazine-style section.
 
 ## Social Content Status
 
-Two-week Instagram schedule prepared:
+Two-week Instagram schedule previously prepared:
 
 - 2026-04-13 10:00
 - 2026-04-15 10:00
@@ -153,69 +150,62 @@ Planner asset folder:
 
 - `F:\Antigravity\goodmanseo\.codex-social\planner-assets`
 
-Relevant files:
-
-- `001.jpeg` to `006.jpeg` cropped to `1080x1080`
-- backup originals in `originals-before-crop`
-- PNG and TXT working assets also exist in the same folder
-
 Card news status checked on 2026-06-16:
 
 - root-level Instagram card images exist as `ig-post-01.png` to `ig-post-20.png`
-- `.codex-social/planner-assets` contains 6 PNG working assets, 6 TXT copy files, and 12 JPEG files including cropped/fallback originals
+- `.codex-social/planner-assets` contains PNG working assets, TXT copy files, and cropped/fallback JPEG files
 - no dedicated card-news Markdown files were found in the project
-- the card-news set is not currently stored as 60 Markdown files
 - detailed inventory is saved in `docs/cardnews-inventory.md`
 
-## Notion References
+## Notion / Meta Notes
 
-Main workspace hub:
-
-- `GoodmanSEO`
-
-Important Notion pages recently updated or created:
+Important Notion references from previous work:
 
 - `리포지셔닝 및 가격 방향 재정리 - 2026-04-11`
 - `마감 리포트 - 2026-04-11`
 - `마감 리포트 - 2026-04-11 추가 반영`
 - `SNS 포스팅 6개 재작성 및 분석 - 2026-04-12`
 
-## Meta / Planner Notes
+Meta planner note:
 
-- Instagram planner scheduling was working in Meta Business Suite.
-- Facebook Page / Instagram connection in Meta was confusing because of mixed portfolio and individual ownership states.
-- At one point, the Facebook Page showed `Owned by: Individual people`.
+- Instagram planner scheduling was previously working in Meta Business Suite.
+- Facebook Page / Instagram connection had mixed portfolio and individual ownership states.
 - If future work touches Meta setup again, verify ownership and page access before troubleshooting planner issues.
 
-## Known Local-Only Changes
+## Known Local-Only / Uncommitted Changes
 
-These files still had local uncommitted changes outside the shipped work during this thread:
+As of this update, the working tree has many modified and untracked files. Treat them as active user/project work.
 
+Notable current local changes include:
+
+- `src/pages/Home.jsx`
+- `src/pages/WebPricing.jsx`
+- `src/pages/AIBusiness.jsx`
+- `src/pages/Contact.jsx`
 - `src/components/ContactForm.jsx`
+- `src/components/Footer.jsx`
+- `src/components/Navbar.jsx`
 - `src/pages/StarterPackage.jsx`
+- `src/pages/Privacy.jsx`
+- `src/pages/Terms.jsx`
+- `docs/work-summary.md`
+- wiki updates
 
-Treat them carefully in future threads and do not assume they are already reflected on `main`.
+Do not assume these are already deployed or pushed unless GitHub state is checked.
+
+## Open Alignment Questions
+
+- `무료 점검` and `무료 진단` are both used. Decide whether to standardize one term.
+- `src/assets/home-hero-channels.png` still exists locally but current `Home.jsx` does not import it.
+- `/starter-package` still exists and may conflict with the newer `/pricing` starter package details.
+- Current pricing copy includes the phrase `비즈니스 홈페이지 요금제 혜택 전형 포함`; verify whether `전형` is a typo for `전부` or another intended word.
+- AI page no longer exposes earlier AI prices in the visible page. Confirm whether prices should remain hidden or return to pricing.
 
 ## Recommended Next Step
 
-Most natural next step:
+Review the current rendered site after the wiki update:
 
-- review remaining local-only pages and decide whether `StarterPackage.jsx` should be kept, redirected, or merged into pricing
-- then check whether `ContactForm.jsx` should be aligned again with the simplified free-check / inquiry flow
-
-## Recommended Start Prompt For Future Threads
-
-Use something like:
-
-`Please read [CLAUDE.md](F:\Antigravity\goodmanseo\CLAUDE.md) and [current-status.md](F:\Antigravity\goodmanseo\docs\current-status.md) first, then continue the GoodmanSEO project from there.`
-
-## When Updating This File
-
-Update this file whenever one of these changes:
-
-- homepage positioning
-- pricing direction
-- AI business page offer or location
-- social schedule
-- Meta setup status
-- current top priorities
+1. Confirm homepage hero language and right-side visual quality.
+2. Decide `무료 점검` vs `무료 진단`.
+3. Decide whether `/starter-package` should remain public.
+4. Re-run `npm run build` if a deploy/push is planned.

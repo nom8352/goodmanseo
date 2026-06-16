@@ -83,7 +83,7 @@ const StarterPackage = () => {
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
           <div className="section-heading mb-0 max-w-4xl">
-            <p className="section-kicker">기본 홈페이지</p>
+            <span className="font-serif italic text-[var(--accent-secondary)] text-base block mb-3">Starter Website</span>
             <h1 className="section-title max-w-4xl">
               기본 홈페이지,
               <br />
@@ -114,11 +114,10 @@ const StarterPackage = () => {
         >
           <div className="grid gap-10 lg:grid-cols-[0.78fr_1.22fr]">
             <aside className="pricing-spotlight">
-              <div className="eyebrow-chip w-fit">
-                <Sparkles size={14} />
+              <span className="font-serif italic text-[var(--accent-secondary)] text-sm uppercase tracking-wider block mb-4">
                 Goodman SEO 기본 홈페이지
-              </div>
-              <h2 className="mt-8 text-4xl font-black tracking-[-0.06em] sm:text-5xl">기본 홈페이지</h2>
+              </span>
+              <h2 className="text-4xl font-black tracking-[-0.04em] sm:text-5xl">기본 홈페이지</h2>
               <div className="mt-10 flex items-end gap-2">
                 <span className="text-7xl font-black tracking-[-0.08em]">$795</span>
                 <span className="pb-3 text-xl text-text-muted">일시불</span>
@@ -186,7 +185,7 @@ const StarterPackage = () => {
         </motion.div>
 
         <div className="section-heading mt-24">
-          <p className="section-kicker">Extra services</p>
+          <span className="font-serif italic text-[var(--accent-secondary)] text-base block mb-3">Add-on Services</span>
           <h2 className="section-title">원하시면 여기까지 도와드립니다</h2>
           <p className="section-copy">
             홈페이지를 만든 뒤에도

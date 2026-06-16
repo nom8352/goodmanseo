@@ -86,6 +86,36 @@ const routePages = [
     keywords:
       '호주 홈페이지 상담, 시드니 홈페이지 상담, 호주 구글 지도 등록 상담, 비즈니스 홈페이지 문의',
   },
+  {
+    route: '/ai-business',
+    title: 'AI 비즈니스 멘토링 | Goodman SEO',
+    description:
+      'Goodman SEO의 AI 비즈니스 멘토링 안내 페이지입니다. 소상공인을 위한 AI 자동화, 업무 생산성 향상, 맞춤형 멘토링 서비스를 만나보세요.',
+    canonical: 'https://goodmanseo.com/ai-business',
+    type: 'website',
+    keywords:
+      '호주 AI 멘토링, 시드니 AI 자동화, 소상공인 AI 자동화, 업무 생산성 AI, 비즈니스 AI 솔루션',
+  },
+  {
+    route: '/privacy',
+    title: '개인정보처리방침 | Goodman SEO',
+    description:
+      'Goodman SEO의 개인정보처리방침 안내 페이지입니다. 이용자분들의 소중한 개인정보를 안전하게 처리 및 보관하기 위한 기준을 담고 있습니다.',
+    canonical: 'https://goodmanseo.com/privacy',
+    type: 'website',
+    keywords:
+      '굿맨SEO 개인정보처리방침, 개인정보처리방침, Goodman SEO privacy policy',
+  },
+  {
+    route: '/terms',
+    title: '이용약관 | Goodman SEO',
+    description:
+      'Goodman SEO의 서비스 이용약관 안내 페이지입니다. 서비스 이용에 따른 권리, 의무, 책임사항 및 기타 필요한 사항을 규정합니다.',
+    canonical: 'https://goodmanseo.com/terms',
+    type: 'website',
+    keywords:
+      '굿맨SEO 이용약관, 서비스 이용약관, Goodman SEO terms of service',
+  },
 ];
 
 const replaceTag = (html, pattern, replacement) => {
@@ -182,17 +212,3 @@ run().catch((error) => {
   console.error('Failed to generate static pages.', error);
   process.exit(1);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-

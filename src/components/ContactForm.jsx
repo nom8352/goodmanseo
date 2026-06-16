@@ -1,42 +1,47 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Send } from 'lucide-react';
+import { Send, Search, Zap, Monitor, MessageSquare, Lock } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const INQUIRY_TYPES = [
   {
     value: 'free-check',
-    label: '무료 점검',
+    label: '무료 진단',
     heading: '무료 점검 신청',
-    helper: '현재 온라인 상태를 먼저 확인해드립니다.',
+    helper: '현재 온라인 상태를 무료로 진단받고 싶어요.',
+    icon: Search,
     messageLabel: '현재 가장 고민인 점',
-    messagePlaceholder: '예: 구글 노출이 약해요, 홈페이지가 오래됐어요',
-    submitLabel: '무료 점검 신청하기',
+    messagePlaceholder: '예: 검색 노출이 부족해요, 홈페이지 전환율이 낮아요 등',
+    submitLabel: '진단 신청하기',
   },
   {
     value: 'quick-diagnosis',
     label: '퀵 진단',
     heading: '퀵 진단 문의',
-    helper: '퀵 진단 진행 가능 여부와 준비사항을 안내드립니다.',
+    helper: '빠른 진단 결과가 필요해요.',
+    icon: Zap,
     messageLabel: '현재 가장 고민인 점',
-    messagePlaceholder: '예: 홈페이지와 구글 프로필 중 무엇부터 손봐야 할지 알고 싶어요',
-    submitLabel: '퀵 진단 문의하기',
+    messagePlaceholder: '예: 홈페이지와 구글 지도 프로필 중 시급히 개선해야 할 1순위가 궁금해요',
+    submitLabel: '진단 신청하기',
   },
   {
     value: 'all-in-one-diagnosis',
     label: '온라인 올인원 진단',
     heading: '온라인 올인원 진단 문의',
-    helper: '채널 전체를 함께 보는 진단 진행 방향을 안내드립니다.',
+    helper: '구글, 홈페이지, SNS를 통합 진단받고 싶어요.',
+    icon: Monitor,
     messageLabel: '현재 가장 고민인 점',
-    messagePlaceholder: '예: 구글, 홈페이지, 인스타그램, 페이스북을 전체적으로 진단받고 싶어요',
-    submitLabel: '올인원 진단 문의하기',
+    messagePlaceholder: '예: 구글 비즈니스, 홈페이지, 인스타그램 전체에 걸친 진단 가이드라인이 필요해요',
+    submitLabel: '진단 신청하기',
   },
   {
     value: 'general-inquiry',
     label: '일반 문의',
     heading: '일반 문의',
-    helper: '일반 문의로 접수됩니다.',
+    helper: '기타 문의사항이 있어요.',
+    icon: MessageSquare,
     messageLabel: '문의 내용',
-    messagePlaceholder: '문의하실 내용을 적어주세요',
-    submitLabel: '일반 문의 보내기',
+    messagePlaceholder: '예: 구체적인 제휴/협업 제안이나 기타 궁금하신 사항을 자유롭게 남겨주세요.',
+    submitLabel: '문의 신청하기',
   },
 ];
 
@@ -177,26 +182,51 @@ const ContactForm = ({
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_subject" value={`[Goodman SEO] ${inquiryMeta.label}${form.company ? ` - ${form.company}` : ''}`} />
 
-      <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm leading-relaxed text-text-muted">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-text-soft">문의 유형</p>
+      <div className="rounded-2xl border border-[var(--glass-border)] bg-[var(--bg-darker)] px-4 py-4 text-sm leading-relaxed text-text-muted">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#556877]">문의 유형</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {INQUIRY_TYPES.map((item) => (
-            <label
-              key={item.value}
-              className={`cursor-pointer rounded-2xl border px-4 py-4 transition ${form.inquiryType === item.value ? 'border-[rgba(216,255,114,0.35)] bg-[rgba(216,255,114,0.08)] text-white' : 'border-white/10 bg-white/[0.02] text-text-muted hover:border-white/20 hover:bg-white/[0.04]'}`}
-            >
-              <input
-                type="radio"
-                name="inquiryType"
-                value={item.value}
-                checked={form.inquiryType === item.value}
-                onChange={handleChange}
-                className="sr-only"
-              />
-              <span className="block text-base font-semibold text-white">{item.label}</span>
-              <span className="mt-2 block text-sm leading-relaxed text-text-muted">{item.helper}</span>
-            </label>
-          ))}
+          {INQUIRY_TYPES.map((item) => {
+            const IconComponent = item.icon;
+            const isSelected = form.inquiryType === item.value;
+            return (
+              <label
+                key={item.value}
+                className={`flex cursor-pointer gap-4 rounded-2xl border px-4 py-4 transition-[border-color,background-color,box-shadow,transform] duration-300 ${
+                  isSelected
+                    ? 'border-[#007a8c] bg-white text-[#007a8c] shadow-md shadow-[#007a8c]/5 -translate-y-0.5'
+                    : 'border-[#e2e8f0] bg-white text-[#556877] hover:border-[#007a8c]/40 hover:bg-[#007a8c]/5'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="inquiryType"
+                  value={item.value}
+                  checked={isSelected}
+                  onChange={handleChange}
+                  className="sr-only"
+                />
+                
+                {/* 좌측 아이콘 영역 */}
+                <div
+                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-[background-color,color] duration-300 ${
+                    isSelected ? 'bg-[#007a8c]/10 text-[#007a8c]' : 'bg-[#f8fafc] text-[#94a3b8]'
+                  }`}
+                >
+                  <IconComponent size={20} className={isSelected ? 'animate-pulse' : ''} />
+                </div>
+
+                {/* 우측 텍스트 영역 */}
+                <div className="flex flex-col text-left">
+                  <span className={`text-[0.95rem] font-bold transition-[color] duration-300 ${isSelected ? 'text-[#007a8c]' : 'text-[#0f2230]'}`}>
+                    {item.label}
+                  </span>
+                  <span className="mt-1 text-[0.78rem] leading-relaxed text-[#556877] font-medium">
+                    {item.helper}
+                  </span>
+                </div>
+              </label>
+            );
+          })}
         </div>
       </div>
 
@@ -218,26 +248,26 @@ const ContactForm = ({
         </label>
         <label className="form-field">
           <span>업종 / 지역</span>
-          <input name="businessType" type="text" placeholder="예: 시드니 카페, 뷰티샵" value={form.businessType} onChange={handleChange} />
+          <input name="businessType" type="text" placeholder="예: 카페 / 시드니 스트라스필드" value={form.businessType} onChange={handleChange} />
         </label>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="form-field">
           <span>홈페이지 주소</span>
-          <input name="websiteUrl" type="url" placeholder="https://..." value={form.websiteUrl} onChange={handleChange} />
+          <input name="websiteUrl" type="url" placeholder="https://www.example.com" value={form.websiteUrl} onChange={handleChange} />
         </label>
         <label className="form-field">
           <span>Google Business Profile 링크</span>
-          <input name="googleBusinessUrl" type="url" placeholder="https://..." value={form.googleBusinessUrl} onChange={handleChange} />
+          <input name="googleBusinessUrl" type="url" placeholder="https://g.page/yourbusiness" value={form.googleBusinessUrl} onChange={handleChange} />
         </label>
         <label className="form-field">
           <span>Instagram 링크</span>
-          <input name="instagramUrl" type="url" placeholder="https://instagram.com/..." value={form.instagramUrl} onChange={handleChange} />
+          <input name="instagramUrl" type="url" placeholder="https://instagram.com/yourbusiness" value={form.instagramUrl} onChange={handleChange} />
         </label>
         <label className="form-field">
           <span>Facebook 링크</span>
-          <input name="facebookUrl" type="url" placeholder="https://facebook.com/..." value={form.facebookUrl} onChange={handleChange} />
+          <input name="facebookUrl" type="url" placeholder="https://facebook.com/yourbusiness" value={form.facebookUrl} onChange={handleChange} />
         </label>
       </div>
 
@@ -254,16 +284,23 @@ const ContactForm = ({
       </label>
 
       {notice ? (
-        <p className={`rounded-2xl border px-4 py-3 text-sm leading-relaxed ${status === 'success' ? 'border-[rgba(216,255,114,0.35)] bg-[rgba(216,255,114,0.08)] text-white' : 'border-white/10 bg-white/5 text-text-muted'}`}>
+        <p className={`rounded-2xl border px-4 py-3 text-sm leading-relaxed ${status === 'success' ? 'border-[var(--accent-primary)] bg-[rgba(0,91,112,0.04)] text-[var(--accent-primary)]' : 'border-[var(--glass-border)] bg-[var(--bg-soft)] text-text-muted'}`}>
           {notice}
         </p>
       ) : null}
 
-      <div className="flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-        <p className="max-w-xl text-sm leading-relaxed text-text-muted">{footerText}</p>
-        <button type="submit" className="primary-button" disabled={status === 'submitting'}>
+      <div className="flex flex-col gap-4 border-t border-[#e2e8f0] pt-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-start gap-2 max-w-xl text-left">
+          <Lock size={15} className="mt-1 shrink-0 text-[#007a8c]/80" />
+          <p className="text-[0.82rem] leading-relaxed text-[#556877] font-medium">{footerText}</p>
+        </div>
+        <button
+          type="submit"
+          disabled={status === 'submitting'}
+          className="flex items-center justify-center gap-2.5 rounded-lg bg-[#007a8c] px-7 py-3 text-[0.92rem] font-bold text-white transition-[background-color,transform,box-shadow] duration-300 hover:bg-[#006270] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#007a8c]/20 active:translate-y-0 disabled:opacity-50"
+        >
           {status === 'submitting' ? '전송 중...' : inquiryMeta.submitLabel}
-          <Send size={18} />
+          <Send size={15} />
         </button>
       </div>
     </form>

@@ -32,7 +32,7 @@ const Navbar = () => {
 
         <div className="hidden items-center gap-10 md:flex">
           {navLinks.map((link) => (
-            <Link key={link.name} to={link.href} className="text-sm font-semibold text-text-muted transition-colors hover:text-white">
+            <Link key={link.name} to={link.href} className="text-sm font-semibold text-text-muted transition-colors hover:text-[var(--accent-primary)]">
               {link.name}
             </Link>
           ))}
@@ -42,16 +42,20 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button className="text-white md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <button
+          className="text-[var(--text-main)] md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? '메뉴 닫기' : '메뉴 열기'}
+        >
           {isMenuOpen ? <X /> : <Menu />}
         </button>
       </div>
 
       {isMenuOpen && (
-        <div className="absolute left-0 top-full w-full border-b border-white/10 bg-[#0d1117]/95 py-12 backdrop-blur-2xl md:hidden">
+        <div className="absolute left-0 top-full w-full border-b border-[var(--glass-border)] bg-white/95 py-12 backdrop-blur-2xl md:hidden shadow-lg">
           <div className="container flex flex-col items-center gap-8">
             {navLinks.map((link) => (
-              <Link key={link.name} to={link.href} className="text-xl font-bold transition-colors hover:text-accent-primary" onClick={() => setIsMenuOpen(false)}>
+              <Link key={link.name} to={link.href} className="text-xl font-bold text-[var(--text-main)] transition-colors hover:text-[var(--accent-primary)]" onClick={() => setIsMenuOpen(false)}>
                 {link.name}
               </Link>
             ))}

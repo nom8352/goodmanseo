@@ -9,6 +9,8 @@ import WebPricing from './pages/WebPricing';
 import Blog from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -35,6 +37,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:postId" element={<BlogDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
           </Routes>
         </main>
         <Footer />

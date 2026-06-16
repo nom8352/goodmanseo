@@ -1,20 +1,17 @@
 ---
 name: "GoodmanSEO"
-description: "A practical online-channel review service for Korean-speaking small business owners in Australia."
+description: "A calm, practical online-channel review and cleanup service for local businesses in Australia."
 colors:
-  accent-primary: "#d8ff72"
-  accent-secondary: "#8ad7ff"
-  accent-tertiary: "#f1efe8"
-  bg-dark: "#0b0f16"
-  bg-darker: "#07090e"
-  panel-dark: "#090d13"
-  nav-dark: "#0a0e15"
-  text-main: "#f5f7fb"
-  text-muted: "#a8b1c7"
-  text-soft: "#7f8ba3"
-  ink-on-accent: "#091018"
-  glass-border: "#ffffff1a"
-  glass-highlight: "#ffffff29"
+  accent-primary: "#005b70"
+  accent-secondary: "#007a8c"
+  accent-tertiary: "#ffffff"
+  bg-light: "#f8fafc"
+  bg-gradient-from: "#f2fafb"
+  bg-gradient-to: "#ecf6f8"
+  text-main: "#0f2230"
+  text-muted: "#4e6170"
+  text-soft: "#7c8f9f"
+  glass-border: "rgba(0, 91, 112, 0.08)"
 typography:
   display:
     fontFamily: "Outfit, Pretendard, sans-serif"
@@ -22,34 +19,22 @@ typography:
     fontWeight: 800
     lineHeight: 0.95
     letterSpacing: "-0.04em"
-  hero:
-    fontFamily: "Outfit, Pretendard, sans-serif"
-    fontSize: "clamp(3.4rem, 8vw, 6rem)"
-    fontWeight: 900
-    lineHeight: 0.93
-    letterSpacing: "-0.04em"
-  title:
-    fontFamily: "Outfit, Pretendard, sans-serif"
-    fontSize: "1.45rem"
-    fontWeight: 800
-    lineHeight: 1.15
-    letterSpacing: "-0.04em"
   body:
     fontFamily: "Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
     fontSize: "0.95rem"
     fontWeight: 400
     lineHeight: 1.7
-    letterSpacing: "0"
+    letterSpacing: "normal"
   label:
     fontFamily: "Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
-    fontSize: "0.75rem"
+    fontSize: "0.82rem"
     fontWeight: 700
     lineHeight: 1.2
-    letterSpacing: "0.14em"
+    letterSpacing: "0.05em"
 rounded:
-  sm: "0.9rem"
+  sm: "0.5rem"
   md: "1rem"
-  lg: "1.75rem"
+  lg: "1.5rem"
   panel: "2rem"
   pill: "9999px"
 spacing:
@@ -60,169 +45,111 @@ spacing:
   xl: "2.75rem"
 components:
   button-primary:
-    backgroundColor: "{colors.accent-primary}"
-    textColor: "{colors.ink-on-accent}"
+    backgroundColor: "{colors.accent-secondary}"
+    textColor: "{colors.accent-tertiary}"
     typography: "{typography.body}"
     rounded: "{rounded.pill}"
-    padding: "0 1.25rem"
-    height: "2.65rem"
+    padding: "0.75rem 1.75rem"
   button-secondary:
-    backgroundColor: "{colors.panel-dark}"
-    textColor: "{colors.text-main}"
+    backgroundColor: "{colors.accent-tertiary}"
+    textColor: "{colors.accent-secondary}"
     typography: "{typography.body}"
     rounded: "{rounded.pill}"
-    padding: "0 1.25rem"
-    height: "2.65rem"
+    padding: "0.75rem 1.75rem"
   card-panel:
-    backgroundColor: "{colors.panel-dark}"
+    backgroundColor: "{colors.accent-tertiary}"
     textColor: "{colors.text-main}"
-    rounded: "{rounded.lg}"
-    padding: "1.5rem"
-  chip:
-    backgroundColor: "{colors.panel-dark}"
-    textColor: "{colors.text-main}"
-    rounded: "{rounded.md}"
-    padding: "0.7rem 0.9rem"
+    rounded: "{rounded.panel}"
+    padding: "2rem"
 ---
 
 # Design System: GoodmanSEO
 
 ## 1. Overview
 
-**Creative North Star: "The Calm Online Checkup"**
+**Creative North Star: "The Calm Online Checkup (청량하고 단정한 온라인 검진)"**
 
-GoodmanSEO should feel like a calm, practical review desk for a small business owner who wants to know how their business looks online. The visual system can feel modern and polished, but it must always make the next decision easier: check current state, see what is missing, choose the right next step.
-
-The current interface is a dark, atmospheric brand site with glassy panels, lime and light-blue accents, rounded controls, and Korean-first typography. This polish should support clarity rather than become the message. The system explicitly rejects generic website-agency landing pages, abstract consulting language, salesy social-ad styling, and long copy blocks that make busy owners work too hard.
+GoodmanSEO는 호주와 한국 소상공인들이 복잡한 기술적 장벽 없이 자신의 온라인 현황(구글, 웹사이트, SNS)을 투명하고 편안하게 진단받을 수 있는 "청량하고 정돈된 1차 검진 데스크" 형태의 시각 체계를 지향합니다. 인위적인 다크 모드 테마에서 탈피하여, 맑은 날씨의 지중해 해변을 연상시키는 맑고 연한 청록 그라디언트 기반의 라이트 테마로 전면 개편되었습니다.
 
 **Key Characteristics:**
-
-- Korean-first, owner-friendly, scan-first communication.
-- Dark tinted surfaces with bright but sparse accent use.
-- Rounded controls and panels, but no unnecessary nested-card scaffolding.
-- Practical hierarchy: problem, check scope, next action.
-- Motion and 3D as atmosphere, never as a substitute for clarity.
+- 은은한 청록/블루 그라디언트 배경과 정갈한 백색 카드 패널의 매칭
+- 좁은 자간 겹침을 예방하는 Outfit display 한글 서체 규격
+- 조작감이 느껴지는 프리미엄 인터랙티브 모션(Hover Lift-up 및 SVG 드로잉)
+- 모바일 환경에서의 엄격한 웹 접근성(ARIA) 및 터치 타겟(44x44px 이상) 확보
 
 ## 2. Colors
 
-The palette is a dark operational base with two service accents: lime for action and light blue for review/technology cues.
+은은한 모닝 코브 청록 색조가 브랜드 신뢰도와 전문적 기술 검진의 기조를 형성합니다.
 
 ### Primary
-
-- **Checkup Lime** (`accent-primary`): The main action color for primary CTAs, success cues, and selective emphasis. Use sparingly so it remains meaningful.
+- **Aqua Checkup Teal** (`accent-secondary` / `#007a8c`): 주요 의사결정 CTA 버튼, 성공 상태, 그리고 비주얼적 핵심 텍스트를 강조하는 역할을 맡습니다.
 
 ### Secondary
-
-- **Review Blue** (`accent-secondary`): The supporting accent for icons, secondary emphasis, and the online-channel/technology layer.
-
-### Tertiary
-
-- **Soft Trust White** (`accent-tertiary`): A warm off-white highlight for restrained brand emphasis.
+- **Deep Muted Ocean** (`accent-primary` / `#005b70`): 서브 뱃지 라벨 및 강한 강조를 지니는 타이틀 컴포넌트에 활용합니다.
 
 ### Neutral
-
-- **Midnight Base** (`bg-dark`): The body background and core brand atmosphere.
-- **Deeper Midnight** (`bg-darker`): Lower-depth page background and footer-adjacent surfaces.
-- **Panel Night** (`panel-dark`): Card, panel, and contained tool backgrounds.
-- **Main Text** (`text-main`): Primary text on dark backgrounds.
-- **Muted Text** (`text-muted`): Supporting copy when contrast remains readable.
-- **Soft Text** (`text-soft`): Labels, metadata, and low-priority UI copy only.
+- **Clear Morning** (`bg-gradient-from` / `#f2fafb`): 최상단 배경을 이루는 맑은 해무 청록 톤.
+- **Soft Coast** (`bg-gradient-to` / `#ecf6f8`): 페이지 하단으로 가며 퍼지는 은은한 그라디언트 톤.
+- **Ocean Ink** (`text-main` / `#0f2230`): 높은 대비를 제공하는 가독성 극대화 남색 텍스트 컬러.
+- **Muted Sand** (`text-muted` / `#4e6170`): 서브 타이틀 및 보조 설명 텍스트를 담당하는 다크 그레이-네이비.
 
 ### Named Rules
-
-**The Sparse Accent Rule.** Lime is for decisions and confirmation. If every section glows, nothing is important.
-
-**The Readability First Rule.** Muted text must stay readable on dark panels. Never use low-contrast gray for core explanations.
+**The Sparse Accent Rule (희소성의 법칙).** 청록색 포인트 컬러는 중요한 폼 전송, 신청 버튼 등 전체 화면 대비 10% 이하의 극소 면적에만 적용하여 희소성을 유지합니다.
+**The Contrast Safety Rule (대비 안전 규칙).** 연한 회색 글씨(`text-soft`)는 라이트 배경에서 글씨가 뭉개지므로 본문이나 입력 폼 설명에 절대 단독으로 사용하지 않습니다.
 
 ## 3. Typography
 
-**Display Font:** Outfit with Pretendard fallback.
-**Body Font:** Pretendard with system fallbacks.
-**Label/Mono Font:** No separate mono style is part of the brand system.
-
-**Character:** Outfit gives headings a modern, confident edge; Pretendard keeps Korean copy human and readable. The pairing should feel crisp but not tech-cold.
+**Display Font:** Outfit (Pretendard fallback)
+**Body Font:** Pretendard (시스템 기본 fallback)
 
 ### Hierarchy
-
-- **Hero** (900, clamp max 6rem, 0.93 line-height): Homepage brand statement only. Keep letter-spacing no tighter than `-0.04em`.
-- **Display** (800, clamp 2.2rem to 3.6rem, 0.95 line-height): Section titles and major page headings.
-- **Title** (800, 1.45rem, compact line-height): Card and package titles.
-- **Body** (400-600, 0.9rem to 1rem, 1.65-1.8 line-height): Explanatory Korean copy, capped to readable line lengths.
-- **Label** (700, 0.72rem to 0.82rem, tracked): Use sparingly for form labels, metadata, and one-off chips.
+- **Display** (800, `clamp(2.2rem, 3.4vw, 3.6rem)`, 0.95 line-height): 섹션의 주 타이틀과 대제목.
+- **Title** (800, `1.45rem`, 1.15 line-height): 요금 카드 패키지명 등.
+- **Body** (400, `0.95rem`, 1.7 line-height): 실무 비즈니스 설명문. 줄당 최대 길이는 한글 가독성 기준 60-70자를 넘지 않도록 래핑을 제한합니다.
+- **Label** (700, `0.82rem`, 0.05em letter-spacing): 폼의 필드명 및 소형 메타 뱃지 텍스트.
 
 ### Named Rules
-
-**The Short Korean Line Rule.** Homepage and service copy should use short, human Korean sentences. Do not pack multiple ideas into one sentence.
-
-**The No-Cramped Display Rule.** The existing source has several `-0.06em` to `-0.08em` display values. New work should use `-0.04em` as the tightest display tracking.
+**The No-Cramped Display Rule (자간 마지노선).** 디자인 Scaffold 도구들의 training default(자간 -0.05em~-0.08em)는 글자가 겹쳐 비전문적으로 보이므로, display 헤드라인의 자간 마지노선은 항상 **`-0.04em`** 이상을 유지합니다.
 
 ## 4. Elevation
 
-The current system uses a hybrid of tonal layering, glass borders, backdrop blur, and soft ambient shadows. This gives depth to the dark surface, but it can become visually heavy if every element gets the same treatment.
+본 시스템은 화이트 패널과 연청록 배경의 입체감을 주기 위해 1px의 얇은 보더 라인과 매우 미세하고 은은한 청록 섀도우를 조합하여 깊이감을 투사합니다.
 
 ### Shadow Vocabulary
-
-- **Ambient Panel Lift** (`0 18px 60px rgba(0, 0, 0, 0.2), 0 8px 32px rgba(138, 215, 255, 0.08)`): Major panels only.
-- **Primary CTA Glow** (`0 16px 44px rgba(216, 255, 114, 0.24)`): Primary action buttons only.
-- **Focus Glow** (`0 0 0 4px rgba(216, 255, 114, 0.08)`): Input focus and keyboard focus support.
+- **Mild Checkup shadow** (`shadow-md shadow-[#007a8c]/5`): 폼 카드 및 2열 자주 묻는 질문(FAQ) 등 주 패널에 외곽선 가독성을 보완하기 위해 은은하게 깔리는 청록계열 서브 섀도우.
+- **Interactive Button Lift** (`hover:shadow-lg hover:shadow-[#007a8c]/20`): 버튼 호버 시 위로 감속 Deceleration 솟아오름 모션과 함께 퍼지는 청록 광택 섀도우.
 
 ### Named Rules
-
-**The No Decorative Glass Rule.** Glass treatment must frame a real decision, form, offer, or content group. Do not add blur just to make a section feel designed.
+**The Anti-Ghost-Card Rule (그림자 남용 방지).** 1px 실선 테두리(`border-[#e2e8f0]`)와 거대 그림자(`shadow-2xl` 등)를 한 컨테이너에 동시에 병용하여 비주얼 피로도를 높이는 행위를 전면 배제합니다.
 
 ## 5. Components
 
 ### Buttons
-
-- **Shape:** Full pill (`9999px`) for primary and secondary CTAs.
-- **Primary:** Checkup Lime background with dark ink text, bold label, icon allowed when it clarifies direction.
-- **Hover / Focus:** Small vertical lift is acceptable; pair it with visible focus states for keyboard users.
-- **Secondary:** Transparent dark surface with light border and white text. Use for supporting navigation, not competing conversion.
-
-### Chips
-
-- **Style:** Soft dark panel, thin border, compact icon plus text.
-- **State:** Use for scope tags like Google, website, Instagram, Facebook. Keep them short.
+- **Shape:** primary/secondary CTA는 알약 형태(`rounded-full / 9999px`)를 사용하며, 입력 폼 하단 제출 버튼은 실물 인풋 규격과의 조화를 위해 모서리가 깎인 사각형 형태(`rounded-lg`)를 사용합니다.
+- **Primary CTA:** 청록색 `#007a8c` 배경에 백색 텍스트.
+- **Hover Motion:** 호버 시 `hover:-translate-y-0.5` 및 `transition-[background-color,transform,box-shadow]`를 구체 지정하여 레이아웃 리페인트를 방지하고 매끄러운 60fps 렌더링 성능을 보장합니다.
 
 ### Cards / Containers
-
-- **Corner Style:** Existing cards use generous radii (`1.75rem` to `2rem`). Do not increase beyond this; use smaller radii for dense UI.
-- **Background:** Dark translucent panels over the midnight base.
-- **Shadow Strategy:** Major panels may use ambient lift; repeated cards should rely more on border and tonal separation.
-- **Border:** Thin white-alpha borders.
-- **Internal Padding:** `1.15rem` on mobile, `1.5rem` desktop baseline.
+- **Corner Style:** 대형 카드는 `rounded-3xl` 반경을 사용하여 지나치게 날카롭거나 과도하게 동그란(32px 이상) AI tells를 극복합니다.
+- **Background:** 순수 백색(`bg-white`) 배경을 사용해 그라디언트 배경 위에서 명확하게 도드라지게 연출합니다.
 
 ### Inputs / Fields
-
-- **Style:** Dark translucent input, `1rem` radius, thin white-alpha border.
-- **Focus:** Lime-tinted border plus subtle focus ring.
-- **Error / Disabled:** Error states should use clear text and border treatment, not color alone.
+- **Focus:** 포커스 시 입력 창의 테두리가 `#007a8c`로 변하고, 연한 청록 포커스 링(`box-shadow: 0 0 0 4px rgba(0, 91, 112, 0.08)`)이 부드럽게 켜집니다.
 
 ### Navigation
-
-The nav is a fixed top bar with the GoodmanSEO mark, concise page links, and a free-check CTA. Mobile uses a full-width dropdown panel. Keep labels short and avoid adding more nav items unless the owner can understand their role immediately.
+- 상단 고정형 헤더 바로써 스크롤 시 반투명 라이트 글래스 블러(`backdrop-blur-2xl bg-white/80`)가 적용되어 뒤쪽 그라디언트 광원을 투과시킵니다.
 
 ### Signature Component
-
-**Homepage 3D Hero.** The 3D background can carry atmosphere, but hero copy and CTAs must remain readable and first-priority.
+- **3D FAQ Robot Icon:** 자주 묻는 질문(FAQ) 섹션 좌측에 위치하는 눈 깜빡임(Blink) 애니메이션이 탑재된 입체형 3D 로봇 그래픽 일러스트 컴포넌트입니다.
 
 ## 6. Do's and Don'ts
 
 ### Do:
-
-- **Do** lead with the free online check and the customer-visible question: "How does my business look online right now?"
-- **Do** keep Korean copy short, direct, and owner-friendly.
-- **Do** preserve the Google + website + Instagram + Facebook story on every core page.
-- **Do** keep price tables scannable and explicit, especially where packages differ.
-- **Do** use lime accents for real actions and blue accents for review/technology support.
-- **Do** test mobile line wrapping for Korean headings and buttons.
+- **Do** 모든 인터랙티브 링크와 메뉴 버튼에 웹 접근성 표준을 준수하는 `aria-label`을 반드시 기재합니다.
+- **Do** 모바일 터치 접근성을 위해 푸터의 소셜 채널 링크 등의 규격을 최소 `44px (h-11 w-11)` 이상으로 준수합니다.
+- **Do** 한글 문구의 자연스러운 줄바꿈을 위해 `word-break: keep-all` 속성을 텍스트 블록에 필수 선언합니다.
 
 ### Don't:
-
-- **Don't** make GoodmanSEO sound like a generic website-agency landing page.
-- **Don't** lead with abstract "online structure" consulting language.
-- **Don't** use salesy social ads or hype-heavy marketing copy.
-- **Don't** add long explanatory sections where a busy owner needs one clear next action.
-- **Don't** present near-duplicate social-card design options that only change surface styling.
-- **Don't** use gradient text for new work; prefer solid text color and hierarchy.
-- **Don't** nest cards inside cards or turn every section into a floating card.
+- **Don't** 1px 테두리와 16px 이상의 거대 섀도우를 함께 혼용하여 SaaS 클리셰(Ghost-card)를 남용하지 않습니다.
+- **Don't** 그라디언트 텍스트(`background-clip: text`)를 사용하지 않으며 단색 굵기 밸런스로 핵심을 전달합니다.
+- **Don't** 단순 장식을 위한 뜬금없는 유틸리티 모노스페이스 서체나 대각선 스트라이프 패턴을 렌더링하지 않습니다.

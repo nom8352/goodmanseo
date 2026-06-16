@@ -2,63 +2,97 @@
 
 Last updated: 2026-06-16
 
-This reflects visible source code as checked on 2026-06-16. Verify `src/pages/WebPricing.jsx` and `src/pages/AIBusiness.jsx` before quoting prices publicly.
+This reflects visible source code as checked on 2026-06-16. Verify `src/pages/WebPricing.jsx`, `src/pages/AIBusiness.jsx`, and rendered deployment before quoting prices publicly.
 
 ## Funnel
 
-1. Free check
+1. Free check / free diagnosis
 2. Paid diagnosis
-3. Website / SEO / Google Business Profile / support execution
-4. Ongoing management or AI education
+3. Website / SEO / Google Business Profile execution
+4. AI automation, marketing support, or ongoing optimization
+
+## Naming Caution
+
+Current source uses both:
+
+- `무료 점검`
+- `무료 진단`
+
+Pricing still presents `무료 점검`; the contact form selector and homepage CTA currently use `무료 진단`. Decide whether one term should be standardized before final marketing use.
 
 ## Free And Diagnostic Offers
 
 From `src/pages/WebPricing.jsx`:
 
-- 무료 점검: free, basic check
-- 퀵 진단: AUD 149, one-time
-- 온라인 올인원 진단: AUD 289, one-time
+- 무료 점검: free, basic online exposure/channel consistency check
+- 퀵 진단: `AUD 149`, one-time
+- 온라인 올인원 진단: `AUD 289`, one-time
 
-Core diagnostic scope:
+Current diagnostic emphasis:
 
-- website
-- Google Business Profile
-- Instagram and Facebook
-- on-page SEO basics
-- positioning and channel consistency depending on tier
+- website speed/errors
+- Google map/profile registration and visibility
+- Google search visibility
+- Instagram/Facebook operation state
+- social channel positioning
+- channel path and consistency
+- urgent top problems and next steps
 
 ## Website Packages
 
 From `src/pages/WebPricing.jsx`:
 
-- 스타터 홈페이지: AUD 795 launch promo, original AUD 1,095
-- 비즈니스 홈페이지: AUD 1,890
-- 성장형 홈페이지: AUD 3,500
+- 스타터 홈페이지: `AUD 795`, original `AUD 1,095`, one-time
+- 비즈니스 홈페이지: `AUD 1,890`, one-time
+- 성장형 홈페이지: `AUD 3,500`, one-time
 
 Important hierarchy:
 
-- Starter is the light entry package.
-- Business homepage is the main execution package.
-- Growth homepage includes broader SEO and AI support.
+- Starter is a compact essential website package up to 3 pages.
+- Business homepage is the recommended marketing-optimized package up to 7 pages.
+- Growth homepage is for larger content, SEO All-in-One support, social diagnostics, and 3 months of AI customer-response support.
 
-## SEO And GBP
+Open copy issue:
+
+- Growth package currently says `비즈니스 홈페이지 요금제 혜택 전형 포함`; verify whether `전형` is intended.
+
+## SEO And Google Business Profile
 
 From `src/pages/WebPricing.jsx`:
 
-- SEO All-in-One 스타트 패키지: AUD 950
-- SEO 월관리: AUD 795 / month
-- 구글 비즈니스 프로필 세팅: AUD 300
-- 구글 비즈니스 프로필 월관리: AUD 95 / month
+- SEO All-in-One 스타트 패키지: `AUD 950`
+- SEO 월관리: `AUD 795 / month`
+- 구글 비즈니스 프로필: `AUD 300`, one-time setup
+- GBP maintenance add-on: `AUD 95 / month`
 
-## Monthly And Education
+Current GBP presentation is one card with the monthly maintenance option listed as an add-on, not a separate monthly package card.
 
-From `src/pages/WebPricing.jsx` and `src/pages/AIBusiness.jsx`:
+## AI Business Services
 
-- 홈페이지 관리: AUD 200 / month
-- AI 실전 스터디그룹: AUD 590 launch price, online 3-week course
-- AI 실전 멘토링: AUD 2,500 online 1:1
-- 오프라인 그룹 워크숍: AUD 250 / person, 3 hours, Brisbane
+From `src/pages/AIBusiness.jsx`:
 
-## Caution
+- AI 실전 멘토링
+- 스튜디오 그룹
+- 워크숍 & 교육
 
-The old `/starter-package` page still exists and may not fully match the newer pricing hierarchy. Confirm whether it should be kept, redirected, or merged before using it as the source of truth.
+Current visible AI page does not show public prices. It presents service cards, recommended audiences, and contact CTAs.
+
+Current AI positioning:
+
+- practical AI use for product descriptions, review replies, customer response, and operations
+- data-driven content and ad strategy through `스튜디오 그룹`
+- team workshops and education for internal capability building
+
+## Legacy / Drift Caution
+
+Older wiki notes and prior pricing work mentioned:
+
+- 홈페이지 관리: `AUD 200 / month`
+- AI 실전 스터디그룹: `AUD 590`
+- AI 실전 멘토링: `AUD 2,500`
+- 오프라인 그룹 워크숍: `AUD 250 / person`
+
+Those prices are not visible in the current `AIBusiness.jsx` page and the monthly management/education sections are not visible in the current `WebPricing.jsx` page. Treat them as historical until the user confirms they should return.
+
+The old `/starter-package` page still exists and may not fully match the newer pricing hierarchy. Confirm whether it should be kept, redirected, or merged before using it as a source of truth.
+

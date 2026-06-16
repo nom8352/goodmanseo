@@ -73,8 +73,8 @@ Limits:
 
 Purpose:
 
-- Latest working status as of 2026-04-14.
-- Records website direction, AI page notes, blog status, social schedule, asset status, Notion references, and known local-only changes.
+- Latest working status as of 2026-06-16.
+- Records current website direction, current source-level route/page changes, offer snapshot, legal/SEO status, open alignment questions, social schedule, asset status, Notion references, and known local-only changes.
 
 Use it for:
 
@@ -85,6 +85,23 @@ Limits:
 
 - It may drift as source files change.
 - Known local-only changes listed there must be verified with `git status`.
+
+### `docs/work-summary.md`
+
+Purpose:
+
+- Local work summary report for the 2026-06-16 redesign/quality/SEO pass.
+- Records the light aqua redesign, legal page additions, accessibility fixes, static generation/sitemap updates, and Impeccable design-system sync.
+
+Use it for:
+
+- Understanding what the latest redesign/report claims were meant to accomplish.
+- Cross-checking why `/privacy`, `/terms`, `/ai-business`, `DESIGN.md`, `.impeccable/design.json`, `scripts/generate-static-pages.mjs`, and `public/sitemap.xml` changed.
+
+Limits:
+
+- It is a report, not live verification.
+- Build/audit scores in this report should be re-run before quoting them as current facts.
 
 ## Supporting Docs
 

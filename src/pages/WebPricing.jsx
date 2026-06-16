@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CircleCheckBig } from 'lucide-react';
+import { ArrowRight, CircleCheckBig, ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
+
+const ease = [0.16, 1, 0.3, 1];
 
 const diagnostics = [
   {
@@ -9,9 +12,9 @@ const diagnostics = [
     price: 'AUD 149',
     priceNote: '1회 결제',
     description:
-      '홈페이지, 구글 비즈니스 프로필, 온페이지 SEO를 먼저 점검하고 지금 가장 먼저 손봐야 할 핵심 문제를 정리합니다.',
-    points: ['홈페이지 상태 분석', '구글 비즈니스 프로필 분석', '온페이지 SEO 기본 분석', '핵심 문제 1~3개 정리'],
-    cta: '퀵 진단 문의하기',
+      '구글 검색 노출 상태와 홈페이지 속도, 온페이지 SEO를 점검하고 지금 즉시 개선해야 할 긴급 순위를 전달합니다.',
+    points: ['홈페이지 속도 및 오류 진단', '구글 지도 등록 및 노출 상태 점검', '구글 검색 노출 가능성 분석', '긴급 조치가 필요한 핵심 문제 3가지'],
+    cta: '퀵 진단 신청하기',
     href: '/contact?type=quick-diagnosis',
   },
   {
@@ -19,9 +22,9 @@ const diagnostics = [
     price: 'AUD 289',
     priceNote: '1회 결제',
     description:
-      '퀵 진단 범위에 더해 인스타그램, 페이스북, 비즈니스 포지셔닝까지 함께 보고 채널 전체 흐름을 더 자세히 정리합니다.',
-    points: ['퀵 진단 전체 포함', '인스타그램 · 페이스북 분석', '비즈니스 포지셔닝 점검', '채널 간 일관성 확인'],
-    cta: '온라인 올인원 진단 문의하기',
+      '구글과 홈페이지 진단은 물론 인스타그램, 페이스북 운영 상태와 고객 문의 경로까지 통합 분석하여 채널 전체의 흐름을 짚어냅니다.',
+    points: ['퀵 진단 점검 항목 전체 포함', '인스타그램 · 페이스북 운영 상태 점검', '소셜 채널별 포지셔닝 분석', '채널 간 유입 경로 및 일관성 검증'],
+    cta: '올인원 진단 신청하기',
     href: '/contact?type=all-in-one-diagnosis',
   },
 ];
@@ -30,42 +33,11 @@ const freeCheckCard = {
   title: '무료 점검',
   price: '무료',
   priceNote: '기본 확인',
-  description: '온라인 채널 상태를 먼저 가볍게 확인하고 싶은 경우 적합합니다.',
-  points: ['홈페이지 기본 확인', '구글 비즈니스 프로필 기본 확인', '인스타그램 · 페이스북 기본 확인', '채널 간 일관성 기본 확인'],
+  description: '구글 비즈니스 프로필과 홈페이지, SNS 채널들의 기본적인 노출 상태를 간편히 확인해 드립니다.',
+  points: ['홈페이지 접속 및 기본 노출 확인', '구글 비즈니스 프로필 등록 여부 확인', '인스타그램 · 페이스북 채널 연계 확인', '핵심적인 채널 일관성 기본 확인'],
   cta: '무료 점검 신청하기',
   href: '/contact?type=free-check',
 };
-
-const diagnosticsComparisonRows = [
-  {
-    label: '홈페이지 점검',
-    values: ['기본 확인', '포함', '포함'],
-  },
-  {
-    label: '구글 비즈니스 프로필 점검',
-    values: ['기본 확인', '포함', '포함'],
-  },
-  {
-    label: '인스타그램 · 페이스북 점검',
-    values: ['기본 확인', '포함', '포함'],
-  },
-  {
-    label: '온페이지 SEO 기본 점검',
-    values: ['기본 확인', '포함', '포함'],
-  },
-  {
-    label: '비즈니스 포지셔닝 점검',
-    values: ['-', '기본 확인', '포함'],
-  },
-  {
-    label: '키워드',
-    values: ['-', '핵심 키워드 3개 추천', '키워드 리서치 포함'],
-  },
-  {
-    label: '채널 간 일관성 확인',
-    values: ['기본 확인', '포함', '포함'],
-  },
-];
 
 const websitePackages = [
   {
@@ -74,58 +46,31 @@ const websitePackages = [
     price: 'AUD 795',
     priceNote: '1회 결제',
     promoLabel: '2026년 런칭 프로모션',
-    label: '가볍게 시작하는 패키지',
-    description: '비즈니스 소개와 문의 연결이 먼저 필요한 경우 가장 가볍게 시작할 수 있는 기본 홈페이지입니다.',
-    points: ['최대 3페이지', '기본 홈페이지 구성', '로컬 SEO 포함', 'AUD 300 상당 구글 비즈니스 프로필 세팅 포함'],
-    cta: '스타터 홈페이지 문의하기',
+    label: '핵심 기능 위주의 합리적인 패키지',
+    description: '매장/회사 소개와 고객 문의 폼 등 꼭 필요한 필수 페이지 위주로 빠르게 오픈할 수 있는 기본 홈페이지입니다.',
+    points: ['핵심 메뉴 구성 (최대 3페이지)', '소개 및 문의 연동 레이아웃', '구글 검색 기본 최적화(SEO) 반영', 'AUD 300 상당 구글 지도 세팅 무료 포함'],
+    cta: '스타터 패키지 문의하기',
     href: '/contact?type=starter-homepage',
   },
   {
     title: '비즈니스 홈페이지',
     price: 'AUD 1,890',
     priceNote: '1회 결제',
-    label: '메인 실행 패키지',
-    description: '서비스 소개, 검색 노출, 구글 비즈니스 프로필 연결까지 함께 정리하고 싶은 경우에 적합합니다.',
-    points: ['최대 7페이지', '로컬 SEO 포함', '구글 비즈니스 프로필 포함', '원할 경우 인스타그램 · 페이스북 세팅 포함'],
-    cta: '비즈니스 홈페이지 문의하기',
+    label: '마케팅 최적화 추천 패키지',
+    description: '회사/매장 소개뿐 아니라 구글 지도 최적화 노출, 상세 서비스 안내 및 전화/이메일 자동 문의 연동까지 완비한 최적의 비즈니스 웹사이트입니다.',
+    points: ['상세 메뉴 구성 (최대 7페이지)', '구글 지도 상위 노출(로컬 SEO) 최적화', '전화 · 이메일 문의 연동 자동화', '인스타그램 · 페이스북 등 소셜 연계 셋업'],
+    cta: '비즈니스 패키지 문의하기',
     href: '/contact?type=business-homepage',
   },
   {
     title: '성장형 홈페이지',
     price: 'AUD 3,500',
     priceNote: '1회 결제',
-    label: '확장형 패키지',
-    description: '홈페이지 제작과 검색 기본 세팅을 한 번에 잡고 싶은 경우에 적합합니다.',
-    points: ['10페이지 이상', '비즈니스 홈페이지 범위 포함', 'SEO All-in-One 패키지 포함', '인스타, 페이스북 진단, 셋업 지원', 'AI 관리 지원 3개월 포함'],
-    cta: '성장형 홈페이지 문의하기',
+    label: '검색 노출 극대화 패키지',
+    description: '온라인 노출 경쟁이 치열한 비즈니스를 위해 홈페이지 제작은 물론 구글 상위 노출(SEO) 기본 세팅과 AI 자동화 연동까지 종합적으로 지원합니다.',
+    points: ['대규모 콘텐츠 구성 (10페이지 이상)', '비즈니스 홈페이지 요금제 혜택 전형 포함', 'SEO All-in-One 패키지 기본 탑재', '인스타 · 페이스북 정밀 진단 및 연동', '3개월 동안 AI 기반 고객 응대 관리 지원'],
+    cta: '성장형 패키지 문의하기',
     href: '/contact?type=growth-homepage',
-  },
-];
-
-const websiteComparisonRows = [
-  {
-    label: '페이지 수',
-    values: ['최대 3페이지', '최대 7페이지', '10페이지 이상'],
-  },
-  {
-    label: '유료진단 포함',
-    values: ['퀵진단 포함', '퀵진단 포함', '올인원진단 포함'],
-  },
-  {
-    label: '구글 비즈니스 프로필',
-    values: ['포함', '포함', '포함'],
-  },
-  {
-    label: '로컬 SEO',
-    values: ['포함', '포함', '포함'],
-  },
-  {
-    label: 'SEO All-in-One 스타트 패키지',
-    values: ['-', '-', '포함'],
-  },
-  {
-    label: 'AI 관리 지원',
-    values: ['-', '-', '3개월 포함'],
   },
 ];
 
@@ -152,101 +97,98 @@ const seoPackages = [
 
 const gbpPackages = [
   {
-    title: '구글 비즈니스 프로필 세팅',
+    title: '구글 비즈니스 프로필',
     price: 'AUD 300',
-    priceNote: '1회 결제',
+    priceNote: '1회 세팅',
     description: '홈페이지를 새로 만들기 전에 구글에서 보이는 정보와 기본 신뢰도를 먼저 정리하고 싶은 경우 적합합니다.',
-    cta: '구글 비즈니스 프로필 세팅 문의하기',
+    points: [
+      '구글 비즈니스 프로필 최적화 세팅',
+      '구글 지도 검색 노출 최적화',
+      '유지 관리 추가 시: AUD 95 / month (업데이트 및 관리 지속)'
+    ],
+    cta: '구글 비즈니스 프로필 문의하기',
     href: '/contact?type=gbp-setup',
-  },
-  {
-    title: '구글 비즈니스 프로필 월관리',
-    price: 'AUD 95 / month',
-    priceNote: '월간 관리',
-    description: '기본 세팅 이후 업데이트와 유지 관리가 계속 필요한 경우 적합합니다.',
-    cta: '구글 비즈니스 프로필 월관리 문의하기',
-    href: '/contact?type=gbp-monthly',
-  },
-];
-
-const supportPackages = [
-  {
-    title: '홈페이지 관리',
-    price: 'AUD 200 / month',
-    priceNote: '월간 관리',
-    description: '직접 수정할 시간은 없지만 텍스트 변경, 이미지 교체, 기본 업데이트는 계속 필요한 경우 적합합니다.',
-    cta: '문의하기',
-    href: '/contact?type=general-inquiry',
-  },
-  {
-    title: 'AI 실전 스터디그룹',
-    originalPrice: 'AUD 690',
-    price: 'AUD 590',
-    priceNote: '런칭가 · 온라인 3주 과정',
-    promoLabel: '주 1회 2시간 · 총 6시간',
-    description: '혼자 하면 흐지부지되기 쉬운 AI 활용을 온라인 소그룹에서 3주 동안 함께 실습하며 내 업무에 적용하는 과정입니다.',
-    cta: '자세히 보기',
-    href: '/ai-business',
-  },
-  {
-    title: 'AI 실전 멘토링',
-    price: 'AUD 2,500 (온라인)',
-    priceNote: '1:1 실전 프로그램',
-    description: '홈페이지, 구글 비즈니스 프로필, SNS 운영과 반복 업무에 AI를 붙여 실제로 쓸 수 있는 루틴을 함께 만드는 멘토링입니다.',
-    cta: '자세히 보기',
-    href: '/ai-business',
   },
 ];
 
 const faqItems = [
   {
-    question: '작업 기간은 얼마나 걸리나요?',
-    answer: '보통 퀵 진단은 2~3일, 온라인 올인원 진단은 5~7일 정도를 기준으로 안내드립니다. 홈페이지 제작은 스타터 홈페이지 2~3주, 비즈니스 홈페이지 4~6주 정도를 예상하시면 됩니다.',
+    question: '작업 진행까지 기간은 얼마나 걸리나요?',
+    answer: '분석 및 진단의 경우 퀵 진단은 2~3 영업일, 올인원 진단은 5~7 영업일이 소요됩니다. 홈페이지 제작은 스타터 홈페이지의 경우 2~3주, 비즈니스 홈페이지는 4~6주 정도 예상해 주시면 됩니다. 원활한 피드백 소통 시 일정이 더 단축될 수 있습니다.',
   },
   {
-    question: '수정은 몇 번까지 가능한가요?',
-    answer: '기본 수정 범위 안에서 함께 조정하며 진행합니다. 작은 문구 수정이나 이미지 교체 수준은 일반적으로 함께 맞춰가고, 범위가 커지는 추가 작업은 미리 상의드린 뒤 진행합니다.',
+    question: '수정 요청은 몇 번까지 가능한가요?',
+    answer: '디자인 및 구조적 수정 피드백은 공식적으로 총 3회 무료로 진행됩니다. 작업 완료 이후 사소한 텍스트 변경이나 이미지 교체는 1개월 동안 무상으로 가볍게 수정해 드리고 있으니 걱정하지 않으셔도 됩니다.',
   },
   {
-    question: '결제는 어떻게 하나요?',
-    answer: '작업 성격에 따라 일시 결제 또는 분할 결제가 가능합니다. 큰 작업은 보통 50/50 또는 50/30/20 방식으로 나누어 진행하며, 시작 전에 결제 기준을 먼저 안내해드립니다.',
+    question: '대금 결제는 어떻게 진행되나요?',
+    answer: '진단 프로그램은 선결제로 진행되며, 홈페이지 제작 등 대규모 프로젝트는 계약 시 50%, 최종 검수 완료 시 50% 분할 결제로 안전하게 나누어 진행합니다. 세부 조율이 필요하신 경우 사전 미팅 때 조율해 드립니다.',
   },
   {
-    question: '환불 정책이 있나요?',
-    answer: '환불 가능 범위는 착수 여부와 이미 진행된 작업 단계에 따라 달라집니다. 작업 시작 전에는 기준을 먼저 안내드리고, 진행 중인 경우에는 현재 단계 기준으로 조정 가능한 범위를 설명해드립니다.',
+    question: '중도 취소 시 환불 정책은 어떻게 되나요?',
+    answer: '작업 착수 이전에는 100% 전액 환불해 드립니다. 작업이 진행된 이후에는 기획, 디자인 시안 등 작업의 진척 단계와 투입 공수에 따라 합리적으로 협의하여 부분 환불을 진행합니다.',
   },
   {
-    question: '호주 외 지역도 가능한가요?',
-    answer: '가능합니다. 기본적으로 호주 전역 작업이 가능하고, 호주 외 지역도 온라인으로 진행할 수 있습니다. 한국어 상담과 영어 커뮤니케이션 모두 가능합니다.',
+    question: '호주가 아닌 국가에서도 서비스 이용이 가능한가요?',
+    answer: '네, 가능합니다. GoodmanSEO는 온라인 비즈니스를 점검하기 때문에 지역에 상관없이 100% 비대면 온라인으로 원활히 소통하며 진행할 수 있습니다. 영문/한글 서비스 대응 모두 지원합니다.',
   },
 ];
 
 const PriceDisplay = ({ item }) => (
-  <div className="mt-5">
+  <div className="mt-3">
     {item.promoLabel && (
-      <p className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-accent-primary">
+      <p className="inline-flex rounded-full border border-[#005b70]/15 bg-[#005b70]/5 px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-[#007a8c] mb-2">
         {item.promoLabel}
       </p>
     )}
-    {item.originalPrice && (
-      <p className="mt-2 text-sm font-semibold text-text-soft line-through opacity-80">
-        {item.originalPrice}
+    <div className="flex items-baseline gap-2">
+      <p className="text-[1.25rem] font-bold tracking-[-0.03em] text-[#0f2230]">
+        {item.price}
       </p>
-    )}
-    <p className="mt-1 text-[2rem] font-black tracking-[-0.06em] text-white">
-      {item.price}
-    </p>
+      {item.originalPrice && (
+        <span className="text-xs font-semibold text-[#7c8f9f] line-through opacity-80">
+          {item.originalPrice}
+        </span>
+      )}
+    </div>
     {item.priceNote && (
-      <p className="mt-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-text-soft">
-        AUD · {item.priceNote}
+      <p className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.05em] text-[#7c8f9f]">
+        {item.priceNote}
       </p>
     )}
   </div>
 );
 
+const FaqItem = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  return (
+    <div className="py-1">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex w-full items-center justify-between text-left py-4 transition-colors hover:text-[#007a8c] group border-b border-[#e1f1f2]"
+      >
+        <span className="text-[0.95rem] font-semibold tracking-[-0.02em] text-[#0f2230] group-hover:text-[#007a8c] transition-colors">{question}</span>
+        <ChevronDown 
+          size={18} 
+          className={`text-[#007a8c] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+        />
+      </button>
+      <div 
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <p className="text-[0.92rem] leading-[1.7] text-[#4e6170] py-4 pl-1">
+          {answer}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const WebPricing = () => {
   return (
-    <div className="pt-32 pb-24">
+    <div className="min-h-screen bg-gradient-to-tr from-[#f2fafb] via-white to-[#ecf6f8] pt-24 pb-16 text-[#0f2230]">
       <Seo
         title="서비스 및 가격"
         description="무료 점검, 유료 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다."
@@ -255,228 +197,112 @@ const WebPricing = () => {
       />
 
       <div className="container">
-        <div className="section-heading max-w-5xl">
-          <p className="section-kicker">서비스 및 가격</p>
-          <h1 className="section-title max-w-5xl">서비스 및 가격</h1>
-          <p className="section-copy max-w-[42rem]">
-            무료 점검부터 유료 진단, 홈페이지 제작, SEO, 구글 비즈니스 프로필 관리까지
-            <br />
-            지금 필요한 단계에 따라 선택할 수 있도록 한눈에 정리해두었습니다.
-          </p>
-          <div className="mt-5 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-semibold text-text-muted">
-            한국어 상담 가능 · 호주 전역 작업 가능
-          </div>
-        </div>
 
+        {/* ── Hero 영역 ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease }}
+          className="section-heading text-center max-w-4xl mx-auto mb-12 flex flex-col items-center"
+        >
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#e6f4f6] to-[#d2ebef] border border-[#bce2e7] px-3.5 py-1 text-[0.78rem] font-bold text-[#007a8c] mb-5 mx-auto shadow-[0_2px_8px_rgba(0,122,140,0.04)]">
+            서비스
+          </div>
+          <h1 className="text-[clamp(2.3rem,4.5vw,3.6rem)] font-black leading-[1.15] tracking-[-0.04em] text-[#0f2230] text-balance">
+            고객의 성장을 만드는
+            <br />
+            <span className="text-[#007a8c]">통합 디지털</span> 솔루션
+          </h1>
+          <p className="mt-5 text-[1.05rem] leading-[1.75] text-[#556877] font-medium max-w-xl mx-auto text-pretty">
+            AI 기술과 데이터 기반 전략으로 비즈니스의 모든 순간을 함께합니다.
+          </p>
+        </motion.div>
+
+        {/* 1. 홈페이지 제작 */}
         <section id="website-packages" className="section-block !min-h-0 px-0">
           <div className="w-full">
-            <div className="section-heading">
-              <h2 className="section-title">홈페이지 제작</h2>
-              <p className="section-copy">가볍게 시작할지, 검색과 채널 연결까지 함께 정리할지, 필요한 범위에 따라 선택할 수 있습니다.</p>
+            <div className="section-heading text-center">
+              <h2 className="section-title mx-auto">홈페이지 제작</h2>
             </div>
 
-            <div className="grid gap-4 lg:hidden">
+            <div className="grid gap-6 md:grid-cols-3">
               {websitePackages.map((item, index) => (
-                <article key={`${item.title}-mobile`} className={index === 1 ? 'pricing-spotlight' : 'feature-card'}>
-                  <p className="section-kicker">{item.title}</p>
-                  {index === 1 && (
-                    <p className="mt-3 inline-flex rounded-full border border-[rgba(138,215,255,0.28)] bg-[rgba(138,215,255,0.12)] px-3 py-1 text-[0.68rem] font-semibold tracking-[0.08em] text-accent-secondary">
-                      가장 많이 선택하는 패키지
-                    </p>
-                  )}
-                  <PriceDisplay item={item} />
-                  <p className="mt-3 text-sm font-semibold text-accent-primary">{item.label}</p>
-                  <p className="mt-4 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                  <div className="mt-6 grid gap-3">
-                    {item.points.map((point) => (
-                      <div key={`${item.title}-${point}`} className="benefit-row">
-                        <CircleCheckBig size={16} className="text-accent-primary" />
-                        <span>{point}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Link to={item.href} className="primary-button mt-7 inline-flex">
-                    {item.cta}
-                    <ArrowRight size={16} />
-                  </Link>
-                </article>
-              ))}
-            </div>
-
-            <div className="hidden overflow-x-auto lg:block">
-              <div className="min-w-[980px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-white/10">
-                      <th className="w-[180px] px-6 py-6 text-left text-sm font-semibold text-text-soft">항목</th>
-                      {websitePackages.map((item, index) => (
-                        <th
-                          key={item.title}
-                          className={`px-6 py-6 text-left align-top border-l border-white/10 ${
-                            index === 1 ? 'bg-[rgba(138,215,255,0.06)]' : ''
-                          }`}
-                        >
-                          <p className="section-kicker">{item.title}</p>
-                          {index === 1 && (
-                            <p className="mt-3 inline-flex rounded-full border border-[rgba(138,215,255,0.28)] bg-[rgba(138,215,255,0.12)] px-3 py-1 text-[0.68rem] font-semibold tracking-[0.08em] text-accent-secondary">
-                              가장 많이 선택하는 패키지
-                            </p>
-                          )}
-                          <PriceDisplay item={item} />
-                          <p className="mt-3 text-sm font-semibold text-accent-primary">{item.label}</p>
-                          <p className="mt-4 text-sm leading-[1.7] text-text-muted">{item.description}</p>
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {websiteComparisonRows.map((row) => (
-                      <tr key={row.label} className="border-b border-white/10 last:border-b-0">
-                        <th className="px-6 py-5 text-left text-sm font-semibold text-text-soft">{row.label}</th>
-                        {row.values.map((value, index) => (
-                          <td
-                            key={`${row.label}-${index}`}
-                            className={`border-l border-white/10 px-6 py-5 text-sm font-medium text-white ${
-                              index === 1 ? 'bg-[rgba(138,215,255,0.06)]' : ''
-                            }`}
-                          >
-                            {value}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                    <tr>
-                      <th className="px-6 py-6 text-left text-sm font-semibold text-text-soft">문의</th>
-                      {websitePackages.map((item) => (
-                        <td
-                          key={`${item.title}-cta`}
-                          className={`border-l border-white/10 px-6 py-6 ${
-                            item.title === '비즈니스 홈페이지' ? 'bg-[rgba(138,215,255,0.06)]' : ''
-                          }`}
-                        >
-                          <Link to={item.href} className="primary-button inline-flex">
-                            {item.cta}
-                            <ArrowRight size={16} />
-                          </Link>
-                        </td>
-                      ))}
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="diagnostics" className="section-block !min-h-0 px-0">
-          <div className="w-full">
-            <div className="section-heading">
-              <h2 className="section-title">점검 · 진단</h2>
-              <p className="section-copy">무료 점검만으로 부족하다면, 더 자세한 분석으로 현재 상태와 우선순위를 구체적으로 확인할 수 있습니다.</p>
-            </div>
-
-            <div className="mb-5 inline-flex rounded-[1rem] border border-white/10 bg-white/[0.03] px-4 py-3 text-sm font-medium text-text-muted">
-              기본 확인 = 문제 여부 확인 / 포함 = 원인 분석 + 해결안 정리
-            </div>
-
-            <div className="grid gap-4 lg:hidden">
-              {[freeCheckCard, ...diagnostics].map((item) => (
-                <article key={`${item.title}-mobile`} className="feature-card">
-                  <p className="section-kicker">{item.title}</p>
-                  <PriceDisplay item={item} />
-                  <p className="mt-4 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                  <div className="mt-6 grid gap-3">
-                    {item.points.map((point) => (
-                      <div key={`${item.title}-${point}`} className="benefit-row">
-                        <CircleCheckBig size={16} className="text-accent-primary" />
-                        <span>{point}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <Link to={item.href} className="primary-button mt-7 inline-flex">
-                    {item.cta}
-                    <ArrowRight size={16} />
-                  </Link>
-                </article>
-              ))}
-            </div>
-
-            <div className="hidden overflow-x-auto lg:block">
-              <div className="min-w-[1080px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
-                <table className="w-full border-collapse">
-                  <thead>
-                    <tr className="border-b border-white/10">
-                      <th className="w-[220px] px-6 py-6 text-left text-sm font-semibold text-text-soft">항목</th>
-                      <th className="border-l border-white/10 px-6 py-6 text-left align-top">
-                        <p className="section-kicker">무료 점검</p>
-                        <p className="mt-5 text-[2rem] font-black tracking-[-0.06em] text-white">무료</p>
-                        <p className="mt-1 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-text-soft">
-                          기본 확인
-                        </p>
-                        <p className="mt-4 text-sm leading-[1.7] text-text-muted">
-                          온라인 채널 상태를 먼저 가볍게 확인하고 싶은 경우 적합합니다.
-                        </p>
-                      </th>
-                      {diagnostics.map((item) => (
-                        <th key={item.title} className="border-l border-white/10 px-6 py-6 text-left align-top">
-                          <p className="section-kicker">{item.title}</p>
-                          <PriceDisplay item={item} />
-                          <p className="mt-4 text-sm leading-[1.7] text-text-muted">{item.description}</p>
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {diagnosticsComparisonRows.map((row) => (
-                      <tr key={row.label} className="border-b border-white/10 last:border-b-0">
-                        <th className="px-6 py-5 text-left text-sm font-semibold text-text-soft">{row.label}</th>
-                        {row.values.map((value, index) => (
-                          <td
-                            key={`${row.label}-${index}`}
-                            className="border-l border-white/10 px-6 py-5 text-sm font-medium text-white"
-                          >
-                            {value}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
-                    <tr>
-                      <th className="px-6 py-6 text-left text-sm font-semibold text-text-soft">문의</th>
-                      <td className="border-l border-white/10 px-6 py-6">
-                        <Link to="/contact?type=free-check" className="primary-button inline-flex">
-                          무료 점검 신청하기
-                          <ArrowRight size={16} />
-                        </Link>
-                      </td>
-                      {diagnostics.map((item) => (
-                        <td key={`${item.title}-cta`} className="border-l border-white/10 px-6 py-6">
-                          <Link to={item.href} className="primary-button inline-flex">
-                            {item.cta}
-                            <ArrowRight size={16} />
-                          </Link>
-                        </td>
-                      ))}
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section-block !min-h-0 px-0">
-          <div className="w-full grid gap-4 lg:grid-cols-2">
-            <div id="seo-packages">
-              <div className="section-heading">
-                <h2 className="section-title">SEO 패키지</h2>
-                <p className="section-copy">홈페이지는 그대로 두고 검색 노출부터 개선하고 싶은 경우 선택할 수 있습니다.</p>
-              </div>
-              <div className="grid gap-4">
-                {seoPackages.map((item) => (
-                  <article key={item.title} className="soft-panel">
-                    <p className="section-kicker">{item.title}</p>
+                <article key={item.title} className={`${index === 1 ? 'pricing-spotlight' : 'feature-card'} flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,122,140,0.06)]`}>
+                  <div>
+                    <p className="pricing-card-title">{item.title}</p>
+                    {index === 1 && (
+                      <p className="mt-3 inline-flex rounded-full border border-[#007a8c]/30 bg-[#007a8c]/10 px-3 py-1 text-[0.68rem] font-semibold tracking-[0.08em] text-[#007a8c]">
+                        가장 많이 선택하는 패키지
+                      </p>
+                    )}
                     <PriceDisplay item={item} />
-                    <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
+                    <div className="mt-6 grid gap-3">
+                      {item.points.map((point) => (
+                        <div key={`${item.title}-${point}`} className="benefit-row">
+                          <CircleCheckBig size={16} className="text-accent-primary" />
+                          <span>{point}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Link to="/contact?type=starter-homepage" className="primary-button">
+                홈페이지 제작 문의하기
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 2. 점검 · 진단 */}
+        <section id="diagnostics" className="section-block !min-h-0 px-0 mt-12">
+          <div className="w-full">
+            <div className="section-heading text-center">
+              <h2 className="section-title mx-auto">점검 · 진단</h2>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {[freeCheckCard, ...diagnostics].map((item) => (
+                <article key={item.title} className="feature-card flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,122,140,0.04)]">
+                  <div>
+                    <p className="pricing-card-title">{item.title}</p>
+                    <PriceDisplay item={item} />
+                    <div className="mt-6 grid gap-3">
+                      {item.points.map((point) => (
+                        <div key={`${item.title}-${point}`} className="benefit-row">
+                          <CircleCheckBig size={16} className="text-accent-primary" />
+                          <span>{point}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="mt-8 flex justify-center">
+              <Link to="/contact?type=free-check" className="primary-button">
+                무료 점검 및 진단 신청하기
+                <ArrowRight size={16} />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. SEO & 마케팅 (통합) */}
+        <section id="seo-marketing" className="section-block !min-h-0 px-0 mt-12">
+          <div className="w-full">
+            <div className="section-heading text-center">
+              <h2 className="section-title mx-auto">SEO & 마케팅</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              {[...seoPackages, ...gbpPackages].map((item) => (
+                <article key={item.title} className="soft-panel flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,122,140,0.04)]">
+                  <div>
+                    <p className="pricing-card-title">{item.title}</p>
+                    <PriceDisplay item={item} />
                     {item.points && (
                       <div className="mt-6 grid gap-3">
                         {item.points.map((point) => (
@@ -487,112 +313,104 @@ const WebPricing = () => {
                         ))}
                       </div>
                     )}
-                    <Link to={item.href} className="primary-button mt-7 inline-flex">
-                      {item.cta}
-                      <ArrowRight size={16} />
-                    </Link>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div id="gbp-packages">
-              <div className="section-heading">
-                <h2 className="section-title">구글 비즈니스 프로필</h2>
-                <p className="section-copy">구글에서 보이는 정보와 신뢰도부터 먼저 정리하고 싶은 경우 적합합니다.</p>
-              </div>
-              <div className="grid gap-4">
-                {gbpPackages.map((item) => (
-                  <article key={item.title} className="soft-panel">
-                    <p className="section-kicker">{item.title}</p>
-                    <PriceDisplay item={item} />
-                    <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                    <Link to={item.href} className="primary-button mt-7 inline-flex">
-                      {item.cta}
-                      <ArrowRight size={16} />
-                    </Link>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="support-programs" className="section-block !min-h-0 px-0">
-          <div className="w-full grid gap-4 lg:grid-cols-2">
-            <div>
-              <div className="section-heading">
-                <h2 className="section-title">월간 관리</h2>
-                <p className="section-copy">구축 후에도 수정과 기본 운영 지원이 꾸준히 필요한 경우 선택할 수 있습니다.</p>
-              </div>
-
-              <article className="feature-card">
-                <p className="section-kicker">{supportPackages[0].title}</p>
-                <PriceDisplay item={supportPackages[0]} />
-                <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{supportPackages[0].description}</p>
-                <Link to={supportPackages[0].href} className="primary-button mt-7 inline-flex">
-                  {supportPackages[0].cta}
-                  <ArrowRight size={16} />
-                </Link>
-              </article>
-            </div>
-
-            <div>
-              <div className="section-heading">
-                <h2 className="section-title">교육 프로그램</h2>
-                <p className="section-copy">혼자 배우기 어렵다면 온라인 소그룹으로 시작하고, 맞춤 적용이 필요하면 1:1로 깊게 진행할 수 있습니다.</p>
-              </div>
-
-              <div className="grid gap-4">
-                {supportPackages.slice(1).map((item) => (
-                  <article key={item.title} className="feature-card">
-                    <p className="section-kicker">{item.title}</p>
-                    <PriceDisplay item={item} />
-                    <p className="mt-5 text-[0.95rem] leading-[1.72] text-text-muted">{item.description}</p>
-                    <Link to={item.href} className="primary-button mt-7 inline-flex">
-                      {item.cta}
-                      <ArrowRight size={16} />
-                    </Link>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="section-block !min-h-0 px-0">
-          <div className="w-full">
-            <div className="section-heading">
-              <h2 className="section-title">자주 묻는 질문</h2>
-              <p className="section-copy">가격과 진행 방식에서 자주 나오는 질문을 먼저 정리해두었습니다.</p>
-            </div>
-
-            <div className="grid gap-4 lg:grid-cols-2">
-              {faqItems.map((item) => (
-                <article key={item.question} className="soft-panel">
-                  <p className="section-kicker">FAQ</p>
-                  <h3 className="mt-4 text-[1.2rem] font-black tracking-[-0.04em]">{item.question}</h3>
-                  <p className="mt-4 text-[0.95rem] leading-[1.72] text-text-muted">{item.answer}</p>
+                  </div>
                 </article>
               ))}
             </div>
+            <div className="mt-8 flex justify-center">
+              <Link to="/contact?type=seo-start-package" className="primary-button">
+                SEO 및 마케팅 문의하기
+                <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
         </section>
 
-        <div className="showcase-panel text-center mt-6">
-          <h2 className="section-title mx-auto">어디부터 손봐야 할지 헷갈린다면,<br />무료 점검부터 시작해보세요</h2>
-          <p className="section-copy mx-auto">
-            지금 상태를 먼저 보고,
-            <br />
-            홈페이지가 필요한지, 구글 프로필을 먼저 정리해야 하는지, SEO가 필요한지 순서부터 안내해드립니다.
-          </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link to="/contact?type=free-check" className="primary-button">
-              무료 점검 신청하기
-              <ArrowRight size={16} />
-            </Link>
+        {/* 5. 자주 묻는 질문 */}
+        <section className="section-block !min-h-0 px-0 mt-12">
+          <div className="w-full max-w-5xl mx-auto">
+            <div className="grid gap-12 lg:grid-cols-[1.3fr_2fr] lg:items-center">
+              
+              {/* 좌측 타이틀 & 일러스트 */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, ease }}
+                className="flex flex-col items-center lg:items-start text-center lg:text-left"
+              >
+                <h2 className="text-[2rem] font-black tracking-[-0.04em] text-[#0f2230]">자주 묻는 질문</h2>
+                <p className="mt-2 text-[0.95rem] text-[#556877] font-semibold leading-relaxed">
+                  많이 궁금해하시는 내용을
+                  <br />
+                  모아두었습니다.
+                </p>
+
+                {/* 로봇 데코레이션 일러스트 */}
+                <div className="mt-8 relative flex flex-col items-center lg:items-start pl-2">
+                  <div className="relative flex flex-col items-center">
+                    {/* 메탈릭 로봇 얼굴 (CSS/SVG 구현) */}
+                    <div className="relative h-28 w-28 flex items-center justify-center">
+                      
+                      {/* 머리 뒤쪽 광채 효과 */}
+                      <div className="absolute h-24 w-24 rounded-full bg-[#007a8c]/10 blur-xl" />
+
+                      {/* 둥근 로봇 헤드 */}
+                      <div className="h-24 w-24 rounded-full bg-gradient-to-b from-[#f8fafc] to-[#e2e8f0] border-2 border-white shadow-[0_12px_24px_rgba(0,0,0,0.06),inset_0_-4px_8px_rgba(0,0,0,0.03)] flex flex-col items-center justify-center p-3 relative z-10">
+                        
+                        {/* 귀/헤드셋 파트 */}
+                        <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-r-md bg-[#cbd5e1] border-l border-white" />
+                        <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-l-md bg-[#cbd5e1] border-r border-white" />
+
+                        {/* 눈 부분 디스플레이 */}
+                        <div className="w-[72px] h-[34px] rounded-2xl bg-[#0f172a] shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)] flex items-center justify-center gap-2.5 p-1 mt-1">
+                          {/* 푸른 빛 눈 LED */}
+                          <motion.div
+                            animate={{ scaleY: [1, 0.1, 1] }}
+                            transition={{ duration: 4, repeat: Infinity, repeatDelay: 2 }}
+                            className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#00ffff] to-[#00a3ff] shadow-[0_0_8px_#00ffff]"
+                          />
+                          <motion.div
+                            animate={{ scaleY: [1, 0.1, 1] }}
+                            transition={{ duration: 4, repeat: Infinity, repeatDelay: 2 }}
+                            className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#00ffff] to-[#00a3ff] shadow-[0_0_8px_#00ffff]"
+                          />
+                        </div>
+
+                        {/* 입 파트 (볼선) */}
+                        <div className="w-6 h-1 rounded-full bg-[#cbd5e1] mt-3" />
+                      </div>
+                    </div>
+
+                    {/* 말풍선 */}
+                    <div className="mt-4 bg-white border border-[#e2e8f0] rounded-2xl px-4 py-2.5 shadow-sm text-center relative max-w-[200px]">
+                      {/* 말풍선 꼬리 */}
+                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-t border-l border-[#e2e8f0]" />
+                      <p className="text-[0.78rem] font-bold text-[#556877] leading-relaxed relative z-10">
+                        궁금하신 점은 언제든 물어보세요!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* 우측 FAQ 리스트 */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.1, ease }}
+                className="border-t border-[#e1f1f2] px-1"
+              >
+                {faqItems.map((item) => (
+                  <FaqItem key={item.question} question={item.question} answer={item.answer} />
+                ))}
+              </motion.div>
+
+            </div>
           </div>
-        </div>
+        </section>
+
       </div>
     </div>
   );

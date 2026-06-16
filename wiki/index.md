@@ -19,6 +19,7 @@ The service reviews Google Business Profile, website, Instagram, and Facebook to
 - `PRODUCT.md`: official Impeccable strategic product context
 - `DESIGN.md`: official Impeccable visual design system
 - `docs/current-status.md`: latest operating status, priorities, social schedule, and known local-only changes
+- `docs/work-summary.md`: latest local redesign / quality / SEO work summary report
 - `docs/cardnews-inventory.md`: confirmed social/card-news asset inventory
 - `docs/goodmanseo마감.md`: YouTube/Notion wrap-up context from 2026-04-22
 - `src/`: live React/Vite website source
@@ -35,6 +36,8 @@ The service reviews Google Business Profile, website, Instagram, and Facebook to
 - [Positioning](concepts/positioning.md): durable messaging rules
 - [Design Context](concepts/design-context.md): official Impeccable context and UX principles
 - [Service Offers](concepts/service-offers.md): current offer hierarchy and prices visible in source
+- [Current Site Content Snapshot](concepts/current-site-content.md): current homepage, business offers, AI business, and inquiry flow from source
+- [Site Page Content Inventory](concepts/site-page-content-inventory.md): route-by-route content inventory for homepage and subpages
 - [Content System](concepts/content-system.md): blog, social, and YouTube/Notion content layers
 - [Resume Workflow](workflows/resume.md): how to start future GoodmanSEO threads
 - [Ingest Workflow](workflows/ingest.md): how to add new evidence to this wiki
@@ -42,15 +45,18 @@ The service reviews Google Business Profile, website, Instagram, and Facebook to
 
 ## Current Practical Next Step
 
-The strongest next project step remains:
+The strongest next project steps are:
 
-1. Review local-only `src/pages/StarterPackage.jsx`.
-2. Review local-only `src/components/ContactForm.jsx`.
-3. Decide whether the starter package page should be kept, redirected, or merged into pricing.
-4. Align contact/inquiry flow with the current free-check positioning.
+1. Review the current rendered site after the 2026-06-16 light-theme redesign.
+2. Decide whether public wording should standardize on `무료 점검` or `무료 진단`.
+3. Decide whether `/starter-package` should remain public, redirect, or merge into `/pricing`.
+4. Confirm whether AI service prices should remain hidden or return to the AI/pricing pages.
+5. Replace or remove placeholder footer social links if real URLs are available.
 
 ## Do Not Forget
 
 - Treat existing uncommitted/untracked files as user work unless the user asks to clean them.
 - Do not assume card-news exists as Markdown. The confirmed persistent card-news set is mostly image/TXT assets.
 - Keep new copy practical, owner-focused, and non-salesy.
+- Do not assume local changes are deployed or pushed until GitHub/Cloudflare state is checked.
+- Current `Home.jsx` uses `HeroDevicesVisual`; `src/assets/home-hero-channels.png` exists locally but is not the current homepage visual source.

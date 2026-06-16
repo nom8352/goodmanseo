@@ -1,60 +1,146 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-06-16T00:00:00+10:00",
+  "generatedAt": "2026-06-16T20:47:00+10:00",
   "title": "Design System: GoodmanSEO",
   "extensions": {
     "colorMeta": {
       "accent-primary": {
-        "role": "primary",
-        "displayName": "Checkup Lime",
-        "canonical": "#d8ff72",
+        "role": "secondary",
+        "displayName": "Deep Muted Ocean",
+        "canonical": "#005b70",
         "tonalRamp": [
-          "oklch(15% 0.08 122)",
-          "oklch(25% 0.10 122)",
-          "oklch(35% 0.12 122)",
-          "oklch(48% 0.14 122)",
-          "oklch(62% 0.15 122)",
-          "oklch(76% 0.14 122)",
-          "oklch(88% 0.10 122)",
-          "oklch(95% 0.06 122)"
+          "oklch(15% 0.05 207)",
+          "oklch(25% 0.07 207)",
+          "oklch(38% 0.09 207)",
+          "oklch(48% 0.09 207)",
+          "oklch(62% 0.09 207)",
+          "oklch(76% 0.08 207)",
+          "oklch(88% 0.05 207)",
+          "oklch(95% 0.02 207)"
         ]
       },
       "accent-secondary": {
-        "role": "secondary",
-        "displayName": "Review Blue",
-        "canonical": "#8ad7ff",
+        "role": "primary",
+        "displayName": "Aqua Checkup Teal",
+        "canonical": "#007a8c",
         "tonalRamp": [
-          "oklch(15% 0.05 235)",
-          "oklch(25% 0.07 235)",
-          "oklch(35% 0.09 235)",
-          "oklch(48% 0.10 235)",
-          "oklch(62% 0.10 235)",
-          "oklch(76% 0.09 235)",
-          "oklch(88% 0.06 235)",
-          "oklch(95% 0.035 235)"
+          "oklch(15% 0.06 207)",
+          "oklch(25% 0.08 207)",
+          "oklch(35% 0.10 207)",
+          "oklch(48% 0.11 207)",
+          "oklch(62% 0.11 207)",
+          "oklch(76% 0.09 207)",
+          "oklch(88% 0.06 207)",
+          "oklch(95% 0.03 207)"
         ]
       },
-      "bg-dark": {
+      "accent-tertiary": {
         "role": "neutral",
-        "displayName": "Midnight Base",
-        "canonical": "#0b0f16",
+        "displayName": "Pure White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#000000",
+          "#222222",
+          "#444444",
+          "#777777",
+          "#aaaaaa",
+          "#cccccc",
+          "#eeeeee",
+          "#ffffff"
+        ]
+      },
+      "bg-light": {
+        "role": "neutral",
+        "displayName": "Morning Cove Light",
+        "canonical": "#f8fafc",
         "tonalRamp": [
           "#07090e",
-          "#0b0f16",
-          "#111824",
-          "#1a2332",
-          "#2b3547",
-          "#4a566b",
-          "#808ca1",
-          "#d7deea"
+          "#0f1319",
+          "#1e293b",
+          "#475569",
+          "#94a3b8",
+          "#cbd5e1",
+          "#e2e8f0",
+          "#f8fafc"
+        ]
+      },
+      "bg-gradient-from": {
+        "role": "neutral",
+        "displayName": "Foggy Teal Light",
+        "canonical": "#f2fafb",
+        "tonalRamp": [
+          "oklch(15% 0.01 207)",
+          "oklch(25% 0.01 207)",
+          "oklch(35% 0.02 207)",
+          "oklch(48% 0.02 207)",
+          "oklch(62% 0.02 207)",
+          "oklch(76% 0.02 207)",
+          "oklch(88% 0.01 207)",
+          "oklch(97% 0.01 207)"
+        ]
+      },
+      "bg-gradient-to": {
+        "role": "neutral",
+        "displayName": "Soft Coastal Wave",
+        "canonical": "#ecf6f8",
+        "tonalRamp": [
+          "oklch(15% 0.02 207)",
+          "oklch(25% 0.02 207)",
+          "oklch(35% 0.03 207)",
+          "oklch(48% 0.03 207)",
+          "oklch(62% 0.03 207)",
+          "oklch(76% 0.03 207)",
+          "oklch(88% 0.02 207)",
+          "oklch(96% 0.02 207)"
+        ]
+      },
+      "text-main": {
+        "role": "neutral",
+        "displayName": "Ocean Ink",
+        "canonical": "#0f2230",
+        "tonalRamp": [
+          "#0f2230",
+          "#1e3d54",
+          "#2d5778",
+          "#3c729c",
+          "#558dbb",
+          "#86afd2",
+          "#b7d1e8",
+          "#e8f2fa"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "#4e6170",
+        "tonalRamp": [
+          "#0d1318",
+          "#1e2932",
+          "#33414d",
+          "#4e6170",
+          "#6b7f90",
+          "#8ea1b2",
+          "#b6c5d3",
+          "#e3ebf2"
+        ]
+      },
+      "text-soft": {
+        "role": "neutral",
+        "displayName": "Soft Gray-Navy",
+        "canonical": "#7c8f9f",
+        "tonalRamp": [
+          "#182026",
+          "#2f3c47",
+          "#4a5a67",
+          "#687b89",
+          "#7c8f9f",
+          "#a1b3c2",
+          "#c8d6e3",
+          "#edf2f7"
         ]
       }
     },
     "typographyMeta": {
-      "hero": {
-        "displayName": "Hero",
-        "purpose": "Homepage brand statement only."
-      },
       "display": {
         "displayName": "Display",
         "purpose": "Section titles and major page headings."
@@ -62,23 +148,22 @@
       "body": {
         "displayName": "Body",
         "purpose": "Readable Korean explanatory copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels, badges, and small metadata."
       }
     },
     "shadows": [
       {
-        "name": "ambient-panel-lift",
-        "value": "0 18px 60px rgba(0, 0, 0, 0.2), 0 8px 32px rgba(138, 215, 255, 0.08)",
-        "purpose": "Major panels only."
+        "name": "mild-checkup-shadow",
+        "value": "0 4px 6px -1px rgba(0, 122, 140, 0.05), 0 2px 4px -1px rgba(0, 122, 140, 0.03)",
+        "purpose": "Mild checkup shadow for form cards and FAQ grids."
       },
       {
-        "name": "primary-cta-glow",
-        "value": "0 16px 44px rgba(216, 255, 114, 0.24)",
-        "purpose": "Primary action buttons only."
-      },
-      {
-        "name": "focus-glow",
-        "value": "0 0 0 4px rgba(216, 255, 114, 0.08)",
-        "purpose": "Input and keyboard focus support."
+        "name": "interactive-button-lift",
+        "value": "0 10px 15px -3px rgba(0, 122, 140, 0.2), 0 4px 6px -2px rgba(0, 122, 140, 0.1)",
+        "purpose": "Interactive CTA glow when hovered."
       }
     ],
     "motion": [
@@ -89,8 +174,8 @@
       },
       {
         "name": "background-pulse",
-        "value": "18s ease-in-out alternate",
-        "purpose": "Low-priority atmospheric background motion."
+        "value": "18s ease-in-out infinite alternate",
+        "purpose": "Slow, soothing atmospheric background gradient pulse."
       }
     ],
     "breakpoints": [
@@ -110,8 +195,8 @@
       "kind": "button",
       "refersTo": "button-primary",
       "description": "Main conversion action for free check or service inquiry.",
-      "html": "<button class=\"ds-btn-primary\">무료 점검 신청하기</button>",
-      "css": ".ds-btn-primary { min-height: 2.65rem; padding: 0 1.25rem; border: 0; border-radius: 9999px; background: #d8ff72; color: #091018; font-family: Pretendard, system-ui, sans-serif; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; gap: 0.65rem; box-shadow: 0 16px 44px rgba(216,255,114,0.24); transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 20px 54px rgba(216,255,114,0.28); } .ds-btn-primary:focus-visible { outline: 2px solid #d8ff72; outline-offset: 3px; }"
+      "html": "<button class=\"ds-btn-primary\">무료 진단 신청하기</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; height: 2.75rem; padding: 0 1.75rem; border: none; border-radius: 9999px; background-color: #007a8c; color: #ffffff; font-family: Pretendard, system-ui, sans-serif; font-size: 0.95rem; font-weight: 800; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background-color: #006270; transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 122, 140, 0.2); } .ds-btn-primary:active { transform: translateY(0) scale(0.98); }"
     },
     {
       "name": "Secondary Button",
@@ -119,69 +204,73 @@
       "refersTo": "button-secondary",
       "description": "Supporting navigation action that should not compete with the primary CTA.",
       "html": "<button class=\"ds-btn-secondary\">서비스 및 가격 보기</button>",
-      "css": ".ds-btn-secondary { min-height: 2.65rem; padding: 0 1.25rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.03); color: #f5f7fb; font-family: Pretendard, system-ui, sans-serif; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; justify-content: center; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), border-color 0.25s ease, background 0.25s ease; } .ds-btn-secondary:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.28); background: rgba(255,255,255,0.06); } .ds-btn-secondary:focus-visible { outline: 2px solid #8ad7ff; outline-offset: 3px; }"
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; height: 2.75rem; padding: 0 1.75rem; border: 1px solid #007a8c; border-radius: 9999px; background-color: #ffffff; color: #007a8c; font-family: Pretendard, system-ui, sans-serif; font-size: 0.95rem; font-weight: 800; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-secondary:hover { background-color: rgba(0, 122, 140, 0.05); transform: translateY(-2px); } .ds-btn-secondary:active { transform: translateY(0) scale(0.98); }"
     },
     {
       "name": "Panel Card",
       "kind": "card",
       "refersTo": "card-panel",
-      "description": "Reusable dark service panel for meaningful content groups.",
+      "description": "Reusable white service panel for content groups.",
       "html": "<article class=\"ds-panel\"><h3>온라인 점검</h3><p>구글, 홈페이지, SNS를 함께 봅니다.</p></article>",
-      "css": ".ds-panel { padding: 1.5rem; border-radius: 1.75rem; border: 1px solid rgba(255,255,255,0.1); background: rgba(9,13,19,0.78); color: #f5f7fb; box-shadow: 0 18px 60px rgba(0,0,0,0.2), 0 8px 32px rgba(138,215,255,0.08); font-family: Pretendard, system-ui, sans-serif; } .ds-panel h3 { margin: 0; font-family: Outfit, Pretendard, sans-serif; font-size: 1.45rem; line-height: 1.15; letter-spacing: -0.04em; } .ds-panel p { margin: 0.5rem 0 0; color: #a8b1c7; line-height: 1.7; }"
+      "css": ".ds-panel { padding: 2rem; border-radius: 2rem; border: 1px solid rgba(0, 91, 112, 0.08); background-color: #ffffff; color: #0f2230; box-shadow: 0 4px 6px -1px rgba(0, 122, 140, 0.05), 0 2px 4px -1px rgba(0, 122, 140, 0.03); font-family: Pretendard, system-ui, sans-serif; } .ds-panel h3 { margin: 0; font-family: Outfit, Pretendard, sans-serif; font-size: 1.45rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.04em; color: #0f2230; } .ds-panel p { margin: 0.5rem 0 0; color: #4e6170; line-height: 1.7; font-size: 0.95rem; }"
     },
     {
       "name": "Text Field",
       "kind": "input",
       "refersTo": "input-field",
-      "description": "Dark form field for inquiry and diagnostic forms.",
+      "description": "Form input field for user entry.",
       "html": "<label class=\"ds-field\"><span>업체명</span><input placeholder=\"예: Goodman Bakery\" /></label>",
-      "css": ".ds-field { display: grid; gap: 0.7rem; font-family: Pretendard, system-ui, sans-serif; color: #f5f7fb; } .ds-field span { color: #7f8ba3; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; } .ds-field input { width: 100%; border-radius: 1rem; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color: #f5f7fb; padding: 0.85rem 0.95rem; outline: none; transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease; } .ds-field input:focus { border-color: rgba(216,255,114,0.45); background: rgba(255,255,255,0.05); box-shadow: 0 0 0 4px rgba(216,255,114,0.08); }"
+      "css": ".ds-field { display: grid; gap: 0.7rem; font-family: Pretendard, system-ui, sans-serif; color: #0f2230; } .ds-field span { color: #7c8f9f; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; } .ds-field input { width: 100%; box-sizing: border-box; border-radius: 1rem; border: 1px solid rgba(0, 91, 112, 0.08); background-color: #ffffff; color: #0f2230; padding: 0.85rem 0.95rem; outline: none; transition: border-color 0.2s ease, box-shadow 0.2s ease; } .ds-field input:focus { border-color: #007a8c; box-shadow: 0 0 0 4px rgba(0, 91, 112, 0.08); }"
     },
     {
       "name": "Scope Chip",
       "kind": "chip",
       "refersTo": "chip",
-      "description": "Short scope label for channels such as Google, website, Instagram, and Facebook.",
+      "description": "Short scope badge label for digital channels.",
       "html": "<span class=\"ds-chip\">Google</span>",
-      "css": ".ds-chip { min-height: 2.65rem; padding: 0.7rem 0.9rem; border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; background: rgba(255,255,255,0.04); color: #f5f7fb; font-family: Pretendard, system-ui, sans-serif; font-size: 0.88rem; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; }"
+      "css": ".ds-chip { display: inline-flex; align-items: center; justify-content: center; padding: 0.55rem 0.9rem; border: 1px solid rgba(0, 91, 112, 0.08); border-radius: 9999px; background-color: #ffffff; color: #0f2230; font-family: Pretendard, system-ui, sans-serif; font-size: 0.88rem; font-weight: 600; }"
     }
   ],
   "narrative": {
     "northStar": "The Calm Online Checkup",
-    "overview": "GoodmanSEO should feel like a calm, practical review desk for a small business owner who wants to know how their business looks online. The current interface is a dark, atmospheric brand site with glassy panels, lime and light-blue accents, rounded controls, and Korean-first typography.",
+    "overview": "GoodmanSEO는 호주와 한국 소상공인들이 복잡한 기술적 장벽 없이 자신의 온라인 현황(구글, 웹사이트, SNS)을 투명하고 편안하게 진단받을 수 있는 '청량하고 정돈된 1차 검진 데스크' 형태의 시각 체계를 지향합니다. 인위적인 다크 모드 테마에서 탈피하여, 맑은 날씨의 지중해 해변을 연상시키는 맑고 연한 청록 그라디언트 기반의 라이트 테마로 전면 개편되었습니다.",
     "keyCharacteristics": [
-      "Korean-first, owner-friendly, scan-first communication.",
-      "Dark tinted surfaces with bright but sparse accent use.",
-      "Rounded controls and panels, but no unnecessary nested-card scaffolding.",
-      "Practical hierarchy: problem, check scope, next action."
+      "은은한 청록/블루 그라디언트 배경과 정갈한 백색 카드 패널의 매칭",
+      "좁은 자간 겹침을 예방하는 Outfit display 한글 서체 규격",
+      "조작감이 느껴지는 프리미엄 인터랙티브 모션(Hover Lift-up 및 SVG 드로잉)",
+      "모바일 환경에서의 엄격한 웹 접근성(ARIA) 및 터치 타겟(44x44px 이상) 확보"
     ],
     "rules": [
       {
         "name": "The Sparse Accent Rule",
-        "body": "Lime is for decisions and confirmation. If every section glows, nothing is important.",
+        "body": "청록색 포인트 컬러는 중요한 폼 전송, 신청 버튼 등 전체 화면 대비 10% 이하의 극소 면적에만 적용하여 희소성을 유지합니다.",
         "section": "colors"
       },
       {
-        "name": "The Short Korean Line Rule",
-        "body": "Homepage and service copy should use short, human Korean sentences. Do not pack multiple ideas into one sentence.",
+        "name": "The Contrast Safety Rule",
+        "body": "연한 회색 글씨(text-soft)는 라이트 배경에서 글씨가 뭉개지므로 본문이나 입력 폼 설명에 절대 단독으로 사용하지 않습니다.",
+        "section": "colors"
+      },
+      {
+        "name": "The No-Cramped Display Rule",
+        "body": "디자인 Scaffold 도구들의 training default(자간 -0.05em~-0.08em)는 글자가 겹쳐 비전문적으로 보이므로, display 헤드라인의 자간 마지노선은 항상 -0.04em 이상을 유지합니다.",
         "section": "typography"
       },
       {
-        "name": "The No Decorative Glass Rule",
-        "body": "Glass treatment must frame a real decision, form, offer, or content group. Do not add blur just to make a section feel designed.",
+        "name": "The Anti-Ghost-Card Rule",
+        "body": "1px 실선 테두리(border-[#e2e8f0])와 거대 그림자(shadow-2xl 등)를 한 컨테이너에 동시에 병용하여 비주얼 피로도를 높이는 행위를 전면 배제합니다.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "Do lead with the free online check and the customer-visible question.",
-      "Do keep Korean copy short, direct, and owner-friendly.",
-      "Do preserve the Google + website + Instagram + Facebook story."
+      "Do 모든 인터랙티브 링크와 메뉴 버튼에 웹 접근성 표준을 준수하는 aria-label을 반드시 기재합니다.",
+      "Do 모바일 터치 접근성을 위해 푸터의 소셜 채널 링크 등의 규격을 최소 44px (h-11 w-11) 이상으로 준수합니다.",
+      "Do 한글 문구의 자연스러운 줄바꿈을 위해 word-break: keep-all 속성을 텍스트 블록에 필수 선언합니다."
     ],
     "donts": [
-      "Don't make GoodmanSEO sound like a generic website-agency landing page.",
-      "Don't lead with abstract online structure consulting language.",
-      "Don't add long explanatory sections where a busy owner needs one clear next action.",
-      "Don't nest cards inside cards or turn every section into a floating card."
+      "Don't 1px 테두리와 16px 이상의 거대 섀도우를 함께 혼용하여 SaaS 클리셰(Ghost-card)를 남용하지 않습니다.",
+      "Don't 그라디언트 텍스트(background-clip: text)를 사용하지 않으며 단색 굵기 밸런스로 핵심을 전달합니다.",
+      "Don't 단순 장식을 위한 뜬금없는 유틸리티 모노스페이스 서체나 대각선 스트라이프 패턴을 렌더링하지 않습니다."
     ]
   }
 }
