@@ -13,6 +13,9 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 import Seo from '../components/Seo';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
+import heroLadyImage from '../../img/lady.png';
+import testimonialAvatarOne from '../../img/testimonial-avatar-1.png';
+import testimonialAvatarTwo from '../../img/testimonial-avatar-2.png';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -23,107 +26,183 @@ const fadeUp = (delay = 0, y = 32) => ({
   viewport: { once: true, amount: 0.15 },
 });
 
-const HeroReportVisual = () => {
-  const reportItems = [
-    { label: 'Google Business', value: '등록 상태 확인', status: '점검 완료' },
-    { label: '홈페이지', value: '모바일 문의 흐름', status: '개선 필요' },
-    { label: 'SNS 채널', value: '링크·콘텐츠 일관성', status: '확인 중' },
-  ];
+const GoogleLogo = ({ className = 'h-4 w-4' }) => (
+  <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+  </svg>
+);
 
-  const priorityItems = ['문의 버튼 위치', '지도 노출 정보', 'SNS 연결 상태'];
+const ReviewAvatar = ({ src, className = 'h-8 w-8' }) => (
+  <span className={`block shrink-0 overflow-hidden rounded-full bg-[#edf4f6] ${className}`}>
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      className="h-full w-full object-cover"
+    />
+  </span>
+);
 
+const HeroSocialProofVisual = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 22, scale: 0.98 }}
+      initial={{ opacity: 0, y: 22 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.7, delay: 0.15, ease }}
-      className="relative mx-auto w-full max-w-[390px] lg:mx-0 lg:max-w-[470px]"
-      aria-label="GoodmanSEO 온라인 진단 리포트 미리보기"
+      className="relative mx-auto w-full max-w-[430px] lg:mx-0 lg:max-w-[560px]"
+      aria-label="GoodmanSEO 온라인 채널 진단 안내 이미지"
     >
-      <div className="absolute inset-x-8 -top-6 h-24 rounded-full bg-[#007a8c]/10 blur-3xl" />
+      <div className="absolute inset-x-8 bottom-2 h-24 rounded-full bg-[#005b70]/10 blur-3xl" />
 
-      <div className="relative overflow-hidden rounded-[1.35rem] border border-[#cfe8ec] bg-white shadow-[0_18px_42px_rgba(0,91,112,0.08)]">
-        <div className="flex items-center justify-between border-b border-[#e2eef1] bg-[#f5fbfc] px-5 py-4">
-          <div>
-            <p className="text-[0.72rem] font-extrabold uppercase tracking-[0.12em] text-[#7c8f9f]">Online Audit</p>
-            <p className="mt-1 text-lg font-black tracking-[-0.03em] text-[#0f2230]">온라인 현황 진단</p>
-          </div>
-          <span className="inline-flex rounded-full bg-[#007a8c] px-3 py-1 text-[0.72rem] font-bold text-white">
-            무료
-          </span>
+      <div className="relative min-h-[390px] sm:min-h-[500px] lg:min-h-[620px]">
+        <div className="absolute bottom-0 left-1/2 z-10 h-[390px] -translate-x-[44%] sm:h-[500px] sm:-translate-x-[42%] lg:h-[690px] lg:-translate-x-[42%]">
+          <motion.img
+            src={heroLadyImage}
+            alt="노트북을 들고 온라인 채널 진단을 안내하는 GoodmanSEO 상담자"
+            initial={{ opacity: 0, y: 20, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.78, delay: 0.18, ease }}
+            className="h-full w-auto max-w-none object-contain drop-shadow-[0_22px_34px_rgba(0,91,112,0.10)]"
+            loading="eager"
+          />
         </div>
 
-        <div className="grid gap-5 p-5 sm:p-6">
-          <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-            <div className="relative flex h-24 w-24 items-center justify-center">
-              <svg className="h-full w-full -rotate-90" viewBox="0 0 96 96">
-                <circle cx="48" cy="48" r="39" fill="none" stroke="#edf4f6" strokeWidth="9" />
-                <motion.circle
-                  cx="48"
-                  cy="48"
-                  r="39"
-                  fill="none"
-                  stroke="#007a8c"
-                  strokeWidth="9"
-                  strokeLinecap="round"
-                  strokeDasharray={2 * Math.PI * 39}
-                  initial={{ strokeDashoffset: 2 * Math.PI * 39 }}
-                  animate={{ strokeDashoffset: 2 * Math.PI * 39 * 0.18 }}
-                  transition={{ duration: 1, delay: 0.35, ease: 'easeOut' }}
-                />
-              </svg>
-              <div className="absolute text-center">
-                <p className="text-3xl font-black leading-none tracking-[-0.04em] text-[#005b70]">82</p>
-                <p className="mt-1 text-[0.62rem] font-bold text-[#7c8f9f]">기본 점수</p>
-              </div>
+        <motion.div
+          initial={{ opacity: 0, x: 24, y: 8 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.55, delay: 0.55, ease }}
+          className="absolute left-0 top-7 z-20 w-[112px] rounded-xl border border-[#dbe7ff] bg-gradient-to-br from-white to-[#eef4ff] p-2.5 shadow-[0_8px_18px_rgba(37,99,235,0.12)] sm:left-2 sm:top-16 sm:w-[144px] sm:p-3.5"
+        >
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="text-[0.5rem] font-extrabold uppercase tracking-[0.08em] text-[#64748b] sm:text-[0.58rem]">Inquiry Flow</p>
+              <p className="mt-0.5 text-sm font-black tracking-[-0.04em] text-[#1d4ed8] sm:text-base">+42%</p>
             </div>
+            <span className="rounded-full bg-[#dbeafe] px-2 py-0.5 text-[0.55rem] font-bold text-[#1d4ed8]">
+              30d
+            </span>
+          </div>
+          <svg className="mt-2 h-9 w-full overflow-visible sm:h-11" viewBox="0 0 150 64" role="img" aria-label="문의 흐름 상승 그래프">
+            <path d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8" fill="none" stroke="#dbeafe" strokeWidth="8" strokeLinecap="round" />
+            <motion.path
+              d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8"
+              fill="none"
+              stroke="#2563eb"
+              strokeWidth="4"
+              strokeLinecap="round"
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 0.9, delay: 0.82, ease }}
+            />
+          </svg>
+        </motion.div>
 
-            <div className="text-left">
-              <p className="text-sm font-bold text-[#0f2230]">먼저 볼 항목</p>
-              <div className="mt-3 grid gap-2">
-                {priorityItems.map((item, index) => (
-                  <motion.div
-                    key={item}
-                    initial={{ opacity: 0, x: 12 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.35, delay: 0.45 + index * 0.12, ease }}
-                    className="flex items-center gap-2 text-sm font-semibold text-[#4e6170]"
-                  >
-                    <CheckCircle size={15} className="shrink-0 text-[#007a8c]" />
-                    <span>{item}</span>
-                  </motion.div>
-                ))}
-              </div>
+        <motion.div
+          initial={{ opacity: 0, x: -22, y: 12 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.55, delay: 0.68, ease }}
+          className="absolute bottom-14 left-0 z-20 w-[142px] rounded-xl border border-[#fde7bd] bg-gradient-to-br from-white to-[#fff7ed] p-2.5 shadow-[0_8px_18px_rgba(245,158,11,0.12)] sm:bottom-24 sm:w-[190px] sm:p-3.5"
+        >
+          <div className="flex items-center gap-3">
+            <ReviewAvatar src={testimonialAvatarOne} className="h-8 w-8 ring-2 ring-white" />
+            <div>
+              <p className="text-[0.68rem] font-extrabold text-[#0f2230] sm:text-xs">Client Review</p>
+              <p className="text-[0.56rem] font-semibold text-[#9a6b2f] sm:text-[0.6rem]">Local owner</p>
             </div>
           </div>
-
-          <div className="grid gap-3">
-            {reportItems.map((item, index) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.6 + index * 0.12, ease }}
-                className="rounded-2xl border border-[#e2eef1] bg-[#fbfeff] p-3.5"
+          <p className="mt-2 text-[0.65rem] font-semibold leading-relaxed text-[#0f2230] sm:text-[0.72rem]">
+            "Search brought us more direct inquiries."
+          </p>
+          <div className="mt-2 flex items-center gap-0.5 text-xs text-[#f5b84b] sm:text-sm" aria-label="별점 5점">
+            {'★★★★★'.split('').map((star, index) => (
+              <motion.span
+                key={`${star}-${index}`}
+                initial={{ opacity: 0, scale: 0.7 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.22, delay: 0.95 + index * 0.06, ease }}
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div className="text-left">
-                    <p className="text-[0.72rem] font-bold text-[#7c8f9f]">{item.label}</p>
-                    <p className="mt-1 text-sm font-extrabold text-[#0f2230]">{item.value}</p>
-                  </div>
-                  <span className="shrink-0 rounded-full bg-[#e6f4f6] px-2.5 py-1 text-[0.68rem] font-bold text-[#005b70]">
-                    {item.status}
-                  </span>
-                </div>
-              </motion.div>
+                {star}
+              </motion.span>
             ))}
           </div>
+        </motion.div>
 
-          <div className="rounded-2xl bg-[#005b70] p-4 text-left text-white">
-            <p className="text-[0.78rem] font-bold text-white/70">다음 단계</p>
-            <p className="mt-1 text-base font-extrabold tracking-[-0.03em]">고칠 순서를 정리해드립니다</p>
+        <motion.div
+          initial={{ opacity: 0, x: 18, y: 8 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.42, delay: 0.84, ease }}
+          className="absolute left-[6.2rem] top-[7.4rem] z-20 flex items-center gap-2 rounded-xl border border-[#dbeafe] bg-gradient-to-br from-white to-[#eff6ff] px-3 py-2.5 shadow-[0_8px_18px_rgba(59,130,246,0.11)] sm:left-[9.2rem] sm:top-[11.2rem] sm:px-3.5 sm:py-3"
+        >
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white shadow-sm">
+            <GoogleLogo className="h-5 w-5" />
+          </span>
+          <div>
+            <p className="text-xs font-black leading-none text-[#0f2230]">Google</p>
+            <p className="mt-1 text-[0.62rem] font-bold text-[#64748b]">Verified</p>
           </div>
-        </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: 18, y: 8 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.42, delay: 0.96, ease }}
+          className="absolute left-[9.4rem] bottom-[6.1rem] z-20 flex items-center gap-2 rounded-xl border border-[#bbf7d0] bg-gradient-to-br from-white to-[#f0fdf4] px-3 py-2.5 shadow-[0_8px_18px_rgba(34,197,94,0.12)] sm:left-[13.2rem] sm:bottom-[6.4rem] sm:px-3.5 sm:py-3"
+        >
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white shadow-sm">
+            <Instagram size={16} strokeWidth={2.4} />
+          </span>
+          <div>
+            <p className="text-xs font-black leading-none text-[#0f2230]">SNS</p>
+            <p className="mt-1 text-[0.62rem] font-bold text-[#4b8460]">Engagement Up</p>
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -18, y: 10 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.45, delay: 1.04, ease }}
+          className="absolute left-[12.4rem] top-[18.1rem] z-20 hidden w-[154px] rounded-xl border border-[#ddd6fe] bg-gradient-to-br from-white to-[#f5f3ff] p-3 shadow-[0_8px_18px_rgba(124,58,237,0.12)] sm:block"
+        >
+          <div className="flex items-center gap-2">
+            <ReviewAvatar src={testimonialAvatarTwo} className="h-8 w-8 ring-2 ring-white" />
+            <div>
+              <p className="text-[0.68rem] font-extrabold text-[#0f2230] sm:text-xs">New Inquiry</p>
+              <p className="text-[0.56rem] font-semibold text-[#7c6aa0] sm:text-[0.6rem]">New lead</p>
+            </div>
+          </div>
+          <p className="mt-2 text-[0.64rem] font-semibold leading-relaxed text-[#0f2230] sm:text-[0.7rem]">
+            "Found us on Maps and called right away."
+          </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -16, y: 8 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.42, delay: 1.12, ease }}
+          className="absolute left-[2.6rem] top-[14.1rem] z-20 hidden w-[158px] rounded-xl border border-[#ddd6fe] bg-gradient-to-br from-white to-[#f5f3ff] p-3 shadow-[0_8px_18px_rgba(99,102,241,0.12)] sm:block"
+        >
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="text-[0.58rem] font-bold text-[#7c8f9f]">Monthly Revenue</p>
+              <p className="mt-1 text-base font-black tracking-[-0.04em] text-[#0f2230]">$8,750</p>
+              <p className="mt-1 text-[0.56rem] font-bold text-[#16a34a]">▲ 25.4%</p>
+            </div>
+            <div className="flex h-14 items-end gap-1.5 pt-4">
+              {[0.38, 0.58, 0.82, 1].map((height, index) => (
+                <motion.span
+                  key={height}
+                  initial={{ scaleY: 0 }}
+                  animate={{ scaleY: height }}
+                  transition={{ duration: 0.45, delay: 1.2 + index * 0.08, ease }}
+                  className="block h-10 w-2 origin-bottom rounded-full bg-gradient-to-t from-[#8b5cf6] to-[#bfdbfe]"
+                />
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   );
@@ -235,8 +314,8 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column: Online audit report preview */}
-            <HeroReportVisual />
+            {/* Right Column: Social proof and performance preview */}
+            <HeroSocialProofVisual />
 
           </div>
         </div>
