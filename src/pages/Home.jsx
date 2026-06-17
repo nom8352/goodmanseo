@@ -59,7 +59,7 @@ const HeroDevicesVisual = () => {
   const circleCircumference = 2 * Math.PI * 22; // r=22 -> ~138.2
 
   return (
-    <div className="relative flex justify-center lg:justify-end">
+    <div className="relative mx-auto mt-2 flex h-[330px] w-full max-w-[360px] justify-center overflow-visible sm:h-[390px] sm:max-w-[460px] lg:mt-0 lg:h-auto lg:max-w-none lg:justify-end">
       
       {/* Background Glow Effect */}
       <div className="absolute top-[10%] right-[10%] -z-10 h-[300px] w-[300px] rounded-full bg-gradient-to-tr from-[rgba(0,122,140,0.12)] to-[rgba(0,91,112,0.06)] blur-3xl animate-pulse" />
@@ -69,7 +69,7 @@ const HeroDevicesVisual = () => {
         animate={{ y: [0, -12, 0] }}
         whileHover={{ scale: 1.12, rotate: 5, shadow: "0px 15px 40px rgba(66,133,244,0.2)" }}
         transition={{ y: { repeat: Infinity, duration: 4.8, ease: "easeInOut" } }}
-        className="absolute left-[40%] top-[42%] z-10 flex h-20 w-20 cursor-pointer items-center justify-center rounded-2xl border border-white/50 bg-white/70 backdrop-blur-md shadow-[0_12px_36px_rgba(66,133,244,0.12)] transition-all p-4.5"
+        className="absolute left-[40%] top-[42%] z-10 flex h-14 w-14 cursor-pointer items-center justify-center rounded-2xl border border-white/50 bg-white/70 p-3 shadow-[0_12px_36px_rgba(66,133,244,0.12)] backdrop-blur-md transition-all sm:h-20 sm:w-20 sm:p-4.5"
       >
         <svg viewBox="0 0 24 24" className="w-full h-full">
           <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
@@ -84,7 +84,7 @@ const HeroDevicesVisual = () => {
         animate={{ y: [0, 10, 0] }}
         whileHover={{ scale: 1.12, rotate: -5, shadow: "0px 15px 40px rgba(225,48,108,0.2)" }}
         transition={{ y: { repeat: Infinity, duration: 4.2, ease: "easeInOut" } }}
-        className="absolute left-[-1%] top-[12%] z-20 flex h-16 w-16 cursor-pointer items-center justify-center rounded-2xl border border-white/50 bg-white/70 backdrop-blur-md shadow-[0_10px_30px_rgba(225,48,108,0.15)] transition-all p-3.5 relative overflow-hidden"
+        className="absolute left-[2%] top-[10%] z-20 flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-2xl border border-white/50 bg-white/70 p-2.5 shadow-[0_10px_30px_rgba(225,48,108,0.15)] backdrop-blur-md transition-all sm:left-[-1%] sm:top-[12%] sm:h-16 sm:w-16 sm:p-3.5"
       >
         {/* Colorful Gradient Border Overlay */}
         <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-40" style={{ margin: '-1px', maskImage: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', WebkitMaskComposite: 'xor', maskComposite: 'exclude' }} />
@@ -100,7 +100,7 @@ const HeroDevicesVisual = () => {
         animate={{ y: [0, -8, 0] }}
         whileHover={{ scale: 1.12, rotate: 5, shadow: "0px 15px 40px rgba(3,199,90,0.2)" }}
         transition={{ y: { repeat: Infinity, duration: 3.9, ease: "easeInOut" } }}
-        className="absolute left-[14%] bottom-[-8%] z-10 flex h-14 w-14 cursor-pointer items-center justify-center rounded-2xl border border-white/50 bg-white/70 backdrop-blur-md shadow-[0_8px_24px_rgba(3,199,90,0.12)] transition-all p-3"
+        className="absolute bottom-[-2%] left-[10%] z-10 flex h-11 w-11 cursor-pointer items-center justify-center rounded-2xl border border-white/50 bg-white/70 p-2.5 shadow-[0_8px_24px_rgba(3,199,90,0.12)] backdrop-blur-md transition-all sm:bottom-[-8%] sm:left-[14%] sm:h-14 sm:w-14 sm:p-3"
       >
         <svg viewBox="0 0 24 24" className="w-full h-full" fill="#03C75A">
           <path d="M16.2 3H21v18h-4.8l-7.4-11V21H4V3h4.8l7.4 11V3z"/>
@@ -112,7 +112,7 @@ const HeroDevicesVisual = () => {
         animate={{ y: [0, 8, 0] }}
         whileHover={{ scale: 1.12, rotate: -5, shadow: "0px 15px 40px rgba(24,119,242,0.2)" }}
         transition={{ y: { repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.2 } }}
-        className="absolute right-[-2%] top-[22%] z-10 flex h-12 w-12 cursor-pointer items-center justify-center rounded-xl border border-white/50 bg-white/70 backdrop-blur-md shadow-[0_6px_20px_rgba(24,119,242,0.1)] transition-all p-2.5"
+        className="absolute right-[2%] top-[22%] z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl border border-white/50 bg-white/70 p-2 shadow-[0_6px_20px_rgba(24,119,242,0.1)] backdrop-blur-md transition-all sm:right-[-2%] sm:h-12 sm:w-12 sm:p-2.5"
       >
         <svg viewBox="0 0 24 24" className="w-full h-full" fill="#1877F2">
           <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -128,7 +128,7 @@ const HeroDevicesVisual = () => {
           scale: { duration: 0.8, delay: 0.2 },
           y: { repeat: Infinity, duration: 6, ease: "easeInOut" }
         }}
-        className="relative w-full max-w-[440px] md:max-w-[500px]"
+        className="relative w-[82%] max-w-[310px] origin-top scale-95 sm:w-full sm:max-w-[440px] sm:scale-100 md:max-w-[500px]"
       >
         {/* Screen frame (MacBook style bezel) */}
         <div className="rounded-t-2xl border-[10px] border-slate-900 bg-slate-900 shadow-2xl relative">
@@ -248,7 +248,7 @@ const HeroDevicesVisual = () => {
             x: { duration: 0.8, delay: 0.4 },
             y: { repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }
           }}
-          className="absolute -right-4 -bottom-8 z-30 w-[150px] sm:w-[170px] rounded-[2rem] border-[6px] border-slate-900 bg-slate-900 p-1 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] overflow-hidden"
+          className="absolute -right-5 -bottom-10 z-30 w-[118px] overflow-hidden rounded-[1.7rem] border-[5px] border-slate-900 bg-slate-900 p-1 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] sm:-right-4 sm:-bottom-8 sm:w-[170px] sm:rounded-[2rem] sm:border-[6px]"
         >
           {/* Phone Screen Content */}
           <div className="aspect-[1/2] rounded-[1.6rem] overflow-hidden bg-white p-3 text-slate-800 relative flex flex-col justify-between h-full">
@@ -412,9 +412,9 @@ const Home = () => {
       />
 
       {/* 1. Hero Section */}
-      <section className="relative py-16 md:py-24 lg:py-32">
+      <section className="relative pt-10 pb-8 sm:pt-14 sm:pb-12 md:py-24 lg:py-32">
         <div className="container relative z-10 px-6">
-          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12">
             
             {/* Left Column: Typography & CTAs */}
             <motion.div
@@ -474,25 +474,25 @@ const Home = () => {
       </section>
 
       {/* 2. Problem Section (6대 고민 라인 그리드) */}
-      <section className="py-20 md:py-28 border-t border-[var(--glass-border)] bg-[var(--bg-dark)]">
+      <section className="py-14 md:py-24 lg:py-28 border-t border-[var(--glass-border)] bg-[var(--bg-dark)]">
         <div className="container px-6 text-center">
-          <div className="max-w-3xl mx-auto mb-16">
+          <div className="max-w-3xl mx-auto mb-10 md:mb-16">
             <span className="font-serif italic text-[var(--accent-secondary)] text-lg">Common Issues</span>
             <h2 className="mt-3 font-sans text-[clamp(2.0rem,3.2vw,3.4rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-main)]">
               혹시 이런 문제로 고민하고 계신가요?
             </h2>
           </div>
           
-          <div className="grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-3">
             {problems.map((prob, i) => (
               <motion.div
                 key={prob.num}
                 {...fadeUp(i * 0.08, 24)}
                 className="pt-6 border-t border-[var(--glass-border)] flex flex-col"
               >
-                <span className="font-serif italic text-4xl lg:text-5xl text-[var(--accent-secondary)]/30 mb-4">{prob.num}</span>
-                <h3 className="text-xl font-bold tracking-[-0.03em] text-[var(--text-main)]">{prob.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">{prob.desc}</p>
+                <span className="font-serif italic text-3xl md:text-4xl lg:text-5xl text-[var(--accent-secondary)]/30 mb-3 md:mb-4">{prob.num}</span>
+                <h3 className="text-base md:text-xl font-bold tracking-[-0.03em] text-[var(--text-main)]">{prob.title}</h3>
+                <p className="mt-2 md:mt-3 text-xs md:text-sm leading-relaxed text-[var(--text-muted)]">{prob.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -500,9 +500,9 @@ const Home = () => {
       </section>
 
       {/* 3. Service Section (5열 종대 채널 진단) */}
-      <section className="py-20 md:py-28 bg-[var(--bg-darker)] border-t border-b border-[var(--glass-border)]">
+      <section className="py-14 md:py-24 lg:py-28 bg-[var(--bg-darker)] border-t border-b border-[var(--glass-border)]">
         <div className="container px-6 text-center">
-          <div className="max-w-3xl mx-auto mb-16">
+          <div className="max-w-3xl mx-auto mb-10 md:mb-16">
             <span className="font-serif italic text-[var(--accent-secondary)] text-lg">Our Solutions</span>
             <h2 className="mt-3 font-sans text-[clamp(2.0rem,3.2vw,3.4rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-main)]">
               서비스 소개
@@ -512,20 +512,20 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-5">
             {services.map((svc, i) => {
               const Icon = svc.icon;
               return (
                 <motion.div
                   key={svc.title}
                   {...fadeUp(i * 0.08, 24)}
-                  className="rounded-2xl border border-[var(--glass-border)] bg-white p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 flex flex-col items-center justify-between"
+                  className="last:col-span-2 rounded-2xl border border-[var(--glass-border)] bg-white p-4 text-center shadow-sm transition-all duration-300 hover:shadow-md sm:p-6 lg:last:col-span-1 flex flex-col items-center justify-between"
                 >
                   <div className="flex flex-col items-center">
-                    <div className="mb-5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--bg-darker)] text-[var(--accent-primary)]">
-                      <Icon size={20} className="block shrink-0" />
+                    <div className="mb-3 md:mb-5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--bg-darker)] text-[var(--accent-primary)]">
+                      <Icon size={19} className="block shrink-0" />
                     </div>
-                    <h3 className="text-lg font-bold tracking-[-0.03em] text-[var(--text-main)]">{svc.title}</h3>
+                    <h3 className="text-base md:text-lg font-bold tracking-[-0.03em] text-[var(--text-main)]">{svc.title}</h3>
                     <p className="mt-3 text-xs leading-relaxed text-[var(--text-muted)]">{svc.desc}</p>
                   </div>
                 </motion.div>
@@ -536,9 +536,9 @@ const Home = () => {
       </section>
 
       {/* 4. Process Section (5단계 진행과정) */}
-      <section className="py-20 md:py-28 bg-[var(--bg-dark)]">
+      <section className="py-14 md:py-24 lg:py-28 bg-[var(--bg-dark)]">
         <div className="container px-6 text-center">
-          <div className="max-w-3xl mx-auto mb-20">
+          <div className="max-w-3xl mx-auto mb-12 md:mb-20">
             <span className="font-serif italic text-[var(--accent-secondary)] text-lg">How We Work</span>
             <h2 className="mt-3 font-sans text-[clamp(2.0rem,3.2vw,3.4rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-main)]">
               진행 과정
@@ -548,7 +548,7 @@ const Home = () => {
             </p>
           </div>
           
-          <div className="relative grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="relative grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:gap-10 lg:grid-cols-5">
             {/* Gradient connecting line for desktop screen */}
             <div className="absolute top-[40px] left-[5%] right-[5%] hidden h-[1px] bg-gradient-to-r from-[rgba(0,91,112,0.02)] via-[rgba(0,91,112,0.15)] to-[rgba(0,91,112,0.02)] lg:block z-0" />
             
@@ -556,10 +556,10 @@ const Home = () => {
               <motion.div
                 key={step.num}
                 {...fadeUp(i * 0.08, 24)}
-                className="relative z-10 flex flex-col"
+                className="relative z-10 last:col-span-2 lg:last:col-span-1 flex flex-col"
               >
                 {/* Huge Serif Italic Number */}
-                <div className="font-serif italic text-6xl lg:text-7xl text-[var(--accent-primary)]/10 leading-none select-none mb-4">
+                <div className="font-serif italic text-4xl md:text-6xl lg:text-7xl text-[var(--accent-primary)]/10 leading-none select-none mb-3 md:mb-4">
                   {step.num}
                 </div>
                 <h3 className="text-lg font-bold tracking-[-0.03em] text-[var(--text-main)]">{step.title}</h3>
@@ -583,11 +583,11 @@ const Home = () => {
 
 
       {/* 5. Footer Banner / CTA Section */}
-      <section className="py-16 md:py-24 bg-[var(--bg-dark)] border-t border-[var(--glass-border)]">
+      <section className="py-12 md:py-24 bg-[var(--bg-dark)] border-t border-[var(--glass-border)]">
         <div className="container px-6">
           <motion.div
             {...fadeUp(0.1)}
-            className="rounded-[2.5rem] bg-gradient-to-br from-[#f0f9fa] via-[#f7fbfb] to-[#e6f4f6] border border-[#d0ecef] p-8 md:p-12 text-[#0f2230] shadow-[0_20px_50px_rgba(0,91,112,0.06)] relative overflow-hidden"
+            className="rounded-[1.75rem] md:rounded-[2.5rem] bg-gradient-to-br from-[#f0f9fa] via-[#f7fbfb] to-[#e6f4f6] border border-[#d0ecef] p-6 md:p-12 text-[#0f2230] shadow-[0_20px_50px_rgba(0,91,112,0.06)] relative overflow-hidden"
           >
             {/* Soft grid/light glow background elements */}
             <div className="absolute inset-0 pointer-events-none opacity-20"
@@ -622,7 +622,7 @@ const Home = () => {
               </div>
 
               {/* Center Box: Diagnostic Scores Gauge (White Premium Card) */}
-              <div className="bg-white border border-[#e6eff1] rounded-[2rem] p-6 md:p-8 shadow-[0_12px_36px_rgba(0,91,112,0.03)] flex flex-col items-center justify-between">
+              <div className="hidden bg-white border border-[#e6eff1] rounded-[2rem] p-6 md:p-8 shadow-[0_12px_36px_rgba(0,91,112,0.03)] md:flex flex-col items-center justify-between">
                 <p className="text-sm font-bold text-[#0f2230]">종합 진단 점수</p>
                 
                 {/* Clean SVG Circular Gauge */}
@@ -702,7 +702,7 @@ const Home = () => {
               </div>
 
               {/* Right Box: Key Improvements (Deep Teal Premium Card) */}
-              <div className="bg-gradient-to-br from-[#0a4651] to-[#042c34] rounded-[2rem] p-6 md:p-8 text-white shadow-[0_12px_40px_rgba(0,91,112,0.14)] relative overflow-hidden flex flex-col justify-between">
+              <div className="hidden bg-gradient-to-br from-[#0a4651] to-[#042c34] rounded-[2rem] p-6 md:p-8 text-white shadow-[0_12px_40px_rgba(0,91,112,0.14)] relative overflow-hidden lg:flex flex-col justify-between">
                 
                 {/* Tech connection net background visual */}
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/5 blur-2xl pointer-events-none" />
