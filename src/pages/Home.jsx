@@ -3,17 +3,11 @@ import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   Search, 
-  Globe, 
   MessageSquare, 
   Instagram, 
-  MapPin, 
-  Users, 
   Monitor, 
   Cpu, 
-  CheckSquare,
   CheckCircle,
-  Clipboard,
-  Rocket,
   Sparkles
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -29,334 +23,109 @@ const fadeUp = (delay = 0, y = 32) => ({
   viewport: { once: true, amount: 0.15 },
 });
 
-const HeroDevicesVisual = () => {
-  const [counts, setCounts] = React.useState({ total: 0, google: 0, web: 0 });
+const HeroReportVisual = () => {
+  const reportItems = [
+    { label: 'Google Business', value: '등록 상태 확인', status: '점검 완료' },
+    { label: '홈페이지', value: '모바일 문의 흐름', status: '개선 필요' },
+    { label: 'SNS 채널', value: '링크·콘텐츠 일관성', status: '확인 중' },
+  ];
 
-  React.useEffect(() => {
-    const duration = 1200; // 1.2s count up duration
-    const startTime = performance.now();
-
-    const animate = (now) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      // easeOutQuad interpolation
-      const easeProgress = progress * (2 - progress);
-
-      setCounts({
-        total: Math.round(easeProgress * 85),
-        google: Math.round(easeProgress * 90),
-        web: Math.round(easeProgress * 75),
-      });
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      }
-    };
-
-    requestAnimationFrame(animate);
-  }, []);
-
-  const circleCircumference = 2 * Math.PI * 22; // r=22 -> ~138.2
+  const priorityItems = ['문의 버튼 위치', '지도 노출 정보', 'SNS 연결 상태'];
 
   return (
-    <div className="relative mx-auto mt-2 flex h-[330px] w-full max-w-[360px] justify-center overflow-visible sm:h-[390px] sm:max-w-[460px] lg:mt-0 lg:h-auto lg:max-w-none lg:justify-end">
-      
-      {/* Background Glow Effect */}
-      <div className="absolute top-[10%] right-[10%] -z-10 h-[300px] w-[300px] rounded-full bg-gradient-to-tr from-[rgba(0,122,140,0.12)] to-[rgba(0,91,112,0.06)] blur-3xl animate-pulse" />
+    <motion.div
+      initial={{ opacity: 0, y: 22, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.7, delay: 0.15, ease }}
+      className="relative mx-auto w-full max-w-[390px] lg:mx-0 lg:max-w-[470px]"
+      aria-label="GoodmanSEO 온라인 진단 리포트 미리보기"
+    >
+      <div className="absolute inset-x-8 -top-6 h-24 rounded-full bg-[#007a8c]/10 blur-3xl" />
 
-      {/* 1. Google (Large - Behind laptop screen, below the 90/100 gauge card) */}
-      <motion.div
-        animate={{ y: [0, -12, 0] }}
-        whileHover={{ scale: 1.12, rotate: 5, shadow: "0px 15px 40px rgba(66,133,244,0.2)" }}
-        transition={{ y: { repeat: Infinity, duration: 4.8, ease: "easeInOut" } }}
-        className="absolute left-[40%] top-[42%] z-10 flex h-14 w-14 cursor-pointer items-center justify-center rounded-2xl border border-white/50 bg-white/70 p-3 shadow-[0_12px_36px_rgba(66,133,244,0.12)] backdrop-blur-md transition-all sm:h-20 sm:w-20 sm:p-4.5"
-      >
-        <svg viewBox="0 0 24 24" className="w-full h-full">
-          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-        </svg>
-      </motion.div>
-
-      {/* 2. Instagram (Medium - Top Left, shifted outwards to avoid screen) */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        whileHover={{ scale: 1.12, rotate: -5, shadow: "0px 15px 40px rgba(225,48,108,0.2)" }}
-        transition={{ y: { repeat: Infinity, duration: 4.2, ease: "easeInOut" } }}
-        className="absolute left-[2%] top-[10%] z-20 flex h-12 w-12 cursor-pointer items-center justify-center overflow-hidden rounded-2xl border border-white/50 bg-white/70 p-2.5 shadow-[0_10px_30px_rgba(225,48,108,0.15)] backdrop-blur-md transition-all sm:left-[-1%] sm:top-[12%] sm:h-16 sm:w-16 sm:p-3.5"
-      >
-        {/* Colorful Gradient Border Overlay */}
-        <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-40" style={{ margin: '-1px', maskImage: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)', WebkitMaskComposite: 'xor', maskComposite: 'exclude' }} />
-        <svg viewBox="0 0 24 24" className="w-full h-full text-[#ee2a7b]" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-        </svg>
-      </motion.div>
-
-      {/* 3. Naver (Medium Small - Bottom Left, behind the phone frame) */}
-      <motion.div
-        animate={{ y: [0, -8, 0] }}
-        whileHover={{ scale: 1.12, rotate: 5, shadow: "0px 15px 40px rgba(3,199,90,0.2)" }}
-        transition={{ y: { repeat: Infinity, duration: 3.9, ease: "easeInOut" } }}
-        className="absolute bottom-[-2%] left-[10%] z-10 flex h-11 w-11 cursor-pointer items-center justify-center rounded-2xl border border-white/50 bg-white/70 p-2.5 shadow-[0_8px_24px_rgba(3,199,90,0.12)] backdrop-blur-md transition-all sm:bottom-[-8%] sm:left-[14%] sm:h-14 sm:w-14 sm:p-3"
-      >
-        <svg viewBox="0 0 24 24" className="w-full h-full" fill="#03C75A">
-          <path d="M16.2 3H21v18h-4.8l-7.4-11V21H4V3h4.8l7.4 11V3z"/>
-        </svg>
-      </motion.div>
-
-      {/* 4. Facebook (Small - Mid Right, lowered to clear screen header) */}
-      <motion.div
-        animate={{ y: [0, 8, 0] }}
-        whileHover={{ scale: 1.12, rotate: -5, shadow: "0px 15px 40px rgba(24,119,242,0.2)" }}
-        transition={{ y: { repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.2 } }}
-        className="absolute right-[2%] top-[22%] z-10 flex h-10 w-10 cursor-pointer items-center justify-center rounded-xl border border-white/50 bg-white/70 p-2 shadow-[0_6px_20px_rgba(24,119,242,0.1)] backdrop-blur-md transition-all sm:right-[-2%] sm:h-12 sm:w-12 sm:p-2.5"
-      >
-        <svg viewBox="0 0 24 24" className="w-full h-full" fill="#1877F2">
-          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-        </svg>
-      </motion.div>
-
-      {/* Laptop Mockup with Floating Animation */}
-      <motion.div
-        initial={{ opacity: 0, y: 30, scale: 0.96 }}
-        animate={{ opacity: 1, y: [0, -6, 0], scale: 1 }}
-        transition={{ 
-          opacity: { duration: 0.8, delay: 0.2 },
-          scale: { duration: 0.8, delay: 0.2 },
-          y: { repeat: Infinity, duration: 6, ease: "easeInOut" }
-        }}
-        className="relative w-[82%] max-w-[310px] origin-top scale-95 sm:w-full sm:max-w-[440px] sm:scale-100 md:max-w-[500px]"
-      >
-        {/* Screen frame (MacBook style bezel) */}
-        <div className="rounded-t-2xl border-[10px] border-slate-900 bg-slate-900 shadow-2xl relative">
-          
-          {/* Webcam Dot */}
-          <div className="absolute top-[3px] left-1/2 -translate-x-1/2 h-[3px] w-[3px] rounded-full bg-slate-800 z-30" />
-
-          {/* Laptop Screen Content */}
-          <div className="aspect-[1.6/1] overflow-hidden rounded bg-slate-50 p-4 text-slate-800 relative">
-            
-            {/* Scanner Laser Beam Animation */}
-            <motion.div 
-              animate={{ top: ["0%", "100%", "0%"] }}
-              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[var(--accent-primary)] to-transparent opacity-40 shadow-[0_0_6px_var(--accent-primary)] z-20"
-              style={{ pointerEvents: 'none' }}
-            />
-
-            {/* Glass Reflection Overlay */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.04] to-white/[0.18] z-20" />
-            <div className="absolute -top-[100%] -left-[100%] w-[200%] h-[200%] rotate-45 pointer-events-none bg-gradient-to-r from-transparent via-white/[0.08] to-transparent z-20" />
-
-            {/* Header bar */}
-            <div className="flex items-center justify-between border-b border-slate-200 pb-2 text-[0.62rem] font-bold text-slate-400">
-              <div className="flex items-center gap-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-slate-300"></span>
-                <span>GOODMANSEO</span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
-                </span>
-                <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[0.55rem] text-slate-500 font-medium">통합 대시보드</span>
-              </div>
-            </div>
-
-            {/* Mini Dashboard Content */}
-            <div className="mt-3 grid grid-cols-3 gap-2.5">
-              <div className="rounded-lg bg-white p-2 shadow-sm border border-slate-100">
-                <p className="text-[0.48rem] font-bold text-slate-400">종합 진단 점수</p>
-                <p className="text-[0.85rem] font-black text-[var(--accent-primary)] mt-0.5">{counts.total}/100</p>
-              </div>
-              <div className="rounded-lg bg-white p-2 shadow-sm border border-slate-100">
-                <p className="text-[0.48rem] font-bold text-slate-400">구글 최적화</p>
-                <p className="text-[0.85rem] font-black text-slate-700 mt-0.5">{counts.google}/100</p>
-              </div>
-              <div className="rounded-lg bg-white p-2 shadow-sm border border-slate-100">
-                <p className="text-[0.48rem] font-bold text-slate-400">홈페이지 분석</p>
-                <p className="text-[0.85rem] font-black text-slate-700 mt-0.5">{counts.web}/100</p>
-              </div>
-            </div>
-
-            {/* Graph Simulation */}
-            <div className="mt-3 rounded-lg bg-white p-3 shadow-sm border border-slate-100">
-              <div className="flex items-center justify-between text-[0.52rem] font-bold text-slate-400">
-                <span>온라인 유입 분석 (주간)</span>
-                <span className="text-emerald-500 font-extrabold">+58% 증가</span>
-              </div>
-              <div className="mt-2.5 flex items-end gap-2 h-14 pt-2 border-b border-l border-slate-100 px-1">
-                <motion.div 
-                  initial={{ height: 0 }}
-                  animate={{ height: "20%" }}
-                  transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-                  className="w-full bg-slate-100 rounded-t-sm"
-                />
-                <motion.div 
-                  initial={{ height: 0 }}
-                  animate={{ height: "40%" }}
-                  transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-                  className="w-full bg-slate-200 rounded-t-sm"
-                />
-                <motion.div 
-                  initial={{ height: 0 }}
-                  animate={{ height: "35%" }}
-                  transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-                  className="w-full bg-slate-100 rounded-t-sm"
-                />
-                <motion.div 
-                  initial={{ height: 0 }}
-                  animate={{ height: "65%" }}
-                  transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-                  className="w-full bg-slate-200 rounded-t-sm"
-                />
-                {/* Live pulsing last bar */}
-                <motion.div 
-                  initial={{ height: 0 }}
-                  animate={{ height: ["82%", "86%", "82%"] }}
-                  transition={{ 
-                    height: {
-                      initial: { duration: 1, delay: 0.7, ease: "easeOut" },
-                      default: { repeat: Infinity, duration: 2.5, ease: "easeInOut" }
-                    }
-                  }}
-                  className="w-full bg-[var(--accent-primary)] rounded-t-sm shadow-[0_2px_8px_rgba(0,91,112,0.3)] relative"
-                />
-              </div>
-            </div>
+      <div className="relative overflow-hidden rounded-[1.35rem] border border-[#cfe8ec] bg-white shadow-[0_18px_42px_rgba(0,91,112,0.08)]">
+        <div className="flex items-center justify-between border-b border-[#e2eef1] bg-[#f5fbfc] px-5 py-4">
+          <div>
+            <p className="text-[0.72rem] font-extrabold uppercase tracking-[0.12em] text-[#7c8f9f]">Online Audit</p>
+            <p className="mt-1 text-lg font-black tracking-[-0.03em] text-[#0f2230]">온라인 현황 진단</p>
           </div>
+          <span className="inline-flex rounded-full bg-[#007a8c] px-3 py-1 text-[0.72rem] font-bold text-white">
+            무료
+          </span>
         </div>
 
-        {/* Keyboard Base (MacBook style metallic base) */}
-        <div className="relative h-[10px] w-[106%] -left-[3%] rounded-b-xl bg-gradient-to-b from-slate-200 to-slate-400 border-t border-slate-300 shadow-[0_12px_24px_rgba(0,0,0,0.15)] z-20">
-          {/* Opening groove */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2.5 w-20 bg-slate-400/60 rounded-b-md z-30 flex justify-center">
-            {/* Trackpad representation */}
-            <div className="absolute top-[2px] h-[3px] w-12 bg-slate-500/40 rounded-sm"></div>
+        <div className="grid gap-5 p-5 sm:p-6">
+          <div className="grid grid-cols-[auto_1fr] items-center gap-4">
+            <div className="relative flex h-24 w-24 items-center justify-center">
+              <svg className="h-full w-full -rotate-90" viewBox="0 0 96 96">
+                <circle cx="48" cy="48" r="39" fill="none" stroke="#edf4f6" strokeWidth="9" />
+                <motion.circle
+                  cx="48"
+                  cy="48"
+                  r="39"
+                  fill="none"
+                  stroke="#007a8c"
+                  strokeWidth="9"
+                  strokeLinecap="round"
+                  strokeDasharray={2 * Math.PI * 39}
+                  initial={{ strokeDashoffset: 2 * Math.PI * 39 }}
+                  animate={{ strokeDashoffset: 2 * Math.PI * 39 * 0.18 }}
+                  transition={{ duration: 1, delay: 0.35, ease: 'easeOut' }}
+                />
+              </svg>
+              <div className="absolute text-center">
+                <p className="text-3xl font-black leading-none tracking-[-0.04em] text-[#005b70]">82</p>
+                <p className="mt-1 text-[0.62rem] font-bold text-[#7c8f9f]">기본 점수</p>
+              </div>
+            </div>
+
+            <div className="text-left">
+              <p className="text-sm font-bold text-[#0f2230]">먼저 볼 항목</p>
+              <div className="mt-3 grid gap-2">
+                {priorityItems.map((item, index) => (
+                  <motion.div
+                    key={item}
+                    initial={{ opacity: 0, x: 12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.35, delay: 0.45 + index * 0.12, ease }}
+                    className="flex items-center gap-2 text-sm font-semibold text-[#4e6170]"
+                  >
+                    <CheckCircle size={15} className="shrink-0 text-[#007a8c]" />
+                    <span>{item}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-3">
+            {reportItems.map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.6 + index * 0.12, ease }}
+                className="rounded-2xl border border-[#e2eef1] bg-[#fbfeff] p-3.5"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="text-left">
+                    <p className="text-[0.72rem] font-bold text-[#7c8f9f]">{item.label}</p>
+                    <p className="mt-1 text-sm font-extrabold text-[#0f2230]">{item.value}</p>
+                  </div>
+                  <span className="shrink-0 rounded-full bg-[#e6f4f6] px-2.5 py-1 text-[0.68rem] font-bold text-[#005b70]">
+                    {item.status}
+                  </span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="rounded-2xl bg-[#005b70] p-4 text-left text-white">
+            <p className="text-[0.78rem] font-bold text-white/70">다음 단계</p>
+            <p className="mt-1 text-base font-extrabold tracking-[-0.03em]">고칠 순서를 정리해드립니다</p>
           </div>
         </div>
-
-        {/* Overlapping Phone Mockup (iPhone Pro style) with independent float */}
-        <motion.div
-          initial={{ opacity: 0, x: 24, y: 24 }}
-          animate={{ opacity: 1, x: 0, y: [0, -8, 0] }}
-          transition={{ 
-            opacity: { duration: 0.8, delay: 0.4 },
-            x: { duration: 0.8, delay: 0.4 },
-            y: { repeat: Infinity, duration: 5, ease: "easeInOut", delay: 0.5 }
-          }}
-          className="absolute -right-5 -bottom-10 z-30 w-[118px] overflow-hidden rounded-[1.7rem] border-[5px] border-slate-900 bg-slate-900 p-1 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)] sm:-right-4 sm:-bottom-8 sm:w-[170px] sm:rounded-[2rem] sm:border-[6px]"
-        >
-          {/* Phone Screen Content */}
-          <div className="aspect-[1/2] rounded-[1.6rem] overflow-hidden bg-white p-3 text-slate-800 relative flex flex-col justify-between h-full">
-            
-            {/* Scanner Laser Beam Animation for Phone */}
-            <motion.div 
-              animate={{ top: ["0%", "100%", "0%"] }}
-              transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-              className="absolute left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[var(--accent-primary)] to-transparent opacity-40 shadow-[0_0_6px_var(--accent-primary)] z-20"
-              style={{ pointerEvents: 'none' }}
-            />
-
-            {/* Phone Screen Reflection */}
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-white/[0.03] to-white/[0.15] z-20" />
-
-            {/* Dynamic Island */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 h-3.5 w-11 rounded-full bg-slate-900 z-30 flex items-center justify-end px-1.5">
-              <span className="h-1 w-1 rounded-full bg-blue-900/60"></span>
-            </div>
-
-            <div className="mt-3">
-              <p className="text-[0.48rem] font-bold text-slate-400 text-center uppercase tracking-wider">Online Audit</p>
-              <p className="text-[0.72rem] font-black text-slate-700 text-center mt-0.5">온라인 현황 진단</p>
-            </div>
-            
-            {/* Circular Score representation with SVG path animation */}
-            <div className="my-2 flex flex-col items-center justify-center relative">
-              <div className="absolute h-14 w-14 rounded-full bg-[var(--accent-primary)]/5 blur-md" />
-              <div className="relative flex h-14 w-14 items-center justify-center">
-                <svg className="w-full h-full transform -rotate-90">
-                  <circle
-                    cx="28"
-                    cy="28"
-                    r="22"
-                    fill="transparent"
-                    stroke="#f1f5f9"
-                    strokeWidth="4"
-                  />
-                  <motion.circle
-                    cx="28"
-                    cy="28"
-                    r="22"
-                    fill="transparent"
-                    stroke="var(--accent-primary)"
-                    strokeWidth="4"
-                    strokeDasharray={circleCircumference}
-                    initial={{ strokeDashoffset: circleCircumference }}
-                    animate={{ strokeDashoffset: circleCircumference * (1 - 85 / 100) }}
-                    transition={{ duration: 1.2, delay: 0.3, ease: "easeOut" }}
-                  />
-                </svg>
-                <span className="absolute text-[0.95rem] font-black text-[var(--accent-primary)]">
-                  {counts.total}
-                </span>
-              </div>
-            </div>
-
-            {/* Channel Check Bars */}
-            <div className="space-y-2 text-[0.48rem] font-bold text-slate-500 mb-1">
-              <div>
-                <div className="flex justify-between pb-0.5 text-slate-600">
-                  <span>구글 GBP</span>
-                  <span className="text-[var(--accent-primary)]">90%</span>
-                </div>
-                <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    animate={{ width: "90%" }}
-                    transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-                    className="h-full bg-[var(--accent-primary)] rounded-full"
-                  />
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between pb-0.5 text-slate-600">
-                  <span>홈페이지</span>
-                  <span className="text-slate-400">75%</span>
-                </div>
-                <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    animate={{ width: "75%" }}
-                    transition={{ duration: 1, delay: 1.0, ease: "easeOut" }}
-                    className="h-full bg-slate-300 rounded-full"
-                  />
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between pb-0.5 text-slate-600">
-                  <span>SNS 채널</span>
-                  <span className="text-slate-400">80%</span>
-                </div>
-                <div className="h-1.5 w-full bg-slate-100 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    animate={{ width: "80%" }}
-                    transition={{ duration: 1, delay: 1.2, ease: "easeOut" }}
-                    className="h-full bg-slate-300 rounded-full"
-                  />
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </motion.div>
-      </motion.div>
-
-    </div>
+      </div>
+    </motion.div>
   );
 };
 
@@ -466,8 +235,8 @@ const Home = () => {
               </div>
             </motion.div>
 
-            {/* Right Column: Hero Devices Visual */}
-            <HeroDevicesVisual />
+            {/* Right Column: Online audit report preview */}
+            <HeroReportVisual />
 
           </div>
         </div>
