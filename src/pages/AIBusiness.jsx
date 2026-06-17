@@ -194,8 +194,8 @@ const AIBusiness = () => {
                   <span className="text-[0.78rem] font-semibold text-[#007a8c]">시간 절감 효과</span>
                 </div>
                 {/* SVG 꺾은선 그래프 */}
-                <div className="mt-4 h-16 w-full">
-                  <svg className="w-full h-full" viewBox="0 0 100 40" preserveAspectRatio="none">
+                <div className="mt-4 h-16 w-full overflow-visible">
+                  <svg className="h-full w-full overflow-visible" viewBox="-2 -4 104 48" preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="line-grad" x1="0" y1="0" x2="0" y2="1">
                         <stop offset="0%" stopColor="#007a8c" stopOpacity="0.25" />
@@ -203,7 +203,7 @@ const AIBusiness = () => {
                       </linearGradient>
                     </defs>
                     <motion.path
-                      d="M0,35 Q15,30 30,22 T60,28 T90,5 T100,2"
+                      d="M0,35 C16,32 26,29 38,25 C52,21 63,18 74,13 C86,8 94,5 100,2"
                       fill="none"
                       stroke="#007a8c"
                       strokeWidth="2.5"
@@ -213,7 +213,7 @@ const AIBusiness = () => {
                       transition={{ duration: 1.5, delay: 0.6, ease: "easeOut" }}
                     />
                     <motion.path
-                      d="M0,35 Q15,30 30,22 T60,28 T90,5 T100,2 L100,40 L0,40 Z"
+                      d="M0,35 C16,32 26,29 38,25 C52,21 63,18 74,13 C86,8 94,5 100,2 L100,40 L0,40 Z"
                       fill="url(#line-grad)"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -239,8 +239,8 @@ const AIBusiness = () => {
                 </div>
                 {/* SVG 막대 그래프 */}
                 <div className="mt-4 h-16 w-full flex items-end justify-between gap-1.5 px-1">
-                  {[15, 30, 22, 45, 35, 60, 50, 85].map((h, i) => (
-                    <div key={i} className="w-full bg-[#e6f4f6] rounded-t-sm overflow-hidden" style={{ height: '100%' }}>
+                  {[24, 34, 44, 53, 62, 72, 82, 94].map((h, i) => (
+                    <div key={i} className="flex w-full items-end overflow-hidden rounded-t-sm bg-[#e6f4f6]" style={{ height: '100%' }}>
                       <motion.div
                         initial={{ height: 0 }}
                         animate={{ height: `${h}%` }}
