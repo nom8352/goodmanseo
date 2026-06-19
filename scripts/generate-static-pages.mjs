@@ -1,11 +1,14 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { blogPosts } from '../src/data/blogPosts.js';
 
 const distDir = path.resolve('dist');
 const indexPath = path.join(distDir, 'index.html');
 const defaultImage = 'https://goodmanseo.com/og-image.png';
 
-const routePages = [
+const formatPostDate = (date) => date.replaceAll('.', '-');
+
+const baseRoutePages = [
   {
     route: '/',
     title: '홈 | Goodman SEO',
@@ -47,36 +50,6 @@ const routePages = [
       '호주 구글 지도 등록 가이드, 시드니 홈페이지 제작 가이드, 비즈니스 홈페이지, 고객 유입 기본기',
   },
   {
-    route: '/blog/google-maps-setup',
-    title: '구글 지도에서 우리 매장이 안 보인다면? 지금 당장 세팅해야 하는 이유 | Goodman SEO',
-    description:
-      '고객이 가게를 찾는 첫 순간은 이미 오프라인이 아니라 검색창에서 시작됩니다.',
-    canonical: 'https://goodmanseo.com/blog/google-maps-setup',
-    type: 'article',
-    keywords:
-      '굿맨SEO, 구글 지도 검색, 구글 지도 등록, 비즈니스 마케팅, 가게 정보 등록',
-  },
-  {
-    route: '/blog/why-business-needs-website',
-    title: "인스타그램만 열심히 하면 될까? 내 비즈니스에 '진짜' 홈페이지가 필요한 이유 | Goodman SEO",
-    description:
-      'SNS가 관심을 끈다면, 홈페이지는 그 관심을 신뢰와 문의로 바꾸는 공간입니다.',
-    canonical: 'https://goodmanseo.com/blog/why-business-needs-website',
-    type: 'article',
-    keywords:
-      '굿맨SEO, 홈페이지 기본기, 비즈니스 홈페이지, 홈페이지 필요성, 고객 문의',
-  },
-  {
-    route: '/blog/online-basics-for-small-business',
-    title: "비싼 마케팅 업체에 속지 마세요. 소상공인에게 진짜 필요한 '온라인 기본기' | Goodman SEO",
-    description:
-      '거창한 용어보다 먼저 필요한 것은 검색되고, 신뢰를 주고, 문의받는 구조입니다.',
-    canonical: 'https://goodmanseo.com/blog/online-basics-for-small-business',
-    type: 'article',
-    keywords:
-      '굿맨SEO, 온라인 기본 세팅, 비즈니스 마케팅, 온라인 기본기, 구글 지도 등록',
-  },
-  {
     route: '/contact',
     title: '상담 신청 | Goodman SEO',
     description:
@@ -116,6 +89,21 @@ const routePages = [
     keywords:
       '굿맨SEO 이용약관, 서비스 이용약관, Goodman SEO terms of service',
   },
+];
+
+const blogRoutePages = blogPosts.map((post) => ({
+  route: `/blog/${post.id}`,
+  title: `${post.title} | Goodman SEO`,
+  description: post.excerpt,
+  canonical: `https://goodmanseo.com/blog/${post.id}`,
+  type: 'article',
+  keywords: `굿맨SEO, ${post.category}, 호주 비즈니스, 온라인 기본기, 구글 비즈니스 프로필`,
+  lastmod: formatPostDate(post.date),
+}));
+
+const routePages = [
+  ...baseRoutePages,
+  ...blogRoutePages,
 ];
 
 const replaceTag = (html, pattern, replacement) => {
