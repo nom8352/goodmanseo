@@ -20,6 +20,8 @@ const BlogDetail = () => {
         title={post.title}
         description={post.excerpt}
         path={`/blog/${post.id}`}
+        image={`https://goodmanseo.com${post.image}`}
+        imageAlt={post.imageAlt}
         keywords={['호주 비즈니스 마케팅', '시드니 비즈니스 마케팅', post.category, post.title, '온라인 운영']}
         type="article"
         jsonLd={{
@@ -40,6 +42,7 @@ const BlogDetail = () => {
             },
           },
           datePublished: publishedDate,
+          image: `https://goodmanseo.com${post.image}`,
           mainEntityOfPage: `https://goodmanseo.com/blog/${post.id}`,
         }}
       />
@@ -57,6 +60,15 @@ const BlogDetail = () => {
 
           <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-[-0.06em] sm:text-5xl">{post.title}</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-text-muted">{post.excerpt}</p>
+
+          <figure className="mt-8 overflow-hidden rounded-2xl border border-[#005b70]/8 bg-white">
+            <img
+              src={post.image}
+              alt={post.imageAlt}
+              className="aspect-[16/9] w-full object-cover"
+              loading="eager"
+            />
+          </figure>
 
           <div className="detail-body mt-10">
             {post.content.map((paragraph) => (

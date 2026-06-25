@@ -96,6 +96,8 @@ const blogRoutePages = blogPosts.map((post) => ({
   title: `${post.title} | Goodman SEO`,
   description: post.excerpt,
   canonical: `https://goodmanseo.com/blog/${post.id}`,
+  image: `https://goodmanseo.com${post.image}`,
+  imageAlt: post.imageAlt,
   type: 'article',
   keywords: `굿맨SEO, ${post.category}, 호주 비즈니스, 온라인 기본기, 구글 비즈니스 프로필`,
   lastmod: formatPostDate(post.date),
@@ -117,6 +119,8 @@ const replaceTag = (html, pattern, replacement) => {
 
 const applySeo = (html, page) => {
   let nextHtml = html;
+  const pageImage = page.image || defaultImage;
+  const pageImageAlt = page.imageAlt || 'Goodman SEO 대표 이미지';
 
   nextHtml = replaceTag(nextHtml, /<title>.*?<\/title>/s, `<title>${page.title}</title>`);
   nextHtml = replaceTag(
@@ -152,7 +156,12 @@ const applySeo = (html, page) => {
   nextHtml = replaceTag(
     nextHtml,
     /<meta\s+property="og:image"\s+content="[^"]*"\s*\/?>/s,
-    `<meta property="og:image" content="${defaultImage}" />`,
+    `<meta property="og:image" content="${pageImage}" />`,
+  );
+  nextHtml = replaceTag(
+    nextHtml,
+    /<meta\s+property="og:image:alt"\s+content="[^"]*"\s*\/?>/s,
+    `<meta property="og:image:alt" content="${pageImageAlt}" />`,
   );
   nextHtml = replaceTag(
     nextHtml,
@@ -167,7 +176,12 @@ const applySeo = (html, page) => {
   nextHtml = replaceTag(
     nextHtml,
     /<meta\s+name="twitter:image"\s+content="[^"]*"\s*\/?>/s,
-    `<meta name="twitter:image" content="${defaultImage}" />`,
+    `<meta name="twitter:image" content="${pageImage}" />`,
+  );
+  nextHtml = replaceTag(
+    nextHtml,
+    /<meta\s+name="twitter:image:alt"\s+content="[^"]*"\s*\/?>/s,
+    `<meta name="twitter:image:alt" content="${pageImageAlt}" />`,
   );
   nextHtml = replaceTag(
     nextHtml,

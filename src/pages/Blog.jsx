@@ -27,18 +27,32 @@ const Blog = () => {
           </p>
         </div>
 
-        <div className="showcase-panel mt-10">
-          <div className="grid gap-2">
+        <div className="mt-10">
+          <div className="grid gap-5 sm:grid-cols-2">
             {blogPosts.map((post) => (
               <Link
                 key={post.id}
                 to={`/blog/${post.id}`}
-                className="group flex items-center justify-between gap-4 rounded-[1.25rem] border border-white/8 px-5 py-5 transition duration-200 hover:border-white/15 hover:bg-white/[0.03]"
+                className="article-card group overflow-hidden transition duration-200 hover:border-[#005b70]/15"
               >
-                <span className="text-lg font-bold tracking-[-0.03em] text-text-main transition group-hover:text-accent-primary sm:text-[1.35rem]">
-                  {post.title}
-                </span>
-                <ArrowRight size={18} className="shrink-0 text-text-soft transition group-hover:translate-x-1 group-hover:text-accent-primary" />
+                <div className="article-card__thumb aspect-[16/9] min-h-0">
+                  <img
+                    src={post.image}
+                    alt={post.imageAlt}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="article-card__body">
+                  <div className="mb-3 flex items-center justify-between gap-3">
+                    <span className="text-xs font-bold text-accent-primary">{post.category}</span>
+                    <ArrowRight size={17} className="shrink-0 text-text-soft transition group-hover:translate-x-1 group-hover:text-accent-primary" />
+                  </div>
+                  <h2 className="text-lg font-black leading-snug tracking-[-0.04em] text-text-main transition group-hover:text-accent-primary sm:text-xl">
+                    {post.title}
+                  </h2>
+                  <p className="mt-3 text-sm leading-relaxed text-text-muted">{post.excerpt}</p>
+                </div>
               </Link>
             ))}
           </div>
