@@ -26,6 +26,7 @@ Fix applied and verified live:
 - Live verification after commit `e853874` found all 23 sitemap URLs return direct `200`.
 - Live sitemap includes all 14 blog URLs.
 - Live sample blog detail page includes trailing-slash canonical, WebP social image metadata, and `BlogPosting` JSON-LD.
+- Google Search Console sitemap submission was confirmed successful on 2026-06-25, with 23 discovered pages.
 
 ## Validation Results
 
@@ -45,6 +46,7 @@ Fix applied and verified live:
 | Sample blog canonical | Pass | `https://goodmanseo.com/blog/ai-website-design-before-prompting/` canonical is trailing-slash |
 | Sample blog structured data | Pass | Live sample page includes `BlogPosting` JSON-LD |
 | Sample blog image metadata | Pass | Live sample page references `.webp` blog image metadata |
+| Google Search Console submission | Pass | `/sitemap.xml` submitted successfully; 23 discovered pages shown |
 | Deprecated sitemap tags | Info | `priority` and `changefreq` are present on all 23 URLs; Google ignores them |
 | `lastmod` dates | Pass | Dates are not all identical; newer AI course/blog updates are represented |
 | Sitemap index needed | Not needed | Single sitemap is fine for 23 URLs |
@@ -135,7 +137,7 @@ Recommended fix:
 
 ## Recommended Next Action
 
-1. Submit or refresh `https://goodmanseo.com/sitemap.xml` in Google Search Console.
+1. Google Search Console sitemap submission is complete.
 2. In Search Console, inspect representative URLs:
    - `https://goodmanseo.com/`
    - `https://goodmanseo.com/pricing/`
