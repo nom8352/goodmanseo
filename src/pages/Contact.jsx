@@ -15,9 +15,9 @@ const Contact = () => {
     <div className="pt-32 pb-24 bg-gradient-to-tr from-[#f2fafb] via-white to-[#ecf6f8] text-[#0f2230] min-h-screen">
       <Seo
         title="진단 / 문의 신청"
-        description="GoodmanSEO 진단 및 문의 신청 페이지입니다. 무료 점검, 퀵 진단, 온라인 올인원 진단, 일반 문의를 접수할 수 있습니다."
+        description="GoodmanSEO 문의 신청 페이지입니다. 무료 점검, 퀵 진단, 홈페이지 제작, 구글 비즈니스 세팅 문의를 접수할 수 있습니다."
         path="/contact"
-        keywords={['무료 점검 신청', '퀵 진단', '온라인 올인원 진단', '일반 문의', '온라인 점검', '문의 폼']}
+        keywords={['무료 점검 신청', '퀵 진단', '홈페이지 제작 문의', '구글 비즈니스 세팅', '문의 폼']}
       />
       <div className="container">
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
@@ -43,7 +43,7 @@ const Contact = () => {
             </h1>
             
             <p className="section-copy mt-5 max-w-xl text-[0.98rem] text-[#556877] font-medium leading-[1.7]">
-              나에게 필요한 진단 유형을 선택하고 간단한 정보를 남겨주시면,
+              필요한 항목을 선택하고 간단한 정보를 남겨주시면,
               <br />
               확인 후 영업일 기준 24시간 이내에 연락드리겠습니다.
             </p>

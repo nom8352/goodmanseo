@@ -25,14 +25,14 @@ const services = [
   {
     icon: LineChart,
     title: '스튜디오 그룹',
-    tagline: '데이터 기반 콘텐츠 & 광고 전략',
+    tagline: '데이터 기반 콘텐츠 업무 정리',
     checklist: [
-      '구글/메타 광고 운영 및 최적화',
-      '검색/콘텐츠 기반 마케팅 전략 수립',
-      '브랜드 성장에 필요한 데이터 분석',
+      '반복 콘텐츠 업무 흐름 정리',
+      '검색과 홈페이지 운영에 필요한 기본 자료 정리',
+      '비즈니스 운영 판단에 필요한 데이터 분석',
     ],
     recommendTitle: '이런 분께 추천해요',
-    recommendDesc: '광고 성과를 높이고 싶은 분, 브랜드의 지속적인 성장을 원하는 분',
+    recommendDesc: '콘텐츠 업무를 줄이고 싶은 분, 운영 데이터를 정리하고 싶은 분',
     ctaText: '스튜디오 그룹 상담 신청하기',
     ctaLink: '/contact?type=ai-study-group',
     highlight: false,
@@ -63,7 +63,7 @@ const faqItems = [
           '직원 없이 혼자 운영하면서 매일 반복 업무에 많은 시간을 빼앗기는 분',
           '고객 응대, 리뷰 답변, 상품 설명을 매번 처음부터 작성하느라 핵심 업무에 집중하기 어려운 분',
           '외주를 맡기기엔 고정 비용이 부담스럽고, 혼자 학습해 적용하기엔 시간과 기술의 한계를 느끼는 분',
-          '인스타그램, 블로그, 구글 비즈니스 프로필(지도)을 꾸준히 관리하고 싶지만 계속 우선순위에서 밀리는 분',
+          '블로그, 구글 비즈니스 프로필(지도), 홈페이지 문구를 꾸준히 정리하고 싶지만 계속 우선순위에서 밀리는 분',
           '트렌디한 AI 기술을 내 비즈니스 실무에 유기적으로 결합하여 생산성을 높이고 싶은 분'
         ].map((item) => (
           <div key={item} className="flex items-start gap-2 py-0.5 text-left">
@@ -81,7 +81,7 @@ const faqItems = [
         {[
           '내 브랜드 아이덴티티와 소구점이 반영된 쇼핑몰 상세 페이지 상품 설명 초안 자동 생성',
           '다양한 상황별(배송 문의, 단순 변심, 컴플레인 등) 고객 문의 및 리뷰 대응 맞춤형 초안 자동 작성',
-          '인스타그램 피드 및 페이스북 콘텐츠 업로드용 카피라이팅 기획 및 이미지 콘셉트 초안 자동 기획',
+          '블로그 글, 홈페이지 문구, 고객 안내문 작성용 초안 자동 기획',
           '구글 비즈니스 프로필(지도) 및 네이버 블로그에 정기적으로 포스팅할 최적화된 소식글 자동 작성',
           '자주 발송하는 주문 확인, 계좌 안내, 배송 지연 안내 이메일의 맞춤형 자동 템플릿화',
           '비즈니스 일일 운영 현황 분석 및 노션/구글 스프레드시트 기반의 재고 정리 문서화 프로세스 자동화'
@@ -135,7 +135,7 @@ const AIBusiness = () => {
     <div className="min-h-screen bg-gradient-to-tr from-[#f2fafb] via-white to-[#ecf6f8] pt-24 pb-16 text-[#0f2230]">
       <Seo
         title="AI 실전 멘토링"
-        description="상품 설명, 고객 응대, SNS 콘텐츠, 재고 관리 — 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 스터디그룹, 온라인 1:1 AI 실전 멘토링, 오프라인 그룹 워크숍 운영."
+        description="상품 설명, 고객 응대, 홈페이지 문구, 재고 관리 등 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 스터디그룹, 온라인 1:1 AI 실전 멘토링, 오프라인 그룹 워크숍 운영."
         path="/ai-business"
         keywords={['AI 실전 멘토링', 'AI 스터디그룹', 'AI 비즈니스 자동화', 'AI 쇼핑몰 운영', 'AI 업무 자동화', 'AI 온라인 운영', '호주 AI 멘토링']}
       />
@@ -164,7 +164,7 @@ const AIBusiness = () => {
             <p className="mt-6 text-[1.05rem] leading-[1.7] text-[#556877] max-w-xl">
               상품 설명, 리뷰 답변, 고객 응대까지 반복 업무는 AI가 대신!
               <br />
-              실무에 적용 가능한 맞춤형 자동화 & 마케팅 솔루션을 만나보세요.
+              실무에 적용 가능한 맞춤형 자동화 솔루션을 만나보세요.
             </p>
           </motion.div>
 
@@ -225,14 +225,14 @@ const AIBusiness = () => {
                 </div>
               </motion.div>
 
-              {/* 2) 마케팅 성과 카드 */}
+              {/* 2) 업무 성과 카드 */}
               <motion.div
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.55 }}
                 className="absolute bottom-4 right-0 w-[220px] rounded-2xl bg-white/80 backdrop-blur-md p-5 border border-white/60 shadow-[0_20px_40px_rgba(0,122,140,0.06)]"
               >
-                <p className="text-[0.72rem] font-bold text-[#8fa4b5] uppercase tracking-wider">마케팅 성과</p>
+                <p className="text-[0.72rem] font-bold text-[#8fa4b5] uppercase tracking-wider">업무 성과</p>
                 <div className="flex flex-col mt-0.5">
                   <span className="text-[0.7rem] font-semibold text-[#8fa4b5]">전환율</span>
                   <span className="text-3xl font-black text-[#007a8c] tracking-tight leading-none mt-1">+127%</span>
@@ -466,13 +466,13 @@ const AIBusiness = () => {
           className="mt-12 text-center"
         >
           <p className="text-[0.93rem] font-semibold text-[#556877] mb-5">
-            지금 무료 진단으로 우리 비즈니스에 딱 맞는 솔루션을 찾아보세요.
+            지금 문의를 남기고 우리 비즈니스에 맞는 자동화 방향을 확인해보세요.
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center gap-2 rounded-full bg-[#007a8c] text-white px-8 py-3.5 text-[0.95rem] font-bold hover:bg-[#006270] transition-all shadow-[0_12px_24px_rgba(0,122,140,0.12)] hover:-translate-y-0.5"
           >
-            무료 진단 및 1:1 맞춤 상담 신청하기
+            AI 멘토링 문의하기
             <ArrowRight size={16} />
           </Link>
         </motion.div>

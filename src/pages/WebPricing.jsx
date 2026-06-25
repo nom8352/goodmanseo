@@ -12,20 +12,10 @@ const diagnostics = [
     price: 'AUD 149',
     priceNote: '1회 결제',
     description:
-      '구글 검색 노출 상태와 홈페이지 속도, 온페이지 SEO를 점검하고 지금 즉시 개선해야 할 긴급 순위를 전달합니다.',
-    points: ['홈페이지 속도 및 오류 진단', '구글 지도 등록 및 노출 상태 점검', '구글 검색 노출 가능성 분석', '긴급 조치가 필요한 핵심 문제 3가지'],
+      '홈페이지와 구글 비즈니스, 기본 SEO 상태를 조금 더 깊게 확인합니다.',
+    points: ['무료 점검 항목 전체 포함', '홈페이지 첫인상 및 문의 흐름 점검', 'Google Business Profile 기본 정보 점검', 'On-page SEO 주요 항목 점검', '모바일 사용성과 속도 기본 점검'],
     cta: '퀵 진단 신청하기',
     href: '/contact?type=quick-diagnosis',
-  },
-  {
-    title: '온라인 올인원 진단',
-    price: 'AUD 289',
-    priceNote: '1회 결제',
-    description:
-      '구글과 홈페이지 진단은 물론 인스타그램, 페이스북 운영 상태와 고객 문의 경로까지 통합 분석하여 채널 전체의 흐름을 짚어냅니다.',
-    points: ['퀵 진단 점검 항목 전체 포함', '인스타그램 · 페이스북 운영 상태 점검', '소셜 채널별 포지셔닝 분석', '채널 간 유입 경로 및 일관성 검증'],
-    cta: '올인원 진단 신청하기',
-    href: '/contact?type=all-in-one-diagnosis',
   },
 ];
 
@@ -33,8 +23,8 @@ const freeCheckCard = {
   title: '무료 점검',
   price: '무료',
   priceNote: '기본 확인',
-  description: '구글 비즈니스 프로필과 홈페이지, SNS 채널들의 기본적인 노출 상태를 간편히 확인해 드립니다.',
-  points: ['홈페이지 접속 및 기본 노출 확인', '구글 비즈니스 프로필 등록 여부 확인', '인스타그램 · 페이스북 채널 연계 확인', '핵심적인 채널 일관성 기본 확인'],
+  description: '홈페이지와 구글 비즈니스, 기본 SEO 상태를 간단히 확인합니다.',
+  points: ['홈페이지 접속 확인', '모바일 화면 기본 확인', 'Google Business Profile 등록 여부 확인', '기본 SEO 체크'],
   cta: '무료 점검 신청하기',
   href: '/contact?type=free-check',
 };
@@ -56,9 +46,9 @@ const websitePackages = [
     title: '비즈니스 홈페이지',
     price: 'AUD 1,890',
     priceNote: '1회 결제',
-    label: '마케팅 최적화 추천 패키지',
+    label: '문의 흐름까지 정리하는 추천 패키지',
     description: '회사/매장 소개뿐 아니라 구글 지도 최적화 노출, 상세 서비스 안내 및 전화/이메일 자동 문의 연동까지 완비한 최적의 비즈니스 웹사이트입니다.',
-    points: ['상세 메뉴 구성 (최대 7페이지)', '구글 지도 상위 노출(로컬 SEO) 최적화', '전화 · 이메일 문의 연동 자동화', '인스타그램 · 페이스북 등 소셜 연계 셋업'],
+    points: ['상세 메뉴 구성 (최대 7페이지)', '구글 지도 노출을 고려한 기본 세팅', '전화 · 이메일 문의 연동 자동화', '기본 소셜 링크 연결 지원'],
     cta: '비즈니스 패키지 문의하기',
     href: '/contact?type=business-homepage',
   },
@@ -68,7 +58,7 @@ const websitePackages = [
     priceNote: '1회 결제',
     label: '검색 노출 극대화 패키지',
     description: '온라인 노출 경쟁이 치열한 비즈니스를 위해 홈페이지 제작은 물론 구글 상위 노출(SEO) 기본 세팅과 AI 자동화 연동까지 종합적으로 지원합니다.',
-    points: ['대규모 콘텐츠 구성 (10페이지 이상)', '비즈니스 홈페이지 요금제 혜택 전형 포함', 'SEO All-in-One 패키지 기본 탑재', '인스타 · 페이스북 정밀 진단 및 연동', '3개월 동안 AI 기반 고객 응대 관리 지원'],
+    points: ['대규모 콘텐츠 구성 (10페이지 이상)', '비즈니스 홈페이지 요금제 혜택 전부 포함', 'SEO All-in-One 패키지 기본 탑재', '기본 소셜 링크 연결 지원', '3개월 동안 AI 기반 고객 응대 관리 지원'],
     cta: '성장형 패키지 문의하기',
     href: '/contact?type=growth-homepage',
   },
@@ -114,7 +104,7 @@ const gbpPackages = [
 const faqItems = [
   {
     question: '작업 진행까지 기간은 얼마나 걸리나요?',
-    answer: '분석 및 진단의 경우 퀵 진단은 2~3 영업일, 올인원 진단은 5~7 영업일이 소요됩니다. 홈페이지 제작은 스타터 홈페이지의 경우 2~3주, 비즈니스 홈페이지는 4~6주 정도 예상해 주시면 됩니다. 원활한 피드백 소통 시 일정이 더 단축될 수 있습니다.',
+    answer: '퀵 진단은 보통 2~3 영업일이 소요됩니다. 홈페이지 제작은 스타터 홈페이지의 경우 2~3주, 비즈니스 홈페이지는 4~6주 정도 예상해 주시면 됩니다. 원활한 피드백 소통 시 일정이 더 단축될 수 있습니다.',
   },
   {
     question: '수정 요청은 몇 번까지 가능한가요?',
@@ -191,9 +181,9 @@ const WebPricing = () => {
     <div className="min-h-screen bg-gradient-to-tr from-[#f2fafb] via-white to-[#ecf6f8] pt-24 pb-16 text-[#0f2230]">
       <Seo
         title="서비스 및 가격"
-        description="무료 점검, 유료 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다."
+        description="무료 점검, 퀵 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다."
         path="/pricing"
-        keywords={['서비스 및 가격', '퀵 진단', '온라인 올인원 진단', '비즈니스 홈페이지', 'SEO 패키지', '구글 비즈니스 프로필']}
+        keywords={['서비스 및 가격', '무료 점검', '퀵 진단', '비즈니스 홈페이지', 'SEO 패키지', '구글 비즈니스 프로필']}
       />
 
       <div className="container">
@@ -209,12 +199,12 @@ const WebPricing = () => {
             서비스
           </div>
           <h1 className="text-[clamp(2.3rem,4.5vw,3.6rem)] font-black leading-[1.15] tracking-[-0.04em] text-[#0f2230] text-balance">
-            고객의 성장을 만드는
+            검색과 문의를 위한
             <br />
-            <span className="text-[#007a8c]">통합 디지털</span> 솔루션
+            <span className="text-[#007a8c]">홈페이지</span> 기본 세팅
           </h1>
           <p className="mt-5 text-[1.05rem] leading-[1.75] text-[#556877] font-medium max-w-xl mx-auto text-pretty">
-            AI 기술과 데이터 기반 전략으로 비즈니스의 모든 순간을 함께합니다.
+            홈페이지 제작, 구글 비즈니스, On-page SEO를 필요한 범위에 맞춰 정리합니다.
           </p>
         </motion.div>
 
@@ -264,7 +254,7 @@ const WebPricing = () => {
               <h2 className="section-title mx-auto">점검 · 진단</h2>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2">
               {[freeCheckCard, ...diagnostics].map((item) => (
                 <article key={item.title} className="feature-card flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,122,140,0.04)]">
                   <div>
@@ -291,11 +281,11 @@ const WebPricing = () => {
           </div>
         </section>
 
-        {/* 3. SEO & 마케팅 (통합) */}
+        {/* 3. SEO & Google Business */}
         <section id="seo-marketing" className="section-block !min-h-0 px-0 mt-12">
           <div className="w-full">
             <div className="section-heading text-center">
-              <h2 className="section-title mx-auto">SEO & 마케팅</h2>
+              <h2 className="section-title mx-auto">SEO & 구글 비즈니스</h2>
             </div>
             <div className="grid gap-6 md:grid-cols-3">
               {[...seoPackages, ...gbpPackages].map((item) => (
@@ -319,7 +309,7 @@ const WebPricing = () => {
             </div>
             <div className="mt-8 flex justify-center">
               <Link to="/contact?type=seo-start-package" className="primary-button">
-                SEO 및 마케팅 문의하기
+                SEO 및 구글 비즈니스 문의하기
                 <ArrowRight size={16} />
               </Link>
             </div>

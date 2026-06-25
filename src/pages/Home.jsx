@@ -4,7 +4,6 @@ import {
   ArrowRight, 
   Search, 
   MessageSquare, 
-  Instagram, 
   Monitor, 
   Cpu, 
   CheckCircle,
@@ -55,7 +54,7 @@ const HeroSocialProofVisual = () => {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.7, delay: 0.15, ease }}
       className="relative mx-auto w-full max-w-[430px] lg:mx-0 lg:max-w-[560px]"
-      aria-label="GoodmanSEO 온라인 채널 진단 안내 이미지"
+      aria-label="GoodmanSEO 홈페이지와 구글 비즈니스 점검 안내 이미지"
     >
       <div className="absolute inset-x-8 bottom-2 h-24 rounded-full bg-[#005b70]/10 blur-3xl" />
 
@@ -63,7 +62,7 @@ const HeroSocialProofVisual = () => {
         <div className="absolute bottom-0 left-1/2 z-10 h-[390px] -translate-x-[44%] sm:h-[500px] sm:-translate-x-[42%] lg:h-[690px] lg:-translate-x-[42%]">
           <motion.img
             src={heroLadyImage}
-            alt="노트북을 들고 온라인 채널 진단을 안내하는 GoodmanSEO 상담자"
+            alt="노트북을 들고 홈페이지 점검을 안내하는 GoodmanSEO 상담자"
             initial={{ opacity: 0, y: 20, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.78, delay: 0.18, ease }}
@@ -154,11 +153,11 @@ const HeroSocialProofVisual = () => {
           className="absolute left-[9.4rem] bottom-[6.1rem] z-20 flex items-center gap-2 rounded-xl border border-[#bbf7d0] bg-gradient-to-br from-white to-[#f0fdf4] px-3 py-2.5 shadow-[0_8px_18px_rgba(34,197,94,0.12)] sm:left-[13.2rem] sm:bottom-[6.4rem] sm:px-3.5 sm:py-3"
         >
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white shadow-sm">
-            <Instagram size={16} strokeWidth={2.4} />
+            <CheckCircle size={16} strokeWidth={2.4} />
           </span>
           <div>
-            <p className="text-xs font-black leading-none text-[#0f2230]">SNS</p>
-            <p className="mt-1 text-[0.62rem] font-bold text-[#4b8460]">Engagement Up</p>
+            <p className="text-xs font-black leading-none text-[#0f2230]">SEO</p>
+            <p className="mt-1 text-[0.62rem] font-bold text-[#4b8460]">Basics Checked</p>
           </div>
         </motion.div>
 
@@ -214,32 +213,32 @@ const problems = [
   { num: '01', title: '구글 검색에 잘 나오지 않아요', desc: '검색해도 내 업체가 보이지 않아요.' },
   { num: '02', title: '홈페이지가 오래되고 취약해요', desc: '첫인상이 중요하지만 홈페이지가 낡았어요.' },
   { num: '03', title: '리뷰가 없거나 평가가 낮아요', desc: '리뷰가 부족해서 신뢰가 가지 않아요.' },
-  { num: '04', title: 'SNS는 하는데 문의가 없어요', desc: '팔로워는 있는데 문의로 이어지지 않아요.' },
+  { num: '04', title: '홈페이지로 문의가 잘 안 와요', desc: '방문자는 있는데 연락으로 이어지지 않아요.' },
   { num: '05', title: '업체 정보가 제각각 달라요', desc: '주소, 전화번호가 여기저기 달라요.' },
   { num: '06', title: '경쟁업체보다 신뢰감이 떨어져요', desc: '비슷한 서비스인데 선택받지 못해요.' }
 ];
 
 const services = [
   { icon: Monitor, title: '홈페이지 제작', desc: '신뢰를 만드는 전문적인 홈페이지' },
-  { icon: Search, title: '구글 비즈니스 관리', desc: '검색과 지도에서 발견되게 만듭니다' },
-  { icon: Instagram, title: 'SNS 마케팅', desc: '관심을 문의로 연결하는 채널' },
-  { icon: MessageSquare, title: '리뷰 관리', desc: '고객 신뢰를 만드는 강력한 자산' },
-  { icon: Cpu, title: 'AI 자동화', desc: '반복 업무를 줄이고 고객 응대를 자동화' }
+  { icon: Search, title: '구글 비즈니스 세팅', desc: '검색과 지도 기본 정보를 정리합니다' },
+  { icon: CheckCircle, title: 'On-page SEO', desc: '검색 기본 구조를 정리합니다' },
+  { icon: MessageSquare, title: '소셜 링크 연결 지원', desc: '홈페이지에 기본 링크를 연결합니다' },
+  { icon: Cpu, title: 'AI 업무 지원', desc: '문구와 반복 안내를 가볍게 돕습니다' }
 ];
 
 const steps = [
-  { num: '01', title: '무료 진단 신청', desc: '3분 만에 간단하게 신청할 수 있어요.' },
-  { num: '02', title: '온라인 상태 분석', desc: '구글, 홈페이지, SNS를 꼼꼼하게 분석합니다.' },
+  { num: '01', title: '무료 점검 신청', desc: '3분 만에 간단하게 신청할 수 있어요.' },
+  { num: '02', title: '기본 상태 확인', desc: '홈페이지, 구글 비즈니스, 기본 SEO를 확인합니다.' },
   { num: '03', title: '개선 제안서 전달', desc: '문제점과 해결 방안을 상세히 제안합니다.' },
   { num: '04', title: '서비스 선택', desc: '필요한 서비스를 선택하여 진행할 수 있어요.' },
-  { num: '05', title: '제작 및 관리 시작', desc: '전문가가 제작하고 꾸준히 관리합니다.' }
+  { num: '05', title: '제작 및 세팅 진행', desc: '필요한 범위에 맞춰 제작과 기본 세팅을 진행합니다.' }
 ];
 
 const Home = () => {
   const headlines = [
     { text: "비즈니스,", highlight: "홈페이지가 없나요?" },
     { text: "구글에서,", highlight: "검색이 안 되시나요?" },
-    { text: "인스타, 페북", highlight: "시작하기 힘드신가요?" }
+    { text: "SEO 기본,", highlight: "어디부터 손볼까요?" }
   ];
 
   const [headlineIndex, setHeadlineIndex] = React.useState(0);
@@ -254,10 +253,10 @@ const Home = () => {
   return (
     <div className="overflow-hidden bg-[var(--bg-dark)] pt-20">
       <Seo
-        title="구글 · 홈페이지 · SNS 통합 마케팅"
-        description="GoodmanSEO는 구글 비즈니스 프로필, 홈페이지, 인스타그램, 페이스북을 함께 보고 먼저 고칠 부분을 무료로 점검해드립니다."
+        title="홈페이지 제작 · 구글 비즈니스 · 기본 SEO"
+        description="GoodmanSEO는 홈페이지 제작, Google Business Profile 세팅, On-page SEO 기본 정리를 도와드립니다."
         path="/"
-        keywords={['온라인 점검', '구글 비즈니스 프로필', '온페이지 SEO', '비즈니스 홈페이지', '인스타그램 점검', '페이스북 점검']}
+        keywords={['홈페이지 제작', '구글 비즈니스 프로필', '온페이지 SEO', '비즈니스 홈페이지', '시드니 홈페이지 제작']}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
       />
 
@@ -301,13 +300,15 @@ const Home = () => {
               </h1>
               
               <p className="mt-6 text-[clamp(0.95rem,2vw,1.1rem)] leading-relaxed text-text-muted">
-                구글, 홈페이지, SNS를 통합 관리하여<br />
-                고객이 신뢰하고 선택하는 온라인 환경을 만듭니다.
+                홈페이지, 구글 비즈니스, 기본 SEO를 정리해<br />
+                고객이 믿고 문의할 수 있는 기본 환경을 만듭니다.
+                <br />
+                필요하면 소셜 계정 링크 연결도 기본으로 도와드립니다.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link to="/contact" className="primary-button text-base px-6 py-3 font-semibold">
-                  무료 진단 신청
+                  무료 점검 신청
                   <ArrowRight size={18} />
                 </Link>
                 <Link to="/pricing" className="secondary-button text-base px-6 py-3 font-semibold">
@@ -349,7 +350,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. Service Section (5열 종대 채널 진단) */}
+      {/* 3. Service Section */}
       <section className="py-14 md:py-24 lg:py-28 bg-[var(--bg-darker)] border-t border-b border-[var(--glass-border)]">
         <div className="container px-6 text-center">
           <div className="max-w-3xl mx-auto mb-10 md:mb-16">
@@ -358,7 +359,7 @@ const Home = () => {
               서비스 소개
             </h2>
             <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
-              고객의 온라인 비즈니스를 성장시키는 통합 솔루션을 제공합니다.
+              홈페이지 제작부터 구글 비즈니스, 기본 SEO까지 정리하고, 소셜은 링크 연결 정도로 지원합니다.
             </p>
           </div>
           
@@ -405,7 +406,7 @@ const Home = () => {
             </div>
 
             <p className="text-sm leading-relaxed text-[#4e6170] md:max-w-xl">
-              홈페이지, SNS, 고객문의에 바로 쓰는 AI 활용법을 사장님 눈높이에 맞춰 정리한
+              홈페이지 문구, 고객문의, 반복 안내문에 바로 쓰는 AI 활용법을 사장님 눈높이에 맞춰 정리한
               비개발자용 실무 강의입니다.
             </p>
 
@@ -455,7 +456,7 @@ const Home = () => {
           
           <div className="mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link to="/contact" className="primary-button text-base px-6 py-3 font-semibold">
-              지금 무료 진단 신청하기
+              지금 무료 점검 신청하기
               <ArrowRight size={18} />
             </Link>
             <Link to="/pricing" className="secondary-button text-base px-6 py-3 font-semibold">
@@ -487,7 +488,7 @@ const Home = () => {
               <div className="text-left flex flex-col items-start justify-center pr-2">
                 <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#bce3e7] text-xs font-bold text-[#005b70] mb-6 shadow-sm">
                   <Sparkles size={13} className="text-[#007a8c] animate-pulse" />
-                  AI 기반 종합 진단 리포트
+                  홈페이지 기본 점검
                 </span>
                 
                 <h2 className="text-[clamp(1.75rem,3.2vw,2.4rem)] font-extrabold leading-[1.2] text-[#0f2230] tracking-[-0.04em]">
@@ -496,19 +497,19 @@ const Home = () => {
                 </h2>
                 
                 <p className="mt-4 text-sm leading-relaxed text-[#4e6170]">
-                  구글, 홈페이지, SNS 무료 진단으로<br />
-                  지금 바로 확인해보세요. 3분이면 충분합니다!
+                  홈페이지와 구글 비즈니스 기본 상태를<br />
+                  먼저 가볍게 확인해보세요.
                 </p>
                 
                 <Link to="/contact" className="mt-8 inline-flex items-center justify-center gap-2.5 rounded-full bg-[#005b70] hover:bg-[#004758] px-7 py-4 text-base font-bold text-white transition-all shadow-[0_8px_24px_rgba(0,91,112,0.18)] hover:translate-y-[-1px]">
-                  무료 진단 신청하기
+                  무료 점검 신청하기
                   <ArrowRight size={18} />
                 </Link>
               </div>
 
               {/* Center Box: Diagnostic Scores Gauge (White Premium Card) */}
               <div className="hidden bg-white border border-[#e6eff1] rounded-[2rem] p-6 md:p-8 shadow-[0_12px_36px_rgba(0,91,112,0.03)] md:flex flex-col items-center justify-between">
-                <p className="text-sm font-bold text-[#0f2230]">종합 진단 점수</p>
+                <p className="text-sm font-bold text-[#0f2230]">기본 점검 점수</p>
                 
                 {/* Clean SVG Circular Gauge */}
                 <div className="relative flex h-28 w-28 items-center justify-center my-6">
@@ -572,14 +573,14 @@ const Home = () => {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <MessageSquare size={14} className="text-[#4e6170]" />
-                      <span>SNS 채널</span>
+                      <span>기본 SEO</span>
                     </div>
                     <span className="text-[#005b70]">80/100</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <Sparkles size={14} className="text-[#4e6170]" />
-                      <span>리뷰 상태</span>
+                      <span>리뷰 표시 상태</span>
                     </div>
                     <span className="text-[#005b70]">95/100</span>
                   </div>
@@ -624,7 +625,7 @@ const Home = () => {
                     </span>
                     <div className="flex items-center gap-2 text-slate-100">
                       <MessageSquare size={14} className="text-slate-300" />
-                      <span>SNS 콘텐츠 정기 업로드</span>
+                      <span>On-page SEO 기본 정리</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3">
@@ -633,7 +634,7 @@ const Home = () => {
                     </span>
                     <div className="flex items-center gap-2 text-slate-100">
                       <Sparkles size={14} className="text-slate-300" />
-                      <span>리뷰 수 및 평점 관리</span>
+                      <span>리뷰 표시 상태 확인</span>
                     </div>
                   </li>
                 </ul>
