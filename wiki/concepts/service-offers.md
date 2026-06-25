@@ -25,8 +25,7 @@ Pricing still presents `무료 점검`; the contact form selector and homepage C
 From `src/pages/WebPricing.jsx`:
 
 - 무료 점검: free, basic online exposure/channel consistency check
-- 퀵 진단: `AUD 149`, one-time
-- 온라인 올인원 진단: `AUD 289`, one-time
+- AI 진단: `AUD 149`, one-time
 
 Current diagnostic emphasis:
 

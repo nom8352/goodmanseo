@@ -15,13 +15,13 @@ const INQUIRY_TYPES = [
   },
   {
     value: 'quick-diagnosis',
-    label: '퀵 진단',
-    heading: '퀵 진단 문의',
+    label: 'AI 진단',
+    heading: 'AI 진단 문의',
     helper: '홈페이지와 기본 SEO를 조금 더 자세히 보고 싶어요.',
     icon: Zap,
     messageLabel: '현재 가장 고민인 점',
     messagePlaceholder: '예: 홈페이지와 구글 지도 프로필 중 시급히 개선해야 할 1순위가 궁금해요',
-    submitLabel: '퀵 진단 신청하기',
+    submitLabel: 'AI 진단 신청하기',
   },
   {
     value: 'general-inquiry',

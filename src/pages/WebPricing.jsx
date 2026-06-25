@@ -8,13 +8,13 @@ const ease = [0.16, 1, 0.3, 1];
 
 const diagnostics = [
   {
-    title: '퀵 진단',
+    title: 'AI 진단',
     price: 'AUD 149',
     priceNote: '1회 결제',
     description:
       '홈페이지와 구글 비즈니스, 기본 SEO 상태를 조금 더 깊게 확인합니다.',
     points: ['무료 점검 항목 전체 포함', '홈페이지 첫인상 및 문의 흐름 점검', 'Google Business Profile 기본 정보 점검', 'On-page SEO 주요 항목 점검', '모바일 사용성과 속도 기본 점검'],
-    cta: '퀵 진단 신청하기',
+    cta: 'AI 진단 신청하기',
     href: '/contact?type=quick-diagnosis',
   },
 ];
@@ -69,8 +69,8 @@ const seoPackages = [
     title: 'SEO All-in-One 스타트 패키지',
     price: 'AUD 950',
     priceNote: '1회 결제',
-    description: '검색 노출을 위한 기본 세팅을 한 번에 잡고 싶은 경우 선택할 수 있습니다. 유료진단 포함.',
-    points: ['유료진단 포함', '지금 먼저 고쳐야 할 SEO 문제 정리', '메인 키워드 정리', '메타 타이틀 · 설명 기본 세팅', '검색 노출을 위한 기본 구조 점검'],
+    description: '검색 노출을 위한 기본 세팅을 한 번에 잡고 싶은 경우 선택할 수 있습니다. AI 진단 포함.',
+    points: ['AI 진단 포함', '지금 먼저 고쳐야 할 SEO 문제 정리', '메인 키워드 정리', '메타 타이틀 · 설명 기본 세팅', '검색 노출을 위한 기본 구조 점검'],
     cta: 'SEO All-in-One 스타트 패키지 문의하기',
     href: '/contact?type=seo-start-package',
   },
@@ -104,7 +104,7 @@ const gbpPackages = [
 const faqItems = [
   {
     question: '작업 진행까지 기간은 얼마나 걸리나요?',
-    answer: '퀵 진단은 보통 2~3 영업일이 소요됩니다. 홈페이지 제작은 스타터 홈페이지의 경우 2~3주, 비즈니스 홈페이지는 4~6주 정도 예상해 주시면 됩니다. 원활한 피드백 소통 시 일정이 더 단축될 수 있습니다.',
+    answer: 'AI 진단은 보통 2~3 영업일이 소요됩니다. 홈페이지 제작은 스타터 홈페이지의 경우 2~3주, 비즈니스 홈페이지는 4~6주 정도 예상해 주시면 됩니다. 원활한 피드백 소통 시 일정이 더 단축될 수 있습니다.',
   },
   {
     question: '수정 요청은 몇 번까지 가능한가요?',
@@ -181,9 +181,9 @@ const WebPricing = () => {
     <div className="min-h-screen bg-gradient-to-tr from-[#f2fafb] via-white to-[#ecf6f8] pt-24 pb-16 text-[#0f2230]">
       <Seo
         title="서비스 및 가격"
-        description="무료 점검, 퀵 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다."
+        description="무료 점검, AI 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다."
         path="/pricing"
-        keywords={['서비스 및 가격', '무료 점검', '퀵 진단', '비즈니스 홈페이지', 'SEO 패키지', '구글 비즈니스 프로필']}
+        keywords={['서비스 및 가격', '무료 점검', 'AI 진단', '비즈니스 홈페이지', 'SEO 패키지', '구글 비즈니스 프로필']}
       />
 
       <div className="container">

@@ -4,18 +4,29 @@ Last updated: 2026-06-25
 
 ## Current Project Direction
 
-GoodmanSEO is currently framed as a practical online-channel review and cleanup service:
+GoodmanSEO is now framed as a practical website and search-basics setup service:
 
-`Google, website, Instagram, and Facebook are reviewed together so a local business can see what is missing and what to fix first.`
+`Homepage production, Google Business Profile setup, and On-page SEO basics are cleaned up so a local business can be found, trusted, and contacted.`
 
-The website is also moving into a lighter "integrated digital solution" presentation, but the positioning guardrail remains:
+The service scope was narrowed on 2026-06-26 after deciding that SNS marketing and ongoing social-media management are too broad for the current offer.
 
-- start from a free online check / free diagnosis
-- keep Google Business Profile, website, Instagram, and Facebook connected
-- explain what customers see before they inquire
-- help the owner choose the next practical step
+Current positioning guardrail:
 
-Avoid turning GoodmanSEO into a generic website agency or abstract marketing consultancy.
+- lead with homepage production / website cleanup
+- keep Google Business Profile setup or cleanup as a core support
+- keep On-page SEO basic setup as a core support
+- use free check as a light entry check
+- allow SNS only as basic social link connection support
+
+Avoid:
+
+- SNS marketing
+- Instagram / Facebook operation
+- social content regular posting
+- social channel diagnosis or positioning
+- broad integrated digital marketing language
+
+Detailed service-refocus notes are saved in `docs/service-refocus-2026-06-26.md`.
 
 ## Latest Work Summary Source
 
@@ -101,8 +112,7 @@ Current source-level site changes visible on 2026-06-25:
 Visible in current source:
 
 - 무료 점검 / 무료 진단: free entry check
-- 퀵 진단: `AUD 149`
-- 온라인 올인원 진단: `AUD 289`
+- AI 진단: `AUD 149`
 - 스타터 홈페이지: `AUD 795`, original `AUD 1,095`
 - 비즈니스 홈페이지: `AUD 1,890`
 - 성장형 홈페이지: `AUD 3,500`

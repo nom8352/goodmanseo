@@ -128,8 +128,7 @@ Supporting copy:
 From `src/pages/WebPricing.jsx`:
 
 - 무료 점검: free, basic check of Google Business Profile, website, and SNS exposure
-- 퀵 진단: `AUD 149`, one-time
-- 온라인 올인원 진단: `AUD 289`, one-time
+- AI 진단: `AUD 149`, one-time
 
 ### Website Packages
 
@@ -200,8 +199,7 @@ Supporting copy:
 From `src/components/ContactForm.jsx`:
 
 - `free-check`: label `무료 진단`, heading `무료 점검 신청`
-- `quick-diagnosis`: label `퀵 진단`
-- `all-in-one-diagnosis`: label `온라인 올인원 진단`
+- `quick-diagnosis`: label `AI 진단`
 - `general-inquiry`: label `일반 문의`
 
 Form fields:

@@ -62,7 +62,7 @@ const baseRoutePages = [
       createServiceJsonLd({
         name: 'Goodman SEO 서비스 및 가격',
         description:
-          '무료 점검, 퀵 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필 세팅을 포함한 기본 온라인 세팅 서비스입니다.',
+          '무료 점검, AI 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필 세팅을 포함한 기본 온라인 세팅 서비스입니다.',
         path: '/pricing',
         serviceType: 'Website, Google Business Profile, and SEO setup services',
       }),

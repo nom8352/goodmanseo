@@ -133,12 +133,12 @@ Source: `src/pages/WebPricing.jsx`
 ### SEO
 
 - Title: `서비스 및 가격`
-- Description: `무료 점검, 유료 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다.`
+- Description: `무료 점검, AI 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다.`
 
 ### Page Intro
 
-- H1: `고객의 성장을 만드는 통합 디지털 솔루션`
-- Copy: `AI 기술과 데이터 기반 전략으로 비즈니스의 모든 순간을 함께합니다.`
+- H1: `검색과 문의를 위한 홈페이지 기본 세팅`
+- Copy: `홈페이지 제작, 구글 비즈니스, On-page SEO를 필요한 범위에 맞춰 정리합니다.`
 
 ### Website Packages
 
@@ -149,22 +149,20 @@ Source: `src/pages/WebPricing.jsx`
 
 - `비즈니스 홈페이지`
   - Price: `AUD 1,890`
-  - Label: `마케팅 최적화 추천 패키지`
-  - Scope: up to 7 pages, Google map/local SEO, phone/email inquiry automation, social setup
+  - Label: `문의 흐름까지 정리하는 추천 패키지`
+  - Scope: up to 7 pages, Google map basics, phone/email inquiry automation, basic social link connection support
 
 - `성장형 홈페이지`
   - Price: `AUD 3,500`
   - Label: `검색 노출 극대화 패키지`
-  - Scope: 10+ pages, SEO All-in-One, social diagnostics, 3 months AI customer-response support
-  - Copy caution: `비즈니스 홈페이지 요금제 혜택 전형 포함` should be reviewed
+  - Scope: 10+ pages, SEO All-in-One, basic social link connection support, 3 months AI customer-response support
 
 ### Diagnostics
 
-- `무료 점검`: free, basic Google Business Profile / website / SNS exposure check
-- `퀵 진단`: `AUD 149`, website speed/errors, Google map/profile, search visibility, top urgent issues
-- `온라인 올인원 진단`: `AUD 289`, includes quick diagnosis plus Instagram/Facebook and channel flow
+- `무료 점검`: free, homepage access, mobile basics, Google Business Profile registration, basic SEO check
+- `AI 진단`: `AUD 149`, includes free check items plus homepage first impression/inquiry flow, Google Business Profile basics, On-page SEO major items, mobile usability and speed basics
 
-### SEO & Marketing
+### SEO & Google Business
 
 - `SEO All-in-One 스타트 패키지`: `AUD 950`
 - `SEO 월관리`: `AUD 795 / month`
@@ -207,13 +205,13 @@ Source: `src/pages/AIBusiness.jsx`
 ### SEO
 
 - Title: `AI 실전 멘토링`
-- Description still mentions AI automation, online study group, online 1:1 mentoring, and offline group workshop.
+- Description mentions AI automation, online study group, online 1:1 mentoring, and offline group workshop.
 
 ### Hero
 
 - Eyebrow: `AI와 전문가의 만남`
 - H1: `내 비즈니스에 진짜 도움 되는 솔루션`
-- Copy: product descriptions, review replies, and customer response can be handled by AI; practical custom automation and marketing solution.
+- Copy: product descriptions, review replies, and customer response can be handled by AI; practical custom automation support.
 
 ### Current Service Cards
 
@@ -222,8 +220,8 @@ Source: `src/pages/AIBusiness.jsx`
   - 업종별 AI strategy, content/review/response automation, AI tool usage
 
 - `스튜디오 그룹`
-  - 데이터 기반 콘텐츠 & 광고 전략
-  - Google/Meta ads, search/content strategy, growth data analysis
+  - 데이터 기반 콘텐츠 업무 정리
+  - repeated content workflow, search/homepage source material, operating data analysis
 
 - `워크숍 & 교육`
   - 팀의 역량을 높이는 맞춤형 교육
@@ -231,8 +229,8 @@ Source: `src/pages/AIBusiness.jsx`
 
 ### Closing Message
 
-- `지금 무료 진단으로 우리 비즈니스에 딱 맞는 솔루션을 찾아보세요.`
-- CTA: `무료 진단 및 1:1 맞춤 상담 신청하기`
+- `지금 문의를 남기고 우리 비즈니스에 맞는 자동화 방향을 확인해보세요.`
+- CTA: `AI 멘토링 문의하기`
 
 ## Blog Index
 
@@ -258,7 +256,7 @@ Each article detail page includes:
 - article body paragraphs
 - CTA back to free check/contact
 
-Current blog topics remain the 10 practical online-channel articles about Google Business Profile, online basics, Instagram trust gaps, website conversion, channel consistency, SEO readiness, website rebuild checks, and AI-supported operations.
+Current blog topics remain practical articles about Google Business Profile, online basics, website conversion, information consistency, SEO readiness, website rebuild checks, and AI-supported operations.
 
 ## Contact Page
 
@@ -267,7 +265,7 @@ Source: `src/pages/Contact.jsx`, `src/components/ContactForm.jsx`
 ### SEO
 
 - Title: `진단 / 문의 신청`
-- Description: `GoodmanSEO 진단 및 문의 신청 페이지입니다. 무료 점검, 퀵 진단, 온라인 올인원 진단, 일반 문의를 접수할 수 있습니다.`
+- Description: `GoodmanSEO 문의 신청 페이지입니다. 무료 점검, AI 진단, 홈페이지 제작, 구글 비즈니스 세팅 문의를 접수할 수 있습니다.`
 
 ### Page Intro
 
@@ -278,20 +276,15 @@ Source: `src/pages/Contact.jsx`, `src/components/ContactForm.jsx`
 ### Contact Form Types
 
 - `free-check`
-  - Label: `무료 진단`
+  - Label: `무료 점검`
   - Heading: `무료 점검 신청`
-  - Helper: `현재 온라인 상태를 무료로 진단받고 싶어요.`
-  - Submit: `진단 신청하기`
+  - Helper: `홈페이지와 구글 비즈니스 기본 상태를 확인하고 싶어요.`
+  - Submit: `무료 점검 신청하기`
 
 - `quick-diagnosis`
-  - Label: `퀵 진단`
-  - Helper: `빠른 진단 결과가 필요해요.`
-  - Submit: `진단 신청하기`
-
-- `all-in-one-diagnosis`
-  - Label: `온라인 올인원 진단`
-  - Helper: `구글, 홈페이지, SNS를 통합 진단받고 싶어요.`
-  - Submit: `진단 신청하기`
+  - Label: `AI 진단`
+  - Helper: `홈페이지와 기본 SEO를 조금 더 자세히 보고 싶어요.`
+  - Submit: `AI 진단 신청하기`
 
 - `general-inquiry`
   - Label: `일반 문의`

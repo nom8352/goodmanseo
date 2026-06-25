@@ -120,7 +120,7 @@ Sources:
 
 Role:
 
-- Handle free check/free diagnosis, quick diagnosis, all-in-one diagnosis, and general inquiries.
+- Handle free check, AI diagnosis, and general inquiries.
 - Accepts query parameter `type`, defaulting to `free-check`.
 
 ### Legal
