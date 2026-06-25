@@ -52,7 +52,7 @@ const baseRoutePages = [
     route: '/pricing',
     title: '서비스 및 가격 | Goodman SEO',
     description:
-      'Goodman SEO의 호주와 시드니 비즈니스를 위한 서비스 및 가격 안내 페이지입니다. 홈페이지 제작, 3개월 안심 유지보수, 구글 지도/검색 등록, 추가 마케팅 서비스 가격을 확인할 수 있습니다.',
+      'Goodman SEO의 호주와 시드니 비즈니스를 위한 서비스 및 가격 안내 페이지입니다. 홈페이지 제작, 구글 비즈니스 세팅, 기본 SEO, 기본 소셜 링크 연결 지원 범위를 확인할 수 있습니다.',
     canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:
@@ -62,9 +62,9 @@ const baseRoutePages = [
       createServiceJsonLd({
         name: 'Goodman SEO 서비스 및 가격',
         description:
-          '무료 점검, 유료 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필 세팅을 포함한 온라인 채널 정리 서비스입니다.',
+          '무료 점검, 퀵 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필 세팅을 포함한 기본 온라인 세팅 서비스입니다.',
         path: '/pricing',
-        serviceType: 'Online channel review, website, SEO, and marketing services',
+        serviceType: 'Website, Google Business Profile, and SEO setup services',
       }),
     ],
   },
@@ -81,7 +81,7 @@ const baseRoutePages = [
       createWebPageJsonLd({
         name: 'Goodman SEO 블로그',
         description:
-          '호주와 시드니 비즈니스를 위한 구글 비즈니스 프로필, 홈페이지, SNS, 온라인 운영 가이드입니다.',
+          '호주와 시드니 비즈니스를 위한 구글 비즈니스 프로필, 홈페이지, 기본 SEO 가이드입니다.',
         path: '/blog',
         type: 'Blog',
       }),
@@ -91,7 +91,7 @@ const baseRoutePages = [
     route: '/contact',
     title: '상담 신청 | Goodman SEO',
     description:
-      'Goodman SEO 상담 신청 페이지입니다. 호주와 시드니 비즈니스를 위한 홈페이지 제작, 구글 지도/검색 등록, SNS와 광고 시작 세팅 문의를 받고 있습니다.',
+      'Goodman SEO 상담 신청 페이지입니다. 호주와 시드니 비즈니스를 위한 홈페이지 제작, 구글 비즈니스 세팅, 기본 SEO 문의를 받고 있습니다.',
     canonical: canonicalForRoute('/contact'),
     type: 'website',
     keywords:
@@ -100,7 +100,7 @@ const baseRoutePages = [
       createWebPageJsonLd({
         name: 'Goodman SEO 상담 신청',
         description:
-          '호주와 시드니 비즈니스를 위한 무료 온라인 진단 및 홈페이지, SEO, SNS 상담 신청 페이지입니다.',
+          '호주와 시드니 비즈니스를 위한 무료 점검 및 홈페이지, SEO, 구글 비즈니스 상담 신청 페이지입니다.',
         path: '/contact',
         type: 'ContactPage',
       }),

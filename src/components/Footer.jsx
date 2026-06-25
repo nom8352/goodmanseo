@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Instagram, 
-  Facebook, 
-  Youtube, 
-  Mail,
-  ArrowUpRight
-} from 'lucide-react';
+import { Youtube, Mail, ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -18,32 +12,16 @@ const Footer = () => {
           <div className="footer-brand flex flex-col items-start">
             <Link to="/" className="site-mark">
               <span className="site-mark__title font-sans font-extrabold text-[var(--accent-primary)] tracking-[-0.04em] text-2xl">GOODMANSEO</span>
-              <span className="site-mark__meta text-xs text-[#7c8f9f] tracking-[0.2em] uppercase mt-1">구글 · 홈페이지 · SNS 통합 마케팅</span>
+              <span className="site-mark__meta text-xs text-[#7c8f9f] tracking-[0.2em] uppercase mt-1">홈페이지 · 구글 비즈니스 · 기본 SEO</span>
             </Link>
             
             <p className="mt-6 max-w-[24rem] text-sm leading-relaxed text-[#4e6170]">
-              고객이 신뢰하고 선택하는 온라인 환경을 만들어<br />
-              비즈니스의 지속적인 성장을 함께합니다.
+              고객이 검색해서 보고, 믿고, 문의할 수 있도록<br />
+              홈페이지와 구글 기본 세팅을 정리합니다.
             </p>
             
             {/* Social Icons */}
             <div className="mt-8 flex items-center gap-3">
-              {/* Instagram */}
-              <a 
-                href="#" 
-                aria-label="GoodmanSEO 인스타그램 바로가기"
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-white border border-[#e6eff1] hover:border-[#ee2a7b] hover:bg-[#ee2a7b]/5 text-[#ee2a7b] transition-all shadow-sm"
-              >
-                <Instagram size={18} />
-              </a>
-              {/* Facebook */}
-              <a 
-                href="#" 
-                aria-label="GoodmanSEO 페이스북 바로가기"
-                className="flex h-11 w-11 items-center justify-center rounded-full bg-white border border-[#e6eff1] hover:border-[#1877F2] hover:bg-[#1877F2]/5 text-[#1877F2] transition-all shadow-sm"
-              >
-                <Facebook size={18} />
-              </a>
               {/* YouTube */}
               <a 
                 href="#" 

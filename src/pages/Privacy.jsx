@@ -21,7 +21,7 @@ const Privacy = () => {
               GoodmanSEO는 귀하가 제공하는 개인정보를 다음의 목적을 위해 수집하고 이용합니다. 수집된 개인정보는 목적 외의 용도로는 사용되지 않으며, 이용 목적이 변경될 시에는 사전 동의를 구할 예정입니다.
             </p>
             <ul className="list-disc pl-5 mt-2 space-y-1 text-[0.92rem]">
-              <li>비즈니스 온라인 채널(Google Business Profile, 웹사이트, SNS) 무료 채널 점검 및 진단 서비스 제공</li>
+              <li>홈페이지, Google Business Profile, 기본 SEO 점검 및 관련 서비스 제공</li>
               <li>신청인 본인 확인 및 문의에 대한 답변/상담 연락</li>
               <li>서비스 품질 개선 및 맞춤형 컨설팅 피드백 제공</li>
             </ul>
@@ -34,7 +34,7 @@ const Privacy = () => {
             </p>
             <ul className="list-disc pl-5 mt-2 space-y-1 text-[0.92rem]">
               <li><strong>필수항목:</strong> 업체명, 담당자 이름, 연락처(전화번호)</li>
-              <li><strong>선택항목:</strong> 홈페이지 URL, Google Business Profile 링크, Instagram 링크, Facebook 링크, 서비스 요청 세부사항/고민 항목</li>
+              <li><strong>선택항목:</strong> 홈페이지 URL, Google Business Profile 링크, 서비스 요청 세부사항/고민 항목</li>
             </ul>
           </section>
 

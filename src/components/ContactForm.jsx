@@ -1,37 +1,27 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Send, Search, Zap, Monitor, MessageSquare, Lock } from 'lucide-react';
+import { Send, Search, Zap, MessageSquare, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const INQUIRY_TYPES = [
   {
     value: 'free-check',
-    label: '무료 진단',
+    label: '무료 점검',
     heading: '무료 점검 신청',
-    helper: '현재 온라인 상태를 무료로 진단받고 싶어요.',
+    helper: '홈페이지와 구글 비즈니스 기본 상태를 확인하고 싶어요.',
     icon: Search,
     messageLabel: '현재 가장 고민인 점',
-    messagePlaceholder: '예: 검색 노출이 부족해요, 홈페이지 전환율이 낮아요 등',
-    submitLabel: '진단 신청하기',
+    messagePlaceholder: '예: 홈페이지가 오래됐어요, 구글에서 잘 안 보여요 등',
+    submitLabel: '무료 점검 신청하기',
   },
   {
     value: 'quick-diagnosis',
     label: '퀵 진단',
     heading: '퀵 진단 문의',
-    helper: '빠른 진단 결과가 필요해요.',
+    helper: '홈페이지와 기본 SEO를 조금 더 자세히 보고 싶어요.',
     icon: Zap,
     messageLabel: '현재 가장 고민인 점',
     messagePlaceholder: '예: 홈페이지와 구글 지도 프로필 중 시급히 개선해야 할 1순위가 궁금해요',
-    submitLabel: '진단 신청하기',
-  },
-  {
-    value: 'all-in-one-diagnosis',
-    label: '온라인 올인원 진단',
-    heading: '온라인 올인원 진단 문의',
-    helper: '구글, 홈페이지, SNS를 통합 진단받고 싶어요.',
-    icon: Monitor,
-    messageLabel: '현재 가장 고민인 점',
-    messagePlaceholder: '예: 구글 비즈니스, 홈페이지, 인스타그램 전체에 걸친 진단 가이드라인이 필요해요',
-    submitLabel: '진단 신청하기',
+    submitLabel: '퀵 진단 신청하기',
   },
   {
     value: 'general-inquiry',
@@ -55,8 +45,6 @@ const initialForm = {
   businessType: '',
   websiteUrl: '',
   googleBusinessUrl: '',
-  instagramUrl: '',
-  facebookUrl: '',
   message: '',
   'bot-field': '',
 };
@@ -68,7 +56,7 @@ const encode = (data) =>
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
 
-const buildMailtoLink = ({ company, name, phone, businessType, websiteUrl, googleBusinessUrl, instagramUrl, facebookUrl, message, inquiryType }) => {
+const buildMailtoLink = ({ company, name, phone, businessType, websiteUrl, googleBusinessUrl, message, inquiryType }) => {
   const inquiryMeta = getInquiryMeta(inquiryType);
   const subject = `[Goodman SEO] ${inquiryMeta.label}${company ? ` - ${company}` : ''}`;
   const body = [
@@ -79,8 +67,6 @@ const buildMailtoLink = ({ company, name, phone, businessType, websiteUrl, googl
     `업종/지역: ${businessType || '-'}`,
     `홈페이지: ${websiteUrl || '-'}`,
     `Google Business Profile: ${googleBusinessUrl || '-'}`,
-    `Instagram: ${instagramUrl || '-'}`,
-    `Facebook: ${facebookUrl || '-'}`,
     '',
     `${inquiryMeta.messageLabel}:`,
     message || '-',
@@ -260,14 +246,6 @@ const ContactForm = ({
         <label className="form-field">
           <span>Google Business Profile 링크</span>
           <input name="googleBusinessUrl" type="url" placeholder="https://g.page/yourbusiness" value={form.googleBusinessUrl} onChange={handleChange} />
-        </label>
-        <label className="form-field">
-          <span>Instagram 링크</span>
-          <input name="instagramUrl" type="url" placeholder="https://instagram.com/yourbusiness" value={form.instagramUrl} onChange={handleChange} />
-        </label>
-        <label className="form-field">
-          <span>Facebook 링크</span>
-          <input name="facebookUrl" type="url" placeholder="https://facebook.com/yourbusiness" value={form.facebookUrl} onChange={handleChange} />
         </label>
       </div>
 

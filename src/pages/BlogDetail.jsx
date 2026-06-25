@@ -25,12 +25,12 @@ const serviceCtas = {
     secondaryText: '서비스 가격 보기',
     secondaryTo: '/pricing',
   },
-  'SNS 운영': {
-    eyebrow: 'SNS 연결 점검',
-    title: '인스타그램 관심을 문의로 이어지게 만들려면',
+  '온라인 기본기': {
+    eyebrow: '홈페이지 연결 점검',
+    title: '관심을 실제 문의로 이어지게 만들려면',
     description:
-      'SNS만 더 올리기보다 구글, 홈페이지, 페이스북과 정보가 맞는지 함께 봐야 고객이 덜 망설입니다.',
-    primaryText: '무료 진단 신청하기',
+      '게시물을 더 올리기보다 홈페이지와 구글 비즈니스 기본 정보가 먼저 맞는지 확인하는 편이 현실적입니다.',
+    primaryText: '무료 점검 신청하기',
     primaryTo: '/contact?type=free-check',
     secondaryText: '진단 서비스 보기',
     secondaryTo: '/pricing',
@@ -68,11 +68,11 @@ const serviceCtas = {
 };
 
 const defaultServiceCta = {
-  eyebrow: '온라인 채널 점검',
-  title: '구글, 홈페이지, Instagram, Facebook을 함께 확인하세요',
+  eyebrow: '기본 상태 점검',
+  title: '홈페이지와 구글 비즈니스부터 확인하세요',
   description:
-    '한 채널만 보는 것보다 고객이 실제로 확인하는 순서대로 보면 무엇이 빠졌고 무엇을 먼저 고칠지 분명해집니다.',
-  primaryText: '무료 진단 신청하기',
+    '고객이 검색해서 보고 문의하기까지 필요한 기본 정보와 홈페이지 흐름을 먼저 확인합니다.',
+  primaryText: '무료 점검 신청하기',
   primaryTo: '/contact?type=free-check',
   secondaryText: '서비스 보기',
   secondaryTo: '/pricing',
@@ -109,7 +109,7 @@ const BlogDetail = () => {
         path={`/blog/${post.id}`}
         image={`https://goodmanseo.com${post.image}`}
         imageAlt={post.imageAlt}
-        keywords={['호주 비즈니스 마케팅', '시드니 비즈니스 마케팅', post.category, post.title, '온라인 운영']}
+        keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', post.category, post.title, '구글 비즈니스 세팅']}
         type="article"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -229,10 +229,10 @@ const BlogDetail = () => {
           <div className="mt-12 border-t border-[#005b70]/10 pt-8">
             <p className="text-base leading-relaxed text-text-muted">
               지금 내 비즈니스가 온라인에서 어떻게 보이는지 먼저 확인하고 싶다면,
-              무료 진단으로 어디부터 손봐야 할지 순서부터 정리해보세요.
+              무료 점검으로 홈페이지와 구글 비즈니스 기본 상태부터 확인해보세요.
             </p>
             <Link to="/contact?type=free-check" className="primary-button mt-6 inline-flex">
-              무료 진단 문의하기
+              무료 점검 문의하기
               <ArrowRight size={18} />
             </Link>
           </div>
