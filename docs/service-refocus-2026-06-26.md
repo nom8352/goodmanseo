@@ -59,10 +59,10 @@ AI diagnosis is the paid small diagnostic option.
 
 Current AI diagnosis items:
 
-- 홈페이지 첫인상 및 문의 흐름 심층 체크
-- Google Business Profile 기본 정보 심층 체크
-- On-page SEO 주요 항목 심층 체크
-- 모바일 사용성과 속도 심층 체크
+- 홈페이지 심층 체크
+- Google Business Profile 심층 체크
+- On-page SEO 심층 체크
+- 모바일/속도 심층 체크
 
 ## Homepage CTA Clarification
 

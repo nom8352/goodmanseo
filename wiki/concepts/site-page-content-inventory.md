@@ -154,13 +154,13 @@ Source: `src/pages/WebPricing.jsx`
 
 - `성장형 홈페이지`
   - Price: `AUD 3,500`
-  - Label: `검색 노출 극대화 패키지`
+  - Label: `콘텐츠가 많은 확장 구성`
   - Scope: 10+ pages, SEO All-in-One, basic social link connection support, 3 months AI customer-response support
 
 ### Diagnostics
 
 - `무료 점검`: free, homepage check, mobile screen check, Google Business Profile registration check, basic SEO check
-- `AI 진단`: `AUD 149`, homepage first impression/inquiry flow deep check, Google Business Profile basic information deep check, On-page SEO major item deep check, mobile usability and speed deep check
+- `AI 진단`: `AUD 149`, homepage deep check, Google Business Profile deep check, On-page SEO deep check, mobile/speed deep check
 
 ### SEO & Google Business
 
