@@ -48,12 +48,9 @@ From `src/pages/WebPricing.jsx`:
 Important hierarchy:
 
 - Starter is a compact essential website package up to 3 pages.
-- Business homepage is the recommended marketing-optimized package up to 7 pages.
-- Growth homepage is for larger content, SEO All-in-One support, social diagnostics, and 3 months of AI customer-response support.
-
-Open copy issue:
-
-- Growth package currently says `비즈니스 홈페이지 요금제 혜택 전형 포함`; verify whether `전형` is intended.
+- Starter includes basic SEO setup.
+- Business homepage adds key page SEO cleanup for up to 7 pages.
+- Growth homepage is for larger content and includes the SEO All-in-One package.
 
 ## SEO And Google Business Profile
 

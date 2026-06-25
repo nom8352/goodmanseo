@@ -123,6 +123,12 @@ Visible in current source:
 
 AI page currently shows service cards rather than public prices.
 
+Homepage package SEO distinction:
+
+- Starter: basic SEO setup
+- Business: key page SEO cleanup
+- Growth: SEO All-in-One package included
+
 ## Legal / SEO Status
 
 New legal routes:
@@ -223,7 +229,6 @@ Do not assume these are already deployed or pushed unless GitHub state is checke
 - `무료 점검` and `무료 진단` are both used. Decide whether to standardize one term.
 - `src/assets/home-hero-channels.png` still exists locally but current `Home.jsx` does not import it.
 - `/starter-package` still exists and may conflict with the newer `/pricing` starter package details.
-- Current pricing copy includes the phrase `비즈니스 홈페이지 요금제 혜택 전형 포함`; verify whether `전형` is a typo for `전부` or another intended word.
 - AI page no longer exposes earlier AI prices in the visible page. Confirm whether prices should remain hidden or return to pricing.
 
 ## Recommended Next Step
