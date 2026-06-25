@@ -48,20 +48,20 @@ From `src/pages/WebPricing.jsx`:
 Important hierarchy:
 
 - Starter is a compact essential website package up to 3 pages.
-- Starter includes basic SEO setup.
-- Business homepage adds key page SEO cleanup for up to 7 pages.
-- Growth homepage is for larger content and includes the SEO All-in-One package.
+- Starter includes basic SEO setup and Analytics/Search Console basic registration.
+- Business homepage adds key page SEO cleanup for up to 7 pages and includes Analytics/Search Console basic registration.
+- Growth homepage is for larger content and includes the SEO All-in-One package plus Analytics/Search Console basic registration.
 
 ## SEO And Google Business Profile
 
 From `src/pages/WebPricing.jsx`:
 
 - SEO All-in-One 스타트 패키지: `AUD 950`
-- SEO 월관리: `AUD 795 / month`
-- 구글 비즈니스 프로필: `AUD 300`, one-time setup
-- GBP maintenance add-on: `AUD 95 / month`
+- 온라인 관리 서포트: `AUD 295 / month`
+- 구글 비즈니스 프로필 1회 세팅: `AUD 300`, one-time setup
+- GBP 유지 서포트 add-on: `AUD 95 / month`
 
-Current GBP presentation is one card with the monthly maintenance option listed as an add-on, not a separate monthly package card.
+The `온라인 관리 서포트` offer is the broader monthly support package for homepage, GBP status checks, basic SEO, Analytics/Search Console checks, and SNS link/profile support. The `GBP 유지 서포트` add-on is narrower and only for Google Business Profile updates.
 
 ## AI Business Services
 

@@ -117,17 +117,22 @@ Visible in current source:
 - 비즈니스 홈페이지: `AUD 1,890`
 - 성장형 홈페이지: `AUD 3,500`
 - SEO All-in-One 스타트 패키지: `AUD 950`
-- SEO 월관리: `AUD 795 / month`
-- 구글 비즈니스 프로필: `AUD 300`
-- GBP maintenance add-on: `AUD 95 / month`
+- 온라인 관리 서포트: `AUD 295 / month`
+- 구글 비즈니스 프로필 1회 세팅: `AUD 300`
+- GBP 유지 서포트 add-on: `AUD 95 / month`
 
 AI page currently shows service cards rather than public prices.
 
 Homepage package SEO distinction:
 
-- Starter: basic SEO setup
-- Business: key page SEO cleanup
-- Growth: SEO All-in-One package included
+- Starter: basic SEO setup plus Analytics / Search Console basic registration
+- Business: key page SEO cleanup plus Analytics / Search Console basic registration
+- Growth: SEO All-in-One package included plus Analytics / Search Console basic registration
+
+Monthly support distinction:
+
+- `온라인 관리 서포트` is the broader monthly support offer covering homepage, Google Business Profile status checks, basic SEO, Analytics/Search Console checks, and SNS link/profile support.
+- `GBP 유지 서포트` is a narrower add-on for Google Business Profile updates only.
 
 ## Legal / SEO Status
 

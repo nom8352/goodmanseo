@@ -145,17 +145,17 @@ Source: `src/pages/WebPricing.jsx`
 - `스타터 홈페이지`
   - Price: `AUD 795`, original `AUD 1,095`
   - Label: `핵심 기능 위주의 합리적인 패키지`
-  - Scope: up to 3 pages, intro/service/inquiry structure, mobile basics, basic SEO setup
+  - Scope: up to 3 pages, intro/service/inquiry structure, mobile basics, basic SEO setup, Analytics/Search Console basic registration
 
 - `비즈니스 홈페이지`
   - Price: `AUD 1,890`
   - Label: `문의 흐름까지 정리하는 추천 패키지`
-  - Scope: up to 7 pages, detailed service pages, phone/email/form connection, key page SEO cleanup, basic social link connection support
+  - Scope: up to 7 pages, detailed service pages, phone/email/form connection, key page SEO cleanup, Analytics/Search Console basic registration, basic social link connection support
 
 - `성장형 홈페이지`
   - Price: `AUD 3,500`
   - Label: `콘텐츠가 많은 확장 구성`
-  - Scope: 10+ pages, business homepage scope, SEO All-in-One package, Google Business Profile cleanup, 3 months AI customer-response support
+  - Scope: 10+ pages, business homepage scope, SEO All-in-One package, Analytics/Search Console basic registration, Google Business Profile cleanup, 3 months AI customer-response support
 
 ### Diagnostics
 
@@ -165,8 +165,8 @@ Source: `src/pages/WebPricing.jsx`
 ### SEO & Google Business
 
 - `SEO All-in-One 스타트 패키지`: `AUD 950`
-- `SEO 월관리`: `AUD 795 / month`
-- `구글 비즈니스 프로필`: `AUD 300`, with maintenance add-on `AUD 95 / month`
+- `온라인 관리 서포트`: `AUD 295 / month`
+- `구글 비즈니스 프로필 1회 세팅`: `AUD 300`, with GBP-only maintenance add-on `AUD 95 / month`
 
 ### Pricing FAQ
 

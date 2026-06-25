@@ -143,9 +143,9 @@ From `src/pages/WebPricing.jsx`:
 From `src/pages/WebPricing.jsx`:
 
 - SEO All-in-One 스타트 패키지: `AUD 950`
-- SEO 월관리: `AUD 795 / month`
-- 구글 비즈니스 프로필: `AUD 300`
-- 유지 관리 추가 시: `AUD 95 / month`
+- 온라인 관리 서포트: `AUD 295 / month`
+- 구글 비즈니스 프로필 1회 세팅: `AUD 300`
+- GBP 유지 서포트: `AUD 95 / month`
 
 The current pricing page does not show the older separate monthly management and AI education pricing sections.
 
