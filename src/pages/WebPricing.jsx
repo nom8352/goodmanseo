@@ -13,7 +13,7 @@ const diagnostics = [
     priceNote: '1회 결제',
     description:
       '홈페이지와 구글 비즈니스, 기본 SEO 상태를 조금 더 깊게 확인합니다.',
-    points: ['무료 점검 항목 전체 포함', '홈페이지 첫인상 및 문의 흐름 점검', 'Google Business Profile 기본 정보 점검', 'On-page SEO 주요 항목 점검', '모바일 사용성과 속도 기본 점검'],
+    points: ['홈페이지 첫인상 및 문의 흐름 심층 체크', 'Google Business Profile 기본 정보 심층 체크', 'On-page SEO 주요 항목 심층 체크', '모바일 사용성과 속도 심층 체크'],
     cta: 'AI 진단 신청하기',
     href: '/contact?type=quick-diagnosis',
   },
@@ -24,7 +24,7 @@ const freeCheckCard = {
   price: '무료',
   priceNote: '기본 확인',
   description: '홈페이지와 구글 비즈니스, 기본 SEO 상태를 간단히 확인합니다.',
-  points: ['홈페이지 접속 확인', '모바일 화면 기본 확인', 'Google Business Profile 등록 여부 확인', '기본 SEO 체크'],
+  points: ['홈페이지 체크', '모바일 화면 체크', 'Google Business Profile 등록 체크', '기본 SEO 체크'],
   cta: '무료 점검 신청하기',
   href: '/contact?type=free-check',
 };

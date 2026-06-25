@@ -46,9 +46,9 @@ Free check is a light entry check.
 
 Current free check items:
 
-- 홈페이지 접속 확인
-- 모바일 화면 기본 확인
-- Google Business Profile 등록 여부 확인
+- 홈페이지 체크
+- 모바일 화면 체크
+- Google Business Profile 등록 체크
 - 기본 SEO 체크
 
 It is not a detailed report.
@@ -59,11 +59,10 @@ AI diagnosis is the paid small diagnostic option.
 
 Current AI diagnosis items:
 
-- 무료 점검 항목 전체 포함
-- 홈페이지 첫인상 및 문의 흐름 점검
-- Google Business Profile 기본 정보 점검
-- On-page SEO 주요 항목 점검
-- 모바일 사용성과 속도 기본 점검
+- 홈페이지 첫인상 및 문의 흐름 심층 체크
+- Google Business Profile 기본 정보 심층 체크
+- On-page SEO 주요 항목 심층 체크
+- 모바일 사용성과 속도 심층 체크
 
 ## Homepage CTA Clarification
 

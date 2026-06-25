@@ -159,8 +159,8 @@ Source: `src/pages/WebPricing.jsx`
 
 ### Diagnostics
 
-- `무료 점검`: free, homepage access, mobile basics, Google Business Profile registration, basic SEO check
-- `AI 진단`: `AUD 149`, includes free check items plus homepage first impression/inquiry flow, Google Business Profile basics, On-page SEO major items, mobile usability and speed basics
+- `무료 점검`: free, homepage check, mobile screen check, Google Business Profile registration check, basic SEO check
+- `AI 진단`: `AUD 149`, homepage first impression/inquiry flow deep check, Google Business Profile basic information deep check, On-page SEO major item deep check, mobile usability and speed deep check
 
 ### SEO & Google Business
 
