@@ -1,6 +1,6 @@
 # Project Memory Sources
 
-Last updated: 2026-06-16
+Last updated: 2026-06-25
 
 ## Primary Local Memory
 
@@ -73,7 +73,7 @@ Limits:
 
 Purpose:
 
-- Latest working status as of 2026-06-16.
+- Latest working status as of 2026-06-25.
 - Records current website direction, current source-level route/page changes, offer snapshot, legal/SEO status, open alignment questions, social schedule, asset status, Notion references, and known local-only changes.
 
 Use it for:
@@ -85,6 +85,23 @@ Limits:
 
 - It may drift as source files change.
 - Known local-only changes listed there must be verified with `git status`.
+
+### `docs/2026-06-25-work-log.md`
+
+Purpose:
+
+- Work log for the June 25 blog/content and AI course landing session.
+- Records pushed commit hashes, blog expansion, generated blog images, `/ai-course`, homepage/menu/AI mentoring links, YouTube embed, build checks, and untracked files left out of commits.
+
+Use it for:
+
+- Resuming the AI course landing/page-linking work.
+- Understanding why `src/pages/AICourse.jsx`, `src/pages/AIBusiness.jsx`, `src/pages/Home.jsx`, `src/components/Navbar.jsx`, `scripts/generate-static-pages.mjs`, `public/sitemap.xml`, `src/data/blogPosts.js`, and `public/blog/` changed.
+
+Limits:
+
+- It is a handoff log, not a live deploy check.
+- Verify live Cloudflare/GitHub deployment state before claiming the public site is updated.
 
 ### `docs/work-summary.md`
 

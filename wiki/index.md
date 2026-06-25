@@ -1,6 +1,6 @@
 # GoodmanSEO LLM Wiki
 
-Last updated: 2026-06-16
+Last updated: 2026-06-25
 
 This is the project memory layer for GoodmanSEO. Use it as the first structured map after reading `CLAUDE.md` and `docs/current-status.md`.
 
@@ -19,6 +19,7 @@ The service reviews Google Business Profile, website, Instagram, and Facebook to
 - `PRODUCT.md`: official Impeccable strategic product context
 - `DESIGN.md`: official Impeccable visual design system
 - `docs/current-status.md`: latest operating status, priorities, social schedule, and known local-only changes
+- `docs/2026-06-25-work-log.md`: June 25 blog, AI course landing, YouTube embed, build, and push work log
 - `docs/work-summary.md`: latest local redesign / quality / SEO work summary report
 - `docs/cardnews-inventory.md`: confirmed social/card-news asset inventory
 - `docs/goodmanseo마감.md`: YouTube/Notion wrap-up context from 2026-04-22
@@ -47,7 +48,7 @@ The service reviews Google Business Profile, website, Instagram, and Facebook to
 
 The strongest next project steps are:
 
-1. Review the current rendered site after the 2026-06-16 light-theme redesign.
+1. Review `/ai-course` on desktop and mobile, especially the YouTube embed and sticky enrollment card.
 2. Decide whether public wording should standardize on `무료 점검` or `무료 진단`.
 3. Decide whether `/starter-package` should remain public, redirect, or merge into `/pricing`.
 4. Confirm whether AI service prices should remain hidden or return to the AI/pricing pages.
@@ -59,4 +60,4 @@ The strongest next project steps are:
 - Do not assume card-news exists as Markdown. The confirmed persistent card-news set is mostly image/TXT assets.
 - Keep new copy practical, owner-focused, and non-salesy.
 - Do not assume local changes are deployed or pushed until GitHub/Cloudflare state is checked.
-- Current `Home.jsx` uses `HeroDevicesVisual`; `src/assets/home-hero-channels.png` exists locally but is not the current homepage visual source.
+- Current pushed site includes `/ai-course`, `AI 강의` nav, homepage course bridge, AI business course bridge, and a YouTube embed for `kuCymkvGF9w`.

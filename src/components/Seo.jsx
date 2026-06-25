@@ -4,6 +4,14 @@ const SITE_NAME = 'Goodman SEO';
 const SITE_URL = 'https://goodmanseo.com';
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
+const withTrailingSlash = (path) => {
+  if (path === '/') {
+    return '/';
+  }
+
+  return path.endsWith('/') ? path : `${path}/`;
+};
+
 const ensureMetaTag = (selector, attributes) => {
   let element = document.head.querySelector(selector);
 
@@ -42,7 +50,7 @@ const Seo = ({
 }) => {
   useEffect(() => {
     const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
-    const canonicalUrl = `${SITE_URL}${path}`;
+    const canonicalUrl = `${SITE_URL}${withTrailingSlash(path)}`;
 
     document.title = fullTitle;
 

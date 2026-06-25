@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-06-16
+Last updated: 2026-06-25
 
 ## Current Project Direction
 
@@ -30,6 +30,10 @@ Avoid turning GoodmanSEO into a generic website agency or abstract marketing con
 - design-system sync for `DESIGN.md` and `.impeccable/design.json`
 
 Treat those scores as report claims unless re-verified in the current thread.
+
+Additional work log:
+
+- `docs/2026-06-25-work-log.md`: records the June 25 blog expansion, generated blog images, AI course landing page, homepage/menu/AI mentoring links, YouTube embed, build checks, and pushed commit hashes.
 
 ## Local Wiki Status
 
@@ -68,7 +72,7 @@ Current design context from `DESIGN.md`:
 
 ## Website Status
 
-Current source-level site changes visible on 2026-06-16:
+Current source-level site changes visible on 2026-06-25:
 
 - homepage now uses a code-built `HeroDevicesVisual` device/dashboard visual, not the older imported `src/assets/home-hero-channels.png`
 - homepage H1 rotates through problem-led phrases:
@@ -77,13 +81,18 @@ Current source-level site changes visible on 2026-06-16:
   - `인스타, 페북 시작하기 힘드신가요?`
 - homepage support copy says Google, homepage, and SNS are managed together to create a trusted online environment
 - homepage CTA language is now `무료 진단 신청`
+- homepage includes a compact `굳팀장 AI 실무 강의` bridge section linking to `/ai-course`
 - pricing page hero is now `고객의 성장을 만드는 통합 디지털 솔루션`
 - pricing page is focused on homepage packages, diagnostics, SEO & marketing, and FAQ
 - AI page is now a light-theme service page around `AI 실전 멘토링`, `스튜디오 그룹`, and `워크숍 & 교육`
+- AI page includes an `온라인 강의` bridge section linking to `/ai-course` and `https://inf.run/xfxvT`
+- `/ai-course` is a course-style landing page for the GoodmanSEO / 굳팀장 Codex AI 실무 자동화 course
+- `/ai-course` embeds the YouTube intro video via `https://www.youtube-nocookie.com/embed/kuCymkvGF9w`
 - contact page/form now prefers `무료 진단` in the form selector while some pricing copy still says `무료 점검`
 - footer now links to `/privacy` and `/terms`
-- `src/App.jsx` includes `/privacy` and `/terms`
-- `scripts/generate-static-pages.mjs` and `public/sitemap.xml` include `/ai-business`, `/privacy`, and `/terms`
+- `src/App.jsx` includes `/privacy`, `/terms`, and `/ai-course`
+- `scripts/generate-static-pages.mjs` and `public/sitemap.xml` include `/ai-business`, `/ai-course`, `/privacy`, and `/terms`
+- top navigation includes `AI 강의`
 
 ## Current Offer Snapshot
 
@@ -111,16 +120,19 @@ New legal routes:
 
 Static/SEO updates:
 
-- `/ai-business`, `/privacy`, and `/terms` are registered in `scripts/generate-static-pages.mjs`
-- `/ai-business`, `/privacy`, and `/terms` are registered in `public/sitemap.xml`
+- `/ai-business`, `/ai-course`, `/privacy`, and `/terms` are registered in `scripts/generate-static-pages.mjs`
+- `/ai-business`, `/ai-course`, `/privacy`, and `/terms` are registered in `public/sitemap.xml`
+- blog detail pages are generated from `src/data/blogPosts.js`
+- blog detail SEO images are generated from each post's `image` value
 
 ## Blog Status
 
 Current blog structure:
 
-- image-free title-first list layout
-- image-free detail pages
-- 10 practical articles aligned with Google Business Profile, homepage, SEO, channel consistency, and online operations
+- image card list layout
+- detail pages render each article's hero image and image metadata
+- 14 practical articles aligned with Google Business Profile, homepage, SEO, channel consistency, AI web design, and online operations
+- generated article images live under `public/blog/`
 
 The blog remains supporting content for trust, search intent, and conversion rather than a magazine-style section.
 
@@ -174,22 +186,17 @@ Meta planner note:
 
 ## Known Local-Only / Uncommitted Changes
 
-As of this update, the working tree has many modified and untracked files. Treat them as active user/project work.
+As of this update, the main site changes from June 25 have been committed and pushed. The working tree still has unrelated untracked files. Treat them as active user/project work.
 
-Notable current local changes include:
+Notable current local untracked items include:
 
-- `src/pages/Home.jsx`
-- `src/pages/WebPricing.jsx`
-- `src/pages/AIBusiness.jsx`
-- `src/pages/Contact.jsx`
-- `src/components/ContactForm.jsx`
-- `src/components/Footer.jsx`
-- `src/components/Navbar.jsx`
-- `src/pages/StarterPackage.jsx`
-- `src/pages/Privacy.jsx`
-- `src/pages/Terms.jsx`
-- `docs/work-summary.md`
-- wiki updates
+- `.codex-social/`
+- `.impeccable/critique/`
+- `_workspace/`
+- `deisngMD/`
+- `img/here.png`
+- `src/assets/home-hero-channels.png`
+- `참고이미지/`
 
 Do not assume these are already deployed or pushed unless GitHub state is checked.
 
@@ -203,9 +210,9 @@ Do not assume these are already deployed or pushed unless GitHub state is checke
 
 ## Recommended Next Step
 
-Review the current rendered site after the wiki update:
+Review the current rendered site after the June 25 updates:
 
-1. Confirm homepage hero language and right-side visual quality.
+1. Confirm `/ai-course` renders the YouTube embed correctly on desktop and mobile.
 2. Decide `무료 점검` vs `무료 진단`.
 3. Decide whether `/starter-package` should remain public.
 4. Re-run `npm run build` if a deploy/push is planned.
