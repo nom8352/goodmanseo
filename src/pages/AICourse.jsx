@@ -11,7 +11,6 @@ import {
   HelpCircle,
   LayoutList,
   MessageSquareText,
-  PlayCircle,
   Sparkles,
   Workflow,
 } from 'lucide-react';
@@ -145,16 +144,15 @@ const AICourse = () => {
               className="rounded-2xl border border-white/12 bg-white/8 p-4 shadow-[0_24px_70px_rgba(0,0,0,0.3)] backdrop-blur"
             >
               <div className="rounded-xl bg-[#0d1520] p-5">
-                <div className="flex h-44 items-center justify-center rounded-lg bg-[#111827]">
-                  <div className="text-center">
-                    <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#007a8c] text-white shadow-[0_16px_36px_rgba(0,122,140,0.35)]">
-                      <PlayCircle size={28} />
-                    </span>
-                    <p className="mt-5 text-sm font-black text-[#8ad7ff]">Codex for Business</p>
-                    <p className="mt-1 text-2xl font-black tracking-[-0.04em] text-white">
-                      AI 업무 자동화
-                    </p>
-                  </div>
+                <div className="overflow-hidden rounded-lg bg-[#111827]">
+                  <iframe
+                    className="aspect-video h-full w-full"
+                    src="https://www.youtube-nocookie.com/embed/kuCymkvGF9w"
+                    title="비개발자를 위한 Codex AI 실무 자동화 강의 소개 영상"
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
                 </div>
 
                 <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
