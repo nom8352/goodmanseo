@@ -6,7 +6,7 @@ Local file: `public/sitemap.xml`
 
 ## Summary
 
-Status: **Fixed locally, pending deploy/push verification**
+Status: **Live verified after deployment**
 
 The sitemap is valid XML, publicly reachable, referenced from `robots.txt`, and contains the expected current site URLs.
 
@@ -16,13 +16,16 @@ Original issue:
 - The final pages return `200`, but sitemap URLs should ideally be the final canonical URLs and should not redirect.
 - The rendered canonical tags also point to non-trailing-slash URLs, while the live host redirects those URLs to trailing-slash versions.
 
-Local fix applied:
+Fix applied and verified live:
 
 - `public/sitemap.xml` now uses trailing-slash final URLs for every non-root route.
 - `src/components/Seo.jsx` now generates trailing-slash canonical/OG URLs.
 - `scripts/generate-static-pages.mjs` now generates trailing-slash canonical/OG URLs in static HTML.
 - `npm run build` passed after the fix.
 - Local build verification found `0` non-trailing sitemap URLs, excluding the root URL.
+- Live verification after commit `e853874` found all 23 sitemap URLs return direct `200`.
+- Live sitemap includes all 14 blog URLs.
+- Live sample blog detail page includes trailing-slash canonical, WebP social image metadata, and `BlogPosting` JSON-LD.
 
 ## Validation Results
 
@@ -36,8 +39,12 @@ Local fix applied:
 | Unique URL count | Pass | 23 unique URLs |
 | HTTPS only | Pass | No HTTP URLs found |
 | Local vs live sitemap match | Pass | No missing or extra URLs between local and live |
-| Final URL status | Pass | All URLs resolve to final `200` after redirect |
-| Direct sitemap URL status | Fixed locally | Local sitemap now uses trailing-slash URLs; live must be rechecked after deploy |
+| Final URL status | Pass | All 23 live sitemap URLs return direct `200` |
+| Direct sitemap URL status | Pass | Live sitemap now uses trailing-slash final URLs; no sitemap URL redirects observed |
+| Blog URL coverage | Pass | 14 blog detail URLs included |
+| Sample blog canonical | Pass | `https://goodmanseo.com/blog/ai-website-design-before-prompting/` canonical is trailing-slash |
+| Sample blog structured data | Pass | Live sample page includes `BlogPosting` JSON-LD |
+| Sample blog image metadata | Pass | Live sample page references `.webp` blog image metadata |
 | Deprecated sitemap tags | Info | `priority` and `changefreq` are present on all 23 URLs; Google ignores them |
 | `lastmod` dates | Pass | Dates are not all identical; newer AI course/blog updates are represented |
 | Sitemap index needed | Not needed | Single sitemap is fine for 23 URLs |
@@ -67,7 +74,7 @@ No route coverage gap was found from the current React route list and blog data.
 
 ## Issues
 
-### Medium: Redirected URLs in Sitemap - Fixed Locally
+### Medium: Redirected URLs in Sitemap - Fixed and Live Verified
 
 Most sitemap URLs are listed without trailing slash:
 
@@ -85,7 +92,7 @@ https://goodmanseo.com/ai-course/
 https://goodmanseo.com/blog/ai-website-design-before-prompting/
 ```
 
-Observed result:
+Original observed result:
 
 - `/` returns `200`
 - All other 22 sitemap URLs return `308`, then final `200`
@@ -95,6 +102,14 @@ Applied fix:
 - Updated sitemap URLs to trailing-slash final URLs.
 - Updated runtime canonical/OG URL generation in `src/components/Seo.jsx`.
 - Updated static canonical/OG URL generation in `scripts/generate-static-pages.mjs`.
+
+Live verification:
+
+- `https://goodmanseo.com/sitemap.xml` returns `200`.
+- `https://goodmanseo.com/robots.txt` returns `200`.
+- `robots.txt` references `https://goodmanseo.com/sitemap.xml`.
+- 23 sitemap URLs were checked.
+- 0 sitemap URLs returned redirect or non-200 responses.
 
 Changed files:
 
@@ -120,9 +135,9 @@ Recommended fix:
 
 ## Recommended Next Action
 
-1. Commit and push the sitemap/canonical fix.
-2. Wait for deployment to finish.
-3. Re-check:
-   - `https://goodmanseo.com/sitemap.xml`
-   - `https://goodmanseo.com/robots.txt`
-   - representative canonical tags on `/pricing/`, `/ai-course/`, and one blog detail page.
+1. Submit or refresh `https://goodmanseo.com/sitemap.xml` in Google Search Console.
+2. In Search Console, inspect representative URLs:
+   - `https://goodmanseo.com/`
+   - `https://goodmanseo.com/pricing/`
+   - `https://goodmanseo.com/blog/ai-website-design-before-prompting/`
+3. Re-run this validation after future route or blog batches.
