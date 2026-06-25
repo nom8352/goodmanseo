@@ -1,6 +1,6 @@
 # Content System
 
-Last updated: 2026-06-16
+Last updated: 2026-06-25
 
 ## Blog
 
@@ -10,8 +10,13 @@ Source:
 
 Current structure:
 
-- 10 articles
-- image-free list and detail pages
+- 14 articles
+- image card list and detail pages
+- PNG source images plus optimized WebP delivery images under `public/blog/`
+- longer article excerpts for static meta descriptions and SERP snippets
+- selected priority articles have deeper body content
+- detail pages include contextual service CTAs and three related posts
+- static generated blog pages include `BlogPosting` JSON-LD
 - practical search/trust topics aligned with the current positioning
 
 Topic clusters:
@@ -22,6 +27,7 @@ Topic clusters:
 - homepage conversion
 - channel consistency
 - SEO readiness
+- AI web design
 - AI-assisted operations
 
 Role:

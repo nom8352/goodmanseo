@@ -2,6 +2,9 @@
 
 ## 2026-06-25
 
+- Added `docs/seo-audit-2026-06-25.md` for the full-site SEO audit and marked Linear `GOO-140` done.
+- Added `docs/seo-keyword-map.md` for route intent, target keywords, CTAs, and internal linking direction.
+- Updated blog SEO: longer excerpts, deeper priority article bodies, WebP blog image delivery, contextual blog CTAs, related posts, and static `BlogPosting` JSON-LD.
 - Added `docs/2026-06-25-work-log.md` for the June 25 GoodmanSEO work session.
 - Updated `docs/current-status.md` to record pushed blog image/content expansion, `/ai-course`, `AI 강의` navigation, homepage course bridge, AI business course bridge, static generation/sitemap registration, and YouTube embed.
 - Updated `wiki/index.md` to point future threads to the June 25 work log and current `/ai-course` review priority.

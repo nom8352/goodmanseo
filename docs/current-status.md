@@ -34,6 +34,8 @@ Treat those scores as report claims unless re-verified in the current thread.
 Additional work log:
 
 - `docs/2026-06-25-work-log.md`: records the June 25 blog expansion, generated blog images, AI course landing page, homepage/menu/AI mentoring links, YouTube embed, build checks, and pushed commit hashes.
+- `docs/seo-audit-2026-06-25.md`: records the June 25 full-site SEO audit, priority fixes, and verification limits.
+- `docs/seo-keyword-map.md`: maps route intent, target keywords, CTAs, and internal linking direction.
 
 ## Local Wiki Status
 
@@ -124,6 +126,9 @@ Static/SEO updates:
 - `/ai-business`, `/ai-course`, `/privacy`, and `/terms` are registered in `public/sitemap.xml`
 - blog detail pages are generated from `src/data/blogPosts.js`
 - blog detail SEO images are generated from each post's `image` value
+- all blog detail static HTML now gets `BlogPosting` JSON-LD
+- service/pricing static pages now get route-specific structured data helpers from `src/data/siteSeo.js`
+- blog images now use WebP delivery paths in `src/data/blogPosts.js`
 
 ## Blog Status
 
@@ -132,7 +137,10 @@ Current blog structure:
 - image card list layout
 - detail pages render each article's hero image and image metadata
 - 14 practical articles aligned with Google Business Profile, homepage, SEO, channel consistency, AI web design, and online operations
-- generated article images live under `public/blog/`
+- article excerpts have been expanded for stronger search snippets
+- priority articles have additional body depth around customer trust, channel consistency, and inquiry flow
+- generated PNG article images live under `public/blog/`; optimized WebP delivery copies also live under `public/blog/`
+- blog detail pages include contextual service CTAs and three related posts
 
 The blog remains supporting content for trust, search intent, and conversion rather than a magazine-style section.
 
@@ -210,9 +218,9 @@ Do not assume these are already deployed or pushed unless GitHub state is checke
 
 ## Recommended Next Step
 
-Review the current rendered site after the June 25 updates:
+Review the current rendered site after the June 25 SEO updates:
 
-1. Confirm `/ai-course` renders the YouTube embed correctly on desktop and mobile.
+1. Visually check one blog detail page on desktop and mobile after the related-post/CTA additions.
 2. Decide `무료 점검` vs `무료 진단`.
 3. Decide whether `/starter-package` should remain public.
 4. Re-run `npm run build` if a deploy/push is planned.

@@ -1,6 +1,13 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { blogPosts } from '../src/data/blogPosts.js';
+import {
+  createBlogPostingJsonLd,
+  createServiceJsonLd,
+  createWebPageJsonLd,
+  organizationJsonLd,
+  websiteJsonLd,
+} from '../src/data/siteSeo.js';
 
 const distDir = path.resolve('dist');
 const indexPath = path.join(distDir, 'index.html');
@@ -19,6 +26,7 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       '호주 홈페이지 제작, 시드니 홈페이지 제작, 호주 구글 지도 등록, 시드니 구글 지도 등록, 비즈니스 홈페이지 제작',
+    jsonLd: [organizationJsonLd, websiteJsonLd],
   },
   {
     route: '/starter-package',
@@ -29,6 +37,16 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       '호주 홈페이지 제작, 시드니 홈페이지 제작, 호주 비즈니스 홈페이지, 구글 지도 등록 포함 홈페이지, 호주 홈페이지 상담',
+    jsonLd: [
+      organizationJsonLd,
+      createServiceJsonLd({
+        name: 'Goodman SEO 기본 홈페이지',
+        description:
+          '호주와 시드니 비즈니스를 위한 기본 홈페이지 제작, 구글 지도/검색 등록, 문의 연결, 초기 유지보수 서비스입니다.',
+        path: '/starter-package',
+        serviceType: 'Website design and local SEO setup',
+      }),
+    ],
   },
   {
     route: '/pricing',
@@ -39,6 +57,16 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       '호주 홈페이지 제작 가격, 시드니 홈페이지 제작 가격, 호주 홈페이지 비용, 비즈니스 홈페이지 가격, 구글 지도 등록 가격',
+    jsonLd: [
+      organizationJsonLd,
+      createServiceJsonLd({
+        name: 'Goodman SEO 서비스 및 가격',
+        description:
+          '무료 점검, 유료 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필 세팅을 포함한 온라인 채널 정리 서비스입니다.',
+        path: '/pricing',
+        serviceType: 'Online channel review, website, SEO, and marketing services',
+      }),
+    ],
   },
   {
     route: '/blog',
@@ -49,6 +77,15 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       '호주 구글 지도 등록 가이드, 시드니 홈페이지 제작 가이드, 비즈니스 홈페이지, 고객 유입 기본기',
+    jsonLd: [
+      createWebPageJsonLd({
+        name: 'Goodman SEO 블로그',
+        description:
+          '호주와 시드니 비즈니스를 위한 구글 비즈니스 프로필, 홈페이지, SNS, 온라인 운영 가이드입니다.',
+        path: '/blog',
+        type: 'Blog',
+      }),
+    ],
   },
   {
     route: '/contact',
@@ -59,6 +96,15 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       '호주 홈페이지 상담, 시드니 홈페이지 상담, 호주 구글 지도 등록 상담, 비즈니스 홈페이지 문의',
+    jsonLd: [
+      createWebPageJsonLd({
+        name: 'Goodman SEO 상담 신청',
+        description:
+          '호주와 시드니 비즈니스를 위한 무료 온라인 진단 및 홈페이지, SEO, SNS 상담 신청 페이지입니다.',
+        path: '/contact',
+        type: 'ContactPage',
+      }),
+    ],
   },
   {
     route: '/ai-business',
@@ -69,6 +115,16 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       '호주 AI 멘토링, 시드니 AI 자동화, 소상공인 AI 자동화, 업무 생산성 AI, 비즈니스 AI 솔루션',
+    jsonLd: [
+      organizationJsonLd,
+      createServiceJsonLd({
+        name: 'Goodman SEO AI 비즈니스 멘토링',
+        description:
+          '소상공인을 위한 AI 실전 멘토링, 업무 자동화, 콘텐츠 및 고객 응대 자동화 서비스입니다.',
+        path: '/ai-business',
+        serviceType: 'AI mentoring and business automation service',
+      }),
+    ],
   },
   {
     route: '/ai-course',
@@ -79,6 +135,14 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       'Codex 강의, AI 실무 자동화, 비개발자 AI 강의, 사장님 AI 강의, 굳팀장, GoodmanSEO AI 교육',
+    jsonLd: [
+      createWebPageJsonLd({
+        name: '사장님을 위한 Codex AI 실무 자동화 강의',
+        description:
+          '비개발자와 소상공인을 위한 GoodmanSEO / 굳팀장 Codex AI 실무 자동화 강의 소개 페이지입니다.',
+        path: '/ai-course',
+      }),
+    ],
   },
   {
     route: '/privacy',
@@ -89,6 +153,13 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       '굿맨SEO 개인정보처리방침, 개인정보처리방침, Goodman SEO privacy policy',
+    jsonLd: [
+      createWebPageJsonLd({
+        name: 'Goodman SEO 개인정보처리방침',
+        description: 'Goodman SEO 개인정보처리방침 안내 페이지입니다.',
+        path: '/privacy',
+      }),
+    ],
   },
   {
     route: '/terms',
@@ -99,6 +170,13 @@ const baseRoutePages = [
     type: 'website',
     keywords:
       '굿맨SEO 이용약관, 서비스 이용약관, Goodman SEO terms of service',
+    jsonLd: [
+      createWebPageJsonLd({
+        name: 'Goodman SEO 이용약관',
+        description: 'Goodman SEO 서비스 이용약관 안내 페이지입니다.',
+        path: '/terms',
+      }),
+    ],
   },
 ];
 
@@ -112,6 +190,7 @@ const blogRoutePages = blogPosts.map((post) => ({
   type: 'article',
   keywords: `굿맨SEO, ${post.category}, 호주 비즈니스, 온라인 기본기, 구글 비즈니스 프로필`,
   lastmod: formatPostDate(post.date),
+  jsonLd: createBlogPostingJsonLd(post),
 }));
 
 const routePages = [
@@ -199,8 +278,29 @@ const applySeo = (html, page) => {
     /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/s,
     `<link rel="canonical" href="${page.canonical}" />`,
   );
+  nextHtml = applyJsonLd(nextHtml, page.jsonLd);
 
   return nextHtml;
+};
+
+const renderJsonLdScript = (jsonLd) => {
+  const serializedJsonLd = JSON.stringify(jsonLd, null, 2).replaceAll('<', '\\u003c');
+  return `<script id="seo-json-ld" type="application/ld+json">${serializedJsonLd}</script>`;
+};
+
+const applyJsonLd = (html, jsonLd) => {
+  if (!jsonLd) {
+    return html;
+  }
+
+  const script = renderJsonLdScript(jsonLd);
+  const jsonLdPattern = /<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/s;
+
+  if (jsonLdPattern.test(html)) {
+    return html.replace(jsonLdPattern, script);
+  }
+
+  return html.replace('</head>', `    ${script}\n  </head>`);
 };
 
 const writeRouteHtml = async (page, baseHtml) => {
