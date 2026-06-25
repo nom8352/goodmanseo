@@ -70,6 +70,16 @@ const baseRoutePages = [
       '호주 AI 멘토링, 시드니 AI 자동화, 소상공인 AI 자동화, 업무 생산성 AI, 비즈니스 AI 솔루션',
   },
   {
+    route: '/ai-course',
+    title: '사장님을 위한 Codex AI 실무 자동화 강의 | Goodman SEO',
+    description:
+      '굳팀장이 진행하는 비개발자용 Codex AI 실무 자동화 강의입니다. 콘텐츠 기획, 문장 작성, 고객 응대, 반복 업무 정리를 사장님 눈높이에 맞춰 배울 수 있습니다.',
+    canonical: 'https://goodmanseo.com/ai-course',
+    type: 'website',
+    keywords:
+      'Codex 강의, AI 실무 자동화, 비개발자 AI 강의, 사장님 AI 강의, 굳팀장, GoodmanSEO AI 교육',
+  },
+  {
     route: '/privacy',
     title: '개인정보처리방침 | Goodman SEO',
     description:

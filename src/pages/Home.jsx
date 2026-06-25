@@ -8,7 +8,9 @@ import {
   Monitor, 
   Cpu, 
   CheckCircle,
-  Sparkles
+  Sparkles,
+  Bot,
+  PlayCircle
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Seo from '../components/Seo';
@@ -380,6 +382,41 @@ const Home = () => {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* AI Course Bridge Section */}
+      <section className="py-12 md:py-20 bg-[var(--bg-dark)] border-b border-[var(--glass-border)]">
+        <div className="container px-6">
+          <motion.div
+            {...fadeUp(0.08)}
+            className="grid gap-6 rounded-[1.5rem] border border-[#cce7eb] bg-white p-6 shadow-[0_10px_34px_rgba(0,91,112,0.04)] md:grid-cols-[0.9fr_1.1fr_auto] md:items-center md:p-8"
+          >
+            <div className="flex items-center gap-4">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#e6f4f6] text-[#007a8c]">
+                <Bot size={25} />
+              </span>
+              <div>
+                <p className="text-sm font-extrabold text-[#007a8c]">굳팀장 AI 실무 강의</p>
+                <h2 className="mt-1 text-[clamp(1.45rem,2.3vw,2rem)] font-black leading-tight tracking-[-0.04em] text-[#0f2230]">
+                  Codex로 콘텐츠와 반복업무를 직접 정리하고 싶다면
+                </h2>
+              </div>
+            </div>
+
+            <p className="text-sm leading-relaxed text-[#4e6170] md:max-w-xl">
+              홈페이지, SNS, 고객문의에 바로 쓰는 AI 활용법을 사장님 눈높이에 맞춰 정리한
+              비개발자용 실무 강의입니다.
+            </p>
+
+            <Link
+              to="/ai-course"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#007a8c]/30 bg-[#f2fafb] px-5 py-3 text-sm font-extrabold text-[#007a8c] transition hover:bg-[#e6f4f6]"
+            >
+              <PlayCircle size={17} />
+              강의 보기
+            </Link>
+          </motion.div>
         </div>
       </section>
 
