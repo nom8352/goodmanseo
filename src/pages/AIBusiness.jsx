@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ChevronDown, Check, Bot, LineChart, Settings, CircleCheckBig } from 'lucide-react';
+import { ArrowRight, ChevronDown, Check, Bot, LineChart, Settings, PlayCircle, BookOpenCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
@@ -336,6 +336,53 @@ const AIBusiness = () => {
             })}
           </div>
         </section>
+
+        {/* ── 온라인 강의 연결 영역 ── */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.6, ease }}
+          className="mt-12 rounded-[1.6rem] border border-[#cce7eb] bg-white p-6 shadow-[0_14px_38px_rgba(0,91,112,0.04)] md:p-8"
+        >
+          <div className="grid gap-6 lg:grid-cols-[0.85fr_1fr_auto] lg:items-center">
+            <div className="flex items-start gap-4">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#e6f4f6] text-[#007a8c]">
+                <BookOpenCheck size={24} />
+              </span>
+              <div>
+                <p className="text-sm font-extrabold text-[#007a8c]">온라인 강의</p>
+                <h2 className="mt-1 text-[clamp(1.45rem,2.3vw,2rem)] font-black leading-tight tracking-[-0.04em] text-[#0f2230]">
+                  먼저 직접 배워보고 싶은 사장님을 위한 Codex 강의
+                </h2>
+              </div>
+            </div>
+
+            <p className="text-sm leading-relaxed text-[#4e6170]">
+              1:1 멘토링 전, 콘텐츠 작성과 반복업무 자동화의 기본 흐름을 직접 익히고 싶다면
+              굳팀장의 비개발자용 AI 실무 강의로 시작할 수 있습니다.
+            </p>
+
+            <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <Link
+                to="/ai-course"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#007a8c] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#006270]"
+              >
+                <PlayCircle size={17} />
+                강의 소개 보기
+              </Link>
+              <a
+                href="https://inf.run/xfxvT"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#007a8c]/30 bg-[#f2fafb] px-5 py-3 text-sm font-extrabold text-[#007a8c] transition hover:bg-[#e6f4f6]"
+              >
+                인프런으로 이동
+                <ArrowRight size={16} />
+              </a>
+            </div>
+          </div>
+        </motion.section>
 
         {/* ── FAQ & 캐릭터 데코레이션 영역 ── */}
         <section className="mt-14 w-full max-w-4xl mx-auto">
