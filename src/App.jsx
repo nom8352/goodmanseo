@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import AICourse from './pages/AICourse';
+import AIReport from './pages/AIReport';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -38,6 +39,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:postId" element={<BlogDetail />} />
             <Route path="/ai-course" element={<AICourse />} />
+            <Route path="/ai-report" element={<AIReport />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

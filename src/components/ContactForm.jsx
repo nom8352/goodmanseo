@@ -24,6 +24,16 @@ const INQUIRY_TYPES = [
     submitLabel: 'AI 진단 신청하기',
   },
   {
+    value: 'ai-report-standard',
+    label: 'AI 사업컨설팅',
+    heading: 'AI 비즈니스 진단 리포트 문의',
+    helper: '전체 분석 또는 재분석 리포트를 신청하고 싶어요.',
+    icon: Zap,
+    messageLabel: '현재 가장 큰 고민 / 목표',
+    messagePlaceholder: '예: 전체 분석 리포트 신청, 재분석 리포트 신청, 매출 정체, 낮은 전환율, 경쟁사 대비 차별화 부족 등',
+    submitLabel: 'AI 사업컨설팅 문의하기',
+  },
+  {
     value: 'general-inquiry',
     label: '일반 문의',
     heading: '일반 문의',
@@ -45,6 +55,11 @@ const initialForm = {
   businessType: '',
   websiteUrl: '',
   googleBusinessUrl: '',
+  productsServices: '',
+  targetCustomers: '',
+  competitors: '',
+  analysisFocus: '',
+  businessStage: '',
   message: '',
   'bot-field': '',
 };
@@ -56,10 +71,25 @@ const encode = (data) =>
     .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join('&');
 
-const buildMailtoLink = ({ company, name, phone, businessType, websiteUrl, googleBusinessUrl, message, inquiryType }) => {
+const buildMailtoLink = ({
+  company,
+  name,
+  phone,
+  businessType,
+  websiteUrl,
+  googleBusinessUrl,
+  productsServices,
+  targetCustomers,
+  competitors,
+  analysisFocus,
+  businessStage,
+  message,
+  inquiryType,
+}) => {
   const inquiryMeta = getInquiryMeta(inquiryType);
+  const isAIReport = inquiryType === 'ai-report-standard';
   const subject = `[Goodman SEO] ${inquiryMeta.label}${company ? ` - ${company}` : ''}`;
-  const body = [
+  const baseBody = [
     `문의 유형: ${inquiryMeta.label}`,
     `업체명: ${company || '-'}`,
     `담당자: ${name || '-'}`,
@@ -67,6 +97,21 @@ const buildMailtoLink = ({ company, name, phone, businessType, websiteUrl, googl
     `업종/지역: ${businessType || '-'}`,
     `홈페이지: ${websiteUrl || '-'}`,
     `Google Business Profile: ${googleBusinessUrl || '-'}`,
+  ];
+
+  const reportBody = isAIReport
+    ? [
+        `주요 제품/서비스: ${productsServices || '-'}`,
+        `주요 타겟 고객: ${targetCustomers || '-'}`,
+        `경쟁사 URL: ${competitors || '-'}`,
+        `분석 중점 영역: ${analysisFocus || '-'}`,
+        `사업 단계: ${businessStage || '-'}`,
+      ]
+    : [];
+
+  const body = [
+    ...baseBody,
+    ...reportBody,
     '',
     `${inquiryMeta.messageLabel}:`,
     message || '-',
@@ -97,6 +142,7 @@ const ContactForm = ({
   }, [initialInquiryType]);
 
   const inquiryMeta = useMemo(() => getInquiryMeta(form.inquiryType), [form.inquiryType]);
+  const isAIReport = form.inquiryType === 'ai-report-standard';
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -241,13 +287,83 @@ const ContactForm = ({
       <div className="grid gap-5 md:grid-cols-2">
         <label className="form-field">
           <span>홈페이지 주소</span>
-          <input name="websiteUrl" type="url" placeholder="https://www.example.com" value={form.websiteUrl} onChange={handleChange} />
+          <input
+            name="websiteUrl"
+            type="url"
+            placeholder="https://www.example.com"
+            value={form.websiteUrl}
+            onChange={handleChange}
+            required={isAIReport}
+          />
         </label>
         <label className="form-field">
           <span>Google Business Profile 링크</span>
           <input name="googleBusinessUrl" type="url" placeholder="https://g.page/yourbusiness" value={form.googleBusinessUrl} onChange={handleChange} />
         </label>
       </div>
+
+      {isAIReport ? (
+        <>
+          <div className="grid gap-5 md:grid-cols-2">
+            <label className="form-field">
+              <span>주요 제품 / 서비스</span>
+              <input
+                name="productsServices"
+                type="text"
+                placeholder="예: 대표 상품, 주력 서비스, 패키지"
+                value={form.productsServices}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label className="form-field">
+              <span>주요 타겟 고객</span>
+              <input
+                name="targetCustomers"
+                type="text"
+                placeholder="예: 30대 여성, 로컬 고객, B2B 담당자"
+                value={form.targetCustomers}
+                onChange={handleChange}
+                required
+              />
+            </label>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            <label className="form-field">
+              <span>경쟁사 URL</span>
+              <input
+                name="competitors"
+                type="text"
+                placeholder="최대 3개까지 입력 가능"
+                value={form.competitors}
+                onChange={handleChange}
+              />
+            </label>
+            <label className="form-field">
+              <span>분석 중점 영역</span>
+              <input
+                name="analysisFocus"
+                type="text"
+                placeholder="예: SEO, 전환율, 콘텐츠, 시장 포지셔닝"
+                value={form.analysisFocus}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+
+          <label className="form-field">
+            <span>사업 단계</span>
+            <input
+              name="businessStage"
+              type="text"
+              placeholder="예: 초기 스타트업, 성장 중, 안정기, 리브랜딩 준비"
+              value={form.businessStage}
+              onChange={handleChange}
+            />
+          </label>
+        </>
+      ) : null}
 
       <label className="form-field">
         <span>{inquiryMeta.messageLabel}</span>

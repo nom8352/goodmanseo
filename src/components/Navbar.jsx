@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: '서비스 및 가격', href: '/pricing' },
     { name: '블로그', href: '/blog' },
     { name: 'AI 실전 멘토링', href: '/ai-business' },
+    { name: 'AI 사업컨설팅', href: '/ai-report' },
     { name: 'AI 강의', href: '/ai-course' },
   ];
 
@@ -31,7 +32,7 @@ const Navbar = () => {
           <span className="site-mark__meta">홈페이지 · 구글 비즈니스 · 기본 SEO</span>
         </Link>
 
-        <div className="hidden items-center gap-10 md:flex">
+        <div className="hidden items-center gap-4 lg:gap-7 md:flex">
           {navLinks.map((link) => (
             <Link key={link.name} to={link.href} className="text-sm font-semibold text-text-muted transition-colors hover:text-[var(--accent-primary)]">
               {link.name}

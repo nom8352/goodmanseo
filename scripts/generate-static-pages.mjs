@@ -145,6 +145,26 @@ const baseRoutePages = [
     ],
   },
   {
+    route: '/ai-report',
+    title: 'AI 비즈니스 컨설팅 리포트 | Goodman SEO',
+    description:
+      'GoodmanSEO AI 리포트는 사업 방향, 타겟 고객, 경쟁 구도, 홈페이지 구조 및 실행 우선순위를 3영업일 내 PDF로 정리합니다.',
+    canonical: canonicalForRoute('/ai-report'),
+    type: 'website',
+    keywords:
+      'AI 비즈니스 컨설팅, 비즈니스 리포트, 사업 진단, 경쟁사 분석, 타겟 고객 분석, 로컬 비즈니스',
+    jsonLd: [
+      organizationJsonLd,
+      createServiceJsonLd({
+        name: 'GoodmanSEO AI 비즈니스 컨설팅 리포트',
+        description:
+          '사업 방향, 타겟 고객, 경쟁 구도, 홈페이지 구조, 실행 우선순위를 정리하는 PDF 비즈니스 컨설팅 리포트 서비스입니다.',
+        path: '/ai-report',
+        serviceType: 'AI business consulting report',
+      }),
+    ],
+  },
+  {
     route: '/privacy',
     title: '개인정보처리방침 | Goodman SEO',
     description:
