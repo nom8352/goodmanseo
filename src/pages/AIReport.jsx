@@ -143,7 +143,7 @@ const AIReport = () => {
               </h1>
 
               <p className="mt-6 max-w-2xl text-base font-medium leading-[1.8] text-[#4e6170]">
-                직감에 의존하는 마케팅은 이제 그만. 타겟 고객 분석, 경쟁사 비교, 프라이싱 전략부터 당장 실행 가능한 액션 플랜까지. 객관적인 데이터 기반의 맞춤형 리포트를 단 3영업일 만에 제공합니다.
+                수백만 원대 컨설팅에 가까운 분석 깊이를, AI 비즈니스 리포트로 제공합니다. 현재 상태와 성장 방향을 3영업일 내 PDF로 정리해드립니다.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
