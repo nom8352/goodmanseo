@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Mail, ArrowUpRight } from 'lucide-react';
+import { Instagram, Facebook, Youtube, Mail, ArrowUpRight } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -39,6 +39,15 @@ const Footer = () => {
                 className="flex h-11 w-11 items-center justify-center rounded-full bg-white border border-[#e6eff1] hover:border-[#1877F2] hover:bg-[#1877F2]/5 text-[#1877F2] transition-all shadow-sm"
               >
                 <Facebook size={18} />
+              </a>
+              <a 
+                href="https://www.youtube.com/watch?v=kuCymkvGF9w"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="GoodmanSEO 유튜브 바로가기"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-white border border-[#e6eff1] hover:border-[#FF0000] hover:bg-[#FF0000]/5 text-[#FF0000] transition-all shadow-sm"
+              >
+                <Youtube size={18} />
               </a>
             </div>
           </div>
