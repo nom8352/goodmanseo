@@ -41,7 +41,7 @@ const Footer = () => {
                 <Facebook size={18} />
               </a>
               <a 
-                href="https://www.youtube.com/watch?v=kuCymkvGF9w"
+                href="https://www.youtube.com/@AI_Goodman"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GoodmanSEO 유튜브 바로가기"
