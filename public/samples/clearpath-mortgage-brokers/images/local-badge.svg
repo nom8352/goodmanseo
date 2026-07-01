@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <!-- Text paths for circular text -->
+    <path id="textPathTop" d="M 16,60 A 44,44 0 0,1 104,60" fill="none" />
+    <path id="textPathBottom" d="M 104,60 A 44,44 0 0,1 16,60" fill="none" />
+  </defs>
+  <!-- Background circle with subtle shadow/border -->
+  <circle cx="60" cy="60" r="54" fill="#fff7ef" stroke="#d8e2dc" stroke-width="1.5" />
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#d8e2dc" stroke-dasharray="3 3" />
+
+  <!-- Outer Circular Text -->
+  <text font-family="'Source Sans 3', sans-serif" font-size="7.5" font-weight="900" fill="#0f2e26" letter-spacing="1">
+    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">LOCAL EXPERTISE</textPath>
+  </text>
+  <text font-family="'Source Sans 3', sans-serif" font-size="7" font-weight="800" fill="#61706a" letter-spacing="0.5">
+    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">BRISBANE &amp; SE QLD</textPath>
+  </text>
+
+  <!-- Center Australia Map and Kangaroo Silhouette -->
+  <!-- Simplified Australia Outline -->
+  <path d="M 44,65 C 42,63 39,61 41,59 C 43,57 46,56 48,54 C 50,52 52,54 54,53 C 56,52 58,49 61,51 C 64,53 67,51 70,52 C 73,53 75,57 74,60 C 73,63 69,65 71,68 C 73,71 72,74 70,75 C 68,76 66,74 64,73 C 62,72 61,70 59,71 C 57,72 56,74 54,73 C 52,72 51,69 49,70 C 47,71 45,69 44,65 Z" fill="#d77a61" opacity="0.35" />
+  <!-- Kangaroo/Symbol -->
+  <path d="M 52,56 C 52,55 53,53 54,53 C 55,53 56,54 56,55 C 56,56 55,57 54,58 C 53,59 53,61 54,62 L 56,63 L 57,61 C 57,60 58,59 59,59 L 61,59 C 62,59 62,60 61,61 L 60,63 C 60,64 61,65 62,65 L 65,65 C 65,66 64,67 63,67 L 59,67 C 57,67 56,66 55,64 L 52,58 Z" fill="#0f2e26" />
+</svg>

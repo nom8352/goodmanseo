@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" role="img" aria-labelledby="title-light">
+  <title id="title-light">Northside Drive Academy</title>
+  <!-- Emblem Background -->
+  <rect x="5" y="5" width="50" height="50" rx="25" fill="#0d9488" />
+  <!-- Stylized Path inside Emblem (Winding road forming 'N') -->
+  <path d="M 22 42 L 22 21 C 22 17, 28 17, 30 21 L 30 39 C 30 43, 36 43, 38 39 L 38 18" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 18 30 L 42 30" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <!-- Logo Text (White for dark backgrounds) -->
+  <text x="68" y="28" font-family="'Nunito Sans', sans-serif" font-size="20" font-weight="800" fill="#ffffff">Northside</text>
+  <text x="68" y="45" font-family="'Nunito Sans', sans-serif" font-size="11" font-weight="700" fill="#2dd4bf" letter-spacing="1.8">DRIVE ACADEMY</text>
+</svg>

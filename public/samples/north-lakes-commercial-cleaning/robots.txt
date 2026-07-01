@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://goodmanseo.com/samples/north-lakes-commercial-cleaning/sitemap.xml

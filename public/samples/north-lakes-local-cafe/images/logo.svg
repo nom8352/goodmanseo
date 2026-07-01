@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 86" role="img" aria-labelledby="title desc">
+  <title id="title">Corner Table Cafe and Catering</title>
+  <desc id="desc">A refined script C mark beside Corner Table Cafe and Catering text.</desc>
+  <path d="M45 15c-16 4-29 20-31 34-2 13 6 22 19 19 12-3 24-16 31-31" fill="none" stroke="#191714" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="M53 28c-9 3-18 11-22 20-3 7-2 13 4 14 8 2 19-6 26-18" fill="none" stroke="#191714" stroke-width="1.6" stroke-linecap="round"/>
+  <text x="82" y="39" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="500" fill="#191714">Corner Table</text>
+  <text x="83" y="58" font-family="Arial, sans-serif" font-size="10" font-weight="700" fill="#191714">CAFE &amp; CATERING</text>
+</svg>

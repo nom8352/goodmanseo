@@ -226,12 +226,49 @@ const services = [
   { icon: Cpu, title: 'AI 업무 지원', desc: '문구와 반복 안내를 가볍게 돕습니다' }
 ];
 
-const steps = [
-  { num: '01', title: '무료 점검 신청', desc: '3분 만에 간단하게 신청할 수 있어요.' },
-  { num: '02', title: '기본 상태 확인', desc: '홈페이지, 구글 비즈니스, 기본 SEO를 확인합니다.' },
-  { num: '03', title: '개선 제안서 전달', desc: '문제점과 해결 방안을 상세히 제안합니다.' },
-  { num: '04', title: '서비스 선택', desc: '필요한 서비스를 선택하여 진행할 수 있어요.' },
-  { num: '05', title: '제작 및 세팅 진행', desc: '필요한 범위에 맞춰 제작과 기본 세팅을 진행합니다.' }
+const sampleSites = [
+  {
+    title: '상업 청소 업체',
+    desc: '사무실, 병원, 매장 청소처럼 신뢰와 견적 문의가 중요한 업종',
+    href: '/samples/north-lakes-commercial-cleaning/',
+    tone: 'bg-[#f4fbfc]',
+  },
+  {
+    title: '브리즈번 청소 업체',
+    desc: '지역 키워드와 서비스 범위를 분명하게 보여주는 청소업 샘플',
+    href: '/samples/brisbane-commercial-cleaning/',
+    tone: 'bg-[#f8fbf5]',
+  },
+  {
+    title: '로컬 카페',
+    desc: '메뉴, 분위기, 방문 정보를 빠르게 전달하는 매장형 비즈니스',
+    href: '/samples/north-lakes-local-cafe/',
+    tone: 'bg-[#fff8ef]',
+  },
+  {
+    title: '필라테스 스튜디오',
+    desc: '수업, 강사, 첫 방문 예약 흐름이 중요한 웰니스 업종',
+    href: '/samples/frame-pilates-studio/',
+    tone: 'bg-[#f7f5ff]',
+  },
+  {
+    title: '모기지 브로커',
+    desc: '전문성, 상담 절차, 신뢰 요소를 차분하게 정리한 서비스업',
+    href: '/samples/clearpath-mortgage-brokers/',
+    tone: 'bg-[#f3f8ff]',
+  },
+  {
+    title: '방역 서비스',
+    desc: '문제 상황, 서비스 범위, 긴급 문의를 명확히 보여주는 업종',
+    href: '/samples/moreton-bay-pest-control/',
+    tone: 'bg-[#f5fbf2]',
+  },
+  {
+    title: '운전 학원',
+    desc: '강습 종류, 지역, 예약 문의를 쉽게 연결하는 교육 서비스',
+    href: '/samples/northside-drive-academy/',
+    tone: 'bg-[#fff9e8]',
+  },
 ];
 
 const Home = () => {
@@ -421,46 +458,59 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. Process Section (5단계 진행과정) */}
+      {/* 4. Sample Site Section */}
       <section className="py-14 md:py-24 lg:py-28 bg-[var(--bg-dark)]">
-        <div className="container px-6 text-center">
-          <div className="max-w-3xl mx-auto mb-12 md:mb-20">
-            <span className="font-serif italic text-[var(--accent-secondary)] text-lg">How We Work</span>
-            <h2 className="mt-3 font-sans text-[clamp(2.0rem,3.2vw,3.4rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-main)]">
-              진행 과정
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
-              체계적인 프로세스로 확실한 결과를 만들어냅니다.
+        <div className="container px-6">
+          <div className="mb-10 grid gap-6 md:mb-14 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+            <div>
+              <span className="font-serif italic text-[var(--accent-secondary)] text-lg">Sample Websites</span>
+              <h2 className="mt-3 font-sans text-[clamp(2.0rem,3.2vw,3.4rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-main)]">
+                업종별 샘플 사이트
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-relaxed text-[var(--text-muted)] md:justify-self-end">
+              청소, 카페, 스튜디오, 전문 서비스처럼 호주 로컬 비즈니스에 맞춘 홈페이지 예시입니다.
+              내 업종에 가까운 형태를 먼저 확인해보세요.
             </p>
           </div>
-          
-          <div className="relative grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-2 md:gap-10 lg:grid-cols-5">
-            {/* Gradient connecting line for desktop screen */}
-            <div className="absolute top-[40px] left-[5%] right-[5%] hidden h-[1px] bg-gradient-to-r from-[rgba(0,91,112,0.02)] via-[rgba(0,91,112,0.15)] to-[rgba(0,91,112,0.02)] lg:block z-0" />
-            
-            {steps.map((step, i) => (
-              <motion.div
-                key={step.num}
-                {...fadeUp(i * 0.08, 24)}
-                className="relative z-10 last:col-span-2 lg:last:col-span-1 flex flex-col"
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {sampleSites.map((site, i) => (
+              <motion.a
+                key={site.href}
+                href={site.href}
+                target="_blank"
+                rel="noreferrer"
+                {...fadeUp(i * 0.05, 22)}
+                className={`group flex min-h-[190px] flex-col justify-between rounded-2xl border border-[var(--glass-border)] ${site.tone} p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/35 hover:bg-white`}
               >
-                {/* Huge Serif Italic Number */}
-                <div className="font-serif italic text-4xl md:text-6xl lg:text-7xl text-[var(--accent-primary)]/10 leading-none select-none mb-3 md:mb-4">
-                  {step.num}
+                <div>
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[var(--accent-primary)] shadow-sm">
+                    <Monitor size={19} />
+                  </div>
+                  <h3 className="text-xl font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
+                    {site.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                    {site.desc}
+                  </p>
                 </div>
-                <h3 className="text-lg font-bold tracking-[-0.03em] text-[var(--text-main)]">{step.title}</h3>
-                <p className="mt-3 text-xs leading-relaxed text-[var(--text-muted)]">{step.desc}</p>
-              </motion.div>
+
+                <span className="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-[var(--accent-primary)]">
+                  샘플 보기
+                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                </span>
+              </motion.a>
             ))}
           </div>
-          
-          <div className="mt-16 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Link to="/contact" className="primary-button text-base px-6 py-3 font-semibold">
-              지금 무료 점검 신청하기
-              <ArrowRight size={18} />
-            </Link>
-            <Link to="/pricing" className="secondary-button text-base px-6 py-3 font-semibold">
-              요금제 알아보기
+
+          <div className="mt-12 flex flex-col items-start justify-between gap-4 rounded-2xl border border-[#cce7eb] bg-white p-5 sm:flex-row sm:items-center md:p-6">
+            <p className="text-sm leading-relaxed text-[#4e6170]">
+              마음에 드는 샘플이 있으면 무료 점검 신청 때 업종과 원하는 방향을 함께 남겨주세요.
+            </p>
+            <Link to="/contact" className="primary-button text-sm px-5 py-3 font-semibold">
+              무료 점검 신청
+              <ArrowRight size={17} />
             </Link>
           </div>
         </div>

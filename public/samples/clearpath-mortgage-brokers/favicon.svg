@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-labelledby="title">
+  <title id="title">ClearPath Mortgage Brokers</title>
+  <rect width="220" height="64" rx="14" fill="#f7faf7"/>
+  <circle cx="32" cy="32" r="18" fill="#426b58"/>
+  <path d="M23 34c7-12 16-12 24 0M28 40h29" fill="none" stroke="#9ecae1" stroke-width="5" stroke-linecap="round"/>
+  <text x="62" y="29" font-family="Arial, sans-serif" font-size="16" font-weight="800" fill="#24302b">ClearPath</text>
+  <text x="62" y="47" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#61706a">MORTGAGE BROKER</text>
+</svg>

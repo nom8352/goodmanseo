@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://goodmanseo.com/samples/frame-pilates-studio/sitemap.xml

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title">
+  <title id="title">Classes</title>
+  <rect width="900" height="620" fill="#f1ece8"/>
+  <circle cx="180" cy="155" r="118" fill="#7c9b7e" opacity=".28"/>
+  <rect x="130" y="240" width="640" height="210" rx="28" fill="#fbfbf8" stroke="#ddd6d0" stroke-width="6"/>
+  <path d="M190 365c80-110 190-110 270 0s190 110 270 0" fill="none" stroke="#303536" stroke-width="24" stroke-linecap="round"/>
+  <path d="M210 450h420" stroke="#d98572" stroke-width="18" stroke-linecap="round"/>
+  <text x="140" y="560" font-family="Arial, sans-serif" font-size="44" font-weight="800" fill="#252525">Classes</text>
+</svg>

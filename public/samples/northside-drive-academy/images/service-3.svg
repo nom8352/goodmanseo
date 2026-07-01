@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title">
+  <title id="title">Test Day Package</title>
+  <rect width="900" height="620" fill="#ffffff"/>
+  <circle cx="268" cy="179" r="118" fill="#2f9e7e" opacity=".28"/>
+  <rect x="130" y="240" width="640" height="210" rx="28" fill="#f6fbff" stroke="#d8e7f3" stroke-width="6"/>
+  <path d="M190 365c80-110 190-110 270 0s190 110 270 0" fill="none" stroke="#17466e" stroke-width="24" stroke-linecap="round"/>
+  <path d="M210 450h420" stroke="#f6c945" stroke-width="18" stroke-linecap="round"/>
+  <text x="140" y="560" font-family="Arial, sans-serif" font-size="44" font-weight="800" fill="#102033">Test Day Package</text>
+</svg>

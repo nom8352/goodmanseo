@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 74" role="img" aria-labelledby="title desc">
+  <title id="title">North Lakes Commercial Cleaning</title>
+  <desc id="desc">A blue lake and mountain mark with the North Lakes Commercial Cleaning wordmark.</desc>
+  <defs>
+    <linearGradient id="lakeMark" x1="26" y1="12" x2="86" y2="55" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4f9bdd"/>
+      <stop offset="1" stop-color="#073b73"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <path d="M12 54c16-2 26-9 36-20 12-13 21-18 32-18 7 0 13 2 20 7-9-2-18 0-27 7-11 8-20 21-35 26-9 3-17 3-26-2Z" fill="url(#lakeMark)"/>
+    <path d="M26 38 50 15l18 17-12-3-11 9-10-4-9 4Z" fill="#2e8bd2"/>
+    <path d="M8 61c17-6 33-6 49 0 15 5 29 5 43-1-14 12-30 15-48 8-13-5-28-5-44 1v-8Z" fill="#073b73"/>
+    <text x="116" y="32" fill="#073b73" font-family="Manrope, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="-.7">North Lakes</text>
+    <text x="118" y="52" fill="#2f77c6" font-family="Manrope, Arial, sans-serif" font-size="10" font-weight="800" letter-spacing="1.25">COMMERCIAL CLEANING</text>
+  </g>
+</svg>
