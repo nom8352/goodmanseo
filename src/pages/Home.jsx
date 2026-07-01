@@ -229,45 +229,38 @@ const services = [
 const sampleSites = [
   {
     title: '상업 청소 업체',
-    desc: '사무실, 병원, 매장 청소처럼 신뢰와 견적 문의가 중요한 업종',
     href: '/samples/north-lakes-commercial-cleaning/',
-    tone: 'bg-[#f4fbfc]',
+    image: '/samples/previews/north-lakes-commercial-cleaning.jpg',
   },
   {
     title: '브리즈번 청소 업체',
-    desc: '지역 키워드와 서비스 범위를 분명하게 보여주는 청소업 샘플',
     href: '/samples/brisbane-commercial-cleaning/',
-    tone: 'bg-[#f8fbf5]',
+    image: '/samples/previews/brisbane-commercial-cleaning.jpg',
   },
   {
     title: '로컬 카페',
-    desc: '메뉴, 분위기, 방문 정보를 빠르게 전달하는 매장형 비즈니스',
     href: '/samples/north-lakes-local-cafe/',
-    tone: 'bg-[#fff8ef]',
+    image: '/samples/previews/north-lakes-local-cafe.jpg',
   },
   {
     title: '필라테스 스튜디오',
-    desc: '수업, 강사, 첫 방문 예약 흐름이 중요한 웰니스 업종',
     href: '/samples/frame-pilates-studio/',
-    tone: 'bg-[#f7f5ff]',
+    image: '/samples/previews/frame-pilates-studio.jpg',
   },
   {
     title: '모기지 브로커',
-    desc: '전문성, 상담 절차, 신뢰 요소를 차분하게 정리한 서비스업',
     href: '/samples/clearpath-mortgage-brokers/',
-    tone: 'bg-[#f3f8ff]',
+    image: '/samples/previews/clearpath-mortgage-brokers.jpg',
   },
   {
     title: '방역 서비스',
-    desc: '문제 상황, 서비스 범위, 긴급 문의를 명확히 보여주는 업종',
     href: '/samples/moreton-bay-pest-control/',
-    tone: 'bg-[#f5fbf2]',
+    image: '/samples/previews/moreton-bay-pest-control.jpg',
   },
   {
     title: '운전 학원',
-    desc: '강습 종류, 지역, 예약 문의를 쉽게 연결하는 교육 서비스',
     href: '/samples/northside-drive-academy/',
-    tone: 'bg-[#fff9e8]',
+    image: '/samples/previews/northside-drive-academy.jpg',
   },
 ];
 
@@ -459,7 +452,7 @@ const Home = () => {
       </section>
 
       {/* 4. Sample Site Section */}
-      <section className="py-14 md:py-24 lg:py-28 bg-[var(--bg-dark)]">
+      <section id="samples" className="py-14 md:py-24 lg:py-28 bg-[var(--bg-dark)]">
         <div className="container px-6">
           <div className="mb-10 grid gap-6 md:mb-14 md:grid-cols-[0.9fr_1.1fr] md:items-end">
             <div>
@@ -474,32 +467,64 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {sampleSites.map((site, i) => (
+          <div className="grid gap-5 lg:grid-cols-3">
+            {sampleSites.slice(0, 3).map((site, i) => (
               <motion.a
                 key={site.href}
                 href={site.href}
                 target="_blank"
                 rel="noreferrer"
                 {...fadeUp(i * 0.05, 22)}
-                className={`group flex min-h-[190px] flex-col justify-between rounded-2xl border border-[var(--glass-border)] ${site.tone} p-5 transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/35 hover:bg-white`}
+                className="group overflow-hidden rounded-2xl border border-[var(--glass-border)] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/35"
               >
-                <div>
-                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-white text-[var(--accent-primary)] shadow-sm">
-                    <Monitor size={19} />
-                  </div>
-                  <h3 className="text-xl font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
+                <div className="aspect-[16/10] overflow-hidden bg-[#e6f4f6]">
+                  <img
+                    src={site.image}
+                    alt={`${site.title} 샘플 홈페이지 미리보기`}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex items-center justify-between gap-3 p-4">
+                  <h3 className="text-lg font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
                     {site.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
-                    {site.desc}
-                  </p>
+                  <span className="inline-flex shrink-0 items-center gap-1 text-sm font-extrabold text-[var(--accent-primary)]">
+                    보기
+                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                  </span>
                 </div>
+              </motion.a>
+            ))}
+          </div>
 
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-[var(--accent-primary)]">
-                  샘플 보기
-                  <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                </span>
+          <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {sampleSites.slice(3).map((site, i) => (
+              <motion.a
+                key={site.href}
+                href={site.href}
+                target="_blank"
+                rel="noreferrer"
+                {...fadeUp((i + 3) * 0.05, 22)}
+                className="group overflow-hidden rounded-2xl border border-[var(--glass-border)] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/35"
+              >
+                <div className="aspect-[16/10] overflow-hidden bg-[#e6f4f6]">
+                  <img
+                    src={site.image}
+                    alt={`${site.title} 샘플 홈페이지 미리보기`}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="flex items-center justify-between gap-3 p-4">
+                  <h3 className="text-base font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
+                    {site.title}
+                  </h3>
+                  <span className="inline-flex shrink-0 items-center gap-1 text-sm font-extrabold text-[var(--accent-primary)]">
+                    보기
+                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                  </span>
+                </div>
               </motion.a>
             ))}
           </div>
