@@ -467,7 +467,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-3">
+          <div className="mx-auto grid max-w-[1040px] gap-4 lg:grid-cols-3">
             {sampleSites.slice(0, 3).map((site, i) => (
               <motion.a
                 key={site.href}
@@ -475,9 +475,9 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
                 {...fadeUp(i * 0.05, 22)}
-                className="group overflow-hidden rounded-2xl border border-[var(--glass-border)] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/35"
+                className="group overflow-hidden rounded-2xl border border-[#bfd9df] bg-white p-2 shadow-[0_10px_26px_rgba(0,59,72,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/40 hover:shadow-[0_16px_34px_rgba(0,59,72,0.1)]"
               >
-                <div className="aspect-[16/10] overflow-hidden bg-[#e6f4f6]">
+                <div className="aspect-[16/9] overflow-hidden rounded-xl border border-[#d8e7eb] bg-[#e6f4f6]">
                   <img
                     src={site.image}
                     alt={`${site.title} 샘플 홈페이지 미리보기`}
@@ -485,8 +485,8 @@ const Home = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="flex items-center justify-between gap-3 p-4">
-                  <h3 className="text-lg font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
+                <div className="flex items-center justify-between gap-3 px-2 py-3">
+                  <h3 className="text-base font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
                     {site.title}
                   </h3>
                   <span className="inline-flex shrink-0 items-center gap-1 text-sm font-extrabold text-[var(--accent-primary)]">
@@ -498,7 +498,7 @@ const Home = () => {
             ))}
           </div>
 
-          <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {sampleSites.slice(3).map((site, i) => (
               <motion.a
                 key={site.href}
@@ -506,9 +506,9 @@ const Home = () => {
                 target="_blank"
                 rel="noreferrer"
                 {...fadeUp((i + 3) * 0.05, 22)}
-                className="group overflow-hidden rounded-2xl border border-[var(--glass-border)] bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/35"
+                className="group overflow-hidden rounded-2xl border border-[#bfd9df] bg-white p-2 shadow-[0_10px_26px_rgba(0,59,72,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/40 hover:shadow-[0_16px_34px_rgba(0,59,72,0.1)]"
               >
-                <div className="aspect-[16/10] overflow-hidden bg-[#e6f4f6]">
+                <div className="aspect-[16/9] overflow-hidden rounded-xl border border-[#d8e7eb] bg-[#e6f4f6]">
                   <img
                     src={site.image}
                     alt={`${site.title} 샘플 홈페이지 미리보기`}
@@ -516,7 +516,7 @@ const Home = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="flex items-center justify-between gap-3 p-4">
+                <div className="flex items-center justify-between gap-3 px-2 py-3">
                   <h3 className="text-base font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
                     {site.title}
                   </h3>

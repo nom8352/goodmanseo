@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-06-25
+Last updated: 2026-07-02
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- `docs/sample-sites-homepage-2026-07-02.md`: records the July 2 homepage sample-site section, static sample URLs, screenshot previews, 3+4 card layout, checks, and pushed commit hashes.
 - `docs/2026-06-25-work-log.md`: records the June 25 blog expansion, generated blog images, AI course landing page, homepage/menu/AI mentoring links, YouTube embed, build checks, and pushed commit hashes.
 - `docs/seo-audit-2026-06-25.md`: records the June 25 full-site SEO audit, priority fixes, and verification limits.
 - `docs/seo-keyword-map.md`: maps route intent, target keywords, CTAs, and internal linking direction.
