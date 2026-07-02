@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-labelledby="title">
+  <title id="title">Outdoor patio tiles</title>
+  <rect width="900" height="650" fill="#dde5dc"/>
+  <path d="M0 0h900v260H0Z" fill="#9eac9c"/>
+  <path d="M0 260h900v390H0Z" fill="#a99072"/>
+  <g stroke="#f7f2ea" stroke-width="5" opacity=".78">
+    <path d="M0 330h900M0 430h900M0 530h900M0 630h900"/>
+    <path d="M90 260 0 650M245 260 118 650M400 260 286 650M555 260 454 650M710 260 622 650M865 260 790 650"/>
+  </g>
+  <rect x="0" y="214" width="900" height="46" fill="#1f3d36"/>
+  <circle cx="162" cy="138" r="64" fill="#d9b46c"/>
+  <path d="M492 88c72-44 162-44 238 0v126H492Z" fill="#1f3d36" opacity=".9"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-labelledby="title">
+  <title id="title">Tile project gallery collage</title>
+  <rect width="900" height="650" fill="#1f3d36"/>
+  <rect x="54" y="58" width="356" height="246" fill="#f7f2ea"/>
+  <rect x="490" y="58" width="356" height="246" fill="#d9b46c"/>
+  <rect x="54" y="354" width="246" height="238" fill="#c8b8a5"/>
+  <rect x="350" y="354" width="496" height="238" fill="#f7f2ea"/>
+  <g stroke="#1f3d36" stroke-width="5" opacity=".45">
+    <path d="M54 130h356M54 204h356M490 130h356M490 204h356M350 432h496M350 510h496"/>
+    <path d="M144 58v246M244 58v246M344 58v246M580 58v246M680 58v246M780 58v246M450 354v238M550 354v238M650 354v238M750 354v238"/>
+  </g>
+</svg>

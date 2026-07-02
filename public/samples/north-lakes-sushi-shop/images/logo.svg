@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 84" role="img" aria-labelledby="title">
+  <title id="title">Sora Sushi Bar</title>
+  <rect x="2" y="12" width="58" height="58" rx="18" fill="#1f3b2d"/>
+  <circle cx="31" cy="41" r="20" fill="#f7efe0"/>
+  <circle cx="31" cy="41" r="9" fill="#d94f3d"/>
+  <path d="M78 24c13-12 43-12 56 0l-10 12c-9-7-25-7-34 0-7 5-6 13 3 16l21 6c20 6 25 27 8 40-16 12-48 9-62-7l11-13c11 11 31 13 41 5 7-5 5-13-4-16l-21-6c-21-6-25-25-9-37Z" fill="#1f1f1c"/>
+  <text x="154" y="41" fill="#1f1f1c" font-family="Georgia, serif" font-size="30" font-weight="700" letter-spacing="0">Sora Sushi</text>
+  <text x="156" y="65" fill="#a33d31" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="3">NORTH LAKES BAR</text>
+</svg>

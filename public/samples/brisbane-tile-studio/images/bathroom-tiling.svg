@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-labelledby="title">
+  <title id="title">Bathroom wall and floor tiling</title>
+  <rect width="900" height="650" fill="#eee6db"/>
+  <g stroke="#b8afa5" stroke-width="5">
+    <path d="M0 80h620M0 180h620M0 280h620M0 380h620M0 480h620M0 580h620"/>
+    <path d="M95 0v650M205 0v650M315 0v650M425 0v650M535 0v650"/>
+  </g>
+  <rect x="610" y="0" width="290" height="650" fill="#1f3d36"/>
+  <path d="M668 118h128v380H668Z" fill="#f7f2ea"/>
+  <path d="M650 518h168" stroke="#d9b46c" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="748" cy="152" r="34" fill="#d9b46c"/>
+</svg>

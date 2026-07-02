@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 382 82" role="img" aria-labelledby="title">
+  <title id="title">Harbour &amp; Home Realty</title>
+  <path d="M13 21 35 6l22 15v45H42V45H28v21H13V21Z" fill="#e45f43"/>
+  <path d="M24 28h22v11H24z" fill="#fffdf9"/>
+  <text x="75" y="35" fill="#151f1d" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="600">HARBOUR &amp; HOME</text>
+  <text x="77" y="58" fill="#5f6b68" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="3">REALTY</text>
+</svg>

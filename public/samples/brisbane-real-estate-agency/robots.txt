@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://goodmanseo.com/samples/brisbane-real-estate-agency/sitemap.xml

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-labelledby="title">
+  <title id="title">Large format floor tiles</title>
+  <rect width="900" height="650" fill="#f7f2ea"/>
+  <path d="M0 110h900M0 220h900M0 330h900M0 440h900M0 550h900" stroke="#b8afa5" stroke-width="6"/>
+  <path d="M88 0 0 188M236 0 84 650M386 0 238 650M536 0 388 650M686 0 538 650M836 0 688 650" stroke="#b8afa5" stroke-width="6"/>
+  <path d="M92 136c154-60 270 26 422-28M122 440c180-76 334 46 538-42" stroke="#d9b46c" stroke-width="9" opacity=".48" fill="none"/>
+  <rect x="594" y="76" width="230" height="112" rx="12" fill="#1f3d36"/>
+  <text x="628" y="124" fill="#f7f2ea" font-family="Arial, sans-serif" font-size="24" font-weight="700">Level floor set-out</text>
+  <text x="628" y="158" fill="#d9b46c" font-family="Arial, sans-serif" font-size="18">Porcelain, ceramic, stone-look</text>
+</svg>

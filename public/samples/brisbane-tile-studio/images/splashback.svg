@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-labelledby="title">
+  <title id="title">Kitchen splashback tiles</title>
+  <rect width="900" height="650" fill="#1f3d36"/>
+  <rect x="0" y="100" width="900" height="286" fill="#f7f2ea"/>
+  <g stroke="#c7bdb1" stroke-width="4">
+    <path d="M0 156h900M0 212h900M0 268h900M0 324h900M0 380h900"/>
+    <path d="M72 100v286M212 100v286M352 100v286M492 100v286M632 100v286M772 100v286"/>
+  </g>
+  <rect x="0" y="386" width="900" height="264" fill="#d9b46c"/>
+  <rect x="92" y="438" width="262" height="34" rx="17" fill="#f7f2ea"/>
+  <rect x="590" y="416" width="182" height="170" rx="18" fill="#f7f2ea"/>
+  <circle cx="681" cy="492" r="48" fill="#1f3d36"/>
+</svg>

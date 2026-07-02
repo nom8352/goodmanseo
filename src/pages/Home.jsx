@@ -243,9 +243,29 @@ const sampleSites = [
     image: '/samples/previews/north-lakes-local-cafe.jpg',
   },
   {
+    title: '스시 매장',
+    href: '/samples/north-lakes-sushi-shop/',
+    image: '/samples/previews/north-lakes-sushi-shop.jpg',
+  },
+  {
+    title: '이벤트 케이터링',
+    href: '/samples/brisbane-event-catering/',
+    image: '/samples/previews/brisbane-event-catering.jpg',
+  },
+  {
     title: '필라테스 스튜디오',
     href: '/samples/frame-pilates-studio/',
     image: '/samples/previews/frame-pilates-studio.jpg',
+  },
+  {
+    title: '부동산 중개',
+    href: '/samples/brisbane-real-estate-agency/',
+    image: '/samples/previews/brisbane-real-estate-agency.jpg',
+  },
+  {
+    title: '타일 시공',
+    href: '/samples/brisbane-tile-studio/',
+    image: '/samples/previews/brisbane-tile-studio.jpg',
   },
   {
     title: '모기지 브로커',
@@ -261,6 +281,11 @@ const sampleSites = [
     title: '운전 학원',
     href: '/samples/northside-drive-academy/',
     image: '/samples/previews/northside-drive-academy.jpg',
+  },
+  {
+    title: '휴대폰 수리',
+    href: '/samples/northside-phone-repairs/',
+    image: '/samples/previews/northside-phone-repairs.jpg',
   },
 ];
 
@@ -462,50 +487,19 @@ const Home = () => {
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-relaxed text-[var(--text-muted)] md:justify-self-end">
-              청소, 카페, 스튜디오, 전문 서비스처럼 호주 로컬 비즈니스에 맞춘 홈페이지 예시입니다.
+              청소, 음식점, 스튜디오, 수리, 전문 서비스처럼 호주 로컬 비즈니스에 맞춘 홈페이지 예시입니다.
               내 업종에 가까운 형태를 먼저 확인해보세요.
             </p>
           </div>
 
-          <div className="mx-auto grid max-w-[1040px] gap-4 lg:grid-cols-3">
-            {sampleSites.slice(0, 3).map((site, i) => (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {sampleSites.map((site, i) => (
               <motion.a
                 key={site.href}
                 href={site.href}
                 target="_blank"
                 rel="noreferrer"
                 {...fadeUp(i * 0.05, 22)}
-                className="group overflow-hidden rounded-2xl border border-[#bfd9df] bg-white p-2 shadow-[0_10px_26px_rgba(0,59,72,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/40 hover:shadow-[0_16px_34px_rgba(0,59,72,0.1)]"
-              >
-                <div className="aspect-[16/9] overflow-hidden rounded-xl border border-[#d8e7eb] bg-[#e6f4f6]">
-                  <img
-                    src={site.image}
-                    alt={`${site.title} 샘플 홈페이지 미리보기`}
-                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex items-center justify-between gap-3 px-2 py-3">
-                  <h3 className="text-base font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
-                    {site.title}
-                  </h3>
-                  <span className="inline-flex shrink-0 items-center gap-1 text-sm font-extrabold text-[var(--accent-primary)]">
-                    보기
-                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </motion.a>
-            ))}
-          </div>
-
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {sampleSites.slice(3).map((site, i) => (
-              <motion.a
-                key={site.href}
-                href={site.href}
-                target="_blank"
-                rel="noreferrer"
-                {...fadeUp((i + 3) * 0.05, 22)}
                 className="group overflow-hidden rounded-2xl border border-[#bfd9df] bg-white p-2 shadow-[0_10px_26px_rgba(0,59,72,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/40 hover:shadow-[0_16px_34px_rgba(0,59,72,0.1)]"
               >
                 <div className="aspect-[16/9] overflow-hidden rounded-xl border border-[#d8e7eb] bg-[#e6f4f6]">

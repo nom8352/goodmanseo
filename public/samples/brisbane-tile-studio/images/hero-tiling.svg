@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Large format tiles being set in a bright bathroom renovation</title>
+  <desc id="desc">A stylised but detailed tile installation scene with stone-look wall tiles, a brass shower rail, a workbench and tile spacers.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f5efe6"/>
+      <stop offset="1" stop-color="#d8d0c5"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#cfc4b7"/>
+      <stop offset="1" stop-color="#8f867b"/>
+    </linearGradient>
+    <pattern id="tile" width="150" height="150" patternUnits="userSpaceOnUse">
+      <rect width="150" height="150" fill="url(#wall)"/>
+      <path d="M0 0h150v150H0Z" fill="none" stroke="#b7ada2" stroke-width="4"/>
+      <path d="M28 54c34-24 67-13 99-36M15 106c36-22 74-13 126-45" stroke="#fffaf2" stroke-opacity=".34" stroke-width="4" fill="none"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="820" fill="#efe7dc"/>
+  <rect x="0" y="0" width="860" height="610" fill="url(#tile)"/>
+  <path d="M860 0h340v820H720l140-210Z" fill="#1f3d36"/>
+  <path d="M0 610h860l-138 210H0Z" fill="url(#floor)"/>
+  <g stroke="#776f66" stroke-width="4" opacity=".72">
+    <path d="M30 642h792M0 710h776M0 778h732"/>
+    <path d="M96 610 0 760M272 610 154 820M448 610 314 820M624 610 466 820M800 610 620 820"/>
+  </g>
+  <rect x="126" y="96" width="410" height="340" fill="#f7f2ea" stroke="#c1b6aa" stroke-width="8"/>
+  <path d="M158 132h346M158 198h346M158 264h346M158 330h346M158 396h346M226 100v332M336 100v332M446 100v332" stroke="#c1b6aa" stroke-width="5"/>
+  <circle cx="690" cy="148" r="46" fill="#d9b46c"/>
+  <path d="M690 148v220c0 38-31 70-70 70h-66" fill="none" stroke="#d9b46c" stroke-width="20" stroke-linecap="round"/>
+  <path d="M554 438h-98" stroke="#d9b46c" stroke-width="24" stroke-linecap="round"/>
+  <g transform="translate(250 520)">
+    <rect x="0" y="0" width="250" height="58" rx="10" fill="#1f3d36"/>
+    <rect x="22" y="-56" width="72" height="56" rx="6" fill="#d9b46c"/>
+    <rect x="116" y="-32" width="102" height="32" rx="6" fill="#f7f2ea"/>
+    <circle cx="54" cy="76" r="16" fill="#51483f"/>
+    <circle cx="196" cy="76" r="16" fill="#51483f"/>
+  </g>
+  <g transform="translate(720 144)" fill="#f7f2ea">
+    <rect x="0" y="0" width="300" height="82" rx="12" opacity=".12"/>
+    <text x="28" y="36" font-family="Arial, sans-serif" font-size="18" font-weight="700">Bathroom tile set-out</text>
+    <text x="28" y="64" font-family="Arial, sans-serif" font-size="14" fill="#d9b46c">Layout, waterproofing, grout finish</text>
+  </g>
+</svg>
