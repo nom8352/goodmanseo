@@ -14,7 +14,7 @@ import {
   Sparkles,
   Workflow,
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
 const courseUrl = 'https://inf.run/xfxvT';
@@ -84,7 +84,7 @@ const faqs = [
 
 const AICourse = () => {
   return (
-    <div className="min-h-screen bg-[#f7fafb] pt-20 text-[#0f2230]">
+    <div className="min-h-screen bg-[#f7f2ec] pt-20 text-[#102133]">
       <Seo
         title="사장님을 위한 Codex AI 실무 자동화 강의"
         description="굳팀장이 진행하는 비개발자용 Codex AI 실무 자동화 강의입니다. 콘텐츠 기획, 문장 작성, 고객 응대, 반복 업무 정리를 사장님 눈높이에 맞춰 배울 수 있습니다."
@@ -92,24 +92,24 @@ const AICourse = () => {
         keywords={['Codex 강의', 'AI 실무 자동화', '비개발자 AI 강의', '사장님 AI 강의', '굳팀장', 'GoodmanSEO AI 교육']}
       />
 
-      <section className="relative max-w-none overflow-hidden bg-[#080d12] px-6 py-14 text-white md:py-20">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_72%_18%,rgba(0,122,140,0.34),transparent_32%),radial-gradient(circle_at_20%_100%,rgba(255,130,76,0.16),transparent_32%)]" />
+      <section className="relative max-w-none overflow-hidden bg-[#102133] px-6 py-14 text-white md:py-20">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_72%_18%,rgba(16,33,51,0.34),transparent_32%),radial-gradient(circle_at_20%_100%,rgba(255,130,76,0.16),transparent_32%)]" />
         <div className="container relative z-10">
           <div className="grid gap-9 lg:grid-cols-[1fr_360px] lg:items-center">
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, ease }}
               className="max-w-3xl"
             >
               <div className="flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-[#16c784] px-3 py-1 text-xs font-black text-[#04110a]">
+                <span className="rounded-[0.25rem] bg-[#d8c8af] px-3 py-1 text-xs font-black text-[#102133]">
                   온라인 강의
                 </span>
-                <span className="rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-bold text-white/78">
+                <span className="rounded-[0.25rem] border border-white/15 bg-white/8 px-3 py-1 text-xs font-bold text-white/78">
                   GoodmanSEO 굳팀장
                 </span>
-                <span className="rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-bold text-white/78">
+                <span className="rounded-[0.25rem] border border-white/15 bg-white/8 px-3 py-1 text-xs font-bold text-white/78">
                   비개발자용
                 </span>
               </div>
@@ -119,7 +119,7 @@ const AICourse = () => {
                 <br />
                 콘텐츠 AI 실무 자동화:
                 <br />
-                <span className="text-[#8ad7ff]">사장님이 직접 쓰는 Codex 입문</span>
+                <span className="text-[#d8c8af]">사장님이 직접 쓰는 Codex 입문</span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-base leading-[1.75] text-white/74">
@@ -130,18 +130,18 @@ const AICourse = () => {
               <div className="mt-7 grid gap-2.5">
                 {highlights.map((item) => (
                   <div key={item} className="flex items-start gap-2.5 text-sm font-semibold text-white/84">
-                    <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[#16c784]" />
+                    <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-[#d8c8af]" />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </Motion.div>
 
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, scale: 0.96, y: 18 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.68, delay: 0.1, ease }}
-              className="rounded-2xl border border-white/12 bg-white/8 p-4 shadow-[0_24px_70px_rgba(0,0,0,0.3)] backdrop-blur"
+              className="rounded-[0.7rem] border border-white/12 bg-white/8 p-4 shadow-[0_24px_70px_rgba(0,0,0,0.3)] backdrop-blur"
             >
               <div className="rounded-xl bg-[#0d1520] p-5">
                 <div className="overflow-hidden rounded-lg bg-[#111827]">
@@ -157,18 +157,18 @@ const AICourse = () => {
 
                 <div className="mt-4 grid grid-cols-2 gap-3 text-sm">
                   <div className="rounded-lg bg-white/8 p-3">
-                    <Clock3 size={17} className="text-[#8ad7ff]" />
+                    <Clock3 size={17} className="text-[#d8c8af]" />
                     <p className="mt-2 font-black text-white">실무형</p>
                     <p className="mt-1 text-xs leading-relaxed text-white/58">바로 따라하는 흐름</p>
                   </div>
                   <div className="rounded-lg bg-white/8 p-3">
-                    <BookOpenCheck size={17} className="text-[#8ad7ff]" />
+                    <BookOpenCheck size={17} className="text-[#d8c8af]" />
                     <p className="mt-2 font-black text-white">입문형</p>
                     <p className="mt-1 text-xs leading-relaxed text-white/58">비개발자 눈높이</p>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
           </div>
         </div>
       </section>
@@ -176,9 +176,9 @@ const AICourse = () => {
       <div className="container px-6 py-10 md:py-14">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_330px] lg:items-start">
           <main className="min-w-0 space-y-8">
-            <motion.section {...fadeUp()} className="rounded-2xl border border-[#dbecef] bg-white p-6 md:p-8">
-              <div className="flex items-center gap-3 border-b border-[#e7f1f3] pb-5">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e6f4f6] text-[#007a8c]">
+            <Motion.section {...fadeUp()} className="rounded-[0.7rem] border border-[#ded8cf] bg-white p-6 md:p-8">
+              <div className="flex items-center gap-3 border-b border-[#e7e0d8] pb-5">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f1ebe3] text-[#102133]">
                   <Sparkles size={20} />
                 </span>
                 <h2 className="text-2xl font-black tracking-[-0.04em]">수강 전에 이런 고민이 있었다면</h2>
@@ -186,18 +186,18 @@ const AICourse = () => {
 
               <div className="mt-6 grid gap-3">
                 {targets.map((item) => (
-                  <div key={item} className="flex items-start gap-3 rounded-xl bg-[#f7fbfc] p-4 text-sm font-semibold leading-relaxed text-[#334756]">
-                    <Check size={17} className="mt-0.5 shrink-0 text-[#007a8c]" />
+                  <div key={item} className="flex items-start gap-3 rounded-xl bg-[#f7f2ec] p-4 text-sm font-semibold leading-relaxed text-[#4f463d]">
+                    <Check size={17} className="mt-0.5 shrink-0 text-[#102133]" />
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
-            </motion.section>
+            </Motion.section>
 
-            <motion.section {...fadeUp(0.05)} className="rounded-2xl border border-[#dbecef] bg-white p-6 md:p-8">
+            <Motion.section {...fadeUp(0.05)} className="rounded-[0.7rem] border border-[#ded8cf] bg-white p-6 md:p-8">
               <div className="max-w-2xl">
                 <h2 className="text-2xl font-black tracking-[-0.04em]">이 강의에서 배우는 것</h2>
-                <p className="mt-3 text-sm leading-relaxed text-[#4e6170]">
+                <p className="mt-3 text-sm leading-relaxed text-[#44515d]">
                   기능을 많이 나열하기보다, 실제 사업 운영에서 자주 막히는 일을 Codex와 함께 정리하는 순서를 다룹니다.
                 </p>
               </div>
@@ -206,75 +206,75 @@ const AICourse = () => {
                 {sections.map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <motion.article
+                    <Motion.article
                       key={item.title}
                       {...fadeUp(index * 0.06, 18)}
-                      className="rounded-xl border border-[#e3f0f2] bg-[#fbfdfd] p-5"
+                      className="rounded-xl border border-[#ded8cf] bg-[#f7f2ec] p-5"
                     >
-                      <Icon size={23} className="text-[#007a8c]" />
+                      <Icon size={23} className="text-[#102133]" />
                       <h3 className="mt-4 text-base font-black leading-tight tracking-[-0.03em]">{item.title}</h3>
-                      <p className="mt-3 text-sm leading-relaxed text-[#4e6170]">{item.desc}</p>
-                    </motion.article>
+                      <p className="mt-3 text-sm leading-relaxed text-[#44515d]">{item.desc}</p>
+                    </Motion.article>
                   );
                 })}
               </div>
-            </motion.section>
+            </Motion.section>
 
-            <motion.section {...fadeUp(0.08)} className="rounded-2xl border border-[#dbecef] bg-white p-6 md:p-8">
-              <div className="flex items-center gap-3 border-b border-[#e7f1f3] pb-5">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e6f4f6] text-[#007a8c]">
+            <Motion.section {...fadeUp(0.08)} className="rounded-[0.7rem] border border-[#ded8cf] bg-white p-6 md:p-8">
+              <div className="flex items-center gap-3 border-b border-[#e7e0d8] pb-5">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f1ebe3] text-[#102133]">
                   <LayoutList size={20} />
                 </span>
                 <h2 className="text-2xl font-black tracking-[-0.04em]">커리큘럼</h2>
               </div>
 
-              <div className="mt-5 divide-y divide-[#e7f1f3]">
+              <div className="mt-5 divide-y divide-[#e7e0d8]">
                 {curriculum.map((item, index) => (
-                  <motion.div
+                  <Motion.div
                     key={item}
                     {...fadeUp(index * 0.035, 12)}
                     className="flex items-center gap-4 py-4"
                   >
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f0f7f8] text-sm font-black text-[#007a8c]">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f1ebe3] text-sm font-black text-[#102133]">
                       {index + 1}
                     </span>
-                    <span className="text-sm font-bold leading-relaxed text-[#0f2230]">{item}</span>
-                  </motion.div>
+                    <span className="text-sm font-bold leading-relaxed text-[#102133]">{item}</span>
+                  </Motion.div>
                 ))}
               </div>
-            </motion.section>
+            </Motion.section>
 
-            <motion.section {...fadeUp(0.1)} className="rounded-2xl border border-[#dbecef] bg-white p-6 md:p-8">
-              <div className="flex items-center gap-3 border-b border-[#e7f1f3] pb-5">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#e6f4f6] text-[#007a8c]">
+            <Motion.section {...fadeUp(0.1)} className="rounded-[0.7rem] border border-[#ded8cf] bg-white p-6 md:p-8">
+              <div className="flex items-center gap-3 border-b border-[#e7e0d8] pb-5">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f1ebe3] text-[#102133]">
                   <HelpCircle size={20} />
                 </span>
                 <h2 className="text-2xl font-black tracking-[-0.04em]">자주 묻는 질문</h2>
               </div>
 
-              <div className="mt-5 divide-y divide-[#e7f1f3]">
+              <div className="mt-5 divide-y divide-[#e7e0d8]">
                 {faqs.map((item) => (
                   <div key={item.q} className="py-5">
                     <h3 className="text-base font-black tracking-[-0.03em]">{item.q}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-[#4e6170]">{item.a}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#44515d]">{item.a}</p>
                   </div>
                 ))}
               </div>
-            </motion.section>
+            </Motion.section>
           </main>
 
           <aside className="lg:sticky lg:top-28">
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.62, delay: 0.18, ease }}
-              className="rounded-2xl border border-[#dbecef] bg-white p-5 shadow-[0_16px_44px_rgba(0,91,112,0.08)]"
+              className="rounded-[0.7rem] border border-[#ded8cf] bg-white p-5 shadow-[0_16px_44px_rgba(16,33,51,0.08)]"
             >
-              <p className="text-xs font-black uppercase tracking-[0.1em] text-[#007a8c]">학습 신청</p>
+              <p className="text-xs font-black uppercase tracking-[0.1em] text-[#102133]">학습 신청</p>
               <h2 className="mt-3 text-xl font-black leading-tight tracking-[-0.04em]">
                 Codex AI 실무 자동화
               </h2>
-              <p className="mt-2 text-sm leading-relaxed text-[#4e6170]">
+              <p className="mt-2 text-sm leading-relaxed text-[#44515d]">
                 인프런 강의 페이지에서 상세 커리큘럼과 수강 정보를 확인하세요.
               </p>
 
@@ -282,7 +282,7 @@ const AICourse = () => {
                 href={courseUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-5 flex w-full items-center justify-center gap-2 rounded-lg bg-[#16c784] px-5 py-3.5 text-sm font-black text-[#04110a] transition hover:bg-[#12b877]"
+                className="mt-5 flex w-full items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3.5 text-sm font-black text-white transition hover:bg-[#1b3145]"
               >
                 수강 신청하기
                 <ArrowRight size={16} />
@@ -290,24 +290,24 @@ const AICourse = () => {
 
               <Link
                 to="/ai-business"
-                className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-[#007a8c]/25 bg-[#f2fafb] px-5 py-3.5 text-sm font-black text-[#007a8c] transition hover:bg-[#e6f4f6]"
+                className="mt-3 flex w-full items-center justify-center gap-2 rounded-[0.25rem] border border-[#102133]/25 bg-[#f7f2ec] px-5 py-3.5 text-sm font-black text-[#102133] transition hover:bg-[#f1ebe3]"
               >
                 1:1 멘토링 보기
               </Link>
 
-              <div className="mt-5 space-y-3 border-t border-[#e7f1f3] pt-5">
+              <div className="mt-5 space-y-3 border-t border-[#e7e0d8] pt-5">
                 {[
                   ['대상', '비개발자, 사장님, 실무자'],
                   ['형태', '온라인 강의'],
                   ['주제', 'Codex, 콘텐츠, 업무 자동화'],
                 ].map(([label, value]) => (
                   <div key={label} className="flex items-start justify-between gap-4 text-sm">
-                    <span className="font-bold text-[#7c8f9f]">{label}</span>
-                    <span className="text-right font-bold text-[#0f2230]">{value}</span>
+                    <span className="font-bold text-[#687582]">{label}</span>
+                    <span className="text-right font-bold text-[#102133]">{value}</span>
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </Motion.div>
           </aside>
         </div>
       </div>

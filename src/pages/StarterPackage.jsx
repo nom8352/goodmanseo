@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheckBig, Sparkles } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
 const inclusions = [
@@ -96,7 +96,7 @@ const StarterPackage = () => {
           </div>
         </div>
 
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55 }}
@@ -172,7 +172,7 @@ const StarterPackage = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </Motion.div>
 
         <div className="section-heading mt-24">
           <span className="font-serif italic text-[var(--accent-secondary)] text-base block mb-3">Add-on Services</span>

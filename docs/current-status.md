@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-07-02
+Last updated: 2026-07-04
 
 ## Current Project Direction
 
@@ -44,6 +44,10 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- `docs/homepage-redesign-2026-07-04.md`: records the July 4 homepage redesign work log, including reference-image direction, hero woman image, dark navy section system, compact typography, footer/nav/logo changes, removed score CTA section, and validation notes.
+- 2026-07-04 subpage design rollout: applied the saved homepage navy/off-white rules to pricing, starter package, AI business, AI course, AI report, AI report sample, blog, contact, privacy, terms, shared `ContactForm`, and shared button/card CSS. Targeted lint, impeccable detect, and `npm run build` passed.
+- 2026-07-04 homepage redesign lock: main homepage now follows the reference-image direction saved in `DESIGN.md`: warm off-white hero, dark navy full-width service/sample bands, compact typography, serif hero headline, sans-serif logo/nav/footer logo, generated woman hero image, four non-overlapping hero floating cards, dark navy footer, and removal of the score/improvement CTA section.
+- `docs/ai-persona-survey-method-2026-07-02.md`: records the Nemotron-Personas-USA based AI persona survey method for testing GoodmanSEO AI business consulting report purchase intent, including questions, limitations, sampling rules, and 10-person test summary.
 - `docs/sample-sites-homepage-2026-07-02.md`: records the July 2 homepage sample-site section, static sample URLs, screenshot previews, 3+4 card layout, checks, and pushed commit hashes.
 - `docs/2026-06-25-work-log.md`: records the June 25 blog expansion, generated blog images, AI course landing page, homepage/menu/AI mentoring links, YouTube embed, build checks, and pushed commit hashes.
 - `docs/seo-audit-2026-06-25.md`: records the June 25 full-site SEO audit, priority fixes, and verification limits.
@@ -77,24 +81,30 @@ Use `PRODUCT.md` and `DESIGN.md` as canonical design context. `.impeccable.md` i
 
 Current design context from `DESIGN.md`:
 
-- clear light theme, not the older dark theme
-- aqua teal accent `#007a8c`
-- deep muted ocean `#005b70`
-- white cards over soft aqua gradients
-- Pretendard body text, Outfit display headings
-- accessible mobile targets and explicit ARIA labels
+- reference-image style homepage direction is now canonical for the main page
+- warm off-white hero background with dark navy ink `#102133`
+- full-width dark navy bands for service, course bridge, and sample-site sections
+- hero headline uses a serif face; logo/nav/footer logo use sans-serif
+- compact section headings, small body text, and low-radius cards/buttons
+- footer uses deep navy `#0f2132` with blue-gray text, not pure white text
+- previous aqua/checkup theme is legacy for the homepage unless deliberately restored
 
 ## Website Status
 
-Current source-level site changes visible on 2026-06-25:
+Current source-level site changes visible on 2026-07-04:
 
-- homepage now uses a code-built `HeroDevicesVisual` device/dashboard visual, not the older imported `src/assets/home-hero-channels.png`
+- homepage now uses `img/home-hero-consultant.png` as the hero woman image
 - homepage H1 rotates through problem-led phrases:
   - `비즈니스, 홈페이지가 없나요?`
   - `구글에서, 검색이 안 되시나요?`
   - `인스타, 페북 시작하기 힘드신가요?`
-- homepage support copy says Google, homepage, and SNS are managed together to create a trusted online environment
-- homepage CTA language is now `무료 진단 신청`
+- homepage hero H1 uses a serif font while nav/logo/footer logo use sans-serif
+- homepage support copy keeps the homepage, Google Business Profile, basic SEO, and social-link setup story
+- homepage CTA language currently uses `무료 점검 신청`
+- homepage hero visual has four floating cards only: Inquiry Flow, Client Review, Google, and Revenue
+- `혹시 이런 문제로 고민하고 계신가요?` is a full-width white section with compact typography
+- `서비스 소개`, `굳팀장 AI 실무 강의`, and `업종별 샘플 사이트` are dark navy full-width bands with compact card/button styling
+- the older score/gauge/improvement CTA section was removed from the homepage
 - homepage includes a compact `굳팀장 AI 실무 강의` bridge section linking to `/ai-course`
 - pricing page hero is now `고객의 성장을 만드는 통합 디지털 솔루션`
 - pricing page is focused on homepage packages, diagnostics, SEO & marketing, and FAQ
@@ -229,6 +239,35 @@ Notable current local untracked items include:
 - `참고이미지/`
 
 Do not assume these are already deployed or pushed unless GitHub state is checked.
+
+## Current AI Report Sample State
+
+Updated on 2026-07-04:
+
+- `/ai-report` now has an 업종별 샘플 리포트 section with five sample report cards.
+- `/ai-report` public positioning follows the Notion product notes: `AI 비즈니스 리포트`, `AUD 249`, `Business + Website + SEO Audit Report`.
+- Public page copy should not promise a fixed delivery time, fixed page count, or "human review" language.
+- Public page copy should avoid defensive guarantee disclaimers; AI persona copy should be framed as a practical virtual customer response check.
+- Sample report content is centralized in `src/data/aiReportSamples.js`.
+- `src/pages/AIReportSample.jsx` renders the shared report template for all five routes.
+- Static generation now creates SEO HTML for all sample report pages.
+
+Current sample routes:
+
+- `/ai-report/sample-luna-skin-clinic`
+- `/ai-report/sample-sydney-home-clean-co`
+- `/ai-report/sample-maple-cafe-catering`
+- `/ai-report/sample-ai-skills-bootcamp`
+- `/ai-report/sample-clientflow-studio`
+
+Verification run:
+
+- `npx eslint src/pages/AIReport.jsx src/pages/AIReportSample.jsx src/data/aiReportSamples.js src/App.jsx scripts/generate-static-pages.mjs`
+- `node .agents/skills/impeccable/scripts/detect.mjs --json src/pages/AIReport.jsx src/pages/AIReportSample.jsx src/data/aiReportSamples.js`
+- `git diff --check`
+- `npm run build`
+- Playwright smoke check confirmed `/ai-report` exposes five sample links and each sample URL renders its title and score card.
+- Playwright copy check confirmed `/ai-report` has the updated hero and no `3영업일`, `사람 검수`, or `15~25p` public copy.
 
 ## Open Alignment Questions
 

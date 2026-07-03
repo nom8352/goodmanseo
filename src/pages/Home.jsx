@@ -7,16 +7,14 @@ import {
   Monitor, 
   Cpu, 
   CheckCircle,
-  Sparkles,
   Bot,
   PlayCircle
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion, AnimatePresence } from 'framer-motion';
 import Seo from '../components/Seo';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
-import heroLadyImage from '../../img/lady.png';
+import heroLadyImage from '../../img/home-hero-consultant.png';
 import testimonialAvatarOne from '../../img/testimonial-avatar-1.png';
-import testimonialAvatarTwo from '../../img/testimonial-avatar-2.png';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -37,7 +35,7 @@ const GoogleLogo = ({ className = 'h-4 w-4' }) => (
 );
 
 const ReviewAvatar = ({ src, className = 'h-8 w-8' }) => (
-  <span className={`block shrink-0 overflow-hidden rounded-full bg-[#edf4f6] ${className}`}>
+  <span className={`block shrink-0 overflow-hidden rounded-full bg-[#f1ebe3] ${className}`}>
     <img
       src={src}
       alt=""
@@ -49,49 +47,51 @@ const ReviewAvatar = ({ src, className = 'h-8 w-8' }) => (
 
 const HeroSocialProofVisual = () => {
   return (
-    <motion.div
+    <Motion.div
       initial={{ opacity: 0, y: 22 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.7, delay: 0.15, ease }}
       className="relative mx-auto w-full max-w-[430px] lg:mx-0 lg:max-w-[560px]"
       aria-label="GoodmanSEO 홈페이지와 구글 비즈니스 점검 안내 이미지"
     >
-      <div className="absolute inset-x-8 bottom-2 h-24 rounded-full bg-[#005b70]/10 blur-3xl" />
+      <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-[#102133]/10 blur-3xl" />
 
-      <div className="relative min-h-[390px] sm:min-h-[500px] lg:min-h-[620px]">
-        <div className="absolute bottom-0 left-1/2 z-10 h-[390px] -translate-x-[44%] sm:h-[500px] sm:-translate-x-[42%] lg:h-[690px] lg:-translate-x-[42%]">
-          <motion.img
+      <div className="relative min-h-[330px] sm:min-h-[420px] lg:min-h-[500px]">
+        <div className="absolute bottom-8 right-2 z-0 h-[66%] w-[54%] rounded-[1.1rem] border border-white/60 bg-white/34 shadow-[0_18px_40px_rgba(16,33,51,0.06)] backdrop-blur-[2px] sm:right-8 lg:right-12" />
+
+        <div className="absolute bottom-0 right-0 z-30 h-full w-full overflow-hidden pointer-events-none">
+          <Motion.img
             src={heroLadyImage}
             alt="노트북을 들고 홈페이지 점검을 안내하는 GoodmanSEO 상담자"
             initial={{ opacity: 0, y: 20, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.78, delay: 0.18, ease }}
-            className="h-full w-auto max-w-none object-contain drop-shadow-[0_22px_34px_rgba(0,91,112,0.10)]"
+            className="absolute right-0 top-0 h-[430px] w-auto max-w-none object-contain drop-shadow-[0_22px_34px_rgba(16,33,51,0.10)] sm:h-[548px] lg:h-[620px]"
             loading="eager"
           />
         </div>
 
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, x: 24, y: 8 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.55, delay: 0.55, ease }}
-          className="absolute left-0 top-7 z-20 w-[112px] rounded-xl border border-[#dbe7ff] bg-gradient-to-br from-white to-[#eef4ff] p-2.5 shadow-[0_8px_18px_rgba(37,99,235,0.12)] sm:left-2 sm:top-16 sm:w-[144px] sm:p-3.5"
+          className="absolute left-0 top-2 z-20 w-[112px] rounded-[0.7rem] border border-[#d8dee5] bg-white/92 p-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-2 sm:top-5 sm:w-[144px] sm:p-3.5"
         >
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-[0.5rem] font-extrabold uppercase tracking-[0.08em] text-[#64748b] sm:text-[0.58rem]">Inquiry Flow</p>
               <p className="mt-0.5 text-sm font-black tracking-[-0.04em] text-[#1d4ed8] sm:text-base">+42%</p>
             </div>
-            <span className="rounded-full bg-[#dbeafe] px-2 py-0.5 text-[0.55rem] font-bold text-[#1d4ed8]">
+            <span className="rounded-full bg-[#eef3f7] px-2 py-0.5 text-[0.55rem] font-bold text-[#2d6fa3]">
               30d
             </span>
           </div>
           <svg className="mt-2 h-9 w-full overflow-visible sm:h-11" viewBox="0 0 150 64" role="img" aria-label="문의 흐름 상승 그래프">
-            <path d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8" fill="none" stroke="#dbeafe" strokeWidth="8" strokeLinecap="round" />
-            <motion.path
+            <path d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8" fill="none" stroke="#dce4eb" strokeWidth="8" strokeLinecap="round" />
+            <Motion.path
               d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8"
               fill="none"
-              stroke="#2563eb"
+              stroke="#2d6fa3"
               strokeWidth="4"
               strokeLinecap="round"
               initial={{ pathLength: 0 }}
@@ -99,113 +99,66 @@ const HeroSocialProofVisual = () => {
               transition={{ duration: 0.9, delay: 0.82, ease }}
             />
           </svg>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, x: -22, y: 12 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.55, delay: 0.68, ease }}
-          className="absolute bottom-14 left-0 z-20 w-[142px] rounded-xl border border-[#fde7bd] bg-gradient-to-br from-white to-[#fff7ed] p-2.5 shadow-[0_8px_18px_rgba(245,158,11,0.12)] sm:bottom-24 sm:w-[190px] sm:p-3.5"
+          className="absolute left-1 top-[12.2rem] z-20 w-[142px] rounded-[0.7rem] border border-[#ddd6cc] bg-white/94 p-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-0 sm:top-[14.8rem] sm:w-[190px] sm:p-3.5"
         >
           <div className="flex items-center gap-3">
             <ReviewAvatar src={testimonialAvatarOne} className="h-8 w-8 ring-2 ring-white" />
             <div>
-              <p className="text-[0.68rem] font-extrabold text-[#0f2230] sm:text-xs">Client Review</p>
+              <p className="text-[0.68rem] font-extrabold text-[#102133] sm:text-xs">Client Review</p>
               <p className="text-[0.56rem] font-semibold text-[#9a6b2f] sm:text-[0.6rem]">Local owner</p>
             </div>
           </div>
-          <p className="mt-2 text-[0.65rem] font-semibold leading-relaxed text-[#0f2230] sm:text-[0.72rem]">
+          <p className="mt-2 text-[0.65rem] font-semibold leading-relaxed text-[#102133] sm:text-[0.72rem]">
             "Search brought us more direct inquiries."
           </p>
           <div className="mt-2 flex items-center gap-0.5 text-xs text-[#f5b84b] sm:text-sm" aria-label="별점 5점">
             {'★★★★★'.split('').map((star, index) => (
-              <motion.span
+              <Motion.span
                 key={`${star}-${index}`}
                 initial={{ opacity: 0, scale: 0.7 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.22, delay: 0.95 + index * 0.06, ease }}
               >
                 {star}
-              </motion.span>
+              </Motion.span>
             ))}
           </div>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, x: 18, y: 8 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.42, delay: 0.84, ease }}
-          className="absolute left-[6.2rem] top-[7.4rem] z-20 flex items-center gap-2 rounded-xl border border-[#dbeafe] bg-gradient-to-br from-white to-[#eff6ff] px-3 py-2.5 shadow-[0_8px_18px_rgba(59,130,246,0.11)] sm:left-[9.2rem] sm:top-[11.2rem] sm:px-3.5 sm:py-3"
+          className="absolute left-[4.4rem] top-[7.7rem] z-20 flex items-center gap-2 rounded-[0.7rem] border border-[#d8dee5] bg-white/94 px-3 py-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-[5.4rem] sm:top-[9.7rem] sm:px-3.5 sm:py-3"
         >
           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white shadow-sm">
             <GoogleLogo className="h-5 w-5" />
           </span>
           <div>
-            <p className="text-xs font-black leading-none text-[#0f2230]">Google</p>
+            <p className="text-xs font-black leading-none text-[#102133]">Google</p>
             <p className="mt-1 text-[0.62rem] font-bold text-[#64748b]">Verified</p>
           </div>
-        </motion.div>
+        </Motion.div>
 
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, x: 18, y: 8 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ duration: 0.42, delay: 0.96, ease }}
-          className="absolute left-[9.4rem] bottom-[6.1rem] z-20 flex items-center gap-2 rounded-xl border border-[#bbf7d0] bg-gradient-to-br from-white to-[#f0fdf4] px-3 py-2.5 shadow-[0_8px_18px_rgba(34,197,94,0.12)] sm:left-[13.2rem] sm:bottom-[6.4rem] sm:px-3.5 sm:py-3"
+          className="absolute left-[3.8rem] top-[19.1rem] z-20 w-[132px] rounded-[0.7rem] border border-[#d8dee5] bg-white/94 p-3 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-[4.8rem] sm:top-[23.4rem] sm:w-[154px]"
         >
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white shadow-sm">
-            <CheckCircle size={16} strokeWidth={2.4} />
-          </span>
-          <div>
-            <p className="text-xs font-black leading-none text-[#0f2230]">SEO</p>
-            <p className="mt-1 text-[0.62rem] font-bold text-[#4b8460]">Basics Checked</p>
-          </div>
-        </motion.div>
+          <p className="text-[0.58rem] font-bold text-[#64748b]">Revenue</p>
+          <p className="mt-1 text-base font-black tracking-[-0.04em] text-[#102133]">$8,420</p>
+          <p className="mt-1 text-[0.56rem] font-bold text-[#2d6fa3]">+18.0%</p>
+        </Motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: -18, y: 10 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.45, delay: 1.04, ease }}
-          className="absolute left-[12.4rem] top-[18.1rem] z-20 hidden w-[154px] rounded-xl border border-[#ddd6fe] bg-gradient-to-br from-white to-[#f5f3ff] p-3 shadow-[0_8px_18px_rgba(124,58,237,0.12)] sm:block"
-        >
-          <div className="flex items-center gap-2">
-            <ReviewAvatar src={testimonialAvatarTwo} className="h-8 w-8 ring-2 ring-white" />
-            <div>
-              <p className="text-[0.68rem] font-extrabold text-[#0f2230] sm:text-xs">New Inquiry</p>
-              <p className="text-[0.56rem] font-semibold text-[#7c6aa0] sm:text-[0.6rem]">New lead</p>
-            </div>
-          </div>
-          <p className="mt-2 text-[0.64rem] font-semibold leading-relaxed text-[#0f2230] sm:text-[0.7rem]">
-            "Found us on Maps and called right away."
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, x: -16, y: 8 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.42, delay: 1.12, ease }}
-          className="absolute left-[2.6rem] top-[14.1rem] z-20 hidden w-[158px] rounded-xl border border-[#ddd6fe] bg-gradient-to-br from-white to-[#f5f3ff] p-3 shadow-[0_8px_18px_rgba(99,102,241,0.12)] sm:block"
-        >
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <p className="text-[0.58rem] font-bold text-[#7c8f9f]">Monthly Revenue</p>
-              <p className="mt-1 text-base font-black tracking-[-0.04em] text-[#0f2230]">$8,750</p>
-              <p className="mt-1 text-[0.56rem] font-bold text-[#16a34a]">▲ 25.4%</p>
-            </div>
-            <div className="flex h-14 items-end gap-1.5 pt-4">
-              {[0.38, 0.58, 0.82, 1].map((height, index) => (
-                <motion.span
-                  key={height}
-                  initial={{ scaleY: 0 }}
-                  animate={{ scaleY: height }}
-                  transition={{ duration: 0.45, delay: 1.2 + index * 0.08, ease }}
-                  className="block h-10 w-2 origin-bottom rounded-full bg-gradient-to-t from-[#8b5cf6] to-[#bfdbfe]"
-                />
-              ))}
-            </div>
-          </div>
-        </motion.div>
       </div>
-    </motion.div>
+    </Motion.div>
   );
 };
 
@@ -316,23 +269,23 @@ const Home = () => {
       />
 
       {/* 1. Hero Section */}
-      <section className="relative pt-10 pb-8 sm:pt-14 sm:pb-12 md:py-24 lg:py-32">
+      <section className="relative pt-6 pb-0 sm:pt-10 md:pt-12 lg:pt-12">
         <div className="container relative z-10 px-6">
-          <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12">
+          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
             
             {/* Left Column: Typography & CTAs */}
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, ease }}
-              className="flex flex-col text-left"
+              className="flex flex-col text-left lg:pt-14"
             >
               <h1 
                 style={{ perspective: 1000 }}
-                className="font-sans text-[clamp(1.8rem,4.0vw,3.6rem)] font-black leading-[1.15] tracking-tight text-[var(--text-main)] min-h-[5.2rem] sm:min-h-[6.8rem] lg:min-h-[8.8rem] flex flex-col justify-center overflow-hidden"
+                className="font-serif text-[clamp(1.8rem,4.0vw,3.6rem)] font-bold leading-[1.15] tracking-tight text-[var(--text-main)] min-h-[5.2rem] sm:min-h-[6.8rem] lg:min-h-[8.8rem] flex flex-col justify-center overflow-hidden"
               >
                 <AnimatePresence mode="wait">
-                  <motion.span
+                  <Motion.span
                     key={headlineIndex}
                     initial={{ opacity: 0, y: 50, rotateX: -90 }}
                     animate={{ opacity: 1, y: 0, rotateX: 0 }}
@@ -350,7 +303,7 @@ const Home = () => {
                     <span className="block text-[var(--accent-primary)]">
                       {headlines[headlineIndex].highlight}
                     </span>
-                  </motion.span>
+                  </Motion.span>
                 </AnimatePresence>
               </h1>
               
@@ -362,15 +315,15 @@ const Home = () => {
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link to="/contact" className="primary-button text-base px-6 py-3 font-semibold">
+                <Link to="/contact" className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[0.2rem] border border-[#102133] bg-[#102133] px-5 py-3 text-xs font-black text-white shadow-[0_8px_18px_rgba(16,33,51,0.12)] transition hover:-translate-y-0.5 hover:bg-[#172d42]">
                   무료 점검 신청
-                  <ArrowRight size={18} />
+                  <ArrowRight size={15} />
                 </Link>
-                <Link to="/pricing" className="secondary-button text-base px-6 py-3 font-semibold">
+                <Link to="/pricing" className="inline-flex min-h-11 items-center justify-center rounded-[0.2rem] border border-[#aeb6bc] bg-white/60 px-5 py-3 text-xs font-black text-[#102133] shadow-[0_8px_18px_rgba(16,33,51,0.04)] transition hover:-translate-y-0.5 hover:bg-white">
                   서비스 및 가격 보기
                 </Link>
               </div>
-            </motion.div>
+            </Motion.div>
 
             {/* Right Column: Social proof and performance preview */}
             <HeroSocialProofVisual />
@@ -380,61 +333,61 @@ const Home = () => {
       </section>
 
       {/* 2. Problem Section (6대 고민 라인 그리드) */}
-      <section className="py-14 md:py-24 lg:py-28 border-t border-[var(--glass-border)] bg-[var(--bg-dark)]">
+      <section className="max-w-none py-12 md:py-14 lg:py-16 border-t border-[#e7e0d8] bg-white">
         <div className="container px-6 text-center">
-          <div className="max-w-3xl mx-auto mb-10 md:mb-16">
-            <span className="font-serif italic text-[var(--accent-secondary)] text-lg">Common Issues</span>
-            <h2 className="mt-3 font-sans text-[clamp(2.0rem,3.2vw,3.4rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-main)]">
+          <div className="max-w-3xl mx-auto mb-7 md:mb-10">
+            <span className="font-serif italic text-[#5f6872] text-[0.82rem]">Common Issues</span>
+            <h2 className="mt-2.5 font-sans text-[clamp(1.45rem,2.05vw,2.15rem)] font-extrabold leading-[1.18] tracking-[-0.03em] text-[var(--text-main)]">
               혹시 이런 문제로 고민하고 계신가요?
             </h2>
           </div>
           
-          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-2 md:gap-x-8 md:gap-y-8 lg:grid-cols-3">
             {problems.map((prob, i) => (
-              <motion.div
+              <Motion.div
                 key={prob.num}
                 {...fadeUp(i * 0.08, 24)}
-                className="pt-6 border-t border-[var(--glass-border)] flex flex-col"
+                className="pt-4 border-t border-[var(--glass-border)] flex flex-col"
               >
-                <span className="font-serif italic text-3xl md:text-4xl lg:text-5xl text-[var(--accent-secondary)]/30 mb-3 md:mb-4">{prob.num}</span>
-                <h3 className="text-base md:text-xl font-bold tracking-[-0.03em] text-[var(--text-main)]">{prob.title}</h3>
-                <p className="mt-2 md:mt-3 text-xs md:text-sm leading-relaxed text-[var(--text-muted)]">{prob.desc}</p>
-              </motion.div>
+                <span className="font-serif italic text-xl md:text-2xl lg:text-3xl text-[#102133]/20 mb-2">{prob.num}</span>
+                <h3 className="text-[0.82rem] md:text-sm font-bold tracking-[-0.02em] text-[var(--text-main)]">{prob.title}</h3>
+                <p className="mt-1.5 text-[0.68rem] md:text-[0.76rem] leading-relaxed text-[var(--text-muted)]">{prob.desc}</p>
+              </Motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* 3. Service Section */}
-      <section className="py-14 md:py-24 lg:py-28 bg-[var(--bg-darker)] border-t border-b border-[var(--glass-border)]">
+      <section className="max-w-none bg-[#102133] px-0 pt-12 pb-5 md:pt-14 md:pb-6 lg:pt-16 lg:pb-7">
         <div className="container px-6 text-center">
-          <div className="max-w-3xl mx-auto mb-10 md:mb-16">
-            <span className="font-serif italic text-[var(--accent-secondary)] text-lg">Our Solutions</span>
-            <h2 className="mt-3 font-sans text-[clamp(2.0rem,3.2vw,3.4rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-main)]">
+          <div className="max-w-3xl mx-auto mb-7 md:mb-8">
+            <span className="font-serif italic text-[#aab5bd] text-[0.82rem]">Our Solutions</span>
+            <h2 className="mt-2.5 font-sans text-[clamp(1.45rem,2.05vw,2.15rem)] font-extrabold leading-[1.18] tracking-[-0.03em] text-[#eef3f7]">
               서비스 소개
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-[var(--text-muted)]">
+            <p className="mt-3 text-[0.78rem] md:text-[0.86rem] leading-relaxed text-[#aeb8c1]">
               홈페이지 제작부터 구글 비즈니스, 기본 SEO까지 정리하고, 소셜은 링크 연결 정도로 지원합니다.
             </p>
           </div>
           
-          <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:gap-3.5 lg:grid-cols-5">
             {services.map((svc, i) => {
               const Icon = svc.icon;
               return (
-                <motion.div
+                <Motion.div
                   key={svc.title}
                   {...fadeUp(i * 0.08, 24)}
-                  className="last:col-span-2 rounded-2xl border border-[var(--glass-border)] bg-white p-4 text-center shadow-sm transition-all duration-300 hover:shadow-md sm:p-6 lg:last:col-span-1 flex flex-col items-center justify-between"
+                  className="last:col-span-2 rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.1] sm:p-5 lg:last:col-span-1 flex flex-col items-center justify-between"
                 >
                   <div className="flex flex-col items-center">
-                    <div className="mb-3 md:mb-5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--bg-darker)] text-[var(--accent-primary)]">
-                      <Icon size={19} className="block shrink-0" />
+                    <div className="mb-3 md:mb-4 flex h-9 w-9 shrink-0 items-center justify-center rounded-[0.35rem] border border-[#d8c8af]/30 bg-white/[0.06] text-[#d8c8af]">
+                      <Icon size={18} className="block shrink-0" />
                     </div>
-                    <h3 className="text-base md:text-lg font-bold tracking-[-0.03em] text-[var(--text-main)]">{svc.title}</h3>
-                    <p className="mt-3 text-xs leading-relaxed text-[var(--text-muted)]">{svc.desc}</p>
+                    <h3 className="text-[0.82rem] md:text-sm font-bold tracking-[-0.02em] text-[#eef3f7]">{svc.title}</h3>
+                    <p className="mt-2 text-[0.68rem] md:text-[0.74rem] leading-relaxed text-[#aab5bd]">{svc.desc}</p>
                   </div>
-                </motion.div>
+                </Motion.div>
               );
             })}
           </div>
@@ -442,67 +395,67 @@ const Home = () => {
       </section>
 
       {/* AI Course Bridge Section */}
-      <section className="py-12 md:py-20 bg-[var(--bg-dark)] border-b border-[var(--glass-border)]">
+      <section className="max-w-none bg-[#102133] px-0 pt-0 pb-10 md:pb-12">
         <div className="container px-6">
-          <motion.div
+          <Motion.div
             {...fadeUp(0.08)}
-            className="grid gap-6 rounded-[1.5rem] border border-[#cce7eb] bg-white p-6 shadow-[0_10px_34px_rgba(0,91,112,0.04)] md:grid-cols-[0.9fr_1.1fr_auto] md:items-center md:p-8"
+            className="grid gap-5 rounded-[0.45rem] bg-[#f7f2ec] p-5 md:grid-cols-[0.9fr_1.1fr_auto] md:items-center md:p-6"
           >
             <div className="flex items-center gap-4">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#e6f4f6] text-[#007a8c]">
-                <Bot size={25} />
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[0.35rem] bg-white text-[#102133]">
+                <Bot size={22} />
               </span>
               <div>
-                <p className="text-sm font-extrabold text-[#007a8c]">굳팀장 AI 실무 강의</p>
-                <h2 className="mt-1 text-[clamp(1.45rem,2.3vw,2rem)] font-black leading-tight tracking-[-0.04em] text-[#0f2230]">
+                <p className="text-[0.76rem] font-bold text-[#63717c]">굳팀장 AI 실무 강의</p>
+                <h2 className="mt-1 text-[clamp(1.05rem,1.6vw,1.45rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#102133]">
                   Codex로 콘텐츠와 반복업무를 직접 정리하고 싶다면
                 </h2>
               </div>
             </div>
 
-            <p className="text-sm leading-relaxed text-[#4e6170] md:max-w-xl">
+            <p className="text-[0.76rem] md:text-[0.82rem] leading-relaxed text-[#566471] md:max-w-xl">
               홈페이지 문구, 고객문의, 반복 안내문에 바로 쓰는 AI 활용법을 사장님 눈높이에 맞춰 정리한
               비개발자용 실무 강의입니다.
             </p>
 
             <Link
               to="/ai-course"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#007a8c]/30 bg-[#f2fafb] px-5 py-3 text-sm font-extrabold text-[#007a8c] transition hover:bg-[#e6f4f6]"
+              className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-[0.76rem] font-extrabold text-white transition hover:bg-[#1b3145]"
             >
               <PlayCircle size={17} />
               강의 보기
             </Link>
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
 
       {/* 4. Sample Site Section */}
-      <section id="samples" className="py-14 md:py-24 lg:py-28 bg-[var(--bg-dark)]">
+      <section id="samples" className="max-w-none bg-[#102133] px-0 py-12 md:py-14 lg:py-16">
         <div className="container px-6">
-          <div className="mb-10 grid gap-6 md:mb-14 md:grid-cols-[0.9fr_1.1fr] md:items-end">
+          <div className="mb-7 grid gap-4 md:mb-8 md:grid-cols-[0.9fr_1.1fr] md:items-end">
             <div>
-              <span className="font-serif italic text-[var(--accent-secondary)] text-lg">Sample Websites</span>
-              <h2 className="mt-3 font-sans text-[clamp(2.0rem,3.2vw,3.4rem)] font-extrabold leading-[1.1] tracking-[-0.04em] text-[var(--text-main)]">
+              <span className="font-serif italic text-[#aab5bd] text-[0.82rem]">Sample Websites</span>
+              <h2 className="mt-2.5 font-sans text-[clamp(1.45rem,2.05vw,2.15rem)] font-extrabold leading-[1.18] tracking-[-0.03em] text-[#eef3f7]">
                 업종별 샘플 사이트
               </h2>
             </div>
-            <p className="max-w-2xl text-base leading-relaxed text-[var(--text-muted)] md:justify-self-end">
+            <p className="max-w-2xl text-[0.78rem] md:text-[0.86rem] leading-relaxed text-[#aeb8c1] md:justify-self-end">
               청소, 음식점, 스튜디오, 수리, 전문 서비스처럼 호주 로컬 비즈니스에 맞춘 홈페이지 예시입니다.
               내 업종에 가까운 형태를 먼저 확인해보세요.
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 sm:grid-cols-2 md:gap-3.5 lg:grid-cols-4">
             {sampleSites.map((site, i) => (
-              <motion.a
+              <Motion.a
                 key={site.href}
                 href={site.href}
                 target="_blank"
                 rel="noreferrer"
                 {...fadeUp(i * 0.05, 22)}
-                className="group overflow-hidden rounded-2xl border border-[#bfd9df] bg-white p-2 shadow-[0_10px_26px_rgba(0,59,72,0.07)] transition-all duration-300 hover:-translate-y-1 hover:border-[#007a8c]/40 hover:shadow-[0_16px_34px_rgba(0,59,72,0.1)]"
+                className="group overflow-hidden rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.1]"
               >
-                <div className="aspect-[16/9] overflow-hidden rounded-xl border border-[#d8e7eb] bg-[#e6f4f6]">
+                <div className="aspect-[16/9] overflow-hidden rounded-[0.35rem] border border-white/10 bg-white/[0.06]">
                   <img
                     src={site.image}
                     alt={`${site.title} 샘플 홈페이지 미리보기`}
@@ -510,207 +463,28 @@ const Home = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="flex items-center justify-between gap-3 px-2 py-3">
-                  <h3 className="text-base font-black leading-tight tracking-[-0.04em] text-[var(--text-main)]">
+                <div className="flex items-center justify-between gap-3 px-1.5 py-2.5">
+                  <h3 className="text-[0.82rem] md:text-sm font-bold leading-tight tracking-[-0.02em] text-[#eef3f7]">
                     {site.title}
                   </h3>
-                  <span className="inline-flex shrink-0 items-center gap-1 text-sm font-extrabold text-[var(--accent-primary)]">
+                  <span className="inline-flex shrink-0 items-center gap-1 text-[0.72rem] font-bold text-[#d8c8af]">
                     보기
-                    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
-              </motion.a>
+              </Motion.a>
             ))}
           </div>
 
-          <div className="mt-12 flex flex-col items-start justify-between gap-4 rounded-2xl border border-[#cce7eb] bg-white p-5 sm:flex-row sm:items-center md:p-6">
-            <p className="text-sm leading-relaxed text-[#4e6170]">
+          <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-[0.45rem] bg-[#f7f2ec] p-5 sm:flex-row sm:items-center md:p-6">
+            <p className="text-[0.76rem] md:text-[0.82rem] leading-relaxed text-[#566471]">
               마음에 드는 샘플이 있으면 무료 점검 신청 때 업종과 원하는 방향을 함께 남겨주세요.
             </p>
-            <Link to="/contact" className="primary-button text-sm px-5 py-3 font-semibold">
+            <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-[0.76rem] font-extrabold text-white transition hover:bg-[#1b3145]">
               무료 점검 신청
-              <ArrowRight size={17} />
+              <ArrowRight size={15} />
             </Link>
           </div>
-        </div>
-      </section>
-
-
-
-      {/* 5. Footer Banner / CTA Section */}
-      <section className="py-12 md:py-24 bg-[var(--bg-dark)] border-t border-[var(--glass-border)]">
-        <div className="container px-6">
-          <motion.div
-            {...fadeUp(0.1)}
-            className="rounded-[1.75rem] md:rounded-[2.5rem] bg-gradient-to-br from-[#f0f9fa] via-[#f7fbfb] to-[#e6f4f6] border border-[#d0ecef] p-6 md:p-12 text-[#0f2230] shadow-[0_20px_50px_rgba(0,91,112,0.06)] relative overflow-hidden"
-          >
-            {/* Soft grid/light glow background elements */}
-            <div className="absolute inset-0 pointer-events-none opacity-20"
-              style={{
-                backgroundImage: 'radial-gradient(circle at 50% 120%, #8ad7ff 0%, transparent 60%)',
-              }}
-            />
-            
-            <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr_1fr] lg:items-stretch relative z-10">
-              
-              {/* Left Box: CTA & Sparkle Badge */}
-              <div className="text-left flex flex-col items-start justify-center pr-2">
-                <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#bce3e7] text-xs font-bold text-[#005b70] mb-6 shadow-sm">
-                  <Sparkles size={13} className="text-[#007a8c] animate-pulse" />
-                  홈페이지 기본 점검
-                </span>
-                
-                <h2 className="text-[clamp(1.75rem,3.2vw,2.4rem)] font-extrabold leading-[1.2] text-[#0f2230] tracking-[-0.04em]">
-                  내 비즈니스는 고객에게<br />
-                  어떻게 보일까요?
-                </h2>
-                
-                <p className="mt-4 text-sm leading-relaxed text-[#4e6170]">
-                  홈페이지와 구글 비즈니스 기본 상태를<br />
-                  먼저 가볍게 확인해보세요.
-                </p>
-                
-                <Link to="/contact" className="mt-8 inline-flex items-center justify-center gap-2.5 rounded-full bg-[#005b70] hover:bg-[#004758] px-7 py-4 text-base font-bold text-white transition-all shadow-[0_8px_24px_rgba(0,91,112,0.18)] hover:translate-y-[-1px]">
-                  무료 점검 신청하기
-                  <ArrowRight size={18} />
-                </Link>
-              </div>
-
-              {/* Center Box: Diagnostic Scores Gauge (White Premium Card) */}
-              <div className="hidden bg-white border border-[#e6eff1] rounded-[2rem] p-6 md:p-8 shadow-[0_12px_36px_rgba(0,91,112,0.03)] md:flex flex-col items-center justify-between">
-                <p className="text-sm font-bold text-[#0f2230]">기본 점검 점수</p>
-                
-                {/* Clean SVG Circular Gauge */}
-                <div className="relative flex h-28 w-28 items-center justify-center my-6">
-                  <svg className="w-full h-full transform -rotate-90">
-                    <circle
-                      cx="56"
-                      cy="56"
-                      r="46"
-                      fill="transparent"
-                      stroke="#f1f5f9"
-                      strokeWidth="8"
-                    />
-                    <motion.circle
-                      cx="56"
-                      cy="56"
-                      r="46"
-                      fill="transparent"
-                      stroke="url(#tealGradient)"
-                      strokeWidth="8"
-                      strokeDasharray={2 * Math.PI * 46}
-                      initial={{ strokeDashoffset: 2 * Math.PI * 46 }}
-                      animate={{ strokeDashoffset: 2 * Math.PI * 46 * (1 - 85 / 100) }}
-                      transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
-                      strokeLinecap="round"
-                    />
-                    <defs>
-                      <linearGradient id="tealGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#8ad7ff" />
-                        <stop offset="100%" stopColor="#005b70" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <div className="absolute text-center flex flex-col items-center">
-                    <span className="text-3xl font-black text-[#0f2230] leading-none">85</span>
-                    <span className="text-[0.62rem] font-bold text-[#7c8f9f] mt-1">/ 100</span>
-                  </div>
-                </div>
-                
-                {/* Scoring Rows */}
-                <div className="w-full space-y-4 text-xs font-bold text-[#4e6170] border-t border-slate-100 pt-5">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      {/* Google G logo representation */}
-                      <svg viewBox="0 0 24 24" className="w-3.5 h-3.5">
-                        <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
-                        <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
-                        <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
-                        <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
-                      </svg>
-                      <span>구글 비즈니스</span>
-                    </div>
-                    <span className="text-[#005b70]">90/100</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Monitor size={14} className="text-[#4e6170]" />
-                      <span>홈페이지</span>
-                    </div>
-                    <span className="text-[#005b70]">75/100</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <MessageSquare size={14} className="text-[#4e6170]" />
-                      <span>기본 SEO</span>
-                    </div>
-                    <span className="text-[#005b70]">80/100</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Sparkles size={14} className="text-[#4e6170]" />
-                      <span>리뷰 표시 상태</span>
-                    </div>
-                    <span className="text-[#005b70]">95/100</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Box: Key Improvements (Deep Teal Premium Card) */}
-              <div className="hidden bg-gradient-to-br from-[#0a4651] to-[#042c34] rounded-[2rem] p-6 md:p-8 text-white shadow-[0_12px_40px_rgba(0,91,112,0.14)] relative overflow-hidden lg:flex flex-col justify-between">
-                
-                {/* Tech connection net background visual */}
-                <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/5 blur-2xl pointer-events-none" />
-                <div className="absolute left-0 bottom-0 pointer-events-none opacity-10 w-full h-1/2" 
-                  style={{
-                    backgroundImage: 'radial-gradient(circle at 10% 90%, #d8ff72 0%, transparent 60%)',
-                  }}
-                />
-
-                <p className="text-base font-bold mb-6 tracking-[-0.02em] border-b border-white/10 pb-3">주요 개선 포인트</p>
-                
-                <ul className="space-y-4.5 text-sm font-semibold flex-1 flex flex-col justify-center">
-                  <li className="flex items-center gap-3 border-b border-white/5 pb-3.5">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#8ad7ff]/10 text-[#8ad7ff] border border-[#8ad7ff]/20">
-                      <CheckCircle size={11} fill="currentColor" className="text-[#0c4e5b]" />
-                    </span>
-                    <div className="flex items-center gap-2 text-slate-100">
-                      <Search size={14} className="text-slate-300" />
-                      <span>구글 검색 노출 최적화</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3 border-b border-white/5 pb-3.5">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#8ad7ff]/10 text-[#8ad7ff] border border-[#8ad7ff]/20">
-                      <CheckCircle size={11} fill="currentColor" className="text-[#0c4e5b]" />
-                    </span>
-                    <div className="flex items-center gap-2 text-slate-100">
-                      <Monitor size={14} className="text-slate-300" />
-                      <span>홈페이지 모바일 최적화</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3 border-b border-white/5 pb-3.5">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#8ad7ff]/10 text-[#8ad7ff] border border-[#8ad7ff]/20">
-                      <CheckCircle size={11} fill="currentColor" className="text-[#0c4e5b]" />
-                    </span>
-                    <div className="flex items-center gap-2 text-slate-100">
-                      <MessageSquare size={14} className="text-slate-300" />
-                      <span>On-page SEO 기본 정리</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#8ad7ff]/10 text-[#8ad7ff] border border-[#8ad7ff]/20">
-                      <CheckCircle size={11} fill="currentColor" className="text-[#0c4e5b]" />
-                    </span>
-                    <div className="flex items-center gap-2 text-slate-100">
-                      <Sparkles size={14} className="text-slate-300" />
-                      <span>리뷰 표시 상태 확인</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </motion.div>
         </div>
       </section>
 

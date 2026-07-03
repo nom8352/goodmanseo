@@ -16,8 +16,9 @@ import {
   Timer,
   UsersRound,
 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
+import { aiReportSamples } from '../data/aiReportSamples';
 import { createServiceJsonLd, organizationJsonLd } from '../data/siteSeo';
 
 const ease = [0.16, 1, 0.3, 1];
@@ -33,63 +34,53 @@ const fadeUp = (delay = 0, y = 24) => ({
 
 const packages = [
   {
-    title: '전체 분석 리포트',
+    title: 'AI 비즈니스 리포트',
     price: 'AUD 249',
+    desc: '홈페이지, SEO, 구글 노출, 고객 반응, 사업 포지셔닝을 함께 보는 PDF 리포트입니다.',
     points: [
-      '100점 만점 종합 점수표',
-      '홈페이지 SEO & UX 진단',
-      '구글 지도(GBP) 노출 상태 진단',
-      '인스타 / 페북 링크 연동 검증',
-      '시장 포지셔닝 & 병목 요인 분석',
-      '3단계 우선순위 로드맵 수령',
-      '3영업일 내 PDF 제공',
+      'Business + Website + SEO Audit Report',
+      '홈페이지 첫인상, CTA, 문의 흐름 점검',
+      'SEO 기본 구조와 Google / Local Visibility 점검',
+      '경쟁사 1~3개 비교와 포지셔닝 방향 정리',
+      'AI 기반 가상 고객 반응 시뮬레이션 100명',
+      'CEO Review와 Final Reasoning Pass 포함',
+      '30일 / 90일 우선순위 Action Roadmap',
+      'PDF 리포트 작성',
+      'PDF 리포트 제공',
     ],
     href: '/contact?type=ai-report-standard',
     featured: true,
   },
-  {
-    title: '재분석 리포트',
-    price: 'AUD 199',
-    points: [
-      '1차 진단 실행 결과 점검',
-      '홈페이지 전환 지표 재검증',
-      '구글 지도 검색 순위 분석',
-      '소셜 채널 연동 보완 검증',
-      '신규 개선 로드맵 수립',
-      '3영업일 내 PDF 제공',
-    ],
-    href: '/contact?type=ai-report-standard',
-  },
 ];
 
-const linkedInPersonas = [
+const reportScenarios = [
   {
-    avatarUrl: 'https://randomuser.me/api/portraits/men/90.jpg',
-    name: '김동우',
-    role: 'SaaS 스타트업 대표 (30대)',
-    hashtags: ['#가입이탈정체', '#타겟팅진단', '#CRO'],
-    quote: '저희 솔루션의 기능과 기술력은 정말 자신 있거든요. 그런데 막상 홈페이지에 들어온 잠재 고객들이 가입 단계에서 다 이탈해 버려요. 타겟팅 설계가 잘못된 건지, 전환 동선에 문제가 있는 건지 도무지 감이 안 오네요...',
+    icon: Globe2,
+    title: '검색은 되는데 문의가 적은 경우',
+    role: '홈페이지 / 구글 노출 점검',
+    tags: ['홈페이지', 'Google', '문의흐름'],
+    quote: '홈페이지는 있는데 고객이 들어왔을 때 무엇을 보고 문의해야 하는지 흐름이 약한 상태일 수 있습니다.',
   },
   {
-    avatarUrl: 'https://randomuser.me/api/portraits/women/27.jpg',
-    name: '이지현',
-    role: '로컬 에스테틱 원장 (40대)',
-    hashtags: ['#USP발굴', '#차별화오퍼', '#패키지설계'],
-    quote: '인근에 경쟁 뷰티숍들이 우후죽순 생기면서 가격 출혈 경쟁만 치열해졌어요. 우리 숍만의 확실한 강점(USP)을 보여주고 싶은데, 단순 할인 이벤트 외에 매력적인 오퍼와 패키지를 어떻게 짜서 올릴지 막막해요.',
+    icon: Target,
+    title: '경쟁업체와 차이가 잘 안 보이는 경우',
+    role: '포지셔닝 / 고객 메시지 점검',
+    tags: ['차별점', '고객문제', '서비스정리'],
+    quote: '서비스를 많이 보여주는 것보다 어떤 고객에게 왜 맞는지 먼저 정리해야 비교 대상에서 벗어날 수 있습니다.',
   },
   {
-    avatarUrl: 'https://randomuser.me/api/portraits/men/4.jpg',
-    name: '박지훈',
-    role: '이커머스 브랜드 대표 (30대)',
-    hashtags: ['#밑빠진독광고비', '#전환율부족', '#광고최적화'],
-    quote: '인스타그램 광고랑 구글 키워드 광고에 매달 수백만 원씩 태우고 있습니다. 방문자 수는 제법 나오는데, 실제 구매 주문으로 이어지는 전환율이 너무 낮아요. 광고비를 더 쓰기 전에 전환 퍼널의 문제점을 짚고 싶습니다.',
+    icon: UsersRound,
+    title: 'SNS와 홈페이지가 따로 노는 경우',
+    role: 'Instagram / Facebook / 웹사이트 연결 점검',
+    tags: ['SNS링크', '신뢰요소', '고객동선'],
+    quote: '고객은 한 채널만 보지 않습니다. 구글, 홈페이지, SNS에서 같은 사업처럼 보이는지가 신뢰에 영향을 줍니다.',
   },
   {
-    avatarUrl: 'https://randomuser.me/api/portraits/men/92.jpg',
-    name: '최영호',
-    role: '전문 서비스업 대표 (50대)',
-    hashtags: ['#구글비즈니스', '#지도노출', '#SEO'],
-    quote: '구글에 업체명을 치면 저희 구글 지도 프로필이 나오긴 하는데, 순위가 너무 뒤에 밀려 있어요. 전화 문의를 늘리고 싶은데 홈페이지랑 지도 노출 상태 중 도대체 어떤 것부터 손대야 할지 전문가의 조언이 필요합니다.',
+    icon: LayoutDashboard,
+    title: '무엇부터 고쳐야 할지 모르는 경우',
+    role: '우선순위 / 실행 로드맵 정리',
+    tags: ['우선순위', '로드맵', '실행항목'],
+    quote: '디자인, SEO, 구글 비즈니스, SNS를 한 번에 다 고치기보다 지금 문의에 가장 영향을 주는 순서부터 정리합니다.',
   },
 ];
 
@@ -97,53 +88,53 @@ const linkedInPersonas = [
 
 const AIReport = () => {
   const serviceJsonLd = createServiceJsonLd({
-    name: 'GoodmanSEO AI 비즈니스 컨설팅 리포트',
+    name: 'GoodmanSEO AI 비즈니스 리포트',
     description:
-      '사업 방향, 타겟 고객, 경쟁 구도, 홈페이지 구조, 실행 우선순위를 정리하는 PDF 비즈니스 컨설팅 리포트 서비스입니다.',
+      '홈페이지, Google Business Profile, Instagram, Facebook, SEO 기본 상태와 문의 흐름을 함께 점검해 우선순위를 정리하는 PDF 진단 리포트 서비스입니다.',
     path: '/ai-report',
     serviceType: 'AI business consulting report',
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#f2fafb] via-white to-[#ecf6f8] pt-20 text-[#0f2230]">
+    <div className="min-h-screen bg-gradient-to-tr from-[#f7f2ec] via-white to-[#eee7df] pt-20 text-[#102133]">
       <Seo
-        title="AI 비즈니스 컨설팅 리포트"
-        description="GoodmanSEO AI 리포트는 사업 방향, 타겟 고객, 경쟁 구도, 홈페이지 구조 및 실행 우선순위를 3영업일 내 PDF로 정리합니다."
+        title="AI 비즈니스 리포트"
+        description="GoodmanSEO AI 비즈니스 리포트는 홈페이지, SEO, 구글 노출, 고객 반응, 비즈니스 포지셔닝을 함께 분석해 PDF로 정리합니다."
         path="/ai-report"
-        keywords={['AI 비즈니스 컨설팅', '비즈니스 리포트', '사업 진단', '경쟁사 분석', '타겟 고객 분석', '로컬 비즈니스']}
+        keywords={['AI 비즈니스 리포트', '비즈니스 리포트', '홈페이지 진단', 'SEO 오딧', '구글 비즈니스 점검', 'AI 고객 반응 시뮬레이션']}
         jsonLd={[organizationJsonLd, serviceJsonLd]}
       />
 
       <section className="relative max-w-none overflow-hidden px-6 py-16 md:py-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(0,122,140,0.13),transparent_34%),radial-gradient(circle_at_18%_96%,rgba(0,91,112,0.08),transparent_34%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_18%,rgba(16,33,51,0.13),transparent_34%),radial-gradient(circle_at_18%_96%,rgba(16,33,51,0.08),transparent_34%)]" />
         <div className="container relative z-10">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, y: 26 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.68, ease }}
               className="max-w-4xl"
             >
               <div className="flex flex-wrap items-center gap-2">
-                <span className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-xs font-black text-[#007a8c] shadow-sm ring-1 ring-[#d6ecef]">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1.5 text-xs font-black text-[#102133] shadow-sm ring-1 ring-[#ded8cf]">
                   <Sparkles size={14} />
-                  압도적인 성장을 위한 AI 비즈니스 진단 리포트
+                  Business + Website + SEO Audit Report
                 </span>
-                <span className="rounded-full border border-[#cce7eb] bg-[#f7fbfc] px-3.5 py-1.5 text-xs font-bold text-[#4e6170]">
-                  PDF + 3영업일
+                <span className="rounded-full border border-[#ded8cf] bg-[#f7f2ec] px-3.5 py-1.5 text-xs font-bold text-[#44515d]">
+                  PDF 리포트
                 </span>
               </div>
 
-              <h1 className="mt-7 max-w-4xl text-[clamp(2.25rem,4.6vw,4.25rem)] font-black leading-[1.08] tracking-[-0.04em] text-[#0f2230]">
-                막막한 내 비즈니스,
+              <h1 className="mt-7 max-w-4xl text-[clamp(2.25rem,4.6vw,4.25rem)] font-black leading-[1.08] tracking-[-0.04em] text-[#102133]">
+                홈페이지와 SEO만
                 <br />
-                AI 데이터 분석으로
+                따로 보지 않습니다.
                 <br />
-                <span className="text-[#007a8c]">3일 만에 해답을 찾으세요.</span>
+                <span className="text-[#102133]">고객 반응까지 함께 봅니다.</span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-base font-medium leading-[1.8] text-[#4e6170]">
-                수백만 원대 컨설팅에 가까운 분석 깊이를, AI 비즈니스 리포트로 제공합니다. 현재 상태와 성장 방향을 3영업일 내 PDF로 정리해드립니다.
+              <p className="mt-6 max-w-2xl text-base font-medium leading-[1.8] text-[#44515d]">
+                고객이 우리 사업을 어떻게 발견하고, 무엇을 보고 신뢰하며, 어디서 문의를 망설이는지 함께 분석합니다. 현재 상태와 성장 방향을 PDF 리포트로 정리해드립니다.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -151,50 +142,50 @@ const AIReport = () => {
                   내 비즈니스 진단 시작하기
                   <ArrowRight size={18} />
                 </Link>
-                <Link to="/pricing#diagnostics" className="secondary-button px-6 py-3 text-base">
-                  서비스 가격 보기
-                </Link>
+                <a href="#sample-reports" className="secondary-button px-6 py-3 text-base">
+                  샘플 리포트 5개 보기
+                </a>
               </div>
-            </motion.div>
+            </Motion.div>
 
-            <motion.aside
+            <Motion.aside
               initial={{ opacity: 0, y: 24, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.68, delay: 0.12, ease }}
-              className="rounded-2xl border border-[#cce7eb] bg-white p-5 shadow-[0_18px_44px_rgba(0,91,112,0.07)]"
+              className="rounded-[0.7rem] border border-[#ded8cf] bg-white p-5 shadow-[0_18px_44px_rgba(16,33,51,0.07)]"
             >
-              <div className="rounded-xl bg-[#f2fafb] p-5">
+              <div className="rounded-xl bg-[#f7f2ec] p-5">
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <p className="text-xs font-black uppercase tracking-[0.12em] text-[#007a8c]">Report</p>
-                    <h2 className="mt-2 text-2xl font-black tracking-[-0.04em]">AI 비즈니스 핵심 진단 리포트</h2>
+                    <p className="text-xs font-black uppercase tracking-[0.12em] text-[#102133]">Report</p>
+                    <h2 className="mt-2 text-2xl font-black tracking-[-0.04em]">AI 비즈니스 리포트</h2>
                   </div>
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#007a8c] shadow-sm">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#102133] shadow-sm">
                     <ClipboardCheck size={24} />
                   </span>
                 </div>
 
                 <div className="mt-6 grid gap-3">
                   {[
-                    ['고객', '구매 가능성이 가장 높은 핵심 타겟 분석'],
-                    ['경쟁', '경쟁사를 압도하는 차별화 강점(USP) 발굴'],
-                    ['실행', '당장 매출을 끌어올리는 우선순위 액션 플랜'],
+                    ['Audit', '홈페이지, SEO, Google 노출 실제 확인'],
+                    ['Persona', 'AI 기반 가상 고객 반응 시뮬레이션'],
+                    ['Roadmap', '30일 / 90일 실행 우선순위 정리'],
                   ].map(([label, value]) => (
                     <div key={label} className="flex items-center justify-between gap-4 rounded-lg bg-white px-4 py-3 text-sm">
-                      <span className="font-black text-[#0f2230]">{label}</span>
-                      <span className="text-right font-semibold text-[#4e6170]">{value}</span>
+                      <span className="font-black text-[#102133]">{label}</span>
+                      <span className="text-right font-semibold text-[#44515d]">{value}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-4 flex items-start gap-3 rounded-xl border border-[#dbecef] bg-white p-4">
-                <Lock size={20} className="mt-0.5 shrink-0 text-[#007a8c]" />
-                <p className="text-sm font-semibold leading-relaxed text-[#4e6170]">
-                  고객님의 모든 비즈니스 데이터는 철저히 보안 유지되며, 리포트 분석 및 맞춤형 컨설팅 목적으로만 안전하게 활용됩니다.
+              <div className="mt-4 flex items-start gap-3 rounded-xl border border-[#ded8cf] bg-white p-4">
+                <Lock size={20} className="mt-0.5 shrink-0 text-[#102133]" />
+                <p className="text-sm font-semibold leading-relaxed text-[#44515d]">
+                  제공해주신 링크와 사업 정보는 리포트 작성 목적으로만 확인하며, 외부에 공개하지 않습니다.
                 </p>
               </div>
-            </motion.aside>
+            </Motion.aside>
           </div>
         </div>
       </section>
@@ -205,16 +196,19 @@ const AIReport = () => {
         <div className="container">
           <div className="section-heading text-center">
             <h2 className="mx-auto max-w-3xl text-[clamp(2rem,3.5vw,3.2rem)] font-black leading-tight tracking-[-0.04em]">
-              상품 안내
+              리포트 상품
             </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm font-semibold leading-relaxed text-[#44515d]">
+              단순한 홈페이지 점검이 아니라, 고객이 온라인에서 우리 사업을 어떻게 보고 있는지와 무엇부터 고쳐야 하는지를 함께 정리합니다.
+            </p>
           </div>
 
-          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+          <div className="mx-auto grid max-w-2xl gap-6">
             {packages.map((item, index) => (
-              <motion.article
+              <Motion.article
                 key={item.title}
                 {...fadeUp(index * 0.06)}
-                className={`${item.featured ? 'pricing-spotlight ring-2 ring-[#007a8c]/20' : 'feature-card'} flex h-full flex-col bg-white`}
+                className={`${item.featured ? 'pricing-spotlight ring-2 ring-[#102133]/20' : 'feature-card'} flex h-full flex-col bg-white`}
               >
                 <div>
                   <div className="flex items-start justify-between gap-4">
@@ -222,21 +216,21 @@ const AIReport = () => {
                       <p className="pricing-card-title">{item.title}</p>
                     </div>
                     {item.featured ? (
-                      <span className="rounded-full bg-[#007a8c] px-3 py-1 text-xs font-black text-white">
+                      <span className="rounded-[0.25rem] bg-[#102133] px-3 py-1 text-xs font-black text-white">
                         추천
                       </span>
                     ) : null}
                   </div>
 
-                  <p className="mt-5 text-3xl font-black tracking-[-0.04em] text-[#0f2230]">{item.price}</p>
+                  <p className="mt-5 text-3xl font-black tracking-[-0.04em] text-[#102133]">{item.price}</p>
                   {item.desc ? (
-                    <p className="mt-3 text-sm font-bold leading-relaxed text-[#4e6170]">{item.desc}</p>
+                    <p className="mt-3 text-sm font-bold leading-relaxed text-[#44515d]">{item.desc}</p>
                   ) : null}
 
                   <div className={`${item.desc ? 'mt-5' : 'mt-6'} grid gap-3`}>
                     {item.points.map((point) => (
-                      <div key={`${item.title}-${point}`} className="benefit-row bg-[#fbfdfd]">
-                        <CheckCircle2 size={16} className="shrink-0 text-[#007a8c]" />
+                      <div key={`${item.title}-${point}`} className="benefit-row bg-[#f7f2ec]">
+                        <CheckCircle2 size={16} className="shrink-0 text-[#102133]" />
                         <span>{point}</span>
                       </div>
                     ))}
@@ -247,113 +241,114 @@ const AIReport = () => {
                   {item.title} 문의하기
                   <ArrowRight size={16} />
                 </Link>
-              </motion.article>
+              </Motion.article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="max-w-none border-y border-[#d8ecef] bg-[#f7fbfc] px-6 py-14 md:py-20">
+      <section className="max-w-none border-y border-[#ded8cf] bg-[#f7f2ec] px-6 py-14 md:py-20">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-black text-[#007a8c] ring-1 ring-[#d6ecef]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-black text-[#102133] ring-1 ring-[#ded8cf]">
               <Target size={14} />
               추천 대상
             </span>
             <h2 className="mt-5 text-[clamp(2rem,3.2vw,3rem)] font-black leading-tight tracking-[-0.04em]">
               지금 이런 고민으로 답답하지 않으신가요?
             </h2>
-            <p className="mt-4 text-base font-medium text-[#4e6170]">
-              GoodmanSEO AI 진단 리포트가 필요한 대표님들의 실제 현장 목소리입니다.
+            <p className="mt-4 text-base font-medium text-[#44515d]">
+              아래 상황 중 하나라도 해당된다면 먼저 전체 상태를 한 번 정리해보는 것이 좋습니다.
             </p>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {linkedInPersonas.map((persona, index) => (
-              <motion.article
-                key={persona.name}
+            {reportScenarios.map((scenario, index) => {
+              const Icon = scenario.icon;
+              return (
+              <Motion.article
+                key={scenario.title}
                 {...fadeUp(index * 0.06)}
-                className="rounded-2xl border border-[#cce7eb] bg-white p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
+                className="rounded-[0.7rem] border border-[#ded8cf] bg-white p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow"
               >
                 <div>
                   <div className="flex items-center gap-3">
-                    <img
-                      src={persona.avatarUrl}
-                      alt={persona.name}
-                      className="h-11 w-11 shrink-0 rounded-full object-cover border border-[#cce7eb]"
-                    />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-[0.45rem] bg-[#f7f2ec] text-[#102133] ring-1 ring-[#ded8cf]">
+                      <Icon size={21} />
+                    </span>
                     <div>
-                      <div className="flex items-center">
-                        <span className="text-sm font-black text-[#0f2230]">{persona.name}</span>
-                        <span className="ml-2 rounded bg-[#f0f4f7] px-1.5 py-0.5 text-[9px] font-bold text-[#4e6170]">
-                          1st
-                        </span>
-                      </div>
-                      <p className="text-xs font-semibold text-[#4e6170] mt-0.5">{persona.role}</p>
+                      <h3 className="text-sm font-black text-[#102133]">{scenario.title}</h3>
+                      <p className="text-xs font-semibold text-[#44515d] mt-0.5">{scenario.role}</p>
                     </div>
                   </div>
 
-                  <p className="mt-5 text-sm font-semibold leading-relaxed text-[#334756] pl-3.5 border-l-2 border-[#007a8c]/30 italic">
-                    "{persona.quote}"
+                  <p className="mt-5 text-sm font-semibold leading-relaxed text-[#4f463d] pl-3.5 border-l-2 border-[#102133]/30">
+                    {scenario.quote}
                   </p>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-[#f2fafb] flex flex-wrap gap-1.5">
-                  {persona.hashtags.map((tag) => (
-                    <span key={tag} className="text-xs font-bold text-[#007a8c]">
+                <div className="mt-5 pt-3 border-t border-[#f7f2ec] flex flex-wrap gap-1.5">
+                  {scenario.tags.map((tag) => (
+                    <span key={tag} className="rounded-[0.25rem] bg-[#f7f2ec] px-2 py-1 text-xs font-bold text-[#102133]">
                       {tag}
                     </span>
                   ))}
                 </div>
-              </motion.article>
-            ))}
+              </Motion.article>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="max-w-none border-t border-[#d8ecef] bg-white px-6 py-14 md:py-20">
+      <section className="max-w-none border-t border-[#ded8cf] bg-white px-6 py-14 md:py-20">
         <div className="container">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#f2fafb] px-3.5 py-1.5 text-xs font-black text-[#007a8c] ring-1 ring-[#d6ecef]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-[#f7f2ec] px-3.5 py-1.5 text-xs font-black text-[#102133] ring-1 ring-[#ded8cf]">
               <FileText size={14} />
               상세 진행 안내
             </span>
             <h2 className="mt-5 text-[clamp(2rem,3.2vw,3rem)] font-black leading-tight tracking-[-0.04em]">
-              리포트 제공 및 전달 프로세스
+              리포트 제작 흐름과 구성
             </h2>
-            <p className="mt-4 text-base font-medium text-[#4e6170]">
-              신청 시 작성하시는 정보와 최종 수령하시는 분석 리포트의 상세 구성을 투명하게 확인해보세요.
+            <p className="mt-4 text-base font-medium text-[#44515d]">
+              신청 폼에 적어주신 정보를 바탕으로 홈페이지, 검색 노출, 고객 반응, 실행 우선순위를 하나의 PDF 리포트로 정리합니다.
             </p>
           </div>
 
           <div className="mx-auto mt-12 grid max-w-5xl gap-8 lg:grid-cols-2">
             {/* Input Card */}
-            <motion.div {...fadeUp(0.06)} className="feature-card bg-[#f7fbfc] p-6 rounded-2xl border border-[#cce7eb]">
-              <h3 className="text-lg font-black text-[#0f2230] border-b border-[#cce7eb] pb-3.5 flex items-center justify-between">
+            <Motion.div {...fadeUp(0.06)} className="feature-card bg-[#f7f2ec] p-6 rounded-[0.7rem] border border-[#ded8cf]">
+              <h3 className="text-lg font-black text-[#102133] border-b border-[#ded8cf] pb-3.5 flex items-center justify-between">
                 <span className="flex items-center gap-2">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#e6f4f6] text-[#007a8c] text-xs font-black">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f1ebe3] text-[#102133] text-xs font-black">
                     IN
                   </span>
-                  대표님이 제공해주실 정보
+                  진단 시작에 필요한 정보
                 </span>
-                <span className="text-xs text-[#007a8c] font-bold">주문 시 작성 폼 정보</span>
+                <span className="text-xs text-[#102133] font-bold">신청 폼 + 링크</span>
               </h3>
               
               <div className="mt-6">
-                <h4 className="text-sm font-black text-[#0f2230] flex items-center gap-2 mb-3">
-                  <span className="rounded bg-[#007a8c] px-1.5 py-0.5 text-[10px] font-bold text-white">필수 항목</span>
-                  진단을 위해 반드시 필요한 정보
+                <h4 className="text-sm font-black text-[#102133] flex items-center gap-2 mb-3">
+                  <span className="rounded bg-[#102133] px-1.5 py-0.5 text-[10px] font-bold text-white">필수 항목</span>
+                  실제 점검과 비교 분석에 필요한 정보
                 </h4>
-                <ul className="grid gap-2">
+                <ul className="grid gap-2 sm:grid-cols-2">
                   {[
-                    '웹사이트 URL',
                     '사업명 / 회사명',
+                    '웹사이트 URL',
+                    'Google Business Profile / 지도 링크',
                     '업종',
                     '주요 제품/서비스',
                     '주요 타겟 고객',
+                    '서비스 지역',
+                    '경쟁사 URL 1~3개',
+                    '현재 가장 큰 고민',
+                    '원하는 목표',
                   ].map((title) => (
-                    <li key={title} className="flex items-center gap-2.5 rounded-xl bg-white px-4 py-3 shadow-sm border border-[#e6f2f4] text-sm font-black text-[#0f2230]">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#007a8c] shrink-0" />
+                    <li key={title} className="flex items-center gap-2.5 rounded-xl bg-white px-3.5 py-3 shadow-sm border border-[#ded8cf] text-[0.82rem] font-black leading-snug text-[#102133]">
+                      <span className="h-1.5 w-1.5 rounded-[0.25rem] bg-[#102133] shrink-0" />
                       {title}
                     </li>
                   ))}
@@ -361,86 +356,147 @@ const AIReport = () => {
               </div>
 
               <div className="mt-8">
-                <h4 className="text-sm font-black text-[#0f2230] flex items-center gap-2 mb-3">
-                  <span className="rounded bg-[#4e6170] px-1.5 py-0.5 text-[10px] font-bold text-white">선택 항목</span>
-                  리포트 분석 품질을 높이는 정보
+                <h4 className="text-sm font-black text-[#102133] flex items-center gap-2 mb-3">
+                  <span className="rounded bg-[#44515d] px-1.5 py-0.5 text-[10px] font-bold text-white">선택 항목</span>
+                  분석 정확도를 높이는 참고 정보
                 </h4>
-                <ul className="grid gap-2">
+                <ul className="grid gap-2 sm:grid-cols-2">
                   {[
-                    '현재 가장 큰 고민 / 목표',
-                    '경쟁사 URL (최대 3개)',
-                    '분석 중점 영역',
-                    '사업 단계',
+                    'Instagram / Facebook 링크',
+                    '현재 월 방문자 수 / 문의 수',
+                    '광고 집행 여부',
+                    '평균 객단가',
+                    '가장 수익성 높은 서비스',
+                    '최근 고객이 자주 묻는 질문',
+                    '과거에 시도했던 마케팅',
                   ].map((title) => (
-                    <li key={title} className="flex items-center gap-2.5 rounded-xl bg-white px-4 py-3 shadow-sm border border-[#e6f2f4] text-sm font-black text-[#4e6170]">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#4e6170] shrink-0" />
+                    <li key={title} className="flex items-center gap-2.5 rounded-xl bg-white px-3.5 py-3 shadow-sm border border-[#ded8cf] text-[0.82rem] font-black leading-snug text-[#44515d]">
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#44515d] shrink-0" />
                       {title}
                     </li>
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </Motion.div>
 
             {/* Output Card */}
-            <motion.div {...fadeUp(0.12)} className="feature-card bg-[#f7fbfc] p-6 rounded-2xl border border-[#cce7eb] ring-1 ring-[#007a8c]/5">
-              <h3 className="text-lg font-black text-[#0f2230] border-b border-[#cce7eb] pb-3.5 flex items-center justify-between">
+            <Motion.div {...fadeUp(0.12)} className="feature-card bg-[#f7f2ec] p-6 rounded-[0.7rem] border border-[#ded8cf] ring-1 ring-[#102133]/5">
+              <h3 className="text-lg font-black text-[#102133] border-b border-[#ded8cf] pb-3.5 flex items-center justify-between">
                 <span className="flex items-center gap-2">
-                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#007a8c] text-white text-xs font-black">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-[0.25rem] bg-[#102133] text-white text-xs font-black">
                     OUT
                   </span>
-                  리포트에 담겨 제공되는 정보
+                  PDF 리포트에 담기는 정보
                 </span>
-                <span className="text-xs text-[#007a8c] font-bold">Standard 표준 기준</span>
+                <span className="text-xs text-[#102133] font-bold">5개 샘플 공통 구조</span>
               </h3>
               
-              <div className="mt-6 space-y-2">
+              <div className="mt-6 grid gap-2 sm:grid-cols-2">
                 {[
-                  '1. 요약 (Executive Summary)',
-                  '2. 홈페이지 진단 (Website Analysis)',
-                  '3. 비즈니스 진단 (Business Analysis)',
-                  '4. 종합 진단 & 병목 분석',
-                  '5. 우선순위 개선 로드맵',
-                  '6. 구체적 실행 추천 (Action Items)',
+                  '1. Executive Summary',
+                  '2. Business Review',
+                  '3. Website Audit',
+                  '4. SEO Audit',
+                  '5. Google / Local Visibility Review',
+                  '6. AI Persona Simulation',
+                  '7. CEO Review',
+                  '8. Final Reasoning Summary',
+                  '9. Action Roadmap',
+                  '10. Final Recommendation',
                 ].map((title) => (
-                  <div key={title} className="flex items-center gap-2.5 rounded-xl bg-white px-4 py-3 shadow-sm border border-[#e6f2f4] text-sm font-black text-[#0f2230]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#007a8c] shrink-0" />
+                  <div key={title} className="flex items-center gap-2.5 rounded-xl bg-white px-3.5 py-3 shadow-sm border border-[#ded8cf] text-[0.82rem] font-black leading-snug text-[#102133]">
+                    <span className="h-1.5 w-1.5 rounded-[0.25rem] bg-[#102133] shrink-0" />
                     {title}
                   </div>
                 ))}
               </div>
-            </motion.div>
+              <p className="mt-5 rounded-[0.45rem] border border-[#ded8cf] bg-white px-4 py-3 text-xs font-semibold leading-relaxed text-[#44515d]">
+                AI 고객 반응 시뮬레이션은 가상 고객군을 기준으로 메시지, 신뢰 요소, 구매 망설임을 빠르게 점검해 리포트의 우선순위 판단에 활용합니다.
+              </p>
+            </Motion.div>
           </div>
 
 
 
-          <motion.div {...fadeUp(0.18)} className="mx-auto mt-12 max-w-4xl text-center">
-            <p className="text-sm font-bold text-[#4e6170]">
-              💡 샘플 리포트 PDF가 필요하신 대표님은 문의 양식을 남겨주시거나 아래 이메일로 연락 주시면 즉시 송부해 드립니다.
+          <Motion.div {...fadeUp(0.18)} className="mx-auto mt-12 flex max-w-4xl flex-col items-center gap-4 text-center">
+            <p className="text-sm font-bold text-[#44515d]">
+              샘플 리포트에서 실제 고객이 받는 문서 흐름과 섹션 구성을 먼저 확인할 수 있습니다.
             </p>
-          </motion.div>
+            <a
+              href="#sample-reports"
+              className="inline-flex items-center gap-2 rounded-[0.25rem] border border-[#102133]/30 bg-white px-5 py-3 text-sm font-extrabold text-[#102133] transition hover:bg-[#f7f2ec]"
+            >
+              <FileText size={16} />
+              샘플 리포트 5개 보기
+            </a>
+          </Motion.div>
+        </div>
+      </section>
+
+      <section id="sample-reports" className="max-w-none border-y border-[#ded8cf] bg-[#102133] px-6 py-14 md:py-20">
+        <div className="container">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center gap-2 rounded-[0.25rem] border border-white/15 bg-white/[0.07] px-3.5 py-1.5 text-xs font-black text-[#d7b77d]">
+              <FileText size={14} />
+              Sample Reports
+            </span>
+            <h2 className="mt-5 text-[clamp(1.75rem,3vw,2.65rem)] font-black leading-tight tracking-[-0.035em] text-[#eef3f7]">
+              업종별 샘플 리포트
+            </h2>
+            <p className="mt-4 text-sm font-semibold leading-relaxed text-[#aab5bd]">
+              실제 제작 운영 흐름에 맞춘 5개 샘플입니다. 디자인은 같은 리포트 템플릿을 쓰고, 업종별로 점검 항목과 우선순위가 달라집니다.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-3 md:grid-cols-2 lg:grid-cols-5">
+            {aiReportSamples.map((sample, index) => (
+              <Motion.article
+                key={sample.slug}
+                {...fadeUp(index * 0.04)}
+                className="flex h-full flex-col rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-4 text-[#eef3f7]"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <span className="text-2xl" aria-hidden="true">{sample.icon}</span>
+                  <span className="rounded-[0.25rem] border border-white/10 px-2 py-1 text-[0.65rem] font-black text-[#d7b77d]">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                </div>
+                <h3 className="mt-4 text-sm font-black leading-snug text-[#eef3f7]">{sample.title}</h3>
+                <p className="mt-1 text-xs font-bold text-[#d7b77d]">{sample.industry}</p>
+                <p className="mt-3 flex-1 text-xs font-semibold leading-relaxed text-[#aab5bd]">{sample.description}</p>
+                <Link
+                  to={`/ai-report/${sample.slug}`}
+                  className="mt-5 inline-flex items-center justify-between rounded-[0.25rem] border border-white/15 px-3 py-2 text-xs font-black text-[#eef3f7] transition hover:border-[#d7b77d] hover:text-[#d7b77d]"
+                >
+                  샘플 리포트 보기
+                  <ArrowRight size={14} />
+                </Link>
+              </Motion.article>
+            ))}
+          </div>
         </div>
       </section>
 
       <section className="max-w-none px-6 pb-20 pt-6 md:pb-28">
         <div className="container">
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease }}
             className="mt-12 text-center"
           >
-            <p className="text-[0.93rem] font-semibold text-[#556877] mb-5">
+            <p className="text-[0.93rem] font-semibold text-[#44515d] mb-5">
               지금 문의를 남기고 우리 비즈니스에 필요한 맞춤형 진단을 시작해보세요.
             </p>
             <Link
               to="/contact?type=ai-report-standard"
-              className="inline-flex items-center gap-2 rounded-full bg-[#007a8c] text-white px-8 py-3.5 text-[0.95rem] font-bold hover:bg-[#006270] transition-all shadow-[0_12px_24px_rgba(0,122,140,0.12)] hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-[0.25rem] bg-[#102133] text-white px-8 py-3.5 text-[0.95rem] font-bold hover:bg-[#1b3145] transition-all shadow-[0_12px_24px_rgba(16,33,51,0.12)] hover:-translate-y-0.5"
             >
               내 비즈니스 진단 시작하기
               <ArrowRight size={16} />
             </Link>
-          </motion.div>
+          </Motion.div>
         </div>
       </section>
     </div>

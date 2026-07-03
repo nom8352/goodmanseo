@@ -1,6 +1,6 @@
 # Design Context
 
-Last updated: 2026-06-16
+Last updated: 2026-07-04
 
 Primary sources:
 
@@ -37,32 +37,33 @@ The interface should feel like a calm partner helping the owner see what is miss
 
 ## Current Aesthetic Direction
 
-The current canonical design system in `DESIGN.md` is a light aqua checkup theme:
+The current canonical homepage design system in `DESIGN.md` is the 2026-07-04 reference-image direction:
 
-- soft aqua / blue gradients
-- white content cards
-- aqua teal accent `#007a8c`
-- deep muted ocean accent `#005b70`
-- dark readable text `#0f2230`
-- Pretendard for Korean body text
-- Outfit for display headings
-- rounded white panels with restrained aqua shadows
-- pill CTAs for primary/secondary page actions
-- light glass header treatment
+- warm off-white hero background
+- deep navy ink and dark full-width section bands
+- primary navy `#102133`
+- footer navy `#0f2132`
+- muted blue-gray text on dark backgrounds
+- compact section typography and small body text
+- low-radius rectangular buttons and cards
+- sans-serif logo/nav/footer logo
+- serif hero headline only
+- generated woman hero image with four floating cards
 
-This replaced the older dark/glassy/lime direction. Do not use the older dark-theme description as the current design source of truth.
+This replaces the earlier light aqua checkup theme for the homepage. Do not use the older aqua/checkup description as the homepage source of truth unless the user explicitly asks to restore it.
 
 ## Current Implementation Notes
 
-From `docs/work-summary.md` and current source:
+From `DESIGN.md`, `docs/current-status.md`, and current source:
 
-- pricing, AI business, contact, privacy, and terms pages use the light aqua theme
-- footer and navigation have been moved toward light-theme styling
-- contact form shadow and transitions were tightened for a cleaner, lighter feel
-- mobile navigation and footer social links include accessibility-related labels/touch target work
+- homepage uses `img/home-hero-consultant.png` for the hero woman image
+- hero has four floating cards only: Inquiry Flow, Client Review, Google, Revenue
+- `혹시 이런 문제로 고민하고 계신가요?` is a full-width white section with compact typography
+- service, course bridge, and sample-site sections are full-width dark navy bands
+- footer is deep navy with smaller blue-gray text and matching sans-serif logo
+- the score/gauge/improvement CTA section was removed from the homepage
+- global `section` CSS can constrain width; homepage full-width bands need `max-w-none px-0`
 - major Korean text blocks should use `word-break: keep-all` where appropriate
-
-Homepage currently mixes the broader light-theme direction with a code-built device/dashboard hero visual. Re-check the rendered page before making further design decisions.
 
 ## Design Principles
 

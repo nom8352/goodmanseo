@@ -1,6 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Send, Search, Zap, MessageSquare, Lock } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 const INQUIRY_TYPES = [
   {
@@ -193,7 +192,7 @@ const ContactForm = ({
         ...initialForm,
         inquiryType: current.inquiryType,
       }));
-    } catch (error) {
+    } catch {
       setStatus('fallback');
       setNotice('자동 접수가 안 되어 이메일로 이어집니다.');
       window.location.href = buildMailtoLink(form);
@@ -214,8 +213,8 @@ const ContactForm = ({
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_subject" value={`[Goodman SEO] ${inquiryMeta.label}${form.company ? ` - ${form.company}` : ''}`} />
 
-      <div className="rounded-2xl border border-[var(--glass-border)] bg-[var(--bg-darker)] px-4 py-4 text-sm leading-relaxed text-text-muted">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#556877]">문의 유형</p>
+      <div className="rounded-[0.7rem] border border-[var(--glass-border)] bg-[var(--bg-darker)] px-4 py-4 text-sm leading-relaxed text-text-muted">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#44515d]">문의 유형</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {INQUIRY_TYPES.map((item) => {
             const IconComponent = item.icon;
@@ -223,10 +222,10 @@ const ContactForm = ({
             return (
               <label
                 key={item.value}
-                className={`flex cursor-pointer gap-4 rounded-2xl border px-4 py-4 transition-[border-color,background-color,box-shadow,transform] duration-300 ${
+                className={`flex cursor-pointer gap-4 rounded-[0.7rem] border px-4 py-4 transition-[border-color,background-color,box-shadow,transform] duration-300 ${
                   isSelected
-                    ? 'border-[#007a8c] bg-white text-[#007a8c] shadow-md shadow-[#007a8c]/5 -translate-y-0.5'
-                    : 'border-[#e2e8f0] bg-white text-[#556877] hover:border-[#007a8c]/40 hover:bg-[#007a8c]/5'
+                    ? 'border-[#102133] bg-white text-[#102133] shadow-md shadow-[#102133]/5 -translate-y-0.5'
+                    : 'border-[#ded8cf] bg-white text-[#44515d] hover:border-[#102133]/40 hover:bg-[#102133]/5'
                 }`}
               >
                 <input
@@ -241,7 +240,7 @@ const ContactForm = ({
                 {/* 좌측 아이콘 영역 */}
                 <div
                   className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl transition-[background-color,color] duration-300 ${
-                    isSelected ? 'bg-[#007a8c]/10 text-[#007a8c]' : 'bg-[#f8fafc] text-[#94a3b8]'
+                    isSelected ? 'bg-[#102133]/10 text-[#102133]' : 'bg-[#f7f2ec] text-[#8b7f70]'
                   }`}
                 >
                   <IconComponent size={20} className={isSelected ? 'animate-pulse' : ''} />
@@ -249,10 +248,10 @@ const ContactForm = ({
 
                 {/* 우측 텍스트 영역 */}
                 <div className="flex flex-col text-left">
-                  <span className={`text-[0.95rem] font-bold transition-[color] duration-300 ${isSelected ? 'text-[#007a8c]' : 'text-[#0f2230]'}`}>
+                  <span className={`text-[0.95rem] font-bold transition-[color] duration-300 ${isSelected ? 'text-[#102133]' : 'text-[#102133]'}`}>
                     {item.label}
                   </span>
-                  <span className="mt-1 text-[0.78rem] leading-relaxed text-[#556877] font-medium">
+                  <span className="mt-1 text-[0.78rem] leading-relaxed text-[#44515d] font-medium">
                     {item.helper}
                   </span>
                 </div>
@@ -378,20 +377,20 @@ const ContactForm = ({
       </label>
 
       {notice ? (
-        <p className={`rounded-2xl border px-4 py-3 text-sm leading-relaxed ${status === 'success' ? 'border-[var(--accent-primary)] bg-[rgba(0,91,112,0.04)] text-[var(--accent-primary)]' : 'border-[var(--glass-border)] bg-[var(--bg-soft)] text-text-muted'}`}>
+        <p className={`rounded-[0.7rem] border px-4 py-3 text-sm leading-relaxed ${status === 'success' ? 'border-[var(--accent-primary)] bg-[rgba(16,33,51,0.04)] text-[var(--accent-primary)]' : 'border-[var(--glass-border)] bg-[var(--bg-soft)] text-text-muted'}`}>
           {notice}
         </p>
       ) : null}
 
-      <div className="flex flex-col gap-4 border-t border-[#e2e8f0] pt-6 sm:flex-row sm:items-center sm:justify-between">
+      <div className="flex flex-col gap-4 border-t border-[#ded8cf] pt-6 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-start gap-2 max-w-xl text-left">
-          <Lock size={15} className="mt-1 shrink-0 text-[#007a8c]/80" />
-          <p className="text-[0.82rem] leading-relaxed text-[#556877] font-medium">{footerText}</p>
+          <Lock size={15} className="mt-1 shrink-0 text-[#102133]/80" />
+          <p className="text-[0.82rem] leading-relaxed text-[#44515d] font-medium">{footerText}</p>
         </div>
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="flex items-center justify-center gap-2.5 rounded-lg bg-[#007a8c] px-7 py-3 text-[0.92rem] font-bold text-white transition-[background-color,transform,box-shadow] duration-300 hover:bg-[#006270] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#007a8c]/20 active:translate-y-0 disabled:opacity-50"
+          className="flex items-center justify-center gap-2.5 rounded-[0.25rem] bg-[#102133] px-7 py-3 text-[0.92rem] font-bold text-white transition-[background-color,transform,box-shadow] duration-300 hover:bg-[#1b3145] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#102133]/20 active:translate-y-0 disabled:opacity-50"
         >
           {status === 'submitting' ? '전송 중...' : inquiryMeta.submitLabel}
           <Send size={15} />

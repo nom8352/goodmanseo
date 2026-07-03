@@ -148,7 +148,7 @@ const BlogDetail = () => {
           <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-[-0.06em] sm:text-5xl">{post.title}</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-text-muted">{post.excerpt}</p>
 
-          <figure className="mt-8 overflow-hidden rounded-2xl border border-[#005b70]/8 bg-white">
+          <figure className="mt-8 overflow-hidden rounded-[0.7rem] border border-[#102133]/8 bg-white">
             <img
               src={post.image}
               alt={post.imageAlt}
@@ -163,7 +163,7 @@ const BlogDetail = () => {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl border border-[#005b70]/10 bg-[#f2fafb] p-6 sm:p-8">
+          <div className="mt-12 rounded-[0.7rem] border border-[#102133]/10 bg-[#f7f2ec] p-6 sm:p-8">
             <p className="text-sm font-extrabold text-accent-primary">{serviceCta.eyebrow}</p>
             <h2 className="mt-3 max-w-3xl text-2xl font-black tracking-[-0.04em] text-text-main">
               {serviceCta.title}
@@ -182,7 +182,7 @@ const BlogDetail = () => {
             </div>
           </div>
 
-          <aside className="mt-12 border-t border-[#005b70]/10 pt-8" aria-labelledby="related-posts-heading">
+          <aside className="mt-12 border-t border-[#102133]/10 pt-8" aria-labelledby="related-posts-heading">
             <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
               <div>
                 <p className="text-sm font-extrabold text-accent-primary">함께 보면 좋은 글</p>
@@ -201,7 +201,7 @@ const BlogDetail = () => {
                 <Link
                   key={relatedPost.id}
                   to={`/blog/${relatedPost.id}`}
-                  className="article-card group overflow-hidden transition duration-200 hover:border-[#005b70]/15"
+                  className="article-card group overflow-hidden transition duration-200 hover:border-[#102133]/15"
                 >
                   <div className="article-card__thumb aspect-[16/9] min-h-0">
                     <img
@@ -226,7 +226,7 @@ const BlogDetail = () => {
             </div>
           </aside>
 
-          <div className="mt-12 border-t border-[#005b70]/10 pt-8">
+          <div className="mt-12 border-t border-[#102133]/10 pt-8">
             <p className="text-base leading-relaxed text-text-muted">
               지금 내 비즈니스가 온라인에서 어떻게 보이는지 먼저 확인하고 싶다면,
               무료 점검으로 홈페이지와 구글 비즈니스 기본 상태부터 확인해보세요.

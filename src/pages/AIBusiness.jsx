@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown, Check, Bot, LineChart, Settings, PlayCircle, BookOpenCheck } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
 const ease = [0.16, 1, 0.3, 1];
@@ -67,8 +67,8 @@ const faqItems = [
           '트렌디한 AI 기술을 내 비즈니스 실무에 유기적으로 결합하여 생산성을 높이고 싶은 분'
         ].map((item) => (
           <div key={item} className="flex items-start gap-2 py-0.5 text-left">
-            <span className="text-[#007a8c] mt-1 text-xs">✓</span>
-            <span className="text-[0.93rem] leading-[1.5] text-[#556877]">{item}</span>
+            <span className="text-[#102133] mt-1 text-xs">✓</span>
+            <span className="text-[0.93rem] leading-[1.5] text-[#44515d]">{item}</span>
           </div>
         ))}
       </div>
@@ -87,8 +87,8 @@ const faqItems = [
           '비즈니스 일일 운영 현황 분석 및 노션/구글 스프레드시트 기반의 재고 정리 문서화 프로세스 자동화'
         ].map((item) => (
           <div key={item} className="flex items-start gap-2 py-0.5 text-left">
-            <span className="text-[#007a8c] mt-1 text-xs">✓</span>
-            <span className="text-[0.93rem] leading-[1.5] text-[#556877]">{item}</span>
+            <span className="text-[#102133] mt-1 text-xs">✓</span>
+            <span className="text-[0.93rem] leading-[1.5] text-[#44515d]">{item}</span>
           </div>
         ))}
       </div>
@@ -102,19 +102,19 @@ const FaqItem = ({ question, answer }) => {
     <div className="py-1">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between text-left py-4 transition-colors hover:text-[#007a8c] group"
+        className="flex w-full items-center justify-between text-left py-4 transition-colors hover:text-[#102133] group"
       >
         <span className="flex items-center gap-3">
-          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#e6f4f6] text-[0.8rem] font-bold text-[#007a8c]">
+          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#f1ebe3] text-[0.8rem] font-bold text-[#102133]">
             Q
           </span>
-          <span className="text-[0.95rem] font-semibold tracking-[-0.02em] text-[#0f2230] group-hover:text-[#007a8c] transition-colors">
+          <span className="text-[0.95rem] font-semibold tracking-[-0.02em] text-[#102133] group-hover:text-[#102133] transition-colors">
             {question}
           </span>
         </span>
         <ChevronDown 
           size={18} 
-          className={`text-[#007a8c] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+          className={`text-[#102133] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
       <div 
@@ -122,7 +122,7 @@ const FaqItem = ({ question, answer }) => {
           isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="pl-9 pb-5 text-[0.92rem] leading-[1.7] text-[#4e6170]">
+        <div className="pl-9 pb-5 text-[0.92rem] leading-[1.7] text-[#44515d]">
           {answer}
         </div>
       </div>
@@ -132,7 +132,7 @@ const FaqItem = ({ question, answer }) => {
 
 const AIBusiness = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#f2fafb] via-white to-[#ecf6f8] pt-24 pb-16 text-[#0f2230]">
+    <div className="min-h-screen bg-gradient-to-tr from-[#f7f2ec] via-white to-[#eee7df] pt-24 pb-16 text-[#102133]">
       <Seo
         title="AI 실전 멘토링"
         description="상품 설명, 고객 응대, 홈페이지 문구, 재고 관리 등 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 스터디그룹, 온라인 1:1 AI 실전 멘토링, 오프라인 그룹 워크숍 운영."
@@ -145,74 +145,74 @@ const AIBusiness = () => {
         {/* ── Hero 영역 ── */}
         <section className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center">
           {/* Hero 좌측 */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease }}
             className="flex flex-col items-start text-left"
           >
-            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#e6f4f6] border border-[#d2ebef] px-3.5 py-1 text-[0.78rem] font-bold text-[#007a8c] mb-6">
-              <span className="text-[#007a8c]">✦</span> AI와 전문가의 만남
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#f1ebe3] border border-[#ded8cf] px-3.5 py-1 text-[0.78rem] font-bold text-[#102133] mb-6">
+              <span className="text-[#102133]">✦</span> AI와 전문가의 만남
             </div>
             
-            <h1 className="text-[clamp(2.3rem,4.5vw,3.6rem)] font-black leading-[1.15] tracking-[-0.04em] text-[#0f2230]">
+            <h1 className="text-[clamp(2.3rem,4.5vw,3.6rem)] font-black leading-[1.15] tracking-[-0.04em] text-[#102133]">
               내 비즈니스에
               <br />
-              <span className="text-[#007a8c]">진짜 도움 되는</span> 솔루션
+              <span className="text-[#102133]">진짜 도움 되는</span> 솔루션
             </h1>
             
-            <p className="mt-6 text-[1.05rem] leading-[1.7] text-[#556877] max-w-xl">
+            <p className="mt-6 text-[1.05rem] leading-[1.7] text-[#44515d] max-w-xl">
               상품 설명, 리뷰 답변, 고객 응대까지 반복 업무는 AI가 대신!
               <br />
               실무에 적용 가능한 맞춤형 자동화 솔루션을 만나보세요.
             </p>
-          </motion.div>
+          </Motion.div>
 
           {/* Hero 우측 (대시보드 그래픽) */}
-          <motion.div
+          <Motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.15, ease }}
             className="relative flex flex-col items-center justify-center p-4 lg:p-0"
           >
             {/* 배경 서클 광원 */}
-            <div className="absolute h-72 w-72 rounded-full bg-[#007a8c]/5 blur-3xl -z-10" />
+            <div className="absolute h-72 w-72 rounded-[0.25rem] bg-[#102133]/5 blur-3xl -z-10" />
 
             {/* 그래픽 배치 */}
             <div className="relative w-full max-w-[420px] h-[340px] flex items-center justify-center">
               
               {/* 1) 업무 자동화 시간 카드 */}
-              <motion.div
+              <Motion.div
                 initial={{ y: 10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="absolute top-4 left-0 w-[220px] rounded-2xl bg-white/80 backdrop-blur-md p-5 border border-white/60 shadow-[0_20px_40px_rgba(0,122,140,0.06)]"
+                className="absolute top-4 left-0 w-[220px] rounded-[0.7rem] bg-white/80 backdrop-blur-md p-5 border border-white/60 shadow-[0_20px_40px_rgba(16,33,51,0.06)]"
               >
-                <p className="text-[0.72rem] font-bold text-[#8fa4b5] uppercase tracking-wider">업무 자동화 시간</p>
+                <p className="text-[0.72rem] font-bold text-[#7a6f62] uppercase tracking-wider">업무 자동화 시간</p>
                 <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-3xl font-black text-[#0f2230] tracking-tight">85%</span>
-                  <span className="text-[0.78rem] font-semibold text-[#007a8c]">시간 절감 효과</span>
+                  <span className="text-3xl font-black text-[#102133] tracking-tight">85%</span>
+                  <span className="text-[0.78rem] font-semibold text-[#102133]">시간 절감 효과</span>
                 </div>
                 {/* SVG 꺾은선 그래프 */}
                 <div className="mt-4 h-16 w-full overflow-visible">
                   <svg className="h-full w-full overflow-visible" viewBox="-2 -4 104 48" preserveAspectRatio="none">
                     <defs>
                       <linearGradient id="line-grad" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0%" stopColor="#007a8c" stopOpacity="0.25" />
-                        <stop offset="100%" stopColor="#007a8c" stopOpacity="0.0" />
+                        <stop offset="0%" stopColor="#102133" stopOpacity="0.25" />
+                        <stop offset="100%" stopColor="#102133" stopOpacity="0.0" />
                       </linearGradient>
                     </defs>
-                    <motion.path
+                    <Motion.path
                       d="M0,35 C16,32 26,29 38,25 C52,21 63,18 74,13 C86,8 94,5 100,2"
                       fill="none"
-                      stroke="#007a8c"
+                      stroke="#102133"
                       strokeWidth="2.5"
                       strokeLinecap="round"
                       initial={{ pathLength: 0 }}
                       animate={{ pathLength: 1 }}
                       transition={{ duration: 1.5, delay: 0.6, ease: "easeOut" }}
                     />
-                    <motion.path
+                    <Motion.path
                       d="M0,35 C16,32 26,29 38,25 C52,21 63,18 74,13 C86,8 94,5 100,2 L100,40 L0,40 Z"
                       fill="url(#line-grad)"
                       initial={{ opacity: 0 }}
@@ -220,48 +220,48 @@ const AIBusiness = () => {
                       transition={{ duration: 0.8, delay: 1.2 }}
                     />
                     {/* 끝점 포인트 */}
-                    <circle cx="100" cy="2" r="3" fill="#007a8c" />
+                    <circle cx="100" cy="2" r="3" fill="#102133" />
                   </svg>
                 </div>
-              </motion.div>
+              </Motion.div>
 
               {/* 2) 업무 성과 카드 */}
-              <motion.div
+              <Motion.div
                 initial={{ y: -10, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.55 }}
-                className="absolute bottom-4 right-0 w-[220px] rounded-2xl bg-white/80 backdrop-blur-md p-5 border border-white/60 shadow-[0_20px_40px_rgba(0,122,140,0.06)]"
+                className="absolute bottom-4 right-0 w-[220px] rounded-[0.7rem] bg-white/80 backdrop-blur-md p-5 border border-white/60 shadow-[0_20px_40px_rgba(16,33,51,0.06)]"
               >
-                <p className="text-[0.72rem] font-bold text-[#8fa4b5] uppercase tracking-wider">업무 성과</p>
+                <p className="text-[0.72rem] font-bold text-[#7a6f62] uppercase tracking-wider">업무 성과</p>
                 <div className="flex flex-col mt-0.5">
-                  <span className="text-[0.7rem] font-semibold text-[#8fa4b5]">전환율</span>
-                  <span className="text-3xl font-black text-[#007a8c] tracking-tight leading-none mt-1">+127%</span>
+                  <span className="text-[0.7rem] font-semibold text-[#7a6f62]">전환율</span>
+                  <span className="text-3xl font-black text-[#102133] tracking-tight leading-none mt-1">+127%</span>
                 </div>
                 {/* SVG 막대 그래프 */}
                 <div className="mt-4 h-16 w-full flex items-end justify-between gap-1.5 px-1">
                   {[24, 34, 44, 53, 62, 72, 82, 94].map((h, i) => (
-                    <div key={i} className="flex w-full items-end overflow-hidden rounded-t-sm bg-[#e6f4f6]" style={{ height: '100%' }}>
-                      <motion.div
+                    <div key={i} className="flex w-full items-end overflow-hidden rounded-t-sm bg-[#f1ebe3]" style={{ height: '100%' }}>
+                      <Motion.div
                         initial={{ height: 0 }}
                         animate={{ height: `${h}%` }}
                         transition={{ duration: 0.8, delay: 0.7 + i * 0.05 }}
-                        className={`w-full rounded-t-sm ${i === 7 ? 'bg-[#007a8c]' : 'bg-[#007a8c]/50'}`}
+                        className={`w-full rounded-t-sm ${i === 7 ? 'bg-[#102133]' : 'bg-[#102133]/50'}`}
                       />
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </Motion.div>
 
               {/* 3) AI 플로팅 배지 */}
-              <motion.div
+              <Motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute right-6 top-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-[#009cb3] to-[#007a8c] text-white font-extrabold text-lg shadow-[0_12px_24px_rgba(0,122,140,0.25)] border border-white/20"
+                className="absolute right-6 top-10 flex h-14 w-14 items-center justify-center rounded-[0.7rem] bg-gradient-to-br from-[#1b3145] to-[#102133] text-white font-extrabold text-lg shadow-[0_12px_24px_rgba(16,33,51,0.25)] border border-white/20"
               >
                 AI
-              </motion.div>
+              </Motion.div>
             </div>
-          </motion.div>
+          </Motion.div>
         </section>
 
         {/* ── 3대 상품 그리드 영역 ── */}
@@ -270,29 +270,29 @@ const AIBusiness = () => {
             {services.map((item, index) => {
               const IconComp = item.icon;
               return (
-                <motion.article
+                <Motion.article
                   key={item.title}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.6, delay: index * 0.1, ease }}
-                  className={`relative flex flex-col justify-between rounded-3xl p-8 bg-white border transition-all duration-300 hover:-translate-y-1 ${
+                  className={`relative flex flex-col justify-between rounded-[0.7rem] p-8 bg-white border transition-all duration-300 hover:-translate-y-1 ${
                     item.highlight 
-                      ? 'border-[#007a8c] shadow-[0_20px_40px_rgba(0,122,140,0.06)] hover:shadow-[0_30px_60px_rgba(0,122,140,0.12)]' 
-                      : 'border-slate-100 hover:border-slate-200 hover:border-[#007a8c]/20 shadow-sm hover:shadow-[0_20px_40px_rgba(0,122,140,0.04)]'
+                      ? 'border-[#102133] shadow-[0_20px_40px_rgba(16,33,51,0.06)] hover:shadow-[0_30px_60px_rgba(16,33,51,0.12)]'
+                      : 'border-[#e7e0d8] hover:border-[#ded8cf] hover:border-[#102133]/20 shadow-sm hover:shadow-[0_20px_40px_rgba(16,33,51,0.04)]'
                   }`}
                 >
                   <div>
                     {/* 카드 헤더 아이콘 */}
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f2fafb] text-[#007a8c] mb-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f7f2ec] text-[#102133] mb-6">
                       <IconComp size={22} />
                     </div>
 
-                    <h2 className="text-[1.38rem] font-bold tracking-[-0.03em] text-[#0f2230]">
+                    <h2 className="text-[1.38rem] font-bold tracking-[-0.03em] text-[#102133]">
                       {item.title}
                     </h2>
                     
-                    <p className="mt-1 text-[0.82rem] font-semibold text-[#8fa4b5]">
+                    <p className="mt-1 text-[0.82rem] font-semibold text-[#7a6f62]">
                       {item.tagline}
                     </p>
 
@@ -300,18 +300,18 @@ const AIBusiness = () => {
                     <div className="mt-7 space-y-3">
                       {item.checklist.map((point) => (
                         <div key={point} className="flex items-start gap-2.5 text-left">
-                          <Check size={16} className="text-[#007a8c] shrink-0 mt-0.5" />
-                          <span className="text-[0.9rem] leading-[1.4] text-[#4e6170] font-medium">{point}</span>
+                          <Check size={16} className="text-[#102133] shrink-0 mt-0.5" />
+                          <span className="text-[0.9rem] leading-[1.4] text-[#44515d] font-medium">{point}</span>
                         </div>
                       ))}
                     </div>
 
                     {/* 이런 분께 추천해요 박스 */}
-                    <div className="mt-8 rounded-2xl bg-[#f5fbfb] border border-[#e3f4f6] p-4 text-left">
-                      <p className="text-[0.78rem] font-extrabold text-[#007a8c] mb-1.5">
+                    <div className="mt-8 rounded-[0.7rem] border border-[#ded8cf] bg-white p-4 text-left shadow-[0_6px_16px_rgba(16,33,51,0.035)]">
+                      <p className="text-[0.78rem] font-extrabold text-[#102133] mb-1.5">
                         {item.recommendTitle}
                       </p>
-                      <p className="text-[0.82rem] leading-[1.5] text-[#556877] font-medium">
+                      <p className="text-[0.82rem] leading-[1.5] text-[#44515d] font-medium">
                         {item.recommendDesc}
                       </p>
                     </div>
@@ -323,42 +323,42 @@ const AIBusiness = () => {
                       to={item.ctaLink}
                       className={`flex w-full items-center justify-center gap-2 rounded-full py-3 text-[0.92rem] font-bold transition-all ${
                         item.highlight
-                          ? 'bg-[#007a8c] text-white hover:bg-[#006270] shadow-[0_8px_20px_rgba(0,122,140,0.15)]'
-                          : 'border border-[#007a8c]/40 text-[#007a8c] hover:bg-[#007a8c]/5'
+                          ? 'bg-[#102133] text-white hover:bg-[#1b3145] shadow-[0_8px_20px_rgba(16,33,51,0.15)]'
+                          : 'border border-[#102133]/40 text-[#102133] hover:bg-[#102133]/5'
                       }`}
                     >
                       {item.ctaText}
                       <ArrowRight size={15} />
                     </Link>
                   </div>
-                </motion.article>
+                </Motion.article>
               );
             })}
           </div>
         </section>
 
         {/* ── 온라인 강의 연결 영역 ── */}
-        <motion.section
+        <Motion.section
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6, ease }}
-          className="mt-12 rounded-[1.6rem] border border-[#cce7eb] bg-white p-6 shadow-[0_14px_38px_rgba(0,91,112,0.04)] md:p-8"
+          className="mt-12 rounded-[1.6rem] border border-[#ded8cf] bg-white p-6 shadow-[0_14px_38px_rgba(16,33,51,0.04)] md:p-8"
         >
           <div className="grid gap-6 lg:grid-cols-[0.85fr_1fr_auto] lg:items-center">
             <div className="flex items-start gap-4">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#e6f4f6] text-[#007a8c]">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-[0.7rem] bg-[#f1ebe3] text-[#102133]">
                 <BookOpenCheck size={24} />
               </span>
               <div>
-                <p className="text-sm font-extrabold text-[#007a8c]">온라인 강의</p>
-                <h2 className="mt-1 text-[clamp(1.45rem,2.3vw,2rem)] font-black leading-tight tracking-[-0.04em] text-[#0f2230]">
+                <p className="text-sm font-extrabold text-[#102133]">온라인 강의</p>
+                <h2 className="mt-1 text-[clamp(1.45rem,2.3vw,2rem)] font-black leading-tight tracking-[-0.04em] text-[#102133]">
                   먼저 직접 배워보고 싶은 사장님을 위한 Codex 강의
                 </h2>
               </div>
             </div>
 
-            <p className="text-sm leading-relaxed text-[#4e6170]">
+            <p className="text-sm leading-relaxed text-[#44515d]">
               1:1 멘토링 전, 콘텐츠 작성과 반복업무 자동화의 기본 흐름을 직접 익히고 싶다면
               굳팀장의 비개발자용 AI 실무 강의로 시작할 수 있습니다.
             </p>
@@ -366,7 +366,7 @@ const AIBusiness = () => {
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
               <Link
                 to="/ai-course"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#007a8c] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#006270]"
+                className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-sm font-extrabold text-white transition hover:bg-[#1b3145]"
               >
                 <PlayCircle size={17} />
                 강의 소개 보기
@@ -375,21 +375,21 @@ const AIBusiness = () => {
                 href="https://inf.run/xfxvT"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-[#007a8c]/30 bg-[#f2fafb] px-5 py-3 text-sm font-extrabold text-[#007a8c] transition hover:bg-[#e6f4f6]"
+                className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] border border-[#102133]/30 bg-[#f7f2ec] px-5 py-3 text-sm font-extrabold text-[#102133] transition hover:bg-[#f1ebe3]"
               >
                 인프런으로 이동
                 <ArrowRight size={16} />
               </a>
             </div>
           </div>
-        </motion.section>
+        </Motion.section>
 
         {/* ── FAQ & 캐릭터 데코레이션 영역 ── */}
         <section className="mt-14 w-full max-w-4xl mx-auto">
           <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-center">
             
             {/* FAQ 리스트 */}
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -399,10 +399,10 @@ const AIBusiness = () => {
               {faqItems.map((item) => (
                 <FaqItem key={item.question} question={item.question} answer={item.answer} />
               ))}
-            </motion.div>
+            </Motion.div>
 
             {/* 로봇 데코레이션 일러스트 */}
-            <motion.div
+            <Motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -414,68 +414,68 @@ const AIBusiness = () => {
                 <div className="relative h-28 w-28 flex items-center justify-center">
                   
                   {/* 머리 뒤쪽 광채 효과 */}
-                  <div className="absolute h-24 w-24 rounded-full bg-[#007a8c]/10 blur-xl" />
+                  <div className="absolute h-24 w-24 rounded-[0.25rem] bg-[#102133]/10 blur-xl" />
 
                   {/* 둥근 로봇 헤드 */}
-                  <div className="h-24 w-24 rounded-full bg-gradient-to-b from-[#f8fafc] to-[#e2e8f0] border-2 border-white shadow-[0_12px_24px_rgba(0,0,0,0.06),inset_0_-4px_8px_rgba(0,0,0,0.03)] flex flex-col items-center justify-center p-3 relative z-10">
+                  <div className="h-24 w-24 rounded-full bg-gradient-to-b from-[#f7f2ec] to-[#ded8cf] border-2 border-white shadow-[0_12px_24px_rgba(0,0,0,0.06),inset_0_-4px_8px_rgba(0,0,0,0.03)] flex flex-col items-center justify-center p-3 relative z-10">
                     
                     {/* 귀/헤드셋 파트 */}
-                    <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-r-md bg-[#cbd5e1] border-l border-white" />
-                    <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-l-md bg-[#cbd5e1] border-r border-white" />
+                    <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-r-md bg-[#c9bfae] border-l border-white" />
+                    <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-l-md bg-[#c9bfae] border-r border-white" />
 
                     {/* 눈 부분 디스플레이 */}
-                    <div className="w-[72px] h-[34px] rounded-2xl bg-[#0f172a] shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)] flex items-center justify-center gap-2.5 p-1 mt-1">
+                    <div className="w-[72px] h-[34px] rounded-[0.7rem] bg-[#0f172a] shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)] flex items-center justify-center gap-2.5 p-1 mt-1">
                       {/* 푸른 빛 눈 LED */}
-                      <motion.div
+                      <Motion.div
                         animate={{ scaleY: [1, 0.1, 1] }}
                         transition={{ duration: 4, repeat: Infinity, repeatDelay: 2 }}
-                        className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#00ffff] to-[#00a3ff] shadow-[0_0_8px_#00ffff]"
+                        className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#d8c8af] to-[#c9b99a] shadow-[0_0_8px_#d8c8af]"
                       />
-                      <motion.div
+                      <Motion.div
                         animate={{ scaleY: [1, 0.1, 1] }}
                         transition={{ duration: 4, repeat: Infinity, repeatDelay: 2 }}
-                        className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#00ffff] to-[#00a3ff] shadow-[0_0_8px_#00ffff]"
+                        className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#d8c8af] to-[#c9b99a] shadow-[0_0_8px_#d8c8af]"
                       />
                     </div>
 
                     {/* 입 파트 (볼선) */}
-                    <div className="w-6 h-1 rounded-full bg-[#cbd5e1] mt-3" />
+                    <div className="w-6 h-1 rounded-full bg-[#c9bfae] mt-3" />
                   </div>
                 </div>
 
                 {/* 말풍선 */}
-                <div className="mt-4 bg-white border border-[#e2e8f0] rounded-2xl px-4 py-2.5 shadow-sm text-center relative max-w-[200px]">
+                <div className="mt-4 bg-white border border-[#ded8cf] rounded-[0.7rem] px-4 py-2.5 shadow-sm text-center relative max-w-[200px]">
                   {/* 말풍선 꼬리 */}
-                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-t border-l border-[#e2e8f0]" />
-                  <p className="text-[0.78rem] font-bold text-[#556877] leading-relaxed relative z-10">
+                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-t border-l border-[#ded8cf]" />
+                  <p className="text-[0.78rem] font-bold text-[#44515d] leading-relaxed relative z-10">
                     자동화로 사장님의 시간을 돌려드릴게요!
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </Motion.div>
 
           </div>
         </section>
 
         {/* ── 최하단 CTA 배너 ── */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease }}
           className="mt-12 text-center"
         >
-          <p className="text-[0.93rem] font-semibold text-[#556877] mb-5">
+          <p className="text-[0.93rem] font-semibold text-[#44515d] mb-5">
             지금 문의를 남기고 우리 비즈니스에 맞는 자동화 방향을 확인해보세요.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[#007a8c] text-white px-8 py-3.5 text-[0.95rem] font-bold hover:bg-[#006270] transition-all shadow-[0_12px_24px_rgba(0,122,140,0.12)] hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-[0.25rem] bg-[#102133] text-white px-8 py-3.5 text-[0.95rem] font-bold hover:bg-[#1b3145] transition-all shadow-[0_12px_24px_rgba(16,33,51,0.12)] hover:-translate-y-0.5"
           >
             AI 멘토링 문의하기
             <ArrowRight size={16} />
           </Link>
-        </motion.div>
+        </Motion.div>
 
       </div>
     </div>

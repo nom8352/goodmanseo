@@ -1,5 +1,13 @@
 # Wiki Log
 
+## 2026-07-04
+
+- Saved the current homepage redesign rules into `DESIGN.md`.
+- Updated `docs/current-status.md` and `wiki/concepts/design-context.md` to mark the navy/off-white reference-image direction as the current homepage source of truth.
+- Current homepage design rules include: warm off-white hero, serif hero headline, sans-serif logo/nav/footer logo, generated woman hero image, four floating hero cards, full-width white common-issues section, full-width dark navy service/course/sample sections, compact typography, low-radius buttons/cards, deep navy footer, and no score/gauge/improvement CTA section.
+- Added five Notion-based AI report sample pages to the website via `src/data/aiReportSamples.js`, shared `AIReportSample.jsx`, `/ai-report/:sampleSlug` routing, and static generation entries. `/ai-report` now links to all five samples.
+- Updated `/ai-report` public copy against the Notion AI report notes: single `AUD 249` AI business report positioning, Business + Website + SEO Audit Report framing, no fixed delivery-time/page-count/human-review promises, and less defensive AI persona wording.
+
 ## 2026-06-25
 
 - Added `docs/seo-audit-2026-06-25.md` for the full-site SEO audit and marked Linear `GOO-140` done.

@@ -33,7 +33,7 @@ const Blog = () => {
               <Link
                 key={post.id}
                 to={`/blog/${post.id}`}
-                className="article-card group overflow-hidden transition duration-200 hover:border-[#005b70]/15"
+                className="article-card group overflow-hidden transition duration-200 hover:border-[#102133]/15"
               >
                 <div className="article-card__thumb aspect-[16/9] min-h-0">
                   <img

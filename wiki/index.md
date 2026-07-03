@@ -1,6 +1,6 @@
 # GoodmanSEO LLM Wiki
 
-Last updated: 2026-06-25
+Last updated: 2026-07-04
 
 This is the project memory layer for GoodmanSEO. Use it as the first structured map after reading `CLAUDE.md` and `docs/current-status.md`.
 
@@ -17,7 +17,7 @@ The service reviews Google Business Profile, website, Instagram, and Facebook to
 - `CLAUDE.md`: primary project context and messaging guardrails
 - `AGENTS.md`: local agent read order and project guardrails
 - `PRODUCT.md`: official Impeccable strategic product context
-- `DESIGN.md`: official Impeccable visual design system
+- `DESIGN.md`: official Impeccable visual design system, updated on 2026-07-04 with the current homepage navy/off-white reference-image direction
 - `docs/current-status.md`: latest operating status, priorities, social schedule, and known local-only changes
 - `docs/2026-06-25-work-log.md`: June 25 blog, AI course landing, YouTube embed, build, and push work log
 - `docs/work-summary.md`: latest local redesign / quality / SEO work summary report
@@ -48,11 +48,10 @@ The service reviews Google Business Profile, website, Instagram, and Facebook to
 
 The strongest next project steps are:
 
-1. Review `/ai-course` on desktop and mobile, especially the YouTube embed and sticky enrollment card.
+1. Review the 2026-07-04 homepage redesign on desktop and mobile before deployment.
 2. Decide whether public wording should standardize on `무료 점검` or `무료 진단`.
 3. Decide whether `/starter-package` should remain public, redirect, or merge into `/pricing`.
 4. Confirm whether AI service prices should remain hidden or return to the AI/pricing pages.
-5. Replace or remove placeholder footer social links if real URLs are available.
 
 ## Do Not Forget
 

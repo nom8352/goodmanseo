@@ -1,5 +1,6 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { aiReportSamples } from '../src/data/aiReportSamples.js';
 import { blogPosts } from '../src/data/blogPosts.js';
 import {
   createBlogPostingJsonLd,
@@ -146,19 +147,19 @@ const baseRoutePages = [
   },
   {
     route: '/ai-report',
-    title: 'AI 비즈니스 컨설팅 리포트 | Goodman SEO',
+    title: 'AI 비즈니스 리포트 | Goodman SEO',
     description:
-      'GoodmanSEO AI 리포트는 사업 방향, 타겟 고객, 경쟁 구도, 홈페이지 구조 및 실행 우선순위를 3영업일 내 PDF로 정리합니다.',
+      'GoodmanSEO AI 비즈니스 리포트는 홈페이지, SEO, 구글 노출, 고객 반응, 비즈니스 포지셔닝을 함께 분석해 PDF로 정리합니다.',
     canonical: canonicalForRoute('/ai-report'),
     type: 'website',
     keywords:
-      'AI 비즈니스 컨설팅, 비즈니스 리포트, 사업 진단, 경쟁사 분석, 타겟 고객 분석, 로컬 비즈니스',
+      'AI 비즈니스 리포트, 홈페이지 진단, SEO 오딧, 구글 비즈니스 점검, AI 고객 반응 시뮬레이션',
     jsonLd: [
       organizationJsonLd,
       createServiceJsonLd({
-        name: 'GoodmanSEO AI 비즈니스 컨설팅 리포트',
+        name: 'GoodmanSEO AI 비즈니스 리포트',
         description:
-          '사업 방향, 타겟 고객, 경쟁 구도, 홈페이지 구조, 실행 우선순위를 정리하는 PDF 비즈니스 컨설팅 리포트 서비스입니다.',
+          '홈페이지, SEO, 구글 노출, 고객 반응, 비즈니스 포지셔닝을 함께 분석해 현재 상태와 성장 방향을 정리하는 PDF 리포트 서비스입니다.',
         path: '/ai-report',
         serviceType: 'AI business consulting report',
       }),
@@ -213,8 +214,26 @@ const blogRoutePages = blogPosts.map((post) => ({
   jsonLd: createBlogPostingJsonLd(post),
 }));
 
+const sampleReportRoutePages = aiReportSamples.map((sample) => ({
+  route: `/ai-report/${sample.slug}`,
+  title: `${sample.title} AI 비즈니스 리포트 | Goodman SEO`,
+  description: sample.description,
+  canonical: canonicalForRoute(`/ai-report/${sample.slug}`),
+  type: 'website',
+  keywords: `AI 비즈니스 리포트 샘플, ${sample.industry}, 홈페이지 진단, SEO 리포트, GoodmanSEO`,
+  jsonLd: [
+    organizationJsonLd,
+    createWebPageJsonLd({
+      name: `${sample.title} AI 비즈니스 리포트`,
+      description: sample.description,
+      path: `/ai-report/${sample.slug}`,
+    }),
+  ],
+}));
+
 const routePages = [
   ...baseRoutePages,
+  ...sampleReportRoutePages,
   ...blogRoutePages,
 ];
 

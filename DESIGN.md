@@ -1,155 +1,210 @@
 ---
 name: "GoodmanSEO"
-description: "A calm, practical online-channel review and cleanup service for local businesses in Australia."
+description: "A calm, practical online-channel review and cleanup service for Korean local businesses in Australia."
 colors:
-  accent-primary: "#005b70"
-  accent-secondary: "#007a8c"
+  accent-primary: "#102133"
+  accent-secondary: "#2d6fa3"
   accent-tertiary: "#ffffff"
-  bg-light: "#f8fafc"
-  bg-gradient-from: "#f2fafb"
-  bg-gradient-to: "#ecf6f8"
-  text-main: "#0f2230"
-  text-muted: "#4e6170"
-  text-soft: "#7c8f9f"
-  glass-border: "rgba(0, 91, 112, 0.08)"
+  bg-light: "#f7f2ec"
+  bg-gradient-from: "#f7f2ec"
+  bg-gradient-to: "#eee7df"
+  bg-dark-band: "#102133"
+  footer-bg: "#0f2132"
+  text-main: "#102133"
+  text-muted: "#44515d"
+  text-soft: "#687582"
+  text-on-dark: "#eef3f7"
+  text-on-dark-muted: "#aab5bd"
+  warm-panel: "#f7f2ec"
+  glass-border: "rgba(16, 33, 51, 0.1)"
 typography:
-  display:
+  logo:
     fontFamily: "Outfit, Pretendard, sans-serif"
-    fontSize: "clamp(2.2rem, 3.4vw, 3.6rem)"
+    fontSize: "clamp(1.12rem, 1.28vw, 1.32rem)"
     fontWeight: 800
-    lineHeight: 0.95
-    letterSpacing: "-0.04em"
+    letterSpacing: "0.02em"
+  hero:
+    fontFamily: "Lora, Georgia, serif"
+    fontSize: "clamp(1.8rem, 4vw, 3.6rem)"
+    fontWeight: 700
+    lineHeight: 1.15
+    letterSpacing: "-0.025em"
+  sectionTitle:
+    fontFamily: "Outfit, Pretendard, sans-serif"
+    fontSize: "clamp(1.45rem, 2.05vw, 2.15rem)"
+    fontWeight: 800
+    lineHeight: 1.18
+    letterSpacing: "-0.03em"
   body:
     fontFamily: "Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
-    fontSize: "0.95rem"
+    fontSize: "0.78rem to 0.86rem on compact homepage sections"
     fontWeight: 400
     lineHeight: 1.7
     letterSpacing: "normal"
   label:
-    fontFamily: "Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
+    fontFamily: "Lora, Georgia, serif"
     fontSize: "0.82rem"
-    fontWeight: 700
-    lineHeight: 1.2
-    letterSpacing: "0.05em"
+    fontWeight: 400
+    fontStyle: "italic"
 rounded:
-  sm: "0.5rem"
-  md: "1rem"
-  lg: "1.5rem"
-  panel: "2rem"
-  pill: "9999px"
+  button: "0.2rem to 0.25rem"
+  card: "0.35rem to 0.7rem"
+  panel: "0.45rem"
+  pill: "Use sparingly; not the default homepage shape"
 spacing:
-  xs: "0.5rem"
-  sm: "0.9rem"
-  md: "1.25rem"
-  lg: "1.5rem"
-  xl: "2.75rem"
+  compactSectionY: "3rem to 4rem"
+  compactGridGap: "0.75rem to 1rem"
+  cardPadding: "1rem to 1.25rem"
 components:
   button-primary:
-    backgroundColor: "{colors.accent-secondary}"
+    backgroundColor: "{colors.accent-primary}"
     textColor: "{colors.accent-tertiary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.pill}"
-    padding: "0.75rem 1.75rem"
+    rounded: "{rounded.button}"
+    fontSize: "0.76rem to 0.82rem"
+    fontWeight: 800
   button-secondary:
-    backgroundColor: "{colors.accent-tertiary}"
-    textColor: "{colors.accent-secondary}"
-    typography: "{typography.body}"
-    rounded: "{rounded.pill}"
-    padding: "0.75rem 1.75rem"
-  card-panel:
-    backgroundColor: "{colors.accent-tertiary}"
+    backgroundColor: "rgba(255,255,255,0.6)"
+    textColor: "{colors.accent-primary}"
+    borderColor: "#aeb6bc"
+    rounded: "{rounded.button}"
+  dark-card:
+    backgroundColor: "rgba(255,255,255,0.07)"
+    borderColor: "rgba(255,255,255,0.1)"
+    textColor: "{colors.text-on-dark}"
+    rounded: "{rounded.panel}"
+  warm-cta-panel:
+    backgroundColor: "{colors.warm-panel}"
     textColor: "{colors.text-main}"
     rounded: "{rounded.panel}"
-    padding: "2rem"
 ---
 
 # Design System: GoodmanSEO
 
 ## 1. Overview
 
-**Creative North Star: "The Calm Online Checkup (청량하고 단정한 온라인 검진)"**
+**Creative North Star: "Quiet Navy Checkup Desk"**
 
-GoodmanSEO는 호주와 한국 소상공인들이 복잡한 기술적 장벽 없이 자신의 온라인 현황(구글, 웹사이트, SNS)을 투명하고 편안하게 진단받을 수 있는 "청량하고 정돈된 1차 검진 데스크" 형태의 시각 체계를 지향합니다. 인위적인 다크 모드 테마에서 탈피하여, 맑은 날씨의 지중해 해변을 연상시키는 맑고 연한 청록 그라디언트 기반의 라이트 테마로 전면 개편되었습니다.
+GoodmanSEO의 메인페이지는 참고 이미지처럼 신뢰감 있는 진한 남색, 따뜻한 오프화이트 배경, 조밀한 정보 밀도, 정돈된 카드 UI를 기준으로 한다. 비즈니스 컨설팅 문구를 따라 하지는 않고, 포지셔닝은 계속 `홈페이지 + 구글 비즈니스 + 기본 SEO + 소셜 링크 연결`을 현실적으로 정리해주는 온라인 점검 서비스로 유지한다.
 
-**Key Characteristics:**
-- 은은한 청록/블루 그라디언트 배경과 정갈한 백색 카드 패널의 매칭
-- 좁은 자간 겹침을 예방하는 Outfit display 한글 서체 규격
-- 조작감이 느껴지는 프리미엄 인터랙티브 모션(Hover Lift-up 및 SVG 드로잉)
-- 모바일 환경에서의 엄격한 웹 접근성(ARIA) 및 터치 타겟(44x44px 이상) 확보
+현재 메인페이지 디자인은 예전 청록/라이트 테마보다 우선한다.
+
+Key characteristics:
+
+- 히어로는 따뜻한 오프화이트 배경, 세리프 메인 문구, 산세리프 메뉴/로고 조합
+- 히어로 오른쪽은 생성한 여성 상담자 이미지와 4개의 작은 플로팅 카드만 사용
+- `혹시 이런 문제로 고민하고 계신가요?` 섹션은 전체 폭 흰색 배경, 작은 타이포, 조밀한 그리드
+- 서비스 소개, 강의 배너, 업종별 샘플 사이트는 진한 남색 풀폭 밴드 안에서 같은 톤으로 처리
+- 푸터는 같은 계열의 진한 남색, 완전 흰색이 아닌 블루그레이 텍스트, 작은 소셜 아이콘 사용
 
 ## 2. Colors
 
-은은한 모닝 코브 청록 색조가 브랜드 신뢰도와 전문적 기술 검진의 기조를 형성합니다.
-
 ### Primary
-- **Aqua Checkup Teal** (`accent-secondary` / `#007a8c`): 주요 의사결정 CTA 버튼, 성공 상태, 그리고 비주얼적 핵심 텍스트를 강조하는 역할을 맡습니다.
+
+- **Goodman Navy** (`#102133`): 메인 메뉴 CTA, 어두운 섹션 밴드, 버튼, 핵심 텍스트.
+- **Footer Navy** (`#0f2132`): 푸터 전용 배경. 메인 남색보다 살짝 깊게 둔다.
 
 ### Secondary
-- **Deep Muted Ocean** (`accent-primary` / `#005b70`): 서브 뱃지 라벨 및 강한 강조를 지니는 타이틀 컴포넌트에 활용합니다.
+
+- **Muted Blue Accent** (`#2d6fa3`): 그래프/상승 수치 같은 작은 강조에만 사용한다. 섹션 라벨이나 큰 텍스트를 파랗게 만들지 않는다.
+- **Warm Line Accent** (`#d8c8af`): 어두운 카드 안 아이콘/작은 링크 강조에 사용한다.
 
 ### Neutral
-- **Clear Morning** (`bg-gradient-from` / `#f2fafb`): 최상단 배경을 이루는 맑은 해무 청록 톤.
-- **Soft Coast** (`bg-gradient-to` / `#ecf6f8`): 페이지 하단으로 가며 퍼지는 은은한 그라디언트 톤.
-- **Ocean Ink** (`text-main` / `#0f2230`): 높은 대비를 제공하는 가독성 극대화 남색 텍스트 컬러.
-- **Muted Sand** (`text-muted` / `#4e6170`): 서브 타이틀 및 보조 설명 텍스트를 담당하는 다크 그레이-네이비.
 
-### Named Rules
-**The Sparse Accent Rule (희소성의 법칙).** 청록색 포인트 컬러는 중요한 폼 전송, 신청 버튼 등 전체 화면 대비 10% 이하의 극소 면적에만 적용하여 희소성을 유지합니다.
-**The Contrast Safety Rule (대비 안전 규칙).** 연한 회색 글씨(`text-soft`)는 라이트 배경에서 글씨가 뭉개지므로 본문이나 입력 폼 설명에 절대 단독으로 사용하지 않습니다.
+- **Warm Off-White** (`#f7f2ec`): 히어로와 CTA 패널 배경.
+- **Soft Warm Base** (`#eee7df`): 바디 그라데이션 하단.
+- **Ink** (`#102133`): 라이트 배경의 주요 텍스트.
+- **Muted Ink** (`#44515d` / `#566471`): 라이트 배경 설명문.
+- **Dark Muted Text** (`#aab5bd` / `#aeb8c1`): 남색 배경의 설명문.
+- **Dark Primary Text** (`#eef3f7`): 남색 배경의 제목. 완전 흰색은 제한적으로만 사용한다.
+
+### Rules
+
+- 파란색 포인트는 작은 그래프, 수치, 상태 강조에만 쓴다.
+- `Common Issues`, `Our Solutions`, `Sample Websites` 같은 라벨은 회색 섞인 네이비/블루그레이로 낮춘다.
+- 남색 섹션은 반드시 화면 양쪽 끝까지 가는 full-width band로 처리한다.
+- 흰색 텍스트는 남색 CTA 버튼처럼 대비가 필요한 곳에만 쓰고, 푸터/섹션 본문은 `#aab5bd` 계열을 우선한다.
 
 ## 3. Typography
 
-**Display Font:** Outfit (Pretendard fallback)
-**Body Font:** Pretendard (시스템 기본 fallback)
+### Families
 
-### Hierarchy
-- **Display** (800, `clamp(2.2rem, 3.4vw, 3.6rem)`, 0.95 line-height): 섹션의 주 타이틀과 대제목.
-- **Title** (800, `1.45rem`, 1.15 line-height): 요금 카드 패키지명 등.
-- **Body** (400, `0.95rem`, 1.7 line-height): 실무 비즈니스 설명문. 줄당 최대 길이는 한글 가독성 기준 60-70자를 넘지 않도록 래핑을 제한합니다.
-- **Label** (700, `0.82rem`, 0.05em letter-spacing): 폼의 필드명 및 소형 메타 뱃지 텍스트.
+- **Logo / nav / section heading:** Outfit + Pretendard fallback. 로고에는 세리프를 쓰지 않는다.
+- **Hero headline:** Lora / Georgia 계열 세리프. 히어로 메인 문구에만 세리프의 고급감을 사용한다.
+- **Body:** Pretendard. 한글 본문은 작고 또렷하게 유지한다.
+- **Small labels:** Lora italic can be used for one-line section labels, but keep size small and color muted.
 
-### Named Rules
-**The No-Cramped Display Rule (자간 마지노선).** 디자인 Scaffold 도구들의 training default(자간 -0.05em~-0.08em)는 글자가 겹쳐 비전문적으로 보이므로, display 헤드라인의 자간 마지노선은 항상 **`-0.04em`** 이상을 유지합니다.
+### Homepage Scale
 
-## 4. Elevation
+- Hero headline: `clamp(1.8rem, 4vw, 3.6rem)`, `font-weight: 700`, `line-height: 1.15`.
+- Compact section H2: `clamp(1.45rem, 2.05vw, 2.15rem)`, `line-height: 1.18`.
+- Dark/compact section body: `0.78rem` mobile to `0.86rem` desktop.
+- Card title: about `0.82rem` to `0.875rem`.
+- Card body: about `0.68rem` to `0.76rem`.
 
-본 시스템은 화이트 패널과 연청록 배경의 입체감을 주기 위해 1px의 얇은 보더 라인과 매우 미세하고 은은한 청록 섀도우를 조합하여 깊이감을 투사합니다.
+### Rules
 
-### Shadow Vocabulary
-- **Mild Checkup shadow** (`shadow-md shadow-[#007a8c]/5`): 폼 카드 및 2열 자주 묻는 질문(FAQ) 등 주 패널에 외곽선 가독성을 보완하기 위해 은은하게 깔리는 청록계열 서브 섀도우.
-- **Interactive Button Lift** (`hover:shadow-lg hover:shadow-[#007a8c]/20`): 버튼 호버 시 위로 감속 Deceleration 솟아오름 모션과 함께 퍼지는 청록 광택 섀도우.
+- 섹션 제목과 카드 본문을 크게 키우지 않는다. 참고 이미지처럼 조밀하고 스캔 가능한 밀도를 유지한다.
+- Display letter-spacing은 `-0.04em`보다 좁히지 않는다.
+- 버튼과 메뉴 글자는 같은 강한 산세리프 톤을 공유한다.
 
-### Named Rules
-**The Anti-Ghost-Card Rule (그림자 남용 방지).** 1px 실선 테두리(`border-[#e2e8f0]`)와 거대 그림자(`shadow-2xl` 등)를 한 컨테이너에 동시에 병용하여 비주얼 피로도를 높이는 행위를 전면 배제합니다.
+## 4. Layout
+
+- 전역 `section` 기본값이 `max-width: 1200px`를 걸 수 있으므로, full-width band가 필요한 홈 섹션에는 `max-w-none px-0`을 명시한다.
+- 히어로 높이는 여성 이미지가 허리 살짝 아래까지 보이는 정도를 기준으로 한다. 과도하게 긴 히어로를 피한다.
+- 히어로 텍스트는 상단 쪽에 붙여 참고 이미지처럼 첫 화면에서 바로 읽히게 한다.
+- 서비스 소개, 강의 배너, 샘플 사이트는 서로 벌어지지 않게 한 남색 흐름으로 읽히게 한다.
+- 카드 그리드는 큰 그림자보다 낮은 대비의 반투명 표면과 작은 gap을 우선한다.
 
 ## 5. Components
 
+### Navigation / Logo
+
+- 로고 `GOODMANSEO`는 산세리프, 굵게, 살짝 자간을 둔다.
+- 로고 서브라인은 작고 넓은 자간을 유지한다.
+- 메뉴 텍스트와 CTA 버튼 텍스트는 같은 산세리프 톤으로 맞춘다.
+
+### Hero Visual
+
+- 여성 상담자 이미지는 `img/home-hero-consultant.png`를 사용한다.
+- 플로팅 카드는 4개만 사용한다: Inquiry Flow, Client Review, Google, Revenue.
+- 카드는 여성 몸 위를 덮지 않도록 배치하고, 여성 이미지가 카드보다 위에 오게 한다.
+- 카드들은 일렬 정렬이 아니라 약간 어긋난 자연스러운 배치를 유지하되, 서로 겹치지 않게 한다.
+- 여성 뒤 투명 박스는 유지 가능하나 장식 과잉으로 키우지 않는다.
+
 ### Buttons
-- **Shape:** primary/secondary CTA는 알약 형태(`rounded-full / 9999px`)를 사용하며, 입력 폼 하단 제출 버튼은 실물 인풋 규격과의 조화를 위해 모서리가 깎인 사각형 형태(`rounded-lg`)를 사용합니다.
-- **Primary CTA:** 청록색 `#007a8c` 배경에 백색 텍스트.
-- **Hover Motion:** 호버 시 `hover:-translate-y-0.5` 및 `transition-[background-color,transform,box-shadow]`를 구체 지정하여 레이아웃 리페인트를 방지하고 매끄러운 60fps 렌더링 성능을 보장합니다.
 
-### Cards / Containers
-- **Corner Style:** 대형 카드는 `rounded-3xl` 반경을 사용하여 지나치게 날카롭거나 과도하게 동그란(32px 이상) AI tells를 극복합니다.
-- **Background:** 순수 백색(`bg-white`) 배경을 사용해 그라디언트 배경 위에서 명확하게 도드라지게 연출합니다.
+- 홈페이지 CTA 버튼은 pill이 아니라 작게 깎인 직사각형(`0.2rem` to `0.25rem`)을 기본으로 한다.
+- Primary: 진한 남색 배경 + 흰색 텍스트.
+- Secondary: 흰색/반투명 배경 + 남색 텍스트 + 얇은 보더.
+- 버튼 폰트는 메뉴와 같은 강한 산세리프 계열을 사용한다.
 
-### Inputs / Fields
-- **Focus:** 포커스 시 입력 창의 테두리가 `#007a8c`로 변하고, 연한 청록 포커스 링(`box-shadow: 0 0 0 4px rgba(0, 91, 112, 0.08)`)이 부드럽게 켜집니다.
+### Dark Cards
 
-### Navigation
-- 상단 고정형 헤더 바로써 스크롤 시 반투명 라이트 글래스 블러(`backdrop-blur-2xl bg-white/80`)가 적용되어 뒤쪽 그라디언트 광원을 투과시킵니다.
+- 서비스와 샘플 카드: `bg-white/[0.07]`, `border-white/10`, 작은 radius.
+- 아이콘은 작은 크기, warm line accent 또는 muted light tone.
+- 본문은 완전 흰색이 아니라 `#aab5bd` 계열.
 
-### Signature Component
-- **3D FAQ Robot Icon:** 자주 묻는 질문(FAQ) 섹션 좌측에 위치하는 눈 깜빡임(Blink) 애니메이션이 탑재된 입체형 3D 로봇 그래픽 일러스트 컴포넌트입니다.
+### Footer
+
+- 배경은 `#0f2132`.
+- 푸터 로고는 메인 로고와 같은 산세리프 계열.
+- 텍스트는 작고 얇게, `#aebbc7` / `#8fa0af` 중심.
+- 소셜 아이콘은 작은 원형, 낮은 대비 보더, hover에서만 밝아지게 한다.
 
 ## 6. Do's and Don'ts
 
-### Do:
-- **Do** 모든 인터랙티브 링크와 메뉴 버튼에 웹 접근성 표준을 준수하는 `aria-label`을 반드시 기재합니다.
-- **Do** 모바일 터치 접근성을 위해 푸터의 소셜 채널 링크 등의 규격을 최소 `44px (h-11 w-11)` 이상으로 준수합니다.
-- **Do** 한글 문구의 자연스러운 줄바꿈을 위해 `word-break: keep-all` 속성을 텍스트 블록에 필수 선언합니다.
+### Do
 
-### Don't:
-- **Don't** 1px 테두리와 16px 이상의 거대 섀도우를 함께 혼용하여 SaaS 클리셰(Ghost-card)를 남용하지 않습니다.
-- **Don't** 그라디언트 텍스트(`background-clip: text`)를 사용하지 않으며 단색 굵기 밸런스로 핵심을 전달합니다.
-- **Don't** 단순 장식을 위한 뜬금없는 유틸리티 모노스페이스 서체나 대각선 스트라이프 패턴을 렌더링하지 않습니다.
+- 메인페이지 디자인은 참고 이미지의 남색/오프화이트/조밀한 비즈니스 톤을 기준으로 맞춘다.
+- 문구와 구조를 임의로 바꾸지 말고, 사용자가 요청한 시각 요소만 조정한다.
+- 로컬 비즈니스 사장님이 빠르게 이해할 수 있도록 짧은 한글 문장과 작은 정보 단위를 유지한다.
+- 빌드 전에는 `npm run build`로 확인한다.
+
+### Don't
+
+- 예전 청록/아쿠아 테마로 메인페이지를 되돌리지 않는다.
+- 로고에 세리프를 쓰지 않는다.
+- 섹션마다 큰 히어로급 제목을 반복하지 않는다.
+- 카드/버튼을 과하게 둥글게 만들지 않는다.
+- 진한 남색 섹션을 1200px 안에 갇히게 만들지 않는다.
+- 점수 게이지/개선 포인트 CTA 섹션은 현재 홈에서는 제거된 상태이므로 다시 넣지 않는다.

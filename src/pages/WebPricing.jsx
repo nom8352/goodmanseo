@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheckBig, ChevronDown } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
 const ease = [0.16, 1, 0.3, 1];
@@ -128,22 +128,22 @@ const faqItems = [
 const PriceDisplay = ({ item }) => (
   <div className="mt-3">
     {item.promoLabel && (
-      <p className="inline-flex rounded-full border border-[#005b70]/15 bg-[#005b70]/5 px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-[#007a8c] mb-2">
+      <p className="inline-flex rounded-[0.25rem] border border-[#102133]/15 bg-[#102133]/5 px-2.5 py-0.5 text-[0.65rem] font-semibold uppercase tracking-[0.1em] text-[#102133] mb-2">
         {item.promoLabel}
       </p>
     )}
     <div className="flex items-baseline gap-2">
-      <p className="text-[1.25rem] font-bold tracking-[-0.03em] text-[#0f2230]">
+      <p className="text-[1.25rem] font-bold tracking-[-0.03em] text-[#102133]">
         {item.price}
       </p>
       {item.originalPrice && (
-        <span className="text-xs font-semibold text-[#7c8f9f] line-through opacity-80">
+        <span className="text-xs font-semibold text-[#687582] line-through opacity-80">
           {item.originalPrice}
         </span>
       )}
     </div>
     {item.priceNote && (
-      <p className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.05em] text-[#7c8f9f]">
+      <p className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.05em] text-[#687582]">
         {item.priceNote}
       </p>
     )}
@@ -156,12 +156,12 @@ const FaqItem = ({ question, answer }) => {
     <div className="py-1">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between text-left py-4 transition-colors hover:text-[#007a8c] group border-b border-[#e1f1f2]"
+        className="flex w-full items-center justify-between text-left py-4 transition-colors hover:text-[#102133] group border-b border-[#e1f1f2]"
       >
-        <span className="text-[0.95rem] font-semibold tracking-[-0.02em] text-[#0f2230] group-hover:text-[#007a8c] transition-colors">{question}</span>
+        <span className="text-[0.95rem] font-semibold tracking-[-0.02em] text-[#102133] group-hover:text-[#102133] transition-colors">{question}</span>
         <ChevronDown 
           size={18} 
-          className={`text-[#007a8c] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} 
+          className={`text-[#102133] transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </button>
       <div 
@@ -169,7 +169,7 @@ const FaqItem = ({ question, answer }) => {
           isOpen ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <p className="text-[0.92rem] leading-[1.7] text-[#4e6170] py-4 pl-1">
+        <p className="text-[0.92rem] leading-[1.7] text-[#44515d] py-4 pl-1">
           {answer}
         </p>
       </div>
@@ -179,7 +179,7 @@ const FaqItem = ({ question, answer }) => {
 
 const WebPricing = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-tr from-[#f2fafb] via-white to-[#ecf6f8] pt-24 pb-16 text-[#0f2230]">
+    <div className="min-h-screen bg-gradient-to-tr from-[#f7f2ec] via-white to-[#eee7df] pt-24 pb-16 text-[#102133]">
       <Seo
         title="서비스 및 가격"
         description="무료 점검, AI 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다."
@@ -190,24 +190,24 @@ const WebPricing = () => {
       <div className="container">
 
         {/* ── Hero 영역 ── */}
-        <motion.div
+        <Motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease }}
           className="section-heading text-center max-w-4xl mx-auto mb-12 flex flex-col items-center"
         >
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#e6f4f6] to-[#d2ebef] border border-[#bce2e7] px-3.5 py-1 text-[0.78rem] font-bold text-[#007a8c] mb-5 mx-auto shadow-[0_2px_8px_rgba(0,122,140,0.04)]">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-[#f1ebe3] to-[#ded8cf] border border-[#d8c8af] px-3.5 py-1 text-[0.78rem] font-bold text-[#102133] mb-5 mx-auto shadow-[0_2px_8px_rgba(16,33,51,0.04)]">
             서비스
           </div>
-          <h1 className="text-[clamp(2.3rem,4.5vw,3.6rem)] font-black leading-[1.15] tracking-[-0.04em] text-[#0f2230] text-balance">
+          <h1 className="text-[clamp(2.3rem,4.5vw,3.6rem)] font-black leading-[1.15] tracking-[-0.04em] text-[#102133] text-balance">
             검색과 문의를 위한
             <br />
-            <span className="text-[#007a8c]">홈페이지</span> 기본 세팅
+            <span className="text-[#102133]">홈페이지</span> 기본 세팅
           </h1>
-          <p className="mt-5 text-[1.05rem] leading-[1.75] text-[#556877] font-medium max-w-xl mx-auto text-pretty">
+          <p className="mt-5 text-[1.05rem] leading-[1.75] text-[#44515d] font-medium max-w-xl mx-auto text-pretty">
             홈페이지 제작, 구글 비즈니스, On-page SEO를 필요한 범위에 맞춰 정리합니다.
           </p>
-        </motion.div>
+        </Motion.div>
 
         {/* 1. 홈페이지 제작 */}
         <section id="website-packages" className="section-block !min-h-0 px-0">
@@ -218,11 +218,11 @@ const WebPricing = () => {
 
             <div className="grid gap-6 md:grid-cols-3">
               {websitePackages.map((item, index) => (
-                <article key={item.title} className={`${index === 1 ? 'pricing-spotlight' : 'feature-card'} flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,122,140,0.06)]`}>
+                <article key={item.title} className={`${index === 1 ? 'pricing-spotlight' : 'feature-card'} flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(16,33,51,0.06)]`}>
                   <div>
                     <p className="pricing-card-title">{item.title}</p>
                     {index === 1 && (
-                      <p className="mt-3 inline-flex rounded-full border border-[#007a8c]/30 bg-[#007a8c]/10 px-3 py-1 text-[0.68rem] font-semibold tracking-[0.08em] text-[#007a8c]">
+                      <p className="mt-3 inline-flex rounded-[0.25rem] border border-[#102133]/30 bg-[#102133]/10 px-3 py-1 text-[0.68rem] font-semibold tracking-[0.08em] text-[#102133]">
                         가장 많이 선택하는 패키지
                       </p>
                     )}
@@ -257,7 +257,7 @@ const WebPricing = () => {
 
             <div className="grid gap-6 md:grid-cols-2">
               {[freeCheckCard, ...diagnostics].map((item) => (
-                <article key={item.title} className="feature-card flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,122,140,0.04)]">
+                <article key={item.title} className="feature-card flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(16,33,51,0.04)]">
                   <div>
                     <p className="pricing-card-title">{item.title}</p>
                     <PriceDisplay item={item} />
@@ -290,7 +290,7 @@ const WebPricing = () => {
             </div>
             <div className="grid gap-6 md:grid-cols-3">
               {[...seoPackages, ...gbpPackages].map((item) => (
-                <article key={item.title} className="soft-panel flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,122,140,0.04)]">
+                <article key={item.title} className="soft-panel flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(16,33,51,0.04)]">
                   <div>
                     <p className="pricing-card-title">{item.title}</p>
                     <PriceDisplay item={item} />
@@ -323,15 +323,15 @@ const WebPricing = () => {
             <div className="grid gap-12 lg:grid-cols-[1.3fr_2fr] lg:items-center">
               
               {/* 좌측 타이틀 & 일러스트 */}
-              <motion.div
+              <Motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease }}
                 className="flex flex-col items-center lg:items-start text-center lg:text-left"
               >
-                <h2 className="text-[2rem] font-black tracking-[-0.04em] text-[#0f2230]">자주 묻는 질문</h2>
-                <p className="mt-2 text-[0.95rem] text-[#556877] font-semibold leading-relaxed">
+                <h2 className="text-[2rem] font-black tracking-[-0.04em] text-[#102133]">자주 묻는 질문</h2>
+                <p className="mt-2 text-[0.95rem] text-[#44515d] font-semibold leading-relaxed">
                   많이 궁금해하시는 내용을
                   <br />
                   모아두었습니다.
@@ -344,49 +344,49 @@ const WebPricing = () => {
                     <div className="relative h-28 w-28 flex items-center justify-center">
                       
                       {/* 머리 뒤쪽 광채 효과 */}
-                      <div className="absolute h-24 w-24 rounded-full bg-[#007a8c]/10 blur-xl" />
+                      <div className="absolute h-24 w-24 rounded-[0.25rem] bg-[#102133]/10 blur-xl" />
 
                       {/* 둥근 로봇 헤드 */}
-                      <div className="h-24 w-24 rounded-full bg-gradient-to-b from-[#f8fafc] to-[#e2e8f0] border-2 border-white shadow-[0_12px_24px_rgba(0,0,0,0.06),inset_0_-4px_8px_rgba(0,0,0,0.03)] flex flex-col items-center justify-center p-3 relative z-10">
+                      <div className="h-24 w-24 rounded-full bg-gradient-to-b from-[#f7f2ec] to-[#ded8cf] border-2 border-white shadow-[0_12px_24px_rgba(0,0,0,0.06),inset_0_-4px_8px_rgba(0,0,0,0.03)] flex flex-col items-center justify-center p-3 relative z-10">
                         
                         {/* 귀/헤드셋 파트 */}
-                        <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-r-md bg-[#cbd5e1] border-l border-white" />
-                        <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-l-md bg-[#cbd5e1] border-r border-white" />
+                        <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-r-md bg-[#c9bfae] border-l border-white" />
+                        <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-2.5 h-6 rounded-l-md bg-[#c9bfae] border-r border-white" />
 
                         {/* 눈 부분 디스플레이 */}
-                        <div className="w-[72px] h-[34px] rounded-2xl bg-[#0f172a] shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)] flex items-center justify-center gap-2.5 p-1 mt-1">
+                        <div className="w-[72px] h-[34px] rounded-[0.7rem] bg-[#0f172a] shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)] flex items-center justify-center gap-2.5 p-1 mt-1">
                           {/* 푸른 빛 눈 LED */}
-                          <motion.div
+                          <Motion.div
                             animate={{ scaleY: [1, 0.1, 1] }}
                             transition={{ duration: 4, repeat: Infinity, repeatDelay: 2 }}
-                            className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#00ffff] to-[#00a3ff] shadow-[0_0_8px_#00ffff]"
+                            className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#d8c8af] to-[#c9b99a] shadow-[0_0_8px_#d8c8af]"
                           />
-                          <motion.div
+                          <Motion.div
                             animate={{ scaleY: [1, 0.1, 1] }}
                             transition={{ duration: 4, repeat: Infinity, repeatDelay: 2 }}
-                            className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#00ffff] to-[#00a3ff] shadow-[0_0_8px_#00ffff]"
+                            className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#d8c8af] to-[#c9b99a] shadow-[0_0_8px_#d8c8af]"
                           />
                         </div>
 
                         {/* 입 파트 (볼선) */}
-                        <div className="w-6 h-1 rounded-full bg-[#cbd5e1] mt-3" />
+                        <div className="w-6 h-1 rounded-full bg-[#c9bfae] mt-3" />
                       </div>
                     </div>
 
                     {/* 말풍선 */}
-                    <div className="mt-4 bg-white border border-[#e2e8f0] rounded-2xl px-4 py-2.5 shadow-sm text-center relative max-w-[200px]">
+                    <div className="mt-4 bg-white border border-[#ded8cf] rounded-[0.7rem] px-4 py-2.5 shadow-sm text-center relative max-w-[200px]">
                       {/* 말풍선 꼬리 */}
-                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-t border-l border-[#e2e8f0]" />
-                      <p className="text-[0.78rem] font-bold text-[#556877] leading-relaxed relative z-10">
+                      <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rotate-45 bg-white border-t border-l border-[#ded8cf]" />
+                      <p className="text-[0.78rem] font-bold text-[#44515d] leading-relaxed relative z-10">
                         궁금하신 점은 언제든 물어보세요!
                       </p>
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </Motion.div>
 
               {/* 우측 FAQ 리스트 */}
-              <motion.div
+              <Motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -396,7 +396,7 @@ const WebPricing = () => {
                 {faqItems.map((item) => (
                   <FaqItem key={item.question} question={item.question} answer={item.answer} />
                 ))}
-              </motion.div>
+              </Motion.div>
 
             </div>
           </div>

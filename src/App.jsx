@@ -13,6 +13,7 @@ import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import AICourse from './pages/AICourse';
 import AIReport from './pages/AIReport';
+import AIReportSample from './pages/AIReportSample';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -27,6 +28,14 @@ const ScrollToTop = () => {
 function App() {
   return (
     <Router>
+      <AppShell />
+    </Router>
+  );
+}
+
+const AppShell = () => {
+  return (
+    <>
       <ScrollToTop />
       <div className="flex min-h-screen flex-col">
         <Navbar />
@@ -40,6 +49,8 @@ function App() {
             <Route path="/blog/:postId" element={<BlogDetail />} />
             <Route path="/ai-course" element={<AICourse />} />
             <Route path="/ai-report" element={<AIReport />} />
+            <Route path="/ai-report/sample-luna-skin-clinic" element={<AIReportSample />} />
+            <Route path="/ai-report/:sampleSlug" element={<AIReportSample />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
@@ -47,8 +58,8 @@ function App() {
         </main>
         <Footer />
       </div>
-    </Router>
+    </>
   );
-}
+};
 
 export default App;
