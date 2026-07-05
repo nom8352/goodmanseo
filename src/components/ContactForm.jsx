@@ -33,6 +33,16 @@ const INQUIRY_TYPES = [
     submitLabel: 'AI 사업컨설팅 문의하기',
   },
   {
+    value: 'online-support',
+    label: '사이트 관리',
+    heading: '사이트 케어 및 온라인 관리 문의',
+    helper: '호스팅, 도메인, 작은 수정 또는 월간 관리를 상담하고 싶어요.',
+    icon: Lock,
+    messageLabel: '필요한 관리 내용',
+    messagePlaceholder: '예: 호스팅 관리가 필요해요, 도메인 연결이 복잡해요, 매달 작은 수정이 필요해요 등',
+    submitLabel: '사이트 관리 문의하기',
+  },
+  {
     value: 'general-inquiry',
     label: '일반 문의',
     heading: '일반 문의',

@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-07-04
+Last updated: 2026-07-06
 
 ## Current Project Direction
 
@@ -124,24 +124,33 @@ Visible in current source:
 
 - 무료 점검 / 무료 진단: free entry check
 - AI 진단: `AUD 149`
-- 스타터 홈페이지: `AUD 795`, original `AUD 1,095`
-- 비즈니스 홈페이지: `AUD 1,890`
-- 성장형 홈페이지: `AUD 3,500`
-- SEO All-in-One 스타트 패키지: `AUD 950`
+- 스타터 홈페이지: `AUD 1,490`
+- 비즈니스 홈페이지: `AUD 3,500`
+- 성장형 홈페이지: `AUD 6,000~`
+- 호스팅 Only: `AUD 49 / month`
+- SEO All-in-One 스타트 패키지: `AUD 1,490`
+- 사이트 케어 Basic: `AUD 79 / month`
+- 사이트 케어 Plus: `AUD 149 / month`
+- 도메인 · DNS 정리: `AUD 150~`
+- 도메인 구매 대행: domain cost + `AUD 60 / year`
 - 온라인 관리 서포트: `AUD 295 / month`
-- 구글 비즈니스 프로필 1회 세팅: `AUD 300`
+- 구글 비즈니스 프로필 1회 세팅: `AUD 490`
 - GBP 유지 서포트 add-on: `AUD 95 / month`
 
 AI page currently shows service cards rather than public prices.
 
-Homepage package SEO distinction:
+Homepage package distinction:
 
-- Starter: basic SEO setup plus Analytics / Search Console basic registration
-- Business: key page SEO cleanup plus Analytics / Search Console basic registration
-- Growth: SEO All-in-One package included plus Analytics / Search Console basic registration
+- Starter: up to 3 pages, basic SEO setup, Analytics/Search Console basic registration, Google Business Profile connection check, and a free AI course coupon for website-production customers
+- Business: up to 7 pages, key page SEO cleanup, Google Business Profile basic setup/cleanup, Analytics/Search Console basic registration, basic social-link connection support, and a free AI course coupon for website-production customers
+- Growth: 10+ pages, Business homepage scope, SEO All-in-One package, Google Business Profile cleanup, Analytics/Search Console basic registration, 3 months online management support, and a free AI course coupon for website-production customers
+- Hosting Only: hosting space management, SSL connection status checks, basic backup checks, server/domain connection checks, and no small-edit work included
 
 Monthly support distinction:
 
+- `호스팅 Only` is the lowest-entry hosting-only plan for hosting space, SSL checks, basic backup checks, and server/domain connection checks; small edits are excluded.
+- `사이트 케어 Basic` is the low-entry care plan for hosting/SSL status checks, basic backup/disruption checks, one small monthly content edit, and domain connection checks.
+- `사이트 케어 Plus` is the broader technical care plan for Basic scope plus 2-3 small monthly edits, banner/notice/image changes, and priority response.
 - `온라인 관리 서포트` is the broader monthly support offer covering homepage, Google Business Profile status checks, basic SEO, Analytics/Search Console checks, and SNS link/profile support.
 - `GBP 유지 서포트` is a narrower add-on for Google Business Profile updates only.
 
@@ -242,15 +251,18 @@ Do not assume these are already deployed or pushed unless GitHub state is checke
 
 ## Current AI Report Sample State
 
-Updated on 2026-07-04:
+Updated on 2026-07-06:
 
 - `/ai-report` now has an 업종별 샘플 리포트 section with five sample report cards.
-- `/ai-report` public positioning follows the Notion product notes: `AI 비즈니스 리포트`, `AUD 249`, `Business + Website + SEO Audit Report`.
+- `/ai-report` public positioning follows the Notion product notes: `AI 비즈니스 리포트`, `AUD 349`, `Business + Website + SEO Audit Report`.
 - Public page copy should not promise a fixed delivery time, fixed page count, or "human review" language.
 - Public page copy should avoid defensive guarantee disclaimers; AI persona copy should be framed as a practical virtual customer response check.
 - Sample report content is centralized in `src/data/aiReportSamples.js`.
 - `src/pages/AIReportSample.jsx` renders the shared report template for all five routes.
 - Static generation now creates SEO HTML for all sample report pages.
+- The sample report template now uses a document/PDF-like report surface rather than a marketing-page layout: constrained paper width, compact serif report title, small navy total-score card, and compact section headings.
+- All five samples now use the deeper Luna-style report structure: methodology rows plus 13 ordered sections from `Executive Summary` through `Final Recommendation`.
+- The non-Luna samples have expanded industry-specific tables and copy for evidence snapshots, UX/CRO, SEO/content, Google/local or funnel review, competitor positioning, AI persona simulation, business/CEO review, final reasoning, and action roadmap.
 
 Current sample routes:
 
@@ -262,6 +274,8 @@ Current sample routes:
 
 Verification run:
 
+- `npm.cmd run build` on 2026-07-06 passed after deepening the non-Luna sample report data.
+- Playwright browser check on 2026-07-06 confirmed `/ai-report/sample-sydney-home-clean-co` and `/ai-report/sample-clientflow-studio` render the document-style report with score cards and section flow.
 - `npx eslint src/pages/AIReport.jsx src/pages/AIReportSample.jsx src/data/aiReportSamples.js src/App.jsx scripts/generate-static-pages.mjs`
 - `node .agents/skills/impeccable/scripts/detect.mjs --json src/pages/AIReport.jsx src/pages/AIReportSample.jsx src/data/aiReportSamples.js`
 - `git diff --check`

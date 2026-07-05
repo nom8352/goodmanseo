@@ -5,10 +5,10 @@ import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
 
 const inclusions = [
-  '기본 5페이지까지 제작 가능',
+  '기본 3페이지까지 제작 가능',
   '휴대폰에서도 잘 보이게',
   '문의 버튼 또는 문의폼 연결',
-  '구글 지도/검색 등록',
+  'Google Business Profile 연결 확인',
   '홈페이지 방문 확인 연결',
   '구글 검색 확인 연결',
   '초기 3개월 안심 유지보수',
@@ -22,16 +22,16 @@ const support = [
 ];
 
 const stats = [
-  { label: '제작비', value: '$795 일시불' },
-  { label: '구성', value: '기본 5페이지' },
+  { label: '제작비', value: '$1,490 일시불' },
+  { label: '구성', value: '기본 3페이지' },
   { label: '유지보수', value: '3개월 포함' },
-  { label: '호스팅', value: '별도 비용 없이 시작 가능' },
+  { label: '호스팅', value: '기본 연결 상담 포함' },
 ];
 
 const extras = [
   {
     title: 'Google Business Profile 세팅',
-    price: '+$300',
+    price: '+$490',
     desc: '구글에서 보이는 업체 정보, 카테고리, 링크, 기본 사진 구성을 정리합니다.',
   },
   {
@@ -66,7 +66,7 @@ const StarterPackage = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="홈페이지 제작"
-        description="Goodman SEO의 기본 홈페이지 안내 페이지입니다. 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수가 포함됩니다."
+        description="Goodman SEO의 기본 홈페이지 안내 페이지입니다. Google Business Profile 연결 확인, 홈페이지 방문 확인 연결, 3개월 안심 유지보수가 포함됩니다."
         path="/starter-package"
         keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', '호주 비즈니스 홈페이지', '구글 지도 등록 포함 홈페이지', '호주 홈페이지 상담']}
       />
@@ -109,7 +109,7 @@ const StarterPackage = () => {
               </span>
               <h2 className="text-4xl font-black tracking-[-0.04em] sm:text-5xl">기본 홈페이지</h2>
               <div className="mt-10 flex items-end gap-2">
-                <span className="text-7xl font-black tracking-[-0.08em]">$795</span>
+                <span className="text-7xl font-black tracking-[-0.08em]">$1,490</span>
                 <span className="pb-3 text-xl text-text-muted">일시불</span>
               </div>
               <p className="mt-3 text-sm font-semibold uppercase tracking-[0.24em] text-accent-primary">

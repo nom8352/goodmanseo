@@ -9,10 +9,15 @@ The sample report page should feel like a report/PDF preview, not like a homepag
 Current route:
 
 - `/ai-report/sample-luna-skin-clinic`
+- `/ai-report/sample-sydney-home-clean-co`
+- `/ai-report/sample-maple-cafe-catering`
+- `/ai-report/sample-ai-skills-bootcamp`
+- `/ai-report/sample-clientflow-studio`
 
 Current source file:
 
 - `src/pages/AIReportSample.jsx`
+- `src/data/aiReportSamples.js`
 
 ## Design Direction
 
@@ -195,6 +200,18 @@ As of this note, `src/pages/AIReportSample.jsx` has:
 - navy-black body text
 - warm accents restored only on small labels/icons/details
 - white internal panels instead of beige-filled boxes
+
+## Current Content Structure
+
+Updated on 2026-07-06:
+
+- all five sample reports use the same deep report structure
+- each sample has `methodology` rows and 13 ordered sections
+- sections begin with `Executive Summary` and end with `Final Recommendation`
+- non-Luna samples now include industry-specific evidence maps, UX/CRO tables, SEO/content checks, local or funnel review, competitor positioning, AI persona simulation, business/CEO review, final reasoning, and action roadmap
+- the top Executive Summary may include compact score cards and a Top 3 priority table
+
+Keep future sample additions on this same structure unless the user explicitly asks for a shorter teaser.
 
 ## Do Not Regress
 

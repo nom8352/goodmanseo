@@ -8,12 +8,10 @@ import {
   FileText,
   Globe2,
   LayoutDashboard,
-  ListChecks,
   Lock,
   ShieldCheck,
   Sparkles,
   Target,
-  Timer,
   UsersRound,
 } from 'lucide-react';
 import { motion as Motion } from 'framer-motion';
@@ -35,18 +33,14 @@ const fadeUp = (delay = 0, y = 24) => ({
 const packages = [
   {
     title: 'AI 비즈니스 리포트',
-    price: 'AUD 249',
-    desc: '홈페이지, SEO, 구글 노출, 고객 반응, 사업 포지셔닝을 함께 보는 PDF 리포트입니다.',
+    price: 'AUD 349',
+    desc: '단순한 오류 점검이 아닌, 전환율에 집중한 맞춤형 성장 리포트입니다.',
     points: [
-      'Business + Website + SEO Audit Report',
-      '홈페이지 첫인상, CTA, 문의 흐름 점검',
-      'SEO 기본 구조와 Google / Local Visibility 점검',
-      '경쟁사 1~3개 비교와 포지셔닝 방향 정리',
+      '홈페이지 & SEO & 구글 노출(Local Visibility) 통합 진단',
+      'UI/UX 및 고객 구매 여정(CTA) 분석',
+      '경쟁사 1~3곳 비교 및 포지셔닝 전략',
       'AI 기반 가상 고객 반응 시뮬레이션 100명',
-      'CEO Review와 Final Reasoning Pass 포함',
-      '30일 / 90일 우선순위 Action Roadmap',
-      'PDF 리포트 작성',
-      'PDF 리포트 제공',
+      '30일 / 90일 우선순위 액션 플랜 제공',
     ],
     href: '/contact?type=ai-report-standard',
     featured: true,
@@ -56,31 +50,31 @@ const packages = [
 const reportScenarios = [
   {
     icon: Globe2,
-    title: '검색은 되는데 문의가 적은 경우',
-    role: '홈페이지 / 구글 노출 점검',
-    tags: ['홈페이지', 'Google', '문의흐름'],
-    quote: '홈페이지는 있는데 고객이 들어왔을 때 무엇을 보고 문의해야 하는지 흐름이 약한 상태일 수 있습니다.',
+    title: '낮은 전환율',
+    role: '"유입은 있는데, 왜 문의가 없을까?"',
+    tags: ['전환율', '이탈원인', 'CTA'],
+    quote: '구글 노출은 되지만 고객이 이탈하는 원인 분석',
   },
   {
     icon: Target,
-    title: '경쟁업체와 차이가 잘 안 보이는 경우',
-    role: '포지셔닝 / 고객 메시지 점검',
-    tags: ['차별점', '고객문제', '서비스정리'],
-    quote: '서비스를 많이 보여주는 것보다 어떤 고객에게 왜 맞는지 먼저 정리해야 비교 대상에서 벗어날 수 있습니다.',
+    title: '차별화 부재',
+    role: '"우리만의 강점이 안 보여요."',
+    tags: ['포지셔닝', '경쟁사', '강점정리'],
+    quote: '경쟁사 대비 확실한 포지셔닝과 차별화 전략 필요',
   },
   {
     icon: UsersRound,
-    title: 'SNS와 홈페이지가 따로 노는 경우',
-    role: 'Instagram / Facebook / 웹사이트 연결 점검',
-    tags: ['SNS링크', '신뢰요소', '고객동선'],
-    quote: '고객은 한 채널만 보지 않습니다. 구글, 홈페이지, SNS에서 같은 사업처럼 보이는지가 신뢰에 영향을 줍니다.',
+    title: '브랜드 불일치',
+    role: '"SNS와 홈페이지의 느낌이 달라요."',
+    tags: ['홈페이지', 'SNS', '신뢰도'],
+    quote: '채널 간 메시지 통일로 고객 신뢰도 상승',
   },
   {
     icon: LayoutDashboard,
-    title: '무엇부터 고쳐야 할지 모르는 경우',
-    role: '우선순위 / 실행 로드맵 정리',
+    title: '우선순위 혼란',
+    role: '"어디서부터 손대야 할지 막막해요."',
     tags: ['우선순위', '로드맵', '실행항목'],
-    quote: '디자인, SEO, 구글 비즈니스, SNS를 한 번에 다 고치기보다 지금 문의에 가장 영향을 주는 순서부터 정리합니다.',
+    quote: '가장 효과적인 개선부터 짚어주는 명확한 로드맵',
   },
 ];
 
@@ -126,15 +120,15 @@ const AIReport = () => {
               </div>
 
               <h1 className="mt-7 max-w-4xl text-[clamp(2.25rem,4.6vw,4.25rem)] font-black leading-[1.08] tracking-[-0.04em] text-[#102133]">
-                홈페이지와 SEO만
+                트래픽을 매출로
                 <br />
-                따로 보지 않습니다.
+                바꾸는 웹사이트
                 <br />
-                <span className="text-[#102133]">고객 반응까지 함께 봅니다.</span>
+                <span className="text-[#102133]">통합 진단</span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-base font-medium leading-[1.8] text-[#44515d]">
-                고객이 우리 사업을 어떻게 발견하고, 무엇을 보고 신뢰하며, 어디서 문의를 망설이는지 함께 분석합니다. 현재 상태와 성장 방향을 PDF 리포트로 정리해드립니다.
+                홈페이지 상태, 구글 SEO, 그리고 AI 기반 고객 반응까지. 비즈니스 성장을 위한 가장 확실한 로드맵을 AUD 349에 제공합니다.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -158,7 +152,7 @@ const AIReport = () => {
                 <div className="flex items-center justify-between gap-4">
                   <div>
                     <p className="text-xs font-black uppercase tracking-[0.12em] text-[#102133]">Report</p>
-                    <h2 className="mt-2 text-2xl font-black tracking-[-0.04em]">AI 비즈니스 리포트</h2>
+                    <h2 className="mt-2 text-2xl font-black tracking-[-0.04em]">전환 중심 진단</h2>
                   </div>
                   <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white text-[#102133] shadow-sm">
                     <ClipboardCheck size={24} />
@@ -167,9 +161,9 @@ const AIReport = () => {
 
                 <div className="mt-6 grid gap-3">
                   {[
-                    ['Audit', '홈페이지, SEO, Google 노출 실제 확인'],
-                    ['Persona', 'AI 기반 가상 고객 반응 시뮬레이션'],
-                    ['Roadmap', '30일 / 90일 실행 우선순위 정리'],
+                    ['Audit', '홈페이지, SEO, Google 노출 통합 확인'],
+                    ['Persona', 'AI 고객 100명 반응 시뮬레이션'],
+                    ['Roadmap', '30일 / 90일 실행 우선순위'],
                   ].map(([label, value]) => (
                     <div key={label} className="flex items-center justify-between gap-4 rounded-lg bg-white px-4 py-3 text-sm">
                       <span className="font-black text-[#102133]">{label}</span>
@@ -196,10 +190,10 @@ const AIReport = () => {
         <div className="container">
           <div className="section-heading text-center">
             <h2 className="mx-auto max-w-3xl text-[clamp(2rem,3.5vw,3.2rem)] font-black leading-tight tracking-[-0.04em]">
-              리포트 상품
+              AI 비즈니스 리포트
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm font-semibold leading-relaxed text-[#44515d]">
-              단순한 홈페이지 점검이 아니라, 고객이 온라인에서 우리 사업을 어떻게 보고 있는지와 무엇부터 고쳐야 하는지를 함께 정리합니다.
+              단순한 오류 점검이 아닌, 전환율에 집중한 맞춤형 성장 리포트입니다.
             </p>
           </div>
 
@@ -238,7 +232,7 @@ const AIReport = () => {
                 </div>
 
                 <Link to={item.href} className={`${item.featured ? 'primary-button' : 'secondary-button'} mt-7 w-full py-3`}>
-                  {item.title} 문의하기
+                  내 비즈니스 진단 시작하기
                   <ArrowRight size={16} />
                 </Link>
               </Motion.article>
@@ -252,13 +246,13 @@ const AIReport = () => {
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-black text-[#102133] ring-1 ring-[#ded8cf]">
               <Target size={14} />
-              추천 대상
+              Pain Points
             </span>
             <h2 className="mt-5 text-[clamp(2rem,3.2vw,3rem)] font-black leading-tight tracking-[-0.04em]">
-              지금 이런 고민으로 답답하지 않으신가요?
+              지금, 이런 고민을 하고 계신가요?
             </h2>
             <p className="mt-4 text-base font-medium text-[#44515d]">
-              아래 상황 중 하나라도 해당된다면 먼저 전체 상태를 한 번 정리해보는 것이 좋습니다.
+              문제를 정확히 짚어야, 개선 순서가 보입니다.
             </p>
           </div>
 
@@ -309,10 +303,10 @@ const AIReport = () => {
               상세 진행 안내
             </span>
             <h2 className="mt-5 text-[clamp(2rem,3.2vw,3rem)] font-black leading-tight tracking-[-0.04em]">
-              리포트 제작 흐름과 구성
+              체계적인 분석, 명확한 결과
             </h2>
             <p className="mt-4 text-base font-medium text-[#44515d]">
-              신청 폼에 적어주신 정보를 바탕으로 홈페이지, 검색 노출, 고객 반응, 실행 우선순위를 하나의 PDF 리포트로 정리합니다.
+              비즈니스 정보만 남겨주시면, 최적화된 성장 전략을 10단계 리포트로 완성해 드립니다.
             </p>
           </div>
 
@@ -393,16 +387,16 @@ const AIReport = () => {
               
               <div className="mt-6 grid gap-2 sm:grid-cols-2">
                 {[
-                  '1. Executive Summary',
-                  '2. Business Review',
-                  '3. Website Audit',
-                  '4. SEO Audit',
-                  '5. Google / Local Visibility Review',
-                  '6. AI Persona Simulation',
-                  '7. CEO Review',
-                  '8. Final Reasoning Summary',
-                  '9. Action Roadmap',
-                  '10. Final Recommendation',
+                  '1. 핵심 요약',
+                  '2. 비즈니스 포지셔닝 진단',
+                  '3. 홈페이지 구조 점검',
+                  '4. SEO 기본 상태 점검',
+                  '5. 구글 / 지도 노출 점검',
+                  '6. AI 고객 반응 시뮬레이션',
+                  '7. 대표 관점 실행 리뷰',
+                  '8. 최종 판단 요약',
+                  '9. 30일 / 90일 실행 로드맵',
+                  '10. 최종 권장 방향',
                 ].map((title) => (
                   <div key={title} className="flex items-center gap-2.5 rounded-xl bg-white px-3.5 py-3 shadow-sm border border-[#ded8cf] text-[0.82rem] font-black leading-snug text-[#102133]">
                     <span className="h-1.5 w-1.5 rounded-[0.25rem] bg-[#102133] shrink-0" />
@@ -420,7 +414,7 @@ const AIReport = () => {
 
           <Motion.div {...fadeUp(0.18)} className="mx-auto mt-12 flex max-w-4xl flex-col items-center gap-4 text-center">
             <p className="text-sm font-bold text-[#44515d]">
-              샘플 리포트에서 실제 고객이 받는 문서 흐름과 섹션 구성을 먼저 확인할 수 있습니다.
+              실제 고객이 받는 리포트 흐름과 섹션 구성을 먼저 확인할 수 있습니다.
             </p>
             <a
               href="#sample-reports"
@@ -441,10 +435,10 @@ const AIReport = () => {
               Sample Reports
             </span>
             <h2 className="mt-5 text-[clamp(1.75rem,3vw,2.65rem)] font-black leading-tight tracking-[-0.035em] text-[#eef3f7]">
-              업종별 샘플 리포트
+              업종별 샘플 리포트 확인하기
             </h2>
             <p className="mt-4 text-sm font-semibold leading-relaxed text-[#aab5bd]">
-              실제 제작 운영 흐름에 맞춘 5개 샘플입니다. 디자인은 같은 리포트 템플릿을 쓰고, 업종별로 점검 항목과 우선순위가 달라집니다.
+              비즈니스 환경에 맞춘 다양한 리포트 예시를 미리 확인해 보세요.
             </p>
           </div>
 
@@ -487,7 +481,7 @@ const AIReport = () => {
             className="mt-12 text-center"
           >
             <p className="text-[0.93rem] font-semibold text-[#44515d] mb-5">
-              지금 문의를 남기고 우리 비즈니스에 필요한 맞춤형 진단을 시작해보세요.
+              단 한 번의 진단으로 비즈니스의 방향을 바꾸세요.
             </p>
             <Link
               to="/contact?type=ai-report-standard"

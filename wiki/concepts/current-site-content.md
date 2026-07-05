@@ -1,6 +1,6 @@
 # Current Site Content Snapshot
 
-Last updated: 2026-06-16
+Last updated: 2026-07-06
 
 This note summarizes the current business-facing site content from source files. Use it as the quick reference before changing homepage copy, pricing copy, business offers, AI business, legal pages, or inquiry flow.
 
@@ -134,17 +134,22 @@ From `src/pages/WebPricing.jsx`:
 
 From `src/pages/WebPricing.jsx`:
 
-- 스타터 홈페이지: `AUD 795`, original `AUD 1,095`
-- 비즈니스 홈페이지: `AUD 1,890`
-- 성장형 홈페이지: `AUD 3,500`
+- 스타터 홈페이지: `AUD 1,490`
+- 비즈니스 홈페이지: `AUD 3,500`
+- 성장형 홈페이지: `AUD 6,000~`
+- 호스팅 Only: `AUD 49 / month`
 
 ### SEO And Google Business Profile
 
 From `src/pages/WebPricing.jsx`:
 
-- SEO All-in-One 스타트 패키지: `AUD 950`
+- SEO All-in-One 스타트 패키지: `AUD 1,490`
+- 사이트 케어 Basic: `AUD 79 / month`
+- 사이트 케어 Plus: `AUD 149 / month`
+- 도메인 · DNS 정리: `AUD 150~`
+- 도메인 구매 대행: domain cost + `AUD 60 / year`
 - 온라인 관리 서포트: `AUD 295 / month`
-- 구글 비즈니스 프로필 1회 세팅: `AUD 300`
+- 구글 비즈니스 프로필 1회 세팅: `AUD 490`
 - GBP 유지 서포트: `AUD 95 / month`
 
 The current pricing page does not show the older separate monthly management and AI education pricing sections.
