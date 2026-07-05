@@ -137,17 +137,20 @@ From `src/pages/WebPricing.jsx`:
 - 스타터 홈페이지: `AUD 1,490`
 - 비즈니스 홈페이지: `AUD 3,500`
 - 성장형 홈페이지: `AUD 6,000~`
-- 호스팅 Only: `AUD 49 / month`
+- 홈페이지 제작 패키지 호스팅 옵션: `AUD 49 / month~`
+
+### Site Care
+
+From `src/pages/WebPricing.jsx`:
+
+- 사이트 케어 Basic: `AUD 79 / month`
+- 사이트 케어 Plus: `AUD 149 / month`
 
 ### SEO And Google Business Profile
 
 From `src/pages/WebPricing.jsx`:
 
 - SEO All-in-One 스타트 패키지: `AUD 1,490`
-- 사이트 케어 Basic: `AUD 79 / month`
-- 사이트 케어 Plus: `AUD 149 / month`
-- 도메인 · DNS 정리: `AUD 150~`
-- 도메인 구매 대행: domain cost + `AUD 60 / year`
 - 온라인 관리 서포트: `AUD 295 / month`
 - 구글 비즈니스 프로필 1회 세팅: `AUD 490`
 - GBP 유지 서포트: `AUD 95 / month`

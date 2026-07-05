@@ -127,12 +127,10 @@ Visible in current source:
 - 스타터 홈페이지: `AUD 1,490`
 - 비즈니스 홈페이지: `AUD 3,500`
 - 성장형 홈페이지: `AUD 6,000~`
-- 호스팅 Only: `AUD 49 / month`
+- 홈페이지 제작 패키지 호스팅 옵션: `AUD 49 / month~`
 - SEO All-in-One 스타트 패키지: `AUD 1,490`
 - 사이트 케어 Basic: `AUD 79 / month`
 - 사이트 케어 Plus: `AUD 149 / month`
-- 도메인 · DNS 정리: `AUD 150~`
-- 도메인 구매 대행: domain cost + `AUD 60 / year`
 - 온라인 관리 서포트: `AUD 295 / month`
 - 구글 비즈니스 프로필 1회 세팅: `AUD 490`
 - GBP 유지 서포트 add-on: `AUD 95 / month`
@@ -141,16 +139,14 @@ AI page currently shows service cards rather than public prices.
 
 Homepage package distinction:
 
-- Starter: up to 3 pages, basic SEO setup, Analytics/Search Console basic registration, Google Business Profile connection check, and a free AI course coupon for website-production customers
-- Business: up to 7 pages, key page SEO cleanup, Google Business Profile basic setup/cleanup, Analytics/Search Console basic registration, basic social-link connection support, and a free AI course coupon for website-production customers
-- Growth: 10+ pages, Business homepage scope, SEO All-in-One package, Google Business Profile cleanup, Analytics/Search Console basic registration, 3 months online management support, and a free AI course coupon for website-production customers
-- Hosting Only: hosting space management, SSL connection status checks, basic backup checks, server/domain connection checks, and no small-edit work included
+- Starter: up to 3 pages, basic SEO setup, Analytics/Search Console basic registration, Google Business Profile connection check, 3 months online management support, optional hosting from `AUD 49 / month`, and a free AI course coupon for website-production customers
+- Business: up to 7 pages, key page SEO cleanup, Google Business Profile basic setup/cleanup, Analytics/Search Console basic registration, basic social-link connection support, 3 months online management support, optional hosting from `AUD 49 / month`, and a free AI course coupon for website-production customers
+- Growth: 10+ pages, Business homepage scope, SEO All-in-One package, Google Business Profile cleanup, Analytics/Search Console basic registration, 3 months online management support, optional hosting from `AUD 49 / month`, and a free AI course coupon for website-production customers
 
 Monthly support distinction:
 
-- `호스팅 Only` is the lowest-entry hosting-only plan for hosting space, SSL checks, basic backup checks, and server/domain connection checks; small edits are excluded.
-- `사이트 케어 Basic` is the low-entry care plan for hosting/SSL status checks, basic backup/disruption checks, one small monthly content edit, and domain connection checks.
-- `사이트 케어 Plus` is the broader technical care plan for Basic scope plus 2-3 small monthly edits, banner/notice/image changes, and priority response.
+- Homepage production packages show hosting only as an optional package item from `AUD 49 / month`; small edits are not included in that base hosting option.
+- `사이트 케어 Basic` and `사이트 케어 Plus` cover post-launch technical status checks and small edits.
 - `온라인 관리 서포트` is the broader monthly support offer covering homepage, Google Business Profile status checks, basic SEO, Analytics/Search Console checks, and SNS link/profile support.
 - `GBP 유지 서포트` is a narrower add-on for Google Business Profile updates only.
 

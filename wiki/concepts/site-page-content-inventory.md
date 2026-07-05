@@ -145,36 +145,27 @@ Source: `src/pages/WebPricing.jsx`
 - `스타터 홈페이지`
   - Price: `AUD 1,490`
   - Label: `처음 시작하는 기본 구성`
-  - Scope: up to 3 pages, intro/service/inquiry structure, mobile basics, basic SEO setup, Analytics/Search Console basic registration, Google Business Profile connection check, free AI course coupon for website-production customers
+  - Scope: up to 3 pages, intro/service/inquiry structure, mobile basics, basic SEO setup, Analytics/Search Console basic registration, Google Business Profile connection check, 3 months online management support, optional hosting from `AUD 49 / month`, free AI course coupon for website-production customers
 
 - `비즈니스 홈페이지`
   - Price: `AUD 3,500`
   - Label: `페이지가 더 필요한 구성`
-  - Scope: up to 7 pages, detailed service pages, phone/email/form connection, key page SEO cleanup, Google Business Profile basic setup/cleanup, Analytics/Search Console basic registration, basic social link connection support, free AI course coupon for website-production customers
+  - Scope: up to 7 pages, detailed service pages, phone/email/form connection, key page SEO cleanup, Google Business Profile basic setup/cleanup, Analytics/Search Console basic registration, basic social link connection support, 3 months online management support, optional hosting from `AUD 49 / month`, free AI course coupon for website-production customers
 
 - `성장형 홈페이지`
   - Price: `AUD 6,000~`
   - Label: `콘텐츠가 많은 확장 구성`
-  - Scope: 10+ pages, business homepage scope, SEO All-in-One package, Google Business Profile cleanup, Analytics/Search Console basic registration, 3 months online management support, free AI course coupon for website-production customers
+  - Scope: 10+ pages, business homepage scope, SEO All-in-One package, Google Business Profile cleanup, Analytics/Search Console basic registration, 3 months online management support, optional hosting from `AUD 49 / month`, free AI course coupon for website-production customers
 
-- `호스팅 Only`
-  - Price: `AUD 49 / month`
-  - Label: `제작 없이 호스팅만`
-  - Scope: hosting space management, SSL connection status checks, basic backup checks, server/domain connection checks, small edits excluded
-
-### Hosting And Site Care
+### Site Care
 
 - `사이트 케어 Basic`
   - Price: `AUD 79 / month`
-  - Scope: hosting/SSL connection status check, basic backup and disruption checks, one small monthly text/image edit, domain expiry/connection check
+  - Scope: hosting/SSL connection status check, basic backup and disruption checks, one small monthly text/image edit, domain connection check
 
 - `사이트 케어 Plus`
   - Price: `AUD 149 / month`
   - Scope: Basic scope, 2-3 small monthly edits, notice/banner/image replacement support, priority response
-
-- `도메인 · DNS 정리`
-  - Price: `AUD 150~`
-  - Scope: client-purchased domain free connection, domain purchase agency at domain cost + `AUD 60 / year`, existing domain/DNS connection cleanup, SSL connection check
 
 ### Diagnostics
 

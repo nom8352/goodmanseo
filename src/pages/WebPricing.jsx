@@ -36,7 +36,7 @@ const websitePackages = [
     priceNote: '1회 결제',
     label: '처음 시작하는 기본 구성',
     description: '소개, 서비스 안내, 문의처럼 꼭 필요한 내용만 담아 빠르게 시작하는 기본 홈페이지입니다.',
-    points: ['최대 3페이지 제작', '소개/서비스/문의 구성', '모바일 화면 기본 세팅', '기본 SEO 세팅', 'Analytics / Search Console 기본 등록', 'Google Business Profile 연결 확인', '홈페이지 제작 고객 무료 AI 강의 수강 쿠폰 제공'],
+    points: ['최대 3페이지 제작', '소개/서비스/문의 구성', '모바일 화면 기본 세팅', '기본 SEO 세팅', 'Analytics / Search Console 기본 등록', 'Google Business Profile 연결 확인', '3개월 온라인 관리 서포트 포함', '호스팅 AUD 49 / month부터 선택 가능', '홈페이지 제작 고객 무료 AI 강의 수강 쿠폰 제공'],
     cta: '스타터 패키지 문의하기',
     href: '/contact?type=starter-homepage',
   },
@@ -46,7 +46,7 @@ const websitePackages = [
     priceNote: '1회 결제',
     label: '페이지가 더 필요한 구성',
     description: '서비스가 여러 개이거나 설명할 내용이 많은 비즈니스를 위한 홈페이지 구성입니다.',
-    points: ['최대 7페이지 제작', '상세 서비스 페이지 구성', '전화/이메일/문의폼 연결', '주요 페이지 SEO 정리', 'Google Business Profile 기본 세팅/정리', 'Analytics / Search Console 기본 등록', '기본 소셜 링크 연결 지원', '홈페이지 제작 고객 무료 AI 강의 수강 쿠폰 제공'],
+    points: ['최대 7페이지 제작', '상세 서비스 페이지 구성', '전화/이메일/문의폼 연결', '주요 페이지 SEO 정리', 'Google Business Profile 기본 세팅/정리', 'Analytics / Search Console 기본 등록', '기본 소셜 링크 연결 지원', '3개월 온라인 관리 서포트 포함', '호스팅 AUD 49 / month부터 선택 가능', '홈페이지 제작 고객 무료 AI 강의 수강 쿠폰 제공'],
     cta: '비즈니스 패키지 문의하기',
     href: '/contact?type=business-homepage',
   },
@@ -56,19 +56,9 @@ const websitePackages = [
     priceNote: '1회 결제',
     label: '콘텐츠가 많은 확장 구성',
     description: '여러 서비스, 지역, 안내 페이지를 넉넉하게 구성해야 하는 비즈니스에 맞는 홈페이지입니다.',
-    points: ['10페이지 이상 제작', '비즈니스 홈페이지 항목 포함', 'SEO All-in-One 패키지 포함', 'Google Business Profile 정리', 'Analytics / Search Console 기본 등록', '3개월 온라인 관리 서포트 포함', '홈페이지 제작 고객 무료 AI 강의 수강 쿠폰 제공'],
+    points: ['10페이지 이상 제작', '비즈니스 홈페이지 항목 포함', 'SEO All-in-One 패키지 포함', 'Google Business Profile 정리', 'Analytics / Search Console 기본 등록', '3개월 온라인 관리 서포트 포함', '호스팅 AUD 49 / month부터 선택 가능', '홈페이지 제작 고객 무료 AI 강의 수강 쿠폰 제공'],
     cta: '성장형 패키지 문의하기',
     href: '/contact?type=growth-homepage',
-  },
-  {
-    title: '호스팅 Only',
-    price: 'AUD 49 / month',
-    priceNote: '월간 호스팅',
-    label: '제작 없이 호스팅만',
-    description: '이미 홈페이지가 있고 호스팅, SSL, 기본 연결 상태만 맡기고 싶은 경우 선택할 수 있습니다.',
-    points: ['호스팅 공간 관리', 'SSL 연결 상태 확인', '기본 백업 확인', '서버/도메인 연결 상태 체크', '작은 수정 작업은 별도'],
-    cta: '호스팅 문의하기',
-    href: '/contact?type=online-support',
   },
 ];
 
@@ -98,8 +88,8 @@ const carePackages = [
     title: '사이트 케어 Basic',
     price: 'AUD 79 / month',
     priceNote: '월간 기술 관리',
-    description: '홈페이지가 열린 뒤 기본 호스팅과 작은 수정까지 맡기고 싶은 경우 적합합니다.',
-    points: ['호스팅/SSL 연결 상태 확인', '기본 백업 및 장애 확인', '월 1회 작은 텍스트/이미지 수정', '도메인 만료/연결 상태 체크'],
+    description: '홈페이지가 열린 뒤 기본 상태 확인과 작은 수정까지 맡기고 싶은 경우 적합합니다.',
+    points: ['호스팅/SSL 연결 상태 확인', '기본 백업 및 장애 확인', '월 1회 작은 텍스트/이미지 수정', '도메인 연결 상태 체크'],
     cta: '사이트 케어 문의하기',
     href: '/contact?type=online-support',
   },
@@ -110,15 +100,6 @@ const carePackages = [
     description: '공지, 배너, 사진 교체처럼 운영 중 작은 변경이 자주 필요한 경우 적합합니다.',
     points: ['Basic 항목 포함', '월 2~3회 작은 수정', '공지/배너/이미지 교체 지원', '우선 응대'],
     cta: '사이트 케어 Plus 문의하기',
-    href: '/contact?type=online-support',
-  },
-  {
-    title: '도메인 · DNS 정리',
-    price: 'AUD 150~',
-    priceNote: '1회 정리',
-    description: '기존 도메인, DNS, SSL 연결이 복잡하거나 이전이 필요한 경우 따로 정리합니다.',
-    points: ['도메인 직접 구매 시 무료 연결', '도메인 구매 대행: 원가 + AUD 60 / year', '기존 도메인/DNS 연결 정리', 'SSL 연결 확인'],
-    cta: '도메인 정리 문의하기',
     href: '/contact?type=online-support',
   },
 ];
@@ -155,7 +136,7 @@ const faqItems = [
   },
   {
     question: '호스팅이나 도메인 관리도 맡길 수 있나요?',
-    answer: '네, 가능합니다. 기본 제작에는 연결 상담을 포함하고, 오픈 이후 호스팅/SSL/백업/작은 수정이 필요하면 사이트 케어 Basic 또는 Plus 월간 관리로 이어갈 수 있습니다. 도메인 구매 대행은 도메인 원가와 연 관리비가 별도로 적용됩니다.',
+    answer: '네, 가능합니다. 홈페이지 제작 패키지에서 호스팅은 AUD 49 / month부터 선택할 수 있습니다. 기본 호스팅에는 작은 수정 작업이 포함되지 않으며, 오픈 후 작은 수정과 기본 상태 확인까지 필요하면 사이트 케어 Basic 또는 Plus로 이어갈 수 있습니다.',
   },
   {
     question: '중도 취소 시 환불 정책은 어떻게 되나요?',
@@ -258,7 +239,7 @@ const WebPricing = () => {
               <h2 className="section-title mx-auto">홈페이지 제작</h2>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 md:grid-cols-3">
               {websitePackages.map((item, index) => (
                 <article key={item.title} className={`${index === 1 ? 'pricing-spotlight' : 'feature-card'} flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(16,33,51,0.06)]`}>
                   <div>
@@ -290,17 +271,17 @@ const WebPricing = () => {
           </div>
         </section>
 
-        {/* 2. 호스팅 · 사이트 케어 */}
+        {/* 2. 사이트 케어 */}
         <section id="site-care" className="section-block !min-h-0 px-0 mt-12">
           <div className="w-full">
             <div className="section-heading text-center">
-              <h2 className="section-title mx-auto">호스팅 · 사이트 케어</h2>
+              <h2 className="section-title mx-auto">사이트 케어</h2>
               <p className="section-copy mx-auto">
-                홈페이지 오픈 후 기술 관리와 작은 수정이 필요할 때 선택할 수 있습니다.
+                홈페이지 오픈 후 기본 상태 확인과 작은 수정이 필요할 때 선택할 수 있습니다.
               </p>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2">
               {carePackages.map((item) => (
                 <article key={item.title} className="soft-panel flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(16,33,51,0.04)]">
                   <div>

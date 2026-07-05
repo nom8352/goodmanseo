@@ -44,15 +44,14 @@ From `src/pages/WebPricing.jsx`:
 - 스타터 홈페이지: `AUD 1,490`, one-time
 - 비즈니스 홈페이지: `AUD 3,500`, one-time
 - 성장형 홈페이지: `AUD 6,000~`, one-time
-- 호스팅 Only: `AUD 49 / month`
 
 Important hierarchy:
 
 - Starter is a compact essential website package up to 3 pages.
-- Starter includes basic SEO setup, Analytics/Search Console basic registration, Google Business Profile connection check, and a free AI course coupon for website-production customers.
-- Business homepage adds key page SEO cleanup for up to 7 pages, Google Business Profile basic setup/cleanup, Analytics/Search Console basic registration, basic social-link connection support, and a free AI course coupon for website-production customers.
-- Growth homepage is for larger content and includes the SEO All-in-One package, Google Business Profile cleanup, Analytics/Search Console basic registration, 3 months online management support, and a free AI course coupon for website-production customers.
-- Hosting Only is listed under website packages as a narrow hosting-only option for existing sites; small edits are excluded.
+- Starter includes basic SEO setup, Analytics/Search Console basic registration, Google Business Profile connection check, 3 months online management support, optional hosting from `AUD 49 / month`, and a free AI course coupon for website-production customers.
+- Business homepage adds key page SEO cleanup for up to 7 pages, Google Business Profile basic setup/cleanup, Analytics/Search Console basic registration, basic social-link connection support, 3 months online management support, optional hosting from `AUD 49 / month`, and a free AI course coupon for website-production customers.
+- Growth homepage is for larger content and includes the SEO All-in-One package, Google Business Profile cleanup, Analytics/Search Console basic registration, 3 months online management support, optional hosting from `AUD 49 / month`, and a free AI course coupon for website-production customers.
+- Hosting is not shown as a separate public package; it remains an optional homepage-package item from `AUD 49 / month`, with small edits excluded from the base hosting option.
 
 ## SEO And Google Business Profile
 
@@ -65,22 +64,18 @@ From `src/pages/WebPricing.jsx`:
 
 The `온라인 관리 서포트` offer is the broader monthly support package for homepage, GBP status checks, basic SEO, Analytics/Search Console checks, and SNS link/profile support. The `GBP 유지 서포트` add-on is narrower and only for Google Business Profile updates.
 
-## Hosting, Site Care, And Domain
+## Site Care
 
 From `src/pages/WebPricing.jsx`:
 
-- 호스팅 Only: `AUD 49 / month`
 - 사이트 케어 Basic: `AUD 79 / month`
 - 사이트 케어 Plus: `AUD 149 / month`
-- 도메인 · DNS 정리: `AUD 150~`, one-time
-- 도메인 구매 대행: domain cost + `AUD 60 / year`
 
 Important distinction:
 
-- Hosting Only is the narrow hosting plan: hosting space management, SSL checks, basic backup checks, and server/domain connection checks without small edits.
-- Site Care Basic/Plus are technical-care plans for hosting/SSL status, backups/disruption checks, and small content edits after launch.
-- Online management support is a broader channel-management support plan and should not be collapsed into hosting.
-- Domain purchase can remain client-owned; GoodmanSEO can connect it for free when the client buys it directly, or charge a small annual management fee when purchasing/managing it on the client's behalf.
+- Site Care Basic/Plus are post-launch technical care plans for hosting/SSL status, backups/disruption checks, and small content edits.
+- Site Care is separate from the homepage-package hosting option. Hosting remains an optional item inside homepage packages from `AUD 49 / month`.
+- Online management support is a broader channel-management support plan and should not be collapsed into site care.
 
 ## AI Business Services
 
