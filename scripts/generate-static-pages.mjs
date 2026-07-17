@@ -12,7 +12,7 @@ import {
 
 const distDir = path.resolve('dist');
 const indexPath = path.join(distDir, 'index.html');
-const defaultImage = 'https://goodmanseo.com/og-image.png';
+const defaultImage = 'https://goodmanseo.com/og-home-2026-07.png';
 
 const formatPostDate = (date) => date.replaceAll('.', '-');
 const canonicalForRoute = (route) => `https://goodmanseo.com${route === '/' ? '/' : `${route}/`}`;
@@ -20,13 +20,14 @@ const canonicalForRoute = (route) => `https://goodmanseo.com${route === '/' ? '/
 const baseRoutePages = [
   {
     route: '/',
-    title: '홈 | Goodman SEO',
+    title: '홈페이지 제작 · 구글 비즈니스 · 기본 SEO | Goodman SEO',
     description:
-      'Goodman SEO는 호주와 시드니 비즈니스를 위해 홈페이지 제작, 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수까지 쉽게 시작할 수 있는 기본 세팅을 제공합니다.',
+      'GoodmanSEO는 홈페이지 제작, Google Business Profile 세팅, On-page SEO 기본 정리를 도와드립니다.',
     canonical: canonicalForRoute('/'),
     type: 'website',
+    imageAlt: 'GoodmanSEO 홈페이지, 구글 비즈니스, 기본 SEO 안내',
     keywords:
-      '호주 홈페이지 제작, 시드니 홈페이지 제작, 호주 구글 지도 등록, 시드니 구글 지도 등록, 비즈니스 홈페이지 제작',
+      '홈페이지 제작, 구글 비즈니스 프로필, 온페이지 SEO, 비즈니스 홈페이지, 시드니 홈페이지 제작',
     jsonLd: [organizationJsonLd, websiteJsonLd],
   },
   {

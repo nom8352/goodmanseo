@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const SITE_NAME = 'Goodman SEO';
 const SITE_URL = 'https://goodmanseo.com';
-const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
+const DEFAULT_IMAGE = `${SITE_URL}/og-home-2026-07.png`;
 
 const withTrailingSlash = (path) => {
   if (path === '/') {
