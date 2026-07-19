@@ -17,6 +17,17 @@ const diagnostics = [
     cta: 'AI 진단 신청하기',
     href: '/contact?type=quick-diagnosis',
   },
+  {
+    title: 'AI 비즈니스 리포트',
+    price: 'AUD 249',
+    originalPrice: 'AUD 349',
+    promoLabel: '런칭 특별가',
+    priceNote: '1회 결제',
+    description: '업종과 경쟁사까지 함께 분석하고 30일·90일 실행 순서를 정리합니다.',
+    points: ['30일·90일 실행 로드맵', '홈페이지·SEO·구글 노출 통합 진단', '경쟁사 1~3곳 비교', 'AI 가상 고객 100명 반응 분석'],
+    cta: '비즈니스 리포트 보기',
+    href: '/ai-report',
+  },
 ];
 
 const freeCheckCard = {
@@ -205,9 +216,9 @@ const WebPricing = () => {
     <div className="min-h-screen bg-gradient-to-tr from-[#f7f2ec] via-white to-[#eee7df] pt-24 pb-16 text-[#102133]">
       <Seo
         title="서비스 및 가격"
-        description="무료 점검, AI 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필, 추가 관리까지 GoodmanSEO의 서비스와 가격을 한눈에 확인할 수 있습니다."
+        description="무료 점검, AI 진단, AI 비즈니스 리포트, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필과 추가 관리 가격을 확인할 수 있습니다."
         path="/pricing"
-        keywords={['서비스 및 가격', '무료 점검', 'AI 진단', '비즈니스 홈페이지', 'SEO 패키지', '구글 비즈니스 프로필']}
+        keywords={['서비스 및 가격', '무료 점검', 'AI 진단', 'AI 비즈니스 리포트', '비즈니스 홈페이지', 'SEO 패키지', '구글 비즈니스 프로필']}
       />
 
       <div className="container">
@@ -315,12 +326,13 @@ const WebPricing = () => {
               <h2 className="section-title mx-auto">점검 · 진단</h2>
             </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-6 md:grid-cols-3">
               {[freeCheckCard, ...diagnostics].map((item) => (
                 <article key={item.title} className="feature-card flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(16,33,51,0.04)]">
                   <div>
                     <p className="pricing-card-title">{item.title}</p>
                     <PriceDisplay item={item} />
+                    <p className="mt-4 text-sm font-semibold leading-relaxed text-[#566471]">{item.description}</p>
                     <div className="mt-6 grid gap-3">
                       {item.points.map((point) => (
                         <div key={`${item.title}-${point}`} className="benefit-row">
@@ -330,14 +342,12 @@ const WebPricing = () => {
                       ))}
                     </div>
                   </div>
+                  <Link to={item.href} className="secondary-button mt-7 w-full py-3">
+                    {item.cta}
+                    <ArrowRight size={16} />
+                  </Link>
                 </article>
               ))}
-            </div>
-            <div className="mt-8 flex justify-center">
-              <Link to="/contact?type=free-check" className="primary-button">
-                무료 점검 및 진단 신청하기
-                <ArrowRight size={16} />
-              </Link>
             </div>
           </div>
         </section>

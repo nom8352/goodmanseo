@@ -33,14 +33,15 @@ const fadeUp = (delay = 0, y = 24) => ({
 const packages = [
   {
     title: 'AI 비즈니스 리포트',
-    price: 'AUD 349',
-    desc: '단순한 오류 점검이 아닌, 전환율에 집중한 맞춤형 성장 리포트입니다.',
+    originalPrice: 'AUD 349',
+    price: 'AUD 249',
+    desc: '업종, 지역, 경쟁사와 실제 홈페이지를 기준으로 분석하는 맞춤형 성장 리포트입니다.',
     points: [
+      '30일 / 90일 우선순위 액션 플랜 제공',
       '홈페이지 & SEO & 구글 노출(Local Visibility) 통합 진단',
       'UI/UX 및 고객 구매 여정(CTA) 분석',
       '경쟁사 1~3곳 비교 및 포지셔닝 전략',
       'AI 기반 가상 고객 반응 시뮬레이션 100명',
-      '30일 / 90일 우선순위 액션 플랜 제공',
     ],
     href: '/contact?type=ai-report-standard',
     featured: true,
@@ -97,6 +98,8 @@ const AIReport = () => {
         path="/ai-report"
         keywords={['AI 비즈니스 리포트', '비즈니스 리포트', '홈페이지 진단', 'SEO 오딧', '구글 비즈니스 점검', 'AI 고객 반응 시뮬레이션']}
         jsonLd={[organizationJsonLd, serviceJsonLd]}
+        locale="ko"
+        alternates={[{ lang: 'ko', path: '/ai-report' }, { lang: 'en', path: '/en/ai-report' }]}
       />
 
       <section className="relative max-w-none overflow-hidden px-6 py-16 md:py-24">
@@ -120,16 +123,21 @@ const AIReport = () => {
               </div>
 
               <h1 className="mt-7 max-w-4xl text-[clamp(2.25rem,4.6vw,4.25rem)] font-black leading-[1.08] tracking-[-0.04em] text-[#102133]">
-                트래픽을 매출로
+                무엇을 먼저 고칠지,
                 <br />
-                바꾸는 웹사이트
+                30일·90일 실행 순서로
                 <br />
-                <span className="text-[#102133]">통합 진단</span>
+                <span className="text-[#102133]">정리해드립니다</span>
               </h1>
 
               <p className="mt-6 max-w-2xl text-base font-medium leading-[1.8] text-[#44515d]">
-                홈페이지 상태, 구글 SEO, 그리고 AI 기반 고객 반응까지. 비즈니스 성장을 위한 가장 확실한 로드맵을 AUD 349에 제공합니다.
+                업종, 지역, 경쟁사와 실제 홈페이지를 기준으로 SEO, Google 노출, 전환 흐름을 함께 분석합니다.
               </p>
+
+              <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
+                <span className="font-bold text-[#6c7780] line-through">정상가 AUD 349</span>
+                <span className="rounded-[0.25rem] bg-[#102133] px-3 py-1.5 font-black text-white">런칭 특별가 AUD 249</span>
+              </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link to="/contact?type=ai-report-standard" className="primary-button px-6 py-3 text-base">
@@ -161,9 +169,9 @@ const AIReport = () => {
 
                 <div className="mt-6 grid gap-3">
                   {[
+                    ['Roadmap', '30일 / 90일 실행 우선순위'],
                     ['Audit', '홈페이지, SEO, Google 노출 통합 확인'],
                     ['Persona', 'AI 고객 100명 반응 시뮬레이션'],
-                    ['Roadmap', '30일 / 90일 실행 우선순위'],
                   ].map(([label, value]) => (
                     <div key={label} className="flex items-center justify-between gap-4 rounded-lg bg-white px-4 py-3 text-sm">
                       <span className="font-black text-[#102133]">{label}</span>
@@ -211,12 +219,16 @@ const AIReport = () => {
                     </div>
                     {item.featured ? (
                       <span className="rounded-[0.25rem] bg-[#102133] px-3 py-1 text-xs font-black text-white">
-                        추천
+                        런칭 특별가
                       </span>
                     ) : null}
                   </div>
 
-                  <p className="mt-5 text-3xl font-black tracking-[-0.04em] text-[#102133]">{item.price}</p>
+                  <div className="mt-5 flex flex-wrap items-end gap-x-3 gap-y-1">
+                    <p className="text-3xl font-black tracking-[-0.04em] text-[#102133]">{item.price}</p>
+                    <p className="pb-0.5 text-sm font-bold text-[#6c7780] line-through">{item.originalPrice}</p>
+                  </div>
+                  <p className="mt-1 text-xs font-black text-[#102133]">정상가에서 AUD 100 할인</p>
                   {item.desc ? (
                     <p className="mt-3 text-sm font-bold leading-relaxed text-[#44515d]">{item.desc}</p>
                   ) : null}
@@ -235,6 +247,10 @@ const AIReport = () => {
                   내 비즈니스 진단 시작하기
                   <ArrowRight size={16} />
                 </Link>
+                <a href="#sample-reports" className="mt-3 inline-flex items-center justify-center gap-2 text-sm font-black text-[#102133] underline decoration-[#102133]/30 underline-offset-4">
+                  결제 전 업종별 샘플 5개 확인하기
+                  <FileText size={15} />
+                </a>
               </Motion.article>
             ))}
           </div>
@@ -405,7 +421,7 @@ const AIReport = () => {
                 ))}
               </div>
               <p className="mt-5 rounded-[0.45rem] border border-[#ded8cf] bg-white px-4 py-3 text-xs font-semibold leading-relaxed text-[#44515d]">
-                AI 고객 반응 시뮬레이션은 가상 고객군을 기준으로 메시지, 신뢰 요소, 구매 망설임을 빠르게 점검해 리포트의 우선순위 판단에 활용합니다.
+                AI 고객 반응 시뮬레이션은 실제 고객 설문을 대체하지 않습니다. 가상 고객군을 기준으로 메시지, 신뢰 요소와 구매 망설임을 점검하는 보조 분석으로 활용합니다.
               </p>
             </Motion.div>
           </div>
@@ -481,7 +497,7 @@ const AIReport = () => {
             className="mt-12 text-center"
           >
             <p className="text-[0.93rem] font-semibold text-[#44515d] mb-5">
-              단 한 번의 진단으로 비즈니스의 방향을 바꾸세요.
+              정상가 AUD 349 · 런칭 특별가 AUD 249
             </p>
             <Link
               to="/contact?type=ai-report-standard"

@@ -410,6 +410,12 @@ const AIReportSample = () => {
               <p className="text-xs font-semibold leading-relaxed text-[#687582]">
                 이 페이지는 GoodmanSEO AI 비즈니스 리포트 샘플입니다. 실제 리포트는 제출 정보와 확인 가능한 온라인 자료를 바탕으로 작성됩니다.
               </p>
+              <div className="mt-5 flex flex-col items-center gap-3">
+                <p className="text-sm font-black text-[#102133]">정상가 AUD 349 · 런칭 특별가 AUD 249</p>
+                <Link to="/contact?type=ai-report-standard" className="inline-flex items-center justify-center rounded-[0.25rem] bg-[#102133] px-5 py-3 text-sm font-black text-white transition hover:bg-[#1b3145]">
+                  내 비즈니스 리포트 신청하기
+                </Link>
+              </div>
             </div>
         </main>
       </div>

@@ -1,5 +1,9 @@
 # Wiki Log
 
+- 2026-07-19: Aligned the AI Business Report across pricing, report samples, contact copy, navigation, footer, and the Korean homepage. Added `/en/ai-report` and connected it from the English homepage, navigation, footer, enquiry flow, static generation, and sitemap. Public pricing is now `AUD 249` launch price against `AUD 349` standard price.
+
+- 2026-07-13: Added the English homepage at `/en` and English enquiry page at `/en/contact`, including shared locale-aware navigation/footer/form copy, language switching, `hreflang`, static generation, and sitemap coverage.
+
 ## 2026-07-04
 
 - 2026-07-06: Updated the AI report sample state after the document-style redesign and deeper content pass. All five sample report routes now share the Luna-style structure in `src/data/aiReportSamples.js`: methodology rows plus 13 ordered sections from `Executive Summary` through `Final Recommendation`. Non-Luna samples were expanded with industry-specific evidence, UX/CRO, SEO/content, local or funnel, competitor, AI persona, business/CEO, reasoning, roadmap, and recommendation content. `npm.cmd run build` passed and Playwright checked the Sydney and ClientFlow sample routes.

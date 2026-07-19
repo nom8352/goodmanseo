@@ -12,6 +12,8 @@ const withTrailingSlash = (path) => {
   return path.endsWith('/') ? path : `${path}/`;
 };
 
+const absoluteUrlForPath = (path) => `${SITE_URL}${withTrailingSlash(path)}`;
+
 const ensureMetaTag = (selector, attributes) => {
   let element = document.head.querySelector(selector);
 
@@ -47,12 +49,15 @@ const Seo = ({
   type = 'website',
   keywords = [],
   jsonLd,
+  locale = 'ko',
+  alternates = [],
 }) => {
   useEffect(() => {
     const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
-    const canonicalUrl = `${SITE_URL}${withTrailingSlash(path)}`;
+    const canonicalUrl = absoluteUrlForPath(path);
 
     document.title = fullTitle;
+    document.documentElement.lang = locale;
 
     ensureMetaTag('meta[name="description"]', {
       name: 'description',
@@ -85,6 +90,10 @@ const Seo = ({
     ensureMetaTag('meta[property="og:site_name"]', {
       property: 'og:site_name',
       content: SITE_NAME,
+    });
+    ensureMetaTag('meta[property="og:locale"]', {
+      property: 'og:locale',
+      content: locale === 'en' ? 'en_AU' : 'ko_KR',
     });
     ensureMetaTag('meta[property="og:image"]', {
       property: 'og:image',
@@ -120,6 +129,24 @@ const Seo = ({
       href: canonicalUrl,
     });
 
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((element) => element.remove());
+    alternates.forEach(({ lang, path: alternatePath }) => {
+      ensureLinkTag(`link[rel="alternate"][hreflang="${lang}"]`, {
+        rel: 'alternate',
+        hreflang: lang,
+        href: absoluteUrlForPath(alternatePath),
+      });
+    });
+
+    if (alternates.length > 0) {
+      const defaultAlternate = alternates.find(({ lang }) => lang === 'ko') || alternates[0];
+      ensureLinkTag('link[rel="alternate"][hreflang="x-default"]', {
+        rel: 'alternate',
+        hreflang: 'x-default',
+        href: absoluteUrlForPath(defaultAlternate.path),
+      });
+    }
+
     const existingJsonLd = document.getElementById('seo-json-ld');
     if (existingJsonLd) {
       existingJsonLd.remove();
@@ -132,7 +159,7 @@ const Seo = ({
       script.textContent = JSON.stringify(jsonLd);
       document.head.appendChild(script);
     }
-  }, [description, image, imageAlt, jsonLd, keywords, path, title, type]);
+  }, [alternates, description, image, imageAlt, jsonLd, keywords, locale, path, title, type]);
 
   return null;
 };

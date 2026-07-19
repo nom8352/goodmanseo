@@ -2,7 +2,62 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Instagram, Facebook, Youtube, Mail, ArrowUpRight } from 'lucide-react';
 
-const Footer = () => {
+const FOOTER_CONTENT = {
+  ko: {
+    homePath: '/',
+    meta: '홈페이지 · 구글 비즈니스 · 기본 SEO',
+    description: <>고객이 검색해서 보고, 믿고, 문의할 수 있도록<br />홈페이지와 구글 기본 세팅을 정리합니다.</>,
+    quickHeading: '빠른 메뉴',
+    quickLinks: [
+      ['홈', '/'],
+      ['서비스 및 가격', '/pricing'],
+      ['블로그', '/blog'],
+      ['진단 / 문의 신청', '/contact'],
+    ],
+    servicesHeading: '서비스',
+    serviceLinks: [
+      ['홈페이지 제작', '/pricing'],
+      ['구글 비즈니스 세팅', '/pricing'],
+      ['On-page SEO', '/pricing'],
+      ['AI 실전 멘토링', '/ai-business'],
+      ['AI 비즈니스 리포트', '/ai-report'],
+    ],
+    contactHeading: '문의하기',
+    contactPath: '/contact',
+    contactLabel: '무료 점검 신청 / 문의',
+    privacy: '개인정보처리방침',
+    terms: '이용약관',
+  },
+  en: {
+    homePath: '/en',
+    meta: 'WEBSITES · GOOGLE BUSINESS · SEO BASICS',
+    description: <>We organise the website and Google basics<br />your customers need to find, trust and contact you.</>,
+    quickHeading: 'Quick Links',
+    quickLinks: [
+      ['Home', '/en'],
+      ['Services', '/en#services'],
+      ['Sample Websites', '/en#samples'],
+      ['Free Check / Enquiry', '/en/contact'],
+    ],
+    servicesHeading: 'Services',
+    serviceLinks: [
+      ['Website Design', '/en#services'],
+      ['Google Business Setup', '/en#services'],
+      ['On-page SEO', '/en#services'],
+      ['AI Workflow Support', '/en#services'],
+      ['AI Business Report', '/en/ai-report'],
+    ],
+    contactHeading: 'Contact',
+    contactPath: '/en/contact',
+    contactLabel: 'Free Check / Enquiry',
+    privacy: 'Privacy Policy (KR)',
+    terms: 'Terms of Use (KR)',
+  },
+};
+
+const Footer = ({ locale = 'ko' }) => {
+  const content = FOOTER_CONTENT[locale] || FOOTER_CONTENT.ko;
+
   return (
     <footer className="border-t border-white/10 bg-[#0f2132] py-9 text-[#aebbc7] md:py-12">
       <div className="container px-6">
@@ -10,14 +65,13 @@ const Footer = () => {
           
           {/* Brand Column */}
           <div className="footer-brand col-span-2 flex flex-col items-start lg:col-span-1">
-            <Link to="/" className="site-mark site-mark--footer">
+            <Link to={content.homePath} className="site-mark site-mark--footer">
               <span className="site-mark__title">GOODMANSEO</span>
-              <span className="site-mark__meta">홈페이지 · 구글 비즈니스 · 기본 SEO</span>
+              <span className="site-mark__meta">{content.meta}</span>
             </Link>
             
             <p className="mt-4 max-w-[24rem] text-[0.78rem] font-normal leading-relaxed text-[#aebbc7] md:mt-5 md:text-[0.82rem]">
-              고객이 검색해서 보고, 믿고, 문의할 수 있도록<br />
-              홈페이지와 구글 기본 세팅을 정리합니다.
+              {content.description}
             </p>
             
             {/* Social Icons */}
@@ -54,53 +108,35 @@ const Footer = () => {
 
           {/* Quick Menu Column */}
           <div className="footer-links">
-            <h4 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#d9e2ea] md:mb-4 md:text-[0.72rem]">빠른 메뉴</h4>
+            <h4 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#d9e2ea] md:mb-4 md:text-[0.72rem]">{content.quickHeading}</h4>
             <ul className="flex flex-col gap-2 text-[0.78rem] font-normal md:gap-2.5 md:text-[0.82rem]">
-              <li>
-                <Link to="/" className="text-[#aebbc7] transition hover:text-[#eef3f7]">홈</Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="text-[#aebbc7] transition hover:text-[#eef3f7]">서비스 및 가격</Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-[#aebbc7] transition hover:text-[#eef3f7]">블로그</Link>
-              </li>
-              <li>
-                <Link to="/contact" className="text-[#aebbc7] transition hover:text-[#eef3f7]">진단 / 문의 신청</Link>
-              </li>
+              {content.quickLinks.map(([label, href]) => (
+                <li key={label}><Link to={href} className="text-[#aebbc7] transition hover:text-[#eef3f7]">{label}</Link></li>
+              ))}
             </ul>
           </div>
 
           {/* Services Column */}
           <div className="footer-links">
-            <h4 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#d9e2ea] md:mb-4 md:text-[0.72rem]">서비스</h4>
+            <h4 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#d9e2ea] md:mb-4 md:text-[0.72rem]">{content.servicesHeading}</h4>
             <ul className="flex flex-col gap-2 text-[0.78rem] font-normal md:gap-2.5 md:text-[0.82rem]">
-              <li>
-                <Link to="/pricing" className="text-[#aebbc7] transition hover:text-[#eef3f7]">홈페이지 제작</Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="text-[#aebbc7] transition hover:text-[#eef3f7]">구글 비즈니스 세팅</Link>
-              </li>
-              <li>
-                <Link to="/pricing" className="text-[#aebbc7] transition hover:text-[#eef3f7]">On-page SEO</Link>
-              </li>
-              <li>
-                <Link to="/ai-business" className="text-[#aebbc7] transition hover:text-[#eef3f7]">AI 실전 멘토링</Link>
-              </li>
+              {content.serviceLinks.map(([label, href]) => (
+                <li key={label}><Link to={href} className="text-[#aebbc7] transition hover:text-[#eef3f7]">{label}</Link></li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Column */}
           <div className="footer-contact col-span-2 flex flex-col items-start lg:col-span-1">
-            <h4 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#d9e2ea] md:mb-4 md:text-[0.72rem]">문의하기</h4>
+            <h4 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#d9e2ea] md:mb-4 md:text-[0.72rem]">{content.contactHeading}</h4>
             <ul className="flex w-full flex-col items-start gap-3 text-[0.78rem] font-normal text-[#aebbc7] md:gap-4 md:text-[0.82rem]">
               <li className="flex min-w-0 items-center gap-3">
                 <Mail size={14} className="shrink-0 text-[#8fa0af]" />
                 <a href="mailto:goodmanseo.sydney@gmail.com" className="break-all text-[#aebbc7] transition hover:text-[#eef3f7]">goodmanseo.sydney@gmail.com</a>
               </li>
               <li>
-                <Link to="/contact" className="inline-flex min-h-9 items-center justify-center gap-2 rounded-[0.2rem] border border-[#405467] bg-white/[0.04] px-3.5 text-[0.76rem] font-semibold text-[#d9e2ea] transition hover:border-[#657789] hover:bg-white/[0.08] hover:text-[#eef3f7]">
-                  무료 점검 신청 / 문의
+                <Link to={content.contactPath} className="inline-flex min-h-9 items-center justify-center gap-2 rounded-[0.2rem] border border-[#405467] bg-white/[0.04] px-3.5 text-[0.76rem] font-semibold text-[#d9e2ea] transition hover:border-[#657789] hover:bg-white/[0.08] hover:text-[#eef3f7]">
+                  {content.contactLabel}
                   <ArrowUpRight size={13} />
                 </Link>
               </li>
@@ -113,9 +149,9 @@ const Footer = () => {
         <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-5 text-[0.72rem] font-normal text-[#8fa0af] sm:flex-row sm:items-center sm:justify-between md:mt-10 md:gap-4 md:pt-6 md:text-[0.76rem]">
           <p>© 2026 GOODMANSEO. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-            <Link to="/privacy" className="text-[#8fa0af] transition hover:text-[#d9e2ea]">개인정보처리방침</Link>
+            <Link to="/privacy" className="text-[#8fa0af] transition hover:text-[#d9e2ea]">{content.privacy}</Link>
             <span className="select-none text-white/20">|</span>
-            <Link to="/terms" className="text-[#8fa0af] transition hover:text-[#d9e2ea]">이용약관</Link>
+            <Link to="/terms" className="text-[#8fa0af] transition hover:text-[#d9e2ea]">{content.terms}</Link>
           </div>
         </div>
       </div>

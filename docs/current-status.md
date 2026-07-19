@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-07-13 English homepage rollout: added `/en` and `/en/contact` while preserving the existing homepage structure and navy/off-white design system. Shared navigation, footer, enquiry form, language switcher, document language, canonical, `hreflang`, static route generation, and sitemap entries now support Korean and English. Targeted ESLint, Impeccable detect, production build, and Playwright desktop/mobile checks passed.
 - `docs/homepage-redesign-2026-07-04.md`: records the July 4 homepage redesign work log, including reference-image direction, hero woman image, dark navy section system, compact typography, footer/nav/logo changes, removed score CTA section, and validation notes.
 - 2026-07-04 subpage design rollout: applied the saved homepage navy/off-white rules to pricing, starter package, AI business, AI course, AI report, AI report sample, blog, contact, privacy, terms, shared `ContactForm`, and shared button/card CSS. Targeted lint, impeccable detect, and `npm run build` passed.
 - 2026-07-04 homepage redesign lock: main homepage now follows the reference-image direction saved in `DESIGN.md`: warm off-white hero, dark navy full-width service/sample bands, compact typography, serif hero headline, sans-serif logo/nav/footer logo, generated woman hero image, four non-overlapping hero floating cards, dark navy footer, and removal of the score/improvement CTA section.
@@ -250,7 +251,8 @@ Do not assume these are already deployed or pushed unless GitHub state is checke
 Updated on 2026-07-06:
 
 - `/ai-report` now has an 업종별 샘플 리포트 section with five sample report cards.
-- `/ai-report` public positioning follows the Notion product notes: `AI 비즈니스 리포트`, `AUD 349`, `Business + Website + SEO Audit Report`.
+- `/ai-report` public positioning is `AI 비즈니스 리포트`, normal price `AUD 349`, launch price `AUD 249`, and `Business + Website + SEO Audit Report`.
+- `/en/ai-report` provides the English report landing page, with English homepage, navigation, footer, enquiry form, static SEO, and sitemap links aligned to the same launch offer.
 - Public page copy should not promise a fixed delivery time, fixed page count, or "human review" language.
 - Public page copy should avoid defensive guarantee disclaimers; AI persona copy should be framed as a practical virtual customer response check.
 - Sample report content is centralized in `src/data/aiReportSamples.js`.

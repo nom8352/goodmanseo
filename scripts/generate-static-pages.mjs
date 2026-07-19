@@ -29,6 +29,22 @@ const baseRoutePages = [
     keywords:
       '홈페이지 제작, 구글 비즈니스 프로필, 온페이지 SEO, 비즈니스 홈페이지, 시드니 홈페이지 제작',
     jsonLd: [organizationJsonLd, websiteJsonLd],
+    locale: 'ko',
+    alternates: [{ lang: 'ko', route: '/' }, { lang: 'en', route: '/en' }],
+  },
+  {
+    route: '/en',
+    title: 'Websites · Google Business · SEO Basics | Goodman SEO',
+    description:
+      'GoodmanSEO helps Australian local businesses improve their website, Google Business Profile and on-page SEO basics.',
+    canonical: canonicalForRoute('/en'),
+    type: 'website',
+    imageAlt: 'GoodmanSEO website, Google Business Profile and SEO basics',
+    keywords:
+      'small business website Australia, Google Business Profile setup, local SEO basics, Sydney website design, business website review',
+    jsonLd: [organizationJsonLd, websiteJsonLd],
+    locale: 'en',
+    alternates: [{ lang: 'ko', route: '/' }, { lang: 'en', route: '/en' }],
   },
   {
     route: '/starter-package',
@@ -54,17 +70,17 @@ const baseRoutePages = [
     route: '/pricing',
     title: '서비스 및 가격 | Goodman SEO',
     description:
-      'Goodman SEO의 호주와 시드니 비즈니스를 위한 서비스 및 가격 안내 페이지입니다. 홈페이지 제작, 구글 비즈니스 세팅, 기본 SEO, 기본 소셜 링크 연결 지원 범위를 확인할 수 있습니다.',
+      'Goodman SEO의 서비스 및 가격 안내 페이지입니다. 무료 점검, AI 진단, AI 비즈니스 리포트, 홈페이지 제작, 구글 비즈니스 세팅과 기본 SEO 범위를 확인할 수 있습니다.',
     canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:
-      '호주 홈페이지 제작 가격, 시드니 홈페이지 제작 가격, 호주 홈페이지 비용, 비즈니스 홈페이지 가격, 구글 지도 등록 가격',
+      '호주 홈페이지 제작 가격, AI 비즈니스 리포트, 홈페이지 진단 가격, 비즈니스 홈페이지 가격, 구글 지도 등록 가격',
     jsonLd: [
       organizationJsonLd,
       createServiceJsonLd({
         name: 'Goodman SEO 서비스 및 가격',
         description:
-          '무료 점검, AI 진단, 홈페이지 제작, SEO 패키지, 구글 비즈니스 프로필 세팅을 포함한 기본 온라인 세팅 서비스입니다.',
+          '무료 점검, AI 진단, AI 비즈니스 리포트, 홈페이지 제작, SEO 패키지와 구글 비즈니스 프로필 세팅 서비스입니다.',
         path: '/pricing',
         serviceType: 'Website, Google Business Profile, and SEO setup services',
       }),
@@ -165,6 +181,51 @@ const baseRoutePages = [
         serviceType: 'AI business consulting report',
       }),
     ],
+    locale: 'ko',
+    alternates: [{ lang: 'ko', route: '/ai-report' }, { lang: 'en', route: '/en/ai-report' }],
+  },
+  {
+    route: '/en/ai-report',
+    title: 'AI Business Report | Goodman SEO',
+    description:
+      'Review your website, SEO, Google visibility, competitors and customer response, then receive a prioritised 30-day and 90-day action roadmap.',
+    canonical: canonicalForRoute('/en/ai-report'),
+    type: 'website',
+    keywords:
+      'AI business report, business website audit, SEO audit Australia, competitor review, 90 day growth roadmap',
+    jsonLd: [
+      organizationJsonLd,
+      createServiceJsonLd({
+        name: 'GoodmanSEO AI Business Report',
+        description:
+          'An industry-specific business, website and SEO review with a prioritised 30-day and 90-day action roadmap.',
+        path: '/en/ai-report',
+        serviceType: 'AI business consulting report',
+      }),
+    ],
+    locale: 'en',
+    alternates: [{ lang: 'ko', route: '/ai-report' }, { lang: 'en', route: '/en/ai-report' }],
+  },
+  {
+    route: '/en/contact',
+    title: 'Free Check & Enquiries | Goodman SEO',
+    description:
+      'Contact GoodmanSEO about a free online check, website design, Google Business Profile setup, SEO basics or practical AI support.',
+    canonical: canonicalForRoute('/en/contact'),
+    type: 'website',
+    keywords:
+      'free website check Australia, website design enquiry, Google Business Profile help, local SEO enquiry, GoodmanSEO contact',
+    jsonLd: [
+      createWebPageJsonLd({
+        name: 'GoodmanSEO Free Check and Enquiries',
+        description:
+          'Contact GoodmanSEO about website design, Google Business Profile setup, SEO basics and practical AI support.',
+        path: '/en/contact',
+        type: 'ContactPage',
+      }),
+    ],
+    locale: 'en',
+    alternates: [{ lang: 'ko', route: '/contact' }, { lang: 'en', route: '/en/contact' }],
   },
   {
     route: '/privacy',
@@ -252,6 +313,8 @@ const applySeo = (html, page) => {
   const pageImage = page.image || defaultImage;
   const pageImageAlt = page.imageAlt || 'Goodman SEO 대표 이미지';
 
+  nextHtml = nextHtml.replace(/<html\s+lang="[^"]*"/s, `<html lang="${page.locale || 'ko'}"`);
+
   nextHtml = replaceTag(nextHtml, /<title>.*?<\/title>/s, `<title>${page.title}</title>`);
   nextHtml = replaceTag(
     nextHtml,
@@ -318,6 +381,16 @@ const applySeo = (html, page) => {
     /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/s,
     `<link rel="canonical" href="${page.canonical}" />`,
   );
+
+  nextHtml = nextHtml.replace(/\s*<link\s+rel="alternate"\s+hreflang="[^"]+"\s+href="[^"]+"\s*\/?>/gs, '');
+  if (page.alternates?.length) {
+    const defaultAlternate = page.alternates.find(({ lang }) => lang === 'ko') || page.alternates[0];
+    const alternateTags = [
+      ...page.alternates.map(({ lang, route }) => `<link rel="alternate" hreflang="${lang}" href="${canonicalForRoute(route)}" />`),
+      `<link rel="alternate" hreflang="x-default" href="${canonicalForRoute(defaultAlternate.route)}" />`,
+    ].join('\n    ');
+    nextHtml = nextHtml.replace('</head>', `    ${alternateTags}\n  </head>`);
+  }
   nextHtml = applyJsonLd(nextHtml, page.jsonLd);
 
   return nextHtml;

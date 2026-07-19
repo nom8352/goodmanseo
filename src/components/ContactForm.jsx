@@ -1,60 +1,36 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Send, Search, Zap, MessageSquare, Lock } from 'lucide-react';
 
-const INQUIRY_TYPES = [
-  {
-    value: 'free-check',
-    label: '무료 점검',
-    heading: '무료 점검 신청',
-    helper: '홈페이지와 구글 비즈니스 기본 상태를 확인하고 싶어요.',
-    icon: Search,
-    messageLabel: '현재 가장 고민인 점',
-    messagePlaceholder: '예: 홈페이지가 오래됐어요, 구글에서 잘 안 보여요 등',
-    submitLabel: '무료 점검 신청하기',
-  },
-  {
-    value: 'quick-diagnosis',
-    label: 'AI 진단',
-    heading: 'AI 진단 문의',
-    helper: '홈페이지와 기본 SEO를 조금 더 자세히 보고 싶어요.',
-    icon: Zap,
-    messageLabel: '현재 가장 고민인 점',
-    messagePlaceholder: '예: 홈페이지와 구글 지도 프로필 중 시급히 개선해야 할 1순위가 궁금해요',
-    submitLabel: 'AI 진단 신청하기',
-  },
-  {
-    value: 'ai-report-standard',
-    label: 'AI 사업컨설팅',
-    heading: 'AI 비즈니스 진단 리포트 문의',
-    helper: '전체 분석 또는 재분석 리포트를 신청하고 싶어요.',
-    icon: Zap,
-    messageLabel: '현재 가장 큰 고민 / 목표',
-    messagePlaceholder: '예: 전체 분석 리포트 신청, 재분석 리포트 신청, 매출 정체, 낮은 전환율, 경쟁사 대비 차별화 부족 등',
-    submitLabel: 'AI 사업컨설팅 문의하기',
-  },
-  {
-    value: 'online-support',
-    label: '사이트 관리',
-    heading: '사이트 케어 및 온라인 관리 문의',
-    helper: '호스팅, 도메인, 작은 수정 또는 월간 관리를 상담하고 싶어요.',
-    icon: Lock,
-    messageLabel: '필요한 관리 내용',
-    messagePlaceholder: '예: 호스팅 관리가 필요해요, 도메인 연결이 복잡해요, 매달 작은 수정이 필요해요 등',
-    submitLabel: '사이트 관리 문의하기',
-  },
-  {
-    value: 'general-inquiry',
-    label: '일반 문의',
-    heading: '일반 문의',
-    helper: '기타 문의사항이 있어요.',
-    icon: MessageSquare,
-    messageLabel: '문의 내용',
-    messagePlaceholder: '예: 구체적인 제휴/협업 제안이나 기타 궁금하신 사항을 자유롭게 남겨주세요.',
-    submitLabel: '문의 신청하기',
-  },
-];
+const INQUIRY_TYPES = {
+  ko: [
+    { value: 'free-check', label: '무료 점검', heading: '무료 점검 신청', helper: '홈페이지와 구글 비즈니스 기본 상태를 확인하고 싶어요.', icon: Search, messageLabel: '현재 가장 고민인 점', messagePlaceholder: '예: 홈페이지가 오래됐어요, 구글에서 잘 안 보여요 등', submitLabel: '무료 점검 신청하기' },
+    { value: 'quick-diagnosis', label: 'AI 진단', heading: 'AI 진단 문의', helper: '홈페이지와 기본 SEO를 조금 더 자세히 보고 싶어요.', icon: Zap, messageLabel: '현재 가장 고민인 점', messagePlaceholder: '예: 홈페이지와 구글 지도 프로필 중 시급히 개선해야 할 1순위가 궁금해요', submitLabel: 'AI 진단 신청하기' },
+    { value: 'ai-report-standard', label: 'AI 비즈니스 리포트', heading: 'AI 비즈니스 리포트 문의', helper: '업종별 맞춤 분석과 30일·90일 실행 로드맵을 신청하고 싶어요.', icon: Zap, messageLabel: '현재 가장 큰 고민 / 목표', messagePlaceholder: '예: 매출 정체, 낮은 전환율, 경쟁사 대비 차별화 부족, 구글 노출 개선 등', submitLabel: 'AI 비즈니스 리포트 문의하기' },
+    { value: 'online-support', label: '사이트 관리', heading: '사이트 케어 및 온라인 관리 문의', helper: '호스팅, 도메인, 작은 수정 또는 월간 관리를 상담하고 싶어요.', icon: Lock, messageLabel: '필요한 관리 내용', messagePlaceholder: '예: 호스팅 관리가 필요해요, 도메인 연결이 복잡해요, 매달 작은 수정이 필요해요 등', submitLabel: '사이트 관리 문의하기' },
+    { value: 'general-inquiry', label: '일반 문의', heading: '일반 문의', helper: '기타 문의사항이 있어요.', icon: MessageSquare, messageLabel: '문의 내용', messagePlaceholder: '예: 구체적인 제휴/협업 제안이나 기타 궁금하신 사항을 자유롭게 남겨주세요.', submitLabel: '문의 신청하기' },
+  ],
+  en: [
+    { value: 'free-check', label: 'Free Check', heading: 'Request a Free Check', helper: 'I would like a basic review of my website and Google Business Profile.', icon: Search, messageLabel: 'What is your main concern?', messagePlaceholder: 'For example: my website looks dated or my business is hard to find on Google.', submitLabel: 'Request Free Check' },
+    { value: 'quick-diagnosis', label: 'AI Review', heading: 'AI Review Enquiry', helper: 'I would like a more detailed look at my website and SEO basics.', icon: Zap, messageLabel: 'What is your main concern?', messagePlaceholder: 'For example: I need to know whether my website or Google profile should be fixed first.', submitLabel: 'Request AI Review' },
+    { value: 'ai-report-standard', label: 'AI Business Report', heading: 'AI Business Report Enquiry', helper: 'I would like an industry-specific review and a prioritised 30/90-day action roadmap.', icon: Zap, messageLabel: 'Main challenge or goal', messagePlaceholder: 'For example: low conversions, weak Google visibility, unclear positioning or slow growth.', submitLabel: 'Enquire About the Report' },
+    { value: 'online-support', label: 'Website Care', heading: 'Website Care Enquiry', helper: 'I need help with hosting, domains, small updates or ongoing website care.', icon: Lock, messageLabel: 'What support do you need?', messagePlaceholder: 'For example: hosting support, domain connection or regular website updates.', submitLabel: 'Enquire About Website Care' },
+    { value: 'general-inquiry', label: 'General Enquiry', heading: 'General Enquiry', helper: 'I have another question or collaboration enquiry.', icon: MessageSquare, messageLabel: 'Your enquiry', messagePlaceholder: 'Tell us what you would like to discuss.', submitLabel: 'Send Enquiry' },
+  ],
+};
 
-const getInquiryMeta = (type) => INQUIRY_TYPES.find((item) => item.value === type) || INQUIRY_TYPES[0];
+const FORM_COPY = {
+  ko: {
+    typeHeading: '문의 유형', company: '업체명', companyPlaceholder: '예: Goodman Bakery', name: '담당자 이름', namePlaceholder: '이름을 입력해 주세요', phone: '연락처', phonePlaceholder: '연락 가능한 번호', businessType: '업종 / 지역', businessTypePlaceholder: '예: 카페 / 시드니 스트라스필드', website: '홈페이지 주소', google: 'Google Business Profile 링크', products: '주요 제품 / 서비스', productsPlaceholder: '예: 대표 상품, 주력 서비스, 패키지', customers: '주요 타겟 고객', customersPlaceholder: '예: 30대 여성, 로컬 고객, B2B 담당자', competitors: '경쟁사 URL', competitorsPlaceholder: '최대 3개까지 입력 가능', focus: '분석 중점 영역', focusPlaceholder: '예: SEO, 전환율, 콘텐츠, 시장 포지셔닝', stage: '사업 단계', stagePlaceholder: '예: 초기 스타트업, 성장 중, 안정기, 리브랜딩 준비', submitting: '전송 중...', success: (label) => `${label}이 접수되었습니다. 확인 후 연락드리겠습니다.`, fallback: '자동 접수가 안 되어 이메일로 이어집니다.', mailLabels: ['문의 유형', '업체명', '담당자', '연락처', '업종/지역', '홈페이지', 'Google Business Profile'], reportLabels: ['주요 제품/서비스', '주요 타겟 고객', '경쟁사 URL', '분석 중점 영역', '사업 단계'],
+  },
+  en: {
+    typeHeading: 'Enquiry Type', company: 'Business Name', companyPlaceholder: 'For example: Goodman Bakery', name: 'Contact Name', namePlaceholder: 'Enter your name', phone: 'Phone Number', phonePlaceholder: 'Best number to reach you', businessType: 'Industry / Location', businessTypePlaceholder: 'For example: Cafe / Strathfield, Sydney', website: 'Website URL', google: 'Google Business Profile URL', products: 'Main Products / Services', productsPlaceholder: 'For example: key services, products or packages', customers: 'Target Customers', customersPlaceholder: 'For example: local families, homeowners or B2B teams', competitors: 'Competitor URLs', competitorsPlaceholder: 'Up to 3 URLs', focus: 'Analysis Focus', focusPlaceholder: 'For example: SEO, conversions, content or positioning', stage: 'Business Stage', stagePlaceholder: 'For example: new, growing, established or rebranding', submitting: 'Sending...', success: (label) => `Your ${label.toLowerCase()} has been received. We will review it and get back to you as soon as possible.`, fallback: 'The form could not be submitted automatically. Opening your email app instead.', mailLabels: ['Enquiry type', 'Business name', 'Contact name', 'Phone', 'Industry / location', 'Website', 'Google Business Profile'], reportLabels: ['Main products / services', 'Target customers', 'Competitor URLs', 'Analysis focus', 'Business stage'],
+  },
+};
+
+const getInquiryMeta = (type, locale = 'ko') => {
+  const types = INQUIRY_TYPES[locale] || INQUIRY_TYPES.ko;
+  return types.find((item) => item.value === type) || types[0];
+};
 
 const initialForm = {
   inquiryType: 'free-check',
@@ -94,27 +70,28 @@ const buildMailtoLink = ({
   businessStage,
   message,
   inquiryType,
-}) => {
-  const inquiryMeta = getInquiryMeta(inquiryType);
+}, locale = 'ko') => {
+  const inquiryMeta = getInquiryMeta(inquiryType, locale);
+  const copy = FORM_COPY[locale] || FORM_COPY.ko;
   const isAIReport = inquiryType === 'ai-report-standard';
   const subject = `[Goodman SEO] ${inquiryMeta.label}${company ? ` - ${company}` : ''}`;
   const baseBody = [
-    `문의 유형: ${inquiryMeta.label}`,
-    `업체명: ${company || '-'}`,
-    `담당자: ${name || '-'}`,
-    `연락처: ${phone || '-'}`,
-    `업종/지역: ${businessType || '-'}`,
-    `홈페이지: ${websiteUrl || '-'}`,
-    `Google Business Profile: ${googleBusinessUrl || '-'}`,
+    `${copy.mailLabels[0]}: ${inquiryMeta.label}`,
+    `${copy.mailLabels[1]}: ${company || '-'}`,
+    `${copy.mailLabels[2]}: ${name || '-'}`,
+    `${copy.mailLabels[3]}: ${phone || '-'}`,
+    `${copy.mailLabels[4]}: ${businessType || '-'}`,
+    `${copy.mailLabels[5]}: ${websiteUrl || '-'}`,
+    `${copy.mailLabels[6]}: ${googleBusinessUrl || '-'}`,
   ];
 
   const reportBody = isAIReport
     ? [
-        `주요 제품/서비스: ${productsServices || '-'}`,
-        `주요 타겟 고객: ${targetCustomers || '-'}`,
-        `경쟁사 URL: ${competitors || '-'}`,
-        `분석 중점 영역: ${analysisFocus || '-'}`,
-        `사업 단계: ${businessStage || '-'}`,
+        `${copy.reportLabels[0]}: ${productsServices || '-'}`,
+        `${copy.reportLabels[1]}: ${targetCustomers || '-'}`,
+        `${copy.reportLabels[2]}: ${competitors || '-'}`,
+        `${copy.reportLabels[3]}: ${analysisFocus || '-'}`,
+        `${copy.reportLabels[4]}: ${businessStage || '-'}`,
       ]
     : [];
 
@@ -134,23 +111,26 @@ const ContactForm = ({
   formName = 'contact',
   footerText = '메일로도 바로 이어집니다.',
   initialInquiryType = 'free-check',
+  locale = 'ko',
 }) => {
+  const copy = FORM_COPY[locale] || FORM_COPY.ko;
+  const inquiryTypes = INQUIRY_TYPES[locale] || INQUIRY_TYPES.ko;
   const [form, setForm] = useState({
     ...initialForm,
-    inquiryType: getInquiryMeta(initialInquiryType).value,
+    inquiryType: getInquiryMeta(initialInquiryType, locale).value,
   });
   const [status, setStatus] = useState('idle');
   const [notice, setNotice] = useState('');
 
   useEffect(() => {
-    const normalizedType = getInquiryMeta(initialInquiryType).value;
+    const normalizedType = getInquiryMeta(initialInquiryType, locale).value;
     setForm((current) => ({
       ...current,
       inquiryType: normalizedType,
     }));
-  }, [initialInquiryType]);
+  }, [initialInquiryType, locale]);
 
-  const inquiryMeta = useMemo(() => getInquiryMeta(form.inquiryType), [form.inquiryType]);
+  const inquiryMeta = useMemo(() => getInquiryMeta(form.inquiryType, locale), [form.inquiryType, locale]);
   const isAIReport = form.inquiryType === 'ai-report-standard';
 
   const handleChange = (event) => {
@@ -166,7 +146,7 @@ const ContactForm = ({
 
     if (form['bot-field']) {
       setStatus('success');
-      setNotice(`${inquiryMeta.label}이 접수되었습니다. 확인 후 연락드리겠습니다.`);
+      setNotice(copy.success(inquiryMeta.label));
       return;
     }
 
@@ -197,15 +177,15 @@ const ContactForm = ({
       }
 
       setStatus('success');
-      setNotice(`${inquiryMeta.label}이 접수되었습니다. 확인 후 연락드리겠습니다.`);
+      setNotice(copy.success(inquiryMeta.label));
       setForm((current) => ({
         ...initialForm,
         inquiryType: current.inquiryType,
       }));
     } catch {
       setStatus('fallback');
-      setNotice('자동 접수가 안 되어 이메일로 이어집니다.');
-      window.location.href = buildMailtoLink(form);
+      setNotice(copy.fallback);
+      window.location.href = buildMailtoLink(form, locale);
     }
   };
 
@@ -224,9 +204,9 @@ const ContactForm = ({
       <input type="hidden" name="_subject" value={`[Goodman SEO] ${inquiryMeta.label}${form.company ? ` - ${form.company}` : ''}`} />
 
       <div className="rounded-[0.7rem] border border-[var(--glass-border)] bg-[var(--bg-darker)] px-4 py-4 text-sm leading-relaxed text-text-muted">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#44515d]">문의 유형</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#44515d]">{copy.typeHeading}</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {INQUIRY_TYPES.map((item) => {
+          {inquiryTypes.map((item) => {
             const IconComponent = item.icon;
             const isSelected = form.inquiryType === item.value;
             return (
@@ -273,29 +253,29 @@ const ContactForm = ({
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="form-field">
-          <span>업체명</span>
-          <input name="company" type="text" placeholder="예: Goodman Bakery" value={form.company} onChange={handleChange} required />
+          <span>{copy.company}</span>
+          <input name="company" type="text" placeholder={copy.companyPlaceholder} value={form.company} onChange={handleChange} required />
         </label>
         <label className="form-field">
-          <span>담당자 이름</span>
-          <input name="name" type="text" placeholder="이름을 입력해 주세요" value={form.name} onChange={handleChange} required />
-        </label>
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2">
-        <label className="form-field">
-          <span>연락처</span>
-          <input name="phone" type="tel" placeholder="연락 가능한 번호" value={form.phone} onChange={handleChange} required />
-        </label>
-        <label className="form-field">
-          <span>업종 / 지역</span>
-          <input name="businessType" type="text" placeholder="예: 카페 / 시드니 스트라스필드" value={form.businessType} onChange={handleChange} />
+          <span>{copy.name}</span>
+          <input name="name" type="text" placeholder={copy.namePlaceholder} value={form.name} onChange={handleChange} required />
         </label>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="form-field">
-          <span>홈페이지 주소</span>
+          <span>{copy.phone}</span>
+          <input name="phone" type="tel" placeholder={copy.phonePlaceholder} value={form.phone} onChange={handleChange} required />
+        </label>
+        <label className="form-field">
+          <span>{copy.businessType}</span>
+          <input name="businessType" type="text" placeholder={copy.businessTypePlaceholder} value={form.businessType} onChange={handleChange} />
+        </label>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-2">
+        <label className="form-field">
+          <span>{copy.website}</span>
           <input
             name="websiteUrl"
             type="url"
@@ -306,7 +286,7 @@ const ContactForm = ({
           />
         </label>
         <label className="form-field">
-          <span>Google Business Profile 링크</span>
+          <span>{copy.google}</span>
           <input name="googleBusinessUrl" type="url" placeholder="https://g.page/yourbusiness" value={form.googleBusinessUrl} onChange={handleChange} />
         </label>
       </div>
@@ -315,22 +295,22 @@ const ContactForm = ({
         <>
           <div className="grid gap-5 md:grid-cols-2">
             <label className="form-field">
-              <span>주요 제품 / 서비스</span>
+              <span>{copy.products}</span>
               <input
                 name="productsServices"
                 type="text"
-                placeholder="예: 대표 상품, 주력 서비스, 패키지"
+                placeholder={copy.productsPlaceholder}
                 value={form.productsServices}
                 onChange={handleChange}
                 required
               />
             </label>
             <label className="form-field">
-              <span>주요 타겟 고객</span>
+              <span>{copy.customers}</span>
               <input
                 name="targetCustomers"
                 type="text"
-                placeholder="예: 30대 여성, 로컬 고객, B2B 담당자"
+                placeholder={copy.customersPlaceholder}
                 value={form.targetCustomers}
                 onChange={handleChange}
                 required
@@ -340,21 +320,21 @@ const ContactForm = ({
 
           <div className="grid gap-5 md:grid-cols-2">
             <label className="form-field">
-              <span>경쟁사 URL</span>
+              <span>{copy.competitors}</span>
               <input
                 name="competitors"
                 type="text"
-                placeholder="최대 3개까지 입력 가능"
+                placeholder={copy.competitorsPlaceholder}
                 value={form.competitors}
                 onChange={handleChange}
               />
             </label>
             <label className="form-field">
-              <span>분석 중점 영역</span>
+              <span>{copy.focus}</span>
               <input
                 name="analysisFocus"
                 type="text"
-                placeholder="예: SEO, 전환율, 콘텐츠, 시장 포지셔닝"
+                placeholder={copy.focusPlaceholder}
                 value={form.analysisFocus}
                 onChange={handleChange}
               />
@@ -362,11 +342,11 @@ const ContactForm = ({
           </div>
 
           <label className="form-field">
-            <span>사업 단계</span>
+            <span>{copy.stage}</span>
             <input
               name="businessStage"
               type="text"
-              placeholder="예: 초기 스타트업, 성장 중, 안정기, 리브랜딩 준비"
+              placeholder={copy.stagePlaceholder}
               value={form.businessStage}
               onChange={handleChange}
             />
@@ -402,7 +382,7 @@ const ContactForm = ({
           disabled={status === 'submitting'}
           className="flex items-center justify-center gap-2.5 rounded-[0.25rem] bg-[#102133] px-7 py-3 text-[0.92rem] font-bold text-white transition-[background-color,transform,box-shadow] duration-300 hover:bg-[#1b3145] hover:-translate-y-0.5 hover:shadow-lg hover:shadow-[#102133]/20 active:translate-y-0 disabled:opacity-50"
         >
-          {status === 'submitting' ? '전송 중...' : inquiryMeta.submitLabel}
+          {status === 'submitting' ? copy.submitting : inquiryMeta.submitLabel}
           <Send size={15} />
         </button>
       </div>
