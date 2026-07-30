@@ -81,8 +81,9 @@ When starting a new task in this repo:
 
 1. Read this file.
 2. Read [current-status.md](F:\Antigravity\goodmanseo\docs\current-status.md).
-3. If the task is about messaging, design, homepage, pricing, or social content, preserve the positioning above.
-4. If there is a conflict between older copy and this file, prefer this file and the current-status document.
+3. If the task is about blog writing or blog copy editing, read [blog-writing-tone-guide.md](F:\Antigravity\goodmanseo\docs\blog-writing-tone-guide.md) and follow its tone rules.
+4. If the task is about messaging, design, homepage, pricing, or social content, preserve the positioning above.
+5. If there is a conflict between older copy and this file, prefer this file and the current-status document.
 
 
 ## Important Recent Context
