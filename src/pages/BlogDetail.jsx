@@ -89,6 +89,113 @@ const getRelatedPosts = (currentPost) =>
     .sort((a, b) => b.relatedScore - a.relatedScore || a.originalIndex - b.originalIndex)
     .slice(0, 3);
 
+const renderContentBlock = (block, index) => {
+  const key = typeof block === 'string' ? block : `${block.type}-${block.title || block.src || index}`;
+
+  if (typeof block === 'string') {
+    return <p key={key}>{block}</p>;
+  }
+
+  if (block.type === 'lead') {
+    return (
+      <p key={key} className="detail-lead">
+        {block.text}
+      </p>
+    );
+  }
+
+  if (block.type === 'heading') {
+    return (
+      <div key={key} className="detail-section-copy">
+        <h2>{block.title}</h2>
+        {block.body?.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+      </div>
+    );
+  }
+
+  if (block.type === 'temperatureSummary') {
+    return (
+      <div key={key} className="temperature-summary">
+        <div className="temperature-summary__intro">
+          <h2>{block.title}</h2>
+          {block.intro ? <p>{block.intro}</p> : null}
+        </div>
+        <div className="temperature-summary__grid">
+          {block.items.map((item) => (
+            <article key={item.label} className={`temperature-card temperature-card--${item.tone}`}>
+              <span>{item.label}</span>
+              <h3>{item.status}</h3>
+              <dl>
+                <div>
+                  <dt>먼저 할 말</dt>
+                  <dd>{item.message}</dd>
+                </div>
+                <div>
+                  <dt>좋은 행동</dt>
+                  <dd>{item.action}</dd>
+                </div>
+                <div>
+                  <dt>피할 것</dt>
+                  <dd>{item.avoid}</dd>
+                </div>
+              </dl>
+            </article>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (block.type === 'image') {
+    return (
+      <figure key={key} className="detail-inline-image">
+        <img src={block.src} alt={block.alt} loading="lazy" />
+        {block.caption ? <figcaption>{block.caption}</figcaption> : null}
+      </figure>
+    );
+  }
+
+  if (block.type === 'actionRows') {
+    return (
+      <div key={key} className="detail-action-rows">
+        <div>
+          <h2>{block.title}</h2>
+          {block.intro ? <p>{block.intro}</p> : null}
+        </div>
+        <div className="detail-action-rows__list">
+          {block.rows.map((row) => (
+            <article key={row.label}>
+              <strong>{row.label}</strong>
+              <p>{row.action}</p>
+              <small>{row.example}</small>
+            </article>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (block.type === 'callout') {
+    return (
+      <div key={key} className="detail-callout">
+        <h2>{block.title}</h2>
+        {block.body ? <p>{block.body}</p> : null}
+        {block.items?.length ? (
+          <ul>
+            {block.items.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
+    );
+  }
+
+  return null;
+};
+
 const BlogDetail = () => {
   const { postId } = useParams();
   const post = getBlogPostById(postId);
@@ -158,9 +265,7 @@ const BlogDetail = () => {
           </figure>
 
           <div className="detail-body mt-10">
-            {post.content.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+            {post.content.map((block, index) => renderContentBlock(block, index))}
           </div>
 
           <div className="mt-12 rounded-[0.7rem] border border-[#102133]/10 bg-[#f7f2ec] p-6 sm:p-8">

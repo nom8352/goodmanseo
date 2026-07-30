@@ -44,7 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
-- 2026-07-30 customer-temperature blog post: added `/blog/customer-temperature-before-sales-review/` with a generated three-stage customer-temperature image, sitemap entry, static build check, and targeted ESLint check.
+- 2026-07-30 customer-temperature blog post: added `/blog/customer-temperature-before-sales-review/`, then refined it into structured summary cards, section headings, action rows, a review-request callout, and three generated blog images. Static build and targeted ESLint checks passed.
 - 2026-07-13 English homepage rollout: added `/en` and `/en/contact` while preserving the existing homepage structure and navy/off-white design system. Shared navigation, footer, enquiry form, language switcher, document language, canonical, `hreflang`, static route generation, and sitemap entries now support Korean and English. Targeted ESLint, Impeccable detect, production build, and Playwright desktop/mobile checks passed.
 - `docs/homepage-redesign-2026-07-04.md`: records the July 4 homepage redesign work log, including reference-image direction, hero woman image, dark navy section system, compact typography, footer/nav/logo changes, removed score CTA section, and validation notes.
 - 2026-07-04 subpage design rollout: applied the saved homepage navy/off-white rules to pricing, starter package, AI business, AI course, AI report, AI report sample, blog, contact, privacy, terms, shared `ContactForm`, and shared button/card CSS. Targeted lint, impeccable detect, and `npm run build` passed.
