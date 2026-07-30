@@ -54,7 +54,7 @@ Additional work log:
 - `docs/2026-06-25-work-log.md`: records the June 25 blog expansion, generated blog images, AI course landing page, homepage/menu/AI mentoring links, YouTube embed, build checks, and pushed commit hashes.
 - `docs/seo-audit-2026-06-25.md`: records the June 25 full-site SEO audit, priority fixes, and verification limits.
 - `docs/seo-keyword-map.md`: maps route intent, target keywords, CTAs, and internal linking direction.
-- `docs/blog-writing-tone-guide.md`: records the blog tone rules confirmed on 2026-07-30 while editing the customer-temperature post. Base sentences on `~입니다`, keep `~요` near 5% for emotional lines only, never allow 3+ consecutive `~요` endings, avoid `~거든요`/`~고요`/`~십시오`, use declarative titles, and preserve first-person failure anecdotes and raw customer quotes.
+- `docs/blog-writing-tone-guide.md`: records the blog tone rules confirmed on 2026-07-30 while editing the customer-temperature post. Join related ideas with natural Korean connective endings, mix `~습니다` and `~요` according to context instead of fixed ratios, avoid choppy sentence-by-sentence rhythm, keep titles declarative, and preserve first-person failure anecdotes and raw customer quotes.
 
 ## Local Wiki Status
 
