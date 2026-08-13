@@ -5,18 +5,18 @@ export const blogPosts = [
     author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 13일',
     excerpt:
-      'Grok 4.6 첫 주 2배 사용량, DeepSeek V4 Pro, Manus 무료 플랜, 카카오톡 ChatGPT 등 지금 알아둘 AI 소식 6건을 정리했습니다.',
+      'Grok 4.6 첫 주 2배 사용량, Claude 워터마크, Twitch AI 학습 설정 등 사용자 변화와 주요 AI 뉴스 5건을 정리했습니다.',
     category: 'AI 키뉴스',
     kind: 'ai-key-news',
     image: '/blog/ai-keynews-2026-08-13.png',
     imageAlt:
-      '2026년 8월 13일 Grok 4.6 첫 주 2배 사용량, DeepSeek V4 Pro, Manus 무료 플랜, 카카오톡 ChatGPT 등 실용 AI 키뉴스 6건을 담은 AI NEWS BRIEF',
+      '2026년 8월 13일 Grok 4.6 첫 주 2배 사용량, Claude 워터마크, Twitch AI 학습 설정 등 사용자 변화와 주요 AI 뉴스 5건을 담은 AI NEWS BRIEF',
     imageLayout: 'portrait',
-    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok 4.6', 'DeepSeek V4 Pro', 'Manus 무료', '카카오톡 ChatGPT'],
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok 4.6', 'Claude 워터마크', 'Twitch AI 학습'],
     content: [
       {
         type: 'newsSection',
-        title: '오늘의 화제',
+        title: '사용자가 먼저 볼 소식',
         items: [
           {
             headline: 'Grok 4.6 공개…첫 주 사용량 2배 제공',
@@ -25,6 +25,26 @@ export const blogPosts = [
             source: 'xAI',
             url: 'https://x.ai/news/grok-4-6',
           },
+          {
+            headline: 'Claude 답변, 복사해도 따라가는 AI 워터마크 적용',
+            summary:
+              '8월 2일 이후 출시되는 지원 모델의 텍스트에는 보이지 않는 표시가 들어갑니다. 복사·붙여넣기 후에도 남을 수 있습니다.',
+            source: 'Anthropic',
+            url: 'https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content',
+          },
+          {
+            headline: 'Twitch 방송, Amazon AI 학습에 기본 사용…직접 꺼야',
+            summary:
+              '스트리머 콘텐츠가 기본 설정으로 AI 학습에 쓰입니다. 원치 않으면 채널의 보안·개인정보 설정에서 AI 학습 옵션을 꺼야 합니다.',
+            source: 'Twitch·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
           {
             headline: '로그인해 일까지 처리하는 ‘Grok Bot’ 베타 시작',
             summary:
@@ -38,33 +58,6 @@ export const blogPosts = [
               '직원 지분 현금화를 위한 거래입니다. OpenAI는 상장 준비 서류를 냈지만, 일반인이 거래소에서 살 수 있는 공개 주식은 아직 아닙니다.',
             source: 'TechCrunch·Bloomberg',
             url: 'https://techcrunch.com/2026/08/10/openai-reportedly-completed-a-7-billion-employee-tender-offer/',
-          },
-        ],
-      },
-      {
-        type: 'newsSection',
-        title: '지금 써보기',
-        items: [
-          {
-            headline: 'DeepSeek V4 Pro·Flash, 웹에서 바로 사용 가능',
-            summary:
-              'DeepSeek 채팅에서 Expert Mode와 Instant Mode로 선택할 수 있습니다. 두 모델 모두 100만 토큰 문맥을 지원합니다.',
-            source: 'DeepSeek',
-            url: 'https://api-docs.deepseek.com/news/news260424/',
-          },
-          {
-            headline: 'Manus, 결제 없이 하루 300 크레딧 제공',
-            summary:
-              '무료 플랜으로 Chat Mode와 Manus 1.6 Lite를 쓸 수 있습니다. 동시에 1개 작업, 예약 작업 2개까지 지원합니다.',
-            source: 'Manus',
-            url: 'https://help.manus.im/en/articles/11711111-what-is-the-current-membership-pricing-for-manus',
-          },
-          {
-            headline: 'ChatGPT, 카카오톡 안에서 바로 사용 가능',
-            summary:
-              '별도 앱 없이 카카오톡 채팅 탭의 ChatGPT 버튼으로 시작합니다. 기존 OpenAI 계정 연결과 답변 공유도 지원합니다.',
-            source: 'OpenAI',
-            url: 'https://help.openai.com/ko-kr/articles/12677933-chatgpt-for-kakao-overview-and-kakao-tools',
           },
         ],
       },
