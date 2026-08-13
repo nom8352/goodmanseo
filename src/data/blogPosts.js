@@ -5,78 +5,66 @@ export const blogPosts = [
     author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 13일',
     excerpt:
-      'Grok 4.6, GitHub Agent Plugins 1.0, Google DeepMind 수어 AI 등 2026년 8월 13일 글로벌 AI 핵심뉴스 6건을 정리했습니다.',
+      'Grok 4.6 첫 주 2배 사용량, DeepSeek V4 Pro, Manus 무료 플랜, 카카오톡 ChatGPT 등 지금 알아둘 AI 소식 6건을 정리했습니다.',
     category: 'AI 키뉴스',
     kind: 'ai-key-news',
     image: '/blog/ai-keynews-2026-08-13.png',
     imageAlt:
-      '2026년 8월 13일 Grok 4.6, GitHub Agent Plugins, Google DeepMind 수어 AI 등 글로벌 AI 핵심뉴스 6건을 담은 AI NEWS BRIEF',
+      '2026년 8월 13일 Grok 4.6 첫 주 2배 사용량, DeepSeek V4 Pro, Manus 무료 플랜, 카카오톡 ChatGPT 등 실용 AI 키뉴스 6건을 담은 AI NEWS BRIEF',
     imageLayout: 'portrait',
-    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', '글로벌 AI 뉴스', 'Grok 4.6', 'Agent Plugins 1.0'],
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok 4.6', 'DeepSeek V4 Pro', 'Manus 무료', '카카오톡 ChatGPT'],
     content: [
       {
         type: 'newsSection',
-        title: '모델·서비스',
+        title: '오늘의 화제',
         items: [
           {
-            headline: 'xAI, 장기 작업형 모델 ‘Grok 4.6’ 공개',
+            headline: 'Grok 4.6 공개…첫 주 사용량 2배 제공',
             summary:
-              '여러 단계의 조사·코딩·앱 제작과 시각 작업에 초점을 맞췄습니다. Cursor와 Grok Build에서 제공을 시작했습니다.',
+              'Cursor와 Grok Build에서 바로 쓸 수 있습니다. 출시 첫 주에는 두 서비스의 포함 사용량이 2배로 늘어납니다.',
             source: 'xAI',
             url: 'https://x.ai/news/grok-4-6',
           },
           {
-            headline: 'Liquid AI, 31억 매개변수 비전 모델 ‘LFM2.5-VL-3B’ 공개',
+            headline: '로그인해 일까지 처리하는 ‘Grok Bot’ 베타 시작',
             summary:
-              '문서·화면 이해, 객체 위치 파악, 다중 이미지 입력, 도구 호출을 지원하는 온디바이스용 모델입니다.',
-            source: 'Liquid AI',
-            url: 'https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b',
+              '연결한 도구에 로그인해 반복 업무를 대신 처리합니다. 현재 SuperGrok Heavy와 일부 Cursor 유료 플랜에서 제공합니다.',
+            source: 'xAI',
+            url: 'https://x.ai/bot',
+          },
+          {
+            headline: 'OpenAI, 직원 주식 70억 달러어치 직접 매입 보도',
+            summary:
+              '직원 지분 현금화를 위한 거래입니다. OpenAI는 상장 준비 서류를 냈지만, 일반인이 거래소에서 살 수 있는 공개 주식은 아직 아닙니다.',
+            source: 'TechCrunch·Bloomberg',
+            url: 'https://techcrunch.com/2026/08/10/openai-reportedly-completed-a-7-billion-employee-tender-offer/',
           },
         ],
       },
       {
         type: 'newsSection',
-        title: '개발자 도구',
+        title: '지금 써보기',
         items: [
           {
-            headline: 'GitHub, ‘Agent Plugins 1.0’ 정식 지원',
+            headline: 'DeepSeek V4 Pro·Flash, 웹에서 바로 사용 가능',
             summary:
-              '스킬과 MCP 서버를 하나의 플러그인으로 묶어 VS Code, Copilot CLI, Copilot 앱 등 호환 도구에서 함께 사용할 수 있습니다.',
-            source: 'GitHub',
-            url: 'https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app',
-          },
-        ],
-      },
-      {
-        type: 'newsSection',
-        title: '연구·접근성',
-        items: [
-          {
-            headline: 'Google DeepMind, 수어를 텍스트로 바꾸는 ‘SL2T’ 공개',
-            summary:
-              '청각장애인과 난청 사용자를 위한 수어 인식 기능에 적용되는 sign-language-to-text 모델입니다.',
-            source: 'Google DeepMind',
-            url: 'https://deepmind.google/blog/putting-sign-language-ai-into-users-hands',
+              'DeepSeek 채팅에서 Expert Mode와 Instant Mode로 선택할 수 있습니다. 두 모델 모두 100만 토큰 문맥을 지원합니다.',
+            source: 'DeepSeek',
+            url: 'https://api-docs.deepseek.com/news/news260424/',
           },
           {
-            headline: 'Google 연구진 “LLM 사실 오류의 병목은 기억보다 회상”',
+            headline: 'Manus, 결제 없이 하루 300 크레딧 제공',
             summary:
-              '2,150개 사실로 구성한 WikiProfile 평가에서 최신 모델이 사실을 저장하고도 질문에서 꺼내지 못하는 회상 실패를 확인했습니다.',
-            source: 'Google Research',
-            url: 'https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality',
+              '무료 플랜으로 Chat Mode와 Manus 1.6 Lite를 쓸 수 있습니다. 동시에 1개 작업, 예약 작업 2개까지 지원합니다.',
+            source: 'Manus',
+            url: 'https://help.manus.im/en/articles/11711111-what-is-the-current-membership-pricing-for-manus',
           },
-        ],
-      },
-      {
-        type: 'newsSection',
-        title: '산업 동향',
-        items: [
           {
-            headline: 'OpenAI “기업 AI 활용, 답변에서 실행 단계로 이동”',
+            headline: 'ChatGPT, 카카오톡 안에서 바로 사용 가능',
             summary:
-              '기업 고객의 Codex·ChatGPT 출력 토큰 가운데 Codex 비중이 64%로 집계됐으며, 법무 분야 주간 활성 사용자는 2월 이후 108배 늘었습니다.',
+              '별도 앱 없이 카카오톡 채팅 탭의 ChatGPT 버튼으로 시작합니다. 기존 OpenAI 계정 연결과 답변 공유도 지원합니다.',
             source: 'OpenAI',
-            url: 'https://openai.com/index/how-enterprises-put-ai-to-work/',
+            url: 'https://help.openai.com/ko-kr/articles/12677933-chatgpt-for-kakao-overview-and-kakao-tools',
           },
         ],
       },

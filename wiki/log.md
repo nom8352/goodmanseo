@@ -1,6 +1,6 @@
 # Wiki Log
 
-- 2026-08-13: Added the daily global AI key-news content workflow. The first dated brief uses six verified original sources, one matching `1080x1350` newsprint-style PNG, source links, a site download button, static metadata, and sitemap coverage. External X and KakaoTalk posting remain manual.
+- 2026-08-13: Refocused the daily AI key-news workflow on practical general-user interest: things people can try now, free/price/usage changes, availability, major service changes, and broadly relevant company news. X is used for discovery and claims are verified separately; technical filler is excluded and 3–6 strong items are allowed. External X and KakaoTalk posting remain manual.
 
 - 2026-07-19: Aligned the AI Business Report across pricing, report samples, contact copy, navigation, footer, and the Korean homepage. Added `/en/ai-report` and connected it from the English homepage, navigation, footer, enquiry flow, static generation, and sitemap. Public pricing is now `AUD 249` launch price against `AUD 349` standard price.
 

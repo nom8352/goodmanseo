@@ -33,8 +33,8 @@ if (!post.image.endsWith('.png')) {
 const newsSections = post.content.filter((block) => block.type === 'newsSection');
 const itemCount = newsSections.reduce((total, section) => total + section.items.length, 0);
 
-if (itemCount < 4 || itemCount > 8) {
-  throw new Error(`한 장에 들어갈 뉴스는 4~8건이어야 합니다. 현재 ${itemCount}건입니다.`);
+if (itemCount < 3 || itemCount > 6) {
+  throw new Error(`한 장에 들어갈 뉴스는 3~6건이어야 합니다. 현재 ${itemCount}건입니다.`);
 }
 
 const [year, month, day] = post.date.split('.').map(Number);
