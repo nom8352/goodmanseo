@@ -1,0 +1,297 @@
+import { existsSync } from 'node:fs';
+import { mkdir, rm, stat, writeFile } from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
+import os from 'node:os';
+import path from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { blogPosts } from '../src/data/blogPosts.js';
+
+const scriptDir = path.dirname(fileURLToPath(import.meta.url));
+const projectRoot = path.resolve(scriptDir, '..');
+
+const escapeHtml = (value = '') =>
+  String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#039;');
+
+const requestedId = process.argv.find((argument) => argument.startsWith('--id='))?.split('=')[1];
+const post = requestedId
+  ? blogPosts.find((candidate) => candidate.id === requestedId)
+  : blogPosts.find((candidate) => candidate.kind === 'ai-key-news');
+
+if (!post || post.kind !== 'ai-key-news') {
+  throw new Error(`AI 키뉴스 글을 찾지 못했습니다${requestedId ? `: ${requestedId}` : ''}.`);
+}
+
+if (!post.image.endsWith('.png')) {
+  throw new Error(`공유 이미지는 PNG 경로여야 합니다: ${post.image}`);
+}
+
+const newsSections = post.content.filter((block) => block.type === 'newsSection');
+const itemCount = newsSections.reduce((total, section) => total + section.items.length, 0);
+
+if (itemCount < 4 || itemCount > 8) {
+  throw new Error(`한 장에 들어갈 뉴스는 4~8건이어야 합니다. 현재 ${itemCount}건입니다.`);
+}
+
+const [year, month, day] = post.date.split('.').map(Number);
+const dateValue = new Date(`${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}T12:00:00+09:00`);
+const weekday = new Intl.DateTimeFormat('ko-KR', {
+  weekday: 'short',
+  timeZone: 'Asia/Seoul',
+}).format(dateValue);
+const displayDate = `${year}년 ${month}월 ${day}일 (${weekday})`;
+
+const sectionMarkup = newsSections
+  .map(
+    (section) => `
+      <section class="news-section">
+        <h2><span aria-hidden="true"></span>${escapeHtml(section.title)}</h2>
+        <div class="news-items">
+          ${section.items
+            .map(
+              (item) => `
+                <article class="news-item">
+                  <span class="bullet" aria-hidden="true"></span>
+                  <div>
+                    <h3>${escapeHtml(item.headline)}</h3>
+                    <p>${escapeHtml(item.summary)}</p>
+                    <small>${escapeHtml(item.source)}</small>
+                  </div>
+                </article>`,
+            )
+            .join('')}
+        </div>
+      </section>`,
+  )
+  .join('');
+
+const html = `<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1080, initial-scale=1" />
+    <title>${escapeHtml(post.title)}</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 1080px; height: 1350px; margin: 0; overflow: hidden; }
+      body {
+        color: #15191c;
+        background: #f4f5f3;
+        font-family: Pretendard, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .sheet {
+        position: relative;
+        display: flex;
+        width: 1080px;
+        height: 1350px;
+        flex-direction: column;
+        padding: 42px 48px 30px;
+        border: 1px solid #aeb5b7;
+        background: #fafbf9;
+      }
+      .masthead {
+        display: flex;
+        min-height: 116px;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 0 4px 16px;
+        border-bottom: 3px solid #0b6678;
+      }
+      .masthead h1 {
+        margin: 0;
+        color: #17191b;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 86px;
+        font-weight: 800;
+        line-height: 0.92;
+        letter-spacing: -0.04em;
+        white-space: nowrap;
+      }
+      .date {
+        flex: 0 0 auto;
+        padding-bottom: 4px;
+        color: #0b6678;
+        font-size: 19px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+      .subbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 10px 4px 12px;
+        border-bottom: 1px solid #aeb5b7;
+        color: #0b6678;
+        font-size: 18px;
+        font-weight: 800;
+      }
+      .subbar span:last-child {
+        color: #505a5f;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .brief {
+        display: grid;
+        flex: 1;
+        align-content: start;
+        gap: 24px;
+        padding-top: 24px;
+      }
+      .news-section {
+        display: grid;
+        gap: 0;
+      }
+      .news-section h2 {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        margin: 0;
+        padding-bottom: 7px;
+        border-bottom: 2px solid #0b6678;
+        color: #0b6678;
+        font-size: 28px;
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: -0.035em;
+      }
+      .news-section h2 span {
+        width: 10px;
+        height: 25px;
+        background: #0b6678;
+      }
+      .news-items {
+        display: grid;
+      }
+      .news-item {
+        display: grid;
+        grid-template-columns: 15px minmax(0, 1fr);
+        gap: 11px;
+        padding: 14px 3px 13px;
+        border-bottom: 1px dashed #c4c8c9;
+      }
+      .news-item:last-child { border-bottom: 0; }
+      .bullet {
+        width: 8px;
+        height: 8px;
+        margin-top: 11px;
+        border: 2px solid #0b6678;
+      }
+      .news-item h3 {
+        margin: 0;
+        color: #15191c;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 1.35;
+        letter-spacing: -0.035em;
+      }
+      .news-item p {
+        margin: 3px 0 0;
+        color: #394248;
+        font-size: 19px;
+        font-weight: 500;
+        line-height: 1.48;
+        letter-spacing: -0.022em;
+      }
+      .news-item small {
+        display: block;
+        margin-top: 3px;
+        color: #0b6678;
+        font-size: 14px;
+        font-weight: 800;
+      }
+      footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 12px 4px 0;
+        border-top: 1px solid #aeb5b7;
+        color: #586166;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      footer strong {
+        color: #0b6678;
+        letter-spacing: 0.04em;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="sheet">
+      <header>
+        <div class="masthead">
+          <h1>AI NEWS BRIEF</h1>
+          <div class="date">${escapeHtml(displayDate)}</div>
+        </div>
+        <div class="subbar">
+          <span>글로벌 AI 핵심 뉴스</span>
+          <span>GOODMANSEO.COM</span>
+        </div>
+      </header>
+      <div class="brief">${sectionMarkup}</div>
+      <footer>
+        <span>원문 링크는 GoodmanSEO 블로그에서 확인할 수 있습니다.</span>
+        <strong>GOODMAN SEO</strong>
+      </footer>
+    </main>
+  </body>
+</html>`;
+
+const edgeCandidates = [
+  process.env.EDGE_PATH,
+  'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+  'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
+  process.env.LOCALAPPDATA && path.join(process.env.LOCALAPPDATA, 'Microsoft', 'Edge', 'Application', 'msedge.exe'),
+].filter(Boolean);
+const edgePath = edgeCandidates.find((candidate) => existsSync(candidate));
+
+if (!edgePath) {
+  throw new Error('Microsoft Edge 실행 파일을 찾지 못했습니다. EDGE_PATH를 지정해 주세요.');
+}
+
+const tempDir = path.join(os.tmpdir(), `goodmanseo-ai-keynews-${Date.now()}`);
+await mkdir(tempDir, { recursive: true });
+const htmlPath = path.join(tempDir, `${post.id}.html`);
+const userDataDir = path.join(tempDir, 'edge-profile');
+const outputPath = path.join(projectRoot, 'public', post.image.replace(/^\//, ''));
+
+await mkdir(path.dirname(outputPath), { recursive: true });
+await mkdir(userDataDir, { recursive: true });
+await writeFile(htmlPath, html, 'utf8');
+
+const result = spawnSync(
+  edgePath,
+  [
+    '--headless=new',
+    '--disable-gpu',
+    '--hide-scrollbars',
+    '--force-device-scale-factor=1',
+    '--window-size=1080,1350',
+    '--run-all-compositor-stages-before-draw',
+    '--virtual-time-budget=2000',
+    '--no-first-run',
+    `--user-data-dir=${userDataDir}`,
+    `--screenshot=${outputPath}`,
+    pathToFileURL(htmlPath).href,
+  ],
+  { encoding: 'utf8' },
+);
+
+if (result.status !== 0) {
+  throw new Error(`Edge 이미지 생성 실패 (${result.status}): ${result.stderr || result.stdout}`);
+}
+
+const imageStats = await stat(outputPath);
+if (imageStats.size < 10_000) {
+  throw new Error(`생성된 이미지가 비정상적으로 작습니다: ${imageStats.size} bytes`);
+}
+
+await rm(tempDir, { recursive: true, force: true });
+console.log(`Generated ${path.relative(projectRoot, outputPath)} (${imageStats.size} bytes, ${itemCount} items)`);

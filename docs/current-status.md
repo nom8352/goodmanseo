@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-07-30
+Last updated: 2026-08-13
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-08-13 daily AI key-news series: added `/blog/ai-keynews-2026-08-13/` with six official-source global AI items, a matching `1080x1350` share image, original-source links, a download button, static metadata, and sitemap registration. The deterministic image renderer is `scripts/generate-ai-keynews-image.mjs`; X and KakaoTalk posting remain manual and outside the site workflow. Targeted ESLint, Impeccable detection, production build, desktop visual review, and a 390px no-horizontal-overflow check passed. Live deployment still requires push and public verification.
 - 2026-07-30 customer-temperature blog post: added `/blog/customer-temperature-before-sales-review/`, then refined it into structured summary cards, section headings, action rows, a review-request callout, and three generated blog images. The full article was also rewritten in a friendlier, contemporary Korean voice while preserving the original sales experience and Cold/Warm/Hot framework. Static build and targeted ESLint checks passed.
 - 2026-07-13 English homepage rollout: added `/en` and `/en/contact` while preserving the existing homepage structure and navy/off-white design system. Shared navigation, footer, enquiry form, language switcher, document language, canonical, `hreflang`, static route generation, and sitemap entries now support Korean and English. Targeted ESLint, Impeccable detect, production build, and Playwright desktop/mobile checks passed.
 - `docs/homepage-redesign-2026-07-04.md`: records the July 4 homepage redesign work log, including reference-image direction, hero woman image, dark navy section system, compact typography, footer/nav/logo changes, removed score CTA section, and validation notes.
@@ -176,11 +177,13 @@ Current blog structure:
 
 - image card list layout
 - detail pages render each article's hero image and image metadata
-- 15 practical articles aligned with Google Business Profile, homepage, SEO, channel consistency, AI web design, online operations, and customer-temperature sales/review strategy
+- 16 articles, including the daily global AI key-news series and practical articles aligned with Google Business Profile, homepage, SEO, channel consistency, AI web design, online operations, and customer-temperature sales/review strategy
 - article excerpts have been expanded for stronger search snippets
 - priority articles have additional body depth around customer trust, channel consistency, and inquiry flow
 - generated PNG article images live under `public/blog/`; optimized WebP delivery copies also live under `public/blog/`
 - blog detail pages include contextual service CTAs and three related posts
+- AI key-news detail pages intentionally omit service CTAs and related-post blocks so only the brief, source links, and image download remain
+- AI key-news share images are generated from the same `newsSection` data used by the blog page
 
 The blog remains supporting content for trust, search intent, and conversion rather than a magazine-style section.
 

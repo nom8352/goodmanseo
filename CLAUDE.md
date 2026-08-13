@@ -75,6 +75,27 @@ High-level current priorities:
 - keep Google + website + Instagram + Facebook as a bundled story
 - make every message easier to understand for a small business owner
 
+## Daily AI Key News Series
+
+GoodmanSEO also publishes one global AI key-news brief per day. Preserve these rules:
+
+- publish one searchable Korean blog post and one matching `1080x1350` PNG image
+- cover global AI only; do not force an Australia angle
+- use 4 to 8 high-signal items verified against original sources
+- keep the writing factual and compact, without GoodmanSEO commentary or filler
+- retain a clickable original-source link for every item in the blog post
+- derive the image from the same post data so titles, dates, figures, and source names match
+- use the white newsprint design: large serif `AI NEWS BRIEF`, teal rules and labels, and a simple single-column news flow
+- do not add market indexes, ads, weather, tool rankings, or decorative icon-card grids
+- publish to the GoodmanSEO site only; KakaoTalk and X sharing remain manual user actions
+
+Implementation sources:
+
+- daily post data: `src/data/blogPosts.js`
+- page rendering: `src/pages/BlogDetail.jsx`
+- image renderer: `scripts/generate-ai-keynews-image.mjs`
+- image command: `npm run generate:ai-keynews-image`
+
 ## Working Rules For Future Threads
 
 When starting a new task in this repo:

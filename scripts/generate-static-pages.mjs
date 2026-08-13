@@ -271,7 +271,7 @@ const blogRoutePages = blogPosts.map((post) => ({
   image: `https://goodmanseo.com${post.image}`,
   imageAlt: post.imageAlt,
   type: 'article',
-  keywords: `굿맨SEO, ${post.category}, 호주 비즈니스, 온라인 기본기, 구글 비즈니스 프로필`,
+  keywords: post.keywords?.join(', ') || `굿맨SEO, ${post.category}, 호주 비즈니스, 온라인 기본기, 구글 비즈니스 프로필`,
   lastmod: formatPostDate(post.date),
   jsonLd: createBlogPostingJsonLd(post),
 }));

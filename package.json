@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/generate-static-pages.mjs",
+    "generate:ai-keynews-image": "node scripts/generate-ai-keynews-image.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },

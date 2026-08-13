@@ -1,5 +1,88 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-13',
+    date: '2026.08.13',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 13일',
+    excerpt:
+      'Grok 4.6, GitHub Agent Plugins 1.0, Google DeepMind 수어 AI 등 2026년 8월 13일 글로벌 AI 핵심뉴스 6건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-13.png',
+    imageAlt:
+      '2026년 8월 13일 Grok 4.6, GitHub Agent Plugins, Google DeepMind 수어 AI 등 글로벌 AI 핵심뉴스 6건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', '글로벌 AI 뉴스', 'Grok 4.6', 'Agent Plugins 1.0'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '모델·서비스',
+        items: [
+          {
+            headline: 'xAI, 장기 작업형 모델 ‘Grok 4.6’ 공개',
+            summary:
+              '여러 단계의 조사·코딩·앱 제작과 시각 작업에 초점을 맞췄습니다. Cursor와 Grok Build에서 제공을 시작했습니다.',
+            source: 'xAI',
+            url: 'https://x.ai/news/grok-4-6',
+          },
+          {
+            headline: 'Liquid AI, 31억 매개변수 비전 모델 ‘LFM2.5-VL-3B’ 공개',
+            summary:
+              '문서·화면 이해, 객체 위치 파악, 다중 이미지 입력, 도구 호출을 지원하는 온디바이스용 모델입니다.',
+            source: 'Liquid AI',
+            url: 'https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '개발자 도구',
+        items: [
+          {
+            headline: 'GitHub, ‘Agent Plugins 1.0’ 정식 지원',
+            summary:
+              '스킬과 MCP 서버를 하나의 플러그인으로 묶어 VS Code, Copilot CLI, Copilot 앱 등 호환 도구에서 함께 사용할 수 있습니다.',
+            source: 'GitHub',
+            url: 'https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '연구·접근성',
+        items: [
+          {
+            headline: 'Google DeepMind, 수어를 텍스트로 바꾸는 ‘SL2T’ 공개',
+            summary:
+              '청각장애인과 난청 사용자를 위한 수어 인식 기능에 적용되는 sign-language-to-text 모델입니다.',
+            source: 'Google DeepMind',
+            url: 'https://deepmind.google/blog/putting-sign-language-ai-into-users-hands',
+          },
+          {
+            headline: 'Google 연구진 “LLM 사실 오류의 병목은 기억보다 회상”',
+            summary:
+              '2,150개 사실로 구성한 WikiProfile 평가에서 최신 모델이 사실을 저장하고도 질문에서 꺼내지 못하는 회상 실패를 확인했습니다.',
+            source: 'Google Research',
+            url: 'https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '산업 동향',
+        items: [
+          {
+            headline: 'OpenAI “기업 AI 활용, 답변에서 실행 단계로 이동”',
+            summary:
+              '기업 고객의 Codex·ChatGPT 출력 토큰 가운데 Codex 비중이 64%로 집계됐으며, 법무 분야 주간 활성 사용자는 2월 이후 108배 늘었습니다.',
+            source: 'OpenAI',
+            url: 'https://openai.com/index/how-enterprises-put-ai-to-work/',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'customer-temperature-before-sales-review',
     date: '2026.07.30',
     author: 'Goodman SEO',

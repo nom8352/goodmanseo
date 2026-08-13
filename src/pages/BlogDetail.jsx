@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, Download } from 'lucide-react';
 import Seo from '../components/Seo';
 import { blogPosts, getBlogPostById } from '../data/blogPosts';
 
@@ -193,6 +193,26 @@ const renderContentBlock = (block, index) => {
     );
   }
 
+  if (block.type === 'newsSection') {
+    return (
+      <section key={key} className="ai-news-section" aria-labelledby={`ai-news-section-${index}`}>
+        <h2 id={`ai-news-section-${index}`}>{block.title}</h2>
+        <div className="ai-news-section__items">
+          {block.items.map((item) => (
+            <article key={item.headline} className="ai-news-item">
+              <h3>{item.headline}</h3>
+              <p>{item.summary}</p>
+              <a href={item.url} target="_blank" rel="noreferrer">
+                출처: {item.source}
+                <ArrowRight size={15} aria-hidden="true" />
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
   return null;
 };
 
@@ -207,6 +227,7 @@ const BlogDetail = () => {
   const relatedPosts = getRelatedPosts(post);
   const serviceCta = serviceCtas[post.category] || defaultServiceCta;
   const publishedDate = post.date.replaceAll('.', '-').slice(0, 10);
+  const isAiKeyNews = post.kind === 'ai-key-news';
 
   return (
     <div className="pt-32 pb-24">
@@ -216,7 +237,7 @@ const BlogDetail = () => {
         path={`/blog/${post.id}`}
         image={`https://goodmanseo.com${post.image}`}
         imageAlt={post.imageAlt}
-        keywords={['호주 홈페이지 제작', '시드니 홈페이지 제작', post.category, post.title, '구글 비즈니스 세팅']}
+        keywords={post.keywords || ['호주 홈페이지 제작', '시드니 홈페이지 제작', post.category, post.title, '구글 비즈니스 세팅']}
         type="article"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -246,7 +267,7 @@ const BlogDetail = () => {
           블로그로 돌아가기
         </Link>
 
-        <article className="showcase-panel mt-8 px-6 py-10 sm:px-10 sm:py-12">
+        <article className={`showcase-panel mt-8 px-6 py-10 sm:px-10 sm:py-12 ${isAiKeyNews ? 'ai-keynews-detail' : ''}`}>
           <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-soft">
             <span className="eyebrow-chip">{post.category}</span>
             <span className="inline-flex items-center gap-2"><Calendar size={14} /> {post.date}</span>
@@ -255,20 +276,29 @@ const BlogDetail = () => {
           <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-[-0.06em] sm:text-5xl">{post.title}</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-text-muted">{post.excerpt}</p>
 
-          <figure className="mt-8 overflow-hidden rounded-[0.7rem] border border-[#102133]/8 bg-white">
+          <figure
+            className={`mt-8 w-full overflow-hidden rounded-[0.7rem] border border-[#102133]/8 bg-white ${post.imageLayout === 'portrait' ? 'mx-auto max-w-3xl' : ''}`}
+          >
             <img
               src={post.image}
               alt={post.imageAlt}
-              className="aspect-[16/9] w-full object-cover"
+              className={post.imageLayout === 'portrait' ? 'w-full object-contain' : 'aspect-[16/9] w-full object-cover'}
               loading="eager"
             />
           </figure>
+
+          {isAiKeyNews ? (
+            <a href={post.image} download className="secondary-button secondary-button--compact mx-auto mt-4 inline-flex w-fit">
+              <Download size={16} />
+              공유용 이미지 저장
+            </a>
+          ) : null}
 
           <div className="detail-body mt-10">
             {post.content.map((block, index) => renderContentBlock(block, index))}
           </div>
 
-          <div className="mt-12 rounded-[0.7rem] border border-[#102133]/10 bg-[#f7f2ec] p-6 sm:p-8">
+          {!isAiKeyNews ? <div className="mt-12 rounded-[0.7rem] border border-[#102133]/10 bg-[#f7f2ec] p-6 sm:p-8">
             <p className="text-sm font-extrabold text-accent-primary">{serviceCta.eyebrow}</p>
             <h2 className="mt-3 max-w-3xl text-2xl font-black tracking-[-0.04em] text-text-main">
               {serviceCta.title}
@@ -285,9 +315,9 @@ const BlogDetail = () => {
                 {serviceCta.secondaryText}
               </Link>
             </div>
-          </div>
+          </div> : null}
 
-          <aside className="mt-12 border-t border-[#102133]/10 pt-8" aria-labelledby="related-posts-heading">
+          {!isAiKeyNews ? <aside className="mt-12 border-t border-[#102133]/10 pt-8" aria-labelledby="related-posts-heading">
             <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
               <div>
                 <p className="text-sm font-extrabold text-accent-primary">함께 보면 좋은 글</p>
@@ -329,9 +359,9 @@ const BlogDetail = () => {
                 </Link>
               ))}
             </div>
-          </aside>
+          </aside> : null}
 
-          <div className="mt-12 border-t border-[#102133]/10 pt-8">
+          {!isAiKeyNews ? <div className="mt-12 border-t border-[#102133]/10 pt-8">
             <p className="text-base leading-relaxed text-text-muted">
               지금 내 비즈니스가 온라인에서 어떻게 보이는지 먼저 확인하고 싶다면,
               무료 점검으로 홈페이지와 구글 비즈니스 기본 상태부터 확인해보세요.
@@ -340,7 +370,7 @@ const BlogDetail = () => {
               무료 점검 문의하기
               <ArrowRight size={18} />
             </Link>
-          </div>
+          </div> : null}
         </article>
       </div>
     </div>
