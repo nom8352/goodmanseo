@@ -17,6 +17,11 @@ const escapeHtml = (value = '') =>
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#039;');
 
+const getImageSummary = (item) => {
+  const summary = String(item.summary || '').trim();
+  return summary.split(/(?<=[.!?])\s+/u)[0] || summary;
+};
+
 const requestedId = process.argv.find((argument) => argument.startsWith('--id='))?.split('=')[1];
 const post = requestedId
   ? blogPosts.find((candidate) => candidate.id === requestedId)
@@ -58,6 +63,7 @@ const sectionMarkup = newsSections
                   <span class="bullet" aria-hidden="true"></span>
                   <div>
                     <h3>${escapeHtml(item.headline)}</h3>
+                    <p>${escapeHtml(getImageSummary(item))}</p>
                     <small>${escapeHtml(item.source)}</small>
                   </div>
                 </article>`,
@@ -78,10 +84,11 @@ const html = `<!doctype html>
       * { box-sizing: border-box; }
       html, body { width: 1080px; height: 1920px; margin: 0; overflow: hidden; }
       body {
-        --section-title-size: 44px;
-        --headline-size: 56px;
-        --source-size: 24px;
-        --item-padding-y: 28px;
+        --section-title-size: 38px;
+        --headline-size: 48px;
+        --summary-size: 34px;
+        --source-size: 20px;
+        --item-padding-y: 16px;
         color: #15191c;
         background: #f4f5f3;
         font-family: Pretendard, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
@@ -144,8 +151,8 @@ const html = `<!doctype html>
         display: grid;
         flex: 1;
         align-content: start;
-        gap: 34px;
-        padding-top: 36px;
+        gap: 24px;
+        padding-top: 28px;
       }
       .news-section {
         display: grid;
@@ -156,7 +163,7 @@ const html = `<!doctype html>
         align-items: center;
         gap: 11px;
         margin: 0;
-        padding-bottom: 13px;
+        padding-bottom: 10px;
         border-bottom: 2px solid #0b6678;
         color: #0b6678;
         font-size: var(--section-title-size);
@@ -166,7 +173,7 @@ const html = `<!doctype html>
       }
       .news-section h2 span {
         width: 11px;
-        height: 38px;
+        height: 34px;
         background: #0b6678;
       }
       .news-items {
@@ -183,7 +190,7 @@ const html = `<!doctype html>
       .bullet {
         width: 10px;
         height: 10px;
-        margin-top: 26px;
+        margin-top: 21px;
         border: 3px solid #0b6678;
       }
       .news-item h3 {
@@ -196,9 +203,19 @@ const html = `<!doctype html>
         text-wrap: balance;
         word-break: keep-all;
       }
+      .news-item p {
+        margin: 5px 0 0;
+        color: #394248;
+        font-size: var(--summary-size);
+        font-weight: 600;
+        line-height: 1.32;
+        letter-spacing: -0.022em;
+        text-wrap: pretty;
+        word-break: keep-all;
+      }
       .news-item small {
         display: block;
-        margin-top: 8px;
+        margin-top: 5px;
         color: #0b6678;
         font-size: var(--source-size);
         font-weight: 800;
@@ -219,16 +236,18 @@ const html = `<!doctype html>
         letter-spacing: 0.04em;
       }
       body.density-relaxed {
-        --section-title-size: 48px;
-        --headline-size: 62px;
-        --source-size: 28px;
-        --item-padding-y: 36px;
+        --section-title-size: 42px;
+        --headline-size: 52px;
+        --summary-size: 36px;
+        --source-size: 22px;
+        --item-padding-y: 22px;
       }
       body.density-compact {
-        --section-title-size: 40px;
-        --headline-size: 48px;
-        --source-size: 22px;
-        --item-padding-y: 20px;
+        --section-title-size: 35px;
+        --headline-size: 43px;
+        --summary-size: 29px;
+        --source-size: 18px;
+        --item-padding-y: 12px;
       }
     </style>
   </head>

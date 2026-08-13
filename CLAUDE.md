@@ -86,7 +86,7 @@ GoodmanSEO also publishes one global AI key-news brief per day. Preserve these r
 - retain a clickable original-source link for every item in the blog post
 - derive the image from the same post data so titles, dates, figures, and source names match
 - use the white newsprint design: large serif `AI NEWS BRIEF`, teal rules and labels, and a simple single-column news flow
-- keep the `1080x1920` share image phone-first for Shorts, Instagram, and X: show only large news headlines and source labels; the longer `summary` belongs on the blog page
+- keep the `1080x1920` share image phone-first for Shorts, Instagram, and X: use mid-sized headlines at roughly twice the original scale, the first short summary sentence, and a source label; the remaining explanation belongs on the blog page
 - do not add market indexes, ads, weather, tool rankings, or decorative icon-card grids
 - publish to the GoodmanSEO site only; KakaoTalk and X sharing remain manual user actions
 
