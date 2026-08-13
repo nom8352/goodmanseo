@@ -17,11 +17,6 @@ const escapeHtml = (value = '') =>
     .replaceAll('"', '&quot;')
     .replaceAll("'", '&#039;');
 
-const getImageSummary = (item) => {
-  const summary = String(item.summary || '').trim();
-  return summary.split(/(?<=[.!?])\s+/u)[0] || summary;
-};
-
 const requestedId = process.argv.find((argument) => argument.startsWith('--id='))?.split('=')[1];
 const post = requestedId
   ? blogPosts.find((candidate) => candidate.id === requestedId)
@@ -63,7 +58,7 @@ const sectionMarkup = newsSections
                   <span class="bullet" aria-hidden="true"></span>
                   <div>
                     <h3>${escapeHtml(item.headline)}</h3>
-                    <p>${escapeHtml(getImageSummary(item))}</p>
+                    <p>${escapeHtml(item.summary)}</p>
                     <small>${escapeHtml(item.source)}</small>
                   </div>
                 </article>`,
@@ -88,7 +83,7 @@ const html = `<!doctype html>
         --headline-size: 48px;
         --summary-size: 34px;
         --source-size: 20px;
-        --item-padding-y: 16px;
+        --item-padding-y: 10px;
         color: #15191c;
         background: #f4f5f3;
         font-family: Pretendard, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
@@ -151,8 +146,8 @@ const html = `<!doctype html>
         display: grid;
         flex: 1;
         align-content: start;
-        gap: 24px;
-        padding-top: 28px;
+        gap: 20px;
+        padding-top: 24px;
       }
       .news-section {
         display: grid;
@@ -245,9 +240,9 @@ const html = `<!doctype html>
       body.density-compact {
         --section-title-size: 35px;
         --headline-size: 43px;
-        --summary-size: 29px;
-        --source-size: 18px;
-        --item-padding-y: 12px;
+        --summary-size: 26px;
+        --source-size: 16px;
+        --item-padding-y: 8px;
       }
     </style>
   </head>

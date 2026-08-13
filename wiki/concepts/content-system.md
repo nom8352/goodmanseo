@@ -38,7 +38,7 @@ Workflow:
 Design rule:
 
 - White newsprint surface, large serif `AI NEWS BRIEF` masthead, teal rules and labels, and a simple single-column grouped list.
-- Use a phone-first `1080x1920` canvas for Shorts, Instagram, and X: show mid-sized headlines at roughly twice the original scale, the first short summary sentence, and source labels; keep the remaining explanation in the article.
+- Use a phone-first `1080x1920` canvas for Shorts, Instagram, and X: show mid-sized headlines at roughly twice the original scale, each complete compact 1–2 sentence summary, and source labels.
 - No market index, advertising, weather, popularity ranking, or decorative icon-card grid.
 - X and KakaoTalk distribution remain manual; automation ends after GoodmanSEO publication and public verification.
 

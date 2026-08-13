@@ -1,6 +1,6 @@
 # Wiki Log
 
-- 2026-08-13: Tuned the phone-first `1080x1920` AI share image back to a moderate scale after the headline-only version proved too large. It now uses headlines at roughly twice the original size, each item’s first summary sentence, and a source label; the remaining explanation stays in the blog post.
+- 2026-08-13: Tuned the phone-first `1080x1920` AI share image back to a moderate scale after the headline-only version proved too large. It now uses headlines at roughly twice the original size and restores each item’s complete compact 1–2 sentence summary plus source.
 
 - 2026-08-13: Clarified the daily AI key-news mix as trend-first rather than direct-impact-first: lead with 3–4 fresh topics that readers are actively interested in on X, then add 2–3 major AI news items. Engagement and repeated discussion are discovery signals, claims are verified separately, and stale practical tips or technical filler are excluded. External X and KakaoTalk posting remain manual.
 
