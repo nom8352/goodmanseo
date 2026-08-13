@@ -5,18 +5,18 @@ export const blogPosts = [
     author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 13일',
     excerpt:
-      'Grok 4.6 첫 주 2배 사용량, Claude 워터마크, Twitch AI 학습 설정 등 사용자 변화와 주요 AI 뉴스 5건을 정리했습니다.',
+      'Grok 4.6, Grok Bot, Claude 워터마크 등 지금 관심이 높은 AI 트렌드와 주요 뉴스 5건을 정리했습니다.',
     category: 'AI 키뉴스',
     kind: 'ai-key-news',
     image: '/blog/ai-keynews-2026-08-13.png',
     imageAlt:
-      '2026년 8월 13일 Grok 4.6 첫 주 2배 사용량, Claude 워터마크, Twitch AI 학습 설정 등 사용자 변화와 주요 AI 뉴스 5건을 담은 AI NEWS BRIEF',
+      '2026년 8월 13일 Grok 4.6, Grok Bot, Claude 워터마크 등 화제성 높은 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
     imageLayout: 'portrait',
     keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok 4.6', 'Claude 워터마크', 'Twitch AI 학습'],
     content: [
       {
         type: 'newsSection',
-        title: '사용자가 먼저 볼 소식',
+        title: '오늘의 AI 트렌드',
         items: [
           {
             headline: 'Grok 4.6 공개…첫 주 사용량 2배 제공',
@@ -26,18 +26,18 @@ export const blogPosts = [
             url: 'https://x.ai/news/grok-4-6',
           },
           {
+            headline: '로그인해 일까지 처리하는 ‘Grok Bot’ 베타 시작',
+            summary:
+              '연결한 도구에 로그인해 반복 업무를 대신 처리합니다. 현재 SuperGrok Heavy와 일부 Cursor 유료 플랜에서 제공합니다.',
+            source: 'xAI',
+            url: 'https://x.ai/bot',
+          },
+          {
             headline: 'Claude 답변, 복사해도 따라가는 AI 워터마크 적용',
             summary:
               '8월 2일 이후 출시되는 지원 모델의 텍스트에는 보이지 않는 표시가 들어갑니다. 복사·붙여넣기 후에도 남을 수 있습니다.',
             source: 'Anthropic',
             url: 'https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content',
-          },
-          {
-            headline: 'Twitch 방송, Amazon AI 학습에 기본 사용…직접 꺼야',
-            summary:
-              '스트리머 콘텐츠가 기본 설정으로 AI 학습에 쓰입니다. 원치 않으면 채널의 보안·개인정보 설정에서 AI 학습 옵션을 꺼야 합니다.',
-            source: 'Twitch·TechCrunch',
-            url: 'https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/',
           },
         ],
       },
@@ -46,11 +46,11 @@ export const blogPosts = [
         title: '오늘의 주요 AI 뉴스',
         items: [
           {
-            headline: '로그인해 일까지 처리하는 ‘Grok Bot’ 베타 시작',
+            headline: 'Twitch 방송, Amazon AI 학습에 기본 사용…직접 꺼야',
             summary:
-              '연결한 도구에 로그인해 반복 업무를 대신 처리합니다. 현재 SuperGrok Heavy와 일부 Cursor 유료 플랜에서 제공합니다.',
-            source: 'xAI',
-            url: 'https://x.ai/bot',
+              '스트리머 콘텐츠가 기본 설정으로 AI 학습에 쓰입니다. 원치 않으면 채널의 보안·개인정보 설정에서 AI 학습 옵션을 꺼야 합니다.',
+            source: 'Twitch·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/',
           },
           {
             headline: 'OpenAI, 직원 주식 70억 달러어치 직접 매입 보도',
