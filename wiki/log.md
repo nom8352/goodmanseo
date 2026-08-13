@@ -1,5 +1,7 @@
 # Wiki Log
 
+- 2026-08-13: Rebuilt the daily AI share image as a phone-first `1080x1920` asset for Shorts, Instagram, and X. The image now shows only substantially larger headlines and source labels, while full explanations remain in the blog post.
+
 - 2026-08-13: Clarified the daily AI key-news mix as trend-first rather than direct-impact-first: lead with 3–4 fresh topics that readers are actively interested in on X, then add 2–3 major AI news items. Engagement and repeated discussion are discovery signals, claims are verified separately, and stale practical tips or technical filler are excluded. External X and KakaoTalk posting remain manual.
 
 - 2026-07-19: Aligned the AI Business Report across pricing, report samples, contact copy, navigation, footer, and the Korean homepage. Added `/en/ai-report` and connected it from the English homepage, navigation, footer, enquiry flow, static generation, and sitemap. Public pricing is now `AUD 249` launch price against `AUD 349` standard price.

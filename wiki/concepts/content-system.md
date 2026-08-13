@@ -23,7 +23,7 @@ Current structure:
 
 Decision:
 
-- `decision`: Publish one global AI key-news text post and one matching `1080x1350` PNG each day.
+- `decision`: Publish one global AI key-news text post and one matching `1080x1920` PNG each day.
 - `reason`: The searchable article supports the site while the same compact visual can be shared manually without maintaining separate copy.
 - `applies_to`: `src/data/blogPosts.js`, `src/pages/Blog.jsx`, `src/pages/BlogDetail.jsx`, `scripts/generate-ai-keynews-image.mjs`, `public/blog/`, and `public/sitemap.xml`.
 - `revisit_if`: The user later asks for automatic X or KakaoTalk posting, a different image ratio, or commentary-led analysis.
@@ -32,12 +32,13 @@ Workflow:
 
 - `goal`: Publish a factual Korean AI brief whose page and image contain the same news.
 - `inputs`: Recent AI News Radar signals plus each selected item’s original source.
-- `steps`: Check feed freshness; select 4–8 high-signal items; verify original pages; add one dated post with `newsSection` blocks; run `npm run generate:ai-keynews-image`; update the sitemap; lint, build, inspect desktop/mobile, deploy, and verify the public URL.
+- `steps`: Check feed freshness; select 3–6 high-signal items; verify original pages; add one dated post with `newsSection` blocks; run `npm run generate:ai-keynews-image`; update the sitemap; lint, build, inspect desktop/mobile, deploy, and verify the public URL.
 - `stop_rule`: Do not invent, translate an unverified aggregator claim, force filler, or publish when the original source cannot confirm the key fact.
 
 Design rule:
 
 - White newsprint surface, large serif `AI NEWS BRIEF` masthead, teal rules and labels, and a simple single-column grouped list.
+- Use a phone-first `1080x1920` canvas for Shorts, Instagram, and X: show large headlines and source labels only, with full explanations kept in the article.
 - No market index, advertising, weather, popularity ranking, or decorative icon-card grid.
 - X and KakaoTalk distribution remain manual; automation ends after GoodmanSEO publication and public verification.
 

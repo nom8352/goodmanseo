@@ -58,7 +58,6 @@ const sectionMarkup = newsSections
                   <span class="bullet" aria-hidden="true"></span>
                   <div>
                     <h3>${escapeHtml(item.headline)}</h3>
-                    <p>${escapeHtml(item.summary)}</p>
                     <small>${escapeHtml(item.source)}</small>
                   </div>
                 </article>`,
@@ -77,8 +76,12 @@ const html = `<!doctype html>
     <title>${escapeHtml(post.title)}</title>
     <style>
       * { box-sizing: border-box; }
-      html, body { width: 1080px; height: 1350px; margin: 0; overflow: hidden; }
+      html, body { width: 1080px; height: 1920px; margin: 0; overflow: hidden; }
       body {
+        --section-title-size: 44px;
+        --headline-size: 56px;
+        --source-size: 24px;
+        --item-padding-y: 28px;
         color: #15191c;
         background: #f4f5f3;
         font-family: Pretendard, "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
@@ -88,26 +91,26 @@ const html = `<!doctype html>
         position: relative;
         display: flex;
         width: 1080px;
-        height: 1350px;
+        height: 1920px;
         flex-direction: column;
-        padding: 42px 48px 30px;
+        padding: 96px 72px 82px;
         border: 1px solid #aeb5b7;
         background: #fafbf9;
       }
       .masthead {
         display: flex;
-        min-height: 116px;
+        min-height: 132px;
         align-items: flex-end;
         justify-content: space-between;
         gap: 24px;
-        padding: 0 4px 16px;
+        padding: 0 4px 20px;
         border-bottom: 3px solid #0b6678;
       }
       .masthead h1 {
         margin: 0;
         color: #17191b;
         font-family: Georgia, "Times New Roman", serif;
-        font-size: 86px;
+        font-size: 82px;
         font-weight: 800;
         line-height: 0.92;
         letter-spacing: -0.04em;
@@ -117,7 +120,7 @@ const html = `<!doctype html>
         flex: 0 0 auto;
         padding-bottom: 4px;
         color: #0b6678;
-        font-size: 19px;
+        font-size: 25px;
         font-weight: 800;
         white-space: nowrap;
       }
@@ -126,23 +129,23 @@ const html = `<!doctype html>
         align-items: center;
         justify-content: space-between;
         gap: 20px;
-        padding: 10px 4px 12px;
+        padding: 15px 4px 17px;
         border-bottom: 1px solid #aeb5b7;
         color: #0b6678;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 800;
       }
       .subbar span:last-child {
         color: #505a5f;
-        font-size: 15px;
+        font-size: 21px;
         font-weight: 700;
       }
       .brief {
         display: grid;
         flex: 1;
         align-content: start;
-        gap: 24px;
-        padding-top: 24px;
+        gap: 34px;
+        padding-top: 36px;
       }
       .news-section {
         display: grid;
@@ -153,17 +156,17 @@ const html = `<!doctype html>
         align-items: center;
         gap: 11px;
         margin: 0;
-        padding-bottom: 7px;
+        padding-bottom: 13px;
         border-bottom: 2px solid #0b6678;
         color: #0b6678;
-        font-size: 28px;
+        font-size: var(--section-title-size);
         font-weight: 900;
         line-height: 1.15;
         letter-spacing: -0.035em;
       }
       .news-section h2 span {
-        width: 10px;
-        height: 25px;
+        width: 11px;
+        height: 38px;
         background: #0b6678;
       }
       .news-items {
@@ -171,39 +174,33 @@ const html = `<!doctype html>
       }
       .news-item {
         display: grid;
-        grid-template-columns: 15px minmax(0, 1fr);
-        gap: 11px;
-        padding: 14px 3px 13px;
+        grid-template-columns: 17px minmax(0, 1fr);
+        gap: 13px;
+        padding: var(--item-padding-y) 3px;
         border-bottom: 1px dashed #c4c8c9;
       }
       .news-item:last-child { border-bottom: 0; }
       .bullet {
-        width: 8px;
-        height: 8px;
-        margin-top: 11px;
-        border: 2px solid #0b6678;
+        width: 10px;
+        height: 10px;
+        margin-top: 26px;
+        border: 3px solid #0b6678;
       }
       .news-item h3 {
         margin: 0;
         color: #15191c;
-        font-size: 24px;
+        font-size: var(--headline-size);
         font-weight: 900;
-        line-height: 1.35;
+        line-height: 1.22;
         letter-spacing: -0.035em;
-      }
-      .news-item p {
-        margin: 3px 0 0;
-        color: #394248;
-        font-size: 19px;
-        font-weight: 500;
-        line-height: 1.48;
-        letter-spacing: -0.022em;
+        text-wrap: balance;
+        word-break: keep-all;
       }
       .news-item small {
         display: block;
-        margin-top: 3px;
+        margin-top: 8px;
         color: #0b6678;
-        font-size: 14px;
+        font-size: var(--source-size);
         font-weight: 800;
       }
       footer {
@@ -214,16 +211,28 @@ const html = `<!doctype html>
         padding: 12px 4px 0;
         border-top: 1px solid #aeb5b7;
         color: #586166;
-        font-size: 13px;
+        font-size: 19px;
         font-weight: 700;
       }
       footer strong {
         color: #0b6678;
         letter-spacing: 0.04em;
       }
+      body.density-relaxed {
+        --section-title-size: 48px;
+        --headline-size: 62px;
+        --source-size: 28px;
+        --item-padding-y: 36px;
+      }
+      body.density-compact {
+        --section-title-size: 40px;
+        --headline-size: 48px;
+        --source-size: 22px;
+        --item-padding-y: 20px;
+      }
     </style>
   </head>
-  <body>
+  <body class="${itemCount <= 4 ? 'density-relaxed' : itemCount >= 6 ? 'density-compact' : 'density-standard'}">
     <main class="sheet">
       <header>
         <div class="masthead">
@@ -273,7 +282,7 @@ const result = spawnSync(
     '--disable-gpu',
     '--hide-scrollbars',
     '--force-device-scale-factor=1',
-    '--window-size=1080,1350',
+    '--window-size=1080,1920',
     '--run-all-compositor-stages-before-draw',
     '--virtual-time-budget=2000',
     '--no-first-run',
