@@ -12,7 +12,7 @@ const diagnostics = [
     price: 'AUD 149',
     priceNote: '1회 결제',
     description:
-      '홈페이지와 구글 비즈니스, 기본 SEO 상태를 조금 더 깊게 확인합니다.',
+      '무료 점검보다 깊게 검토하고, 무엇부터 고쳐야 할지 개선 우선순위를 정리합니다.',
     points: ['홈페이지 심층 체크', 'Google Business Profile 심층 체크', 'On-page SEO 심층 체크', '모바일/속도 심층 체크'],
     cta: 'AI 진단 신청하기',
     href: '/contact?type=quick-diagnosis',
@@ -20,8 +20,6 @@ const diagnostics = [
   {
     title: 'AI 비즈니스 리포트',
     price: 'AUD 249',
-    originalPrice: 'AUD 349',
-    promoLabel: '런칭 특별가',
     priceNote: '1회 결제',
     description: '업종과 경쟁사까지 함께 분석하고 30일·90일 실행 순서를 정리합니다.',
     points: ['30일·90일 실행 로드맵', '홈페이지·SEO·구글 노출 통합 진단', '경쟁사 1~3곳 비교', 'AI 가상 고객 100명 반응 분석'],
@@ -34,7 +32,7 @@ const freeCheckCard = {
   title: '무료 점검',
   price: '무료',
   priceNote: '기본 확인',
-  description: '홈페이지와 구글 비즈니스, 기본 SEO 상태를 간단히 확인합니다.',
+  description: '홈페이지·구글 비즈니스·기본 SEO의 현재 상태만 가볍게 확인합니다.',
   points: ['홈페이지 체크', '모바일 화면 체크', 'Google Business Profile 등록 체크', '기본 SEO 체크'],
   cta: '무료 점검 신청하기',
   href: '/contact?type=free-check',
@@ -102,7 +100,7 @@ const carePackages = [
     description: '홈페이지가 열린 뒤 기본 상태 확인과 작은 수정까지 맡기고 싶은 경우 적합합니다.',
     points: ['호스팅/SSL 연결 상태 확인', '기본 백업 및 장애 확인', '월 1회 작은 텍스트/이미지 수정', '도메인 연결 상태 체크'],
     cta: '사이트 케어 문의하기',
-    href: '/contact?type=online-support',
+    href: '/contact?type=site-care-basic',
   },
   {
     title: '사이트 케어 Plus',
@@ -111,7 +109,7 @@ const carePackages = [
     description: '공지, 배너, 사진 교체처럼 운영 중 작은 변경이 자주 필요한 경우 적합합니다.',
     points: ['Basic 항목 포함', '월 2~3회 작은 수정', '공지/배너/이미지 교체 지원', '우선 응대'],
     cta: '사이트 케어 Plus 문의하기',
-    href: '/contact?type=online-support',
+    href: '/contact?type=site-care-plus',
   },
 ];
 
@@ -311,7 +309,7 @@ const WebPricing = () => {
               ))}
             </div>
             <div className="mt-8 flex justify-center">
-              <Link to="/contact?type=online-support" className="primary-button">
+              <Link to="/contact?type=site-care-basic" className="primary-button">
                 사이트 케어 문의하기
                 <ArrowRight size={16} />
               </Link>

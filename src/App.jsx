@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import StarterPackage from './pages/StarterPackage';
 import AIBusiness from './pages/AIBusiness';
 import WebPricing from './pages/WebPricing';
 import Blog from './pages/Blog';
@@ -54,7 +53,7 @@ const AppShell = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/en" element={<Home locale="en" />} />
-            <Route path="/starter-package" element={<StarterPackage />} />
+            <Route path="/starter-package" element={<Navigate to="/pricing" replace />} />
             <Route path="/ai-business" element={<AIBusiness />} />
             <Route path="/pricing" element={<WebPricing />} />
             <Route path="/blog" element={<Blog />} />

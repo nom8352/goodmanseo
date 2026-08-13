@@ -48,23 +48,15 @@ const baseRoutePages = [
   },
   {
     route: '/starter-package',
-    title: '홈페이지 제작 | Goodman SEO',
+    redirectTo: '/pricing',
+    title: '서비스 및 가격 | Goodman SEO',
     description:
-      'Goodman SEO의 호주와 시드니 비즈니스를 위한 홈페이지 제작 안내 페이지입니다. 구글 지도/검색 등록, 홈페이지 방문 확인 연결, 3개월 안심 유지보수까지 포함됩니다.',
-    canonical: canonicalForRoute('/starter-package'),
+      '스타터 패키지 안내는 /pricing으로 이동했습니다. Goodman SEO의 무료 점검, 홈페이지 제작, 구글 비즈니스 세팅과 기본 SEO 범위를 확인하세요.',
+    canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:
-      '호주 홈페이지 제작, 시드니 홈페이지 제작, 호주 비즈니스 홈페이지, 구글 지도 등록 포함 홈페이지, 호주 홈페이지 상담',
-    jsonLd: [
-      organizationJsonLd,
-      createServiceJsonLd({
-        name: 'Goodman SEO 기본 홈페이지',
-        description:
-          '호주와 시드니 비즈니스를 위한 기본 홈페이지 제작, 구글 지도/검색 등록, 문의 연결, 초기 유지보수 서비스입니다.',
-        path: '/starter-package',
-        serviceType: 'Website design and local SEO setup',
-      }),
-    ],
+      '호주 홈페이지 제작 가격, 스타터 홈페이지, 비즈니스 홈페이지 가격, 구글 지도 등록 가격',
+    jsonLd: [organizationJsonLd],
   },
   {
     route: '/pricing',
@@ -417,6 +409,31 @@ const applyJsonLd = (html, jsonLd) => {
 };
 
 const writeRouteHtml = async (page, baseHtml) => {
+  const targetDir = page.route === '/'
+    ? distDir
+    : path.join(distDir, page.route.replace(/^\//, ''));
+
+  if (page.redirectTo) {
+    const destination = canonicalForRoute(page.redirectTo);
+    const html = `<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0;url=${page.redirectTo}" />
+    <link rel="canonical" href="${destination}" />
+    <title>${page.title}</title>
+    <meta name="robots" content="noindex, follow" />
+  </head>
+  <body>
+    <p><a href="${page.redirectTo}">서비스 및 가격 페이지로 이동</a></p>
+  </body>
+</html>
+`;
+    await mkdir(targetDir, { recursive: true });
+    await writeFile(path.join(targetDir, 'index.html'), html, 'utf8');
+    return;
+  }
+
   const html = applySeo(baseHtml, page);
 
   if (page.route === '/') {
@@ -424,7 +441,6 @@ const writeRouteHtml = async (page, baseHtml) => {
     return;
   }
 
-  const targetDir = path.join(distDir, page.route.replace(/^\//, ''));
   await mkdir(targetDir, { recursive: true });
   await writeFile(path.join(targetDir, 'index.html'), html, 'utf8');
 };

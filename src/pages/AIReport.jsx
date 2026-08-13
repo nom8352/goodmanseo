@@ -136,12 +136,12 @@ const AIReport = () => {
 
               <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
                 <span className="font-bold text-[#6c7780] line-through">정상가 AUD 349</span>
-                <span className="rounded-[0.25rem] bg-[#102133] px-3 py-1.5 font-black text-white">런칭 특별가 AUD 249</span>
+                <span className="rounded-[0.25rem] bg-[#102133] px-3 py-1.5 font-black text-white">AUD 249</span>
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link to="/contact?type=ai-report-standard" className="primary-button px-6 py-3 text-base">
-                  내 비즈니스 진단 시작하기
+                  AI 비즈니스 리포트 문의하기
                   <ArrowRight size={18} />
                 </Link>
                 <a href="#sample-reports" className="secondary-button px-6 py-3 text-base">
@@ -217,11 +217,7 @@ const AIReport = () => {
                     <div>
                       <p className="pricing-card-title">{item.title}</p>
                     </div>
-                    {item.featured ? (
-                      <span className="rounded-[0.25rem] bg-[#102133] px-3 py-1 text-xs font-black text-white">
-                        런칭 특별가
-                      </span>
-                    ) : null}
+
                   </div>
 
                   <div className="mt-5 flex flex-wrap items-end gap-x-3 gap-y-1">
@@ -244,7 +240,7 @@ const AIReport = () => {
                 </div>
 
                 <Link to={item.href} className={`${item.featured ? 'primary-button' : 'secondary-button'} mt-7 w-full py-3`}>
-                  내 비즈니스 진단 시작하기
+                  AI 비즈니스 리포트 문의하기
                   <ArrowRight size={16} />
                 </Link>
                 <a href="#sample-reports" className="mt-3 inline-flex items-center justify-center gap-2 text-sm font-black text-[#102133] underline decoration-[#102133]/30 underline-offset-4">
@@ -334,7 +330,7 @@ const AIReport = () => {
                   <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f1ebe3] text-[#102133] text-xs font-black">
                     IN
                   </span>
-                  진단 시작에 필요한 정보
+                  리포트 문의에 필요한 정보
                 </span>
                 <span className="text-xs text-[#102133] font-bold">신청 폼 + 링크</span>
               </h3>
@@ -497,13 +493,13 @@ const AIReport = () => {
             className="mt-12 text-center"
           >
             <p className="text-[0.93rem] font-semibold text-[#44515d] mb-5">
-              정상가 AUD 349 · 런칭 특별가 AUD 249
+              AUD 249 · 정상가 AUD 349
             </p>
             <Link
               to="/contact?type=ai-report-standard"
               className="inline-flex items-center gap-2 rounded-[0.25rem] bg-[#102133] text-white px-8 py-3.5 text-[0.95rem] font-bold hover:bg-[#1b3145] transition-all shadow-[0_12px_24px_rgba(16,33,51,0.12)] hover:-translate-y-0.5"
             >
-              내 비즈니스 진단 시작하기
+              AI 비즈니스 리포트 문의하기
               <ArrowRight size={16} />
             </Link>
           </Motion.div>

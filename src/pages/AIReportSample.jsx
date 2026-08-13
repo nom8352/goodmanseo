@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -345,15 +345,47 @@ const ReportInfo = ({ sample }) => (
   </article>
 );
 
+const ReportNotFound = ({ sampleSlug }) => {
+  useEffect(() => {
+    document.title = '리포트를 찾을 수 없습니다 | Goodman SEO';
+    document.head.querySelector('meta[name="robots"]')?.setAttribute('content', 'noindex, nofollow');
+    document.head.querySelector('link[rel="canonical"]')?.setAttribute('href', 'https://goodmanseo.com/ai-report/');
+  }, [sampleSlug]);
+
+  return (
+    <div className="min-h-screen bg-[#f1f0ed] pt-24 text-[#102133]">
+      <div className="mx-auto max-w-[760px] px-4 py-5 md:px-6 md:py-8">
+        <main className="bg-white px-5 py-16 text-center ring-1 ring-[#d8d3cb] md:px-9">
+          <p className="text-[0.68rem] font-black uppercase tracking-[0.16em] text-[#4f5a63]">AI Business Performance Report</p>
+          <h1 className="mx-auto mt-4 max-w-xl break-keep font-serif text-[clamp(1.45rem,6.8vw,2.55rem)] font-semibold leading-[1.14] text-[#102133]">
+            리포트를 찾을 수 없습니다
+          </h1>
+          <p className="mx-auto mt-5 max-w-xl break-keep text-sm font-semibold leading-[1.78] text-[#44515d]">
+            요청하신 AI 리포트 샘플을 찾을 수 없습니다. 다른 샘플 리포트를 확인해보세요.
+          </p>
+          <Link to="/ai-report" className="mt-8 inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-sm font-black text-white transition hover:bg-[#1b3145]">
+            <ArrowLeft size={14} />
+            AI 리포트 안내로 돌아가기
+          </Link>
+        </main>
+      </div>
+    </div>
+  );
+};
+
 const AIReportSample = () => {
-  const { sampleSlug = 'sample-luna-skin-clinic' } = useParams();
+  const { sampleSlug } = useParams();
   const sample = getAiReportSampleBySlug(sampleSlug);
-  const reportPath = `/ai-report/${sample.slug}`;
+  const reportPath = `/ai-report/${sample?.slug}`;
   const pageJsonLd = createWebPageJsonLd({
-    name: `${sample.title} AI 비즈니스 리포트`,
-    description: sample.description,
+    name: `${sample?.title} AI 비즈니스 리포트`,
+    description: sample?.description,
     path: reportPath,
   });
+
+  if (!sample) {
+    return <ReportNotFound sampleSlug={sampleSlug} />;
+  }
 
   return (
     <div className="min-h-screen bg-[#f1f0ed] pt-24 text-[#102133]">

@@ -308,4 +308,4 @@ export const aiReportSamples = [
 ];
 
 export const getAiReportSampleBySlug = (slug) =>
-  aiReportSamples.find((sample) => sample.slug === slug) || aiReportSamples[0];
+  aiReportSamples.find((sample) => sample.slug === slug);

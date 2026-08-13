@@ -79,12 +79,12 @@ const faqItems = [
     answer: (
       <div className="grid gap-2 mt-1">
         {[
-          '내 브랜드 아이덴티티와 소구점이 반영된 쇼핑몰 상세 페이지 상품 설명 초안 자동 생성',
-          '다양한 상황별(배송 문의, 단순 변심, 컴플레인 등) 고객 문의 및 리뷰 대응 맞춤형 초안 자동 작성',
-          '블로그 글, 홈페이지 문구, 고객 안내문 작성용 초안 자동 기획',
-          '구글 비즈니스 프로필(지도) 및 네이버 블로그에 정기적으로 포스팅할 최적화된 소식글 자동 작성',
-          '자주 발송하는 주문 확인, 계좌 안내, 배송 지연 안내 이메일의 맞춤형 자동 템플릿화',
-          '비즈니스 일일 운영 현황 분석 및 노션/구글 스프레드시트 기반의 재고 정리 문서화 프로세스 자동화'
+          '홈페이지 서비스 소개·문의 안내 문구 초안을 업종에 맞게 빠르게 정리',
+          '전화·이메일·문의폼으로 들어오는 고객 질문과 리뷰 답변 초안 작성',
+          '구글 비즈니스 프로필(지도) 소식글과 홈페이지 공지 문구를 꾸준히 업데이트',
+          '한·영 고객이 섞인 시드니/호주 로컬 비즈니스를 위한 응대 템플릿 정리',
+          '견적·예약·방문 안내처럼 반복되는 안내 메시지 템플릿화',
+          '주간 문의·리뷰·노출 상태를 노션/스프레드시트로 간단히 기록하는 운영 루틴'
         ].map((item) => (
           <div key={item} className="flex items-start gap-2 py-0.5 text-left">
             <span className="text-[#102133] mt-1 text-xs">✓</span>
@@ -137,7 +137,7 @@ const AIBusiness = () => {
         title="AI 실전 멘토링"
         description="상품 설명, 고객 응대, 홈페이지 문구, 재고 관리 등 반복 업무를 AI로 자동화하는 구조를 맞춤으로 만들어드립니다. 온라인 스터디그룹, 온라인 1:1 AI 실전 멘토링, 오프라인 그룹 워크숍 운영."
         path="/ai-business"
-        keywords={['AI 실전 멘토링', 'AI 스터디그룹', 'AI 비즈니스 자동화', 'AI 쇼핑몰 운영', 'AI 업무 자동화', 'AI 온라인 운영', '호주 AI 멘토링']}
+        keywords={['AI 실전 멘토링', 'AI 스터디그룹', 'AI 업무 자동화', '구글 비즈니스 프로필', '홈페이지 운영', 'AI 온라인 운영', '호주 AI 멘토링']}
       />
 
       <div className="container">
@@ -188,10 +188,10 @@ const AIBusiness = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="absolute top-4 left-0 w-[220px] rounded-[0.7rem] bg-white/80 backdrop-blur-md p-5 border border-white/60 shadow-[0_20px_40px_rgba(16,33,51,0.06)]"
               >
-                <p className="text-[0.72rem] font-bold text-[#7a6f62] uppercase tracking-wider">업무 자동화 시간</p>
-                <div className="flex items-baseline gap-1 mt-1">
-                  <span className="text-3xl font-black text-[#102133] tracking-tight">85%</span>
-                  <span className="text-[0.78rem] font-semibold text-[#102133]">시간 절감 효과</span>
+                <p className="text-[0.72rem] font-bold text-[#7a6f62] uppercase tracking-wider">반복 업무</p>
+                <div className="flex flex-col mt-1">
+                  <span className="text-xl font-black text-[#102133] tracking-tight leading-tight">초안부터 정리</span>
+                  <span className="mt-1 text-[0.78rem] font-semibold text-[#44515d]">응대·문구 작업 흐름</span>
                 </div>
                 {/* SVG 꺾은선 그래프 */}
                 <div className="mt-4 h-16 w-full overflow-visible">
@@ -232,10 +232,10 @@ const AIBusiness = () => {
                 transition={{ duration: 0.6, delay: 0.55 }}
                 className="absolute bottom-4 right-0 w-[220px] rounded-[0.7rem] bg-white/80 backdrop-blur-md p-5 border border-white/60 shadow-[0_20px_40px_rgba(16,33,51,0.06)]"
               >
-                <p className="text-[0.72rem] font-bold text-[#7a6f62] uppercase tracking-wider">업무 성과</p>
+                <p className="text-[0.72rem] font-bold text-[#7a6f62] uppercase tracking-wider">실무 적용</p>
                 <div className="flex flex-col mt-0.5">
-                  <span className="text-[0.7rem] font-semibold text-[#7a6f62]">전환율</span>
-                  <span className="text-3xl font-black text-[#102133] tracking-tight leading-none mt-1">+127%</span>
+                  <span className="text-[0.7rem] font-semibold text-[#7a6f62]">로컬 비즈니스</span>
+                  <span className="text-xl font-black text-[#102133] tracking-tight leading-tight mt-1">문의·노출 정리</span>
                 </div>
                 {/* SVG 막대 그래프 */}
                 <div className="mt-4 h-16 w-full flex items-end justify-between gap-1.5 px-1">

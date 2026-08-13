@@ -7,14 +7,14 @@ import Seo from '../components/Seo';
 
 const CONTACT_CONTENT = {
   ko: {
-    seoTitle: '진단 / 문의 신청',
+    seoTitle: '무료 점검 / 문의 신청',
     seoDescription: 'GoodmanSEO 문의 신청 페이지입니다. 무료 점검, AI 진단, AI 비즈니스 리포트, 홈페이지 제작, 구글 비즈니스 세팅 문의를 접수할 수 있습니다.',
     seoKeywords: ['무료 점검 신청', 'AI 진단', 'AI 비즈니스 리포트', '홈페이지 제작 문의', '구글 비즈니스 세팅', '문의 폼'],
-    badge: '진단 / 문의 신청',
-    heading: <>지금 상황에 맞는<br /><span className="text-[#102133] font-black">진단</span> 또는 <span className="text-[#102133] font-black">문의</span>를<br />남겨보세요.</>,
+    badge: '무료 점검 / 문의 신청',
+    heading: <>지금 상황에 맞는<br /><span className="text-[#102133] font-black">무료 점검</span> 또는 <span className="text-[#102133] font-black">문의</span>를<br />남겨보세요.</>,
     description: <>필요한 항목을 선택하고 간단한 정보를 남겨주시면,<br />확인 후 최대한 빨리 연락드리겠습니다.</>,
-    formTitle: '진단 / 문의 신청',
-    footerText: '입력하신 정보는 안전하게 보호되며, 진단 및 상담 목적으로만 사용됩니다.',
+    formTitle: '무료 점검 / 문의 신청',
+    footerText: '입력하신 정보는 안전하게 보호되며, 문의 접수 및 상담 목적으로만 사용됩니다.',
   },
   en: {
     seoTitle: 'Free Check & Enquiries',

@@ -83,7 +83,9 @@ const HeroSocialProofVisual = ({ locale = 'ko' }) => {
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-[0.5rem] font-extrabold uppercase tracking-[0.08em] text-[#64748b] sm:text-[0.58rem]">Inquiry Flow</p>
-              <p className="mt-0.5 text-sm font-black tracking-[-0.04em] text-[#1d4ed8] sm:text-base">+42%</p>
+              <p className="mt-0.5 text-sm font-black tracking-[-0.04em] text-[#1d4ed8] sm:text-base">
+                {isEnglish ? 'Clearer enquiry path' : '문의 흐름 정리'}
+              </p>
             </div>
             <span className="rounded-full bg-[#eef3f7] px-2 py-0.5 text-[0.55rem] font-bold text-[#2d6fa3]">
               30d
@@ -145,7 +147,9 @@ const HeroSocialProofVisual = ({ locale = 'ko' }) => {
           </span>
           <div>
             <p className="text-xs font-black leading-none text-[#102133]">Google</p>
-            <p className="mt-1 text-[0.62rem] font-bold text-[#64748b]">Verified</p>
+            <p className="mt-1 text-[0.62rem] font-bold text-[#64748b]">
+              {isEnglish ? 'Profile setup (example)' : '프로필 설정 예시'}
+            </p>
           </div>
         </Motion.div>
 
@@ -155,9 +159,15 @@ const HeroSocialProofVisual = ({ locale = 'ko' }) => {
           transition={{ duration: 0.42, delay: 0.96, ease }}
           className="absolute left-[3.8rem] top-[19.1rem] z-20 w-[132px] rounded-[0.7rem] border border-[#d8dee5] bg-white/94 p-3 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-[4.8rem] sm:top-[23.4rem] sm:w-[154px]"
         >
-          <p className="text-[0.58rem] font-bold text-[#64748b]">Revenue</p>
-          <p className="mt-1 text-base font-black tracking-[-0.04em] text-[#102133]">$8,420</p>
-          <p className="mt-1 text-[0.56rem] font-bold text-[#2d6fa3]">+18.0%</p>
+          <p className="text-[0.58rem] font-bold text-[#64748b]">
+            {isEnglish ? 'Enquiries' : '문의 연결'}
+          </p>
+          <p className="mt-1 text-base font-black tracking-[-0.04em] text-[#102133]">
+            {isEnglish ? 'Direct enquiry path' : '직접 문의로 연결'}
+          </p>
+          <p className="mt-1 text-[0.56rem] font-bold text-[#2d6fa3]">
+            {isEnglish ? 'From search & profile' : '검색·프로필에서'}
+          </p>
         </Motion.div>
 
       </div>
