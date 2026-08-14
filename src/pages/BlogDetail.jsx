@@ -241,7 +241,7 @@ const BlogDetail = () => {
         type="article"
         jsonLd={{
           '@context': 'https://schema.org',
-          '@type': 'Article',
+          '@type': 'BlogPosting',
           headline: post.title,
           description: post.excerpt,
           author: {
