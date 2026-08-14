@@ -288,10 +288,18 @@ const BlogDetail = () => {
           </figure>
 
           {isAiKeyNews ? (
-            <a href={post.image} download className="secondary-button secondary-button--compact mx-auto mt-4 inline-flex w-fit">
-              <Download size={16} />
-              공유용 이미지 저장
-            </a>
+            <div className="mx-auto mt-4 flex w-fit flex-wrap justify-center gap-3">
+              <a href={post.image} download className="secondary-button secondary-button--compact inline-flex">
+                <Download size={16} />
+                쇼츠·X용 9:16 이미지
+              </a>
+              {post.instagramImage ? (
+                <a href={post.instagramImage} download className="secondary-button secondary-button--compact inline-flex">
+                  <Download size={16} />
+                  인스타그램용 4:5 이미지
+                </a>
+              ) : null}
+            </div>
           ) : null}
 
           <div className="detail-body mt-10">

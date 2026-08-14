@@ -9,6 +9,7 @@ export const blogPosts = [
     category: 'AI 키뉴스',
     kind: 'ai-key-news',
     image: '/blog/ai-keynews-2026-08-14.png',
+    instagramImage: '/blog/ai-keynews-2026-08-14-instagram.png',
     imageAlt:
       '2026년 8월 14일 Gemini 3.7 Flash, GPT-5.6 Ultrafast, Claude 에이전트 충돌 등 화제성 높은 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
     imageLayout: 'portrait',

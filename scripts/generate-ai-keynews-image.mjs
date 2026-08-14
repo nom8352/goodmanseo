@@ -18,6 +18,7 @@ const escapeHtml = (value = '') =>
     .replaceAll("'", '&#039;');
 
 const requestedId = process.argv.find((argument) => argument.startsWith('--id='))?.split('=')[1];
+const requestedFormat = process.argv.find((argument) => argument.startsWith('--format='))?.split('=')[1] || 'story';
 const post = requestedId
   ? blogPosts.find((candidate) => candidate.id === requestedId)
   : blogPosts.find((candidate) => candidate.kind === 'ai-key-news');
@@ -26,8 +27,25 @@ if (!post || post.kind !== 'ai-key-news') {
   throw new Error(`AI 키뉴스 글을 찾지 못했습니다${requestedId ? `: ${requestedId}` : ''}.`);
 }
 
-if (!post.image.endsWith('.png')) {
-  throw new Error(`공유 이미지는 PNG 경로여야 합니다: ${post.image}`);
+const formatConfig = {
+  story: {
+    width: 1080,
+    height: 1920,
+    imagePath: post.image,
+  },
+  instagram: {
+    width: 1080,
+    height: 1350,
+    imagePath: post.instagramImage || post.image.replace(/\.png$/, '-instagram.png'),
+  },
+}[requestedFormat];
+
+if (!formatConfig) {
+  throw new Error(`지원하지 않는 이미지 형식입니다: ${requestedFormat}. story 또는 instagram을 사용하세요.`);
+}
+
+if (!formatConfig.imagePath?.endsWith('.png')) {
+  throw new Error(`공유 이미지는 PNG 경로여야 합니다: ${formatConfig.imagePath}`);
 }
 
 const newsSections = post.content.filter((block) => block.type === 'newsSection');
@@ -73,11 +91,11 @@ const html = `<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=1080, initial-scale=1" />
+    <meta name="viewport" content="width=${formatConfig.width}, initial-scale=1" />
     <title>${escapeHtml(post.title)}</title>
     <style>
       * { box-sizing: border-box; }
-      html, body { width: 1080px; height: 1920px; margin: 0; overflow: hidden; }
+      html, body { width: ${formatConfig.width}px; height: ${formatConfig.height}px; margin: 0; overflow: hidden; }
       body {
         --section-title-size: 38px;
         --headline-size: 48px;
@@ -92,8 +110,8 @@ const html = `<!doctype html>
       .sheet {
         position: relative;
         display: flex;
-        width: 1080px;
-        height: 1920px;
+        width: ${formatConfig.width}px;
+        height: ${formatConfig.height}px;
         flex-direction: column;
         padding: 96px 72px 82px;
         border: 1px solid #aeb5b7;
@@ -244,9 +262,77 @@ const html = `<!doctype html>
         --source-size: 16px;
         --item-padding-y: 8px;
       }
+      body.format-instagram {
+        --section-title-size: 32px;
+        --headline-size: 42px;
+        --summary-size: 27px;
+        --source-size: 16px;
+        --item-padding-y: 7px;
+      }
+      body.format-instagram .sheet {
+        padding: 43px 58px 34px;
+      }
+      body.format-instagram .masthead {
+        min-height: 87px;
+        padding: 0 3px 13px;
+        border-bottom-width: 2px;
+      }
+      body.format-instagram .masthead h1 {
+        font-size: 64px;
+      }
+      body.format-instagram .date {
+        padding-bottom: 2px;
+        font-size: 19px;
+      }
+      body.format-instagram .subbar {
+        padding: 9px 3px 10px;
+        font-size: 18px;
+      }
+      body.format-instagram .subbar span:last-child {
+        font-size: 16px;
+      }
+      body.format-instagram .brief {
+        gap: 10px;
+        padding-top: 13px;
+      }
+      body.format-instagram .news-section h2 {
+        gap: 8px;
+        padding-bottom: 6px;
+        border-bottom-width: 2px;
+      }
+      body.format-instagram .news-section h2 span {
+        width: 8px;
+        height: 25px;
+      }
+      body.format-instagram .news-item {
+        grid-template-columns: 12px minmax(0, 1fr);
+        gap: 8px;
+        padding-right: 2px;
+        padding-left: 2px;
+      }
+      body.format-instagram .bullet {
+        width: 8px;
+        height: 8px;
+        margin-top: 14px;
+        border-width: 2px;
+      }
+      body.format-instagram .news-item h3 {
+        line-height: 1.15;
+      }
+      body.format-instagram .news-item p {
+        margin-top: 2px;
+        line-height: 1.24;
+      }
+      body.format-instagram .news-item small {
+        margin-top: 2px;
+      }
+      body.format-instagram footer {
+        padding-top: 7px;
+        font-size: 14px;
+      }
     </style>
   </head>
-  <body class="${itemCount <= 4 ? 'density-relaxed' : itemCount >= 6 ? 'density-compact' : 'density-standard'}">
+  <body class="${itemCount <= 4 ? 'density-relaxed' : itemCount >= 6 ? 'density-compact' : 'density-standard'} format-${requestedFormat}">
     <main class="sheet">
       <header>
         <div class="masthead">
@@ -283,7 +369,7 @@ const tempDir = path.join(os.tmpdir(), `goodmanseo-ai-keynews-${Date.now()}`);
 await mkdir(tempDir, { recursive: true });
 const htmlPath = path.join(tempDir, `${post.id}.html`);
 const userDataDir = path.join(tempDir, 'edge-profile');
-const outputPath = path.join(projectRoot, 'public', post.image.replace(/^\//, ''));
+const outputPath = path.join(projectRoot, 'public', formatConfig.imagePath.replace(/^\//, ''));
 
 await mkdir(path.dirname(outputPath), { recursive: true });
 await mkdir(userDataDir, { recursive: true });
@@ -296,7 +382,7 @@ const result = spawnSync(
     '--disable-gpu',
     '--hide-scrollbars',
     '--force-device-scale-factor=1',
-    '--window-size=1080,1920',
+    `--window-size=${formatConfig.width},${formatConfig.height}`,
     '--run-all-compositor-stages-before-draw',
     '--virtual-time-budget=2000',
     '--no-first-run',
@@ -317,4 +403,6 @@ if (imageStats.size < 10_000) {
 }
 
 await rm(tempDir, { recursive: true, force: true });
-console.log(`Generated ${path.relative(projectRoot, outputPath)} (${imageStats.size} bytes, ${itemCount} items)`);
+console.log(
+  `Generated ${path.relative(projectRoot, outputPath)} (${formatConfig.width}x${formatConfig.height}, ${imageStats.size} bytes, ${itemCount} items)`,
+);
