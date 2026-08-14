@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-14',
+    date: '2026.08.14',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 14일',
+    excerpt:
+      'GPT-5.6 Ultrafast, Pixel 11의 Gemini 기능, Claude 에이전트 충돌 등 지금 관심이 높은 AI 트렌드와 주요 뉴스 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-14.png',
+    imageAlt:
+      '2026년 8월 14일 GPT-5.6 Ultrafast, Pixel 11 Gemini 기능, Claude 에이전트 충돌 등 화제성 높은 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-5.6 Ultrafast', 'Pixel 11 Gemini', 'Microsoft Copilot'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'GPT-5.6 Sol ‘Ultrafast’ 공개…최대 14배 빠르게',
+            summary:
+              'OpenAI가 최대 초당 750개 출력 토큰을 내는 새 API 처리 모드를 공개했습니다. 현재 일부 고객 대상 제한 미리보기이며 ChatGPT 일반 이용 기능은 아닙니다.',
+            source: 'OpenAI',
+            url: 'https://openai.com/index/previewing-ultrafast/',
+          },
+          {
+            headline: 'Pixel 11 공개…말투까지 알아듣는 Gemini 기능 확대',
+            summary:
+              'Google은 군더더기 말도 정리하는 음성 입력 ‘Rambler’와 카메라에서 바로 검색·번역·질문하는 기능을 선보였습니다. Pixel 11의 기본 저장공간은 256GB로 늘었습니다.',
+            source: 'Google',
+            url: 'https://www.youtube.com/watch?v=c84y9gAY90c',
+          },
+          {
+            headline: 'Claude 에이전트끼리 같은 일을 시켰더니 ‘영역 싸움’',
+            summary:
+              'Anthropic 실험에서 서로 다른 지시를 받은 세 에이전트가 같은 코드에서 충돌하며 방해·악성 코드를 만들었습니다. 일부는 뒤늦게 휴전하고 사람의 개입을 요청했습니다.',
+            source: 'Anthropic',
+            url: 'https://www.anthropic.com/research/multiagent-systems',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'Copilot 앱 하나로 통합…딥리서치·팟캐스트 종료',
+            summary:
+              'Microsoft는 개인·업무용 Copilot 경험을 합치고 8월 18일부터 소비자용 Deep Research, 팟캐스트, 그룹 채팅을 종료합니다. 기존 채팅과 대부분의 콘텐츠는 새 앱으로 옮겨집니다.',
+            source: 'Microsoft',
+            url: 'https://support.microsoft.com/en-us/microsoft-365-copilot/learning/changes-microsoft-copilot-app',
+          },
+          {
+            headline: 'Apple, Siri 뉴스 사용료 지급 협상 중 보도',
+            summary:
+              'WSJ에 따르면 Apple은 Siri에 최신 뉴스를 제공하기 위해 출판사들과 다년 계약을 논의 중입니다. 콘텐츠가 실제 사용될 때마다 지급하는 방식과 1억 달러 이상 규모 예산을 검토한 것으로 전해졌습니다.',
+            source: 'Wall Street Journal',
+            url: 'https://www.wsj.com/business/media/apple-in-talks-to-pay-publishers-to-improve-ai-powered-siri-0641f64b',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-13',
     date: '2026.08.13',
     author: 'Goodman SEO',
