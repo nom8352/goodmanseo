@@ -5,14 +5,14 @@ export const blogPosts = [
     author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 14일',
     excerpt:
-      'GPT-5.6 Ultrafast, Pixel 11의 Gemini 기능, Claude 에이전트 충돌 등 지금 관심이 높은 AI 트렌드와 주요 뉴스 5건을 정리했습니다.',
+      'Gemini 3.7 Flash, GPT-5.6 Ultrafast, Claude 에이전트 충돌 등 지금 관심이 높은 AI 트렌드와 주요 뉴스 5건을 정리했습니다.',
     category: 'AI 키뉴스',
     kind: 'ai-key-news',
     image: '/blog/ai-keynews-2026-08-14.png',
     imageAlt:
-      '2026년 8월 14일 GPT-5.6 Ultrafast, Pixel 11 Gemini 기능, Claude 에이전트 충돌 등 화제성 높은 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+      '2026년 8월 14일 Gemini 3.7 Flash, GPT-5.6 Ultrafast, Claude 에이전트 충돌 등 화제성 높은 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
     imageLayout: 'portrait',
-    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-5.6 Ultrafast', 'Pixel 11 Gemini', 'Microsoft Copilot'],
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Gemini 3.7 Flash', 'GPT-5.6 Ultrafast', 'Microsoft Copilot'],
     content: [
       {
         type: 'newsSection',
@@ -26,11 +26,11 @@ export const blogPosts = [
             url: 'https://openai.com/index/previewing-ultrafast/',
           },
           {
-            headline: 'Pixel 11 공개…말투까지 알아듣는 Gemini 기능 확대',
+            headline: 'Gemini 3.7 Flash 공개…빠른 속도·반값 요금 화제',
             summary:
-              'Google은 군더더기 말도 정리하는 음성 입력 ‘Rambler’와 카메라에서 바로 검색·번역·질문하는 기능을 선보였습니다. Pixel 11의 기본 저장공간은 256GB로 늘었습니다.',
+              'Google이 코딩과 AI 에이전트 성능을 강화한 Gemini 3.7 Flash를 공개했습니다. AI Studio·Antigravity·Gemini API 등에 배포되며, 연말까지 API 요금은 입력 $0.75·출력 $3.75/100만 토큰입니다.',
             source: 'Google',
-            url: 'https://www.youtube.com/watch?v=c84y9gAY90c',
+            url: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/',
           },
           {
             headline: 'Claude 에이전트끼리 같은 일을 시켰더니 ‘영역 싸움’',
