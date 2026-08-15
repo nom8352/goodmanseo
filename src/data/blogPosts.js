@@ -1,5 +1,63 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-15',
+    date: '2026.08.15',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 15일',
+    excerpt:
+      'Pixel 11 수어 AI, Meta Muse Glimmer, Grok 4.7 예고 등 오늘 주목할 AI 트렌드와 주요 뉴스 4건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-15.png',
+    instagramImage: '/blog/ai-keynews-2026-08-15-instagram.png',
+    imageAlt:
+      '2026년 8월 15일 Pixel 11 수어 AI, Meta Muse Glimmer, Grok 4.7 예고 등 AI 트렌드와 주요 뉴스 4건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Pixel 11', 'Muse Glimmer', 'Grok 4.7'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Pixel 11, 손말을 바로 글자로…수어 AI 첫 탑재',
+            summary:
+              'Google DeepMind의 SL2T가 미국수어(ASL)를 영어 텍스트로 바꿉니다. Pixel 11의 Gboard와 실시간 자막에서 먼저 무료 제공되며, 다른 기기·언어는 추후 확대됩니다.',
+            source: 'Google DeepMind',
+            url: 'https://deepmind.google/blog/putting-sign-language-ai-into-users-hands/',
+          },
+          {
+            headline: 'Meta ‘Muse Glimmer’…노트북에서도 돌리는 AI 공개 보도',
+            summary:
+              'Axios에 따르면 Meta가 노트북에서 로컬 실행할 수 있는 소형 오픈웨이트 모델 Muse Glimmer를 이번 주 공개했습니다. 성능뿐 아니라 가격과 로컬 사용성이 새 경쟁축으로 떠올랐습니다.',
+            source: 'Axios',
+            url: 'https://www.axios.com/2026/08/13/grok-elon-musk-ai-zuckerberg-and-meta',
+          },
+          {
+            headline: 'Grok 4.7, 3~4주 뒤 나온다…머스크 예고',
+            summary:
+              '일론 머스크는 X에서 Grok 4.7을 3~4주 안에 내놓겠다고 밝혔습니다. 정식 사양과 사용 요금은 아직 공개되지 않아 출시 일정은 바뀔 수 있습니다.',
+            source: 'Elon Musk (X)',
+            url: 'https://x.com/elonmusk/status/2087604711767896527',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'Oracle, AI 투자 부담 속 추가 감원 계획 보도',
+            summary:
+              'Business Insider 보도에 따르면 Oracle은 9월 1일 전 추가 감원을 준비 중입니다. 회사는 지난 회계연도에 2만1천 명을 줄였고, AI 데이터센터 건설을 위해 430억 달러를 빌렸습니다.',
+            source: "Business Insider·Tom's Hardware",
+            url: 'https://www.tomshardware.com/tech-industry/oracle-plans-more-layoffs-weeks-after-spending-most-of-its-2-1-billion-restructuring-budget',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-14',
     date: '2026.08.14',
     author: 'Goodman SEO',
