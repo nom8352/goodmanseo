@@ -1,5 +1,55 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-16',
+    date: '2026.08.16',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 16일',
+    excerpt:
+      'Gemini·Flow 워터마크 설정, Apple의 중국용 자체 AI 모델, Nvidia·OpenAI 데이터센터 협상 등 오늘 주목할 AI 소식 3건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-16.png',
+    imageAlt:
+      '2026년 8월 16일 Gemini와 Flow 워터마크 설정, Apple 중국용 AI 모델, Nvidia와 OpenAI 데이터센터 협상 등 AI 트렌드와 주요 뉴스 3건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Gemini', 'Flow', 'Apple Intelligence', 'OpenAI'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Gemini·Flow, AI 콘텐츠의 ‘보이는 워터마크’ 끌 수 있다',
+            summary:
+              'Google은 Nano Banana·Omni·Lyria로 만든 이미지·영상·음악의 보이는 워터마크를 끄는 설정을 추가했습니다. 보이지 않는 SynthID와 C2PA 출처 정보는 그대로 남습니다.',
+            source: 'Google·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/',
+          },
+          {
+            headline: 'Apple, 중국용 자체 AI 모델 훈련…Alibaba와 협력 보도',
+            summary:
+              'Reuters는 Apple이 Alibaba의 지원을 받아 중국 시장용 자체 언어모델을 훈련했다고 보도했습니다. 중국 내 Apple Intelligence 출시는 앞으로 몇 달 안에 이뤄질 전망입니다.',
+            source: 'Reuters',
+            url: 'https://www.reuters.com/business/retail-consumer/apple-trains-its-own-ai-model-china-market-with-alibabas-support-sources-say-2026-08-14/',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'Nvidia, OpenAI 데이터센터 보증 규모 절반 이하로 검토',
+            summary:
+              'WSJ에 따르면 Nvidia와 OpenAI는 오하이오 10GW 데이터센터의 금융 보증을 2,500억 달러에서 1,200억 달러 미만으로 줄이는 방안을 협의 중입니다. 계약은 아직 확정되지 않았습니다.',
+            source: 'The Wall Street Journal',
+            url: 'https://www.wsj.com/tech/nvidia-downsizes-plans-for-250-billion-guarantee-of-openai-data-center-b56c38d3',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-15',
     date: '2026.08.15',
     author: 'Goodman SEO',
