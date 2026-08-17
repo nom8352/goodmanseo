@@ -1,5 +1,7 @@
 # Wiki Log
 
+- 2026-08-17: Published the daily AI key-news edition with three reader-interest trends and one major industry story. The `1080x1920` image is public, the `1080x1350` Instagram image remains local-only under `_workspace`, and X, Instagram, and Threads copy was prepared without external posting.
+
 - 2026-08-16: Published the daily AI key-news edition with two reader-interest trends and one major industry story. The `1080x1920` image is public, the `1080x1350` Instagram image remains local-only under `_workspace`, and X, Instagram, and Threads copy was prepared without external posting.
 
 - 2026-08-13: Tuned the phone-first `1080x1920` AI share image back to a moderate scale after the headline-only version proved too large. It now uses headlines at roughly twice the original size and restores each item’s complete compact 1–2 sentence summary plus source.

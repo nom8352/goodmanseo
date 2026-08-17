@@ -1,5 +1,62 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-17',
+    date: '2026.08.17',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 17일',
+    excerpt:
+      'Cursor의 SpaceX 편입, Grok 합성 이미지 소송, Anthropic의 AI 신뢰 논쟁, Stripe의 OpenRouter 인수 보도 등 오늘 주목할 AI 소식 4건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-17.png',
+    imageAlt:
+      '2026년 8월 17일 Cursor의 SpaceX 편입, Grok 합성 이미지 소송, Anthropic의 AI 신뢰 논쟁, Stripe의 OpenRouter 인수 보도 등 AI 트렌드와 주요 뉴스 4건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Cursor', 'SpaceX', 'Grok', 'Anthropic', 'OpenRouter'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Cursor, SpaceX 품으로…인수 절차 공식 완료',
+            summary:
+              'Cursor는 8월 14일 SpaceX에 공식 인수됐다고 밝혔습니다. 회사는 SpaceX의 대규모 GPU를 활용해 더 강한 모델을 더 낮은 비용으로 제공하겠다고 했습니다.',
+            source: 'Cursor',
+            url: 'https://cursor.com/blog/joining-spacex',
+          },
+          {
+            headline: 'Grok으로 어린 시절 사진 7천여 장 성적 합성 주장',
+            summary:
+              '미국 소송 원고는 계부가 11세 때 사진 1장으로 7천여 장의 성적 합성물을 만들었다고 주장했습니다. xAI는 아직 소송에 답변하지 않았다고 Washington Post가 보도했습니다.',
+            source: 'The Washington Post',
+            url: 'https://www.washingtonpost.com/technology/2026/08/15/woman-alleges-grok-made-thousands-sexual-abuse-images-childhood-snap/',
+          },
+          {
+            headline: 'Anthropic CEO “AI 반감은 기술보다 신뢰의 위기”',
+            summary:
+              '다리오 아모데이는 AI에 대한 부정적 여론이 기업·정부·기술업계에 대한 불신에서 나온다고 밝혔습니다. AI 규제와 데이터센터를 둘러싼 공개 논쟁도 다시 커졌습니다.',
+            source: 'Dario Amodei (X)',
+            url: 'https://x.com/DarioAmodei/status/2088758819304443967',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'Stripe, OpenRouter 70억달러 이상 인수 합의 보도',
+            summary:
+              'Bloomberg 보도에 따르면 Stripe는 400여 개 AI 모델을 연결하는 OpenRouter 인수를 확정했으며 가격은 70억달러 이상입니다. Stripe는 추측에 답하지 않는다고 밝혀 공식 발표는 아직 없습니다.',
+            source: 'Bloomberg·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-16',
     date: '2026.08.16',
     author: 'Goodman SEO',
