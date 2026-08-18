@@ -332,7 +332,7 @@ const html = `<!doctype html>
       }
     </style>
   </head>
-  <body class="${itemCount <= 3 ? 'density-relaxed' : itemCount >= 6 ? 'density-compact' : 'density-standard'} format-${requestedFormat}">
+  <body class="${itemCount <= 3 ? 'density-relaxed' : itemCount >= 5 ? 'density-compact' : 'density-standard'} format-${requestedFormat}">
     <main class="sheet">
       <header>
         <div class="masthead">

@@ -1,5 +1,62 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-18',
+    date: '2026.08.18',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 18일',
+    excerpt:
+      'Amazon의 희귀 도서 AI 학습 보도, Wispr Flow 음성 정확도 개선, Relay 종료와 Chrome팀 합류 등 오늘 주목할 AI 소식 4건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-18.png',
+    imageAlt:
+      '2026년 8월 18일 Amazon 희귀 도서 AI 학습, Wispr Flow 음성 정확도 개선, Relay 종료와 Chrome팀 합류, Nvidia 투자 소식 등 AI 트렌드와 주요 뉴스 4건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Amazon AI', 'Wispr Flow', 'Relay', 'Nvidia'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Amazon, 희귀 도서 책등 잘라 AI 학습용 스캔 보도',
+            summary:
+              '404 Media는 추적 장치를 넣은 희귀 도서가 Amazon 시설로 이동해 책등을 잘라 스캔한 뒤 폐기됐다고 보도했습니다. Amazon은 제품·서비스 개선을 위해 상업 경로로 책을 산다고 밝혔습니다.',
+            source: '404 Media',
+            url: 'https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/',
+          },
+          {
+            headline: 'Wispr Flow 새 음성모델 ‘Canto’…오류율 30%→10% 미만',
+            summary:
+              'Wispr는 음성 입력 품질 저하 지적 뒤 새 모델 Canto를 공개하고 오류율을 30%에서 10% 미만으로 낮춘다고 밝혔습니다. 회의 요약·할 일 정리 기능도 새로 내놓았습니다.',
+            source: 'Wispr·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/17/wispr-raises-280m-at-2b-valuation-as-it-looks-beyond-dictation/',
+          },
+          {
+            headline: 'Relay.app 종료…대표·직원은 Google Chrome팀 합류',
+            summary:
+              'Relay.app 유료 이용자는 9월 14일까지 데이터와 워크플로를 내보내야 하며 이후 계정이 삭제됩니다. 대표와 일부 직원은 Chrome팀에 합류해 브라우저 AI 기능을 맡습니다.',
+            source: 'Relay·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/17/ai-automation-startup-relay-shuts-down-staff-joins-googles-chrome-team/',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'Nvidia, OpenAI 데이터센터 사업에 15억달러 투자',
+            summary:
+              'Nvidia는 오하이오 PORTS-Pike 사업의 SB Energy에 15억달러를 투자하고 OpenAI 데이터센터의 단독 컴퓨팅 공급자가 됩니다. 초기 4.25GW 규모이며 최대 1,050억달러 신용 지원도 약정했습니다.',
+            source: 'Nvidia·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/17/nvidia-investing-1-5b-in-softbank-data-center-developer-behind-openai-project/',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-17',
     date: '2026.08.17',
     author: 'Goodman SEO',
