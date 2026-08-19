@@ -140,7 +140,7 @@ const html = `<!doctype html>
         flex: 0 0 auto;
         padding-bottom: 4px;
         color: #0b6678;
-        font-size: 25px;
+        font-size: 30px;
         font-weight: 800;
         white-space: nowrap;
       }
@@ -282,7 +282,7 @@ const html = `<!doctype html>
       }
       body.format-instagram .date {
         padding-bottom: 2px;
-        font-size: 19px;
+        font-size: 23px;
       }
       body.format-instagram .subbar {
         padding: 9px 3px 10px;
