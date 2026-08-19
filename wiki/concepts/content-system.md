@@ -32,7 +32,7 @@ Workflow:
 
 - `goal`: Publish a factual Korean AI brief whose page and image contain the same news.
 - `inputs`: Recent AI News Radar signals plus each selected item’s original source.
-- `steps`: Check feed freshness; select 3–6 high-signal items; verify original pages; add one dated post with `newsSection` blocks; run `npm run generate:ai-keynews-image`; update the sitemap; lint, build, inspect desktop/mobile, deploy, and verify the public URL.
+- `steps`: Check feed freshness; select exactly five verified items, normally three reader-interest trends plus two major AI news items; verify original pages; add one dated post with `newsSection` blocks; generate the public `1080x1920` story/X image and local-only `1080x1350` Instagram image; draft distinct X, Instagram, and Threads copy; update the sitemap; lint, build, inspect desktop/mobile, deploy, and verify the public image URL and private Instagram-image state.
 - `stop_rule`: Do not invent, translate an unverified aggregator claim, force filler, or publish when the original source cannot confirm the key fact.
 
 Design rule:

@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-08-18
+Last updated: 2026-08-19
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-08-19 daily AI key news: published `/blog/ai-keynews-2026-08-19/` with three reader-interest trends and two major AI news items covering Cursor Origin, ChatGPT for Teens, camera-equipped AirPods reporting, OpenAI's security controls, and Anthropic's reported annualized revenue. Generated the public `1080x1920` story/X image, stored the `1080x1350` Instagram image under `_workspace` only, registered the dated sitemap entry, and prepared platform-specific X, Instagram, and Threads copy without external posting. The daily automation now selects exactly five verified items, normally three trends plus two major news items.
 - 2026-08-18 daily AI key news: published `/blog/ai-keynews-2026-08-18/` with three reader-interest trends and one major industry story covering Amazon's reported rare-book AI training, Wispr Flow's new Canto speech model, Relay's shutdown and Chrome-team move, and Nvidia's OpenAI data-center investment. Generated the public `1080x1920` story/X image, stored the `1080x1350` Instagram image under `_workspace` only, registered the dated sitemap entry, and prepared platform-specific X, Instagram, and Threads copy without external posting.
 - 2026-08-17 daily AI key news: published `/blog/ai-keynews-2026-08-17/` with three reader-interest trends and one major industry story covering Cursor's SpaceX acquisition, a reported Grok image-abuse lawsuit, Anthropic's AI trust debate, and Stripe's reported OpenRouter acquisition. Generated the public `1080x1920` story/X image, stored the `1080x1350` Instagram image under `_workspace` only, registered the dated sitemap entry, and prepared platform-specific X, Instagram, and Threads copy without external posting.
 - 2026-08-16 daily AI key news: published `/blog/ai-keynews-2026-08-16/` with two reader-interest trends and one major industry story covering Google visible-watermark controls, Apple's reported China-specific model, and Nvidia/OpenAI's reported data-center guarantee talks. Generated the public `1080x1920` story/X image, stored the `1080x1350` Instagram image under `_workspace` only, registered the dated sitemap entry, and prepared platform-specific X, Instagram, and Threads copy without external posting.

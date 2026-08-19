@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-19',
+    date: '2026.08.19',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 19일',
+    excerpt:
+      'Cursor Origin 코드 호스팅, 청소년용 ChatGPT, 카메라 탑재 AirPods 정황, OpenAI 보안 강화 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-19.png',
+    imageAlt:
+      '2026년 8월 19일 Cursor Origin 코드 호스팅, 청소년용 ChatGPT, 카메라 탑재 AirPods 정황, OpenAI 보안 강화, Anthropic 매출 보도 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Cursor Origin', 'ChatGPT for Teens', 'AirPods', 'OpenAI', 'Anthropic'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Cursor ‘Origin’ 공개…GitHub처럼 코드 직접 보관',
+            summary:
+              'Cursor가 저장소·코드 탐색·풀리퀘스트·GitHub 동기화를 지원하는 Origin을 유료 플랜에 순차 공개합니다. 저장소 안에서 AI에게 질문하거나 코드 변경도 맡길 수 있습니다.',
+            source: 'Cursor',
+            url: 'https://cursor.com/changelog/origin-code-hosting',
+          },
+          {
+            headline: '13~17세는 자동 전환…‘청소년용 ChatGPT’ 출시',
+            summary:
+              'OpenAI는 나이를 13~17세로 밝히거나 18세 미만으로 추정된 계정을 청소년용 ChatGPT로 자동 전환합니다. 학습 모드·숙제 경고·휴식 알림·부모 설정이 기본 제공됩니다.',
+            source: 'OpenAI',
+            url: 'https://openai.com/index/chatgpt-for-teens/',
+          },
+          {
+            headline: '카메라 달린 AirPods 정황…사진 촬영 아닌 Siri의 눈',
+            summary:
+              'macOS 시험판 영상과 코드에서 카메라 탑재 AirPods 정황이 발견됐습니다. 보도에 따르면 사진·영상 녹화용이 아니라 주변 정보를 저해상도로 읽어 Siri에 전달하는 방식입니다.',
+            source: 'TechCrunch·Bloomberg',
+            url: 'https://techcrunch.com/2026/08/18/why-apples-camera-equipped-airpods-may-not-be-the-pervert-pods-consumers-fear/',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'OpenAI, 최상위 모델 훈련 계속 보류…보안 강화',
+            summary:
+              'OpenAI는 Hugging Face 보안 사고 뒤 강화학습을 2주 멈췄고, 최상위 모델 훈련은 아직 재개하지 않았습니다. 네트워크 격리와 이상 행동 30분 내 경보 체계를 확대합니다.',
+            source: 'OpenAI',
+            url: 'https://openai.com/index/pacing-model-development-cyber-capabilities/',
+          },
+          {
+            headline: 'Anthropic 연환산 매출 650억달러 돌파 보도',
+            summary:
+              'Bloomberg에 따르면 Anthropic의 연환산 매출이 7월 말 650억달러를 넘어 5월 470억달러에서 급증했습니다. 실제 연간 매출이 아닌 최근 실적을 연간으로 환산한 수치입니다.',
+            source: 'Bloomberg·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/17/anthropics-annualized-revenue-surges-to-65b/',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-18',
     date: '2026.08.18',
     author: 'Goodman SEO',
