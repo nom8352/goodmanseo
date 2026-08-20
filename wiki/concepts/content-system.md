@@ -31,9 +31,9 @@ Decision:
 Workflow:
 
 - `goal`: Publish a factual Korean AI brief whose page and image contain the same news.
-- `inputs`: Recent AI News Radar signals plus each selected item’s original source.
-- `steps`: Check feed freshness; select exactly five verified items, normally three reader-interest trends plus two major AI news items; verify original pages; add one dated post with `newsSection` blocks; generate the public `1080x1920` story/X image and local-only `1080x1350` Instagram image; draft distinct X, Instagram, and Threads copy; update the sitemap; lint, build, inspect desktop/mobile, deploy, and verify the public image URL and private Instagram-image state.
-- `stop_rule`: Do not invent, translate an unverified aggregator claim, force filler, or publish when the original source cannot confirm the key fact.
+- `inputs`: Fresh AI News Radar `latest-24h.json` and `daily-brief.json`, an authenticated Apify/X search sample, and each selected item’s original source.
+- `steps`: Verify Radar freshness; run Apify broad and topic-specific X searches; rank candidates by cross-source repetition, official-account engagement, recency, and reader appeal; select exactly five verified items, normally three reader-interest trends plus two major AI news items; verify original pages; add or update one dated post with `newsSection` blocks; generate the public `1080x1920` story/X image and local-only `1080x1350` Instagram image; draft distinct X, Instagram, and Threads copy; update the sitemap; lint, build, inspect desktop/mobile, deploy, and verify the public image URL and private Instagram-image state.
+- `stop_rule`: Do not silently skip Radar or Apify, invent or translate an unverified aggregator claim, force filler, or publish when either discovery source remains unavailable after retries or the original source cannot confirm the key fact.
 
 Design rule:
 

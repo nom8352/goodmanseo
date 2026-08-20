@@ -80,6 +80,7 @@ High-level current priorities:
 GoodmanSEO also publishes one global AI key-news brief per day. Preserve these rules:
 
 - publish one searchable Korean blog post and one matching `1080x1920` PNG image
+- use fresh AI News Radar data and an authenticated Apify/X search sample as mandatory primary discovery inputs, then verify every selected fact against its original source
 - cover global AI only; do not force an Australia angle
 - use 3 to 6 high-signal items verified against original sources
 - keep the writing factual and compact, without GoodmanSEO commentary or filler

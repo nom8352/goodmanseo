@@ -5,39 +5,39 @@ export const blogPosts = [
     author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 20일',
     excerpt:
-      'Fire TV Alexa+ 무료 전환, Google AI 학습 도구, Calendly 회의 기록 AI, OpenAI 개인정보 보호, Stripe의 OpenRouter 인수 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+      'Claude Code 사용량 확대, Gemini 3.7 Flash 이용 확대, DFlash 2 로컬 AI 속도, Claude 단백질 설계, OpenRouter의 Stripe 합류 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스',
     kind: 'ai-key-news',
     image: '/blog/ai-keynews-2026-08-20.png',
     imageAlt:
-      '2026년 8월 20일 Fire TV Alexa+ 무료 전환, Google AI 학습 도구, Calendly 회의 기록 AI, OpenAI 개인정보 보호, Stripe의 OpenRouter 인수 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+      '2026년 8월 20일 Claude Code 사용량 확대, Gemini 3.7 Flash 이용 확대, DFlash 2 로컬 AI 속도, Claude 단백질 설계, OpenRouter의 Stripe 합류 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
     imageLayout: 'portrait',
-    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Alexa+', 'Gemini', 'Calendly', 'OpenAI', 'OpenRouter'],
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Code', 'Gemini 3.7 Flash', 'DFlash 2', 'Anthropic', 'OpenRouter'],
     content: [
       {
         type: 'newsSection',
         title: '오늘의 AI 트렌드',
         items: [
           {
-            headline: 'Fire TV의 Alexa+ 무료 전환…Prime 없어도 자동 적용',
+            headline: 'Claude Code 주간 사용량 50% 확대, 8월 31일까지 연장',
             summary:
-              'Amazon은 미국의 호환 Fire TV에 Alexa+를 추가 요금 없이 자동 적용합니다. Prime 가입 없이도 대화형 콘텐츠 검색과 스마트홈 제어를 사용할 수 있습니다.',
-            source: 'Amazon',
-            url: 'https://www.aboutamazon.com/news/devices/alexa-plus-fire-tv-free-ai',
+              'Anthropic은 Claude Code 주간 사용량 50% 확대를 8월 31일까지 연장했습니다. 장기 적용을 검토하지만 수요 증가로 일부 기간 용량이 빠듯할 수 있다고 밝혔습니다.',
+            source: 'Anthropic',
+            url: 'https://x.com/ClaudeDevs/status/2089798442306711646',
           },
           {
-            headline: 'Google 검색·Gemini, 맞춤 퀴즈와 3D 학습 도구 추가',
+            headline: 'Gemini 3.7 Flash, Gemini 채팅·Spark로 이용 확대',
             summary:
-              'Google은 검색에서 과목별 맞춤 퀴즈와 학습 문서를 만들고, Gemini에서 3D 시뮬레이션과 학습 허브를 이용할 수 있게 했습니다. 일부 Lens 기능은 몇 주 안에 배포됩니다.',
-            source: 'Google·TechCrunch',
-            url: 'https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/',
+              'Google은 Gemini 3.7 Flash를 Google AI Pro·Ultra 이용자의 Gemini 채팅과 Gemini Spark에 제공한다고 알렸습니다. Spark는 Gmail·Calendar·Docs를 활용해 여러 단계 작업을 처리합니다.',
+            source: 'Google',
+            url: 'https://x.com/Google/status/2090113238436315618',
           },
           {
-            headline: 'Calendly, 회의 녹화·요약·후속 이메일 AI 출시',
+            headline: 'DFlash 2 공개…맥북에서 Qwen 3.8 27B 초당 70토큰',
             summary:
-              'Calendly의 Notetaker가 Zoom·Google Meet·Teams 회의를 녹화하고 요약과 할 일을 만듭니다. 회의 예약까지 대화로 처리하는 AI 비서 Callie도 순차 제공됩니다.',
-            source: 'Calendly·TechCrunch',
-            url: 'https://techcrunch.com/2026/08/19/calendly-throws-its-hat-into-meeting-note-taker-circus/',
+              'DFlash 2는 M5 Max 맥북에서 Qwen 3.8 27B를 초당 70토큰으로 실행했다고 공개했습니다. 기존 순차 생성보다 최대 4.6배 빠르면서 출력 결과는 같다고 설명합니다.',
+            source: 'Inco AI',
+            url: 'https://inco.ai/blog/dflash2/',
           },
         ],
       },
@@ -46,18 +46,18 @@ export const blogPosts = [
         title: '오늘의 주요 AI 뉴스',
         items: [
           {
-            headline: 'OpenAI, 내용 저장 없이 위험 패턴 찾는 기능 공개',
+            headline: 'Claude, 15개 표적 중 14개에서 단백질 결합체 설계 성공',
             summary:
-              'OpenAI는 고객 데이터 내용을 직원이 보거나 보관하지 않으면서 여러 대화의 위험 패턴을 자동 탐지하는 Private Safety Processing을 시험합니다. 정식 배포는 9월 예정입니다.',
-            source: 'OpenAI',
-            url: 'https://openai.com/index/offering-zero-data-retention-for-frontier-models/',
+              'Anthropic은 Claude가 전문가 지침을 바탕으로 15개 표적의 단백질 결합체를 설계했고 14개에서 실험 성공을 확인했다고 발표했습니다. 신약 개발 초기 연구를 AI가 보조할 가능성을 보여준 실험입니다.',
+            source: 'Anthropic',
+            url: 'https://www.anthropic.com/research/Claude-accelerates-protein-design',
           },
           {
-            headline: 'Stripe, OpenRouter 인수 공식 확인…75억달러 보도',
+            headline: 'OpenRouter, Stripe에 합류…멀티모델 서비스 유지',
             summary:
-              'Stripe는 400여 개 AI 모델을 연결하는 OpenRouter 인수를 공식 확인했습니다. 가격은 공개하지 않았지만 New York Times는 75억달러라고 보도했으며, OpenRouter는 독립 운영을 이어갑니다.',
-            source: 'Stripe·TechCrunch',
-            url: 'https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/',
+              'OpenRouter는 Stripe에 합류한다고 공식 발표했습니다. 400개 이상 모델을 연결하고 하루 10조 토큰 이상을 처리하는 멀티모델 플랫폼으로서 기존 서비스 방향을 이어간다고 밝혔습니다.',
+            source: 'OpenRouter',
+            url: 'https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/',
           },
         ],
       },

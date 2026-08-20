@@ -1,5 +1,7 @@
 # Wiki Log
 
+- 2026-08-20: Revised the daily AI key-news edition after making fresh AI News Radar and authenticated Apify/X collection the mandatory primary discovery layer. The five items now cover Claude Code's 50% weekly-limit extension, Gemini 3.7 Flash availability, DFlash 2's local Mac speed demo, Claude's protein-binder results, and OpenRouter joining Stripe; both image ratios and platform copy were regenerated without external posting.
+
 - 2026-08-20: Published exactly five verified AI key-news items: three reader-interest trends and two major AI news items. The `1080x1920` image uses the enlarged `30px` date, the `1080x1350` Instagram image uses `23px` and remains local-only, and platform-specific copy was prepared without external posting.
 
 - 2026-08-19: Increased the AI key-news date to `30px` on public story/X images and `23px` on local Instagram images, starting with the next generated edition. Existing published images remain unchanged.
