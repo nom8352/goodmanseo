@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-08-19
+Last updated: 2026-08-20
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-08-20 daily AI key news: published `/blog/ai-keynews-2026-08-20/` with exactly five verified items: three reader-interest trends covering free Alexa+ on Fire TV, Google's new study tools, and Calendly's AI meeting assistant, plus two major stories on OpenAI's private safety processing and Stripe's confirmed OpenRouter acquisition. Generated the public `1080x1920` story/X image with a `30px` date, stored the `1080x1350` Instagram image with a `23px` date under `_workspace` only, registered the dated sitemap entry, and prepared platform-specific X, Instagram, and Threads copy without external posting.
 - 2026-08-19 AI key-news date legibility: increased the date from `25px` to `30px` on public `1080x1920` images and from `19px` to `23px` on local Instagram `1080x1350` images. The change starts with the next generated edition; the already-published August 19 images were not replaced.
 - 2026-08-19 daily AI key news: published `/blog/ai-keynews-2026-08-19/` with three reader-interest trends and two major AI news items covering Cursor Origin, ChatGPT for Teens, camera-equipped AirPods reporting, OpenAI's security controls, and Anthropic's reported annualized revenue. Generated the public `1080x1920` story/X image, stored the `1080x1350` Instagram image under `_workspace` only, registered the dated sitemap entry, and prepared platform-specific X, Instagram, and Threads copy without external posting. The daily automation now selects exactly five verified items, normally three trends plus two major news items.
 - 2026-08-18 daily AI key news: published `/blog/ai-keynews-2026-08-18/` with three reader-interest trends and one major industry story covering Amazon's reported rare-book AI training, Wispr Flow's new Canto speech model, Relay's shutdown and Chrome-team move, and Nvidia's OpenAI data-center investment. Generated the public `1080x1920` story/X image, stored the `1080x1350` Instagram image under `_workspace` only, registered the dated sitemap entry, and prepared platform-specific X, Instagram, and Threads copy without external posting.

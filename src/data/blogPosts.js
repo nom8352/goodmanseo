@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-20',
+    date: '2026.08.20',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 20일',
+    excerpt:
+      'Fire TV Alexa+ 무료 전환, Google AI 학습 도구, Calendly 회의 기록 AI, OpenAI 개인정보 보호, Stripe의 OpenRouter 인수 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-20.png',
+    imageAlt:
+      '2026년 8월 20일 Fire TV Alexa+ 무료 전환, Google AI 학습 도구, Calendly 회의 기록 AI, OpenAI 개인정보 보호, Stripe의 OpenRouter 인수 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Alexa+', 'Gemini', 'Calendly', 'OpenAI', 'OpenRouter'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Fire TV의 Alexa+ 무료 전환…Prime 없어도 자동 적용',
+            summary:
+              'Amazon은 미국의 호환 Fire TV에 Alexa+를 추가 요금 없이 자동 적용합니다. Prime 가입 없이도 대화형 콘텐츠 검색과 스마트홈 제어를 사용할 수 있습니다.',
+            source: 'Amazon',
+            url: 'https://www.aboutamazon.com/news/devices/alexa-plus-fire-tv-free-ai',
+          },
+          {
+            headline: 'Google 검색·Gemini, 맞춤 퀴즈와 3D 학습 도구 추가',
+            summary:
+              'Google은 검색에서 과목별 맞춤 퀴즈와 학습 문서를 만들고, Gemini에서 3D 시뮬레이션과 학습 허브를 이용할 수 있게 했습니다. 일부 Lens 기능은 몇 주 안에 배포됩니다.',
+            source: 'Google·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/19/google-launches-new-study-tools-for-students-across-search-and-gemini/',
+          },
+          {
+            headline: 'Calendly, 회의 녹화·요약·후속 이메일 AI 출시',
+            summary:
+              'Calendly의 Notetaker가 Zoom·Google Meet·Teams 회의를 녹화하고 요약과 할 일을 만듭니다. 회의 예약까지 대화로 처리하는 AI 비서 Callie도 순차 제공됩니다.',
+            source: 'Calendly·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/19/calendly-throws-its-hat-into-meeting-note-taker-circus/',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'OpenAI, 내용 저장 없이 위험 패턴 찾는 기능 공개',
+            summary:
+              'OpenAI는 고객 데이터 내용을 직원이 보거나 보관하지 않으면서 여러 대화의 위험 패턴을 자동 탐지하는 Private Safety Processing을 시험합니다. 정식 배포는 9월 예정입니다.',
+            source: 'OpenAI',
+            url: 'https://openai.com/index/offering-zero-data-retention-for-frontier-models/',
+          },
+          {
+            headline: 'Stripe, OpenRouter 인수 공식 확인…75억달러 보도',
+            summary:
+              'Stripe는 400여 개 AI 모델을 연결하는 OpenRouter 인수를 공식 확인했습니다. 가격은 공개하지 않았지만 New York Times는 75억달러라고 보도했으며, OpenRouter는 독립 운영을 이어갑니다.',
+            source: 'Stripe·TechCrunch',
+            url: 'https://techcrunch.com/2026/08/19/stripe-didnt-really-buy-openrouter-because-of-the-singularity/',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-19',
     date: '2026.08.19',
     author: 'Goodman SEO',

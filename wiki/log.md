@@ -1,5 +1,7 @@
 # Wiki Log
 
+- 2026-08-20: Published exactly five verified AI key-news items: three reader-interest trends and two major AI news items. The `1080x1920` image uses the enlarged `30px` date, the `1080x1350` Instagram image uses `23px` and remains local-only, and platform-specific copy was prepared without external posting.
+
 - 2026-08-19: Increased the AI key-news date to `30px` on public story/X images and `23px` on local Instagram images, starting with the next generated edition. Existing published images remain unchanged.
 
 - 2026-08-19: Published the daily AI key-news edition with exactly five verified items: three reader-interest trends and two major AI news items. The `1080x1920` image is public, the `1080x1350` Instagram image remains local-only under `_workspace`, and X, Instagram, and Threads copy was prepared without external posting.
