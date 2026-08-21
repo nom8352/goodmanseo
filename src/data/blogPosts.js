@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-21',
+    date: '2026.08.21',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 21일',
+    excerpt:
+      'ChatGPT의 Apple 메시지 연동, Grok 앱 제작 확대, GPT-Image-2 투명 배경, Claude 컴퓨터 조작 정식 제공, Apple Music AI 표시 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-21.png',
+    imageAlt:
+      '2026년 8월 21일 ChatGPT의 Apple 메시지 연동, Grok 앱 제작 확대, GPT-Image-2 투명 배경, Claude 컴퓨터 조작 정식 제공, Apple Music AI 표시 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'ChatGPT', 'Apple 메시지', 'Grok', 'GPT-Image-2', 'Claude', 'Apple Music'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'ChatGPT, Mac의 Apple 메시지 검색·답장·전송 지원',
+            summary:
+              'OpenAI는 Mac용 ChatGPT Work와 Codex에 Apple Messages 플러그인을 추가했습니다. 대화를 검색·정리하고 답장을 작성·전송할 수 있으며, 전송 전 승인이 기본으로 켜져 있습니다.',
+            source: 'OpenAI',
+            url: 'https://x.com/ChatGPT/status/2090499359641329950',
+          },
+          {
+            headline: 'Grok 앱 제작, 모든 SuperGrok·X Premium 플랜으로 확대',
+            summary:
+              'Grok은 웹·iOS·Android 앱 제작 기능을 모든 SuperGrok과 X Premium 플랜에 제공한다고 밝혔습니다. 한 번의 프롬프트로 자체 도메인을 가진 앱을 만들고 공개할 수 있습니다.',
+            source: 'Grok',
+            url: 'https://x.com/grok/status/2090518541480898973',
+          },
+          {
+            headline: 'GPT-Image-2, 투명 배경 이미지 생성 미리보기 지원',
+            summary:
+              'OpenAI는 GPT-Image-2 API에 투명 배경 생성을 미리보기로 추가했습니다. 상품 이미지·그래픽·웹 목업처럼 다른 배경에 바로 배치할 수 있는 이미지 자산을 만들 수 있습니다.',
+            source: 'OpenAI',
+            url: 'https://x.com/OpenAIDevs/status/2090536933571330440',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'Claude 컴퓨터 조작·브라우저·Skills·Files API 정식 제공',
+            summary:
+              'Anthropic은 개발자용 Claude Platform에서 Computer Use, Skills API, Files API를 정식 제공하고 새 Browser Use 도구를 추가했습니다. Claude가 화면과 웹 요소를 조작하고 팀 지침과 파일을 반복 활용할 수 있습니다.',
+            source: 'Anthropic',
+            url: 'https://claude.com/blog/computer-use-skills-api-files-api',
+          },
+          {
+            headline: 'Apple Music, AI 생성 음악에 표시 붙일 예정 보도',
+            summary:
+              "Engadget·Billboard 보도에 따르면 Apple Music은 올해 안에 AI로 주요 부분이 제작된 곡에 'Made With AI' 표시를 보이게 할 예정입니다. 음반사와 유통사가 관련 정보를 제출하는 방식으로 알려졌습니다.",
+            source: 'Billboard·Engadget',
+            url: 'https://www.engadget.com/2241260/apple-music-will-reportedly-label-any-ai-made-tracks-later-this-year/',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-20',
     date: '2026.08.20',
     author: 'Goodman SEO',

@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-08-20
+Last updated: 2026-08-21
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-08-21 daily AI key news: published exactly five verified items after using fresh AI News Radar data and authenticated Apify/X searches as mandatory primary discovery sources. The edition leads with ChatGPT's Apple Messages plugin on Mac, Grok app-building access across SuperGrok and X Premium plans, and GPT-Image-2 transparent-background preview, followed by Claude Platform computer/browser/Skills/Files availability and the reported Apple Music AI-content label. Generated the public `1080x1920` image, stored the `1080x1350` Instagram image under `_workspace` only, registered the dated sitemap entry, and prepared dated X, Instagram, Threads, and Naver Blog copy without external posting. The Naver hashtag list keeps `#모두의창업` in sixth position.
 - 2026-08-20 daily AI key news: initially published with five verified items, then revised after making fresh AI News Radar plus authenticated Apify/X collection the mandatory primary discovery layer. The edition now leads with Claude Code's 50% weekly-limit extension, Gemini 3.7 Flash availability in Gemini chat and Spark, and DFlash 2's local Mac speed demo, followed by Claude's protein-binder results and OpenRouter joining Stripe. The public `1080x1920` image and local-only `1080x1350` Instagram image were regenerated from the revised data, and the platform copy was replaced without external posting.
 - 2026-08-19 AI key-news date legibility: increased the date from `25px` to `30px` on public `1080x1920` images and from `19px` to `23px` on local Instagram `1080x1350` images. The change starts with the next generated edition; the already-published August 19 images were not replaced.
 - 2026-08-19 daily AI key news: published `/blog/ai-keynews-2026-08-19/` with three reader-interest trends and two major AI news items covering Cursor Origin, ChatGPT for Teens, camera-equipped AirPods reporting, OpenAI's security controls, and Anthropic's reported annualized revenue. Generated the public `1080x1920` story/X image, stored the `1080x1350` Instagram image under `_workspace` only, registered the dated sitemap entry, and prepared platform-specific X, Instagram, and Threads copy without external posting. The daily automation now selects exactly five verified items, normally three trends plus two major news items.

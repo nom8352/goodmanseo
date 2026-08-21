@@ -1,5 +1,7 @@
 # Wiki Log
 
+- 2026-08-21: Published five verified AI key-news items after using fresh AI News Radar data and authenticated Apify/X searches as mandatory discovery inputs. The public story/X image was generated, the Instagram image remains local-only, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting; `#모두의창업` is the sixth Naver hashtag.
+
 - 2026-08-20: Revised the daily AI key-news edition after making fresh AI News Radar and authenticated Apify/X collection the mandatory primary discovery layer. The five items now cover Claude Code's 50% weekly-limit extension, Gemini 3.7 Flash availability, DFlash 2's local Mac speed demo, Claude's protein-binder results, and OpenRouter joining Stripe; both image ratios and platform copy were regenerated without external posting.
 
 - 2026-08-20: Published exactly five verified AI key-news items: three reader-interest trends and two major AI news items. The `1080x1920` image uses the enlarged `30px` date, the `1080x1350` Instagram image uses `23px` and remains local-only, and platform-specific copy was prepared without external posting.
