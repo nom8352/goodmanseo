@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-22',
+    date: '2026.08.22',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 22일',
+    excerpt:
+      '유료 Codex 추가 리셋, Grok Bot 무료 체험, GPT-5.6 Sol 가격 인하, DeepSeek 비전 모델, Apple Siri·Vision Pro 조직 감원 보도 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-22.png',
+    imageAlt:
+      '2026년 8월 22일 유료 Codex 추가 리셋, Grok Bot 무료 체험, GPT-5.6 Sol 가격 인하, DeepSeek 비전 모델, Apple Siri·Vision Pro 조직 감원 보도 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Codex', 'Grok Bot', 'GPT-5.6 Sol', 'DeepSeek', 'Siri', 'Apple AI'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Codex 2천만 사용자 돌파…유료 이용자에 추가 리셋권 지급',
+            summary:
+              'OpenAI Codex 책임자는 Codex 활성 사용자가 2천만 명을 넘었다며 모든 유료 Codex·ChatGPT Work 이용자에게 추가 리셋권 1회를 지급한다고 밝혔습니다. 원하는 때 사용해 이용 한도를 초기화할 수 있습니다.',
+            source: 'OpenAI Codex',
+            url: 'https://x.com/thsottiaux/status/2090766694897619318',
+          },
+          {
+            headline: 'Grok Bot, 더 많은 요금제로 확대…무료 체험 시작',
+            summary:
+              'Grok은 컴퓨터에서 계속 작업하는 Grok Bot을 더 많은 요금제에 제공하고 무료로 시험할 수 있게 했습니다. 지원 요금제와 무료 사용량은 계정별 화면에서 확인해야 합니다.',
+            source: 'Grok',
+            url: 'https://x.com/grok/status/2090879561982451931',
+          },
+          {
+            headline: 'GPT-5.6 Sol, 3개월간 API·크레딧 가격 20% 이상 인하',
+            summary:
+              'OpenAI는 GPT-5.6 Sol의 API와 크레딧 가격을 앞으로 3개월간 20% 넘게 낮춥니다. Codex 토큰형 플랜에서 구매한 크레딧은 더 오래 쓰지만 구독에 포함된 기본 사용량은 그대로입니다.',
+            source: 'OpenAI',
+            url: 'https://x.com/OpenAI/status/2090885187634905500',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'DeepSeek V4 Flash Vision 실험 모델, API로 공개',
+            summary:
+              'DeepSeek가 이미지와 텍스트를 함께 이해하는 V4-Flash-Vision-Exp를 API에 공개했습니다. 기존 V4 Flash의 텍스트 능력을 유지하면서 화면을 보고 작업하는 멀티모달 에이전트 성능을 강화한 실험 모델입니다.',
+            source: 'DeepSeek',
+            url: 'https://x.com/deepseek_ai/status/2090730032574631962',
+          },
+          {
+            headline: 'Apple, Siri·Vision Pro 등 200여 자리 감원 보도',
+            summary:
+              'Bloomberg 보도에 따르면 Apple은 AI와 차세대 기기에 집중하기 위해 Siri·소프트웨어와 Vision Pro 조직에서 200여 자리를 줄입니다. Apple은 일부 팀 재편을 확인했지만 구체적인 감원 수는 밝히지 않았습니다.',
+            source: 'Bloomberg',
+            url: 'https://www.bloomberght.com/apple-siri-ve-vision-pro-ekiplerinde-isten-cikarmaya-gidiyor-3786207',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-21',
     date: '2026.08.21',
     author: 'Goodman SEO',
