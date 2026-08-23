@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-23',
+    date: '2026.08.23',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 23일',
+    excerpt:
+      '정체불명 무료 모델 Ox Alpha, Grok Bot의 3D 프린팅 실험, Claude Academy, 세계 휴머노이드 로봇 대회, OpenAI의 캘리포니아 AI 안전법 강화 요구 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-23.png',
+    imageAlt:
+      '2026년 8월 23일 Ox Alpha 무료 공개, Grok Bot 3D 프린팅 실험, Claude Academy, 세계 휴머노이드 로봇 대회, OpenAI의 AI 안전법 강화 요구 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Ox Alpha', 'Grok Bot', 'Claude Academy', '휴머노이드 로봇', 'OpenAI'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: '정체불명 AI 모델 Ox Alpha, OpenRouter에서 무료 공개',
+            summary:
+              '제작사를 밝히지 않은 Ox Alpha가 OpenRouter에 무료로 등장했습니다. 코딩과 장시간 작업에 맞춘 모델로, 약 100만 토큰의 긴 문맥을 지원해 개발자들의 비교 사용이 이어지고 있습니다.',
+            source: 'OpenRouter',
+            url: 'https://openrouter.ai/stealth/ox-alpha',
+          },
+          {
+            headline: 'Grok Bot 3개, 사진 분석부터 실험·3D 프린팅까지 수행',
+            summary:
+              'MIT의 마르쿠스 뷸러 교수는 Grok Bot 3개가 사진 4장을 분석해 물리 시뮬레이터를 만들고 47번 실험한 뒤 최종 설계를 3D 프린터로 제작하는 전 과정을 수행했다고 공개했습니다.',
+            source: 'Markus Buehler·MIT',
+            url: 'https://x.com/ProfBuehlerMIT/status/2091108225806454802',
+          },
+          {
+            headline: 'Claude Academy 공개…AI 기초부터 Claude Code까지 무료 학습',
+            summary:
+              'Anthropic이 Claude Academy를 공개했습니다. 일반 이용자는 AI 기초와 Claude 사용법을, 개발자는 Claude Code·API·에이전트 관련 강좌와 튜토리얼을 온라인에서 무료로 학습할 수 있습니다.',
+            source: 'Anthropic',
+            url: 'https://claude.com/blog/anthropics-approach-to-teaching-and-learning-ai',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: '휴머노이드 로봇 2천여 대 경쟁…100m 9.39초 기록',
+            summary:
+              '베이징 세계 휴머노이드 로봇 대회에 16개국 2천여 대의 로봇이 참가했습니다. 개막일 100m 달리기에서는 9.39초 기록이 나왔고, 닷새간 달리기·탁구·축구 등 51개 종목이 진행됩니다.',
+            source: 'AP',
+            url: 'https://apnews.com/article/china-humanoid-robot-games-us-86cb8e310843151a77057e4cb764b4e2',
+          },
+          {
+            headline: 'OpenAI, 캘리포니아 AI 안전법 SB 53 강화 요구',
+            summary:
+              'TechCrunch 보도에 따르면 OpenAI는 과거 반대했던 캘리포니아 AI 안전법 SB 53을 더 강화해 달라고 요구했습니다. 다만 회사가 원하는 구체적인 추가 조항은 공개되지 않았습니다.',
+            source: 'TechCrunch',
+            url: 'https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-22',
     date: '2026.08.22',
     author: 'Goodman SEO',
