@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-24',
+    date: '2026.08.24',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 24일',
+    excerpt:
+      '유료 Codex 사용량 전체 초기화 예고, Vercel의 무료 AI-agent 웹 점검, Fable 5 기업 이용률, Hugging Face 매각 검토 보도, Twitch·Amazon AI 학습 소송 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-24.png',
+    imageAlt:
+      '2026년 8월 24일 Codex 사용량 초기화, Vercel Is Agentic, Fable 5 기업 이용률, Hugging Face 매각 검토, Twitch·Amazon AI 학습 소송 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Codex', 'Is Agentic', 'Fable 5', 'Hugging Face', 'Twitch', 'Amazon AI'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: '유료 Codex 사용량 전체 초기화 예고…과다 소모 문제 수정',
+            summary:
+              'OpenAI Codex 책임자는 이미지가 포함된 장기 대화, Computer History, 대화 제목 생성에서 사용량이 예상보다 많이 빠지는 문제를 찾았다고 밝혔습니다. 8월 24일 수정과 함께 모든 유료 구독의 사용량을 전부 초기화할 예정입니다.',
+            source: 'OpenAI Codex',
+            url: 'https://x.com/thsottiaux/status/2091407991736332689',
+          },
+          {
+            headline: 'Vercel, 무료 AI-agent 웹 점검 도구 Is Agentic 공개',
+            summary:
+              'Vercel은 공개 웹사이트가 AI 에이전트에 얼마나 잘 읽히고 이용되는지 점검하는 Is Agentic을 공개했습니다. Ora가 118개 항목을 검사하고 점수와 근거, 개선 권고가 담긴 공개 보고서를 무료로 제공합니다.',
+            source: 'Vercel·Ora',
+            url: 'https://is-agentic.com/about',
+          },
+          {
+            headline: 'Anthropic 최고가 Fable 5, 기업 구매 토큰 비중 6%',
+            summary:
+              'Ramp의 기업 결제 데이터에서 Fable 5는 최근 한 달간 Anthropic 구매 토큰의 6%, 지출액의 11.4%를 차지했습니다. 최고 성능보다 비용에 맞춰 더 저렴한 모델을 고르는 기업이 많다는 분석입니다.',
+            source: 'Ramp',
+            url: 'https://ramp.com/data/ai-index-august-2026',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'Hugging Face, 130억 달러 이상 매각 가능성 검토 보도',
+            summary:
+              'Business Insider는 Hugging Face가 은행과 함께 인수 후보의 관심을 확인하며 최소 130억 달러 규모의 매각 가능성을 살펴보고 있다고 보도했습니다. 아직 합의된 거래는 없습니다.',
+            source: 'Business Insider',
+            url: 'https://www.businessinsider.com/hugging-face-could-be-acquired-13-billion-2026-8',
+          },
+          {
+            headline: 'Twitch·Amazon, 스트리머 콘텐츠 AI 학습 집단소송 제기',
+            summary:
+              '미국 스트리머가 Twitch와 Amazon이 동의나 보상 없이 방송 콘텐츠를 AI 학습에 사용했다며 집단소송을 제기했습니다. 이는 원고 측 주장으로, 법원의 판단은 아직 나오지 않았습니다.',
+            source: 'Engadget',
+            url: 'https://www.engadget.com/2242283/twitch-amazon-hit-with-lawsuit-for-training-ai-with-streamers-content/',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-23',
     date: '2026.08.23',
     author: 'Goodman SEO',
