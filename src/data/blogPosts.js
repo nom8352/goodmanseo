@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-25',
+    date: '2026.08.25',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 25일',
+    excerpt:
+      'Wan 3.0의 30초 AI 영상 정식 출시, Grok Build Browser Use 플러그인, GPT-5.6 Kiro 제공, Nvidia의 Perplexity 투자 협상 보도, XPENG 로봇 투자 유치 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-25.png',
+    imageAlt:
+      '2026년 8월 25일 Wan 3.0, Grok Build Browser Use, GPT-5.6 Kiro, Nvidia의 Perplexity 투자 협상, XPENG 로봇 투자 유치 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Wan 3.0', 'Grok Build', 'Browser Use', 'GPT-5.6', 'Kiro', 'Perplexity', 'XPENG IRON'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Alibaba Wan 3.0 정식 출시…문서로 30초 AI 영상 생성',
+            summary:
+              'Alibaba는 8월 24일 Wan 3.0을 정식 출시했습니다. 텍스트와 이미지뿐 아니라 문서·스프레드시트·슬라이드·웹페이지를 참고해 소리가 포함된 최대 30초 영상을 만들 수 있습니다.',
+            source: 'Alibaba Cloud',
+            url: 'https://modelstudio.console.alibabacloud.com/model-releases/wan3.0-video',
+          },
+          {
+            headline: 'Grok Build 공식 마켓에 Browser Use 플러그인 추가',
+            summary:
+              'xAI의 공식 Grok Build 플러그인 마켓에 Browser Use가 추가됐습니다. Browser Use가 만든 제3자 플러그인으로, 사용 중인 Chrome이나 격리된 클라우드 브라우저를 연결해 웹 탐색·폼 입력·스크린샷·사이트 테스트를 수행합니다.',
+            source: 'xAI Plugin Marketplace',
+            url: 'https://github.com/xai-org/plugin-marketplace',
+          },
+          {
+            headline: 'GPT-5.6 Sol·Terra·Luna, Kiro 코딩 에이전트에 제공',
+            summary:
+              'OpenAI는 GPT-5.6 Sol·Terra·Luna를 Kiro에 제공한다고 발표했습니다. Kiro 이용자는 요구사항과 코드베이스를 바탕으로 소프트웨어 기획·개발·검토·테스트 작업에 세 모델을 사용할 수 있습니다.',
+            source: 'OpenAI',
+            url: 'https://openai.com/index/gpt-5-6-in-kiro',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'Nvidia, Perplexity에 300억 달러 이상 가치로 투자 협상 보도',
+            summary:
+              'Reuters는 Nvidia가 AI 검색기업 Perplexity의 기업가치를 300억 달러 이상으로 평가하는 신규 투자 라운드에 참여하는 방안을 논의 중이라고 보도했습니다. 아직 확정된 거래는 아닙니다.',
+            source: 'Reuters',
+            url: 'https://finance.yahoo.com/technology/ai/articles/nvidia-discusses-perplexity-investment-30-031804276.html',
+          },
+          {
+            headline: 'XPENG 로봇 사업, 9억 달러 투자 유치…가치 63억 달러',
+            summary:
+              'XPENG 로봇 사업이 첫 투자 라운드에서 9억 달러 이상을 유치해 기업가치 63억 달러 이상을 인정받았습니다. 자금은 휴머노이드 로봇 IRON의 연구개발·대량생산·해외 판매 준비에 투입됩니다.',
+            source: 'XPENG',
+            url: 'https://ir.xiaopeng.com/news-releases/news-release-details/xpeng-robotics-business-raises-over-us900-million-post-money',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-24',
     date: '2026.08.24',
     author: 'Goodman SEO',
