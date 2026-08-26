@@ -1,5 +1,24 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-26', date: '2026.08.26', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 26일',
+    excerpt: 'Claude 기억 기능 확대, ChatGPT Business Premium 좌석, OpenWorker 보안 에이전트, OpenAI Jalapeño 칩 성능, Apple M6·M5 Ultra 발표 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-08-26.png',
+    imageAlt: '2026년 8월 26일 Claude 기억 기능, ChatGPT Business Premium, OpenWorker 보안 에이전트, OpenAI Jalapeño, Apple M6와 M5 Ultra 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude', 'ChatGPT Business', 'OpenWorker', 'Jalapeño', 'Apple M6', 'M5 Ultra'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Claude 기억 기능, 채팅·Cowork 어디서나 연결…직접 편집 지원', summary: 'Anthropic은 Claude의 기억 기능을 채팅과 Cowork 전반으로 확대했습니다. 사용자는 Claude가 기억한 내용을 주제별로 확인하고 항목을 직접 수정하거나 삭제할 수 있습니다.', source: 'Anthropic', url: 'https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it' },
+        { headline: 'ChatGPT Business Premium 좌석 출시…연간 월 100달러', summary: 'OpenAI는 ChatGPT Business Premium 좌석을 출시했습니다. 연간 결제 시 1인당 월 100달러로 Standard보다 5배 많은 사용량을 제공하며 5시간 사용 제한이 없습니다.', source: 'OpenAI', url: 'https://x.com/OpenAI/status/2092335305366069305' },
+        { headline: 'Andrew Ng의 OpenWorker, 코드·공급망·클라우드 보안 점검 추가', summary: 'Andrew Ng는 로컬 우선 오픈소스 데스크톱 에이전트 OpenWorker에 보안 에이전트를 추가했습니다. 코드 취약점, 의존성 공급망 위험, 클라우드 설정의 공격 노출을 배포 전에 점검할 수 있습니다.', source: 'Andrew Ng', url: 'https://x.com/AndrewYNg/status/2092315079576555806' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'OpenAI 자체 칩 Jalapeño, 전력당 AI 처리량 최대 1.9배', summary: 'OpenAI는 첫 자체 추론 칩 Jalapeño가 비교 시스템보다 전력당 AI 처리량은 1.5~1.9배 높고 응답 지연은 1.7~3.6배 낮았다고 발표했습니다. 이는 OpenAI 자체 측정 결과로 독립 검증은 남아 있습니다.', source: 'OpenAI', url: 'https://openai.com/index/jalapeno-first-results/' },
+        { headline: 'Apple, M6·M5 Ultra 공개…Mac의 AI 연산 성능 확대', summary: 'Apple은 M6와 M5 Ultra 칩을 공개하며 CPU·GPU와 AI 연산 성능을 높였습니다. 새 칩은 Mac mini와 Mac Studio 등에서 로컬 AI와 전문가용 작업을 지원합니다.', source: 'Apple', url: 'https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-25',
     date: '2026.08.25',
     author: 'Goodman SEO',
