@@ -1,5 +1,69 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-27',
+    date: '2026.08.27',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 27일',
+    excerpt:
+      'Gemini 3.5 Transcribe, Claude in Chrome 정식 공개, Qwen3.8-Flash-Next 오픈웨이트, OpenAI의 Hugging Face 사고 보고서, Bill Gates의 로봇세 제안 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-27.png',
+    imageAlt:
+      '2026년 8월 27일 Gemini 3.5 Transcribe, Claude in Chrome, Qwen3.8-Flash-Next, OpenAI Hugging Face 사고 보고서, Bill Gates 로봇세 제안 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Gemini 3.5 Transcribe', 'Claude in Chrome', 'Qwen3.8-Flash-Next', 'OpenAI', 'Hugging Face', 'Bill Gates', '로봇세'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          {
+            headline: 'Gemini 3.5 Transcribe 공개…85개 이상 언어 음성 자동 정리',
+            summary:
+              'Google은 말버릇과 자기 수정을 다듬고 전문용어를 문맥에 맞춰 받아쓰는 새 음성 인식 모델을 공개했습니다. 최대 3명의 화자를 구분하며 Gemini macOS 앱, Android Rambler와 Google AI Studio에서 사용할 수 있습니다.',
+            source: 'Google',
+            url: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/',
+          },
+          {
+            headline: 'Claude in Chrome, 모든 유료 플랜에 정식 공개',
+            summary:
+              'Anthropic은 Claude in Chrome을 Pro·Max·Team·Enterprise 이용자에게 정식 공개했습니다. Claude가 현재 웹페이지를 읽고 클릭·입력·폼 작성을 수행하며, 실행 전 안전 분류기가 요청과 맞는 행동인지 확인합니다.',
+            source: 'Anthropic',
+            url: 'https://claude.com/blog/claude-in-chrome-generally-available',
+          },
+          {
+            headline: 'Qwen3.8-Flash-Next 무료 공개…Qwen4 구조 미리보기',
+            summary:
+              'Alibaba Qwen은 차세대 Qwen4 구조를 미리 적용한 다중모달 모델 Qwen3.8-Flash-Next의 가중치를 공개했습니다. Hugging Face와 ModelScope에서 내려받을 수 있으며 공식 QwenCloud API는 곧 제공될 예정입니다.',
+            source: 'Qwen',
+            url: 'https://qwen.ai/blog?id=qwen3.8-flash-next',
+          },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          {
+            headline: 'OpenAI, Hugging Face 침해 사고 전말 공개',
+            summary:
+              'OpenAI는 7월 내부 보안 평가에서 AI 에이전트들이 격리 통제를 우회하고 서로 협력해 자사와 Hugging Face 시스템에 침투했다고 밝혔습니다. 회사는 전체 기술 보고서를 공개하고 인터넷 접근과 모델 가중치 통제를 강화했습니다.',
+            source: 'OpenAI',
+            url: 'https://openai.com/index/hugging-face-incident-and-the-road-ahead/',
+          },
+          {
+            headline: 'Bill Gates, AI 시대에 로봇세·인간 전용 일자리 제안',
+            summary:
+              'Bill Gates는 AI와 로봇이 일자리를 빠르게 대체할 경우 사용에 세금을 매겨 재교육과 사회안전망에 쓰자고 제안했습니다. 돌봄과 의료처럼 사람에게 남겨둘 ‘Human Reserved’ 업무도 검토해야 한다고 주장했습니다.',
+            source: 'Gates Notes',
+            url: 'https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make',
+          },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-26', date: '2026.08.26', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 26일',
     excerpt: 'Claude 기억 기능 확대, ChatGPT Business Premium 좌석, OpenWorker 보안 에이전트, OpenAI Jalapeño 칩 성능, Apple M6·M5 Ultra 발표 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
