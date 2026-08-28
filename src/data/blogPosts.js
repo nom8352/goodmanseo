@@ -1,5 +1,39 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-28',
+    date: '2026.08.28',
+    author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 28일',
+    excerpt:
+      'Gemini Omni 1.1 Flash 영상 기능, ChatGPT 임시 채팅 저장, 399달러 Microduck 로봇, Nvidia의 Hugging Face 인수 합의 보도, Anthropic의 장비 제어 표준 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스',
+    kind: 'ai-key-news',
+    image: '/blog/ai-keynews-2026-08-28.png',
+    imageAlt:
+      '2026년 8월 28일 Gemini Omni 1.1 Flash, ChatGPT 임시 채팅, Microduck 로봇, Nvidia와 Hugging Face, Anthropic 장비 제어 표준 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF',
+    imageLayout: 'portrait',
+    keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Gemini Omni', 'ChatGPT', 'Microduck', 'Nvidia', 'Hugging Face', 'Anthropic', 'Model Hardware Standard'],
+    content: [
+      {
+        type: 'newsSection',
+        title: '오늘의 AI 트렌드',
+        items: [
+          { headline: 'Gemini Omni 1.1 Flash 공개…AI 영상 연장·4K 출력 지원', summary: 'Google은 영상을 최대 40초까지 연장하고 시작·끝 장면 지정, 360p 초안, 4K 확대를 지원하는 새 모델을 공개했습니다. Google AI Plus·Pro·Ultra 구독자는 Flow와 Gemini 앱에서 사용할 수 있습니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/' },
+          { headline: 'ChatGPT 임시 채팅, 기억 적용하고 일반 대화로 저장 가능', summary: 'OpenAI는 임시 채팅을 시작할 때 기존 기억·맞춤 지침·플러그인을 적용하는 선택지를 추가했습니다. 대화가 유용해지면 기록에 저장해 일반 채팅으로 전환할 수도 있습니다.', source: 'OpenAI', url: 'https://help.openai.com/en/articles/6825453-chatgpt-release-notes' },
+          { headline: '오픈소스 로봇 Microduck, 한국에서 399달러 예약 판매', summary: 'Hugging Face의 Pollen Robotics가 걷고 물건을 집으며 새 동작을 학습할 수 있는 25cm 로봇을 공개했습니다. 한국을 포함한 출시 지역에서 399달러에 예약 판매하며 크리스마스 전 배송을 목표로 합니다.', source: 'Pollen Robotics', url: 'https://pollen-robotics.com/microduck/' },
+        ],
+      },
+      {
+        type: 'newsSection',
+        title: '오늘의 주요 AI 뉴스',
+        items: [
+          { headline: 'Nvidia, Hugging Face 129억 달러 인수 합의 보도', summary: 'The Information은 Nvidia가 오픈소스 AI 플랫폼 Hugging Face를 129억 달러에 인수하기로 합의했다고 보도했습니다. Nvidia와 Hugging Face는 아직 거래를 공식 발표하지 않았습니다.', source: 'TechCrunch·The Information 보도', url: 'https://techcrunch.com/2026/08/26/nvidia-closes-in-on-hugging-face-acquisition/' },
+          { headline: 'Anthropic, AI가 연구·제조 장비 다루는 공통 표준 공개', summary: 'Anthropic은 AI 에이전트가 현미경·액체 처리기·로봇팔 등을 안전하게 제어하도록 연결하는 Model Hardware Standard 연구판을 공개했습니다. 첫 과학 연구소와 첨단 제조사에서 시험을 시작합니다.', source: 'Anthropic', url: 'https://www.anthropic.com/news/model-hardware-standard-research-preview' },
+        ],
+      },
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-27',
     date: '2026.08.27',
     author: 'Goodman SEO',

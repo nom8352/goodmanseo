@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-08-27
+Last updated: 2026-08-28
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-08-28 daily AI key news: prepared a five-item edition after reviewing 251 fresh AI News Radar candidates and 79 posts from four authenticated Apify/X searches. The edition leads with Gemini Omni 1.1 Flash video controls, savable personalized ChatGPT temporary chats, and the $399 Microduck robot, followed by the reported $12.9 billion Nvidia-Hugging Face agreement and Anthropic's Model Hardware Standard research preview. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-08-27 daily AI key news: prepared a five-item edition after reviewing 268 fresh AI News Radar candidates and 79 posts from four authenticated Apify/X searches. The edition leads with Gemini 3.5 Transcribe, Claude in Chrome general availability, and the open-weight Qwen3.8-Flash-Next release, followed by OpenAI's full Hugging Face incident report and Bill Gates's robot-tax and Human Reserved proposal. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-08-26 daily AI key news: prepared five verified items using AI News Radar and four Apify/X searches, with public and local-only share images and platform copy.
 - 2026-08-25 daily AI key news: published in commit `45a3b67` with exactly five verified items after using freshly generated AI News Radar data and four authenticated Apify/X searches as mandatory primary discovery sources. The edition leads with Alibaba Wan 3.0's official 30-second video rollout, the Browser Use integration added to Grok Build's official plugin marketplace, and GPT-5.6 availability in Kiro, followed by reported Nvidia investment talks with Perplexity and XPENG robotics' $900 million funding round. Public verification confirmed the `1080x1920` image, five source links, one download button, BlogPosting metadata, sitemap entry, and no desktop or 390px horizontal overflow. The `1080x1350` Instagram image remains under `_workspace` only, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting; `#모두의창업` remains the sixth Naver hashtag.
