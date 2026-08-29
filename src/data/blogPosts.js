@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-29', date: '2026.08.29', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 29일', excerpt: 'Grok Bot의 인터넷 구매, GLM-5.3 오픈웨이트, Midjourney V8.2 편집 모델, Claude의 자동 안전 연구, Anthropic의 미 국방부 상대 승소 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-08-29.png', imageAlt: '2026년 8월 29일 Grok Bot 인터넷 구매, GLM-5.3 오픈웨이트, Midjourney V8.2 편집 모델, Claude 자동 안전 연구, Anthropic 법원 승소 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok Bot', 'GLM-5.3', 'Midjourney V8.2', 'Claude', 'Anthropic', 'AI 안전'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Grok Bot, 인터넷에서 상품 찾아 구매까지 수행', summary: 'xAI의 Grok Bot이 결제 서비스 Link와 연결해 사용자를 대신해 온라인 구매를 완료하는 기능을 추가했습니다. 원하는 상품을 지시하면 탐색부터 구매 절차까지 Bot에 맡길 수 있습니다.', source: 'Grok Bot', url: 'https://x.com/bot/status/2093419921007108385' },
+        { headline: 'GLM-5.3 오픈웨이트 공개…직접 내려받아 실행 가능', summary: 'Z.ai는 8월 28일 GLM-5.3 모델 가중치를 공개했습니다. 코딩과 사이버 방어 작업에 맞춘 모델로, Hugging Face에서 내려받아 직접 실행하고 맞춤 조정할 수 있습니다.', source: 'Z.ai', url: 'https://x.com/Zai_org/status/2093354097122455713' },
+        { headline: 'Midjourney V8.2 편집 모델, 모든 사용자에게 테스트 공개', summary: 'Midjourney는 지시문으로 이미지 수정, 최대 4개 참고 이미지 결합, 부분 수정과 캔버스 확장을 지원하는 V8.2 편집 모델을 공개했습니다. 웹 편집기와 Discord의 `--edit` 명령에서 사용할 수 있습니다.', source: 'Midjourney', url: 'https://updates.midjourney.com/edit-model-for-v8/' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Claude, AI 안전 개선법 직접 연구…인간 연구자보다 높은 성과', summary: 'Anthropic은 Claude가 10종의 기만·아첨·탈옥 문제를 줄이는 학습법을 자율적으로 찾아냈다고 발표했습니다. 제한된 실험에서 28명의 인간 안전 연구자보다 높은 결과를 냈지만, 알려진 문제와 벤치마크에 한정된 연구입니다.', source: 'Anthropic', url: 'https://www.anthropic.com/research/automated-researchers-mitigate-alignment-failures' },
+        { headline: '미 법원, 국방부의 Anthropic 블랙리스트는 위법 판결', summary: '미 연방법원은 국방부가 Anthropic을 공급망 위험 기업으로 지정한 조치가 위법한 보복이었다고 판단했습니다. 정부가 항소할 가능성이 있어 관련 법적 다툼은 이어질 수 있습니다.', source: 'AP', url: 'https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-28',
     date: '2026.08.28',
     author: 'Goodman SEO',

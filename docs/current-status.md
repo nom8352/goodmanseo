@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-08-28
+Last updated: 2026-08-29
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-08-29 daily AI key news: prepared a five-item edition after reviewing 211 fresh AI News Radar candidates and 120 posts from six authenticated Apify/X searches. The edition leads with Grok Bot internet purchases, GLM-5.3 open weights, and Midjourney V8.2 image editing, followed by Anthropic's automated alignment research and the U.S. court ruling against the Pentagon's Anthropic blacklist. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-08-28 daily AI key news: prepared a five-item edition after reviewing 251 fresh AI News Radar candidates and 79 posts from four authenticated Apify/X searches. The edition leads with Gemini Omni 1.1 Flash video controls, savable personalized ChatGPT temporary chats, and the $399 Microduck robot, followed by the reported $12.9 billion Nvidia-Hugging Face agreement and Anthropic's Model Hardware Standard research preview. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-08-27 daily AI key news: prepared a five-item edition after reviewing 268 fresh AI News Radar candidates and 79 posts from four authenticated Apify/X searches. The edition leads with Gemini 3.5 Transcribe, Claude in Chrome general availability, and the open-weight Qwen3.8-Flash-Next release, followed by OpenAI's full Hugging Face incident report and Bill Gates's robot-tax and Human Reserved proposal. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-08-26 daily AI key news: prepared five verified items using AI News Radar and four Apify/X searches, with public and local-only share images and platform copy.
