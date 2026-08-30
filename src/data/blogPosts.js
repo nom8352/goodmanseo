@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-30', date: '2026.08.30', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 30일', excerpt: 'Claude Code 주간 한도 변화, Cursor의 OpenAI 모델 제공 종료, 실시간 AI 방송 Infinite Slop, Sony·Warner의 Anthropic 소송, MIT의 AI 집단 실험 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-08-30.png', imageAlt: '2026년 8월 30일 Claude Code 한도, Cursor OpenAI 모델, Infinite Slop, Sony와 Warner의 Anthropic 소송, MIT AI 집단 실험 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Code', 'Cursor', 'OpenAI', 'Infinite Slop', 'Anthropic', 'Sony Music', 'Warner Music', 'AI 에이전트'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Claude Code 주간 한도, 9월 14일부터 표준보다 25% 확대', summary: 'Anthropic은 Pro·Max·Team·좌석형 Enterprise의 표준 주간 한도를 영구적으로 25% 늘립니다. 다만 현재 적용 중인 임시 50% 확대와 비교하면 실제 사용량은 약 17% 줄어듭니다.', source: 'Claude Developers', url: 'https://x.com/ClaudeDevs/status/2093742321473065266' },
+        { headline: 'OpenAI, Cursor 모델 제공 11월 12일 종료 예정', summary: 'OpenAI는 SpaceX의 Cursor 인수 이후 계약을 종료하고 향후 모델을 제공하지 않겠다고 발표했습니다. 기존 모델 제공은 11월 12일 종료 예정이며, 개발자는 개인 API 키와 다른 도구로 OpenAI 모델을 계속 사용할 수 있습니다.', source: 'OpenAI', url: 'https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/' },
+        { headline: '채팅대로 다음 장면 만드는 무한 AI 방송 Infinite Slop 공개', summary: 'Pieter Levels는 시청자가 채팅에 적은 내용을 다음 영상으로 즉시 이어 만드는 AI 라이브 방송을 공개했습니다. 특수 조정된 MiniMax H3가 시청 속도보다 빠르게 영상을 생성해 방송이 끊이지 않도록 합니다.', source: 'Pieter Levels·fal', url: 'https://levels.io/i-built-infinite-slop' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Sony Music·Warner, Claude 학습 저작권 침해 소송 제기', summary: 'Sony Music Publishing과 Warner Chappell 등은 Anthropic이 저작권 음악을 불법으로 내려받아 Claude 학습에 사용했다며 미국 법원에 소송을 제기했습니다. 이는 원고 측 주장으로 법원의 판단은 아직 나오지 않았습니다.', source: 'TechCrunch', url: 'https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/' },
+        { headline: 'MIT 실험, AI들이 대화 없이 역할 나누고 기술 축적', summary: 'MIT 연구진은 수백 개 AI 에이전트가 직접 대화하지 않아도 탐색·건설·유지 역할로 나뉘고 서로 만든 기술을 이어 쓰는 현상을 확인했습니다. 에이전트를 제거한 뒤에도 시뮬레이션 속 시설이 작동했지만 실제 세계가 아닌 연구 환경의 결과입니다.', source: 'MIT·arXiv', url: 'https://arxiv.org/abs/2608.26081' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-29', date: '2026.08.29', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 29일', excerpt: 'Grok Bot의 인터넷 구매, GLM-5.3 오픈웨이트, Midjourney V8.2 편집 모델, Claude의 자동 안전 연구, Anthropic의 미 국방부 상대 승소 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-08-29.png', imageAlt: '2026년 8월 29일 Grok Bot 인터넷 구매, GLM-5.3 오픈웨이트, Midjourney V8.2 편집 모델, Claude 자동 안전 연구, Anthropic 법원 승소 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok Bot', 'GLM-5.3', 'Midjourney V8.2', 'Claude', 'Anthropic', 'AI 안전'],
