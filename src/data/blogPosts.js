@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-08-31', date: '2026.08.31', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 8월 31일', excerpt: 'Claude 세션 탈취 대응, 주문형 AI 강의 영상 Academa, Google WikiSkill 연구, Uber의 AI 코딩 규모, Apple CEO 교체 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-08-31.png', imageAlt: '2026년 8월 31일 Claude 세션 보안, Academa AI 강의, Google WikiSkill, Uber AI 코딩, Apple CEO 교체 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude', 'Academa', 'WikiSkill', 'Uber AI', 'Apple CEO', 'John Ternus'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Claude 세션 탈취 악성코드 발견…로그아웃·결제수단 삭제·환불', summary: 'Anthropic은 PC 악성코드가 Claude 로그인 세션을 훔쳐 사용량을 소진한 사례를 조사 중입니다. 피해 계정을 로그아웃하고 저장된 결제수단을 제거하며 확인된 부정 결제를 환불하고 있습니다.', source: 'BleepingComputer·Anthropic 안내', url: 'https://www.bleepingcomputer.com/news/artificial-intelligence/anthropic-warns-infostealer-malware-is-hijacking-claude-sessions-to-drain-usage/' },
+        { headline: 'Academa 공개…질문하면 약 25분 뒤 AI 강의 영상 생성', summary: 'Academa는 기술·과학 주제를 입력하면 설명과 시각 자료가 포함된 장시간 강의 영상을 생성하는 서비스를 공개했습니다. 영상은 코드 기반으로 제작돼 오류 신고 후 내용을 수정할 수 있지만 AI가 만든 설명은 별도 확인이 필요합니다.', source: 'Academa', url: 'https://academa.ai/' },
+        { headline: 'Google WikiSkill 연구…AI가 실수와 성공을 위키·기술로 축적', summary: 'Google 연구진은 작업 기록을 장기 위키에 정리하고 이를 다음 실행용 Skill 개선에 쓰는 WikiSkill을 공개했습니다. 실험에서 작은 모델이 Skill 없이 실행한 더 큰 모델보다 나은 결과를 내기도 했지만 아직 연구 단계입니다.', source: 'Google Research·arXiv', url: 'https://arxiv.org/abs/2608.27454' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Uber 코드 PR 70% 이상에 AI 에이전트 참여', summary: 'Uber는 코드 변경 요청의 70% 이상이 로컬 또는 클라우드 AI 에이전트에 의해 만들어진다고 공개했습니다. 주간 요청은 2월 이후 9.4배 늘었지만 모델 선택과 작업 구조 최적화로 전체 AI 비용은 4월 이후 대체로 안정됐습니다.', source: 'Uber Engineering', url: 'https://www.uber.com/us/en/blog/efficient-software-factory/' },
+        { headline: 'Apple, 9월 1일부터 John Ternus CEO 체제 시작', summary: 'Apple은 9월 1일부터 하드웨어 엔지니어링 책임자 John Ternus가 Tim Cook의 뒤를 이어 CEO를 맡습니다. Cook은 이사회 Executive Chairman으로 남으며, 새 경영진은 Apple의 AI 경쟁력 강화 과제를 이어받습니다.', source: 'Apple', url: 'https://www.apple.com/newsroom/2026/04/tim-cook-to-become-apple-executive-chairman-john-ternus-to-become-apple-ceo/' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-30', date: '2026.08.30', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 30일', excerpt: 'Claude Code 주간 한도 변화, Cursor의 OpenAI 모델 제공 종료, 실시간 AI 방송 Infinite Slop, Sony·Warner의 Anthropic 소송, MIT의 AI 집단 실험 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-08-30.png', imageAlt: '2026년 8월 30일 Claude Code 한도, Cursor OpenAI 모델, Infinite Slop, Sony와 Warner의 Anthropic 소송, MIT AI 집단 실험 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Code', 'Cursor', 'OpenAI', 'Infinite Slop', 'Anthropic', 'Sony Music', 'Warner Music', 'AI 에이전트'],

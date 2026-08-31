@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-08-30
+Last updated: 2026-08-31
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-08-31 daily AI key news: prepared a five-item edition after reviewing 91 fresh AI News Radar candidates and 79 posts from four authenticated Apify/X searches. The edition leads with Claude session-theft remediation, Academa's generated lecture videos, and Google's WikiSkill research, followed by Uber's agentic software-factory scale and Apple's September 1 CEO transition. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-08-30 daily AI key news: prepared a five-item edition after reviewing 111 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with the permanent Claude Code weekly-limit change, OpenAI ending model access through Cursor, and the Infinite Slop interactive AI stream, followed by the Sony/Warner lawsuit against Anthropic and MIT's SwarmWorld agent-society experiment. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-08-29 daily AI key news: prepared a five-item edition after reviewing 211 fresh AI News Radar candidates and 120 posts from six authenticated Apify/X searches. The edition leads with Grok Bot internet purchases, GLM-5.3 open weights, and Midjourney V8.2 image editing, followed by Anthropic's automated alignment research and the U.S. court ruling against the Pentagon's Anthropic blacklist. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-08-28 daily AI key news: prepared a five-item edition after reviewing 251 fresh AI News Radar candidates and 79 posts from four authenticated Apify/X searches. The edition leads with Gemini Omni 1.1 Flash video controls, savable personalized ChatGPT temporary chats, and the $399 Microduck robot, followed by the reported $12.9 billion Nvidia-Hugging Face agreement and Anthropic's Model Hardware Standard research preview. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated, and dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
