@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-01', date: '2026.09.01', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 1일', excerpt: 'Codex·ChatGPT Work 사용량 초기화, DeepSeek V4 Flash Vision, Runway Solaris, ChatGPT 광고 매출, EU의 ChatGPT 규제 지정 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-01.png', imageAlt: '2026년 9월 1일 Codex 사용량 초기화, DeepSeek V4 Flash Vision, Runway Solaris, ChatGPT 광고 매출, EU의 ChatGPT 규제 지정 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Codex', 'ChatGPT Work', 'DeepSeek V4', 'Runway Solaris', 'ChatGPT Ads', '유럽연합 DSA'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Codex·ChatGPT Work 유료 이용자, 사용량 전체 초기화', summary: 'OpenAI의 Codex·ChatGPT Work 책임자는 이용자 2,500만 명 돌파를 기념해 모든 유료 구독의 사용량을 초기화했다고 밝혔습니다. 실제 계정 반영 여부는 사용량 화면에서 확인할 수 있습니다.', source: 'Tibo Sottiaux·OpenAI', url: 'https://x.com/thsottiaux/status/2094251180121854309' },
+        { headline: 'DeepSeek 첫 멀티모달 V4 Flash Vision, 오픈웨이트 공개', summary: 'DeepSeek는 이미지와 텍스트를 함께 처리하는 실험 모델 DeepSeek-V4-Flash-Vision-Exp를 MIT 라이선스로 공개했습니다. Hugging Face에서 가중치를 내려받을 수 있지만 305B 규모라 강한 하드웨어가 필요합니다.', source: 'DeepSeek', url: 'https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp' },
+        { headline: 'Runway Solaris 공개…코드 없이 실시간 앱·웹 화면 생성', summary: 'Runway는 화면 자체를 실시간으로 생성하고 입력에 반응하는 Interface World Model Solaris를 공개했습니다. 아직 연구 단계로, 앱·웹 인터페이스와 변화하는 화면에 적응하는 AI 에이전트 연구를 목표로 합니다.', source: 'Runway', url: 'https://runway.com/news/research/introducing-solaris' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'ChatGPT 광고, 출시 200일 안 돼 연환산 매출 10억 달러', summary: 'OpenAI는 ChatGPT Ads가 출시 200일 안에 연환산 매출 10억 달러에 도달했다고 발표했습니다. 광고는 40개국 이상으로 확대됐으며 답변과 분리되고 광고주에게 비공개 대화가 전달되지 않는다고 설명했습니다.', source: 'OpenAI', url: 'https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/' },
+        { headline: 'EU, ChatGPT를 초대형 온라인 검색엔진으로 지정', summary: 'EU 집행위원회는 ChatGPT가 월 4,500만 명 이상 이용 기준을 충족해 DSA상 초대형 온라인 검색엔진에 해당한다고 지정했습니다. OpenAI는 4개월 안에 불법 콘텐츠·미성년자·선거 등 시스템 위험에 대한 추가 의무를 이행해야 합니다.', source: 'European Commission', url: 'https://digital-strategy.ec.europa.eu/en/news/commission-designates-chatgpt-reddit-roblox-under-digital-services-act' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-08-31', date: '2026.08.31', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 8월 31일', excerpt: 'Claude 세션 탈취 대응, 주문형 AI 강의 영상 Academa, Google WikiSkill 연구, Uber의 AI 코딩 규모, Apple CEO 교체 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-08-31.png', imageAlt: '2026년 8월 31일 Claude 세션 보안, Academa AI 강의, Google WikiSkill, Uber AI 코딩, Apple CEO 교체 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude', 'Academa', 'WikiSkill', 'Uber AI', 'Apple CEO', 'John Ternus'],
