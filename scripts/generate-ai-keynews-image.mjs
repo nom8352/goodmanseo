@@ -126,6 +126,9 @@ const html = `<!doctype html>
         padding: 0 4px 20px;
         border-bottom: 3px solid #0b6678;
       }
+      header, footer {
+        flex: 0 0 auto;
+      }
       .masthead h1 {
         margin: 0;
         color: #17191b;
@@ -263,11 +266,11 @@ const html = `<!doctype html>
         --item-padding-y: 8px;
       }
       body.format-instagram {
-        --section-title-size: 32px;
-        --headline-size: 42px;
-        --summary-size: 27px;
-        --source-size: 16px;
-        --item-padding-y: 7px;
+        --section-title-size: 30px;
+        --headline-size: 38px;
+        --summary-size: 24px;
+        --source-size: 15px;
+        --item-padding-y: 5px;
       }
       body.format-instagram .sheet {
         padding: 43px 58px 34px;

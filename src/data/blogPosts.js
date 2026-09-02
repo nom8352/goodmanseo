@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-02', date: '2026.09.02', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 2일', excerpt: 'Claude Fable 5.1·Mythos 5.1, Google Pics, Meta Muse Voice, OpenAI Astra, Apple과 OpenAI의 영업비밀 소송 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-02.png', imageAlt: '2026년 9월 2일 Claude Fable 5.1, Google Pics, Meta Muse Voice, OpenAI Astra, Apple과 OpenAI의 영업비밀 소송 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Fable 5.1', 'Claude Mythos 5.1', 'Google Pics', 'Meta Muse Voice', 'OpenAI Astra', 'Apple OpenAI 소송'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Claude Fable 5.1 공개…Pro 이상, 비용 최대 45% 절감', summary: 'Anthropic은 Fable 5.1을 Pro·Max·Team·Enterprise와 API에 공개했습니다. 캐시 읽기 가격을 75% 낮춰 일반 작업 약 25%, 에이전트 작업 최대 약 45% 비용 절감을 예상합니다.', source: 'Anthropic', url: 'https://www.anthropic.com/claude-fable-and-mythos-5-1' },
+        { headline: 'Google Pics 출시…이미지 글자·물체만 골라 수정', summary: 'Google은 Google Pics를 AI Pro·Ultra와 대부분의 Workspace 비즈니스 고객에게 순차 출시합니다. pics.new와 Docs·Slides에서 물체 분리, 이미지 속 글자 수정·번역, 공동 편집을 지원합니다.', source: 'Google', url: 'https://blog.google/products-and-platforms/products/workspace/google-pics/' },
+        { headline: 'Meta Muse Voice 공개…20명 넘는 화자 실시간 구분', summary: 'Meta는 25개 검증 언어와 20명 이상 화자 구분을 지원하는 Muse Voice Transcribe를 공개했습니다. Meta AI for Mac, Muse Code, Meta Model API에서 사용할 수 있습니다.', source: 'Meta AI Research', url: 'https://research.meta.ai/blog/introducing-muse-voice-transcribe' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'OpenAI Astra, 최고 사이버 능력 판정…고급 기능 제한', summary: 'OpenAI는 Astra가 자사 최초로 ‘Critical’ 사이버보안 능력 기준에 도달했다고 밝혔습니다. 곧 공개하지만 고급 보안 기능은 소수 시험자와 방어 목적 파트너에게 먼저 제한합니다.', source: 'OpenAI', url: 'https://openai.com/index/path-to-astra/' },
+        { headline: 'Apple, “OpenAI서 기밀 회로도 사용” 새 증거 주장', summary: 'Apple은 전 직원이 OpenAI 근무 중 자사 회로도를 열람하고 독점 정보를 AI 에이전트 학습에 썼다고 법원에 주장했습니다. OpenAI는 절도 의혹을 부인했으며 판단은 아직 나오지 않았습니다.', source: 'Reuters 보도', url: 'https://au.marketscreener.com/news/apple-alleges-openai-employee-accessed-circuit-plans-after-joining-startup-ce7858dddb89f02d' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-01', date: '2026.09.01', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 1일', excerpt: 'Codex·ChatGPT Work 사용량 초기화, DeepSeek V4 Flash Vision, Runway Solaris, ChatGPT 광고 매출, EU의 ChatGPT 규제 지정 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-01.png', imageAlt: '2026년 9월 1일 Codex 사용량 초기화, DeepSeek V4 Flash Vision, Runway Solaris, ChatGPT 광고 매출, EU의 ChatGPT 규제 지정 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Codex', 'ChatGPT Work', 'DeepSeek V4', 'Runway Solaris', 'ChatGPT Ads', '유럽연합 DSA'],
