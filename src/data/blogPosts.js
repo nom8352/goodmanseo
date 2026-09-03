@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-03', date: '2026.09.03', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 3일', excerpt: 'Gemini 3.8 Flash, Meta Muse Spark 1.3, Amazon 사칭 메시지 확인 AI, 미 법무부의 OpenAI 저작권 소송 의견, Tumbler Ridge 관련 추가 소송 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-03.png', imageAlt: '2026년 9월 3일 Gemini 3.8 Flash, Meta Muse Spark 1.3, Amazon 사칭 메시지 확인 AI, OpenAI 저작권 소송, Tumbler Ridge 관련 소송 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Gemini 3.8 Flash', 'Muse Spark 1.3', 'Alexa for Shopping', 'OpenAI 저작권', 'AI 공정이용', 'Tumbler Ridge'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Gemini 3.8 Flash 공개…Pro·Ultra와 무료 API 제공', summary: 'Google은 Gemini 3.8 Flash를 AI Pro·Ultra 이용자에게 Gemini 앱·검색 AI Mode·Google Sheets에서 공개했습니다. API는 무료 등급을 제공하며 유료 가격은 올해 말까지 입력 100만 토큰당 0.75달러, 출력 3.75달러입니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/' },
+        { headline: 'Meta Muse Spark 1.3 공개…Muse Code·API서 바로 사용', summary: 'Meta는 장시간 코딩과 에이전트 작업을 개선한 Muse Spark 1.3을 Muse Code와 Meta Model API에 출시했습니다. 기존 추론 모드는 바로 쓸 수 있고 최대 추론 모드는 안전성 시험 뒤 추가될 예정입니다.', source: 'Meta AI Research', url: 'https://research.meta.ai/blog/introducing-muse-spark-1-3' },
+        { headline: 'Amazon, 가짜 이메일·문자 판별하는 AI 기능 출시', summary: '미국 Amazon 고객은 Alexa for Shopping에 받은 이메일·문자·전화가 실제 Amazon 발신인지 물어 몇 초 안에 확인할 수 있습니다. 다른 지역 이용자도 의심 메시지를 verify@amazon.com으로 보내 확인할 수 있습니다.', source: 'Amazon', url: 'https://www.aboutamazon.com/news/retail/how-to-verify-amazon-messages-alexa-for-shopping' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: '미 법무부, NYT 소송서 OpenAI의 AI 학습 공정이용 주장 지지', summary: '미 법무부는 OpenAI와 뉴욕타임스의 저작권 소송에서 온라인 저작물로 AI를 학습하는 행위는 일반적으로 공정이용에 해당한다는 의견서를 냈습니다. 법원에 구속력은 없으며 최종 판단은 아직입니다.', source: 'AP', url: 'https://apnews.com/article/justice-department-new-york-times-openai-copyright-dbb22e8e02c660ee5a8644915dec39a4' },
+        { headline: 'Tumbler Ridge 총격 관련, OpenAI 상대 소송 30건 추가', summary: '학교 총격 당시 학생·교직원 등이 OpenAI와 Sam Altman을 상대로 30건의 추가 소송을 제기했습니다. 원고들은 ChatGPT가 범행을 부추겼다고 주장하지만 이는 소송 당사자 주장이고 법원 판단은 나오지 않았습니다.', source: 'TechCrunch 보도', url: 'https://techcrunch.com/2026/09/02/openai-faces-30-more-lawsuits-tied-to-tumbler-ridge-shooting/' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-02', date: '2026.09.02', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 2일', excerpt: 'Claude Fable 5.1·Mythos 5.1, Google Pics, Meta Muse Voice, OpenAI Astra, Apple과 OpenAI의 영업비밀 소송 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-02.png', imageAlt: '2026년 9월 2일 Claude Fable 5.1, Google Pics, Meta Muse Voice, OpenAI Astra, Apple과 OpenAI의 영업비밀 소송 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Fable 5.1', 'Claude Mythos 5.1', 'Google Pics', 'Meta Muse Voice', 'OpenAI Astra', 'Apple OpenAI 소송'],
