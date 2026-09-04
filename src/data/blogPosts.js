@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-04', date: '2026.09.04', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 4일', excerpt: 'GPT-6 Astra, HTC VIVE Eagle AI 안경, Google WeatherNext 3, Nvidia의 Hugging Face 인수, G20 AI 정책 원칙 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-04.png', imageAlt: '2026년 9월 4일 GPT-6 Astra, HTC VIVE Eagle, Google WeatherNext 3, Nvidia와 Hugging Face, G20 AI 정책 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-6 Astra', 'GPT-6 Pro', 'VIVE Eagle', 'WeatherNext 3', 'Nvidia', 'Hugging Face', 'G20 AI'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'GPT-6 Astra 공개…ChatGPT에는 GPT-6 Pro로 순차 제공', summary: 'OpenAI는 GPT-6 Astra를 신뢰 프로그램 기업에 먼저 공개했습니다. ChatGPT에서는 Pro 100·200달러, Business·Enterprise 플랜에 GPT-6 Pro로 순차 제공되며 API도 며칠 안에 열릴 예정입니다.', source: 'OpenAI', url: 'https://developers.openai.com/api/docs/models/gpt-6-astra' },
+        { headline: 'Gemini·GPT 고르는 VIVE Eagle AI 안경, 호주 출시', summary: 'HTC는 Gemini와 OpenAI GPT 중 원하는 AI를 고를 수 있는 VIVE Eagle을 호주에 출시합니다. 3K 영상, 실시간 번역과 AI 요약을 지원하며 호주 가격은 799호주달러, 9월 14일 판매 예정입니다.', source: 'HTC VIVE·Pickr', url: 'https://www.vive.com/au/solution/vive-ai/' },
+        { headline: 'Google 날씨 AI 교체…검색·Gemini·지도에 매시간 새 예보', summary: 'Google은 실시간 위성 자료로 매시간 예보를 갱신하는 WeatherNext 3를 검색·Gemini·지도에 적용합니다. 이전보다 해상도가 5배 높고 비와 눈 예측도 개선됐지만 긴급 상황은 공식 기상 경보를 함께 확인해야 합니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Nvidia, Hugging Face 129억3,030만 달러 인수 합의', summary: 'Nvidia는 오픈소스 AI 플랫폼 Hugging Face를 129억3,030만 달러에 인수하기로 합의했습니다. Hugging Face는 개방형 플랫폼을 유지하며 Nvidia 장비 사용을 의무화하지 않겠다고 밝혔습니다.', source: 'Nvidia', url: 'https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/' },
+        { headline: 'G20, AI 규제는 기존 법의 빈틈 중심으로 만들자는 원칙 합의', summary: 'G20 혁신장관들은 새 규제가 기존 법으로 다루지 못하는 문제에 집중해야 한다는 비구속적 Carolina Principles에 합의했습니다. 기초 연구·상용화·신뢰 가능한 기술 도입 확대도 공동 방향으로 제시했습니다.', source: 'The White House', url: 'https://www.whitehouse.gov/releases/2026/09/g20-innovation-ministerial-concludes-with-consensus-statement/' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-03', date: '2026.09.03', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 3일', excerpt: 'Gemini 3.8 Flash, Meta Muse Spark 1.3, Amazon 사칭 메시지 확인 AI, 미 법무부의 OpenAI 저작권 소송 의견, Tumbler Ridge 관련 추가 소송 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-03.png', imageAlt: '2026년 9월 3일 Gemini 3.8 Flash, Meta Muse Spark 1.3, Amazon 사칭 메시지 확인 AI, OpenAI 저작권 소송, Tumbler Ridge 관련 소송 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Gemini 3.8 Flash', 'Muse Spark 1.3', 'Alexa for Shopping', 'OpenAI 저작권', 'AI 공정이용', 'Tumbler Ridge'],

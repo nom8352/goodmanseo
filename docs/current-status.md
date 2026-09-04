@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-09-03
+Last updated: 2026-09-04
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-09-04 daily AI key news: published after reviewing 282 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with GPT-6 Astra, HTC VIVE Eagle's Australian availability, and Google WeatherNext 3, followed by Nvidia's agreed $12.9303 billion Hugging Face acquisition and the G20 Carolina Principles for emerging technology. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated and validated; dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-09-03 daily AI key news: published after reviewing 201 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with Gemini 3.8 Flash, Meta Muse Spark 1.3, and Amazon's AI-powered message verification, followed by the U.S. Justice Department's fair-use position in the New York Times case and 30 additional Tumbler Ridge-related lawsuits against OpenAI. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated and validated; dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-09-02 daily AI key news: published after reviewing 251 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with Claude Fable 5.1, Google Pics, and Meta Muse Voice Transcribe, followed by OpenAI Astra's Critical cybersecurity designation and Apple's new court allegations in its trade-secrets case against OpenAI. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated and validated; dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-09-01 daily AI key news: published after reviewing 209 fresh AI News Radar candidates and 79 posts from four authenticated Apify/X searches. The edition leads with a full paid Codex and ChatGPT Work usage reset, DeepSeek's first V4 multimodal open-weight model, and Runway Solaris, followed by ChatGPT Ads reaching a $1 billion annualized revenue run rate and the EU designation of ChatGPT as a VLOSE. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated and validated; dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
