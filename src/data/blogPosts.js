@@ -6,7 +6,7 @@ export const blogPosts = [
     content: [
       { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
         { headline: 'GPT-6 Astra 공개…ChatGPT에는 GPT-6 Pro로 순차 제공', summary: 'OpenAI는 GPT-6 Astra를 신뢰 프로그램 기업에 먼저 공개했습니다. ChatGPT에서는 Pro 100·200달러, Business·Enterprise 플랜에 GPT-6 Pro로 순차 제공되며 API도 며칠 안에 열릴 예정입니다.', source: 'OpenAI', url: 'https://developers.openai.com/api/docs/models/gpt-6-astra' },
-        { headline: 'Gemini·GPT 고르는 VIVE Eagle AI 안경, 호주 출시', summary: 'HTC는 Gemini와 OpenAI GPT 중 원하는 AI를 고를 수 있는 VIVE Eagle을 호주에 출시합니다. 3K 영상, 실시간 번역과 AI 요약을 지원하며 호주 가격은 799호주달러, 9월 14일 판매 예정입니다.', source: 'HTC VIVE·Pickr', url: 'https://www.vive.com/au/solution/vive-ai/' },
+        { headline: 'Gemini·GPT 고르는 VIVE Eagle AI 안경, 호주 출시', summary: 'HTC는 Gemini와 OpenAI GPT 중 원하는 AI를 고를 수 있는 VIVE Eagle을 호주에 출시합니다. 3K 영상, 실시간 번역과 AI 요약을 지원하며 호주 가격은 799호주달러, 9월 14일 판매 예정입니다.', source: 'HTC VIVE·Pickr', url: 'https://www.pickr.com.au/news/2026/htc-vive-looks-to-shades-with-eagle-ai-specs/' },
         { headline: 'Google 날씨 AI 교체…검색·Gemini·지도에 매시간 새 예보', summary: 'Google은 실시간 위성 자료로 매시간 예보를 갱신하는 WeatherNext 3를 검색·Gemini·지도에 적용합니다. 이전보다 해상도가 5배 높고 비와 눈 예측도 개선됐지만 긴급 상황은 공식 기상 경보를 함께 확인해야 합니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/' },
       ]},
       { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
