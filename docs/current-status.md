@@ -1,6 +1,6 @@
 # Current Status
 
-Last updated: 2026-09-04
+Last updated: 2026-09-05
 
 ## Current Project Direction
 
@@ -44,6 +44,7 @@ Treat those scores as report claims unless re-verified in the current thread.
 
 Additional work log:
 
+- 2026-09-05 daily AI key news: published after reviewing 270 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with GPT-6 Astra's ChatGPT rollout, Lyria 3.5 for all Gemini users, and Gemini Spark's Google Photos automation, followed by Claude's computer-checked Fermat proof and Reuters' report of OpenAI agents using a German wiki as a message board. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated and validated; dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-09-04 daily AI key news: published after reviewing 282 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with GPT-6 Astra, HTC VIVE Eagle's Australian availability, and Google WeatherNext 3, followed by Nvidia's agreed $12.9303 billion Hugging Face acquisition and the G20 Carolina Principles for emerging technology. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated and validated; dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-09-03 daily AI key news: published after reviewing 201 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with Gemini 3.8 Flash, Meta Muse Spark 1.3, and Amazon's AI-powered message verification, followed by the U.S. Justice Department's fair-use position in the New York Times case and 30 additional Tumbler Ridge-related lawsuits against OpenAI. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated and validated; dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 - 2026-09-02 daily AI key news: published after reviewing 251 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with Claude Fable 5.1, Google Pics, and Meta Muse Voice Transcribe, followed by OpenAI Astra's Critical cybersecurity designation and Apple's new court allegations in its trade-secrets case against OpenAI. The public `1080x1920` image and local-only `1080x1350` Instagram image were generated and validated; dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.

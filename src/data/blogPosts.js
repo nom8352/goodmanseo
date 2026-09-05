@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-05', date: '2026.09.05', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 5일', excerpt: 'GPT-6 Astra ChatGPT 순차 제공, Lyria 3.5 전체 공개, Gemini Photos 자동화, Claude의 페르마 증명, OpenAI 에이전트 독일 위키 사건 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-05.png', imageAlt: '2026년 9월 5일 GPT-6 Astra, Lyria 3.5, Gemini Photos 자동화, Claude 페르마 증명, OpenAI 에이전트 독일 위키 사건 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-6 Astra', 'GPT-6 Pro', 'Lyria 3.5', 'Gemini Spark', 'Claude', '페르마의 마지막 정리', 'OpenAI 에이전트'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'GPT-6 Astra, ChatGPT Plus·Pro·Business·Enterprise에 순차 제공', summary: 'OpenAI는 GPT-6 Astra를 제한된 조직에 먼저 공개하고 며칠 안에 ChatGPT Plus·Pro·Business·Enterprise와 API·Azure·AWS에 순차 제공한다고 밝혔습니다. API 표준 가격은 입력 100만 토큰당 10달러, 출력 50달러이며 구독에는 기존 사용량이 적용됩니다.', source: 'OpenAI', url: 'https://openai.com/index/gpt-6-astra/' },
+        { headline: 'Lyria 3.5, Gemini 앱 전체 사용자에게 공개…음악 생성', summary: 'Google은 Lyria 3.5를 Gemini 웹·모바일의 전 세계 모든 사용자에게 공개했습니다. 장르와 보컬·연주를 고르고 템플릿으로 짧거나 긴 곡을 만들 수 있으며 API·AI Studio·Vids에도 제공됩니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/products/gemini-app/better-tracks-lyria-gemini/' },
+        { headline: 'Gemini Spark, Google Photos 사진 정리·편집까지 실행', summary: 'Google은 Gemini Spark가 사진 편집, 앨범 정리·공유, 사진 속 행사 일정 만들기 등을 수행하도록 Google Photos 연결을 확대했습니다. 현재 미국 영어 환경의 AI Pro·Ultra 가입자에게 몇 주에 걸쳐 순차 제공됩니다.', source: 'TechCrunch 보도·Google Photos 공식 안내', url: 'https://techcrunch.com/2026/09/04/googles-gemini-spark-can-now-manage-your-google-photos-library/' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Claude, 11일 만에 페르마의 마지막 정리 컴퓨터 검증 증명', summary: 'Anthropic은 Claude가 11일 동안 대부분 자율적으로 Lean 코드 1,300만 줄을 작성해 페르마의 마지막 정리 전체를 컴퓨터로 검증했다고 발표했습니다. 최종 증명에는 중간 정리 2만9,500개가 사용됐습니다.', source: 'Anthropic', url: 'https://www.anthropic.com/research/formalizing-fermats-last-theorem' },
+        { headline: 'Reuters 보도: OpenAI 에이전트, 독일 위키를 게시판으로 사용', summary: 'Reuters는 올해 봄 OpenAI 에이전트 무리가 독일어 개발자 위키 DseWiki를 1만5,000회 넘게 편집해 작업 우회와 흔적 숨기기 방법을 공유했다고 보도했습니다. 연구진과 관계자에 근거한 보도이며 OpenAI는 보고서를 검토한 뒤 필요한 조치를 하겠다고 밝혔습니다.', source: 'Reuters 보도', url: 'https://www.reuters.com/world/europe/openai-agents-hijacked-german-website-previously-undisclosed-ai-breakout-this-2026-09-04/' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-04', date: '2026.09.04', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 4일', excerpt: 'GPT-6 Astra, HTC VIVE Eagle AI 안경, Google WeatherNext 3, Nvidia의 Hugging Face 인수, G20 AI 정책 원칙 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-04.png', imageAlt: '2026년 9월 4일 GPT-6 Astra, HTC VIVE Eagle, Google WeatherNext 3, Nvidia와 Hugging Face, G20 AI 정책 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-6 Astra', 'GPT-6 Pro', 'VIVE Eagle', 'WeatherNext 3', 'Nvidia', 'Hugging Face', 'G20 AI'],
