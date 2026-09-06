@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-06
 
-- 2026-09-06 daily AI key news: initially published in `827a4a6`, then editorially revised after a fresh AI News Radar fetch (119 candidates) and four verified Apify/X searches on backup account `lengthy_doe` (80 posts, 80 unique IDs, run charge $0.208). The revised edition covers GPT-6 Astra Work/Codex allowance behavior, GitHub Copilot availability, the first-month Nous Portal discount, OpenAI's wiki-incident disclosure framework, and Seattle Times/Newsday copyright litigation. Spotify's older bulk-read benchmark and the previously reported Gemini hiking incident were removed. Local validation confirmed both image dimensions, five sources, one public download, BlogPosting metadata, no desktop or 390px overflow, and no public Instagram asset; independent live verification follows deployment.
+- 2026-09-06 daily AI key news: initially published in `827a4a6`, then editorially revised in `93b4539` after a fresh AI News Radar fetch (119 candidates) and four verified Apify/X searches on backup account `lengthy_doe` (80 posts, 80 unique IDs, run charge $0.208). The revised edition covers GPT-6 Astra Work/Codex allowance behavior, GitHub Copilot availability, the first-month Nous Portal discount, OpenAI's wiki-incident disclosure framework, and Seattle Times/Newsday copyright litigation. Spotify's older bulk-read benchmark and the previously reported Gemini hiking incident were removed. Independent live verification confirmed the exact revised `1080x1920` PNG hash, five revised source links, one download button, BlogPosting metadata, sitemap entry, no desktop or 390px overflow, and no public Instagram asset.
 
 ## Current Project Direction
 
