@@ -2,7 +2,7 @@
 
 Last updated: 2026-09-06
 
-- 2026-09-06 daily AI key news: published in commit `827a4a6` after reviewing 131 fresh AI News Radar candidates and 80 posts from four authenticated Apify/X searches. The edition leads with GPT-6 Astra usage warnings, Spotify's 90% Claude Code token reduction, and a Gemini hiking-planning failure, followed by OpenAI's wiki-incident disclosure framework and Seattle Times/Newsday copyright litigation against OpenAI and Microsoft. Public verification confirmed the live page, exact `1080x1920` PNG hash and dimensions, five source links, one download button, BlogPosting metadata, sitemap entry, no desktop or 390px overflow, and the local-only `1080x1350` Instagram image remaining non-public. Dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
+- 2026-09-06 daily AI key news: initially published in `827a4a6`, then editorially revised after a fresh AI News Radar fetch (119 candidates) and four verified Apify/X searches on backup account `lengthy_doe` (80 posts, 80 unique IDs, run charge $0.208). The revised edition covers GPT-6 Astra Work/Codex allowance behavior, GitHub Copilot availability, the first-month Nous Portal discount, OpenAI's wiki-incident disclosure framework, and Seattle Times/Newsday copyright litigation. Spotify's older bulk-read benchmark and the previously reported Gemini hiking incident were removed. Local validation confirmed both image dimensions, five sources, one public download, BlogPosting metadata, no desktop or 390px overflow, and no public Instagram asset; independent live verification follows deployment.
 
 ## Current Project Direction
 
