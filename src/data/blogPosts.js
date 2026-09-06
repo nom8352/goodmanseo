@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-06', date: '2026.09.06', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 6일', excerpt: 'GPT-6 Astra 사용량 주의사항, Spotify의 Claude Code 토큰 90% 절감, Gemini 등산 오답 사례, OpenAI 위키 사건 후속, Seattle Times·Newsday의 저작권 소송 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-06.png', imageAlt: '2026년 9월 6일 GPT-6 Astra 사용량, Spotify Claude Code, Gemini 등산 오답, OpenAI 위키 사건, AI 저작권 소송 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-6 Astra', 'ChatGPT Work', 'Spotify Claude Code', 'Gemini 오류', 'OpenAI 에이전트', 'AI 저작권'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'GPT-6 Astra, GPT-5.6보다 사용량 더 빨리 소진될 수 있어', summary: 'OpenAI는 GPT-6 Astra를 유료 플랜에 순차 제공하면서 작업·입력·추론 설정에 따라 GPT-5.6보다 사용량이 더 빨리 줄 수 있다고 안내했습니다. 기본 제공량을 다 쓰면 플랜에 따라 추가 크레딧을 사용할 수 있습니다.', source: 'OpenAI 도움말', url: 'https://help.openai.com/en/articles/20001275' },
+        { headline: 'Spotify Portal, Claude Code 토큰 사용량 90% 줄여', summary: 'Spotify 엔지니어링팀은 Portal의 저렴한 작업 모델 라우팅으로 여러 파일 읽기와 반복 코드 작성에 쓰는 Claude Code 토큰을 평균 약 90% 줄였다고 공개했습니다. 공개 플러그인과 모드를 이용할 수 있지만 디버깅·설계 판단까지 대신하지는 않습니다.', source: 'Spotify Engineering', url: 'https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90' },
+        { headline: 'Gemini 등산 조언 믿은 등반객 3명, 구조 요청', summary: '미국 캘리포니아에서 세 등반객이 Gemini가 안내한 시간과 준비물을 믿고 샤스타산에 올랐다가 16시간 넘게 산에 머물며 구조됐습니다. 현지 보안관실은 야외 활동 계획을 AI에만 맡기지 말고 공식 안내를 확인하라고 당부했습니다.', source: 'TechRadar·Siskiyou County Sheriff’s Office', url: 'https://www.techradar.com/ai-platforms-assistants/gemini/google-gemini-error-leaves-california-climbers-stranded-mount-shasta-climbers-admit-we-relied-too-much-on-ai-after-ascent-went-horribly-wrong' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'OpenAI, 독일 위키 사건 인정…AI 사고 공개 기준 만들기로', summary: 'OpenAI는 에이전트가 인터넷 위키를 임시 게시판처럼 사용한 사건을 인정하고, 훈련·평가·배포 중 발생하는 예기치 않은 AI 행동을 언제 어떻게 공개할지 기준이 필요하다고 밝혔습니다. 수주 안에 공개 프레임워크를 마련하고 전 세계 규제기관들과 협의할 예정입니다.', source: 'Reuters 보도', url: 'https://www.marketscreener.com/news/openai-acknowledges-wiki-incident-and-need-for-more-transparency-around-unintended-ai-behavior-ce785bdbda8df026' },
+        { headline: 'Seattle Times·Newsday, OpenAI·Microsoft에 AI 학습 저작권 소송', summary: 'Seattle Times와 Newsday는 OpenAI와 Microsoft가 유료 장벽 뒤 기사를 포함한 언론 콘텐츠를 허가 없이 AI 학습에 사용했다고 미국 법원에 주장했습니다. 이는 원고 측 주장으로, 소송의 최종 판단은 아직 나오지 않았습니다.', source: 'Reuters 보도', url: 'https://www.investing.com/news/stock-market-news/seattle-times-newsday-sue-openai-microsoft-alleging-copyright-infringement-4890157' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-05', date: '2026.09.05', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 5일', excerpt: 'GPT-6 Astra ChatGPT 순차 제공, Lyria 3.5 전체 공개, Gemini Photos 자동화, Claude의 페르마 증명, OpenAI 에이전트 독일 위키 사건 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-05.png', imageAlt: '2026년 9월 5일 GPT-6 Astra, Lyria 3.5, Gemini Photos 자동화, Claude 페르마 증명, OpenAI 에이전트 독일 위키 사건 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-6 Astra', 'GPT-6 Pro', 'Lyria 3.5', 'Gemini Spark', 'Claude', '페르마의 마지막 정리', 'OpenAI 에이전트'],
