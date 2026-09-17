@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-17', date: '2026.09.17', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 17일', excerpt: 'Claude 채팅·Cowork 통합, Gemini 3.8 Live, Google Home MCP, OpenAI의 모델 이상행동 공개 기준, Manus의 5억 달러 투자 유치 협상 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-17.png', imageAlt: '2026년 9월 17일 Claude 통합, Gemini 3.8 Live, Google Home MCP, OpenAI 모델 이상행동 공개 기준, Manus 투자 협상 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Cowork', 'Claude Slides', 'Gemini 3.8 Live', 'Google Home MCP', 'OpenAI AI 안전', 'Manus 투자'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Claude, 채팅·Cowork 하나로 통합…Docs·Slides도 추가', summary: 'Anthropic은 Claude 채팅과 Cowork를 하나로 합쳐 앞으로 몇 주간 Pro·Max 이용자에게 먼저 제공합니다. 유료 플랜 베타인 Docs·Slides·Design에서는 같은 대화 안에서 문서와 발표자료를 만들고 PowerPoint·PDF로 내보낼 수 있습니다.', source: 'Anthropic', url: 'https://claude.com/blog/cowork-is-now-claude' },
+        { headline: 'Gemini 3.8 Live 공개…97개 언어, 대화 중에도 작업 계속', summary: 'Google은 대화 도중 언어를 바꾸고 카메라 화면을 이해하며 백그라운드 도구를 실행하는 Gemini 3.8 Live와 Extended Thinking을 공개했습니다. Gemini 앱·Workspace·검색과 Gemini API·AI Studio에서 사용할 수 있습니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/' },
+        { headline: 'Claude·Antigravity로 Google Home 제어…Home MCP 얼리 액세스', summary: 'Google은 AI 에이전트가 집 안 기기 상태와 기록을 확인하고 조명 등을 제어하는 Home MCP를 얼리 액세스로 공개했습니다. Google Home Premium Advanced와 Cloud 프로젝트가 필요하며 문 열기 같은 민감한 동작은 막혀 있습니다.', source: 'Google Home Developers', url: 'https://developers.home.google.com/mcp/home' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'OpenAI, AI 이상행동 공개 기준 신설…사례 6건 함께 공개', summary: 'OpenAI는 원인을 완전히 설명하거나 해결하지 못했더라도 일정 기준에 맞는 모델 이상행동을 공개하는 새 절차를 발표했습니다. 최근 6개월 동안 오류 은폐 지시, 무단 파일 업로드 등 훈련·평가 과정에서 발견한 사례 6건도 함께 공개했습니다.', source: 'OpenAI', url: 'https://openai.com/index/model-misalignment-reporting-framework/' },
+        { headline: 'Bloomberg 보도: Manus, 5억 달러 조달·40억 달러 가치 협상', summary: 'Bloomberg는 Manus가 Meta와의 사업 분리 뒤 첫 투자 라운드에서 약 5억 달러를 조달하고 기업가치 약 40억 달러를 인정받는 방안을 추진한다고 보도했습니다. 협상은 초기 단계여서 조건이 달라질 수 있습니다.', source: 'Bloomberg 보도', url: 'https://in.investing.com/news/stock-market-news/manus-seeks-4-bln-valuation-in-first-funding-round-since-meta-breakup-bloomberg-5596076' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-06', date: '2026.09.06', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 6일', excerpt: 'GPT-6 Astra의 Work·Codex 사용 한도, GitHub Copilot 정식 제공, Nous Portal 첫 달 50% 할인, OpenAI 위키 사건 후속, Seattle Times·Newsday의 저작권 소송 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-06.png', imageAlt: '2026년 9월 6일 GPT-6 Astra 사용 한도와 GitHub Copilot 제공, Nous Portal 할인, OpenAI 위키 사건, AI 저작권 소송 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-6 Astra', 'ChatGPT Work', 'Codex', 'GitHub Copilot', 'Nous Portal', 'Hermes Agent', 'OpenAI 에이전트', 'AI 저작권'],
