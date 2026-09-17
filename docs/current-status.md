@@ -1,6 +1,8 @@
 # Current Status
 
-Last updated: 2026-09-06
+Last updated: 2026-09-17
+
+- 2026-09-17 daily AI key news: published in `9c110e9` after reviewing 277 freshly generated AI News Radar candidates and 88 unique posts from five authenticated Apify/X searches on backup account `lengthy_doe`; primary `forest_nocturne` was skipped because its USD 5 monthly maximum was already exhausted. The edition covers unified Claude chat/Cowork with Docs and Slides, Gemini 3.8 Live, Google Home MCP, OpenAI's model-misalignment reporting framework and six disclosures, and Bloomberg's report of Manus seeking USD 500 million at a USD 4 billion valuation. Independent public validation confirmed the exact `1080x1920` image hash, local-only `1080x1350` Instagram image, five source links, one download button, BlogPosting metadata, sitemap, desktop and 390px layout, no image clipping, and no public Instagram PNG. Dated X, Instagram, Threads, and Naver Blog copy was prepared without external posting.
 
 - 2026-09-06 daily AI key news: initially published in `827a4a6`, then editorially revised in `93b4539` after a fresh AI News Radar fetch (119 candidates) and four verified Apify/X searches on backup account `lengthy_doe` (80 posts, 80 unique IDs, run charge $0.208). The revised edition covers GPT-6 Astra Work/Codex allowance behavior, GitHub Copilot availability, the first-month Nous Portal discount, OpenAI's wiki-incident disclosure framework, and Seattle Times/Newsday copyright litigation. Spotify's older bulk-read benchmark and the previously reported Gemini hiking incident were removed. Independent live verification confirmed the exact revised `1080x1920` PNG hash, five revised source links, one download button, BlogPosting metadata, sitemap entry, no desktop or 390px overflow, and no public Instagram asset.
 
