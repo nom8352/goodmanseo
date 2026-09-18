@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-18', date: '2026.09.18', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 18일', excerpt: 'Claude Projects 개편, Meta Muse for Mac, Qwen3.8-Omni-Flash, OpenAI Astra for Law, 뉴욕타임스 AI 저작권 소송 문건 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-18.png', imageAlt: '2026년 9월 18일 Claude Projects, Meta Muse for Mac, Qwen3.8-Omni-Flash, OpenAI Astra for Law, 뉴욕타임스 AI 저작권 소송 문건 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Projects', 'Meta Muse', 'Qwen3.8-Omni-Flash', 'Astra for Law', 'OpenAI', 'Microsoft', '뉴욕타임스 AI 소송'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Claude Projects, 한 대화에서 여러 작업을 나눠 끝까지 진행', summary: 'Anthropic은 9월 17일 Claude Code용 새 Projects 베타를 일부 Pro·Max 이용자에게 공개했습니다. 목표만 말하면 Claude가 여러 클라우드 작업을 나눠 진행하고, PC를 닫은 뒤에도 계속합니다.', source: 'Anthropic', url: 'https://claude.com/blog/projects-redesigned' },
+        { headline: 'Meta ‘Muse for Mac’ 출시…파일·메시지·메모 정리 맡긴다', summary: 'Meta는 9월 17일 Mac용 개인 에이전트 Muse를 출시했습니다. 이용자가 허용한 범위에서 다운로드 폴더 정리, 파일 찾기, 메시지·메모 요약을 수행하며 민감한 작업 전에는 다시 확인합니다.', source: 'Meta 공식 X', url: 'https://x.com/AIatMeta/status/2100714755568644409' },
+        { headline: 'Qwen3.8-Omni-Flash 공개…음성·영상도 한 번에 이해', summary: 'Alibaba Qwen은 9월 17일 텍스트·이미지·음성·영상을 함께 처리하는 모델을 공개했습니다. 최대 100만 토큰 문맥과 웹 검색·도구 호출을 지원하며 Model Studio API에서 이용할 수 있습니다.', source: 'Qwen·Alibaba Cloud', url: 'https://qwen.ai/blog?id=qwen3.8-omni-flash' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'OpenAI, 법률 특화 GPT-6 Astra 공개…2억3천만 URL 검색', summary: 'OpenAI는 미국 판례·법령 등 2억3천만 개가 넘는 URL을 매일 갱신해 검색하는 Astra for Law를 공개했습니다. 미국의 선정된 로펌에 먼저 제공하며 API는 곧 지원할 예정입니다.', source: 'OpenAI', url: 'https://openai.com/index/astra-for-law/' },
+        { headline: 'TechCrunch 보도: AI 학습을 ‘역사상 최대 노동 절도’라 부른 MS 내부 문건 공개', summary: '뉴욕타임스가 OpenAI·Microsoft를 상대로 낸 저작권 소송에서 새로 공개된 문건을 TechCrunch가 보도했습니다. 다만 핵심 인용은 원고 측 서면에 담긴 주장이고 원본 증거는 아직 봉인돼 있어 최종 판단은 아닙니다.', source: 'TechCrunch 보도', url: 'https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-17', date: '2026.09.17', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 17일', excerpt: 'Claude 채팅·Cowork 통합, Gemini 3.8 Live, Google Home MCP, OpenAI의 모델 이상행동 공개 기준, Manus의 5억 달러 투자 유치 협상 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-17.png', imageAlt: '2026년 9월 17일 Claude 통합, Gemini 3.8 Live, Google Home MCP, OpenAI 모델 이상행동 공개 기준, Manus 투자 협상 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Cowork', 'Claude Slides', 'Gemini 3.8 Live', 'Google Home MCP', 'OpenAI AI 안전', 'Manus 투자'],
