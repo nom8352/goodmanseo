@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-19', date: '2026.09.19', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 19일', excerpt: 'Grok Bot 음성메모, ZCode의 Git 기록 업로드 논란, Neuralink 생각-음성 변환, Claude의 AI 연구 자동화, Anthropic·Accenture의 AI 평가 투자 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-19.png', imageAlt: '2026년 9월 19일 Grok Bot 음성메모, ZCode Git 기록 업로드 논란, Neuralink 생각-음성 변환, Claude 연구 자동화, Anthropic·Accenture AI 평가 투자 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok Bot', 'ZCode', 'Neuralink VOICE', 'Claude', 'Anthropic', 'Accenture', 'AI 트렌드'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Grok Bot, 답변을 음성메모로 보내는 기능 추가', summary: 'Grok Bot은 9월 18일 작업 결과를 글뿐 아니라 음성메모로 보내는 기능을 공개했습니다. 공식 게시물은 하루 안에 조회수 60만 회를 넘기며 관심을 모았습니다.', source: 'Grok Bot 공식 X', url: 'https://x.com/bot/status/2101014478255247544' },
+        { headline: 'ZCode, 로그인하면 Git 전체 기록 업로드한다는 조사 공개', summary: '9월 18일 공개된 리버스 엔지니어링 보고서는 Z.ai의 코딩 앱 ZCode가 로그인 상태에서 소스와 .git 기록을 암호화해 Aliyun OSS로 보낸다고 밝혔습니다. 앱 설정을 꺼도 패키징과 업로드가 계속됐다는 조사 결과입니다.', source: 'Tokenstead 조사', url: 'https://tokenstead.ai/guides/zcode-silent-git-history-upload' },
+        { headline: 'Neuralink, 생각만으로 본인 목소리 내는 시험 영상 공개', summary: 'Neuralink는 9월 18일 VOICE 임상시험 참가자가 생각한 단어를 자신의 자연스러운 목소리로 출력하는 영상을 공개했습니다. 음성 생성에는 Grok Voice가 사용됐으며 장치는 아직 임상시험 단계입니다.', source: 'Neuralink 공식 X', url: 'https://x.com/neuralink/status/2100993363403063404' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Anthropic “Claude가 AI 연구개발 업무 26% 주도”', summary: 'Anthropic은 8월 기준 Claude가 자사 AI 연구개발 업무의 26%를 사람의 감독 아래 처음부터 끝까지 이끈다고 밝혔습니다. AI가 협업하거나 주도하는 비중은 90%를 넘지만 완전 자율 단계는 아니라고 설명했습니다.', source: 'Anthropic', url: 'https://www.anthropic.com/institute/measuring-pace-of-ai-development' },
+        { headline: 'Anthropic·Accenture, AI 독립 평가에 각각 10억 달러 투자', summary: '두 회사는 9월 18일 향후 5년간 각각 최소 10억 달러를 투입해 AI 모델 평가와 레드팀 역량을 구축한다고 발표했습니다. Accenture 평가 인력이 Anthropic 내부에서 직원에 준하는 접근 권한을 갖는 방식도 추진합니다.', source: 'Anthropic', url: 'https://www.anthropic.com/news/accenture-embedded-evaluation' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-18', date: '2026.09.18', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 18일', excerpt: 'Claude Projects 개편, Meta Muse for Mac, Qwen3.8-Omni-Flash, OpenAI Astra for Law, 뉴욕타임스 AI 저작권 소송 문건 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-18.png', imageAlt: '2026년 9월 18일 Claude Projects, Meta Muse for Mac, Qwen3.8-Omni-Flash, OpenAI Astra for Law, 뉴욕타임스 AI 저작권 소송 문건 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Claude Projects', 'Meta Muse', 'Qwen3.8-Omni-Flash', 'Astra for Law', 'OpenAI', 'Microsoft', '뉴욕타임스 AI 소송'],
