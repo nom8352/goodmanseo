@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-21', date: '2026.09.21', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 21일', excerpt: 'Qwen-Image-2.1 오픈웨이트, ChatGPT 워드 무료 플랜 제공, Step 5 Preview 공개, ChatGPT 광고 쿠키 독립 조사, Anthropic IPO 일정 보도 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-21.png', imageAlt: '2026년 9월 21일 Qwen-Image-2.1, ChatGPT 워드, Step 5 Preview, ChatGPT 광고 쿠키 조사, Anthropic IPO 일정 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Qwen-Image-2.1', 'ChatGPT Word', 'Step 5 Preview', 'ChatGPT 광고', 'Anthropic IPO', 'AI 트렌드'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Qwen-Image-2.1 공개…오픈웨이트·투명 배경 지원', summary: 'Alibaba Qwen은 9월 20일 생성과 편집을 하나로 묶은 7B 이미지 모델을 공개했습니다. 최대 10장 참고 이미지와 투명 배경, 부분 편집을 지원하며 가중치도 공개됐습니다.', source: 'Qwen', url: 'https://qwen.ai/blog?id=qwen-image-2.1' },
+        { headline: 'ChatGPT, 워드 안으로…무료 플랜도 사용 가능', summary: 'OpenAI는 Word 사이드바에서 초안·요약·수정·서식 작업을 하는 공식 추가 기능을 공개했습니다. Free를 포함한 모든 ChatGPT 플랜에서 사용할 수 있고 각 플랜의 사용량 한도가 적용됩니다.', source: 'OpenAI 도움말', url: 'https://help.openai.com/en/articles/20001526-chatgpt-for-word' },
+        { headline: 'Step 5 Preview 공개…10월 15일 오픈웨이트', summary: 'StepFun은 9월 19일 코딩·전문업무용 플래그십 모델을 제품과 API에 공개했습니다. 100만 토큰 문맥과 이미지 입력을 지원하고, 모델 가중치는 10월 15일 공개할 예정입니다.', source: 'StepFun', url: 'https://www.stepfun.com/step-5-preview' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: '독립 조사 “ChatGPT 광고 쿠키, 계정과 외부 활동 연결 가능”', summary: '9월 20일 공개된 보안 연구는 OpenAI의 __obi 쿠키가 광고주 사이트의 방문·구매 정보와 ChatGPT 계정을 연결할 수 있다고 주장했습니다. OpenAI는 문의를 내부 검토하겠다고 답했지만 구체적 설명은 하지 않았습니다.', source: 'Buchodi 독립 조사', url: 'https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector' },
+        { headline: 'WSJ 보도: Anthropic IPO, 10월에서 11월로 늦춰', summary: 'Wall Street Journal은 Anthropic이 투자자들이 예상한 10월 대신 11월 상장을 추진한다고 보도했습니다. 3분기 실적을 제시하기 위한 일정 조정으로, 최종 일정은 아직 확정되지 않았습니다.', source: 'Wall Street Journal 보도', url: 'https://www.wsj.com/tech/ai/anthropic-shifts-planned-ipo-to-november-8874dffc' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-20', date: '2026.09.20', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 20일', excerpt: 'Qwen3.8 실시간 통역, AgentCloak 무료 개인정보 보호, Gemini 보안 시험 이탈, 미국 AI Force, OpenAI 현금 소진 전망 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-20.png', imageAlt: '2026년 9월 20일 Qwen3.8 실시간 통역, AgentCloak 개인정보 보호, Gemini 보안 시험 이탈, 미국 AI Force, OpenAI 현금 소진 전망 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Qwen3.8-LiveTranslate', 'AgentCloak', 'Gemini', 'AI Force', 'OpenAI', 'AI 트렌드'],
