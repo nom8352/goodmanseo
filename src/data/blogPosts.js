@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-20', date: '2026.09.20', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 20일', excerpt: 'Qwen3.8 실시간 통역, AgentCloak 무료 개인정보 보호, Gemini 보안 시험 이탈, 미국 AI Force, OpenAI 현금 소진 전망 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-20.png', imageAlt: '2026년 9월 20일 Qwen3.8 실시간 통역, AgentCloak 개인정보 보호, Gemini 보안 시험 이탈, 미국 AI Force, OpenAI 현금 소진 전망 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Qwen3.8-LiveTranslate', 'AgentCloak', 'Gemini', 'AI Force', 'OpenAI', 'AI 트렌드'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Qwen3.8 LiveTranslate 공개…60개 언어, 통역 지연 2.3초', summary: 'Qwen은 9월 18일 실시간 통역 모델을 공개했습니다. 60개 언어의 음성을 받아 번역하고, 29개 언어는 음성으로 답하며 화자 구분·목소리 유지·원문과 번역 동시 표시를 지원합니다.', source: 'Qwen', url: 'https://qwen.ai/research/qwen3.8-livetranslate' },
+        { headline: 'AgentCloak 무료 공개…AI에 보내기 전 개인정보 바꿔준다', summary: 'AgentCloak은 9월 18일 무료 브라우저 확장과 데스크톱 앱을 공개했습니다. 이름·주소·계좌번호 등을 기기 안에서 가짜 값으로 바꿔 ChatGPT·Claude·Gemini 등에 보내고, 답변에는 원래 값을 복원합니다.', source: 'AgentCloak', url: 'https://www.businesswire.com/news/home/20260918884045/en/' },
+        { headline: 'Google 확인: Gemini, 보안 시험 중 실제 기업 3곳에 접속', summary: 'Google은 5월 외부 보안 평가에서 Gemini가 실제 기업 3곳의 시스템에 접속한 사실을 9월 19일 확인했습니다. 시험 환경에 인터넷이 잘못 열려 있었고, 모델은 범위 밖임을 인식한 뒤 활동을 멈췄습니다.', source: 'TechCrunch 보도', url: 'https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: '트럼프, 미국 ‘AI Force’ 창설·AI 총괄 임명 예고', summary: '도널드 트럼프 미국 대통령은 9월 19일 Space Force를 본뜬 AI Force를 만들고 AI 총괄 책임자를 곧 임명하겠다고 밝혔습니다. 조직의 역할과 예산, 소속은 아직 공개되지 않았습니다.', source: 'Axios 보도', url: 'https://www.axios.com/2026/09/19/trump-ai-czar-space-force-safety' },
+        { headline: 'FT 보도: OpenAI, 2030년까지 현금 2,780억 달러 소진 전망', summary: 'Financial Times는 OpenAI가 2026년부터 2030년까지 누적 2,780억 달러의 마이너스 잉여현금흐름을 예상한다고 보도했습니다. 7월 회사 자료를 인용한 전망으로, 같은 기간 컴퓨팅 지출은 8,560억 달러로 제시됐습니다.', source: 'Reuters·Financial Times 보도', url: 'https://www.investing.com/news/economy-news/openai-expects-to-burn-through-almost-280-billion-by-2030-ft-reports-4907970' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-19', date: '2026.09.19', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 19일', excerpt: 'Grok Bot 음성메모, ZCode의 Git 기록 업로드 논란, Neuralink 생각-음성 변환, Claude의 AI 연구 자동화, Anthropic·Accenture의 AI 평가 투자 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-19.png', imageAlt: '2026년 9월 19일 Grok Bot 음성메모, ZCode Git 기록 업로드 논란, Neuralink 생각-음성 변환, Claude 연구 자동화, Anthropic·Accenture AI 평가 투자 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok Bot', 'ZCode', 'Neuralink VOICE', 'Claude', 'Anthropic', 'Accenture', 'AI 트렌드'],
