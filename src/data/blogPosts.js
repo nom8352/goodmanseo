@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-22', date: '2026.09.22', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 22일', excerpt: 'Grok 4.7의 GitHub Copilot 제공, 샤오미 MiMo-V2.6 오픈웨이트, Kimi Code Desktop, Amazon의 Meta Muse 쇼핑 차단, OpenAI 수학 자문단 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-22.png', imageAlt: '2026년 9월 22일 Grok 4.7 GitHub Copilot, MiMo-V2.6, Kimi Code Desktop, Amazon과 Meta Muse, OpenAI 수학 자문단 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok 4.7', 'GitHub Copilot', 'MiMo-V2.6', 'Kimi Code Desktop', 'Meta Muse', 'OpenAI', 'AI 트렌드'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Grok 4.7, GitHub Copilot에 추가…Pro 이상 순차 제공', summary: 'GitHub는 9월 21일부터 Grok 4.7을 Copilot Pro·Pro+·Max·Business·Enterprise에 순차 제공한다고 밝혔습니다. VS Code와 Copilot CLI, 주요 IDE의 모델 선택기에서 고를 수 있으며 사용량 기반 요금이 적용됩니다.', source: 'GitHub', url: 'https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/' },
+        { headline: '샤오미 MiMo-V2.6 오픈웨이트 공개…1M 토큰·멀티모달', summary: '샤오미는 텍스트·이미지·영상·음성을 처리하는 Pro와 Flash 모델을 MIT 라이선스로 공개했습니다. 최대 100만 토큰 문맥을 지원하며 Hugging Face에서 가중치를 내려받을 수 있습니다.', source: 'Xiaomi MiMo', url: 'https://huggingface.co/collections/XiaomiMiMo/mimo-v26' },
+        { headline: 'Kimi Code Desktop 출시…Mac·Windows에서 여러 작업 병렬 실행', summary: 'Kimi는 9월 21일 데스크톱 코딩 에이전트를 macOS와 Windows에 공개했습니다. 한 화면에서 여러 에이전트 작업을 동시에 실행하고 장시간 작업 진행 상황을 이어서 확인할 수 있습니다.', source: 'Kimi Developers 공식 X', url: 'https://x.com/KimiDevs/status/2102009959051632935' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Amazon, Meta Muse의 대신 쇼핑 차단', summary: 'Amazon은 Meta의 개인 AI 에이전트 Muse가 이용자를 대신해 Amazon.com에서 쇼핑하지 못하도록 막았습니다. 사전 승인 없이 접속했고 에이전트 신원과 고객 정보 처리에 우려가 있다는 입장입니다.', source: 'TechCrunch 보도', url: 'https://techcrunch.com/2026/09/21/metas-ai-agent-has-been-blocked-from-using-amazon-com/' },
+        { headline: 'OpenAI, 외부 수학자 9명 참여 AI 수학 자문단 출범', summary: 'OpenAI는 AI가 만든 새로운 수학 결과를 검토하고 공개 방식을 조언할 독립 자문단을 구성했습니다. 프린스턴 고등연구소가 운영을 지원하며 Timothy Gowers 등 수학자 9명이 참여합니다.', source: 'OpenAI', url: 'https://openai.com/index/advisory-group-on-mathematics-and-ai' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-21', date: '2026.09.21', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 21일', excerpt: 'Qwen-Image-2.1 오픈웨이트, ChatGPT 워드 무료 플랜 제공, Step 5 Preview 공개, ChatGPT 광고 쿠키 독립 조사, Anthropic IPO 일정 보도 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-21.png', imageAlt: '2026년 9월 21일 Qwen-Image-2.1, ChatGPT 워드, Step 5 Preview, ChatGPT 광고 쿠키 조사, Anthropic IPO 일정 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Qwen-Image-2.1', 'ChatGPT Word', 'Step 5 Preview', 'ChatGPT 광고', 'Anthropic IPO', 'AI 트렌드'],
