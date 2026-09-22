@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-23', date: '2026.09.23', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 23일', excerpt: 'GPT-6 Sol·Luna, Claude Opus 5.5, Perplexity Computer 영상 생성, Microsoft의 EvilTokens 차단, DeepSeek의 유엔 안보리 브리핑 예정 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-23.png', imageAlt: '2026년 9월 23일 GPT-6 Sol과 Luna, Claude Opus 5.5, Perplexity Computer 영상 생성, EvilTokens 차단, DeepSeek 유엔 안보리 브리핑 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-6 Sol', 'GPT-6 Luna', 'Claude Opus 5.5', 'Perplexity Computer', 'EvilTokens', 'DeepSeek', 'AI 트렌드'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'GPT-6 Sol·Luna 출시…무료 이용자는 Luna 체험 가능', summary: 'OpenAI는 9월 22일 두 모델을 ChatGPT Work와 Codex의 Plus 이상 플랜에 출시했습니다. Free·Go 이용자는 데스크톱 앱에서 Luna를 써볼 수 있고, API 가격은 GPT-5.6 프로모션 대비 50% 낮아졌습니다.', source: 'OpenAI', url: 'https://openai.com/index/introducing-gpt-6-sol-and-luna/' },
+        { headline: 'Claude Opus 5.5 공개…Opus 5보다 40% 저렴', summary: 'Anthropic은 9월 22일 Claude 5.5 계열의 첫 모델을 공개했습니다. 대부분의 작업에서 Fable 5.1 수준을 내면서 Opus 5보다 운영비는 40% 낮고 출력은 30% 이상 빠르다고 밝혔습니다.', source: 'Anthropic', url: 'https://www.anthropic.com/claude-opus-5-5' },
+        { headline: 'Perplexity Computer, 영상 제작 기능 추가', summary: 'Perplexity는 Computer에서 MiniMax H3와 ByteDance Seedance 2.5로 캠페인 영상·제품 데모·소셜 영상을 만들 수 있다고 밝혔습니다. 현재 Pro와 Max 이용자에게 제공됩니다.', source: 'Perplexity 공식 X', url: 'https://x.com/perplexity_ai/status/2102071798179434966' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Microsoft, AI 피싱 서비스 EvilTokens 차단', summary: 'Microsoft와 협력 기관은 이메일 1만2천여 개를 침해한 EvilTokens의 웹사이트 50개를 압수하고 관련 도메인 150여 개를 차단했습니다. 영국 경찰은 운영 연루 혐의로 남성 2명을 체포했습니다.', source: 'Microsoft', url: 'https://blogs.microsoft.com/on-the-issues/2026/09/22/disrupting-eviltokens-the-ai-chatbot-built-for-cybercrime/' },
+        { headline: 'Reuters 보도: DeepSeek, 유엔 안보리서 AI 위험 브리핑 예정', summary: 'Reuters는 DeepSeek가 9월 23일 유엔 안전보장이사회에서 AI와 국제안보를 설명할 예정이라고 보도했습니다. Moonshot도 발언 요청을 받았으며 계획은 막판에 달라질 수 있습니다.', source: 'Reuters 보도', url: 'https://ca.marketscreener.com/news/deepseek-to-brief-un-security-council-on-ai-this-week-sources-say-ce785ad8db8aff20' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-22', date: '2026.09.22', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 22일', excerpt: 'Grok 4.7의 GitHub Copilot 제공, 샤오미 MiMo-V2.6 오픈웨이트, Kimi Code Desktop, Amazon의 Meta Muse 쇼핑 차단, OpenAI 수학 자문단 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-22.png', imageAlt: '2026년 9월 22일 Grok 4.7 GitHub Copilot, MiMo-V2.6, Kimi Code Desktop, Amazon과 Meta Muse, OpenAI 수학 자문단 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Grok 4.7', 'GitHub Copilot', 'MiMo-V2.6', 'Kimi Code Desktop', 'Meta Muse', 'OpenAI', 'AI 트렌드'],
