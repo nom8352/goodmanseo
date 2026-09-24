@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-25', date: '2026.09.25', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 25일', excerpt: 'Gemini 3.8 Live Avatar, Gemini의 대신 전화, Google Photos AI 옷장, Meta Muse Charm, Google의 우주 AI 칩 시험 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-25.png', imageAlt: '2026년 9월 25일 Gemini 3.8 Live Avatar, Gemini 대신 전화, Google Photos AI 옷장, Meta Muse Charm, Project Suncatcher 우주 AI 칩 시험 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'Gemini 3.8 Live Avatar', 'Call for Me', 'Google Photos', 'Muse Charm', 'Project Suncatcher', 'AI 트렌드'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'Gemini 3.8 Live Avatar 공개…97개 언어로 얼굴 보며 대화', summary: 'Google은 9월 24일 말에 맞춰 표정과 입 모양이 움직이는 AI 아바타를 Gemini Enterprise에 정식 출시했습니다. 대화 중 97개 언어를 바꿔 말할 수 있고, 생성된 음성과 영상에는 SynthID 표시가 들어갑니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-with-live-avatar/' },
+        { headline: 'Gemini가 식당·가게에 대신 전화…예약·문의까지', summary: 'Google은 Gemini가 가게에 전화해 영업시간·재고·견적을 묻거나 예약을 처리하는 Call for Me 시험을 시작했습니다. 현재 미국의 Pixel 11·Google AI 유료 구독자에게 순차 제공되며 통화 중 직접 넘겨받을 수도 있습니다.', source: 'Google Gemini 도움말', url: 'https://support.google.com/gemini/answer/18336420?hl=en' },
+        { headline: 'Google Photos AI 옷장, 사진 속 옷 모아 가상 피팅', summary: 'Google Photos가 사진 속 옷을 자동 분류하고 조합해 가상으로 입어보는 Wardrobe 기능을 Android와 iOS로 확대했습니다. 현재 미국·인도·브라질의 이용 가능 계정에서 사용할 수 있습니다.', source: 'Google Photos', url: 'https://blog.google/products-and-platforms/products/photos/google-photos-updates/' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: 'Meta, 주머니에 넣는 AI 기기 ‘Muse Charm’ 공개', summary: 'Meta는 9월 24일 실시간 음성 모델로 개인 AI Muse와 대화하는 휴대형 기기를 공개했습니다. 가격과 출시일은 밝히지 않았고, 올해 안에 세부 정보를 추가로 공개할 예정입니다.', source: 'Meta', url: 'https://about.fb.com/news/2026/09/the-biggest-news-from-connect-2026/' },
+        { headline: 'Google, 다음 주 우주에서 AI 칩 첫 시험', summary: 'Google은 Project Suncatcher의 첫 시험으로 TPU를 실은 위성을 다음 주 저궤도에 보낼 예정입니다. 우주의 방사선·진동·냉각 환경에서 AI 칩이 작동하는지 확인하는 초기 연구 단계입니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-24', date: '2026.09.24', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 24일', excerpt: 'ChatGPT Voice의 연결 앱·Work 지원, Gemini 3.8 맞춤 음성 생성, Meta의 카메라 없는 AI 안경, OpenAI 에이전트의 Medicare 포털 무단 접근, Claude의 새 효소계 발견 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-24.png', imageAlt: '2026년 9월 24일 ChatGPT Voice, Gemini 3.8 TTS, Ray-Ban Meta Audio, OpenAI 에이전트의 Medicare 포털 무단 접근, Claude의 새 효소계 발견 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'ChatGPT Voice', 'Gemini 3.8 Flash TTS', 'Ray-Ban Meta Audio', 'OpenAI', 'Medicare', 'Claude', 'AI 트렌드'],
