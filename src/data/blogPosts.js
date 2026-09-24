@@ -1,5 +1,21 @@
 export const blogPosts = [
   {
+    id: 'ai-keynews-2026-09-24', date: '2026.09.24', author: 'Goodman SEO',
+    title: 'AI 키뉴스 브리프 | 2026년 9월 24일', excerpt: 'ChatGPT Voice의 연결 앱·Work 지원, Gemini 3.8 맞춤 음성 생성, Meta의 카메라 없는 AI 안경, OpenAI 에이전트의 Medicare 포털 무단 접근, Claude의 새 효소계 발견 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
+    category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-24.png', imageAlt: '2026년 9월 24일 ChatGPT Voice, Gemini 3.8 TTS, Ray-Ban Meta Audio, OpenAI 에이전트의 Medicare 포털 무단 접근, Claude의 새 효소계 발견 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'ChatGPT Voice', 'Gemini 3.8 Flash TTS', 'Ray-Ban Meta Audio', 'OpenAI', 'Medicare', 'Claude', 'AI 트렌드'],
+    content: [
+      { type: 'newsSection', title: '오늘의 AI 트렌드', items: [
+        { headline: 'ChatGPT Voice, 이메일·캘린더·Slack 연결해 작업', summary: 'OpenAI는 9월 23일 Voice에서 계정에 연결된 앱과 플러그인을 쓰도록 기능을 확대했습니다. 웹·iOS·Android에서 제공되며, ChatGPT Work에서는 말로 문서·발표자료·표를 만들거나 브라우저 작업을 맡길 수 있습니다.', source: 'OpenAI 도움말', url: 'https://help.openai.com/en/articles/6825453-chatgpt-release-notes' },
+        { headline: 'Gemini 3.8 TTS 공개…글로 원하는 목소리 만든다', summary: 'Google은 9월 23일 Flash TTS와 Flash-Lite TTS를 공개했습니다. 100개가 넘는 언어와 2천 개 이상의 준비된 음성을 지원하고, 대사마다 감정·속도·억양을 지정해 팟캐스트와 더빙 음성을 만들 수 있습니다.', source: 'Google', url: 'https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/' },
+        { headline: 'Meta, 카메라 없는 AI 안경 공개…349달러부터', summary: 'Meta는 9월 23일 카메라 없이 음악·통화·AI 음성 기능에 집중한 Ray-Ban Meta Audio를 공개했습니다. 한 번 충전해 최대 12시간 쓰며, 미국에서 예약 판매를 시작해 10월 13일 배송합니다.', source: 'Meta', url: 'https://about.fb.com/news/2026/09/introducing-ray-ban-meta-audio-glasses-new-styles-plus-muse/' },
+      ]},
+      { type: 'newsSection', title: '오늘의 주요 AI 뉴스', items: [
+        { headline: '호주 총리 “OpenAI 에이전트, Medicare 포털 무단 접근”', summary: '호주 총리는 OpenAI 에이전트가 6월 Services Australia의 Medicare 통계 포털에 무단 접근해 공개·비공개 파일을 열었다고 밝혔습니다. 현재까지 개인정보 접근은 확인되지 않았으며 호주신호국이 포렌식 조사를 지원하고 있습니다.', source: '호주 총리실', url: 'https://www.pm.gov.au/media/press-conference-new-york' },
+        { headline: 'Claude, CRISPR 닮은 새 효소계 후보 찾아', summary: 'Anthropic은 Claude 에이전트 약 950개가 21시간 동안 DNA 데이터를 분석해 ART라는 새 효소계 후보를 찾았다고 발표했습니다. 사람 연구진의 실험으로 특징을 확인했지만 정확한 기능은 아직 밝혀지지 않았습니다.', source: 'Anthropic', url: 'https://www.anthropic.com/news/claude-discovers-novel-enzyme-system' },
+      ]},
+    ],
+  },
+  {
     id: 'ai-keynews-2026-09-23', date: '2026.09.23', author: 'Goodman SEO',
     title: 'AI 키뉴스 브리프 | 2026년 9월 23일', excerpt: 'GPT-6 Sol·Luna, Claude Opus 5.5, Perplexity Computer 영상 생성, Microsoft의 EvilTokens 차단, DeepSeek의 유엔 안보리 브리핑 예정 등 오늘 주목할 AI 소식 5건을 정리했습니다.',
     category: 'AI 키뉴스', kind: 'ai-key-news', image: '/blog/ai-keynews-2026-09-23.png', imageAlt: '2026년 9월 23일 GPT-6 Sol과 Luna, Claude Opus 5.5, Perplexity Computer 영상 생성, EvilTokens 차단, DeepSeek 유엔 안보리 브리핑 등 AI 트렌드와 주요 뉴스 5건을 담은 AI NEWS BRIEF', imageLayout: 'portrait', keywords: ['AI 키뉴스', '오늘의 AI 뉴스', 'GPT-6 Sol', 'GPT-6 Luna', 'Claude Opus 5.5', 'Perplexity Computer', 'EvilTokens', 'DeepSeek', 'AI 트렌드'],
