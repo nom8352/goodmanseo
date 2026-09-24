@@ -87,3 +87,9 @@
 - Updated site content and page inventory notes for current homepage rotating H1 phrases, pricing page service hierarchy, AI service cards, contact form labels, `/privacy`, and `/terms`.
 - Updated service offer notes to distinguish current visible prices from older AI/monthly-management prices that are no longer visible in the current pages.
 - Updated design context from the older dark/glassy description to the current light aqua `DESIGN.md` and `.impeccable/design.json` direction.
+## 2026-09-24
+
+- Published `ai-keynews-2026-09-24` in commit `ea68fcf` with three AI trend items and two major AI news items selected from 348 fresh AI News Radar candidates and 77 posts from four authenticated Apify/X searches.
+- Primary Apify account `forest_nocturne` handled all four runs without failover; measured usage increased by about USD 0.1510 and left about USD 4.3445. Backup `lengthy_doe` was checked but not used.
+- Generated and publicly verified the `1080x1920` newsprint image, retained the `1080x1350` Instagram image locally only, and prepared dated X, Instagram, Threads, and Naver Blog copy without posting externally.
+- Verified five source links, one download link, BlogPosting metadata, sitemap registration, desktop and 390px rendering without horizontal overflow, matching public/local image hashes, and absence of a public Instagram PNG.
