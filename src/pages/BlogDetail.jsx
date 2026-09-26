@@ -80,10 +80,12 @@ const defaultServiceCta = {
 
 const getRelatedPosts = (currentPost) =>
   blogPosts
-    .filter((candidate) => candidate.id !== currentPost.id)
+    .filter((candidate) => candidate.id !== currentPost.id && candidate.kind !== 'ai-key-news')
     .map((candidate, index) => ({
       ...candidate,
-      relatedScore: candidate.category === currentPost.category ? 2 : 0,
+      relatedScore: currentPost.relatedPostIds?.includes(candidate.id)
+        ? 100 - currentPost.relatedPostIds.indexOf(candidate.id)
+        : candidate.category === currentPost.category ? 2 : 0,
       originalIndex: index,
     }))
     .sort((a, b) => b.relatedScore - a.relatedScore || a.originalIndex - b.originalIndex)
@@ -112,6 +114,25 @@ const renderContentBlock = (block, index) => {
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
+    );
+  }
+
+  if (block.type === 'links') {
+    return (
+      <section key={key} className="detail-section-copy">
+        <h2>{block.title}</h2>
+        <ul>
+          {block.items.map((item) => (
+            <li key={item.to}>
+              {item.to.startsWith('/') ? (
+                <Link to={item.to} className="underline underline-offset-4">{item.label}</Link>
+              ) : (
+                <a href={item.to} className="underline underline-offset-4">{item.label}</a>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
     );
   }
 
@@ -257,6 +278,7 @@ const BlogDetail = () => {
             },
           },
           datePublished: publishedDate,
+          ...(post.updatedDate ? { dateModified: post.updatedDate.replaceAll('.', '-') } : {}),
           image: `https://goodmanseo.com${post.image}`,
           mainEntityOfPage: `https://goodmanseo.com/blog/${post.id}`,
         }}
@@ -271,6 +293,7 @@ const BlogDetail = () => {
           <div className="flex flex-wrap items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-text-soft">
             <span className="eyebrow-chip">{post.category}</span>
             <span className="inline-flex items-center gap-2"><Calendar size={14} /> {post.date}</span>
+            {post.updatedDate ? <span>수정 {post.updatedDate}</span> : null}
           </div>
 
           <h1 className="mt-6 max-w-4xl text-4xl font-black tracking-[-0.06em] sm:text-5xl">{post.title}</h1>
@@ -330,7 +353,7 @@ const BlogDetail = () => {
               <div>
                 <p className="text-sm font-extrabold text-accent-primary">함께 보면 좋은 글</p>
                 <h2 id="related-posts-heading" className="mt-2 text-2xl font-black tracking-[-0.04em]">
-                  같은 문제를 다른 채널에서도 확인해보세요
+                  다음 점검에 도움이 되는 글
                 </h2>
               </div>
               <Link to="/blog" className="secondary-button secondary-button--compact inline-flex self-start sm:self-auto">

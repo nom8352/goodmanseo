@@ -264,7 +264,7 @@ const blogRoutePages = blogPosts.map((post) => ({
   imageAlt: post.imageAlt,
   type: 'article',
   keywords: post.keywords?.join(', ') || `굿맨SEO, ${post.category}, 호주 비즈니스, 온라인 기본기, 구글 비즈니스 프로필`,
-  lastmod: formatPostDate(post.date),
+  lastmod: formatPostDate(post.updatedDate || post.date),
   jsonLd: createBlogPostingJsonLd(post),
 }));
 

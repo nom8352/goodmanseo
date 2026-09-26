@@ -110,7 +110,7 @@ export const createBlogPostingJsonLd = (post) => {
     description: post.excerpt,
     image: `${siteUrl}${post.image}`,
     datePublished: publishedDate,
-    dateModified: publishedDate,
+    dateModified: post.updatedDate ? post.updatedDate.replaceAll('.', '-').slice(0, 10) : publishedDate,
     articleSection: post.category,
     inLanguage: 'ko',
     author: {
