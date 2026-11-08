@@ -71,7 +71,7 @@ const defaultServiceCta = {
   eyebrow: '무료 순위 점검',
   title: '내 업체 구글 순위, 무료로 확인',
   description:
-    '키워드 3개 → 영업일 2~3일 내 현재 순위와 1순위 개선 항목을 이메일로 전달합니다.',
+    '키워드 3개(모르시면 업종 · 지역) → 영업일 2~3일 내 현재 순위와 1순위 개선 항목을 이메일로 전달합니다.',
   primaryText: '무료 순위 점검',
   primaryTo: '/contact?type=free-check',
   secondaryText: '서비스 및 가격 보기',

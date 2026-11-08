@@ -17,7 +17,8 @@ The main promise is **ranking / visibility**. The method is always **SEO website
 - The owner also runs a baby photography studio in North Lakes (North Brisbane) and ranked it with the same method. Three months (2026-05-19 to 2026-08-18): 131 clicks, 4,450 impressions, daily impressions from 0 to about 170, main keyword +84 positions. Checked 2026-11-05 from Brisbane: main keyword #3 organic, #1–2 in the Maps pack.
 - On the public site this case is **anonymised**: "브리즈번 북부의 아기 사진 스튜디오, 직접 관리하는 가게". Never publish the studio name, URL, address, or keyword list. Never call it a "client". The real business is shown only in consultation.
 - Use the Search Console screenshot (`img/case-search-console-2026-08.webp`) as the hero visual. Do not publish the rank-tracker table that reveals keywords.
-- Never claim guaranteed rankings. Use dated facts and the monthly report instead.
+- Never claim guaranteed rankings. Use dated facts and the monthly report instead. Keep the two data periods visibly separate: Search Console figures are 2026-05-19~08-18, the ranking check is 2026-11-05 from Brisbane. Do not claim enquiry or revenue increases on the site unless backed by records the owner can show.
+- Avoid absolute causal claims (e.g. "리뷰가 멈추면 순위도 멈춥니다"); Google Maps ranking depends on relevance, distance and prominence.
 - Owner rule (2026-11-08): do not write absolute commitments that could bind the owner (e.g. "작업 내역 전체 공개", "효과 없는 작업 중단", unqualified day counts). Describe the way of working instead: 월간 리포트 공유, Search Console 기준, 결과 기반 조정, 영업일 기준 timelines. Keep standard terms that build trust: 작업 시작 전 100% 환불, 월 관리 언제든 해지.
 
 ## Audience
@@ -48,7 +49,7 @@ The pricing page has an "SEO 홈페이지 제작" section describing the website
 
 Owner rule (2026-11-08): write in compact industry terms, noun-first, not explanatory sentences. "구글에서 위에 나오게 하는 일" is simply "구글 상위 노출". Long, soft, over-explaining copy reads as AI-written and is rejected.
 
-Prefer: 구글 상위 노출, 로컬 SEO, 키워드, 순위, 구글 비즈니스 프로필 최적화, 리뷰 관리, 온페이지 SEO, 월간 리포트, 지도 1~2위, 무료 순위 점검. Headline in use: `브리즈번 구글 상위 노출, 결과는 숫자로 증명합니다.`
+Prefer: 구글 상위 노출, 로컬 SEO, 키워드, 순위, 구글 비즈니스 프로필 최적화, 리뷰 관리, 온페이지 SEO, 월간 리포트, 지도 1~2위, 무료 순위 점검. Headline in use: `브리즈번 구글 상위 노출, 결과는 숫자로 보여드립니다.` ("증명" was softened after an external review flagged it as guarantee-like).
 
 Avoid as lead language: 홈페이지 제작, 기본 SEO, 세팅/정리합니다 as the main verb, 온라인 구조, SNS 마케팅, integrated marketing, 보장. Do not reintroduce AI mentoring, AI report, or AI course sections into the main site navigation or homepage.
 
@@ -64,7 +65,7 @@ Avoid as lead language: 홈페이지 제작, 기본 SEO, 세팅/정리합니다 
 - Navigation: 홈 / 서비스 및 가격 / 작업 방식 (`/#how`) / 블로그 + CTA 무료 순위 점검.
 - Home (`src/pages/Home.jsx`): fixed headline, anonymised proof visual, results band, "구글 상위 노출 작업 5단계" (키워드 → SEO 홈페이지 → 프로필 → 리뷰 → 리포트), three target industries, three programs, "보장하지 않습니다" approach section, FAQ, CTA. No sample-site grid, no AI sections.
 - Pricing (`src/pages/WebPricing.jsx`): three programs, what happens in each month, SEO website spec with six sample previews, FAQ (`pricingFaqs`).
-- Contact (`src/components/ContactForm.jsx`): five enquiry types; free check and program types ask for three customer search phrases. Legacy `?type=` values map to new types.
+- Contact (`src/components/ContactForm.jsx`): five enquiry types. Required fields are name, email (reply channel, also `_replyto`) and 업종/지역; company, phone, keywords and the message are optional for the free check so the "키워드 3개(모르시면 업종·지역)만" promise holds. Legacy `?type=` values map to new types.
 - Blog: evergreen posts only. AI key news is archived (`src/data/archivedAiKeyNews.js`) and redirected; do not publish new AI news on this site.
 - `/ai-business`, `/ai-course`, `/ai-report` pages still exist but are unlinked. They are to be separated from GoodmanSEO later.
 

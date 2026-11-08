@@ -38,7 +38,7 @@ export const programsKo = [
     title: '월 유지 관리',
     price: 'AUD 390',
     priceNote: '월 결제 · 3개월 뒤 선택 · 언제든 중단',
-    desc: '확보한 순위 유지. 홈페이지 호스팅 · 수정, 프로필 업데이트, 리뷰 답글 포함.',
+    desc: '순위 유지를 위한 월 관리. 홈페이지 호스팅 · 수정, 프로필 업데이트, 리뷰 답글 포함.',
     points: ['홈페이지 호스팅 · 소규모 수정', '프로필 게시물 · 사진 업데이트', '리뷰 답글 · 요청 관리', '월간 리포트'],
     cta: '유지 관리 문의',
     href: '/contact?type=monthly-care',
@@ -82,7 +82,7 @@ export const programsEn = [
     title: 'Monthly Care',
     price: 'AUD 390',
     priceNote: 'Per month · optional after 3 months · cancel anytime',
-    desc: 'Keep the rankings you have earned. Hosting and small edits, profile updates, review replies.',
+    desc: 'Monthly care to hold your rankings. Hosting and small edits, profile updates, review replies.',
     points: ['Website hosting and small edits', 'Profile posts and photos', 'Review replies and requests', 'Monthly report'],
     cta: 'Ask About Monthly Care',
     href: '/en/contact?type=monthly-care',
@@ -147,6 +147,11 @@ export const pricingFaqs = [
     question: '결제는 어떻게 진행되나요?',
     answer:
       '3개월 프로그램: 시작 시 50%, 2개월 차 50%. 월 유지 관리: 월 결제, 언제든 해지.',
+  },
+  {
+    question: '추가 비용이 있나요?',
+    answer:
+      '프로그램 금액에 홈페이지 제작(3~5페이지), 구글 비즈니스 프로필 최적화, 리뷰 시스템, 3개월 작업, 월간 리포트, 3개월 호스팅이 포함됩니다. 도메인 구매비(사장님 명의), 로고 · 사진 촬영, 광고비, 추가 페이지 제작은 별도입니다.',
   },
   {
     question: '중도 취소 시 환불은요?',

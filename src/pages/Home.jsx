@@ -54,7 +54,7 @@ const HOME_CONTENT = {
     seoImageAlt: 'GoodmanSEO 브리즈번 로컬 구글 상위 노출',
     eyebrow: '브리즈번 로컬 SEO',
     headline: '브리즈번 구글 상위 노출,',
-    headlineAccent: '결과는 숫자로 증명합니다.',
+    headlineAccent: '결과는 숫자로 보여드립니다.',
     heroCopy: (
       <>
         SEO 홈페이지와 구글 비즈니스 프로필을 핵심 키워드 기준으로 함께 구축 · 최적화하고,{' '}
@@ -76,7 +76,7 @@ const HOME_CONTENT = {
         { label: '노출', value: '4,450' },
         { label: '평균 순위', value: '16.1' },
       ],
-      badgeLabel: '2026.11 기준',
+      badgeLabel: '2026.11.05 브리즈번 검색 확인',
       badgeValue: '핵심 키워드 검색 3위 · 지도 1~2위',
       caption: '브리즈번 북부 베이비 스튜디오 · 직접 관리 업체 · 상호는 상담 시 공개',
     },
@@ -87,8 +87,8 @@ const HOME_CONTENT = {
       { value: '131', unit: '', label: '검색 클릭', note: '3개월 누적' },
       { value: '+84', unit: '', label: '핵심 키워드 순위 상승', note: '순위 추적 툴 기준' },
     ],
-    resultsCopy: '노출 증가 → 예약 문의 증가. 2026.11 기준 핵심 키워드 검색 3위, 지도 1~2위 유지.',
-    resultsNote: '출처: Google Search Console, 순위 추적 툴. 순위는 검색 위치·시점에 따라 변동됩니다.',
+    resultsCopy: '그래프와 클릭 · 노출: 2026.05.19~08.18 Google Search Console. 순위: 2026.11.05 브리즈번에서 직접 검색 확인, 핵심 키워드 검색 3위 · 지도 1~2위.',
+    resultsNote: '측정 지역 브리즈번. 도구: Google Search Console, Google 검색 직접 확인, 순위 추적 툴. 순위는 검색 위치 · 시점에 따라 변동됩니다.',
     howLabel: 'Process',
     howTitle: '구글 상위 노출 작업 5단계',
     howCopy: '홈페이지와 구글 비즈니스 프로필을 같은 키워드로 묶어 올립니다. 기본 5가지를 빠짐없이, 꾸준히.',
@@ -111,7 +111,7 @@ const HOME_CONTENT = {
       {
         icon: Star,
         title: '리뷰 관리',
-        desc: '리뷰 요청 문구 · 링크 · QR 제공, 답글 작성. 리뷰가 멈추면 순위도 멈춥니다.',
+        desc: '리뷰 요청 문구 · 링크 · QR 제공, 답글 작성. 리뷰는 지도 순위의 주요 요소 중 하나입니다.',
       },
       {
         icon: BarChart3,
@@ -137,7 +137,7 @@ const HOME_CONTENT = {
         sub: '설치 · 수리 · 냉동',
         query: 'split system installation north brisbane',
         now: '소개 의존, 홈페이지 없음.',
-        after: '건당 단가가 높아 검색 유입 1건이면 비용 회수.',
+        after: '건당 단가가 높아 검색 유입의 비용 대비 효과가 큽니다.',
       },
       {
         icon: Sparkles,
@@ -190,7 +190,7 @@ const HOME_CONTENT = {
       },
     ],
     finalTitle: '내 업체 구글 순위, 무료로 확인하세요',
-    finalCopy: '키워드 3개만 보내주시면 영업일 2~3일 내 현재 순위와 1순위 개선 항목을 이메일로 보내드립니다. 신청 후 의무 없음.',
+    finalCopy: '키워드 3개(모르시면 업종 · 지역)만 보내주시면 영업일 2~3일 내 현재 순위와 1순위 개선 항목을 이메일로 보내드립니다. 신청 후 의무 없음.',
     finalCta: '무료 순위 점검',
   },
   en: {
@@ -200,8 +200,8 @@ const HOME_CONTENT = {
     seoKeywords: ['Brisbane local SEO', 'Google Business Profile ranking', 'Google Maps ranking Brisbane', 'North Lakes SEO', 'local SEO for small business'],
     seoImageAlt: 'GoodmanSEO local Google rankings for Brisbane businesses',
     eyebrow: 'Brisbane local businesses · Google rankings',
-    headline: 'When customers search on Google,',
-    headlineAccent: 'your business shows up.',
+    headline: 'Brisbane local Google rankings,',
+    headlineAccent: 'results shown in numbers.',
     heroCopy: (
       <>
         We do not sell websites. We change what customers see when they search.{' '}
@@ -223,7 +223,7 @@ const HOME_CONTENT = {
         { label: 'Impressions', value: '4,450' },
         { label: 'Avg. position', value: '16.1' },
       ],
-      badgeLabel: 'Checked Nov 2026',
+      badgeLabel: 'Checked 5 Nov 2026, Brisbane',
       badgeValue: 'Main keyword: #3 organic · #1–2 on Maps',
       caption: 'A baby photography studio in North Brisbane that we manage directly. We share the business name in consultation.',
     },
@@ -235,8 +235,8 @@ const HOME_CONTENT = {
       { value: '+84', unit: '', label: 'Main keyword ranking gain', note: 'Rank tracker' },
     ],
     resultsCopy:
-      'Once the business appeared in search results, booking enquiries changed. As of November 2026 the main keyword sits at #3 in organic results and #1–2 on Maps.',
-    resultsNote: 'Based on Search Console and rank-tracker screenshots. Rankings vary by location and time.',
+      'Chart, clicks and impressions: Google Search Console, 19 May – 18 Aug 2026. Rankings: checked by searching from Brisbane on 5 Nov 2026, main keyword #3 organic and #1–2 on Maps.',
+    resultsNote: 'Measured from Brisbane with Google Search Console, live Google searches and a rank tracker. Rankings vary by location and time.',
     howLabel: 'How It Works',
     howTitle: 'How rankings actually move',
     howCopy: 'Website and Google Business Profile built around the same keywords. Five things done completely and consistently.',
@@ -244,7 +244,7 @@ const HOME_CONTENT = {
       { icon: Search, title: 'Pick the searches customers type', desc: 'Three to five real phrases like “lash extensions north lakes”. Brand-name searches do not count.' },
       { icon: FileText, title: 'Build or restructure the SEO website', desc: 'Page structure, titles and copy designed around the keywords. 3–5 new pages, or an existing site restructured.' },
       { icon: MapPin, title: 'Optimise the Google Business Profile', desc: 'Categories, services, areas, photos, hours and booking buttons, linked to the website with matching details.' },
-      { icon: Star, title: 'Keep reviews coming', desc: 'Request wording, links and QR codes, plus replies written with you. When reviews stop, rankings stop.' },
+      { icon: Star, title: 'Keep reviews coming', desc: 'Request wording, links and QR codes, plus replies written with you. Reviews are one of the main Maps ranking factors.' },
       { icon: BarChart3, title: 'Check the numbers monthly', desc: 'Impressions, clicks and rankings once a month. What does not work is stopped and replaced.' },
     ],
     fitLabel: 'Who It Is For',
@@ -252,7 +252,7 @@ const HOME_CONTENT = {
     fitCopy: 'Businesses that customers find by searching “service + suburb” in English.',
     fits: [
       { icon: Scissors, title: 'Beauty', sub: 'Lashes · nails · skin · brows · hair', query: 'lash extensions north lakes', now: 'Active on Instagram, almost invisible on Google.', after: 'Appointment-based, so one new customer stays for a long time.' },
-      { icon: Wrench, title: 'Air con · electrical · plumbing', sub: 'Installation · repairs · refrigeration', query: 'split system installation north brisbane', now: 'Work comes through word of mouth only and there is no website.', after: 'Job values are high, so one job from search covers the cost.' },
+      { icon: Wrench, title: 'Air con · electrical · plumbing', sub: 'Installation · repairs · refrigeration', query: 'split system installation north brisbane', now: 'Work comes through word of mouth only and there is no website.', after: 'Job values are high, so search leads pay back well.' },
       { icon: Sparkles, title: 'Cleaning', sub: 'Bond · carpet · commercial', query: 'bond cleaning north lakes', now: 'The phone only rings while ads are running.', after: 'Suburb searches bring calls without ads, and results are easy to count.' },
     ],
     fitFooter: 'The same method works for restaurants, mechanics, massage and tutoring. Ask even if your industry is different.',
@@ -296,7 +296,7 @@ const CaseProofVisual = ({ proof }) => (
     <div className="absolute inset-x-10 bottom-0 h-16 rounded-full bg-[#102133]/10 blur-3xl" aria-hidden="true" />
 
     <div className="relative overflow-hidden rounded-[0.45rem] border border-[#d8dee5] bg-white shadow-[0_18px_40px_rgba(16,33,51,0.10)]">
-      <div className="flex items-center gap-3 border-b border-[#e7ebef] bg-[#f6f8fa] px-3.5 py-2.5 pr-[9.5rem] sm:pr-[12rem]">
+      <div className="flex min-w-0 items-center gap-3 border-b border-[#e7ebef] bg-[#f6f8fa] px-3.5 py-2.5 pr-28 sm:pr-44">
         <div className="flex items-center gap-1.5" aria-hidden="true">
           <span className="h-2 w-2 rounded-full bg-[#e4e8ec]" />
           <span className="h-2 w-2 rounded-full bg-[#e4e8ec]" />
@@ -376,12 +376,12 @@ const Home = ({ locale = 'ko' }) => {
       {/* 1. Hero */}
       <section className="relative pb-12 pt-6 sm:pt-10 md:pb-16 md:pt-12">
         <div className="container relative z-10 px-6">
-          <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12">
             <Motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, ease }}
-              className="flex flex-col text-left"
+              className="flex min-w-0 flex-col text-left"
             >
               <p className="inline-flex w-fit items-center gap-2 rounded-[0.2rem] border border-[#102133]/15 bg-white/60 px-2.5 py-1 text-[0.66rem] font-black uppercase tracking-[0.12em] text-[#102133]">
                 <GoogleLogo className="h-3.5 w-3.5" />
@@ -420,7 +420,7 @@ const Home = ({ locale = 'ko' }) => {
       {/* 2. Results band */}
       <section id="results" className="max-w-none scroll-mt-20 bg-[#102133] py-12 md:py-14 lg:py-16">
         <div className="container px-6">
-          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-12">
             <div>
               <SectionLabel dark>{content.resultsLabel}</SectionLabel>
               <SectionTitle dark>{content.resultsTitle}</SectionTitle>
@@ -428,7 +428,7 @@ const Home = ({ locale = 'ko' }) => {
               <p className="mt-3 text-[0.68rem] leading-relaxed text-[#7f8d99]">{content.resultsNote}</p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
               {content.results.map((item, index) => (
                 <Motion.div
                   key={item.label}
@@ -457,7 +457,7 @@ const Home = ({ locale = 'ko' }) => {
             <p className="mt-3 text-[0.82rem] leading-relaxed text-[var(--text-muted)] md:text-[0.88rem]">{content.howCopy}</p>
           </div>
 
-          <ol className="grid gap-4 md:grid-cols-2 lg:grid-cols-5 lg:gap-3">
+          <ol className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-5 lg:gap-3">
             {content.steps.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -490,7 +490,7 @@ const Home = ({ locale = 'ko' }) => {
             <p className="mt-3 text-[0.82rem] leading-relaxed text-[var(--text-muted)] md:text-[0.88rem]">{content.fitCopy}</p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {content.fits.map((fit, index) => {
               const Icon = fit.icon;
               return (
@@ -542,7 +542,7 @@ const Home = ({ locale = 'ko' }) => {
             <p className="mt-3 text-[0.82rem] leading-relaxed text-[#aeb8c1] md:text-[0.88rem]">{content.programsCopy}</p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
             {content.programs.map((program, index) => (
               <Motion.article
                 key={program.title}
@@ -600,7 +600,7 @@ const Home = ({ locale = 'ko' }) => {
       {/* 6. Promise */}
       <section id="promise" className="max-w-none scroll-mt-20 bg-white py-12 md:py-14 lg:py-16">
         <div className="container px-6">
-          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
             <div>
               <SectionLabel>{content.promiseLabel}</SectionLabel>
               <SectionTitle>{content.promiseTitle}</SectionTitle>
@@ -611,7 +611,7 @@ const Home = ({ locale = 'ko' }) => {
               </p>
             </div>
 
-            <div className="grid gap-3">
+            <div className="grid grid-cols-1 gap-3">
               {content.promises.map((item, index) => (
                 <Motion.div
                   key={item.title}
@@ -633,7 +633,7 @@ const Home = ({ locale = 'ko' }) => {
       {/* 7. FAQ */}
       <section id="faq" className="max-w-none scroll-mt-20 border-t border-[#e7e0d8] bg-[var(--bg-dark)] py-12 md:py-14 lg:py-16">
         <div className="container px-6">
-          <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-12">
             <div>
               <SectionLabel>{content.faqLabel}</SectionLabel>
               <SectionTitle>{content.faqTitle}</SectionTitle>

@@ -14,7 +14,7 @@ const CONTACT_CONTENT = {
     heading: <>내 업체 <span className="font-black text-[#102133]">구글 순위</span>,<br />무료 점검</>,
     description: (
       <>
-        키워드 3개만 보내주세요.
+        키워드 3개만 보내주세요. 모르시면 업종과 지역만 알려주셔도 됩니다.
         <br />
         영업일 2~3일 내 현재 순위, 미노출 원인, 1순위 개선 항목을 이메일로 전달합니다.
         <br />
@@ -60,7 +60,7 @@ const Contact = ({ locale = 'ko' }) => {
         alternates={[{ lang: 'ko', path: '/contact' }, { lang: 'en', path: '/en/contact' }]}
       />
       <div className="container">
-        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           
           {/* 좌측 콘텐츠 영역 */}
           <Motion.div

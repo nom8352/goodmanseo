@@ -8,13 +8,13 @@ const INQUIRY_TYPES = {
       value: 'free-check',
       label: '무료 순위 점검',
       heading: '무료 순위 점검 신청',
-      helper: '키워드 3개 현재 순위 + 1순위 개선 항목 (무료)',
+      helper: '키워드 3개 현재 순위 + 1순위 개선 항목 (무료). 키워드를 모르시면 업종 · 지역만.',
       icon: Search,
       messageLabel: '현재 상황',
       messagePlaceholder: '예: 상호 검색은 되는데 업종 검색은 안 됨',
       submitLabel: '무료 순위 점검 신청',
       showKeywords: true,
-      keywordsRequired: true,
+      keywordsRequired: false,
     },
     {
       value: 'ranking-program',
@@ -76,7 +76,7 @@ const INQUIRY_TYPES = {
       messagePlaceholder: 'For example: we show up for our business name but not for our service.',
       submitLabel: 'Request Free Check',
       showKeywords: true,
-      keywordsRequired: true,
+      keywordsRequired: false,
     },
     {
       value: 'ranking-program',
@@ -149,11 +149,13 @@ const LEGACY_TYPE_MAP = {
 const FORM_COPY = {
   ko: {
     typeHeading: '문의 유형',
-    company: '업체명',
+    company: '업체명 (선택)',
     companyPlaceholder: '예: Sweet Lash Studio',
     name: '성함',
     namePlaceholder: '이름을 입력해 주세요',
-    phone: '연락처',
+    email: '이메일 (회신용)',
+    emailPlaceholder: 'name@example.com',
+    phone: '연락처 (선택)',
     phonePlaceholder: '연락 가능한 번호',
     businessType: '업종 / 지역',
     businessTypePlaceholder: '예: 속눈썹샵 / North Lakes',
@@ -161,19 +163,22 @@ const FORM_COPY = {
     google: '구글 비즈니스 프로필 URL (선택)',
     keywords: '타깃 키워드 3개 (손님이 검색할 말)',
     keywordsPlaceholder: '예: lash extensions north lakes / eyelash extension brisbane north / 속눈썹 브리즈번',
-    keywordsHelper: '정확하지 않아도 됩니다. 손님이 구글에 입력할 법한 표현이면 충분합니다.',
+    keywordsHelper: '정확하지 않아도 됩니다. 모르시면 비워두세요. 업종 · 지역으로 저희가 정합니다.',
+    messageOptional: '(선택)',
     submitting: '전송 중...',
     success: (label) => `${label} 접수 완료. 영업일 2~3일 내 이메일로 회신드립니다.`,
     fallback: '자동 접수가 안 되어 이메일로 이어집니다.',
-    mailLabels: ['문의 유형', '업체명', '성함', '연락처', '업종/지역', '홈페이지', '구글 비즈니스 프로필', '타깃 키워드'],
+    mailLabels: ['문의 유형', '업체명', '성함', '이메일', '연락처', '업종/지역', '홈페이지', '구글 비즈니스 프로필', '타깃 키워드'],
   },
   en: {
     typeHeading: 'Enquiry Type',
-    company: 'Business Name',
+    company: 'Business Name (optional)',
     companyPlaceholder: 'For example: Sweet Lash Studio',
     name: 'Your Name',
     namePlaceholder: 'Enter your name',
-    phone: 'Phone Number',
+    email: 'Email (for the reply)',
+    emailPlaceholder: 'name@example.com',
+    phone: 'Phone Number (optional)',
     phonePlaceholder: 'Best number to reach you',
     businessType: 'Industry / Suburb',
     businessTypePlaceholder: 'For example: Lash studio / North Lakes',
@@ -181,11 +186,12 @@ const FORM_COPY = {
     google: 'Google Business Profile URL (if any)',
     keywords: 'Three searches your customers would type',
     keywordsPlaceholder: 'For example: lash extensions north lakes / eyelash extensions brisbane north',
-    keywordsHelper: 'They do not need to be exact. Write what customers would type into Google.',
+    keywordsHelper: 'They do not need to be exact. Leave it blank if unsure and we will work from your industry and suburb.',
+    messageOptional: '(optional)',
     submitting: 'Sending...',
     success: (label) => `Your ${label.toLowerCase()} request has been received. We will reply by email within 2–3 days.`,
     fallback: 'The form could not be submitted automatically. Opening your email app instead.',
-    mailLabels: ['Enquiry type', 'Business name', 'Name', 'Phone', 'Industry / suburb', 'Website', 'Google Business Profile', 'Searches'],
+    mailLabels: ['Enquiry type', 'Business name', 'Name', 'Email', 'Phone', 'Industry / suburb', 'Website', 'Google Business Profile', 'Searches'],
   },
 };
 
@@ -199,6 +205,7 @@ const initialForm = {
   inquiryType: 'free-check',
   company: '',
   name: '',
+  email: '',
   phone: '',
   businessType: '',
   websiteUrl: '',
@@ -216,7 +223,7 @@ const encode = (data) =>
     .join('&');
 
 const buildMailtoLink = (
-  { company, name, phone, businessType, websiteUrl, googleBusinessUrl, keywords, message, inquiryType },
+  { company, name, email, phone, businessType, websiteUrl, googleBusinessUrl, keywords, message, inquiryType },
   locale = 'ko',
 ) => {
   const inquiryMeta = getInquiryMeta(inquiryType, locale);
@@ -226,11 +233,12 @@ const buildMailtoLink = (
     `${copy.mailLabels[0]}: ${inquiryMeta.label}`,
     `${copy.mailLabels[1]}: ${company || '-'}`,
     `${copy.mailLabels[2]}: ${name || '-'}`,
-    `${copy.mailLabels[3]}: ${phone || '-'}`,
-    `${copy.mailLabels[4]}: ${businessType || '-'}`,
-    `${copy.mailLabels[5]}: ${websiteUrl || '-'}`,
-    `${copy.mailLabels[6]}: ${googleBusinessUrl || '-'}`,
-    `${copy.mailLabels[7]}: ${keywords || '-'}`,
+    `${copy.mailLabels[3]}: ${email || '-'}`,
+    `${copy.mailLabels[4]}: ${phone || '-'}`,
+    `${copy.mailLabels[5]}: ${businessType || '-'}`,
+    `${copy.mailLabels[6]}: ${websiteUrl || '-'}`,
+    `${copy.mailLabels[7]}: ${googleBusinessUrl || '-'}`,
+    `${copy.mailLabels[8]}: ${keywords || '-'}`,
     '',
     `${inquiryMeta.messageLabel}:`,
     message || '-',
@@ -297,6 +305,7 @@ const ContactForm = ({
           _template: 'table',
           _captcha: 'false',
           _honey: form['bot-field'],
+          _replyto: form.email,
           inquiryType: inquiryMeta.label,
           ...form,
         }),
@@ -379,36 +388,41 @@ const ContactForm = ({
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="form-field">
-          <span>{copy.company}</span>
-          <input name="company" type="text" placeholder={copy.companyPlaceholder} value={form.company} onChange={handleChange} required />
-        </label>
-        <label className="form-field">
           <span>{copy.name}</span>
           <input name="name" type="text" placeholder={copy.namePlaceholder} value={form.name} onChange={handleChange} required />
+        </label>
+        <label className="form-field">
+          <span>{copy.email}</span>
+          <input name="email" type="email" placeholder={copy.emailPlaceholder} value={form.email} onChange={handleChange} required />
+        </label>
+      </div>
+
+      <div className="grid gap-5 md:grid-cols-2">
+        <label className="form-field">
+          <span>{copy.businessType}</span>
+          <input name="businessType" type="text" placeholder={copy.businessTypePlaceholder} value={form.businessType} onChange={handleChange} required />
+        </label>
+        <label className="form-field">
+          <span>{copy.company}</span>
+          <input name="company" type="text" placeholder={copy.companyPlaceholder} value={form.company} onChange={handleChange} />
         </label>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="form-field">
           <span>{copy.phone}</span>
-          <input name="phone" type="tel" placeholder={copy.phonePlaceholder} value={form.phone} onChange={handleChange} required />
-        </label>
-        <label className="form-field">
-          <span>{copy.businessType}</span>
-          <input name="businessType" type="text" placeholder={copy.businessTypePlaceholder} value={form.businessType} onChange={handleChange} required />
-        </label>
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2">
-        <label className="form-field">
-          <span>{copy.website}</span>
-          <input name="websiteUrl" type="url" placeholder="https://www.example.com" value={form.websiteUrl} onChange={handleChange} />
+          <input name="phone" type="tel" placeholder={copy.phonePlaceholder} value={form.phone} onChange={handleChange} />
         </label>
         <label className="form-field">
           <span>{copy.google}</span>
           <input name="googleBusinessUrl" type="url" placeholder="https://g.page/yourbusiness" value={form.googleBusinessUrl} onChange={handleChange} />
         </label>
       </div>
+
+      <label className="form-field">
+        <span>{copy.website}</span>
+        <input name="websiteUrl" type="url" placeholder="https://www.example.com" value={form.websiteUrl} onChange={handleChange} />
+      </label>
 
       {inquiryMeta.showKeywords ? (
         <label className="form-field">
@@ -426,14 +440,17 @@ const ContactForm = ({
       ) : null}
 
       <label className="form-field">
-        <span>{inquiryMeta.messageLabel}</span>
+        <span>
+          {inquiryMeta.messageLabel}
+          {form.inquiryType === 'free-check' ? ` ${copy.messageOptional}` : ''}
+        </span>
         <textarea
           name="message"
           rows="4"
           placeholder={inquiryMeta.messagePlaceholder}
           value={form.message}
           onChange={handleChange}
-          required
+          required={form.inquiryType !== 'free-check'}
         />
       </label>
 

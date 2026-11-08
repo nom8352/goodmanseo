@@ -64,7 +64,7 @@ const WebPricing = () => {
         {/* 1. Programs */}
         <section id="programs" className="section-block !min-h-0 scroll-mt-24 px-0">
           <div className="w-full">
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {programsKo.map((item) => (
                 <article
                   key={item.id}
@@ -101,7 +101,7 @@ const WebPricing = () => {
               ))}
             </div>
             <p className="mx-auto mt-6 max-w-3xl text-center text-[0.8rem] leading-relaxed text-[#566471]">
-              호주 에이전시 로컬 SEO 시세: 월 AUD 800~1,500부터, 홈페이지 제작은 별도. 홈페이지 제작까지 포함해 1인 직접 진행으로 책정, 작업 내용은 월간 리포트로 공유.
+              호주 에이전시 로컬 SEO 시세(2026.11 공개 가격 가이드 기준): 한 지역 월 AUD 800~1,500부터, 홈페이지 제작 별도. 홈페이지 제작까지 포함해 1인 직접 진행으로 책정, 작업 내용은 월간 리포트로 공유.
             </p>
           </div>
         </section>
@@ -116,7 +116,7 @@ const WebPricing = () => {
               </p>
             </div>
 
-            <div className="grid gap-5 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
               {programMonths.map((month, index) => (
                 <Motion.article
                   key={month.label}
@@ -152,7 +152,7 @@ const WebPricing = () => {
               </p>
             </div>
 
-            <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
               <article className="feature-card flex h-full flex-col justify-between">
                 <div>
                   <p className="pricing-card-title">{websiteSpec.title}</p>
@@ -211,7 +211,7 @@ const WebPricing = () => {
         {/* 4. FAQ */}
         <section id="faq" className="section-block !min-h-0 mt-12 scroll-mt-24 px-0">
           <div className="mx-auto w-full max-w-5xl">
-            <div className="grid gap-10 lg:grid-cols-[0.8fr_1.6fr] lg:items-start">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.6fr] lg:items-start">
               <Motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
