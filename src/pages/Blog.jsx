@@ -9,9 +9,9 @@ const Blog = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="블로그"
-        description="GoodmanSEO 블로그입니다. 매일 글로벌 AI 키뉴스와 구글 비즈니스 프로필, 홈페이지, SEO, 온라인 운영 정보를 정리합니다."
+        description="홈페이지 제작과 구글 비즈니스 프로필, 검색에 필요한 기본 설정을 쉽게 정리합니다."
         path="/blog"
-        keywords={['AI 키뉴스', '오늘의 AI 뉴스', '굿맨SEO 블로그', '구글 비즈니스 프로필', '홈페이지 점검', '온라인 운영']}
+        keywords={['굿맨SEO 블로그', '구글 비즈니스 프로필', '홈페이지 제작', 'SEO 기본 설정']}
       />
       <div className="container max-w-5xl">
         <div className="section-heading max-w-4xl">
@@ -21,9 +21,9 @@ const Blog = () => {
           </div>
           <h1 className="section-title mt-6 max-w-4xl">블로그</h1>
           <p className="section-copy max-w-2xl">
-            글로벌 AI 키뉴스와 온라인 운영 정보를
+            홈페이지와 구글 검색에 필요한 기본 정보를
             <br />
-            핵심만 빠르게 확인할 수 있도록 정리합니다.
+            쉽게 정리했습니다.
           </p>
         </div>
 
