@@ -149,7 +149,7 @@ const LEGACY_TYPE_MAP = {
 const FORM_COPY = {
   ko: {
     typeHeading: '문의 유형',
-    company: '업체명 (선택)',
+    company: '업체명',
     companyPlaceholder: '예: Sweet Lash Studio',
     name: '성함',
     namePlaceholder: '이름을 입력해 주세요',
@@ -159,12 +159,16 @@ const FORM_COPY = {
     phonePlaceholder: '연락 가능한 번호',
     businessType: '업종 / 지역',
     businessTypePlaceholder: '예: 속눈썹샵 / North Lakes',
-    website: '홈페이지 URL (없으면 공란)',
-    google: '구글 비즈니스 프로필 URL (선택)',
+    website: '홈페이지 주소',
+    google: '구글 지도 · 비즈니스 프로필 주소',
     keywords: '타깃 키워드 3개 (손님이 검색할 말)',
     keywordsPlaceholder: '예: lash extensions north lakes / eyelash extension brisbane north / 속눈썹 브리즈번',
     keywordsHelper: '정확하지 않아도 됩니다. 모르시면 비워두세요. 업종 · 지역으로 저희가 정합니다.',
     messageOptional: '(선택)',
+    identifyHeading: '점검할 업체',
+    identifyHelper: '업체명 또는 홈페이지 · 구글 지도 주소 중 하나는 알려주세요.',
+    noBusinessLabel: '아직 업체가 없어요 (업종 · 지역으로 점검)',
+    identifyError: '업체명 또는 홈페이지 · 구글 지도 주소 중 하나를 적어주세요. 아직 업체가 없으면 체크박스를 선택해 주세요.',
     submitting: '전송 중...',
     success: (label) => `${label} 접수 완료. 영업일 2~3일 내 이메일로 회신드립니다.`,
     fallback: '자동 접수가 안 되어 이메일로 이어집니다.',
@@ -172,7 +176,7 @@ const FORM_COPY = {
   },
   en: {
     typeHeading: 'Enquiry Type',
-    company: 'Business Name (optional)',
+    company: 'Business Name',
     companyPlaceholder: 'For example: Sweet Lash Studio',
     name: 'Your Name',
     namePlaceholder: 'Enter your name',
@@ -182,12 +186,16 @@ const FORM_COPY = {
     phonePlaceholder: 'Best number to reach you',
     businessType: 'Industry / Suburb',
     businessTypePlaceholder: 'For example: Lash studio / North Lakes',
-    website: 'Website URL (leave blank if none)',
-    google: 'Google Business Profile URL (if any)',
+    website: 'Website URL',
+    google: 'Google Maps / Business Profile link',
     keywords: 'Three searches your customers would type',
     keywordsPlaceholder: 'For example: lash extensions north lakes / eyelash extensions brisbane north',
     keywordsHelper: 'They do not need to be exact. Leave it blank if unsure and we will work from your industry and suburb.',
     messageOptional: '(optional)',
+    identifyHeading: 'Business to check',
+    identifyHelper: 'Give us the business name or a website / Google Maps link.',
+    noBusinessLabel: 'No business yet (check by industry and suburb)',
+    identifyError: 'Please add the business name or a website / Google Maps link, or tick the box if you have no business yet.',
     submitting: 'Sending...',
     success: (label) => `Your ${label.toLowerCase()} request has been received. We will reply by email within 2–3 days.`,
     fallback: 'The form could not be submitted automatically. Opening your email app instead.',
@@ -212,6 +220,7 @@ const initialForm = {
   googleBusinessUrl: '',
   keywords: '',
   message: '',
+  noBusinessYet: false,
   'bot-field': '',
 };
 
@@ -223,7 +232,7 @@ const encode = (data) =>
     .join('&');
 
 const buildMailtoLink = (
-  { company, name, email, phone, businessType, websiteUrl, googleBusinessUrl, keywords, message, inquiryType },
+  { company, name, email, phone, businessType, websiteUrl, googleBusinessUrl, keywords, message, inquiryType, noBusinessYet },
   locale = 'ko',
 ) => {
   const inquiryMeta = getInquiryMeta(inquiryType, locale);
@@ -239,6 +248,7 @@ const buildMailtoLink = (
     `${copy.mailLabels[6]}: ${websiteUrl || '-'}`,
     `${copy.mailLabels[7]}: ${googleBusinessUrl || '-'}`,
     `${copy.mailLabels[8]}: ${keywords || '-'}`,
+    noBusinessYet ? `(${copy.noBusinessLabel})` : '',
     '',
     `${inquiryMeta.messageLabel}:`,
     message || '-',
@@ -274,10 +284,10 @@ const ContactForm = ({
   const inquiryMeta = useMemo(() => getInquiryMeta(form.inquiryType, locale), [form.inquiryType, locale]);
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value, type, checked } = event.target;
     setForm((current) => ({
       ...current,
-      [name]: value,
+      [name]: type === 'checkbox' ? checked : value,
     }));
   };
 
@@ -287,6 +297,14 @@ const ContactForm = ({
     if (form['bot-field']) {
       setStatus('success');
       setNotice(copy.success(inquiryMeta.label));
+      return;
+    }
+
+    const hasIdentity = Boolean(form.company.trim() || form.websiteUrl.trim() || form.googleBusinessUrl.trim() || form.noBusinessYet);
+    if (!hasIdentity) {
+      setStatus('error');
+      setNotice(copy.identifyError);
+      event.currentTarget.querySelector('input[name="company"]')?.focus();
       return;
     }
 
@@ -308,6 +326,7 @@ const ContactForm = ({
           _replyto: form.email,
           inquiryType: inquiryMeta.label,
           ...form,
+          noBusinessYet: form.noBusinessYet ? 'yes' : 'no',
         }),
       });
 
@@ -403,26 +422,39 @@ const ContactForm = ({
           <input name="businessType" type="text" placeholder={copy.businessTypePlaceholder} value={form.businessType} onChange={handleChange} required />
         </label>
         <label className="form-field">
-          <span>{copy.company}</span>
-          <input name="company" type="text" placeholder={copy.companyPlaceholder} value={form.company} onChange={handleChange} />
-        </label>
-      </div>
-
-      <div className="grid gap-5 md:grid-cols-2">
-        <label className="form-field">
           <span>{copy.phone}</span>
           <input name="phone" type="tel" placeholder={copy.phonePlaceholder} value={form.phone} onChange={handleChange} />
         </label>
-        <label className="form-field">
-          <span>{copy.google}</span>
-          <input name="googleBusinessUrl" type="url" placeholder="https://g.page/yourbusiness" value={form.googleBusinessUrl} onChange={handleChange} />
-        </label>
       </div>
 
-      <label className="form-field">
-        <span>{copy.website}</span>
-        <input name="websiteUrl" type="url" placeholder="https://www.example.com" value={form.websiteUrl} onChange={handleChange} />
-      </label>
+      <fieldset className="grid gap-4 rounded-[0.7rem] border border-[#ded8cf] bg-white px-4 py-4">
+        <legend className="px-1 text-[0.8rem] font-bold text-[#102133]">{copy.identifyHeading}</legend>
+        <p className="-mt-1 text-[0.78rem] leading-relaxed text-[#687582]">{copy.identifyHelper}</p>
+        <label className="form-field">
+          <span>{copy.company}</span>
+          <input name="company" type="text" placeholder={copy.companyPlaceholder} value={form.company} onChange={handleChange} />
+        </label>
+        <div className="grid gap-4 md:grid-cols-2">
+          <label className="form-field">
+            <span>{copy.website}</span>
+            <input name="websiteUrl" type="url" placeholder="https://www.example.com" value={form.websiteUrl} onChange={handleChange} />
+          </label>
+          <label className="form-field">
+            <span>{copy.google}</span>
+            <input name="googleBusinessUrl" type="url" placeholder="https://maps.app.goo.gl/..." value={form.googleBusinessUrl} onChange={handleChange} />
+          </label>
+        </div>
+        <label className="flex cursor-pointer items-center gap-2.5 text-[0.82rem] font-medium text-[#44515d]">
+          <input
+            type="checkbox"
+            name="noBusinessYet"
+            checked={form.noBusinessYet}
+            onChange={handleChange}
+            className="h-4 w-4 rounded border-[#aeb6bc] accent-[#102133]"
+          />
+          {copy.noBusinessLabel}
+        </label>
+      </fieldset>
 
       {inquiryMeta.showKeywords ? (
         <label className="form-field">
@@ -459,7 +491,9 @@ const ContactForm = ({
           className={`rounded-[0.7rem] border px-4 py-3 text-sm leading-relaxed ${
             status === 'success'
               ? 'border-[var(--accent-primary)] bg-[rgba(16,33,51,0.04)] text-[var(--accent-primary)]'
-              : 'border-[var(--glass-border)] bg-[var(--bg-soft)] text-text-muted'
+              : status === 'error'
+                ? 'border-[#c0392b]/40 bg-[#fff5f3] text-[#8b2e22]'
+                : 'border-[var(--glass-border)] bg-[var(--bg-soft)] text-text-muted'
           }`}
         >
           {notice}

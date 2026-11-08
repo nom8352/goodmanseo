@@ -101,7 +101,17 @@ const WebPricing = () => {
               ))}
             </div>
             <p className="mx-auto mt-6 max-w-3xl text-center text-[0.8rem] leading-relaxed text-[#566471]">
-              호주 에이전시 로컬 SEO 시세(2026.11 공개 가격 가이드 기준): 한 지역 월 AUD 800~1,500부터, 홈페이지 제작 별도. 홈페이지 제작까지 포함해 1인 직접 진행으로 책정, 작업 내용은 월간 리포트로 공유.
+              호주 에이전시 로컬 SEO 시세: 한 지역 월 AUD 800~1,500부터, 홈페이지 제작 별도
+              {' '}
+              <a
+                href="https://whatsthedamage.com.au/seo-cost-brisbane/"
+                target="_blank"
+                rel="noreferrer nofollow"
+                className="underline decoration-[#aeb6bc] underline-offset-4 hover:text-[#102133]"
+              >
+                (출처: What&apos;s the Damage, Brisbane SEO cost guide, 2026.11)
+              </a>
+              . 홈페이지 제작까지 포함해 1인 직접 진행으로 책정, 작업 내용은 월간 리포트로 공유.
             </p>
           </div>
         </section>
