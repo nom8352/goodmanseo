@@ -6,7 +6,7 @@ export const programsKo = [
     id: 'free-check',
     title: '무료 순위 점검',
     price: '무료',
-    priceNote: '2~3일 안에 이메일로',
+    priceNote: '영업일 2~3일 내 이메일 회신',
     desc: '키워드 3개 현재 순위, 미노출 원인, 1순위 개선 항목을 이메일로 전달합니다.',
     points: ['키워드 3개 현재 순위', '구글 비즈니스 프로필 상태', '1순위 개선 항목'],
     cta: '무료 순위 점검 신청',
@@ -48,7 +48,7 @@ export const programsEn = [
     id: 'free-check',
     title: 'Free Ranking Check',
     price: 'Free',
-    priceNote: 'By email within 2–3 days',
+    priceNote: 'By email within 2–3 business days',
     desc: 'Current rankings for three searches, one reason you are not showing, and one thing to fix first.',
     points: ['Current rank for 3 searches', 'Google profile status', 'One thing to fix first'],
     cta: 'Request Free Check',
@@ -116,7 +116,7 @@ export const programMonths = [
   {
     label: '3개월 차',
     title: '검증 · 조정',
-    items: ['순위 변동 분석 · 수정', '효과 없는 작업 중단 · 교체', '유지 관리 전환 여부 결정', '최종 리포트'],
+    items: ['순위 변동 분석 · 수정', '결과 기반 작업 조정', '유지 관리 전환 여부 결정', '최종 리포트'],
   },
 ];
 
@@ -134,7 +134,7 @@ export const pricingFaqs = [
   {
     question: '효과가 보장되나요?',
     answer:
-      '보장하지 않습니다. 순위는 구글이 결정합니다. 대신 작업 내역 전체 공개, 월간 수치 보고, 효과 없는 작업 중단을 원칙으로 합니다.',
+      '보장하지 않습니다. 순위는 구글이 결정합니다. 대신 매월 작업 내용과 노출 · 클릭 · 순위 변화를 리포트로 공유하고, 결과에 따라 작업을 조정합니다.',
   },
   {
     question: '결제는 어떻게 진행되나요?',

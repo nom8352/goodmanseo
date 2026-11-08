@@ -99,7 +99,7 @@ const WebPricing = () => {
               ))}
             </div>
             <p className="mx-auto mt-6 max-w-3xl text-center text-[0.8rem] leading-relaxed text-[#566471]">
-              호주 에이전시 로컬 SEO 시세: 월 AUD 800~1,500부터. 1인 직접 진행으로 그 이하로 책정, 작업 내역은 월간 리포트로 전체 공개.
+              호주 에이전시 로컬 SEO 시세: 월 AUD 800~1,500부터. 1인 직접 진행으로 그 이하로 책정, 작업 내용은 월간 리포트로 공유.
             </p>
           </div>
         </section>

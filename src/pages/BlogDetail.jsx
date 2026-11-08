@@ -71,7 +71,7 @@ const defaultServiceCta = {
   eyebrow: '무료 순위 점검',
   title: '내 업체 구글 순위, 무료로 확인',
   description:
-    '키워드 3개 → 2~3일 내 현재 순위와 1순위 개선 항목을 이메일로 전달합니다.',
+    '키워드 3개 → 영업일 2~3일 내 현재 순위와 1순위 개선 항목을 이메일로 전달합니다.',
   primaryText: '무료 순위 점검',
   primaryTo: '/contact?type=free-check',
   secondaryText: '서비스 및 가격 보기',
@@ -395,7 +395,7 @@ const BlogDetail = () => {
           {!isAiKeyNews ? <div className="mt-12 border-t border-[#102133]/10 pt-8">
             <p className="text-base leading-relaxed text-text-muted">
               내 업체의 구글 순위가 궁금하다면 키워드 3개만 보내주세요.
-              2~3일 내 현재 순위와 1순위 개선 항목을 전달합니다.
+              영업일 2~3일 내 현재 순위와 1순위 개선 항목을 전달합니다.
             </p>
             <Link to="/contact?type=free-check" className="primary-button mt-6 inline-flex">
               무료 순위 점검

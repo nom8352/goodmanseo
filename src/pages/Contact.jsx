@@ -8,7 +8,7 @@ import Seo from '../components/Seo';
 const CONTACT_CONTENT = {
   ko: {
     seoTitle: '무료 순위 점검 신청',
-    seoDescription: '키워드 3개로 현재 구글 순위, 미노출 원인, 1순위 개선 항목을 2~3일 내 이메일로 전달. 브리즈번 로컬 비즈니스 무료 순위 점검.',
+    seoDescription: '키워드 3개로 현재 구글 순위, 미노출 원인, 1순위 개선 항목을 영업일 2~3일 내 이메일로 전달. 브리즈번 로컬 비즈니스 무료 순위 점검.',
     seoKeywords: ['무료 순위 점검', '구글 순위 확인', '구글 상위 노출 상담', '브리즈번 SEO 상담', '구글 비즈니스 프로필 상담'],
     badge: '무료 순위 점검 · 문의',
     heading: <>내 업체 <span className="font-black text-[#102133]">구글 순위</span>,<br />무료 점검</>,
@@ -16,7 +16,7 @@ const CONTACT_CONTENT = {
       <>
         키워드 3개만 보내주세요.
         <br />
-        2~3일 내 현재 순위, 미노출 원인, 1순위 개선 항목을 이메일로 전달합니다.
+        영업일 2~3일 내 현재 순위, 미노출 원인, 1순위 개선 항목을 이메일로 전달합니다.
         <br />
         신청 후 의무 없음.
       </>
@@ -92,7 +92,7 @@ const Contact = ({ locale = 'ko' }) => {
           >
             <div className="mb-6 flex items-center justify-between">
               <span className="rounded-full bg-[#102133]/5 px-3 py-1 text-[0.72rem] font-extrabold uppercase tracking-[0.18em] text-[#102133]">
-                {locale === 'en' ? '2–3 days · by email' : '2~3일 · 이메일 회신'}
+                {locale === 'en' ? '2–3 business days · by email' : '영업일 2~3일 · 이메일 회신'}
               </span>
             </div>
 

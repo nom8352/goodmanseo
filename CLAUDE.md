@@ -17,7 +17,8 @@ The main promise is **ranking / visibility**, not website production. A website 
 - The owner also runs a baby photography studio in North Lakes (North Brisbane) and ranked it with the same method. Three months (2026-05-19 to 2026-08-18): 131 clicks, 4,450 impressions, daily impressions from 0 to about 170, main keyword +84 positions. Checked 2026-11-05 from Brisbane: main keyword #3 organic, #1–2 in the Maps pack.
 - On the public site this case is **anonymised**: "브리즈번 북부의 아기 사진 스튜디오, 직접 관리하는 가게". Never publish the studio name, URL, address, or keyword list. Never call it a "client". The real business is shown only in consultation.
 - Use the Search Console screenshot (`img/case-search-console-2026-08.webp`) as the hero visual. Do not publish the rank-tracker table that reveals keywords.
-- Never claim guaranteed rankings. Use dated facts and "숫자로 보고합니다" instead.
+- Never claim guaranteed rankings. Use dated facts and the monthly report instead.
+- Owner rule (2026-11-08): do not write absolute commitments that could bind the owner (e.g. "작업 내역 전체 공개", "효과 없는 작업 중단", unqualified day counts). Describe the way of working instead: 월간 리포트 공유, Search Console 기준, 결과 기반 조정, 영업일 기준 timelines. Keep standard terms that build trust: 작업 시작 전 100% 환불, 월 관리 언제든 해지.
 
 ## Audience
 

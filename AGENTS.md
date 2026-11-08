@@ -50,7 +50,7 @@ Preserve this story:
 - 무료 순위 점검 as the entry point
 - 구글 상위 노출 3개월 프로그램 as the main offer, 월 유지 관리 after it
 - the anonymised North Brisbane studio case as proof, with dated numbers
-- "보장하지 않습니다, 숫자로 보고합니다" as the trust stance
+- "보장하지 않습니다" plus a monthly report as the trust stance, described as a way of working rather than binding promises
 - a website is a tool inside the program, not the lead offer
 
 Avoid turning the project back into a website-agency pitch, a basic-setup service, or an AI education brand. See `CLAUDE.md` for the full wording rules and the proof-story handling rules.

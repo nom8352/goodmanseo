@@ -163,7 +163,7 @@ const FORM_COPY = {
     keywordsPlaceholder: '예: lash extensions north lakes / eyelash extension brisbane north / 속눈썹 브리즈번',
     keywordsHelper: '정확하지 않아도 됩니다. 손님이 구글에 입력할 법한 표현이면 충분합니다.',
     submitting: '전송 중...',
-    success: (label) => `${label} 접수 완료. 2~3일 내 이메일로 회신드립니다.`,
+    success: (label) => `${label} 접수 완료. 영업일 2~3일 내 이메일로 회신드립니다.`,
     fallback: '자동 접수가 안 되어 이메일로 이어집니다.',
     mailLabels: ['문의 유형', '업체명', '성함', '연락처', '업종/지역', '홈페이지', '구글 비즈니스 프로필', '타깃 키워드'],
   },

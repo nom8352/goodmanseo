@@ -101,7 +101,7 @@ const baseRoutePages = [
     route: '/contact',
     title: '무료 순위 점검 신청 | Goodman SEO',
     description:
-      '키워드 3개로 현재 구글 순위, 미노출 원인, 1순위 개선 항목을 2~3일 내 이메일로 전달. 브리즈번 로컬 비즈니스 무료 순위 점검.',
+      '키워드 3개로 현재 구글 순위, 미노출 원인, 1순위 개선 항목을 영업일 2~3일 내 이메일로 전달. 브리즈번 로컬 비즈니스 무료 순위 점검.',
     canonical: canonicalForRoute('/contact'),
     type: 'website',
     keywords:
