@@ -186,7 +186,7 @@ const HOME_CONTENT = {
       },
       {
         question: '결제는 어떻게 하나요?',
-        answer: '3개월 프로그램은 시작 시 50%, 2개월 차 50%. 작업 시작 전 100% 환불.',
+        answer: '표시 가격은 GST 별도(+10%). 3개월 프로그램은 시작 시 50%, 2개월 차 50%. 작업 시작 전 100% 환불.',
       },
     ],
     finalTitle: '내 업체 구글 순위, 무료로 확인하세요',
@@ -278,7 +278,7 @@ const HOME_CONTENT = {
       { question: 'How long does it take?', answer: 'The first changes usually appear within 4–8 weeks, and we work in three-month blocks. Competitive searches can take longer, and we say so at the first check.' },
       { question: 'Do I need a website?', answer: 'Rankings are built on the website and the Google Business Profile together. If you have no website, a 3–5 page SEO website is built inside the program; an existing site is restructured around the keywords.' },
       { question: 'Do you also run Instagram or Facebook?', answer: 'We connect the links on your website and profile. We do not run social accounts or write posts.' },
-      { question: 'How do payments work?', answer: 'Half at the start of the program and half in month two. Full refund before work begins.' },
+      { question: 'How do payments work?', answer: 'Prices exclude GST (+10%). Half at the start of the program and half in month two. Full refund before work begins.' },
     ],
     finalTitle: 'Where does your business rank right now?',
     finalCopy: 'Send us three searches your customers would type. You get current rankings and one thing to fix first within 2–3 days, with no obligation.',

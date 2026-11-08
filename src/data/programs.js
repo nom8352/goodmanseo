@@ -1,5 +1,5 @@
 // 공개 상품은 세 가지입니다. 3개월 프로그램은 항상 SEO 홈페이지 + 구글 비즈니스 프로필을 함께 진행합니다.
-// 가격(2026-11-08 기준가): 3개월 프로그램 4,400 (홈페이지 신규 제작 포함) / 기존 홈페이지 재구성 시 3,400 / 월 유지 관리 390.
+// 가격(2026-11-08 확정): 3개월 프로그램 4,400 (홈페이지 신규 제작 포함) / 기존 홈페이지 재구성 시 3,400 / 월 유지 관리 390 / 호스팅만 49. 모두 GST 별도.
 // 바꿀 때는 이 파일만 고치면 홈과 가격 페이지에 함께 반영됩니다.
 
 export const programsKo = [
@@ -19,8 +19,8 @@ export const programsKo = [
     title: '구글 상위 노출 3개월 프로그램',
     subtitle: 'SEO 홈페이지 + 구글 비즈니스 프로필',
     price: 'AUD 4,400',
-    priceNote: '홈페이지 신규 제작 포함 · 3개월 · 50% + 50% 분할',
-    altNote: '기존 홈페이지 재구성 시 AUD 3,400',
+    priceNote: '+GST · 홈페이지 신규 제작 포함 · 3개월 · 50% + 50% 분할',
+    altNote: '기존 홈페이지 재구성 시 AUD 3,400 +GST',
     desc: '키워드 선정 → SEO 홈페이지 제작 → 구글 비즈니스 프로필 최적화 → 리뷰 관리 → 월간 리포트. 홈페이지와 프로필을 같은 키워드로 묶어 올립니다.',
     points: [
       '키워드 선정 · 경쟁 업체 분석',
@@ -37,7 +37,8 @@ export const programsKo = [
     id: 'monthly-care',
     title: '월 유지 관리',
     price: 'AUD 390',
-    priceNote: '월 결제 · 3개월 뒤 선택 · 언제든 중단',
+    priceNote: '+GST · 월 결제 · 3개월 뒤 선택 · 언제든 중단',
+    altNote: '관리 없이 호스팅만 유지 시 월 AUD 49 +GST',
     desc: '순위 유지를 위한 월 관리. 홈페이지 호스팅 · 수정, 프로필 업데이트, 리뷰 답글 포함.',
     points: ['홈페이지 호스팅 · 소규모 수정', '프로필 게시물 · 사진 업데이트', '리뷰 답글 · 요청 관리', '월간 리포트'],
     cta: '유지 관리 문의',
@@ -63,8 +64,8 @@ export const programsEn = [
     title: '3-Month Google Ranking Program',
     subtitle: 'SEO website + Google Business Profile',
     price: 'AUD 4,400',
-    priceNote: 'New website included · 3 months · paid in two halves',
-    altNote: 'AUD 3,400 when restructuring an existing website',
+    priceNote: '+GST · new website included · 3 months · paid in two halves',
+    altNote: 'AUD 3,400 +GST when restructuring an existing website',
     desc: 'Keywords → SEO website → Google Business Profile → reviews → monthly report. Website and profile built around the same keywords.',
     points: [
       'Keyword and competitor review',
@@ -81,7 +82,8 @@ export const programsEn = [
     id: 'monthly-care',
     title: 'Monthly Care',
     price: 'AUD 390',
-    priceNote: 'Per month · optional after 3 months · cancel anytime',
+    priceNote: '+GST · per month · optional after 3 months · cancel anytime',
+    altNote: 'Hosting only, without care: AUD 49 +GST per month',
     desc: 'Monthly care to hold your rankings. Hosting and small edits, profile updates, review replies.',
     points: ['Website hosting and small edits', 'Profile posts and photos', 'Review replies and requests', 'Monthly report'],
     cta: 'Ask About Monthly Care',
@@ -146,12 +148,12 @@ export const pricingFaqs = [
   {
     question: '결제는 어떻게 진행되나요?',
     answer:
-      '3개월 프로그램: 시작 시 50%, 2개월 차 50%. 월 유지 관리: 월 결제, 언제든 해지.',
+      '표시 가격은 모두 GST 별도(+10%)입니다. 3개월 프로그램: 시작 시 50%, 2개월 차 50%. 월 유지 관리: 월 결제, 언제든 해지.',
   },
   {
     question: '추가 비용이 있나요?',
     answer:
-      '프로그램 금액에 홈페이지 제작(3~5페이지), 구글 비즈니스 프로필 최적화, 리뷰 시스템, 3개월 작업, 월간 리포트, 3개월 호스팅이 포함됩니다. 도메인 구매비(사장님 명의), 로고 · 사진 촬영, 광고비, 추가 페이지 제작은 별도입니다.',
+      '프로그램 금액에 홈페이지 제작(3~5페이지), 구글 비즈니스 프로필 최적화, 리뷰 시스템, 3개월 작업, 월간 리포트, 3개월 호스팅이 포함됩니다. 도메인 구매비(사장님 명의), 로고 · 사진 촬영, 광고비, 추가 페이지 제작, GST(10%)는 별도입니다.',
   },
   {
     question: '중도 취소 시 환불은요?',
@@ -161,7 +163,7 @@ export const pricingFaqs = [
   {
     question: '호스팅이나 도메인도 맡길 수 있나요?',
     answer:
-      '월 유지 관리에 호스팅 포함. 도메인은 사장님 명의로 구매하고 연결은 저희가 진행합니다. 도메인 소유권은 반드시 사장님께 있어야 합니다.',
+      '프로그램 3개월 동안은 호스팅이 포함됩니다. 이후에는 월 유지 관리(AUD 390 +GST)에 호스팅이 포함되고, 관리 없이 호스팅만 유지하려면 월 AUD 49 +GST입니다. 도메인은 사장님 명의로 구매하고 연결은 저희가 진행합니다. 도메인 소유권은 반드시 사장님께 있어야 합니다.',
   },
   {
     question: '브리즈번이 아니어도 되나요?',
