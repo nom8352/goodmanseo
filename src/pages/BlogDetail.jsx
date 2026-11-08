@@ -6,60 +6,60 @@ import { blogPosts, getBlogPostById } from '../data/blogPosts';
 
 const serviceCtas = {
   'AI 웹디자인': {
-    eyebrow: '홈페이지와 검색어',
-    title: 'AI로 만든 홈페이지도 검색어에 맞아야 손님이 찾습니다',
+    eyebrow: '홈페이지 SEO',
+    title: 'AI 홈페이지도 키워드가 맞아야 검색에 나옵니다',
     description:
-      '디자인보다 먼저 볼 것은 지역, 서비스, 문의 방법이 글로 분명히 적혀 있는지입니다. 지금 몇 위인지부터 무료로 확인해 드립니다.',
-    primaryText: '무료 순위 점검 신청',
+      '디자인보다 지역 · 서비스 · 문의 방법이 텍스트로 명확한지가 먼저입니다. 현재 순위부터 무료로 확인하세요.',
+    primaryText: '무료 순위 점검',
     primaryTo: '/contact?type=free-check',
-    secondaryText: '진행 방식 보기',
+    secondaryText: '작업 방식 보기',
     secondaryTo: '/#how',
   },
   '구글 비즈니스 프로필': {
-    eyebrow: '구글 프로필',
-    title: '프로필을 채우는 것이 순위의 시작입니다',
+    eyebrow: '구글 비즈니스 프로필',
+    title: '프로필 최적화가 지도 순위의 시작입니다',
     description:
-      '카테고리, 서비스, 지역, 사진, 리뷰가 채워진 프로필이 지도에서 먼저 보입니다. 3개월 프로그램의 첫 달에 하는 일이에요.',
-    primaryText: '프로그램 상담하기',
+      '카테고리 · 서비스 · 지역 · 사진 · 리뷰가 채워진 프로필이 지도에서 먼저 노출됩니다. 3개월 프로그램 1개월 차 작업입니다.',
+    primaryText: '프로그램 상담',
     primaryTo: '/contact?type=ranking-program',
     secondaryText: '서비스 및 가격 보기',
     secondaryTo: '/pricing',
   },
   '온라인 기본기': {
     eyebrow: '기본 정보 점검',
-    title: '손님이 검색해서 찾아오게 만들려면',
+    title: '검색 유입의 시작은 정보 일치',
     description:
-      '게시물을 더 올리기보다 구글 프로필과 홈페이지 정보가 손님이 치는 검색어와 맞는지 먼저 확인하는 편이 현실적입니다.',
-    primaryText: '무료 순위 점검 신청',
+      '게시물보다 먼저, 구글 비즈니스 프로필과 홈페이지 정보가 타깃 키워드와 맞는지 확인하는 것이 우선입니다.',
+    primaryText: '무료 순위 점검',
     primaryTo: '/contact?type=free-check',
     secondaryText: '서비스 및 가격 보기',
     secondaryTo: '/pricing',
   },
   '홈페이지 제작': {
-    eyebrow: '홈페이지는 도구',
-    title: '새 홈페이지보다 먼저, 지금 검색에서 몇 위인지 보세요',
+    eyebrow: '홈페이지 제작',
+    title: '새 홈페이지보다 현재 순위 확인이 먼저',
     description:
-      '홈페이지가 없어도 구글 프로필로 시작할 수 있고, 필요하면 프로그램 안에서 1페이지를 만들어 드립니다.',
-    primaryText: '무료 순위 점검 신청',
+      '구글 비즈니스 프로필만으로 시작 가능. 필요 시 프로그램 안에서 1페이지 홈페이지를 제작합니다.',
+    primaryText: '무료 순위 점검',
     primaryTo: '/contact?type=free-check',
     secondaryText: '홈페이지 제작 안내 보기',
     secondaryTo: '/pricing#website',
   },
   SEO: {
     eyebrow: '구글 상위 노출',
-    title: '순위를 올리는 다섯 가지를 3개월 동안 같이 합니다',
+    title: '로컬 SEO 5단계, 3개월 프로그램',
     description:
-      '검색어 정하기, 프로필 채우기, 리뷰 흐름, 홈페이지 정리, 월 리포트. 특별한 비법이 아니라 빠짐없이 하는 일입니다.',
-    primaryText: '프로그램 상담하기',
+      '키워드 선정 · 프로필 최적화 · 리뷰 관리 · 온페이지 SEO · 월간 리포트. 기본을 빠짐없이 하는 것이 전부입니다.',
+    primaryText: '프로그램 상담',
     primaryTo: '/contact?type=ranking-program',
     secondaryText: '서비스 및 가격 보기',
     secondaryTo: '/pricing',
   },
   'AI 온라인 운영': {
     eyebrow: '유지 관리',
-    title: '올라간 순위를 지키는 일은 매달 조금씩입니다',
+    title: '확보한 순위는 월 관리로 유지됩니다',
     description:
-      '프로필 소식과 사진, 리뷰 답글, 작은 수정을 매달 챙기면 순위가 흔들리지 않습니다. 직접 하셔도 되고 맡기셔도 됩니다.',
+      '프로필 게시물 · 사진, 리뷰 답글, 홈페이지 수정을 매달 관리하면 순위가 유지됩니다. 직접 또는 위탁 모두 가능.',
     primaryText: '월 유지 관리 문의',
     primaryTo: '/contact?type=monthly-care',
     secondaryText: '서비스 및 가격 보기',
@@ -69,10 +69,10 @@ const serviceCtas = {
 
 const defaultServiceCta = {
   eyebrow: '무료 순위 점검',
-  title: '지금 내 가게는 구글에서 몇 위일까요?',
+  title: '내 업체 구글 순위, 무료로 확인',
   description:
-    '손님이 칠 검색어 3개만 알려주시면 현재 순위와 먼저 고칠 것 한 가지를 2~3일 안에 보내드립니다.',
-  primaryText: '무료 순위 점검 신청',
+    '키워드 3개 → 2~3일 내 현재 순위와 1순위 개선 항목을 이메일로 전달합니다.',
+  primaryText: '무료 순위 점검',
   primaryTo: '/contact?type=free-check',
   secondaryText: '서비스 및 가격 보기',
   secondaryTo: '/pricing',
@@ -394,11 +394,11 @@ const BlogDetail = () => {
 
           {!isAiKeyNews ? <div className="mt-12 border-t border-[#102133]/10 pt-8">
             <p className="text-base leading-relaxed text-text-muted">
-              지금 내 가게가 구글에서 몇 위인지 궁금하다면,
-              손님이 칠 검색어 3개만 알려주세요. 현재 순위와 먼저 고칠 것 한 가지를 보내드립니다.
+              내 업체의 구글 순위가 궁금하다면 키워드 3개만 보내주세요.
+              2~3일 내 현재 순위와 1순위 개선 항목을 전달합니다.
             </p>
             <Link to="/contact?type=free-check" className="primary-button mt-6 inline-flex">
-              무료 순위 점검 신청
+              무료 순위 점검
               <ArrowRight size={18} />
             </Link>
           </div> : null}

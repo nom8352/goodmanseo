@@ -18,7 +18,7 @@ export const organizationJsonLd = {
   '@id': `${siteUrl}/#organization`,
   name: siteName,
   description:
-    '브리즈번 로컬 비즈니스를 위한 로컬 SEO 서비스. 손님이 구글에서 검색할 때 가게가 위에 나오도록 구글 비즈니스 프로필, 리뷰, 홈페이지를 정리하고 매달 숫자로 보고합니다.',
+    '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. 구글 비즈니스 프로필 최적화, 리뷰 관리, 홈페이지 온페이지 SEO, 월간 리포트.',
   url: siteUrl,
   logo: `${siteUrl}/favicon.png`,
   image: defaultSeoImage,

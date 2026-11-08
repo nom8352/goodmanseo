@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const NAV_CONTENT = {
   ko: {
     homePath: '/',
-    meta: '브리즈번 로컬 구글 상위 노출',
+    meta: '브리즈번 로컬 SEO · 구글 상위 노출',
     links: [
       { name: '홈', href: '/' },
       { name: '서비스 및 가격', href: '/pricing' },
-      { name: '진행 방식', href: '/#how' },
+      { name: '작업 방식', href: '/#how' },
       { name: '블로그', href: '/blog' },
     ],
     contactPath: '/contact?type=free-check',

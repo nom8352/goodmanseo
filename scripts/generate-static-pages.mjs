@@ -22,10 +22,10 @@ const baseRoutePages = [
     route: '/',
     title: '브리즈번 로컬 구글 상위 노출 | Goodman SEO',
     description:
-      '손님이 구글에서 검색할 때 사장님 가게가 위에 나오게 합니다. 브리즈번 한인 사장님을 위한 로컬 SEO. 구글 프로필, 리뷰, 홈페이지를 검색어에 맞춰 정리하고 매달 숫자로 보고합니다.',
+      '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. 구글 비즈니스 프로필 최적화, 리뷰 관리, 홈페이지 온페이지 SEO, 월간 리포트. 한국어 상담, 영어 키워드 노출.',
     canonical: canonicalForRoute('/'),
     type: 'website',
-    imageAlt: 'GoodmanSEO 브리즈번 로컬 구글 상위 노출 안내',
+    imageAlt: 'GoodmanSEO 브리즈번 로컬 구글 상위 노출',
     keywords:
       '브리즈번 구글 상위 노출, 로컬 SEO 브리즈번, 구글 비즈니스 프로필 상위 노출, 구글 지도 상위 노출, 한인 사장님 구글 노출, 노스레이크 SEO',
     jsonLd: [organizationJsonLd, websiteJsonLd],
@@ -62,7 +62,7 @@ const baseRoutePages = [
     route: '/pricing',
     title: '구글 상위 노출 프로그램 · 서비스 및 가격 | Goodman SEO',
     description:
-      '무료 순위 점검, 구글 상위 노출 3개월 프로그램 AUD 2,900, 월 유지 관리 AUD 390. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 서비스 가격과 진행 순서를 확인하세요.',
+      '무료 순위 점검 · 구글 상위 노출 3개월 프로그램 AUD 2,900 · 월 유지 관리 AUD 390. 브리즈번 로컬 SEO 서비스 가격과 진행 순서.',
     canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:
@@ -82,7 +82,7 @@ const baseRoutePages = [
     route: '/blog',
     title: '블로그 | Goodman SEO',
     description:
-      '브리즈번과 호주 로컬 비즈니스를 위한 Goodman SEO 블로그입니다. 구글 검색과 지도에서 보이는 법, 구글 비즈니스 프로필, 리뷰, 홈페이지 기본기를 쉽게 정리합니다.',
+      '구글 상위 노출 · 구글 비즈니스 프로필 · 리뷰 관리 · 홈페이지 SEO 가이드. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 블로그.',
     canonical: canonicalForRoute('/blog'),
     type: 'website',
     keywords:
@@ -101,7 +101,7 @@ const baseRoutePages = [
     route: '/contact',
     title: '무료 순위 점검 신청 | Goodman SEO',
     description:
-      '손님이 칠 검색어 3개만 알려주시면 지금 몇 위인지, 안 나오는 이유, 먼저 고칠 것 한 가지를 2~3일 안에 보내드립니다. 브리즈번 한인 사장님을 위한 무료 순위 점검.',
+      '키워드 3개로 현재 구글 순위, 미노출 원인, 1순위 개선 항목을 2~3일 내 이메일로 전달. 브리즈번 로컬 비즈니스 무료 순위 점검.',
     canonical: canonicalForRoute('/contact'),
     type: 'website',
     keywords:

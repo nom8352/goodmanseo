@@ -42,157 +42,156 @@ const HOME_CONTENT = {
   ko: {
     seoTitle: '브리즈번 로컬 구글 상위 노출',
     seoDescription:
-      '손님이 구글에서 검색할 때 사장님 가게가 위에 나오게 합니다. 브리즈번 한인 사장님을 위한 로컬 SEO. 구글 프로필, 리뷰, 홈페이지를 검색어에 맞춰 정리하고 매달 숫자로 보고합니다.',
+      '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. 구글 비즈니스 프로필 최적화, 리뷰 관리, 홈페이지 온페이지 SEO, 월간 리포트. 한국어 상담, 영어 키워드 노출.',
     seoKeywords: [
       '브리즈번 구글 상위 노출',
       '로컬 SEO 브리즈번',
-      '구글 비즈니스 프로필 상위 노출',
+      '구글 비즈니스 프로필 최적화',
       '구글 지도 상위 노출',
-      '한인 사장님 구글 노출',
+      '한인 업체 구글 노출',
       '노스레이크 SEO',
     ],
-    seoImageAlt: 'GoodmanSEO 브리즈번 로컬 구글 상위 노출 안내',
-    eyebrow: '브리즈번 로컬 비즈니스 · 구글 상위 노출',
-    headline: '손님이 구글에서 검색할 때,',
-    headlineAccent: '사장님 가게가 위에 나오게 합니다.',
+    seoImageAlt: 'GoodmanSEO 브리즈번 로컬 구글 상위 노출',
+    eyebrow: '브리즈번 로컬 SEO',
+    headline: '브리즈번 구글 상위 노출,',
+    headlineAccent: '결과는 숫자로 증명합니다.',
     heroCopy: (
       <>
-        홈페이지를 파는 일이 아니라, 검색 결과를 바꾸는 일을 합니다.{' '}
+        구글 비즈니스 프로필 · 리뷰 · 홈페이지 SEO를 핵심 키워드에 맞춰 최적화하고,{' '}
         <br className="hidden sm:block" />
-        구글 프로필, 리뷰, 홈페이지 문구를 손님이 실제로 치는 검색어에 맞춰 정리하고{' '}
+        노출 · 클릭 · 순위를 월간 리포트로 보고합니다.{' '}
         <br className="hidden sm:block" />
-        매달 노출·클릭·순위를 숫자로 보여드립니다. 상담은 한국어로, 노출은 영어 검색에서.
+        한국어 상담, 영어 키워드 노출.
       </>
     ),
-    primaryCta: '무료 순위 점검 신청',
-    secondaryCta: '서비스·가격 보기',
+    primaryCta: '무료 순위 점검',
+    secondaryCta: '서비스 및 가격',
     contactPath: '/contact?type=free-check',
     pricingPath: '/pricing',
     proof: {
       windowLabel: 'Google Search Console · 2026.05.19 – 08.18',
-      imageAlt: '직접 관리하는 브리즈번 북부 가게의 구글 서치콘솔 3개월 화면. 클릭 131회, 노출 4,450회, 노출이 하루 0회에서 170회 가까이 늘어난 그래프',
+      imageAlt: '직접 관리하는 브리즈번 북부 업체의 Google Search Console 3개월 화면. 클릭 131, 노출 4,450, 일 노출 0에서 170으로 증가한 그래프',
       stats: [
-        { label: '클릭', value: '131회' },
-        { label: '노출', value: '4,450회' },
-        { label: '평균 순위', value: '16.1위' },
+        { label: '클릭', value: '131' },
+        { label: '노출', value: '4,450' },
+        { label: '평균 순위', value: '16.1' },
       ],
-      badgeLabel: '2026년 11월 확인',
-      badgeValue: '주요 검색어 일반 검색 3위 · 지도 1~2위',
-      caption: '브리즈번 북부의 아기 사진 스튜디오. 직접 관리하는 가게라 가게 이름은 상담에서 보여드립니다.',
+      badgeLabel: '2026.11 기준',
+      badgeValue: '핵심 키워드 검색 3위 · 지도 1~2위',
+      caption: '브리즈번 북부 베이비 스튜디오 · 직접 관리 업체 · 상호는 상담 시 공개',
     },
     resultsLabel: 'Results',
-    resultsTitle: '3개월 동안 생긴 변화',
+    resultsTitle: '3개월 성과',
     results: [
-      { value: '0 → 170', unit: '회', label: '하루 구글 노출', note: '2026년 5월 → 8월' },
-      { value: '131', unit: '회', label: '검색에서 들어온 클릭', note: '3개월 합계' },
-      { value: '+84', unit: '계단', label: '주요 검색어 순위 상승', note: '순위 도구 기준' },
+      { value: '0 → 170', unit: '', label: '일 노출', note: '2026.05 → 2026.08' },
+      { value: '131', unit: '', label: '검색 클릭', note: '3개월 누적' },
+      { value: '+84', unit: '', label: '핵심 키워드 순위 상승', note: '순위 추적 툴 기준' },
     ],
-    resultsCopy:
-      '검색 결과에 보이기 시작하자 예약 문의가 달라졌습니다. 2026년 11월 확인 기준으로 주요 검색어에서 일반 검색 3위, 지도 1~2위에 있습니다.',
-    resultsNote: '서치콘솔과 순위 도구 캡처 기준입니다. 순위는 검색하는 위치와 시점에 따라 달라집니다.',
-    howLabel: 'How It Works',
-    howTitle: '순위는 이렇게 올라갑니다',
-    howCopy: '특별한 비법이 아니라 다섯 가지를 빠짐없이, 꾸준히 하는 일입니다. 홈페이지는 그중 하나일 뿐이에요.',
+    resultsCopy: '노출 증가 → 예약 문의 증가. 2026.11 기준 핵심 키워드 검색 3위, 지도 1~2위 유지.',
+    resultsNote: '출처: Google Search Console, 순위 추적 툴. 순위는 검색 위치·시점에 따라 변동됩니다.',
+    howLabel: 'Process',
+    howTitle: '구글 상위 노출 작업 5단계',
+    howCopy: '로컬 SEO의 기본 5가지를 빠짐없이, 꾸준히. 홈페이지는 그중 하나입니다.',
     steps: [
       {
         icon: Search,
-        title: '손님이 치는 검색어 정하기',
-        desc: '“lash extensions north lakes”처럼 손님이 실제로 치는 말 3~5개를 정합니다. 가게 이름 검색은 여기 안 들어갑니다.',
+        title: '키워드 선정',
+        desc: '손님이 실제 검색하는 “서비스 + 지역” 키워드 3~5개 선정. 상호 검색은 제외.',
       },
       {
         icon: MapPin,
-        title: '구글 프로필 채우기',
-        desc: '카테고리, 서비스, 지역, 사진, 영업시간, 예약·문의 버튼. 비어 있는 칸이 없게 만들고 홈페이지와 정보를 맞춥니다.',
+        title: '구글 비즈니스 프로필 최적화',
+        desc: '카테고리 · 서비스 · 지역 · 사진 · 영업시간 · 예약 버튼 완성. 홈페이지와 정보 일치.',
       },
       {
         icon: Star,
-        title: '리뷰가 꾸준히 쌓이게',
-        desc: '요청 문구와 링크(QR)를 만들어 드리고, 답글도 같이 씁니다. 리뷰가 멈춘 가게는 순위도 멈춥니다.',
+        title: '리뷰 관리',
+        desc: '리뷰 요청 문구 · 링크 · QR 제공, 답글 작성. 리뷰가 멈추면 순위도 멈춥니다.',
       },
       {
         icon: FileText,
-        title: '홈페이지를 검색어에 맞게',
-        desc: '지역과 서비스가 글로 분명히 적히게 제목과 문장을 고칩니다. 홈페이지가 없으면 이 단계에서 1페이지를 만들어 드립니다.',
+        title: '홈페이지 온페이지 SEO',
+        desc: '제목 · 본문에 지역 · 서비스 키워드 반영. 홈페이지가 없으면 1페이지 제작.',
       },
       {
         icon: BarChart3,
-        title: '매달 숫자로 확인',
-        desc: '노출, 클릭, 순위를 월 1회 정리해 보내드립니다. 효과 없는 작업은 멈추고 되는 쪽으로 옮깁니다.',
+        title: '월간 리포트',
+        desc: '노출 · 클릭 · 순위 월 1회 보고. 효과 없는 작업은 중단 · 교체.',
       },
     ],
-    fitLabel: 'Who It Is For',
-    fitTitle: '이런 가게에 특히 잘 맞습니다',
-    fitCopy: '손님이 영어로 “서비스 + 동네”를 검색해서 찾아오는 가게. 한인 손님이 아니어도 됩니다.',
+    fitLabel: 'Industries',
+    fitTitle: '추천 업종',
+    fitCopy: '“서비스 + 지역” 영어 검색으로 손님이 오는 업종. 고객이 한인일 필요는 없습니다.',
     fits: [
       {
         icon: Scissors,
         title: '뷰티샵',
         sub: '속눈썹 · 네일 · 피부 · 반영구 · 헤어',
         query: 'lash extensions north lakes',
-        now: '인스타는 열심히 하는데 구글에는 거의 없는 경우가 많아요.',
-        after: '예약제라 손님 한 명이 오래 남습니다. 검색에서 보이면 바로 예약으로 이어져요.',
+        now: '인스타그램은 활발, 구글 노출은 거의 없음.',
+        after: '예약제 · 재방문 업종. 검색 노출이 바로 예약으로 연결.',
       },
       {
         icon: Wrench,
         title: '에어컨 · 전기 · 배관',
         sub: '설치 · 수리 · 냉동',
         query: 'split system installation north brisbane',
-        now: '지인 소개로만 일이 들어오고 홈페이지는 없는 경우가 대부분이에요.',
-        after: '건당 금액이 커서 검색에서 들어온 일 한 건이면 비용이 빠집니다.',
+        now: '소개 의존, 홈페이지 없음.',
+        after: '건당 단가가 높아 검색 유입 1건이면 비용 회수.',
       },
       {
         icon: Sparkles,
         title: '청소',
         sub: '본드 · 카펫 · 상업 청소',
         query: 'bond cleaning north lakes',
-        now: '광고비를 써야만 전화가 오고, 끊으면 바로 조용해져요.',
-        after: '동네 이름으로 검색에 걸리면 광고 없이도 전화가 옵니다. 효과를 전화 수로 바로 셀 수 있어요.',
+        now: '광고 의존, 광고 중단 시 문의 급감.',
+        after: '지역 키워드 노출로 광고비 없이 문의 확보. 통화 수로 효과 측정.',
       },
     ],
-    fitFooter: '식당·카페, 정비소, 마사지, 학원도 같은 방법이 통합니다. 업종이 달라도 먼저 물어보세요.',
-    programsLabel: 'Programs',
-    programsTitle: '프로그램과 가격',
-    programsCopy: '세 가지뿐입니다. 무료로 시작해서, 필요한 만큼만 이어가세요.',
+    fitFooter: '식당 · 카페, 정비, 마사지, 학원도 동일 방식 적용. 다른 업종도 문의 가능.',
+    programsLabel: 'Pricing',
+    programsTitle: '서비스 및 가격',
+    programsCopy: '3가지 프로그램. 무료 순위 점검으로 시작합니다.',
     programs: programsKo,
-    programsFooter: '홈페이지를 새로 만들어야 하는 경우는 따로 안내드립니다.',
-    programsFooterLink: '홈페이지 제작 안내 보기',
+    programsFooter: '홈페이지 제작은 필요 시 별도 안내.',
+    programsFooterLink: '홈페이지 제작 안내',
     programsFooterPath: '/pricing#website',
-    promiseLabel: 'Our Promise',
-    promiseTitle: '상위 노출을 보장하지는 않습니다',
-    promiseCopy: '순위는 구글이 정합니다. 보장을 내세우는 대신 세 가지를 지킵니다.',
+    promiseLabel: 'Principles',
+    promiseTitle: '상위 노출을 보장하지 않습니다',
+    promiseCopy: '순위 결정권은 구글에 있습니다. 보장 대신 3가지 원칙.',
     promises: [
-      { title: '한 일을 전부 보여드립니다', desc: '무엇을 바꿨고 왜 바꿨는지 매달 정리해서 보냅니다.' },
-      { title: '숫자로 보고합니다', desc: '느낌이 아니라 서치콘솔의 노출·클릭·순위로 이야기합니다.' },
-      { title: '안 되면 바꿉니다', desc: '효과 없는 작업은 멈추고, 되는 쪽으로 옮깁니다.' },
+      { title: '작업 내역 전체 공개', desc: '변경 사항과 이유를 월간 리포트에 기록.' },
+      { title: '데이터 기반 보고', desc: 'Search Console 노출 · 클릭 · 순위 수치로 보고.' },
+      { title: '효과 없는 작업 중단', desc: '성과 없는 작업은 중단하고 전략 수정.' },
     ],
-    promiseFooter: '직접 관리하는 가게에서 같은 방법으로 먼저 확인했습니다. 위의 그래프가 그 기록이에요.',
+    promiseFooter: '직접 관리 업체에서 동일 방식으로 검증. 위 그래프가 그 기록입니다.',
     faqLabel: 'FAQ',
     faqTitle: '자주 묻는 질문',
     faqs: [
       {
-        question: '얼마나 걸리나요?',
-        answer: '보통 첫 변화는 4~8주 사이에 보이기 시작하고, 3개월을 한 단위로 봅니다. 경쟁이 심한 검색어는 더 걸릴 수 있어서 처음 점검 때 솔직하게 말씀드립니다.',
+        question: '기간은 얼마나 걸리나요?',
+        answer: '첫 변화는 보통 4~8주, 기본 단위는 3개월입니다. 경쟁 키워드는 더 걸릴 수 있어 무료 점검 때 예상 기간을 안내합니다.',
       },
       {
         question: '홈페이지가 없어도 되나요?',
-        answer: '네. 구글 프로필만으로 시작할 수 있고, 필요하면 프로그램 안에서 1페이지 홈페이지를 만들어 드립니다. 여러 페이지가 필요한 경우만 홈페이지 제작을 따로 안내합니다.',
+        answer: '네. 구글 비즈니스 프로필만으로 시작 가능하고, 필요 시 프로그램 안에서 1페이지 홈페이지를 제작합니다. 서비스별 페이지가 필요한 경우만 홈페이지 제작을 별도 안내합니다.',
       },
       {
-        question: '손님이 한인이 아닌데도 되나요?',
-        answer: '오히려 그 경우에 맞습니다. 검색 노출은 영어 검색어로 만들고, 상담과 보고만 한국어로 합니다.',
+        question: '고객이 한인이 아니어도 되나요?',
+        answer: '네. 키워드와 노출은 영어 검색 기준, 상담과 리포트만 한국어입니다.',
       },
       {
-        question: '인스타그램이나 페이스북도 해 주시나요?',
-        answer: '홈페이지와 프로필에 링크를 연결하는 것까지만 합니다. SNS 운영이나 게시물 작성은 하지 않습니다.',
+        question: '인스타그램 · 페이스북도 해 주시나요?',
+        answer: '링크 연결까지만 합니다. SNS 운영 · 콘텐츠 제작은 제외입니다.',
       },
       {
         question: '결제는 어떻게 하나요?',
-        answer: '3개월 프로그램은 시작할 때 절반(AUD 1,450), 두 달째에 나머지 절반을 결제합니다. 작업 시작 전에는 전액 환불됩니다.',
+        answer: '3개월 프로그램은 시작 시 50%(AUD 1,450), 2개월 차 50%. 작업 시작 전 100% 환불.',
       },
     ],
-    finalTitle: '지금 내 가게는 몇 위일까요?',
-    finalCopy: '손님이 칠 검색어 3개만 알려주시면, 현재 순위와 먼저 고칠 것 한 가지를 2~3일 안에 보내드립니다. 받으셨다고 꼭 뭘 하셔야 하는 건 아닙니다.',
-    finalCta: '무료 순위 점검 신청',
+    finalTitle: '내 업체 구글 순위, 무료로 확인하세요',
+    finalCopy: '키워드 3개만 보내주시면 2~3일 내 현재 순위와 1순위 개선 항목을 이메일로 보내드립니다. 신청 후 의무 없음.',
+    finalCta: '무료 순위 점검',
   },
   en: {
     seoTitle: 'Local Google Rankings for Brisbane Businesses',
@@ -517,11 +516,11 @@ const Home = ({ locale = 'ko' }) => {
 
                   <dl className="mt-4 grid gap-3 text-[0.78rem] leading-relaxed">
                     <div>
-                      <dt className="text-[0.62rem] font-black uppercase tracking-[0.1em] text-[#9a6b2f]">{isEnglish ? 'Now' : '지금'}</dt>
+                      <dt className="text-[0.62rem] font-black uppercase tracking-[0.1em] text-[#9a6b2f]">{isEnglish ? 'Now' : '현재'}</dt>
                       <dd className="mt-1 text-[var(--text-muted)]">{fit.now}</dd>
                     </div>
                     <div>
-                      <dt className="text-[0.62rem] font-black uppercase tracking-[0.1em] text-[#2d6fa3]">{isEnglish ? 'When it ranks' : '올라가면'}</dt>
+                      <dt className="text-[0.62rem] font-black uppercase tracking-[0.1em] text-[#2d6fa3]">{isEnglish ? 'After ranking' : '상위 노출 후'}</dt>
                       <dd className="mt-1 text-[var(--text-muted)]">{fit.after}</dd>
                     </div>
                   </dl>

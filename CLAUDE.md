@@ -45,7 +45,9 @@ Website production (3–5 pages from AUD 1,900) is mentioned only as "필요한 
 
 ## Wording Rules
 
-Prefer: 구글 상위 노출, 로컬 SEO, 검색어, 순위, 지도 1~2위, 올립니다, 나오게 합니다, 숫자로 보고, 무료 순위 점검.
+Owner rule (2026-11-08): write in compact industry terms, noun-first, not explanatory sentences. "구글에서 위에 나오게 하는 일" is simply "구글 상위 노출". Long, soft, over-explaining copy reads as AI-written and is rejected.
+
+Prefer: 구글 상위 노출, 로컬 SEO, 키워드, 순위, 구글 비즈니스 프로필 최적화, 리뷰 관리, 온페이지 SEO, 월간 리포트, 지도 1~2위, 무료 순위 점검. Headline in use: `브리즈번 구글 상위 노출, 결과는 숫자로 증명합니다.`
 
 Avoid as lead language: 홈페이지 제작, 기본 SEO, 세팅/정리합니다 as the main verb, 온라인 구조, SNS 마케팅, integrated marketing, 보장. Do not reintroduce AI mentoring, AI report, or AI course sections into the main site navigation or homepage.
 

@@ -8,21 +8,21 @@ import Seo from '../components/Seo';
 const CONTACT_CONTENT = {
   ko: {
     seoTitle: '무료 순위 점검 신청',
-    seoDescription: '손님이 칠 검색어 3개만 알려주시면 지금 몇 위인지, 안 나오는 이유, 먼저 고칠 것 한 가지를 2~3일 안에 보내드립니다. 브리즈번 한인 사장님을 위한 무료 순위 점검.',
+    seoDescription: '키워드 3개로 현재 구글 순위, 미노출 원인, 1순위 개선 항목을 2~3일 내 이메일로 전달. 브리즈번 로컬 비즈니스 무료 순위 점검.',
     seoKeywords: ['무료 순위 점검', '구글 순위 확인', '구글 상위 노출 상담', '브리즈번 SEO 상담', '구글 비즈니스 프로필 상담'],
     badge: '무료 순위 점검 · 문의',
-    heading: <>지금 내 가게는<br />구글에서 <span className="font-black text-[#102133]">몇 위</span>일까요?</>,
+    heading: <>내 업체 <span className="font-black text-[#102133]">구글 순위</span>,<br />무료 점검</>,
     description: (
       <>
-        손님이 칠 검색어 3개만 알려주세요.
+        키워드 3개만 보내주세요.
         <br />
-        현재 순위, 안 나오는 이유, 먼저 고칠 것 한 가지를 2~3일 안에 이메일로 보내드립니다.
+        2~3일 내 현재 순위, 미노출 원인, 1순위 개선 항목을 이메일로 전달합니다.
         <br />
-        받으셨다고 꼭 뭘 하셔야 하는 건 아닙니다.
+        신청 후 의무 없음.
       </>
     ),
     formTitle: '무료 순위 점검 · 문의',
-    footerText: '입력하신 정보는 점검과 답변에만 사용하고, 다른 곳에 쓰지 않습니다.',
+    footerText: '입력 정보는 점검 · 회신 용도로만 사용합니다.',
   },
   en: {
     seoTitle: 'Free Ranking Check',

@@ -9,7 +9,7 @@ const Blog = () => {
     <div className="pt-32 pb-24">
       <Seo
         title="블로그"
-        description="구글 검색과 지도에서 가게가 보이게 하는 법, 구글 비즈니스 프로필, 리뷰, 홈페이지 기본기를 브리즈번 한인 사장님 눈높이로 정리합니다."
+        description="구글 상위 노출 · 구글 비즈니스 프로필 · 리뷰 관리 · 홈페이지 SEO 가이드. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 블로그."
         path="/blog"
         keywords={['굿맨SEO 블로그', '구글 상위 노출 방법', '구글 비즈니스 프로필', '로컬 SEO', '호주 소상공인']}
       />
@@ -21,9 +21,9 @@ const Blog = () => {
           </div>
           <h1 className="section-title mt-6 max-w-4xl">블로그</h1>
           <p className="section-copy max-w-2xl">
-            구글에서 가게가 보이게 하는 법을
+            구글 상위 노출 · 구글 비즈니스 프로필 · 리뷰 · 홈페이지 SEO
             <br />
-            사장님 눈높이로 정리했습니다.
+            로컬 비즈니스 실전 가이드
           </p>
         </div>
 

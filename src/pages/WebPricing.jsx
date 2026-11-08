@@ -34,7 +34,7 @@ const WebPricing = () => {
     <div className="min-h-screen bg-gradient-to-tr from-[#f7f2ec] via-white to-[#eee7df] pb-16 pt-24 text-[#102133]">
       <Seo
         title="구글 상위 노출 프로그램 · 서비스 및 가격"
-        description="무료 순위 점검, 구글 상위 노출 3개월 프로그램 AUD 2,900, 월 유지 관리 AUD 390. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 서비스 가격과 진행 순서를 확인하세요."
+        description="무료 순위 점검 · 구글 상위 노출 3개월 프로그램 AUD 2,900 · 월 유지 관리 AUD 390. 브리즈번 로컬 SEO 서비스 가격과 진행 순서."
         path="/pricing"
         keywords={['구글 상위 노출 가격', '로컬 SEO 가격', '구글 비즈니스 프로필 세팅 가격', '브리즈번 SEO', '무료 순위 점검']}
         jsonLd={pricingJsonLd}
@@ -52,12 +52,12 @@ const WebPricing = () => {
             서비스 및 가격
           </div>
           <h1 className="text-balance text-[clamp(2.1rem,4.2vw,3.4rem)] font-black leading-[1.15] tracking-[-0.04em] text-[#102133]">
-            구글에서 위에 나오게 하는 일,
+            구글 상위 노출 서비스,
             <br />
-            세 가지로 정리했습니다
+            3가지 프로그램
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-pretty text-[1.02rem] font-medium leading-[1.75] text-[#44515d]">
-            무료로 시작해서 필요한 만큼만 이어가세요. 홈페이지 제작은 필요한 분께만 따로 안내합니다.
+            무료 순위 점검으로 시작합니다. 홈페이지 제작은 필요 시 별도 안내.
           </p>
         </Motion.div>
 
@@ -74,7 +74,7 @@ const WebPricing = () => {
                     <p className="pricing-card-title">{item.title}</p>
                     {item.highlight && (
                       <p className="mt-3 inline-flex rounded-[0.25rem] border border-[#102133]/30 bg-[#102133]/10 px-3 py-1 text-[0.68rem] font-semibold tracking-[0.08em] text-[#102133]">
-                        순위를 올리는 본 프로그램
+                        메인 프로그램
                       </p>
                     )}
                     <div className="mt-3">
@@ -99,7 +99,7 @@ const WebPricing = () => {
               ))}
             </div>
             <p className="mx-auto mt-6 max-w-3xl text-center text-[0.8rem] leading-relaxed text-[#566471]">
-              참고로 호주 에이전시의 한 지역 로컬 SEO는 보통 월 AUD 800~1,500부터 시작합니다. 1인이 직접 진행하는 대신 그 아래로 맞췄고, 하는 일은 매달 리포트로 전부 보여드립니다.
+              호주 에이전시 로컬 SEO 시세: 월 AUD 800~1,500부터. 1인 직접 진행으로 그 이하로 책정, 작업 내역은 월간 리포트로 전체 공개.
             </p>
           </div>
         </section>
@@ -108,9 +108,9 @@ const WebPricing = () => {
         <section id="included" className="section-block !min-h-0 mt-12 scroll-mt-24 px-0">
           <div className="w-full">
             <div className="section-heading text-center">
-              <h2 className="section-title mx-auto">3개월 동안 이렇게 진행합니다</h2>
+              <h2 className="section-title mx-auto">3개월 프로그램 진행 순서</h2>
               <p className="section-copy mx-auto">
-                한 달씩 목표가 다릅니다. 매달 끝에 무엇을 했고 숫자가 어떻게 움직였는지 리포트로 받으세요.
+                월별 목표가 다릅니다. 매월 말 작업 내역과 수치 리포트를 전달합니다.
               </p>
             </div>
 
@@ -144,9 +144,9 @@ const WebPricing = () => {
         <section id="website" className="section-block !min-h-0 mt-12 scroll-mt-24 px-0">
           <div className="w-full">
             <div className="section-heading text-center">
-              <h2 className="section-title mx-auto">홈페이지가 필요하신 경우</h2>
+              <h2 className="section-title mx-auto">홈페이지 제작 (필요 시)</h2>
               <p className="section-copy mx-auto">
-                프로그램에 포함된 1페이지로 충분한 가게가 많습니다. 서비스별 페이지가 필요할 때만 아래를 보세요.
+                프로그램 포함 1페이지로 충분한 경우가 많습니다. 서비스별 페이지가 필요할 때만 해당합니다.
               </p>
             </div>
 
@@ -198,7 +198,7 @@ const WebPricing = () => {
                   ))}
                 </div>
                 <p className="mt-3 text-[0.74rem] leading-relaxed text-[#687582]">
-                  예시는 구성 참고용입니다. 실제 제작은 사장님 가게의 검색어와 서비스에 맞춰 처음부터 씁니다.
+                  구성 참고용 예시. 실제 제작은 업체 키워드 · 서비스 기준.
                 </p>
               </div>
             </div>
@@ -218,12 +218,12 @@ const WebPricing = () => {
               >
                 <h2 className="text-[2rem] font-black tracking-[-0.04em] text-[#102133]">자주 묻는 질문</h2>
                 <p className="mt-2 text-[0.95rem] font-semibold leading-relaxed text-[#44515d]">
-                  상담 전에 많이 물어보시는 것들을
+                  상담 전 자주 묻는 질문을
                   <br />
-                  모아두었습니다.
+                  모았습니다.
                 </p>
                 <Link to="/contact?type=free-check" className="primary-button mt-6 inline-flex">
-                  무료 순위 점검 신청
+                  무료 순위 점검
                   <ArrowRight size={16} />
                 </Link>
               </Motion.div>
