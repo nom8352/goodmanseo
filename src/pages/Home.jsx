@@ -347,14 +347,14 @@ const SectionLabel = ({ children, dark = false }) => (
   <span className={`font-serif italic text-[0.82rem] ${dark ? 'text-[#aab5bd]' : 'text-[#5f6872]'}`}>{children}</span>
 );
 
-const SectionTitle = ({ children, dark = false, as: Tag = 'h2' }) => (
-  <Tag
+const SectionTitle = ({ children, dark = false }) => (
+  <h2
     className={`mt-2.5 font-sans text-[clamp(1.45rem,2.05vw,2.15rem)] font-extrabold leading-[1.18] tracking-[-0.03em] ${
       dark ? 'text-[#eef3f7]' : 'text-[var(--text-main)]'
     }`}
   >
     {children}
-  </Tag>
+  </h2>
 );
 
 const Home = ({ locale = 'ko' }) => {
