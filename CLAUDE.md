@@ -65,7 +65,7 @@ Avoid as lead language: 홈페이지 제작, 기본 SEO, 세팅/정리합니다 
 ## Site Structure (after the 2026-11 reset)
 
 - Navigation: 홈 / 서비스 및 가격 / 작업 방식 (`/#how`) / 블로그 + CTA 무료 순위 점검.
-- Home (`src/pages/Home.jsx`): fixed headline, anonymised proof visual, results band, "구글 상위 노출 작업 5단계" (키워드 → SEO 홈페이지 → 프로필 → 리뷰 → 리포트), three target industries, three programs, "보장하지 않습니다" approach section, FAQ, CTA. No sample-site grid, no AI sections.
+- Home (`src/pages/Home.jsx`): fixed headline, anonymised proof visual, results band, "구글 상위 노출 작업 5단계" (키워드 → SEO 홈페이지 → 프로필 → 리뷰 → 리포트), three target industries, three programs, "직접 올려본 방식 그대로 진행합니다" track-record section (positive headline; the no-specific-rank line sits in small text below it — owner found a "보장하지 않습니다" headline off-putting given the proven result), FAQ, CTA. No sample-site grid, no AI sections.
 - Pricing (`src/pages/WebPricing.jsx`): three programs, what happens in each month, SEO website spec with six sample previews, FAQ (`pricingFaqs`).
 - Contact (`src/components/ContactForm.jsx`): five enquiry types. Required fields are name, email (reply channel, also `_replyto`) and 업종/지역, plus business identification: at least one of 업체명 / 홈페이지 주소 / 구글 지도 주소, or the "아직 업체가 없어요" checkbox (validated on submit). Phone, keywords and the message are optional for the free check so the "키워드 3개(모르시면 업종·지역)만" promise holds. Legacy `?type=` values map to new types.
 - Blog: evergreen posts only. AI key news is archived (`src/data/archivedAiKeyNews.js`) and redirected; do not publish new AI news on this site.
