@@ -5,7 +5,7 @@ import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
 import FaqList from '../components/FaqList';
 import { createServiceJsonLd, organizationJsonLd } from '../data/siteSeo';
-import { pricingFaqs, programMonths, programsKo, websiteOption } from '../data/programs';
+import { pricingFaqs, programMonths, programsKo, websiteSpec } from '../data/programs';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -23,7 +23,7 @@ const pricingJsonLd = [
   createServiceJsonLd({
     name: '구글 상위 노출 3개월 프로그램',
     description:
-      '브리즈번 로컬 비즈니스를 위한 로컬 SEO 프로그램. 검색어 선정, 구글 비즈니스 프로필 세팅, 리뷰 흐름, 홈페이지 정리, 월 리포트를 3개월 동안 진행합니다.',
+      '브리즈번 로컬 비즈니스를 위한 로컬 SEO 프로그램. 키워드 선정, SEO 홈페이지 제작, 구글 비즈니스 프로필 최적화, 리뷰 관리, 월간 리포트를 3개월 동안 진행합니다.',
     path: '/pricing',
     serviceType: 'Local SEO and Google Business Profile ranking program',
   }),
@@ -34,7 +34,7 @@ const WebPricing = () => {
     <div className="min-h-screen bg-gradient-to-tr from-[#f7f2ec] via-white to-[#eee7df] pb-16 pt-24 text-[#102133]">
       <Seo
         title="구글 상위 노출 프로그램 · 서비스 및 가격"
-        description="무료 순위 점검 · 구글 상위 노출 3개월 프로그램 AUD 2,900 · 월 유지 관리 AUD 390. 브리즈번 로컬 SEO 서비스 가격과 진행 순서."
+        description="무료 순위 점검 · 구글 상위 노출 3개월 프로그램 AUD 4,400 (SEO 홈페이지 + 구글 비즈니스 프로필) · 월 유지 관리 AUD 390. 브리즈번 로컬 SEO 서비스 가격과 진행 순서."
         path="/pricing"
         keywords={['구글 상위 노출 가격', '로컬 SEO 가격', '구글 비즈니스 프로필 세팅 가격', '브리즈번 SEO', '무료 순위 점검']}
         jsonLd={pricingJsonLd}
@@ -57,7 +57,7 @@ const WebPricing = () => {
             3가지 프로그램
           </h1>
           <p className="mx-auto mt-5 max-w-xl text-pretty text-[1.02rem] font-medium leading-[1.75] text-[#44515d]">
-            무료 순위 점검으로 시작합니다. 홈페이지 제작은 필요 시 별도 안내.
+            무료 순위 점검으로 시작합니다. 3개월 프로그램에는 SEO 홈페이지 제작이 포함됩니다.
           </p>
         </Motion.div>
 
@@ -77,9 +77,11 @@ const WebPricing = () => {
                         메인 프로그램
                       </p>
                     )}
+                    {item.subtitle ? <p className="mt-1 text-[0.8rem] font-bold text-[#9a6b2f]">{item.subtitle}</p> : null}
                     <div className="mt-3">
                       <p className="text-[1.25rem] font-bold tracking-[-0.03em] text-[#102133]">{item.price}</p>
                       <p className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.05em] text-[#687582]">{item.priceNote}</p>
+                      {item.altNote ? <p className="mt-1 text-[0.74rem] font-semibold text-[#44515d]">{item.altNote}</p> : null}
                     </div>
                     <p className="mt-4 text-sm font-semibold leading-relaxed text-[#566471]">{item.desc}</p>
                     <div className="mt-6 grid gap-3">
@@ -99,7 +101,7 @@ const WebPricing = () => {
               ))}
             </div>
             <p className="mx-auto mt-6 max-w-3xl text-center text-[0.8rem] leading-relaxed text-[#566471]">
-              호주 에이전시 로컬 SEO 시세: 월 AUD 800~1,500부터. 1인 직접 진행으로 그 이하로 책정, 작업 내용은 월간 리포트로 공유.
+              호주 에이전시 로컬 SEO 시세: 월 AUD 800~1,500부터, 홈페이지 제작은 별도. 홈페이지 제작까지 포함해 1인 직접 진행으로 책정, 작업 내용은 월간 리포트로 공유.
             </p>
           </div>
         </section>
@@ -144,23 +146,23 @@ const WebPricing = () => {
         <section id="website" className="section-block !min-h-0 mt-12 scroll-mt-24 px-0">
           <div className="w-full">
             <div className="section-heading text-center">
-              <h2 className="section-title mx-auto">홈페이지 제작 (필요 시)</h2>
+              <h2 className="section-title mx-auto">SEO 홈페이지 제작</h2>
               <p className="section-copy mx-auto">
-                프로그램 포함 1페이지로 충분한 경우가 많습니다. 서비스별 페이지가 필요할 때만 해당합니다.
+                구글 상위 노출의 기반. 3개월 프로그램에 포함되며, 키워드 구조로 설계해 구글 비즈니스 프로필과 연동합니다.
               </p>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
               <article className="feature-card flex h-full flex-col justify-between">
                 <div>
-                  <p className="pricing-card-title">{websiteOption.title}</p>
+                  <p className="pricing-card-title">{websiteSpec.title}</p>
                   <div className="mt-3">
-                    <p className="text-[1.25rem] font-bold tracking-[-0.03em] text-[#102133]">{websiteOption.price}</p>
-                    <p className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.05em] text-[#687582]">{websiteOption.priceNote}</p>
+                    <p className="text-[1.25rem] font-bold tracking-[-0.03em] text-[#102133]">{websiteSpec.price}</p>
+                    <p className="mt-0.5 text-[0.68rem] font-semibold uppercase tracking-[0.05em] text-[#687582]">{websiteSpec.priceNote}</p>
                   </div>
-                  <p className="mt-4 text-sm font-semibold leading-relaxed text-[#566471]">{websiteOption.desc}</p>
+                  <p className="mt-4 text-sm font-semibold leading-relaxed text-[#566471]">{websiteSpec.desc}</p>
                   <div className="mt-6 grid gap-3">
-                    {websiteOption.points.map((point) => (
+                    {websiteSpec.points.map((point) => (
                       <div key={point} className="benefit-row">
                         <CircleCheckBig size={16} className="text-accent-primary" />
                         <span>{point}</span>
@@ -168,14 +170,15 @@ const WebPricing = () => {
                     ))}
                   </div>
                 </div>
-                <Link to={websiteOption.href} className="secondary-button mt-7 w-full py-3">
-                  {websiteOption.cta}
+                <p className="mt-5 text-[0.76rem] leading-relaxed text-[#687582]">{websiteSpec.note}</p>
+                <Link to={websiteSpec.href} className="secondary-button mt-4 w-full py-3">
+                  {websiteSpec.cta}
                   <ArrowRight size={16} />
                 </Link>
               </article>
 
               <div>
-                <p className="mb-3 text-[0.72rem] font-black uppercase tracking-[0.12em] text-[#687582]">업종별 예시</p>
+                <p className="mb-3 text-[0.72rem] font-black uppercase tracking-[0.12em] text-[#687582]">업종별 제작 예시</p>
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
                   {sampleSites.map((site) => (
                     <a
@@ -198,7 +201,7 @@ const WebPricing = () => {
                   ))}
                 </div>
                 <p className="mt-3 text-[0.74rem] leading-relaxed text-[#687582]">
-                  구성 참고용 예시. 실제 제작은 업체 키워드 · 서비스 기준.
+                  구성 참고용 예시. 실제 제작은 업체 키워드 · 서비스 기준으로 설계합니다.
                 </p>
               </div>
             </div>

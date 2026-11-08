@@ -10,7 +10,7 @@ The one-sentence positioning (confirmed 2026-11-08):
 
 `손님이 구글에서 검색할 때, 사장님 가게가 위에 나오게 합니다. 홈페이지는 그걸 위한 도구입니다.`
 
-The main promise is **ranking / visibility**, not website production. A website is a tool inside the program, never the lead offer.
+The main promise is **ranking / visibility**. The method is always **SEO website + Google Business Profile together** (owner clarification 2026-11-08): the website is the base of the ranking work, so every program includes building a 3–5 page SEO website or restructuring the existing one. Website production is never sold as the lead message, but it is never optional either.
 
 ## Proof Story (handle with care)
 
@@ -37,12 +37,12 @@ Also a fit: mechanics, massage/physio, tutoring. Low fit: restaurants/cafes (pro
 Source of truth: `src/data/programs.js`. Change prices there only.
 
 1. 무료 순위 점검 (free): current rank for three customer searches, one reason it is not showing, one thing to fix first, by email in 2–3 days.
-2. 구글 상위 노출 3개월 프로그램 (AUD 2,900, about 970/month, paid in two halves): keyword selection, Google Business Profile setup/cleanup, review flow, website copy/titles (one-page site included if none), monthly report.
-3. 월 유지 관리 (AUD 390/month, optional after the program, cancel anytime): profile posts/photos, review replies, small edits, hosting, monthly report.
+2. 구글 상위 노출 3개월 프로그램 — SEO 홈페이지 + 구글 비즈니스 프로필 (AUD 4,400 with a new 3–5 page website; AUD 3,400 when restructuring an existing website; paid in two halves): keyword selection, SEO website build/restructure, Google Business Profile optimisation linked to the site, review system, monthly report.
+3. 월 유지 관리 (AUD 390/month, optional after the program, cancel anytime): hosting and small edits, profile posts/photos, review replies, monthly report.
 
-Pricing rationale (2026-11-08): Australian single-area local SEO runs AUD 800–1,500/month and agencies start around AUD 1,500/month, so AUD 2,900 for three months (about 970/month) sits just under the market for a solo operator; a three-month program takes roughly 30–40 hours. Sales policy, not shown on the site: the first two clients may be offered AUD 2,400 in exchange for a publishable (anonymisable) case study and review.
+Pricing rationale (2026-11-08): Australian single-area local SEO runs AUD 800–1,500/month (website excluded) and agencies start around AUD 1,500/month. AUD 4,400 covers the website build plus three months of ranking work for a solo operator (roughly 50–60 hours). Sales policy, not shown on the site: the first two clients may be offered a discount (about AUD 3,600) in exchange for a publishable (anonymisable) case study and review.
 
-Website production (3–5 pages from AUD 1,900) is mentioned only as "필요한 경우" on the pricing page. Retired and not to be re-added: AI 진단, AI 비즈니스 리포트, 사이트 케어 Basic/Plus, 온라인 관리 서포트, GBP 유지 add-on, Business/Growth website packages, hosting as a separate item.
+The pricing page has an "SEO 홈페이지 제작" section describing the website spec included in the program (`websiteSpec` in `programs.js`); website-only requests are handled by consultation. Retired and not to be re-added: AI 진단, AI 비즈니스 리포트, 사이트 케어 Basic/Plus, 온라인 관리 서포트, GBP 유지 add-on, Business/Growth website packages, hosting as a separate item.
 
 ## Wording Rules
 
@@ -61,9 +61,9 @@ Avoid as lead language: 홈페이지 제작, 기본 SEO, 세팅/정리합니다 
 
 ## Site Structure (after the 2026-11 reset)
 
-- Navigation: 홈 / 서비스 및 가격 / 진행 방식 (`/#how`) / 블로그 + CTA 무료 순위 점검.
-- Home (`src/pages/Home.jsx`): fixed headline, anonymised proof visual, results band, "순위는 이렇게 올라갑니다" five steps, three target industries, three programs, "보장하지 않습니다" promise, FAQ, CTA. No sample-site grid, no AI sections.
-- Pricing (`src/pages/WebPricing.jsx`): three programs, what happens in each month, website only-if-needed with six sample previews, FAQ (`pricingFaqs`).
+- Navigation: 홈 / 서비스 및 가격 / 작업 방식 (`/#how`) / 블로그 + CTA 무료 순위 점검.
+- Home (`src/pages/Home.jsx`): fixed headline, anonymised proof visual, results band, "구글 상위 노출 작업 5단계" (키워드 → SEO 홈페이지 → 프로필 → 리뷰 → 리포트), three target industries, three programs, "보장하지 않습니다" approach section, FAQ, CTA. No sample-site grid, no AI sections.
+- Pricing (`src/pages/WebPricing.jsx`): three programs, what happens in each month, SEO website spec with six sample previews, FAQ (`pricingFaqs`).
 - Contact (`src/components/ContactForm.jsx`): five enquiry types; free check and program types ask for three customer search phrases. Legacy `?type=` values map to new types.
 - Blog: evergreen posts only. AI key news is archived (`src/data/archivedAiKeyNews.js`) and redirected; do not publish new AI news on this site.
 - `/ai-business`, `/ai-course`, `/ai-report` pages still exist but are unlinked. They are to be separated from GoodmanSEO later.

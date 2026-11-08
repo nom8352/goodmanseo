@@ -42,7 +42,7 @@ const HOME_CONTENT = {
   ko: {
     seoTitle: '브리즈번 로컬 구글 상위 노출',
     seoDescription:
-      '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. 구글 비즈니스 프로필 최적화, 리뷰 관리, 홈페이지 온페이지 SEO, 월간 리포트. 한국어 상담, 영어 키워드 노출.',
+      '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. SEO 홈페이지 제작과 구글 비즈니스 프로필 최적화를 함께 진행하고 월간 리포트로 보고합니다. 한국어 상담, 영어 키워드 노출.',
     seoKeywords: [
       '브리즈번 구글 상위 노출',
       '로컬 SEO 브리즈번',
@@ -57,7 +57,7 @@ const HOME_CONTENT = {
     headlineAccent: '결과는 숫자로 증명합니다.',
     heroCopy: (
       <>
-        구글 비즈니스 프로필 · 리뷰 · 홈페이지 SEO를 핵심 키워드에 맞춰 최적화하고,{' '}
+        SEO 홈페이지와 구글 비즈니스 프로필을 핵심 키워드 기준으로 함께 구축 · 최적화하고,{' '}
         <br className="hidden sm:block" />
         노출 · 클릭 · 순위를 월간 리포트로 보고합니다.{' '}
         <br className="hidden sm:block" />
@@ -91,7 +91,7 @@ const HOME_CONTENT = {
     resultsNote: '출처: Google Search Console, 순위 추적 툴. 순위는 검색 위치·시점에 따라 변동됩니다.',
     howLabel: 'Process',
     howTitle: '구글 상위 노출 작업 5단계',
-    howCopy: '로컬 SEO의 기본 5가지를 빠짐없이, 꾸준히. 홈페이지는 그중 하나입니다.',
+    howCopy: '홈페이지와 구글 비즈니스 프로필을 같은 키워드로 묶어 올립니다. 기본 5가지를 빠짐없이, 꾸준히.',
     steps: [
       {
         icon: Search,
@@ -99,19 +99,19 @@ const HOME_CONTENT = {
         desc: '손님이 실제 검색하는 “서비스 + 지역” 키워드 3~5개 선정. 상호 검색은 제외.',
       },
       {
+        icon: FileText,
+        title: 'SEO 홈페이지 제작 · 재구성',
+        desc: '키워드 기준으로 페이지 구조 · 제목 · 본문 설계. 3~5페이지 신규 제작, 기존 홈페이지는 재구성.',
+      },
+      {
         icon: MapPin,
         title: '구글 비즈니스 프로필 최적화',
-        desc: '카테고리 · 서비스 · 지역 · 사진 · 영업시간 · 예약 버튼 완성. 홈페이지와 정보 일치.',
+        desc: '카테고리 · 서비스 · 지역 · 사진 · 영업시간 · 예약 버튼 완성. 홈페이지와 연동, 정보 일치.',
       },
       {
         icon: Star,
         title: '리뷰 관리',
         desc: '리뷰 요청 문구 · 링크 · QR 제공, 답글 작성. 리뷰가 멈추면 순위도 멈춥니다.',
-      },
-      {
-        icon: FileText,
-        title: '홈페이지 온페이지 SEO',
-        desc: '제목 · 본문에 지역 · 서비스 키워드 반영. 홈페이지가 없으면 1페이지 제작.',
       },
       {
         icon: BarChart3,
@@ -153,8 +153,8 @@ const HOME_CONTENT = {
     programsTitle: '서비스 및 가격',
     programsCopy: '3가지 프로그램. 무료 순위 점검으로 시작합니다.',
     programs: programsKo,
-    programsFooter: '홈페이지 제작은 필요 시 별도 안내.',
-    programsFooterLink: '홈페이지 제작 안내',
+    programsFooter: '프로그램에 SEO 홈페이지 제작이 포함됩니다.',
+    programsFooterLink: '홈페이지 사양 보기',
     programsFooterPath: '/pricing#website',
     promiseLabel: 'Approach',
     promiseTitle: '상위 노출을 보장하지 않습니다',
@@ -174,7 +174,7 @@ const HOME_CONTENT = {
       },
       {
         question: '홈페이지가 없어도 되나요?',
-        answer: '네. 구글 비즈니스 프로필만으로 시작 가능하고, 필요 시 프로그램 안에서 1페이지 홈페이지를 제작합니다. 서비스별 페이지가 필요한 경우만 홈페이지 제작을 별도 안내합니다.',
+        answer: '구글 상위 노출은 홈페이지와 구글 비즈니스 프로필을 함께 올리는 작업입니다. 홈페이지가 없으면 프로그램 안에서 SEO 홈페이지(3~5페이지)를 제작하고, 기존 홈페이지는 키워드 구조로 재구성합니다.',
       },
       {
         question: '고객이 한인이 아니어도 되나요?',
@@ -186,7 +186,7 @@ const HOME_CONTENT = {
       },
       {
         question: '결제는 어떻게 하나요?',
-        answer: '3개월 프로그램은 시작 시 50%(AUD 1,450), 2개월 차 50%. 작업 시작 전 100% 환불.',
+        answer: '3개월 프로그램은 시작 시 50%, 2개월 차 50%. 작업 시작 전 100% 환불.',
       },
     ],
     finalTitle: '내 업체 구글 순위, 무료로 확인하세요',
@@ -206,7 +206,7 @@ const HOME_CONTENT = {
       <>
         We do not sell websites. We change what customers see when they search.{' '}
         <br className="hidden sm:block" />
-        Your Google profile, reviews and website copy are aligned to the searches people actually type,{' '}
+        An SEO website and your Google Business Profile, built around the searches people actually type,{' '}
         <br className="hidden sm:block" />
         and you get impressions, clicks and rankings in numbers every month.
       </>
@@ -239,12 +239,12 @@ const HOME_CONTENT = {
     resultsNote: 'Based on Search Console and rank-tracker screenshots. Rankings vary by location and time.',
     howLabel: 'How It Works',
     howTitle: 'How rankings actually move',
-    howCopy: 'No secret trick. Five things done completely and consistently. The website is only one of them.',
+    howCopy: 'Website and Google Business Profile built around the same keywords. Five things done completely and consistently.',
     steps: [
       { icon: Search, title: 'Pick the searches customers type', desc: 'Three to five real phrases like “lash extensions north lakes”. Brand-name searches do not count.' },
-      { icon: MapPin, title: 'Complete the Google profile', desc: 'Categories, services, areas, photos, hours and booking buttons. No empty fields, and details that match the website.' },
+      { icon: FileText, title: 'Build or restructure the SEO website', desc: 'Page structure, titles and copy designed around the keywords. 3–5 new pages, or an existing site restructured.' },
+      { icon: MapPin, title: 'Optimise the Google Business Profile', desc: 'Categories, services, areas, photos, hours and booking buttons, linked to the website with matching details.' },
       { icon: Star, title: 'Keep reviews coming', desc: 'Request wording, links and QR codes, plus replies written with you. When reviews stop, rankings stop.' },
-      { icon: FileText, title: 'Match the website to the searches', desc: 'Location and services written clearly in titles and copy. No website yet? A one-page site is built at this step.' },
       { icon: BarChart3, title: 'Check the numbers monthly', desc: 'Impressions, clicks and rankings once a month. What does not work is stopped and replaced.' },
     ],
     fitLabel: 'Who It Is For',
@@ -260,8 +260,8 @@ const HOME_CONTENT = {
     programsTitle: 'Programs and pricing',
     programsCopy: 'Only three. Start free and continue as far as you need.',
     programs: programsEn,
-    programsFooter: 'If you need a new multi-page website, we quote that separately.',
-    programsFooterLink: 'See website options',
+    programsFooter: 'The SEO website is included in the program.',
+    programsFooterLink: 'See the website spec',
     programsFooterPath: '/pricing#website',
     promiseLabel: 'Approach',
     promiseTitle: 'We do not guarantee rankings',
@@ -276,9 +276,9 @@ const HOME_CONTENT = {
     faqTitle: 'Common questions',
     faqs: [
       { question: 'How long does it take?', answer: 'The first changes usually appear within 4–8 weeks, and we work in three-month blocks. Competitive searches can take longer, and we say so at the first check.' },
-      { question: 'Do I need a website?', answer: 'No. You can start with the Google profile alone, and a one-page site is included in the program if needed.' },
+      { question: 'Do I need a website?', answer: 'Rankings are built on the website and the Google Business Profile together. If you have no website, a 3–5 page SEO website is built inside the program; an existing site is restructured around the keywords.' },
       { question: 'Do you also run Instagram or Facebook?', answer: 'We connect the links on your website and profile. We do not run social accounts or write posts.' },
-      { question: 'How do payments work?', answer: 'Half at the start of the three-month program and half in month two. Full refund before work begins.' },
+      { question: 'How do payments work?', answer: 'Half at the start of the program and half in month two. Full refund before work begins.' },
     ],
     finalTitle: 'Where does your business rank right now?',
     finalCopy: 'Send us three searches your customers would type. You get current rankings and one thing to fix first within 2–3 days, with no obligation.',
@@ -555,8 +555,14 @@ const Home = ({ locale = 'ko' }) => {
               >
                 <div>
                   <h3 className="text-[1rem] font-black tracking-[-0.02em]">{program.title}</h3>
+                  {program.subtitle ? (
+                    <p className={`mt-1 text-[0.74rem] font-bold ${program.highlight ? 'text-[#9a6b2f]' : 'text-[#d8c8af]'}`}>{program.subtitle}</p>
+                  ) : null}
                   <p className={`mt-3 text-[1.5rem] font-black tracking-[-0.03em] ${program.highlight ? 'text-[#102133]' : 'text-[#eef3f7]'}`}>{program.price}</p>
                   <p className={`mt-0.5 text-[0.66rem] font-bold uppercase tracking-[0.06em] ${program.highlight ? 'text-[#687582]' : 'text-[#aab5bd]'}`}>{program.priceNote}</p>
+                  {program.altNote ? (
+                    <p className={`mt-1 text-[0.7rem] font-semibold ${program.highlight ? 'text-[#44515d]' : 'text-[#aab5bd]'}`}>{program.altNote}</p>
+                  ) : null}
                   <p className={`mt-4 text-[0.8rem] leading-relaxed ${program.highlight ? 'text-[#44515d]' : 'text-[#aeb8c1]'}`}>{program.desc}</p>
                   <ul className="mt-5 grid gap-2.5">
                     {program.points.map((point) => (

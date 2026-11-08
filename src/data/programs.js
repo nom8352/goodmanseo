@@ -1,5 +1,6 @@
-// 공개 상품은 세 가지뿐입니다. 홈페이지 제작은 필요한 경우에만 별도로 안내합니다.
-// 가격은 2026-11-08 확정 기준가입니다(3개월 2,900 / 월 390 / 홈페이지 1,900부터). 바꿀 때는 이 파일만 고치면 홈과 가격 페이지에 함께 반영됩니다.
+// 공개 상품은 세 가지입니다. 3개월 프로그램은 항상 SEO 홈페이지 + 구글 비즈니스 프로필을 함께 진행합니다.
+// 가격(2026-11-08 기준가): 3개월 프로그램 4,400 (홈페이지 신규 제작 포함) / 기존 홈페이지 재구성 시 3,400 / 월 유지 관리 390.
+// 바꿀 때는 이 파일만 고치면 홈과 가격 페이지에 함께 반영됩니다.
 
 export const programsKo = [
   {
@@ -8,7 +9,7 @@ export const programsKo = [
     price: '무료',
     priceNote: '영업일 2~3일 내 이메일 회신',
     desc: '키워드 3개 현재 순위, 미노출 원인, 1순위 개선 항목을 이메일로 전달합니다.',
-    points: ['키워드 3개 현재 순위', '구글 비즈니스 프로필 상태', '1순위 개선 항목'],
+    points: ['키워드 3개 현재 순위', '홈페이지 · 구글 비즈니스 프로필 상태', '1순위 개선 항목'],
     cta: '무료 순위 점검 신청',
     href: '/contact?type=free-check',
     highlight: false,
@@ -16,14 +17,16 @@ export const programsKo = [
   {
     id: 'ranking-program',
     title: '구글 상위 노출 3개월 프로그램',
-    price: 'AUD 2,900',
-    priceNote: '3개월 · 월 환산 약 970 · 절반씩 분할 결제',
-    desc: '키워드 선정 → 프로필 최적화 → 리뷰 관리 → 온페이지 SEO → 월간 리포트. 순위 변동에 필요한 3개월을 한 프로그램으로.',
+    subtitle: 'SEO 홈페이지 + 구글 비즈니스 프로필',
+    price: 'AUD 4,400',
+    priceNote: '홈페이지 신규 제작 포함 · 3개월 · 50% + 50% 분할',
+    altNote: '기존 홈페이지 재구성 시 AUD 3,400',
+    desc: '키워드 선정 → SEO 홈페이지 제작 → 구글 비즈니스 프로필 최적화 → 리뷰 관리 → 월간 리포트. 홈페이지와 프로필을 같은 키워드로 묶어 올립니다.',
     points: [
       '키워드 선정 · 경쟁 업체 분석',
-      '구글 비즈니스 프로필 최적화',
+      'SEO 홈페이지 제작 3~5페이지 (기존 홈페이지는 키워드 구조로 재구성)',
+      '구글 비즈니스 프로필 최적화 · 홈페이지 연동',
       '리뷰 요청 시스템 · 답글 관리',
-      '홈페이지 온페이지 SEO (없으면 1페이지 제작 포함)',
       '월간 노출 · 클릭 · 순위 리포트',
     ],
     cta: '프로그램 상담',
@@ -35,8 +38,8 @@ export const programsKo = [
     title: '월 유지 관리',
     price: 'AUD 390',
     priceNote: '월 결제 · 3개월 뒤 선택 · 언제든 중단',
-    desc: '확보한 순위 유지. 프로필 업데이트, 리뷰 답글, 홈페이지 수정, 호스팅 포함.',
-    points: ['프로필 게시물 · 사진 업데이트', '리뷰 답글 · 요청 관리', '홈페이지 소규모 수정 · 호스팅', '월간 리포트'],
+    desc: '확보한 순위 유지. 홈페이지 호스팅 · 수정, 프로필 업데이트, 리뷰 답글 포함.',
+    points: ['홈페이지 호스팅 · 소규모 수정', '프로필 게시물 · 사진 업데이트', '리뷰 답글 · 요청 관리', '월간 리포트'],
     cta: '유지 관리 문의',
     href: '/contact?type=monthly-care',
     highlight: false,
@@ -50,7 +53,7 @@ export const programsEn = [
     price: 'Free',
     priceNote: 'By email within 2–3 business days',
     desc: 'Current rankings for three searches, one reason you are not showing, and one thing to fix first.',
-    points: ['Current rank for 3 searches', 'Google profile status', 'One thing to fix first'],
+    points: ['Current rank for 3 searches', 'Website and Google profile status', 'One thing to fix first'],
     cta: 'Request Free Check',
     href: '/en/contact?type=free-check',
     highlight: false,
@@ -58,14 +61,16 @@ export const programsEn = [
   {
     id: 'ranking-program',
     title: '3-Month Google Ranking Program',
-    price: 'AUD 2,900',
-    priceNote: '3 months · about 970 per month · paid in two halves',
-    desc: 'Keyword selection, profile, review flow, website alignment and monthly reports in one program.',
+    subtitle: 'SEO website + Google Business Profile',
+    price: 'AUD 4,400',
+    priceNote: 'New website included · 3 months · paid in two halves',
+    altNote: 'AUD 3,400 when restructuring an existing website',
+    desc: 'Keywords → SEO website → Google Business Profile → reviews → monthly report. Website and profile built around the same keywords.',
     points: [
       'Keyword and competitor review',
-      'Google profile setup and cleanup',
-      'Review request wording, links and replies',
-      'Website copy and titles (one-page site included if needed)',
+      'SEO website, 3–5 pages (existing sites restructured around keywords)',
+      'Google Business Profile optimisation linked to the website',
+      'Review request system and replies',
       'Monthly impressions, clicks and rankings report',
     ],
     cta: 'Discuss the Program',
@@ -77,28 +82,30 @@ export const programsEn = [
     title: 'Monthly Care',
     price: 'AUD 390',
     priceNote: 'Per month · optional after 3 months · cancel anytime',
-    desc: 'Keep the rankings you have earned. Profile posts and photos, review replies, small edits and hosting.',
-    points: ['Profile posts and photos', 'Review replies and requests', 'Small website edits and hosting', 'Monthly report'],
+    desc: 'Keep the rankings you have earned. Hosting and small edits, profile updates, review replies.',
+    points: ['Website hosting and small edits', 'Profile posts and photos', 'Review replies and requests', 'Monthly report'],
     cta: 'Ask About Monthly Care',
     href: '/en/contact?type=monthly-care',
     highlight: false,
   },
 ];
 
-export const websiteOption = {
+// 가격 페이지 "SEO 홈페이지 제작" 섹션. 프로그램에 포함되는 홈페이지의 사양입니다.
+export const websiteSpec = {
   id: 'website',
-  title: '홈페이지 제작 (필요 시)',
-  price: 'AUD 1,900부터',
-  priceNote: '3~5페이지 · 1회 결제',
-  desc: '서비스별 페이지가 필요한 경우. 키워드 기준 제목 · 문구로 제작합니다.',
+  title: 'SEO 홈페이지 제작',
+  price: '프로그램 포함',
+  priceNote: '3~5페이지 · 신규 제작 또는 기존 홈페이지 재구성',
+  desc: '구글 상위 노출의 기반입니다. 키워드 구조로 페이지를 설계하고 구글 비즈니스 프로필과 연동합니다.',
   points: [
-    '소개 · 서비스 · 문의 페이지',
-    '모바일 최적화',
-    '키워드 기반 제목 · 메타 설정',
+    '키워드 기준 페이지 구조 (소개 · 서비스 · 지역 · 문의)',
+    '페이지별 제목 · 메타 · 본문 키워드 반영',
+    '모바일 최적화 · 속도',
+    '전화 · 문의폼 · 구글 프로필 연동',
     'Search Console · Analytics 등록',
-    '프로그램 동시 진행 시 할인 상담',
   ],
-  cta: '홈페이지 제작 문의',
+  note: '홈페이지만 단독으로 필요한 경우는 상담 후 안내합니다.',
+  cta: '홈페이지 문의',
   href: '/contact?type=website',
 };
 
@@ -106,12 +113,12 @@ export const programMonths = [
   {
     label: '1개월 차',
     title: '세팅',
-    items: ['키워드 3~5개 확정 · 경쟁 업체 3곳 분석', '구글 비즈니스 프로필 최적화', '홈페이지 온페이지 SEO (없으면 1페이지 제작)', 'Search Console · Analytics 연결'],
+    items: ['키워드 3~5개 확정 · 경쟁 업체 3곳 분석', 'SEO 홈페이지 제작 착수 (기존 홈페이지는 재구성)', '구글 비즈니스 프로필 최적화', 'Search Console · Analytics 연결'],
   },
   {
     label: '2개월 차',
-    title: '축적',
-    items: ['리뷰 요청 시스템 세팅 (문구 · 링크 · QR)', '사진 · 서비스 설명 보강', '지역 · 서비스 페이지 콘텐츠 추가', '1차 리포트'],
+    title: '오픈 · 축적',
+    items: ['홈페이지 오픈 · 구글 비즈니스 프로필 연동', '리뷰 요청 시스템 세팅 (문구 · 링크 · QR)', '지역 · 서비스 페이지 콘텐츠 보강', '1차 리포트'],
   },
   {
     label: '3개월 차',
@@ -129,7 +136,7 @@ export const pricingFaqs = [
   {
     question: '홈페이지가 없어도 되나요?',
     answer:
-      '네. 구글 비즈니스 프로필만으로 시작 가능하고, 필요 시 프로그램 안에서 1페이지 홈페이지를 제작합니다. 서비스별 페이지가 필요한 경우만 홈페이지 제작을 별도 안내합니다.',
+      '구글 상위 노출은 홈페이지와 구글 비즈니스 프로필을 함께 올리는 작업입니다. 홈페이지가 없으면 프로그램 안에서 SEO 홈페이지(3~5페이지)를 제작하고, 기존 홈페이지는 키워드 구조로 재구성합니다.',
   },
   {
     question: '효과가 보장되나요?',
@@ -139,7 +146,7 @@ export const pricingFaqs = [
   {
     question: '결제는 어떻게 진행되나요?',
     answer:
-      '3개월 프로그램: 시작 시 50%(AUD 1,450), 2개월 차 50%. 월 유지 관리: 월 결제, 언제든 해지. 홈페이지 제작: 계약 시 50%, 검수 완료 시 50%.',
+      '3개월 프로그램: 시작 시 50%, 2개월 차 50%. 월 유지 관리: 월 결제, 언제든 해지.',
   },
   {
     question: '중도 취소 시 환불은요?',

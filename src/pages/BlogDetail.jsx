@@ -36,13 +36,13 @@ const serviceCtas = {
     secondaryTo: '/pricing',
   },
   '홈페이지 제작': {
-    eyebrow: '홈페이지 제작',
-    title: '새 홈페이지보다 현재 순위 확인이 먼저',
+    eyebrow: 'SEO 홈페이지',
+    title: 'SEO 홈페이지가 구글 상위 노출의 기반입니다',
     description:
-      '구글 비즈니스 프로필만으로 시작 가능. 필요 시 프로그램 안에서 1페이지 홈페이지를 제작합니다.',
+      '홈페이지와 구글 비즈니스 프로필을 같은 키워드로 묶어 3개월 프로그램으로 진행합니다. 현재 순위부터 무료로 확인하세요.',
     primaryText: '무료 순위 점검',
     primaryTo: '/contact?type=free-check',
-    secondaryText: '홈페이지 제작 안내 보기',
+    secondaryText: 'SEO 홈페이지 사양 보기',
     secondaryTo: '/pricing#website',
   },
   SEO: {
@@ -59,7 +59,7 @@ const serviceCtas = {
     eyebrow: '유지 관리',
     title: '확보한 순위는 월 관리로 유지됩니다',
     description:
-      '프로필 게시물 · 사진, 리뷰 답글, 홈페이지 수정을 매달 관리하면 순위가 유지됩니다. 직접 또는 위탁 모두 가능.',
+      '홈페이지 수정 · 호스팅, 프로필 게시물 · 사진, 리뷰 답글을 매달 관리하면 순위가 유지됩니다. 직접 또는 위탁 모두 가능.',
     primaryText: '월 유지 관리 문의',
     primaryTo: '/contact?type=monthly-care',
     secondaryText: '서비스 및 가격 보기',

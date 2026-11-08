@@ -7,7 +7,7 @@ const FOOTER_CONTENT = {
   ko: {
     homePath: '/',
     meta: '브리즈번 로컬 SEO · 구글 상위 노출',
-    description: <>브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO.<br />North Lakes 기반, 한국어 상담.</>,
+    description: <>브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO.<br />SEO 홈페이지 + 구글 비즈니스 프로필. North Lakes 기반, 한국어 상담.</>,
     quickHeading: '빠른 메뉴',
     quickLinks: [
       ['홈', '/'],
@@ -20,7 +20,7 @@ const FOOTER_CONTENT = {
       ['무료 순위 점검', '/pricing#programs'],
       ['구글 상위 노출 3개월 프로그램', '/pricing#programs'],
       ['월 유지 관리', '/pricing#programs'],
-      ['홈페이지 제작 (필요 시)', '/pricing#website'],
+      ['SEO 홈페이지 제작', '/pricing#website'],
     ],
     contactHeading: '문의하기',
     contactPath: '/contact?type=free-check',

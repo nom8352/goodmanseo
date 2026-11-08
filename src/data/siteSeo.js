@@ -18,11 +18,11 @@ export const organizationJsonLd = {
   '@id': `${siteUrl}/#organization`,
   name: siteName,
   description:
-    '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. 구글 비즈니스 프로필 최적화, 리뷰 관리, 홈페이지 온페이지 SEO, 월간 리포트.',
+    '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. SEO 홈페이지 제작과 구글 비즈니스 프로필 최적화를 함께 진행하고 월간 리포트로 보고합니다.',
   url: siteUrl,
   logo: `${siteUrl}/favicon.png`,
   image: defaultSeoImage,
-  priceRange: 'AUD 390 - AUD 2,900',
+  priceRange: 'AUD 390 - AUD 4,400',
   knowsLanguage: ['ko', 'en'],
   areaServed: [
     { '@type': 'City', name: 'Brisbane' },

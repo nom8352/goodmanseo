@@ -22,7 +22,7 @@ const baseRoutePages = [
     route: '/',
     title: '브리즈번 로컬 구글 상위 노출 | Goodman SEO',
     description:
-      '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. 구글 비즈니스 프로필 최적화, 리뷰 관리, 홈페이지 온페이지 SEO, 월간 리포트. 한국어 상담, 영어 키워드 노출.',
+      '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. SEO 홈페이지 제작과 구글 비즈니스 프로필 최적화를 함께 진행하고 월간 리포트로 보고합니다. 한국어 상담, 영어 키워드 노출.',
     canonical: canonicalForRoute('/'),
     type: 'website',
     imageAlt: 'GoodmanSEO 브리즈번 로컬 구글 상위 노출',
@@ -62,7 +62,7 @@ const baseRoutePages = [
     route: '/pricing',
     title: '구글 상위 노출 프로그램 · 서비스 및 가격 | Goodman SEO',
     description:
-      '무료 순위 점검 · 구글 상위 노출 3개월 프로그램 AUD 2,900 · 월 유지 관리 AUD 390. 브리즈번 로컬 SEO 서비스 가격과 진행 순서.',
+      '무료 순위 점검 · 구글 상위 노출 3개월 프로그램 AUD 4,400 (SEO 홈페이지 + 구글 비즈니스 프로필) · 월 유지 관리 AUD 390. 브리즈번 로컬 SEO 서비스 가격과 진행 순서.',
     canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:
@@ -72,7 +72,7 @@ const baseRoutePages = [
       createServiceJsonLd({
         name: '구글 상위 노출 3개월 프로그램',
         description:
-          '브리즈번 로컬 비즈니스를 위한 로컬 SEO 프로그램. 검색어 선정, 구글 비즈니스 프로필 세팅, 리뷰 흐름, 홈페이지 정리, 월 리포트를 3개월 동안 진행합니다.',
+          '브리즈번 로컬 비즈니스를 위한 로컬 SEO 프로그램. 키워드 선정, SEO 홈페이지 제작, 구글 비즈니스 프로필 최적화, 리뷰 관리, 월간 리포트를 3개월 동안 진행합니다.',
         path: '/pricing',
         serviceType: 'Local SEO and Google Business Profile ranking program',
       }),
