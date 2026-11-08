@@ -34,7 +34,7 @@ const WebPricing = () => {
     <div className="min-h-screen bg-gradient-to-tr from-[#f7f2ec] via-white to-[#eee7df] pb-16 pt-24 text-[#102133]">
       <Seo
         title="구글 상위 노출 프로그램 · 서비스 및 가격"
-        description="무료 순위 점검, 구글 상위 노출 3개월 프로그램 AUD 1,490, 월 유지 관리 AUD 149. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 서비스 가격과 진행 순서를 확인하세요."
+        description="무료 순위 점검, 구글 상위 노출 3개월 프로그램 AUD 2,900, 월 유지 관리 AUD 390. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 서비스 가격과 진행 순서를 확인하세요."
         path="/pricing"
         keywords={['구글 상위 노출 가격', '로컬 SEO 가격', '구글 비즈니스 프로필 세팅 가격', '브리즈번 SEO', '무료 순위 점검']}
         jsonLd={pricingJsonLd}
@@ -98,6 +98,9 @@ const WebPricing = () => {
                 </article>
               ))}
             </div>
+            <p className="mx-auto mt-6 max-w-3xl text-center text-[0.8rem] leading-relaxed text-[#566471]">
+              참고로 호주 에이전시의 한 지역 로컬 SEO는 보통 월 AUD 800~1,500부터 시작합니다. 1인이 직접 진행하는 대신 그 아래로 맞췄고, 하는 일은 매달 리포트로 전부 보여드립니다.
+            </p>
           </div>
         </section>
 

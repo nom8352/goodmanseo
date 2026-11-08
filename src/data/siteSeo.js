@@ -22,7 +22,7 @@ export const organizationJsonLd = {
   url: siteUrl,
   logo: `${siteUrl}/favicon.png`,
   image: defaultSeoImage,
-  priceRange: 'AUD 149 - AUD 1,490',
+  priceRange: 'AUD 390 - AUD 2,900',
   knowsLanguage: ['ko', 'en'],
   areaServed: [
     { '@type': 'City', name: 'Brisbane' },

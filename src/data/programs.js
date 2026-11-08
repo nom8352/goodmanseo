@@ -1,5 +1,5 @@
 // 공개 상품은 세 가지뿐입니다. 홈페이지 제작은 필요한 경우에만 별도로 안내합니다.
-// 가격은 2026-11 개편 시점의 기준가입니다. 바꿀 때는 이 파일만 고치면 홈과 가격 페이지에 함께 반영됩니다.
+// 가격은 2026-11-08 확정 기준가입니다(3개월 2,900 / 월 390 / 홈페이지 1,900부터). 바꿀 때는 이 파일만 고치면 홈과 가격 페이지에 함께 반영됩니다.
 
 export const programsKo = [
   {
@@ -16,8 +16,8 @@ export const programsKo = [
   {
     id: 'ranking-program',
     title: '구글 상위 노출 3개월 프로그램',
-    price: 'AUD 1,490',
-    priceNote: '3개월 · 분할 결제 가능',
+    price: 'AUD 2,900',
+    priceNote: '3개월 · 월 환산 약 970 · 절반씩 분할 결제',
     desc: '검색어 선정부터 프로필, 리뷰 흐름, 홈페이지 정리, 월 리포트까지. 순위가 움직이는 데 필요한 기간을 한 번에 잡습니다.',
     points: [
       '검색어 선정 · 경쟁 가게 확인',
@@ -33,8 +33,8 @@ export const programsKo = [
   {
     id: 'monthly-care',
     title: '월 유지 관리',
-    price: 'AUD 149',
-    priceNote: '월 결제 · 3개월 뒤 선택',
+    price: 'AUD 390',
+    priceNote: '월 결제 · 3개월 뒤 선택 · 언제든 중단',
     desc: '올라간 순위를 지키는 단계입니다. 프로필 소식과 사진, 리뷰 답글, 작은 수정, 호스팅까지 맡기세요.',
     points: ['프로필 소식 · 사진 업데이트', '리뷰 답글 · 요청 관리', '홈페이지 작은 수정 · 호스팅 포함', '월 리포트'],
     cta: '유지 관리 문의',
@@ -58,8 +58,8 @@ export const programsEn = [
   {
     id: 'ranking-program',
     title: '3-Month Google Ranking Program',
-    price: 'AUD 1,490',
-    priceNote: '3 months · split payment available',
+    price: 'AUD 2,900',
+    priceNote: '3 months · about 970 per month · paid in two halves',
     desc: 'Keyword selection, profile, review flow, website alignment and monthly reports in one program.',
     points: [
       'Keyword and competitor review',
@@ -75,8 +75,8 @@ export const programsEn = [
   {
     id: 'monthly-care',
     title: 'Monthly Care',
-    price: 'AUD 149',
-    priceNote: 'Per month · optional after 3 months',
+    price: 'AUD 390',
+    priceNote: 'Per month · optional after 3 months · cancel anytime',
     desc: 'Keep the rankings you have earned. Profile posts and photos, review replies, small edits and hosting.',
     points: ['Profile posts and photos', 'Review replies and requests', 'Small website edits and hosting', 'Monthly report'],
     cta: 'Ask About Monthly Care',
@@ -88,7 +88,7 @@ export const programsEn = [
 export const websiteOption = {
   id: 'website',
   title: '홈페이지 제작 (필요한 경우)',
-  price: 'AUD 1,490부터',
+  price: 'AUD 1,900부터',
   priceNote: '3~5페이지 · 1회 결제',
   desc: '프로그램의 1페이지로 부족하고 서비스별 페이지가 필요한 경우에만 안내합니다. 검색어에 맞춘 제목과 문구로 처음부터 만듭니다.',
   points: [
@@ -139,7 +139,7 @@ export const pricingFaqs = [
   {
     question: '결제는 어떻게 진행되나요?',
     answer:
-      '3개월 프로그램은 시작할 때 절반, 두 달째에 나머지 절반을 결제합니다. 월 유지 관리는 매달 결제이고 언제든 중단할 수 있습니다. 홈페이지 제작은 계약 시 50%, 검수 완료 시 50%입니다.',
+      '3개월 프로그램은 시작할 때 절반(AUD 1,450), 두 달째에 나머지 절반을 결제합니다. 월 유지 관리는 매달 결제이고 언제든 중단할 수 있습니다. 홈페이지 제작은 계약 시 50%, 검수 완료 시 50%입니다.',
   },
   {
     question: '중도 취소 시 환불은요?',

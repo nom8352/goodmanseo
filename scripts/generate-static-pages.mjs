@@ -62,7 +62,7 @@ const baseRoutePages = [
     route: '/pricing',
     title: '구글 상위 노출 프로그램 · 서비스 및 가격 | Goodman SEO',
     description:
-      '무료 순위 점검, 구글 상위 노출 3개월 프로그램 AUD 1,490, 월 유지 관리 AUD 149. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 서비스 가격과 진행 순서를 확인하세요.',
+      '무료 순위 점검, 구글 상위 노출 3개월 프로그램 AUD 2,900, 월 유지 관리 AUD 390. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 서비스 가격과 진행 순서를 확인하세요.',
     canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:

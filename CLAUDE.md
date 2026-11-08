@@ -36,10 +36,12 @@ Also a fit: mechanics, massage/physio, tutoring. Low fit: restaurants/cafes (pro
 Source of truth: `src/data/programs.js`. Change prices there only.
 
 1. 무료 순위 점검 (free): current rank for three customer searches, one reason it is not showing, one thing to fix first, by email in 2–3 days.
-2. 구글 상위 노출 3개월 프로그램 (AUD 1,490, split payment): keyword selection, Google Business Profile setup/cleanup, review flow, website copy/titles (one-page site included if none), monthly report.
-3. 월 유지 관리 (AUD 149/month, optional after the program): profile posts/photos, review replies, small edits, hosting, monthly report.
+2. 구글 상위 노출 3개월 프로그램 (AUD 2,900, about 970/month, paid in two halves): keyword selection, Google Business Profile setup/cleanup, review flow, website copy/titles (one-page site included if none), monthly report.
+3. 월 유지 관리 (AUD 390/month, optional after the program, cancel anytime): profile posts/photos, review replies, small edits, hosting, monthly report.
 
-Website production (3–5 pages from AUD 1,490) is mentioned only as "필요한 경우" on the pricing page. Retired and not to be re-added: AI 진단, AI 비즈니스 리포트, 사이트 케어 Basic/Plus, 온라인 관리 서포트, GBP 유지 add-on, Business/Growth website packages, hosting as a separate item.
+Pricing rationale (2026-11-08): Australian single-area local SEO runs AUD 800–1,500/month and agencies start around AUD 1,500/month, so AUD 2,900 for three months (about 970/month) sits just under the market for a solo operator; a three-month program takes roughly 30–40 hours. Sales policy, not shown on the site: the first two clients may be offered AUD 2,400 in exchange for a publishable (anonymisable) case study and review.
+
+Website production (3–5 pages from AUD 1,900) is mentioned only as "필요한 경우" on the pricing page. Retired and not to be re-added: AI 진단, AI 비즈니스 리포트, 사이트 케어 Basic/Plus, 온라인 관리 서포트, GBP 유지 add-on, Business/Growth website packages, hosting as a separate item.
 
 ## Wording Rules
 
