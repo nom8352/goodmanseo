@@ -1,55 +1,55 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Youtube, Mail, ArrowUpRight } from 'lucide-react';
+import { Instagram, Facebook, Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
+import { CONTACT_EMAIL, CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '../data/contact';
 
 const FOOTER_CONTENT = {
   ko: {
     homePath: '/',
-    meta: '홈페이지 · 구글 비즈니스 · 기본 SEO',
-    description: <>고객이 검색해서 보고, 믿고, 문의할 수 있도록<br />홈페이지와 구글 기본 세팅을 정리합니다.</>,
+    meta: '브리즈번 로컬 구글 상위 노출',
+    description: <>손님이 구글에서 검색할 때 사장님 가게가 위에 나오게 합니다.<br />브리즈번 노스레이크에서, 상담은 한국어로 합니다.</>,
     quickHeading: '빠른 메뉴',
     quickLinks: [
       ['홈', '/'],
       ['서비스 및 가격', '/pricing'],
+      ['진행 방식', '/#how'],
       ['블로그', '/blog'],
-      ['진단 / 문의 신청', '/contact'],
     ],
-    servicesHeading: '서비스',
+    servicesHeading: '프로그램',
     serviceLinks: [
-      ['홈페이지 제작', '/pricing'],
-      ['구글 비즈니스 세팅', '/pricing'],
-      ['On-page SEO', '/pricing'],
-      ['AI 실전 멘토링', '/ai-business'],
-      ['AI 비즈니스 리포트', '/ai-report'],
+      ['무료 순위 점검', '/pricing#programs'],
+      ['구글 상위 노출 3개월 프로그램', '/pricing#programs'],
+      ['월 유지 관리', '/pricing#programs'],
+      ['홈페이지 제작 (필요한 경우)', '/pricing#website'],
     ],
     contactHeading: '문의하기',
-    contactPath: '/contact',
-    contactLabel: '무료 점검 신청 / 문의',
+    contactPath: '/contact?type=free-check',
+    contactLabel: '무료 순위 점검 신청',
+    location: 'North Lakes, Brisbane QLD · 호주 전역 온라인 진행',
     privacy: '개인정보처리방침',
     terms: '이용약관',
   },
   en: {
     homePath: '/en',
-    meta: 'WEBSITES · GOOGLE BUSINESS · SEO BASICS',
-    description: <>We organise the website and Google basics<br />your customers need to find, trust and contact you.</>,
+    meta: 'LOCAL GOOGLE RANKINGS · BRISBANE',
+    description: <>We get local businesses found on Google<br />when customers search for what they do.</>,
     quickHeading: 'Quick Links',
     quickLinks: [
       ['Home', '/en'],
-      ['Services', '/en#services'],
-      ['Sample Websites', '/en#samples'],
-      ['Free Check / Enquiry', '/en/contact'],
+      ['How It Works', '/en#how'],
+      ['Programs', '/en#programs'],
+      ['Free Ranking Check', '/en/contact?type=free-check'],
     ],
-    servicesHeading: 'Services',
+    servicesHeading: 'Programs',
     serviceLinks: [
-      ['Website Design', '/en#services'],
-      ['Google Business Setup', '/en#services'],
-      ['On-page SEO', '/en#services'],
-      ['AI Workflow Support', '/en#services'],
-      ['AI Business Report', '/en/ai-report'],
+      ['Free Ranking Check', '/en#programs'],
+      ['3-Month Google Ranking Program', '/en#programs'],
+      ['Monthly Care', '/en#programs'],
     ],
     contactHeading: 'Contact',
-    contactPath: '/en/contact',
-    contactLabel: 'Free Check / Enquiry',
+    contactPath: '/en/contact?type=free-check',
+    contactLabel: 'Free Ranking Check',
+    location: 'North Lakes, Brisbane QLD · Online across Australia',
     privacy: 'Privacy Policy (KR)',
     terms: 'Terms of Use (KR)',
   },
@@ -62,21 +62,19 @@ const Footer = ({ locale = 'ko' }) => {
     <footer className="border-t border-white/10 bg-[#0f2132] py-9 text-[#aebbc7] md:py-12">
       <div className="container px-6">
         <div className="grid grid-cols-2 gap-x-8 gap-y-7 lg:grid-cols-[1.45fr_0.8fr_0.9fr_1.1fr] lg:gap-10">
-          
           {/* Brand Column */}
           <div className="footer-brand col-span-2 flex flex-col items-start lg:col-span-1">
             <Link to={content.homePath} className="site-mark site-mark--footer">
               <span className="site-mark__title">GOODMANSEO</span>
               <span className="site-mark__meta">{content.meta}</span>
             </Link>
-            
+
             <p className="mt-4 max-w-[24rem] text-[0.78rem] font-normal leading-relaxed text-[#aebbc7] md:mt-5 md:text-[0.82rem]">
               {content.description}
             </p>
-            
-            {/* Social Icons */}
+
             <div className="mt-5 flex items-center gap-2.5 md:mt-6">
-              <a 
+              <a
                 href="https://www.instagram.com/goodmanseo_ai/"
                 target="_blank"
                 rel="noreferrer"
@@ -85,7 +83,7 @@ const Footer = ({ locale = 'ko' }) => {
               >
                 <Instagram size={14} />
               </a>
-              <a 
+              <a
                 href="https://www.facebook.com/goodmanseoAi"
                 target="_blank"
                 rel="noreferrer"
@@ -93,15 +91,6 @@ const Footer = ({ locale = 'ko' }) => {
                 className="flex h-8 w-8 items-center justify-center rounded-full border border-[#35495c] bg-white/[0.04] text-[#aebbc7] transition hover:border-[#657789] hover:bg-white/[0.08] hover:text-[#eef3f7]"
               >
                 <Facebook size={14} />
-              </a>
-              <a 
-                href="https://www.youtube.com/@AI_Goodman"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GoodmanSEO 유튜브 바로가기"
-                className="flex h-8 w-8 items-center justify-center rounded-full border border-[#35495c] bg-white/[0.04] text-[#aebbc7] transition hover:border-[#657789] hover:bg-white/[0.08] hover:text-[#eef3f7]"
-              >
-                <Youtube size={14} />
               </a>
             </div>
           </div>
@@ -116,7 +105,7 @@ const Footer = ({ locale = 'ko' }) => {
             </ul>
           </div>
 
-          {/* Services Column */}
+          {/* Programs Column */}
           <div className="footer-links">
             <h4 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#d9e2ea] md:mb-4 md:text-[0.72rem]">{content.servicesHeading}</h4>
             <ul className="flex flex-col gap-2 text-[0.78rem] font-normal md:gap-2.5 md:text-[0.82rem]">
@@ -129,10 +118,18 @@ const Footer = ({ locale = 'ko' }) => {
           {/* Contact Column */}
           <div className="footer-contact col-span-2 flex flex-col items-start lg:col-span-1">
             <h4 className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#d9e2ea] md:mb-4 md:text-[0.72rem]">{content.contactHeading}</h4>
-            <ul className="flex w-full flex-col items-start gap-3 text-[0.78rem] font-normal text-[#aebbc7] md:gap-4 md:text-[0.82rem]">
+            <ul className="flex w-full flex-col items-start gap-3 text-[0.78rem] font-normal text-[#aebbc7] md:gap-3.5 md:text-[0.82rem]">
+              <li className="flex min-w-0 items-center gap-3">
+                <Phone size={14} className="shrink-0 text-[#8fa0af]" />
+                <a href={CONTACT_PHONE_HREF} className="text-[#aebbc7] transition hover:text-[#eef3f7]">{CONTACT_PHONE_DISPLAY}</a>
+              </li>
               <li className="flex min-w-0 items-center gap-3">
                 <Mail size={14} className="shrink-0 text-[#8fa0af]" />
-                <a href="mailto:goodmanseo.sydney@gmail.com" className="break-all text-[#aebbc7] transition hover:text-[#eef3f7]">goodmanseo.sydney@gmail.com</a>
+                <a href={`mailto:${CONTACT_EMAIL}`} className="break-all text-[#aebbc7] transition hover:text-[#eef3f7]">{CONTACT_EMAIL}</a>
+              </li>
+              <li className="flex min-w-0 items-start gap-3">
+                <MapPin size={14} className="mt-0.5 shrink-0 text-[#8fa0af]" />
+                <span className="text-[#aebbc7]">{content.location}</span>
               </li>
               <li>
                 <Link to={content.contactPath} className="inline-flex min-h-9 items-center justify-center gap-2 rounded-[0.2rem] border border-[#405467] bg-white/[0.04] px-3.5 text-[0.76rem] font-semibold text-[#d9e2ea] transition hover:border-[#657789] hover:bg-white/[0.08] hover:text-[#eef3f7]">
@@ -142,10 +139,8 @@ const Footer = ({ locale = 'ko' }) => {
               </li>
             </ul>
           </div>
-
         </div>
 
-        {/* Bottom copyright & terms */}
         <div className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-5 text-[0.72rem] font-normal text-[#8fa0af] sm:flex-row sm:items-center sm:justify-between md:mt-10 md:gap-4 md:pt-6 md:text-[0.76rem]">
           <p>© 2026 GOODMANSEO. All rights reserved.</p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">

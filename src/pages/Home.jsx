@@ -1,29 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Search, 
-  MessageSquare, 
-  Monitor, 
-  Cpu, 
-  CheckCircle,
-  ClipboardCheck,
-  Bot,
-  PlayCircle
+import {
+  ArrowRight,
+  Search,
+  MapPin,
+  Star,
+  FileText,
+  BarChart3,
+  Scissors,
+  Wrench,
+  Sparkles,
+  ShieldCheck,
+  Check,
 } from 'lucide-react';
-import { motion as Motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
+import FaqList from '../components/FaqList';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
-import heroLadyImage from '../../img/home-hero-consultant.png';
-import testimonialAvatarOne from '../../img/testimonial-avatar-1.png';
+import { programsEn, programsKo } from '../data/programs';
+import caseChartImage from '../../img/case-search-console-2026-08.webp';
 
 const ease = [0.16, 1, 0.3, 1];
 
-const fadeUp = (delay = 0, y = 32) => ({
+const fadeUp = (delay = 0, y = 24) => ({
   initial: { opacity: 0, y },
   whileInView: { opacity: 1, y: 0 },
-  transition: { duration: 0.64, delay, ease },
-  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.6, delay, ease },
+  viewport: { once: true, amount: 0.2 },
 });
 
 const GoogleLogo = ({ className = 'h-4 w-4' }) => (
@@ -35,605 +38,624 @@ const GoogleLogo = ({ className = 'h-4 w-4' }) => (
   </svg>
 );
 
-const ReviewAvatar = ({ src, className = 'h-8 w-8' }) => (
-  <span className={`block shrink-0 overflow-hidden rounded-full bg-[#f1ebe3] ${className}`}>
-    <img
-      src={src}
-      alt=""
-      aria-hidden="true"
-      className="h-full w-full object-cover"
-    />
-  </span>
-);
-
-const HeroSocialProofVisual = ({ locale = 'ko' }) => {
-  const isEnglish = locale === 'en';
-
-  return (
-    <Motion.div
-      initial={{ opacity: 0, y: 22 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.7, delay: 0.15, ease }}
-      className="relative mx-auto w-full max-w-[430px] lg:mx-0 lg:max-w-[560px]"
-      aria-label={isEnglish ? 'GoodmanSEO website and Google Business review visual' : 'GoodmanSEO 홈페이지와 구글 비즈니스 점검 안내 이미지'}
-    >
-      <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-[#102133]/10 blur-3xl" />
-
-      <div className="relative min-h-[330px] sm:min-h-[420px] lg:min-h-[500px]">
-        <div className="absolute bottom-8 right-2 z-0 h-[66%] w-[54%] rounded-[1.1rem] border border-white/60 bg-white/34 shadow-[0_18px_40px_rgba(16,33,51,0.06)] backdrop-blur-[2px] sm:right-8 lg:right-12" />
-
-        <div className="absolute bottom-0 right-0 z-30 h-full w-full overflow-hidden pointer-events-none">
-          <Motion.img
-            src={heroLadyImage}
-            alt={isEnglish ? 'GoodmanSEO consultant holding a laptop' : '노트북을 들고 홈페이지 점검을 안내하는 GoodmanSEO 상담자'}
-            initial={{ opacity: 0, y: 20, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.78, delay: 0.18, ease }}
-            className="absolute right-0 top-0 h-[430px] w-auto max-w-none object-contain drop-shadow-[0_22px_34px_rgba(16,33,51,0.10)] sm:h-[548px] lg:h-[620px]"
-            loading="eager"
-          />
-        </div>
-
-        <Motion.div
-          initial={{ opacity: 0, x: 24, y: 8 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.55, ease }}
-          className="absolute left-0 top-2 z-20 w-[112px] rounded-[0.7rem] border border-[#d8dee5] bg-white/92 p-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-2 sm:top-5 sm:w-[144px] sm:p-3.5"
-        >
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <p className="text-[0.5rem] font-extrabold uppercase tracking-[0.08em] text-[#64748b] sm:text-[0.58rem]">Inquiry Flow</p>
-              <p className="mt-0.5 text-sm font-black tracking-[-0.04em] text-[#1d4ed8] sm:text-base">
-                {isEnglish ? 'Clearer enquiry path' : '문의 흐름 정리'}
-              </p>
-            </div>
-            <span className="rounded-full bg-[#eef3f7] px-2 py-0.5 text-[0.55rem] font-bold text-[#2d6fa3]">
-              30d
-            </span>
-          </div>
-          <svg className="mt-2 h-9 w-full overflow-visible sm:h-11" viewBox="0 0 150 64" role="img" aria-label={isEnglish ? 'Rising enquiry trend graph' : '문의 흐름 상승 그래프'}>
-            <path d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8" fill="none" stroke="#dce4eb" strokeWidth="8" strokeLinecap="round" />
-            <Motion.path
-              d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8"
-              fill="none"
-              stroke="#2d6fa3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 0.9, delay: 0.82, ease }}
-            />
-          </svg>
-        </Motion.div>
-
-        <Motion.div
-          initial={{ opacity: 0, x: -22, y: 12 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.68, ease }}
-          className="absolute left-1 top-[12.2rem] z-20 w-[142px] rounded-[0.7rem] border border-[#ddd6cc] bg-white/94 p-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-0 sm:top-[14.8rem] sm:w-[190px] sm:p-3.5"
-        >
-          <div className="flex items-center gap-3">
-            <ReviewAvatar src={testimonialAvatarOne} className="h-8 w-8 ring-2 ring-white" />
-            <div>
-              <p className="text-[0.68rem] font-extrabold text-[#102133] sm:text-xs">Client Review</p>
-              <p className="text-[0.56rem] font-semibold text-[#9a6b2f] sm:text-[0.6rem]">Local owner</p>
-            </div>
-          </div>
-          <p className="mt-2 text-[0.65rem] font-semibold leading-relaxed text-[#102133] sm:text-[0.72rem]">
-            "Search brought us more direct inquiries."
-          </p>
-          <div className="mt-2 flex items-center gap-0.5 text-xs text-[#f5b84b] sm:text-sm" aria-label={isEnglish ? '5 out of 5 stars' : '별점 5점'}>
-            {'★★★★★'.split('').map((star, index) => (
-              <Motion.span
-                key={`${star}-${index}`}
-                initial={{ opacity: 0, scale: 0.7 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.22, delay: 0.95 + index * 0.06, ease }}
-              >
-                {star}
-              </Motion.span>
-            ))}
-          </div>
-        </Motion.div>
-
-        <Motion.div
-          initial={{ opacity: 0, x: 18, y: 8 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.42, delay: 0.84, ease }}
-          className="absolute left-[4.4rem] top-[7.7rem] z-20 flex items-center gap-2 rounded-[0.7rem] border border-[#d8dee5] bg-white/94 px-3 py-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-[5.4rem] sm:top-[9.7rem] sm:px-3.5 sm:py-3"
-        >
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white shadow-sm">
-            <GoogleLogo className="h-5 w-5" />
-          </span>
-          <div>
-            <p className="text-xs font-black leading-none text-[#102133]">Google</p>
-            <p className="mt-1 text-[0.62rem] font-bold text-[#64748b]">
-              {isEnglish ? 'Profile setup (example)' : '프로필 설정 예시'}
-            </p>
-          </div>
-        </Motion.div>
-
-        <Motion.div
-          initial={{ opacity: 0, x: 18, y: 8 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.42, delay: 0.96, ease }}
-          className="absolute left-[3.8rem] top-[19.1rem] z-20 w-[132px] rounded-[0.7rem] border border-[#d8dee5] bg-white/94 p-3 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-[4.8rem] sm:top-[23.4rem] sm:w-[154px]"
-        >
-          <p className="text-[0.58rem] font-bold text-[#64748b]">
-            {isEnglish ? 'Enquiries' : '문의 연결'}
-          </p>
-          <p className="mt-1 text-base font-black tracking-[-0.04em] text-[#102133]">
-            {isEnglish ? 'Direct enquiry path' : '직접 문의로 연결'}
-          </p>
-          <p className="mt-1 text-[0.56rem] font-bold text-[#2d6fa3]">
-            {isEnglish ? 'From search & profile' : '검색·프로필에서'}
-          </p>
-        </Motion.div>
-
-      </div>
-    </Motion.div>
-  );
-};
-
-const problemsKo = [
-  { num: '01', title: '구글 검색에 잘 나오지 않아요', desc: '검색해도 내 업체가 보이지 않아요.' },
-  { num: '02', title: '홈페이지가 오래되고 취약해요', desc: '첫인상이 중요하지만 홈페이지가 낡았어요.' },
-  { num: '03', title: '리뷰가 없거나 평가가 낮아요', desc: '리뷰가 부족해서 신뢰가 가지 않아요.' },
-  { num: '04', title: '홈페이지로 문의가 잘 안 와요', desc: '방문자는 있는데 연락으로 이어지지 않아요.' },
-  { num: '05', title: '업체 정보가 제각각 달라요', desc: '주소, 전화번호가 여기저기 달라요.' },
-  { num: '06', title: '경쟁업체보다 신뢰감이 떨어져요', desc: '비슷한 서비스인데 선택받지 못해요.' }
-];
-
-const problemsEn = [
-  { num: '01', title: 'My business is hard to find on Google', desc: 'Customers search, but my business does not appear clearly.' },
-  { num: '02', title: 'My website looks dated or unreliable', desc: 'The first impression does not match the quality of my service.' },
-  { num: '03', title: 'I have too few reviews', desc: 'Customers cannot see enough proof to feel confident.' },
-  { num: '04', title: 'Website visits are not becoming enquiries', desc: 'People visit, but they do not take the next step.' },
-  { num: '05', title: 'My business details do not match', desc: 'Phone numbers, addresses or opening hours differ online.' },
-  { num: '06', title: 'Competitors look more trustworthy', desc: 'Similar businesses are being chosen ahead of mine.' },
-];
-
-const servicesKo = [
-  { icon: Monitor, title: '홈페이지 제작', desc: '신뢰를 만드는 전문적인 홈페이지' },
-  { icon: Search, title: '구글 비즈니스 세팅', desc: '검색과 지도 기본 정보를 정리합니다' },
-  { icon: CheckCircle, title: 'On-page SEO', desc: '검색 기본 구조를 정리합니다' },
-  { icon: MessageSquare, title: '소셜 링크 연결 지원', desc: '홈페이지에 기본 링크를 연결합니다' },
-  { icon: Cpu, title: 'AI 업무 지원', desc: '문구와 반복 안내를 가볍게 돕습니다' }
-];
-
-const servicesEn = [
-  { icon: Monitor, title: 'Website Design', desc: 'A clear, professional website that builds trust' },
-  { icon: Search, title: 'Google Business Setup', desc: 'Essential business details organised for Search and Maps' },
-  { icon: CheckCircle, title: 'On-page SEO', desc: 'Core page structure prepared for search visibility' },
-  { icon: MessageSquare, title: 'Social Link Setup', desc: 'Your key social profiles connected to the website' },
-  { icon: Cpu, title: 'AI Workflow Support', desc: 'Practical help with copy and repeat customer messages' },
-];
-
-const sampleSitesKo = [
-  {
-    title: '상업 청소 업체',
-    href: '/samples/north-lakes-commercial-cleaning/',
-    image: '/samples/previews/north-lakes-commercial-cleaning.jpg',
-  },
-  {
-    title: '브리즈번 청소 업체',
-    href: '/samples/brisbane-commercial-cleaning/',
-    image: '/samples/previews/brisbane-commercial-cleaning.jpg',
-  },
-  {
-    title: '로컬 카페',
-    href: '/samples/north-lakes-local-cafe/',
-    image: '/samples/previews/north-lakes-local-cafe.jpg',
-  },
-  {
-    title: '스시 매장',
-    href: '/samples/north-lakes-sushi-shop/',
-    image: '/samples/previews/north-lakes-sushi-shop.jpg',
-  },
-  {
-    title: '이벤트 케이터링',
-    href: '/samples/brisbane-event-catering/',
-    image: '/samples/previews/brisbane-event-catering.jpg',
-  },
-  {
-    title: '필라테스 스튜디오',
-    href: '/samples/frame-pilates-studio/',
-    image: '/samples/previews/frame-pilates-studio.jpg',
-  },
-  {
-    title: '부동산 중개',
-    href: '/samples/brisbane-real-estate-agency/',
-    image: '/samples/previews/brisbane-real-estate-agency.jpg',
-  },
-  {
-    title: '타일 시공',
-    href: '/samples/brisbane-tile-studio/',
-    image: '/samples/previews/brisbane-tile-studio.jpg',
-  },
-  {
-    title: '모기지 브로커',
-    href: '/samples/clearpath-mortgage-brokers/',
-    image: '/samples/previews/clearpath-mortgage-brokers.jpg',
-  },
-  {
-    title: '방역 서비스',
-    href: '/samples/moreton-bay-pest-control/',
-    image: '/samples/previews/moreton-bay-pest-control.jpg',
-  },
-  {
-    title: '운전 학원',
-    href: '/samples/northside-drive-academy/',
-    image: '/samples/previews/northside-drive-academy.jpg',
-  },
-  {
-    title: '휴대폰 수리',
-    href: '/samples/northside-phone-repairs/',
-    image: '/samples/previews/northside-phone-repairs.jpg',
-  },
-];
-
-const sampleTitlesEn = [
-  'Commercial Cleaning',
-  'Brisbane Cleaning',
-  'Local Cafe',
-  'Sushi Shop',
-  'Event Catering',
-  'Pilates Studio',
-  'Real Estate Agency',
-  'Tiling Services',
-  'Mortgage Broker',
-  'Pest Control',
-  'Driving School',
-  'Phone Repairs',
-];
-
 const HOME_CONTENT = {
   ko: {
-    headlines: [
-      { text: '비즈니스,', highlight: '홈페이지가 없나요?' },
-      { text: '구글에서,', highlight: '검색이 안 되시나요?' },
-      { text: 'SEO 기본,', highlight: '어디부터 손볼까요?' },
+    seoTitle: '브리즈번 로컬 구글 상위 노출',
+    seoDescription:
+      '손님이 구글에서 검색할 때 사장님 가게가 위에 나오게 합니다. 브리즈번 한인 사장님을 위한 로컬 SEO. 구글 프로필, 리뷰, 홈페이지를 검색어에 맞춰 정리하고 매달 숫자로 보고합니다.',
+    seoKeywords: [
+      '브리즈번 구글 상위 노출',
+      '로컬 SEO 브리즈번',
+      '구글 비즈니스 프로필 상위 노출',
+      '구글 지도 상위 노출',
+      '한인 사장님 구글 노출',
+      '노스레이크 SEO',
     ],
-    seoTitle: '홈페이지 제작 · 구글 비즈니스 · 기본 SEO',
-    seoDescription: 'GoodmanSEO는 홈페이지 제작, Google Business Profile 세팅, On-page SEO 기본 정리를 도와드립니다.',
-    seoKeywords: ['홈페이지 제작', '구글 비즈니스 프로필', '온페이지 SEO', '비즈니스 홈페이지', '시드니 홈페이지 제작'],
-    heroCopy: <>홈페이지, 구글 비즈니스, 기본 SEO를 정리해<br />고객이 믿고 문의할 수 있는 기본 환경을 만듭니다.<br />필요하면 소셜 계정 링크 연결도 기본으로 도와드립니다.</>,
-    primaryCta: '무료 점검 신청',
-    secondaryCta: '서비스 및 가격 보기',
-    contactPath: '/contact',
+    seoImageAlt: 'GoodmanSEO 브리즈번 로컬 구글 상위 노출 안내',
+    eyebrow: '브리즈번 로컬 비즈니스 · 구글 상위 노출',
+    headline: '손님이 구글에서 검색할 때,',
+    headlineAccent: '사장님 가게가 위에 나오게 합니다.',
+    heroCopy: (
+      <>
+        홈페이지를 파는 일이 아니라, 검색 결과를 바꾸는 일을 합니다.
+        <br className="hidden sm:block" />
+        구글 프로필, 리뷰, 홈페이지 문구를 손님이 실제로 치는 검색어에 맞춰 정리하고
+        <br className="hidden sm:block" />
+        매달 노출·클릭·순위를 숫자로 보여드립니다. 상담은 한국어로, 노출은 영어 검색에서.
+      </>
+    ),
+    primaryCta: '무료 순위 점검 신청',
+    secondaryCta: '서비스·가격 보기',
+    contactPath: '/contact?type=free-check',
     pricingPath: '/pricing',
-    issuesLabel: 'Common Issues',
-    issuesTitle: '혹시 이런 문제로 고민하고 계신가요?',
-    solutionsLabel: 'Our Solutions',
-    solutionsTitle: '서비스 소개',
-    solutionsCopy: '홈페이지 제작부터 구글 비즈니스, 기본 SEO까지 정리하고, 소셜은 링크 연결 정도로 지원합니다.',
-    courseLabel: '굳팀장 AI 실무 강의',
-    courseTitle: 'Codex로 콘텐츠와 반복업무를 직접 정리하고 싶다면',
-    courseCopy: '홈페이지 문구, 고객문의, 반복 안내문에 바로 쓰는 AI 활용법을 사장님 눈높이에 맞춰 정리한 비개발자용 실무 강의입니다.',
-    courseCta: '강의 보기',
-    reportLabel: 'AI 비즈니스 리포트',
-    reportTitle: '무엇을 먼저 고칠지 30일·90일 실행 순서로 확인하세요',
-    reportCopy: '업종, 지역, 경쟁사와 실제 홈페이지를 기준으로 SEO, 구글 노출, 전환 흐름을 함께 분석합니다.',
-    reportPrice: '런칭 특별가 AUD 249',
-    reportCta: '비즈니스 리포트 보기',
-    reportPath: '/ai-report',
-    samplesLabel: 'Sample Websites',
-    samplesTitle: '업종별 샘플 사이트',
-    samplesCopy: '청소, 음식점, 스튜디오, 수리, 전문 서비스처럼 호주 로컬 비즈니스에 맞춘 홈페이지 예시입니다. 내 업종에 가까운 형태를 먼저 확인해보세요.',
-    sampleCta: '보기',
-    sampleAlt: (title) => `${title} 샘플 홈페이지 미리보기`,
-    sampleFooter: '마음에 드는 샘플이 있으면 무료 점검 신청 때 업종과 원하는 방향을 함께 남겨주세요.',
-    problems: problemsKo,
-    services: servicesKo,
-    sampleSites: sampleSitesKo,
+    proof: {
+      windowLabel: 'Google Search Console · 2026.05.19 – 08.18',
+      imageAlt: '직접 관리하는 브리즈번 북부 가게의 구글 서치콘솔 3개월 화면. 클릭 131회, 노출 4,450회, 노출이 하루 0회에서 170회 가까이 늘어난 그래프',
+      stats: [
+        { label: '클릭', value: '131회' },
+        { label: '노출', value: '4,450회' },
+        { label: '평균 순위', value: '16.1위' },
+      ],
+      badgeLabel: '2026년 11월 확인',
+      badgeValue: '주요 검색어 일반 검색 3위 · 지도 1~2위',
+      caption: '브리즈번 북부의 아기 사진 스튜디오. 직접 관리하는 가게라 가게 이름은 상담에서 보여드립니다.',
+    },
+    resultsLabel: 'Results',
+    resultsTitle: '3개월 동안 생긴 변화',
+    results: [
+      { value: '0 → 170', unit: '회', label: '하루 구글 노출', note: '2026년 5월 → 8월' },
+      { value: '131', unit: '회', label: '검색에서 들어온 클릭', note: '3개월 합계' },
+      { value: '+84', unit: '계단', label: '주요 검색어 순위 상승', note: '순위 도구 기준' },
+    ],
+    resultsCopy:
+      '검색 결과에 보이기 시작하자 예약 문의가 달라졌습니다. 2026년 11월 확인 기준으로 주요 검색어에서 일반 검색 3위, 지도 1~2위에 있습니다.',
+    resultsNote: '서치콘솔과 순위 도구 캡처 기준입니다. 순위는 검색하는 위치와 시점에 따라 달라집니다.',
+    howLabel: 'How It Works',
+    howTitle: '순위는 이렇게 올라갑니다',
+    howCopy: '특별한 비법이 아니라 다섯 가지를 빠짐없이, 꾸준히 하는 일입니다. 홈페이지는 그중 하나일 뿐이에요.',
+    steps: [
+      {
+        icon: Search,
+        title: '손님이 치는 검색어 정하기',
+        desc: '“lash extensions north lakes”처럼 손님이 실제로 치는 말 3~5개를 정합니다. 가게 이름 검색은 여기 안 들어갑니다.',
+      },
+      {
+        icon: MapPin,
+        title: '구글 프로필 채우기',
+        desc: '카테고리, 서비스, 지역, 사진, 영업시간, 예약·문의 버튼. 비어 있는 칸이 없게 만들고 홈페이지와 정보를 맞춥니다.',
+      },
+      {
+        icon: Star,
+        title: '리뷰가 꾸준히 쌓이게',
+        desc: '요청 문구와 링크(QR)를 만들어 드리고, 답글도 같이 씁니다. 리뷰가 멈춘 가게는 순위도 멈춥니다.',
+      },
+      {
+        icon: FileText,
+        title: '홈페이지를 검색어에 맞게',
+        desc: '지역과 서비스가 글로 분명히 적히게 제목과 문장을 고칩니다. 홈페이지가 없으면 이 단계에서 1페이지를 만들어 드립니다.',
+      },
+      {
+        icon: BarChart3,
+        title: '매달 숫자로 확인',
+        desc: '노출, 클릭, 순위를 월 1회 정리해 보내드립니다. 효과 없는 작업은 멈추고 되는 쪽으로 옮깁니다.',
+      },
+    ],
+    fitLabel: 'Who It Is For',
+    fitTitle: '이런 가게에 특히 잘 맞습니다',
+    fitCopy: '손님이 영어로 “서비스 + 동네”를 검색해서 찾아오는 가게. 한인 손님이 아니어도 됩니다.',
+    fits: [
+      {
+        icon: Scissors,
+        title: '뷰티샵',
+        sub: '속눈썹 · 네일 · 피부 · 반영구 · 헤어',
+        query: 'lash extensions north lakes',
+        now: '인스타는 열심히 하는데 구글에는 거의 없는 경우가 많아요.',
+        after: '예약제라 손님 한 명이 오래 남습니다. 검색에서 보이면 바로 예약으로 이어져요.',
+      },
+      {
+        icon: Wrench,
+        title: '에어컨 · 전기 · 배관',
+        sub: '설치 · 수리 · 냉동',
+        query: 'split system installation north brisbane',
+        now: '지인 소개로만 일이 들어오고 홈페이지는 없는 경우가 대부분이에요.',
+        after: '건당 금액이 커서 검색에서 들어온 일 한 건이면 비용이 빠집니다.',
+      },
+      {
+        icon: Sparkles,
+        title: '청소',
+        sub: '본드 · 카펫 · 상업 청소',
+        query: 'bond cleaning north lakes',
+        now: '광고비를 써야만 전화가 오고, 끊으면 바로 조용해져요.',
+        after: '동네 이름으로 검색에 걸리면 광고 없이도 전화가 옵니다. 효과를 전화 수로 바로 셀 수 있어요.',
+      },
+    ],
+    fitFooter: '식당·카페, 정비소, 마사지, 학원도 같은 방법이 통합니다. 업종이 달라도 먼저 물어보세요.',
+    programsLabel: 'Programs',
+    programsTitle: '프로그램과 가격',
+    programsCopy: '세 가지뿐입니다. 무료로 시작해서, 필요한 만큼만 이어가세요.',
+    programs: programsKo,
+    programsFooter: '홈페이지를 새로 만들어야 하는 경우는 따로 안내드립니다.',
+    programsFooterLink: '홈페이지 제작 안내 보기',
+    programsFooterPath: '/pricing#website',
+    promiseLabel: 'Our Promise',
+    promiseTitle: '상위 노출을 보장하지는 않습니다',
+    promiseCopy: '순위는 구글이 정합니다. 보장을 내세우는 대신 세 가지를 지킵니다.',
+    promises: [
+      { title: '한 일을 전부 보여드립니다', desc: '무엇을 바꿨고 왜 바꿨는지 매달 정리해서 보냅니다.' },
+      { title: '숫자로 보고합니다', desc: '느낌이 아니라 서치콘솔의 노출·클릭·순위로 이야기합니다.' },
+      { title: '안 되면 바꿉니다', desc: '효과 없는 작업은 멈추고, 되는 쪽으로 옮깁니다.' },
+    ],
+    promiseFooter: '직접 관리하는 가게에서 같은 방법으로 먼저 확인했습니다. 위의 그래프가 그 기록이에요.',
+    faqLabel: 'FAQ',
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      {
+        question: '얼마나 걸리나요?',
+        answer: '보통 첫 변화는 4~8주 사이에 보이기 시작하고, 3개월을 한 단위로 봅니다. 경쟁이 심한 검색어는 더 걸릴 수 있어서 처음 점검 때 솔직하게 말씀드립니다.',
+      },
+      {
+        question: '홈페이지가 없어도 되나요?',
+        answer: '네. 구글 프로필만으로 시작할 수 있고, 필요하면 프로그램 안에서 1페이지 홈페이지를 만들어 드립니다. 여러 페이지가 필요한 경우만 홈페이지 제작을 따로 안내합니다.',
+      },
+      {
+        question: '손님이 한인이 아닌데도 되나요?',
+        answer: '오히려 그 경우에 맞습니다. 검색 노출은 영어 검색어로 만들고, 상담과 보고만 한국어로 합니다.',
+      },
+      {
+        question: '인스타그램이나 페이스북도 해 주시나요?',
+        answer: '홈페이지와 프로필에 링크를 연결하는 것까지만 합니다. SNS 운영이나 게시물 작성은 하지 않습니다.',
+      },
+      {
+        question: '결제는 어떻게 하나요?',
+        answer: '3개월 프로그램은 시작할 때 절반, 두 달째에 나머지 절반을 결제합니다. 작업 시작 전에는 전액 환불됩니다.',
+      },
+    ],
+    finalTitle: '지금 내 가게는 몇 위일까요?',
+    finalCopy: '손님이 칠 검색어 3개만 알려주시면, 현재 순위와 먼저 고칠 것 한 가지를 2~3일 안에 보내드립니다. 받으셨다고 꼭 뭘 하셔야 하는 건 아닙니다.',
+    finalCta: '무료 순위 점검 신청',
   },
   en: {
-    headlines: [
-      { text: 'Does your business', highlight: 'need a website?' },
-      { text: 'Not showing up', highlight: 'clearly on Google?' },
-      { text: 'Not sure where', highlight: 'to start with SEO?' },
+    seoTitle: 'Local Google Rankings for Brisbane Businesses',
+    seoDescription:
+      'We get local service businesses found on Google in Brisbane. Google Business Profile, reviews and website copy aligned to the searches customers actually type, with monthly numbers.',
+    seoKeywords: ['Brisbane local SEO', 'Google Business Profile ranking', 'Google Maps ranking Brisbane', 'North Lakes SEO', 'local SEO for small business'],
+    seoImageAlt: 'GoodmanSEO local Google rankings for Brisbane businesses',
+    eyebrow: 'Brisbane local businesses · Google rankings',
+    headline: 'When customers search on Google,',
+    headlineAccent: 'your business shows up.',
+    heroCopy: (
+      <>
+        We do not sell websites. We change what customers see when they search.
+        <br className="hidden sm:block" />
+        Your Google profile, reviews and website copy are aligned to the searches people actually type,
+        <br className="hidden sm:block" />
+        and you get impressions, clicks and rankings in numbers every month.
+      </>
+    ),
+    primaryCta: 'Request a Free Ranking Check',
+    secondaryCta: 'See Programs & Pricing',
+    contactPath: '/en/contact?type=free-check',
+    pricingPath: '/pricing',
+    proof: {
+      windowLabel: 'Google Search Console · 19 May – 18 Aug 2026',
+      imageAlt: 'Three months of Google Search Console data for a North Brisbane business we manage: 131 clicks, 4,450 impressions, daily impressions rising from zero to about 170',
+      stats: [
+        { label: 'Clicks', value: '131' },
+        { label: 'Impressions', value: '4,450' },
+        { label: 'Avg. position', value: '16.1' },
+      ],
+      badgeLabel: 'Checked Nov 2026',
+      badgeValue: 'Main keyword: #3 organic · #1–2 on Maps',
+      caption: 'A baby photography studio in North Brisbane that we manage directly. We share the business name in consultation.',
+    },
+    resultsLabel: 'Results',
+    resultsTitle: 'What changed in three months',
+    results: [
+      { value: '0 → 170', unit: '', label: 'Daily Google impressions', note: 'May → August 2026' },
+      { value: '131', unit: '', label: 'Clicks from search', note: 'Three-month total' },
+      { value: '+84', unit: '', label: 'Main keyword ranking gain', note: 'Rank tracker' },
     ],
-    seoTitle: 'Websites · Google Business · SEO Basics',
-    seoDescription: 'GoodmanSEO helps Australian local businesses improve their website, Google Business Profile and on-page SEO basics.',
-    seoKeywords: ['small business website Australia', 'Google Business Profile setup', 'local SEO basics', 'Sydney website design', 'business website review'],
-    heroCopy: <>We organise your website, Google Business Profile and SEO basics<br className="hidden sm:block" /> so customers can find, trust and contact your business.<br className="hidden sm:block" /> We can also connect your key social profiles.</>,
-    primaryCta: 'Request a Free Check',
-    secondaryCta: 'Explore Our Services',
-    contactPath: '/en/contact',
-    pricingPath: '/en#services',
-    issuesLabel: 'Common Issues',
-    issuesTitle: 'Do any of these problems sound familiar?',
-    solutionsLabel: 'Our Solutions',
-    solutionsTitle: 'Practical support for your online basics',
-    solutionsCopy: 'We organise your website, Google Business Profile and on-page SEO, with simple social profile connections where needed.',
-    courseLabel: 'Practical AI Training',
-    courseTitle: 'Want to organise content and repeat tasks with Codex?',
-    courseCopy: 'A practical, non-technical course for using AI with website copy, customer enquiries and repeat business messages.',
-    courseCta: 'View Course (Korean)',
-    reportLabel: 'AI Business Report',
-    reportTitle: 'See what to fix first with a 30/90-day action roadmap',
-    reportCopy: 'We review your industry, location, competitors and actual website across SEO, Google visibility and conversion flow.',
-    reportPrice: 'Launch price AUD 249',
-    reportCta: 'View AI Business Report',
-    reportPath: '/en/ai-report',
-    samplesLabel: 'Sample Websites',
-    samplesTitle: 'Websites for Australian local businesses',
-    samplesCopy: 'Explore practical website examples for cleaning, hospitality, studios, repairs and professional services. Start with the example closest to your business.',
-    sampleCta: 'View',
-    sampleAlt: (title) => `${title} sample website preview`,
-    sampleFooter: 'Found a direction you like? Tell us your industry and preferred example when you request a free check.',
-    problems: problemsEn,
-    services: servicesEn,
-    sampleSites: sampleSitesKo.map((site, index) => ({ ...site, title: sampleTitlesEn[index] })),
+    resultsCopy:
+      'Once the business appeared in search results, booking enquiries changed. As of November 2026 the main keyword sits at #3 in organic results and #1–2 on Maps.',
+    resultsNote: 'Based on Search Console and rank-tracker screenshots. Rankings vary by location and time.',
+    howLabel: 'How It Works',
+    howTitle: 'How rankings actually move',
+    howCopy: 'No secret trick. Five things done completely and consistently. The website is only one of them.',
+    steps: [
+      { icon: Search, title: 'Pick the searches customers type', desc: 'Three to five real phrases like “lash extensions north lakes”. Brand-name searches do not count.' },
+      { icon: MapPin, title: 'Complete the Google profile', desc: 'Categories, services, areas, photos, hours and booking buttons. No empty fields, and details that match the website.' },
+      { icon: Star, title: 'Keep reviews coming', desc: 'Request wording, links and QR codes, plus replies written with you. When reviews stop, rankings stop.' },
+      { icon: FileText, title: 'Match the website to the searches', desc: 'Location and services written clearly in titles and copy. No website yet? A one-page site is built at this step.' },
+      { icon: BarChart3, title: 'Check the numbers monthly', desc: 'Impressions, clicks and rankings once a month. What does not work is stopped and replaced.' },
+    ],
+    fitLabel: 'Who It Is For',
+    fitTitle: 'A good fit for businesses like these',
+    fitCopy: 'Businesses that customers find by searching “service + suburb” in English.',
+    fits: [
+      { icon: Scissors, title: 'Beauty', sub: 'Lashes · nails · skin · brows · hair', query: 'lash extensions north lakes', now: 'Active on Instagram, almost invisible on Google.', after: 'Appointment-based, so one new customer stays for a long time.' },
+      { icon: Wrench, title: 'Air con · electrical · plumbing', sub: 'Installation · repairs · refrigeration', query: 'split system installation north brisbane', now: 'Work comes through word of mouth only and there is no website.', after: 'Job values are high, so one job from search covers the cost.' },
+      { icon: Sparkles, title: 'Cleaning', sub: 'Bond · carpet · commercial', query: 'bond cleaning north lakes', now: 'The phone only rings while ads are running.', after: 'Suburb searches bring calls without ads, and results are easy to count.' },
+    ],
+    fitFooter: 'The same method works for restaurants, mechanics, massage and tutoring. Ask even if your industry is different.',
+    programsLabel: 'Programs',
+    programsTitle: 'Programs and pricing',
+    programsCopy: 'Only three. Start free and continue as far as you need.',
+    programs: programsEn,
+    programsFooter: 'If you need a new multi-page website, we quote that separately.',
+    programsFooterLink: 'See website options',
+    programsFooterPath: '/pricing#website',
+    promiseLabel: 'Our Promise',
+    promiseTitle: 'We do not guarantee rankings',
+    promiseCopy: 'Google decides rankings. Instead of a guarantee, we keep three promises.',
+    promises: [
+      { title: 'You see everything we do', desc: 'What changed and why, summarised every month.' },
+      { title: 'We report in numbers', desc: 'Search Console impressions, clicks and rankings, not impressions.' },
+      { title: 'We change what does not work', desc: 'Ineffective work is stopped and replaced.' },
+    ],
+    promiseFooter: 'We tested the same method first on a business we manage directly. The chart above is that record.',
+    faqLabel: 'FAQ',
+    faqTitle: 'Common questions',
+    faqs: [
+      { question: 'How long does it take?', answer: 'The first changes usually appear within 4–8 weeks, and we work in three-month blocks. Competitive searches can take longer, and we say so at the first check.' },
+      { question: 'Do I need a website?', answer: 'No. You can start with the Google profile alone, and a one-page site is included in the program if needed.' },
+      { question: 'Do you also run Instagram or Facebook?', answer: 'We connect the links on your website and profile. We do not run social accounts or write posts.' },
+      { question: 'How do payments work?', answer: 'Half at the start of the three-month program and half in month two. Full refund before work begins.' },
+    ],
+    finalTitle: 'Where does your business rank right now?',
+    finalCopy: 'Send us three searches your customers would type. You get current rankings and one thing to fix first within 2–3 days, with no obligation.',
+    finalCta: 'Request a Free Ranking Check',
   },
 };
+
+const CaseProofVisual = ({ proof }) => (
+  <Motion.div
+    initial={{ opacity: 0, y: 22 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, delay: 0.15, ease }}
+    className="relative mx-auto w-full max-w-[560px] lg:mx-0"
+  >
+    <div className="absolute inset-x-10 bottom-0 h-16 rounded-full bg-[#102133]/10 blur-3xl" aria-hidden="true" />
+
+    <div className="relative overflow-hidden rounded-[0.45rem] border border-[#d8dee5] bg-white shadow-[0_18px_40px_rgba(16,33,51,0.10)]">
+      <div className="flex items-center justify-between gap-3 border-b border-[#e7ebef] bg-[#f6f8fa] px-3.5 py-2.5">
+        <div className="flex items-center gap-1.5" aria-hidden="true">
+          <span className="h-2 w-2 rounded-full bg-[#e4e8ec]" />
+          <span className="h-2 w-2 rounded-full bg-[#e4e8ec]" />
+          <span className="h-2 w-2 rounded-full bg-[#e4e8ec]" />
+        </div>
+        <p className="flex items-center gap-1.5 text-[0.62rem] font-bold tracking-[0.02em] text-[#64748b] sm:text-[0.68rem]">
+          <GoogleLogo className="h-3 w-3" />
+          {proof.windowLabel}
+        </p>
+      </div>
+
+      <img
+        src={caseChartImage}
+        alt={proof.imageAlt}
+        width="1513"
+        height="493"
+        className="block w-full bg-white"
+        loading="eager"
+        fetchPriority="high"
+      />
+
+      <div className="grid grid-cols-3 divide-x divide-[#e7ebef] border-t border-[#e7ebef]">
+        {proof.stats.map((stat) => (
+          <div key={stat.label} className="px-3 py-3 text-center sm:px-4">
+            <p className="text-[0.6rem] font-bold uppercase tracking-[0.08em] text-[#64748b]">{stat.label}</p>
+            <p className="mt-0.5 text-base font-black tracking-[-0.03em] text-[#102133] sm:text-lg">{stat.value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <Motion.div
+      initial={{ opacity: 0, x: 18, y: 6 }}
+      animate={{ opacity: 1, x: 0, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.7, ease }}
+      className="absolute -top-3 right-3 z-10 rounded-[0.35rem] border border-[#d8c8af] bg-[#102133] px-3 py-2 text-left shadow-[0_8px_18px_rgba(16,33,51,0.18)] sm:-right-3 sm:-top-4"
+    >
+      <p className="text-[0.56rem] font-bold uppercase tracking-[0.1em] text-[#d8c8af]">{proof.badgeLabel}</p>
+      <p className="mt-0.5 text-[0.7rem] font-black text-white sm:text-[0.76rem]">{proof.badgeValue}</p>
+    </Motion.div>
+
+    <p className="mt-4 text-[0.72rem] leading-relaxed text-[#687582] sm:text-[0.76rem]">{proof.caption}</p>
+  </Motion.div>
+);
+
+const SectionLabel = ({ children, dark = false }) => (
+  <span className={`font-serif italic text-[0.82rem] ${dark ? 'text-[#aab5bd]' : 'text-[#5f6872]'}`}>{children}</span>
+);
+
+const SectionTitle = ({ children, dark = false, as: Tag = 'h2' }) => (
+  <Tag
+    className={`mt-2.5 font-sans text-[clamp(1.45rem,2.05vw,2.15rem)] font-extrabold leading-[1.18] tracking-[-0.03em] ${
+      dark ? 'text-[#eef3f7]' : 'text-[var(--text-main)]'
+    }`}
+  >
+    {children}
+  </Tag>
+);
 
 const Home = ({ locale = 'ko' }) => {
   const content = HOME_CONTENT[locale] || HOME_CONTENT.ko;
-  const { headlines } = content;
-
-  const [headlineIndex, setHeadlineIndex] = React.useState(0);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setHeadlineIndex((prev) => (prev + 1) % headlines.length);
-    }, 9500); // Slowed down by 2.5x (from 3.8s to 9.5s)
-    return () => clearInterval(timer);
-  }, [headlines.length]);
+  const isEnglish = locale === 'en';
 
   return (
     <div className="overflow-hidden bg-[var(--bg-dark)] pt-20">
       <Seo
         title={content.seoTitle}
         description={content.seoDescription}
-        path={locale === 'en' ? '/en' : '/'}
-        imageAlt={locale === 'en'
-          ? 'GoodmanSEO website, Google Business Profile and SEO basics'
-          : 'GoodmanSEO 홈페이지, 구글 비즈니스, 기본 SEO 안내'}
+        path={isEnglish ? '/en' : '/'}
+        imageAlt={content.seoImageAlt}
         keywords={content.seoKeywords}
         jsonLd={[organizationJsonLd, websiteJsonLd]}
         locale={locale}
         alternates={[{ lang: 'ko', path: '/' }, { lang: 'en', path: '/en' }]}
       />
 
-      {/* 1. Hero Section */}
-      <section className="relative pt-6 pb-0 sm:pt-10 md:pt-12 lg:pt-12">
+      {/* 1. Hero */}
+      <section className="relative pb-12 pt-6 sm:pt-10 md:pb-16 md:pt-12">
         <div className="container relative z-10 px-6">
-          <div className="grid gap-6 sm:gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:gap-10">
-            
-            {/* Left Column: Typography & CTAs */}
+          <div className="grid gap-10 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:gap-12">
             <Motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, ease }}
-              className="flex flex-col text-left lg:pt-14"
+              className="flex flex-col text-left"
             >
-              <h1 
-                style={{ perspective: 1000 }}
-                className="font-serif text-[clamp(1.8rem,4.0vw,3.6rem)] font-bold leading-[1.15] tracking-tight text-[var(--text-main)] min-h-[5.2rem] sm:min-h-[6.8rem] lg:min-h-[8.8rem] flex flex-col justify-center overflow-hidden"
-              >
-                <AnimatePresence mode="wait">
-                  <Motion.span
-                    key={headlineIndex}
-                    initial={{ opacity: 0, y: 50, rotateX: -90 }}
-                    animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                    exit={{ opacity: 0, y: -50, rotateX: 90 }}
-                    transition={{ 
-                      type: "spring",
-                      stiffness: 140, // High stiffness for elastic snap
-                      damping: 12,    // Snappy damping for back-bounce
-                      mass: 0.6       // Light feel to accelerate quickly
-                    }}
-                    style={{ transformOrigin: "50% 50% -40px", transformStyle: "preserve-3d" }}
-                    className="block"
-                  >
-                    <span className="block">{headlines[headlineIndex].text}</span>
-                    <span className="block text-[var(--accent-primary)]">
-                      {headlines[headlineIndex].highlight}
-                    </span>
-                  </Motion.span>
-                </AnimatePresence>
+              <p className="inline-flex w-fit items-center gap-2 rounded-[0.2rem] border border-[#102133]/15 bg-white/60 px-2.5 py-1 text-[0.66rem] font-black uppercase tracking-[0.12em] text-[#102133]">
+                <GoogleLogo className="h-3.5 w-3.5" />
+                {content.eyebrow}
+              </p>
+
+              <h1 className="mt-5 font-serif text-[clamp(1.85rem,4vw,3.5rem)] font-bold leading-[1.18] tracking-tight text-[var(--text-main)]">
+                <span className="block">{content.headline}</span>
+                <span className="block text-[var(--accent-primary)]">{content.headlineAccent}</span>
               </h1>
-              
-              <p className="mt-6 max-w-[42rem] text-[clamp(0.95rem,2vw,1.1rem)] leading-relaxed text-text-muted">{content.heroCopy}</p>
+
+              <p className="mt-6 max-w-[42rem] text-[clamp(0.95rem,2vw,1.08rem)] leading-relaxed text-text-muted">{content.heroCopy}</p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link to={content.contactPath} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[0.2rem] border border-[#102133] bg-[#102133] px-5 py-3 text-xs font-black text-white shadow-[0_8px_18px_rgba(16,33,51,0.12)] transition hover:-translate-y-0.5 hover:bg-[#172d42]">
+                <Link
+                  to={content.contactPath}
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[0.2rem] border border-[#102133] bg-[#102133] px-5 py-3 text-xs font-black text-white shadow-[0_8px_18px_rgba(16,33,51,0.12)] transition hover:-translate-y-0.5 hover:bg-[#172d42]"
+                >
                   {content.primaryCta}
                   <ArrowRight size={15} />
                 </Link>
-                <Link to={content.pricingPath} className="inline-flex min-h-11 items-center justify-center rounded-[0.2rem] border border-[#aeb6bc] bg-white/60 px-5 py-3 text-xs font-black text-[#102133] shadow-[0_8px_18px_rgba(16,33,51,0.04)] transition hover:-translate-y-0.5 hover:bg-white">
+                <Link
+                  to={content.pricingPath}
+                  className="inline-flex min-h-11 items-center justify-center rounded-[0.2rem] border border-[#aeb6bc] bg-white/60 px-5 py-3 text-xs font-black text-[#102133] shadow-[0_8px_18px_rgba(16,33,51,0.04)] transition hover:-translate-y-0.5 hover:bg-white"
+                >
                   {content.secondaryCta}
                 </Link>
               </div>
             </Motion.div>
 
-            {/* Right Column: Social proof and performance preview */}
-            <HeroSocialProofVisual locale={locale} />
-
+            <CaseProofVisual proof={content.proof} />
           </div>
         </div>
       </section>
 
-      {/* 2. Problem Section (6대 고민 라인 그리드) */}
-      <section className="max-w-none py-12 md:py-14 lg:py-16 border-t border-[#e7e0d8] bg-white">
-        <div className="container px-6 text-center">
-          <div className="max-w-3xl mx-auto mb-7 md:mb-10">
-            <span className="font-serif italic text-[#5f6872] text-[0.82rem]">{content.issuesLabel}</span>
-            <h2 className="mt-2.5 font-sans text-[clamp(1.45rem,2.05vw,2.15rem)] font-extrabold leading-[1.18] tracking-[-0.03em] text-[var(--text-main)]">
-              {content.issuesTitle}
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:grid-cols-2 md:gap-x-8 md:gap-y-8 lg:grid-cols-3">
-            {content.problems.map((prob, i) => (
-              <Motion.div
-                key={prob.num}
-                {...fadeUp(i * 0.08, 24)}
-                className="pt-4 border-t border-[var(--glass-border)] flex flex-col"
-              >
-                <span className="font-serif italic text-xl md:text-2xl lg:text-3xl text-[#102133]/20 mb-2">{prob.num}</span>
-                <h3 className="text-[0.82rem] md:text-sm font-bold tracking-[-0.02em] text-[var(--text-main)]">{prob.title}</h3>
-                <p className="mt-1.5 text-[0.68rem] md:text-[0.76rem] leading-relaxed text-[var(--text-muted)]">{prob.desc}</p>
-              </Motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 2. Results band */}
+      <section id="results" className="max-w-none scroll-mt-20 bg-[#102133] py-12 md:py-14 lg:py-16">
+        <div className="container px-6">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:gap-12">
+            <div>
+              <SectionLabel dark>{content.resultsLabel}</SectionLabel>
+              <SectionTitle dark>{content.resultsTitle}</SectionTitle>
+              <p className="mt-4 text-[0.82rem] leading-relaxed text-[#aeb8c1] md:text-[0.88rem]">{content.resultsCopy}</p>
+              <p className="mt-3 text-[0.68rem] leading-relaxed text-[#7f8d99]">{content.resultsNote}</p>
+            </div>
 
-      {/* 3. Service Section */}
-      <section id="services" className="max-w-none scroll-mt-20 bg-[#102133] px-0 pt-12 pb-5 md:pt-14 md:pb-6 lg:pt-16 lg:pb-7">
-        <div className="container px-6 text-center">
-          <div className="max-w-3xl mx-auto mb-7 md:mb-8">
-            <span className="font-serif italic text-[#aab5bd] text-[0.82rem]">{content.solutionsLabel}</span>
-            <h2 className="mt-2.5 font-sans text-[clamp(1.45rem,2.05vw,2.15rem)] font-extrabold leading-[1.18] tracking-[-0.03em] text-[#eef3f7]">
-              {content.solutionsTitle}
-            </h2>
-            <p className="mt-3 text-[0.78rem] md:text-[0.86rem] leading-relaxed text-[#aeb8c1]">
-              {content.solutionsCopy}
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:gap-3.5 lg:grid-cols-5">
-            {content.services.map((svc, i) => {
-              const Icon = svc.icon;
-              return (
+            <div className="grid gap-3 sm:grid-cols-3">
+              {content.results.map((item, index) => (
                 <Motion.div
-                  key={svc.title}
-                  {...fadeUp(i * 0.08, 24)}
-                  className="last:col-span-2 rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.1] sm:p-5 lg:last:col-span-1 flex flex-col items-center justify-between"
+                  key={item.label}
+                  {...fadeUp(index * 0.08, 20)}
+                  className="rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-5"
                 >
-                  <div className="flex flex-col items-center">
-                    <div className="mb-3 md:mb-4 flex h-9 w-9 shrink-0 items-center justify-center rounded-[0.35rem] border border-[#d8c8af]/30 bg-white/[0.06] text-[#d8c8af]">
-                      <Icon size={18} className="block shrink-0" />
-                    </div>
-                    <h3 className="text-[0.82rem] md:text-sm font-bold tracking-[-0.02em] text-[#eef3f7]">{svc.title}</h3>
-                    <p className="mt-2 text-[0.68rem] md:text-[0.74rem] leading-relaxed text-[#aab5bd]">{svc.desc}</p>
-                  </div>
+                  <p className="text-[clamp(1.7rem,3vw,2.4rem)] font-black leading-none tracking-[-0.04em] text-[#eef3f7]">
+                    {item.value}
+                    {item.unit ? <span className="ml-1 text-base font-bold text-[#d8c8af]">{item.unit}</span> : null}
+                  </p>
+                  <p className="mt-3 text-[0.82rem] font-bold text-[#eef3f7]">{item.label}</p>
+                  <p className="mt-1 text-[0.68rem] text-[#aab5bd]">{item.note}</p>
                 </Motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. How it works */}
+      <section id="how" className="max-w-none scroll-mt-20 border-t border-[#e7e0d8] bg-white py-12 md:py-14 lg:py-16">
+        <div className="container px-6">
+          <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
+            <SectionLabel>{content.howLabel}</SectionLabel>
+            <SectionTitle>{content.howTitle}</SectionTitle>
+            <p className="mt-3 text-[0.82rem] leading-relaxed text-[var(--text-muted)] md:text-[0.88rem]">{content.howCopy}</p>
+          </div>
+
+          <ol className="grid gap-4 md:grid-cols-2 lg:grid-cols-5 lg:gap-3">
+            {content.steps.map((step, index) => {
+              const Icon = step.icon;
+              return (
+                <Motion.li
+                  key={step.title}
+                  {...fadeUp(index * 0.06, 20)}
+                  className="flex flex-col border-t-2 border-[#102133] pt-4"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-serif text-2xl italic text-[#102133]/25">0{index + 1}</span>
+                    <span className="flex h-8 w-8 items-center justify-center rounded-[0.35rem] bg-[#f7f2ec] text-[#102133]">
+                      <Icon size={16} />
+                    </span>
+                  </div>
+                  <h3 className="mt-3 text-[0.9rem] font-bold tracking-[-0.02em] text-[var(--text-main)]">{step.title}</h3>
+                  <p className="mt-2 text-[0.74rem] leading-relaxed text-[var(--text-muted)] md:text-[0.78rem]">{step.desc}</p>
+                </Motion.li>
+              );
+            })}
+          </ol>
+        </div>
+      </section>
+
+      {/* 4. Who it is for */}
+      <section id="fit" className="max-w-none scroll-mt-20 bg-[var(--bg-dark)] py-12 md:py-14 lg:py-16">
+        <div className="container px-6">
+          <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
+            <SectionLabel>{content.fitLabel}</SectionLabel>
+            <SectionTitle>{content.fitTitle}</SectionTitle>
+            <p className="mt-3 text-[0.82rem] leading-relaxed text-[var(--text-muted)] md:text-[0.88rem]">{content.fitCopy}</p>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {content.fits.map((fit, index) => {
+              const Icon = fit.icon;
+              return (
+                <Motion.article
+                  key={fit.title}
+                  {...fadeUp(index * 0.08, 22)}
+                  className="flex flex-col rounded-[0.45rem] border border-[#e1dbd2] bg-white p-5 shadow-[0_8px_24px_rgba(16,33,51,0.04)] sm:p-6"
+                >
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[0.35rem] bg-[#102133] text-[#d8c8af]">
+                      <Icon size={18} />
+                    </span>
+                    <div>
+                      <h3 className="text-[1rem] font-black tracking-[-0.02em] text-[var(--text-main)]">{fit.title}</h3>
+                      <p className="text-[0.7rem] font-semibold text-[#687582]">{fit.sub}</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-4 flex items-center gap-2 rounded-[0.3rem] border border-[#e1e6ea] bg-[#f6f8fa] px-3 py-2">
+                    <Search size={13} className="shrink-0 text-[#64748b]" />
+                    <span className="truncate font-mono text-[0.72rem] text-[#102133]">{fit.query}</span>
+                  </div>
+
+                  <dl className="mt-4 grid gap-3 text-[0.78rem] leading-relaxed">
+                    <div>
+                      <dt className="text-[0.62rem] font-black uppercase tracking-[0.1em] text-[#9a6b2f]">{isEnglish ? 'Now' : '지금'}</dt>
+                      <dd className="mt-1 text-[var(--text-muted)]">{fit.now}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-[0.62rem] font-black uppercase tracking-[0.1em] text-[#2d6fa3]">{isEnglish ? 'When it ranks' : '올라가면'}</dt>
+                      <dd className="mt-1 text-[var(--text-muted)]">{fit.after}</dd>
+                    </div>
+                  </dl>
+                </Motion.article>
               );
             })}
           </div>
+
+          <p className="mt-6 text-center text-[0.78rem] leading-relaxed text-[var(--text-muted)]">{content.fitFooter}</p>
         </div>
       </section>
 
-      {/* AI Business Report Bridge */}
-      <section className="max-w-none bg-[#102133] px-0 pt-0 pb-3 md:pb-4">
+      {/* 5. Programs */}
+      <section id="programs" className="max-w-none scroll-mt-20 bg-[#102133] py-12 md:py-14 lg:py-16">
         <div className="container px-6">
-          <Motion.div {...fadeUp(0.06)} className="grid gap-5 rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-5 md:grid-cols-[0.9fr_1.1fr_auto] md:items-center md:p-6">
-            <div className="flex items-center gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[0.35rem] bg-[#f7f2ec] text-[#102133]">
-                <ClipboardCheck size={22} />
-              </span>
-              <div>
-                <p className="text-[0.72rem] font-bold text-[#d7b77d]">{content.reportLabel}</p>
-                <h2 className="mt-1 text-[clamp(1.05rem,1.6vw,1.4rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#eef3f7]">{content.reportTitle}</h2>
-              </div>
-            </div>
-            <div>
-              <p className="text-[0.76rem] leading-relaxed text-[#aeb8c1]">{content.reportCopy}</p>
-              <p className="mt-2 text-xs font-black text-[#d7b77d]">{content.reportPrice}</p>
-            </div>
-            <Link to={content.reportPath} className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#f7f2ec] px-5 py-3 text-[0.76rem] font-extrabold text-[#102133] transition hover:bg-white">
-              {content.reportCta}
-              <ArrowRight size={15} />
-            </Link>
-          </Motion.div>
-        </div>
-      </section>
-
-      {/* AI Course Bridge Section */}
-      <section className="max-w-none bg-[#102133] px-0 pt-0 pb-10 md:pb-12">
-        <div className="container px-6">
-          <Motion.div
-            {...fadeUp(0.08)}
-            className="grid gap-5 rounded-[0.45rem] bg-[#f7f2ec] p-5 md:grid-cols-[0.9fr_1.1fr_auto] md:items-center md:p-6"
-          >
-            <div className="flex items-center gap-4">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[0.35rem] bg-white text-[#102133]">
-                <Bot size={22} />
-              </span>
-              <div>
-                <p className="text-[0.76rem] font-bold text-[#63717c]">{content.courseLabel}</p>
-                <h2 className="mt-1 text-[clamp(1.05rem,1.6vw,1.45rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#102133]">
-                  {content.courseTitle}
-                </h2>
-              </div>
-            </div>
-
-            <p className="text-[0.76rem] md:text-[0.82rem] leading-relaxed text-[#566471] md:max-w-xl">
-              {content.courseCopy}
-            </p>
-
-            <Link
-              to="/ai-course"
-              className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-[0.76rem] font-extrabold text-white transition hover:bg-[#1b3145]"
-            >
-              <PlayCircle size={17} />
-              {content.courseCta}
-            </Link>
-          </Motion.div>
-        </div>
-      </section>
-
-      {/* 4. Sample Site Section */}
-      <section id="samples" className="max-w-none bg-[#102133] px-0 py-12 md:py-14 lg:py-16">
-        <div className="container px-6">
-          <div className="mb-7 grid gap-4 md:mb-8 md:grid-cols-[0.9fr_1.1fr] md:items-end">
-            <div>
-              <span className="font-serif italic text-[#aab5bd] text-[0.82rem]">{content.samplesLabel}</span>
-              <h2 className="mt-2.5 font-sans text-[clamp(1.45rem,2.05vw,2.15rem)] font-extrabold leading-[1.18] tracking-[-0.03em] text-[#eef3f7]">
-                {content.samplesTitle}
-              </h2>
-            </div>
-            <p className="max-w-2xl text-[0.78rem] md:text-[0.86rem] leading-relaxed text-[#aeb8c1] md:justify-self-end">
-              {content.samplesCopy}
-            </p>
+          <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
+            <SectionLabel dark>{content.programsLabel}</SectionLabel>
+            <SectionTitle dark>{content.programsTitle}</SectionTitle>
+            <p className="mt-3 text-[0.82rem] leading-relaxed text-[#aeb8c1] md:text-[0.88rem]">{content.programsCopy}</p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2 md:gap-3.5 lg:grid-cols-4">
-            {content.sampleSites.map((site, i) => (
-              <Motion.a
-                key={site.href}
-                href={site.href}
-                target="_blank"
-                rel="noreferrer"
-                {...fadeUp(i * 0.05, 22)}
-                className="group overflow-hidden rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.1]"
+          <div className="grid gap-4 lg:grid-cols-3">
+            {content.programs.map((program, index) => (
+              <Motion.article
+                key={program.title}
+                {...fadeUp(index * 0.08, 22)}
+                className={`flex h-full flex-col rounded-[0.45rem] border p-5 sm:p-6 ${
+                  program.highlight
+                    ? 'border-[#d8c8af] bg-[#f7f2ec] text-[#102133]'
+                    : 'border-white/10 bg-white/[0.07] text-[#eef3f7]'
+                }`}
               >
-                <div className="aspect-[16/9] overflow-hidden rounded-[0.35rem] border border-white/10 bg-white/[0.06]">
-                  <img
-                    src={site.image}
-                    alt={content.sampleAlt(site.title)}
-                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-                    loading="lazy"
-                  />
+                <div>
+                  <h3 className="text-[1rem] font-black tracking-[-0.02em]">{program.title}</h3>
+                  <p className={`mt-3 text-[1.5rem] font-black tracking-[-0.03em] ${program.highlight ? 'text-[#102133]' : 'text-[#eef3f7]'}`}>{program.price}</p>
+                  <p className={`mt-0.5 text-[0.66rem] font-bold uppercase tracking-[0.06em] ${program.highlight ? 'text-[#687582]' : 'text-[#aab5bd]'}`}>{program.priceNote}</p>
+                  <p className={`mt-4 text-[0.8rem] leading-relaxed ${program.highlight ? 'text-[#44515d]' : 'text-[#aeb8c1]'}`}>{program.desc}</p>
+                  <ul className="mt-5 grid gap-2.5">
+                    {program.points.map((point) => (
+                      <li key={point} className="flex items-start gap-2 text-[0.78rem] leading-relaxed">
+                        <Check size={14} className={`mt-0.5 shrink-0 ${program.highlight ? 'text-[#102133]' : 'text-[#d8c8af]'}`} />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div className="flex items-center justify-between gap-3 px-1.5 py-2.5">
-                  <h3 className="text-[0.82rem] md:text-sm font-bold leading-tight tracking-[-0.02em] text-[#eef3f7]">
-                    {site.title}
-                  </h3>
-                  <span className="inline-flex shrink-0 items-center gap-1 text-[0.72rem] font-bold text-[#d8c8af]">
-                    {content.sampleCta}
-                    <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
-                  </span>
-                </div>
-              </Motion.a>
+                <Link
+                  to={program.href}
+                  className={`mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-[0.25rem] px-5 py-3 text-[0.78rem] font-extrabold transition hover:-translate-y-0.5 ${
+                    program.highlight
+                      ? 'bg-[#102133] text-white hover:bg-[#1b3145]'
+                      : 'border border-white/20 bg-white/[0.06] text-[#eef3f7] hover:bg-white/[0.12]'
+                  }`}
+                >
+                  {program.cta}
+                  <ArrowRight size={15} />
+                </Link>
+              </Motion.article>
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col items-start justify-between gap-4 rounded-[0.45rem] bg-[#f7f2ec] p-5 sm:flex-row sm:items-center md:p-6">
-            <p className="text-[0.76rem] md:text-[0.82rem] leading-relaxed text-[#566471]">
-              {content.sampleFooter}
-            </p>
-            <Link to={content.contactPath} className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-[0.76rem] font-extrabold text-white transition hover:bg-[#1b3145]">
-              {content.primaryCta}
+          <p className="mt-6 text-center text-[0.76rem] leading-relaxed text-[#aab5bd]">
+            {content.programsFooter}{' '}
+            <Link to={content.programsFooterPath} className="font-bold text-[#d8c8af] underline-offset-4 hover:underline">
+              {content.programsFooterLink}
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* 6. Promise */}
+      <section id="promise" className="max-w-none scroll-mt-20 bg-white py-12 md:py-14 lg:py-16">
+        <div className="container px-6">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
+            <div>
+              <SectionLabel>{content.promiseLabel}</SectionLabel>
+              <SectionTitle>{content.promiseTitle}</SectionTitle>
+              <p className="mt-4 text-[0.82rem] leading-relaxed text-[var(--text-muted)] md:text-[0.88rem]">{content.promiseCopy}</p>
+              <p className="mt-5 flex items-start gap-2 rounded-[0.35rem] border border-[#e1dbd2] bg-[#f7f2ec] px-4 py-3 text-[0.76rem] leading-relaxed text-[#44515d]">
+                <ShieldCheck size={15} className="mt-0.5 shrink-0 text-[#102133]" />
+                <span>{content.promiseFooter}</span>
+              </p>
+            </div>
+
+            <div className="grid gap-3">
+              {content.promises.map((item, index) => (
+                <Motion.div
+                  key={item.title}
+                  {...fadeUp(index * 0.06, 16)}
+                  className="flex gap-4 border-t border-[var(--glass-border)] pt-4"
+                >
+                  <span className="font-serif text-xl italic text-[#102133]/25">0{index + 1}</span>
+                  <div>
+                    <h3 className="text-[0.92rem] font-bold tracking-[-0.02em] text-[var(--text-main)]">{item.title}</h3>
+                    <p className="mt-1 text-[0.78rem] leading-relaxed text-[var(--text-muted)]">{item.desc}</p>
+                  </div>
+                </Motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. FAQ */}
+      <section id="faq" className="max-w-none scroll-mt-20 border-t border-[#e7e0d8] bg-[var(--bg-dark)] py-12 md:py-14 lg:py-16">
+        <div className="container px-6">
+          <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-12">
+            <div>
+              <SectionLabel>{content.faqLabel}</SectionLabel>
+              <SectionTitle>{content.faqTitle}</SectionTitle>
+            </div>
+            <FaqList items={content.faqs} />
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Final CTA */}
+      <section className="max-w-none bg-[#102133] py-12 md:py-14">
+        <div className="container px-6">
+          <div className="flex flex-col items-start justify-between gap-5 rounded-[0.45rem] bg-[#f7f2ec] p-6 md:flex-row md:items-center md:p-8">
+            <div>
+              <h2 className="text-[clamp(1.2rem,1.9vw,1.6rem)] font-extrabold leading-tight tracking-[-0.03em] text-[#102133]">{content.finalTitle}</h2>
+              <p className="mt-2 max-w-2xl text-[0.8rem] leading-relaxed text-[#566471] md:text-[0.84rem]">{content.finalCopy}</p>
+            </div>
+            <Link
+              to={content.contactPath}
+              className="inline-flex min-h-11 shrink-0 items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-[0.78rem] font-extrabold text-white transition hover:bg-[#1b3145]"
+            >
+              {content.finalCta}
               <ArrowRight size={15} />
             </Link>
           </div>
         </div>
       </section>
-
     </div>
   );
 };

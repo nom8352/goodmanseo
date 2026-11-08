@@ -6,75 +6,75 @@ import { blogPosts, getBlogPostById } from '../data/blogPosts';
 
 const serviceCtas = {
   'AI 웹디자인': {
-    eyebrow: 'AI 웹디자인 점검',
-    title: 'AI 초안을 실제 문의 흐름에 맞게 정리하고 싶다면',
+    eyebrow: '홈페이지와 검색어',
+    title: 'AI로 만든 홈페이지도 검색어에 맞아야 손님이 찾습니다',
     description:
-      '고객, 서비스, 신뢰 요소, 문의 버튼까지 먼저 잡아야 AI로 만든 홈페이지도 실제 비즈니스에 맞게 보입니다.',
-    primaryText: 'AI 실전 멘토링 문의하기',
-    primaryTo: '/contact?type=ai-mentoring',
-    secondaryText: 'AI 서비스 보기',
-    secondaryTo: '/ai-business',
+      '디자인보다 먼저 볼 것은 지역, 서비스, 문의 방법이 글로 분명히 적혀 있는지입니다. 지금 몇 위인지부터 무료로 확인해 드립니다.',
+    primaryText: '무료 순위 점검 신청',
+    primaryTo: '/contact?type=free-check',
+    secondaryText: '진행 방식 보기',
+    secondaryTo: '/#how',
   },
   '구글 비즈니스 프로필': {
-    eyebrow: '구글 프로필 점검',
-    title: '구글에서 보이는 기본 정보부터 정리하세요',
+    eyebrow: '구글 프로필',
+    title: '프로필을 채우는 것이 순위의 시작입니다',
     description:
-      '영업시간, 연락처, 서비스 설명, 사진처럼 고객이 먼저 보는 정보를 확인하면 어디부터 고칠지 빨리 보입니다.',
-    primaryText: '구글 프로필 문의하기',
-    primaryTo: '/contact?type=gbp-setup',
-    secondaryText: '서비스 가격 보기',
+      '카테고리, 서비스, 지역, 사진, 리뷰가 채워진 프로필이 지도에서 먼저 보입니다. 3개월 프로그램의 첫 달에 하는 일이에요.',
+    primaryText: '프로그램 상담하기',
+    primaryTo: '/contact?type=ranking-program',
+    secondaryText: '서비스 및 가격 보기',
     secondaryTo: '/pricing',
   },
   '온라인 기본기': {
-    eyebrow: '홈페이지 연결 점검',
-    title: '관심을 실제 문의로 이어지게 만들려면',
+    eyebrow: '기본 정보 점검',
+    title: '손님이 검색해서 찾아오게 만들려면',
     description:
-      '게시물을 더 올리기보다 홈페이지와 구글 비즈니스 기본 정보가 먼저 맞는지 확인하는 편이 현실적입니다.',
-    primaryText: '무료 점검 신청하기',
+      '게시물을 더 올리기보다 구글 프로필과 홈페이지 정보가 손님이 치는 검색어와 맞는지 먼저 확인하는 편이 현실적입니다.',
+    primaryText: '무료 순위 점검 신청',
     primaryTo: '/contact?type=free-check',
-    secondaryText: '진단 서비스 보기',
+    secondaryText: '서비스 및 가격 보기',
     secondaryTo: '/pricing',
   },
   '홈페이지 제작': {
-    eyebrow: '홈페이지 문의 흐름',
-    title: '새 홈페이지 전에 고객이 막히는 지점을 먼저 확인하세요',
+    eyebrow: '홈페이지는 도구',
+    title: '새 홈페이지보다 먼저, 지금 검색에서 몇 위인지 보세요',
     description:
-      '메시지, 신뢰 요소, 문의 버튼, 다른 채널 연결을 먼저 보면 새로 만들지 고칠지 판단하기 쉬워집니다.',
-    primaryText: '홈페이지 제작 문의하기',
-    primaryTo: '/contact?type=starter-homepage',
-    secondaryText: '홈페이지 패키지 보기',
-    secondaryTo: '/pricing',
+      '홈페이지가 없어도 구글 프로필로 시작할 수 있고, 필요하면 프로그램 안에서 1페이지를 만들어 드립니다.',
+    primaryText: '무료 순위 점검 신청',
+    primaryTo: '/contact?type=free-check',
+    secondaryText: '홈페이지 제작 안내 보기',
+    secondaryTo: '/pricing#website',
   },
   SEO: {
-    eyebrow: 'SEO 기본 세팅',
-    title: '검색 작업 전에 사이트와 구글 프로필이 준비됐는지 봅니다',
+    eyebrow: '구글 상위 노출',
+    title: '순위를 올리는 다섯 가지를 3개월 동안 같이 합니다',
     description:
-      '키워드만 넣기보다 페이지 제목, 서비스 설명, 문의 경로, 구글 비즈니스 프로필을 함께 맞추는 편이 현실적입니다.',
-    primaryText: 'SEO 문의하기',
-    primaryTo: '/contact?type=seo-start-package',
-    secondaryText: 'SEO 서비스 보기',
+      '검색어 정하기, 프로필 채우기, 리뷰 흐름, 홈페이지 정리, 월 리포트. 특별한 비법이 아니라 빠짐없이 하는 일입니다.',
+    primaryText: '프로그램 상담하기',
+    primaryTo: '/contact?type=ranking-program',
+    secondaryText: '서비스 및 가격 보기',
     secondaryTo: '/pricing',
   },
   'AI 온라인 운영': {
-    eyebrow: 'AI 운영 정리',
-    title: '반복되는 온라인 운영을 직접 다룰 수 있게 정리하세요',
+    eyebrow: '유지 관리',
+    title: '올라간 순위를 지키는 일은 매달 조금씩입니다',
     description:
-      '게시물 초안, 리뷰 답변, 고객 안내문처럼 자주 반복되는 일을 AI와 함께 가볍게 관리할 수 있습니다.',
-    primaryText: 'AI 멘토링 문의하기',
-    primaryTo: '/contact?type=ai-mentoring',
-    secondaryText: 'AI 강의 보기',
-    secondaryTo: '/ai-course',
+      '프로필 소식과 사진, 리뷰 답글, 작은 수정을 매달 챙기면 순위가 흔들리지 않습니다. 직접 하셔도 되고 맡기셔도 됩니다.',
+    primaryText: '월 유지 관리 문의',
+    primaryTo: '/contact?type=monthly-care',
+    secondaryText: '서비스 및 가격 보기',
+    secondaryTo: '/pricing',
   },
 };
 
 const defaultServiceCta = {
-  eyebrow: '기본 상태 점검',
-  title: '홈페이지와 구글 비즈니스부터 확인하세요',
+  eyebrow: '무료 순위 점검',
+  title: '지금 내 가게는 구글에서 몇 위일까요?',
   description:
-    '고객이 검색해서 보고 문의하기까지 필요한 기본 정보와 홈페이지 흐름을 먼저 확인합니다.',
-  primaryText: '무료 점검 신청하기',
+    '손님이 칠 검색어 3개만 알려주시면 현재 순위와 먼저 고칠 것 한 가지를 2~3일 안에 보내드립니다.',
+  primaryText: '무료 순위 점검 신청',
   primaryTo: '/contact?type=free-check',
-  secondaryText: '서비스 보기',
+  secondaryText: '서비스 및 가격 보기',
   secondaryTo: '/pricing',
 };
 
@@ -258,7 +258,7 @@ const BlogDetail = () => {
         path={`/blog/${post.id}`}
         image={`https://goodmanseo.com${post.image}`}
         imageAlt={post.imageAlt}
-        keywords={post.keywords || ['호주 홈페이지 제작', '시드니 홈페이지 제작', post.category, post.title, '구글 비즈니스 세팅']}
+        keywords={post.keywords || ['구글 상위 노출', '로컬 SEO', post.category, post.title, '구글 비즈니스 프로필']}
         type="article"
         jsonLd={{
           '@context': 'https://schema.org',
@@ -394,11 +394,11 @@ const BlogDetail = () => {
 
           {!isAiKeyNews ? <div className="mt-12 border-t border-[#102133]/10 pt-8">
             <p className="text-base leading-relaxed text-text-muted">
-              지금 내 비즈니스가 온라인에서 어떻게 보이는지 먼저 확인하고 싶다면,
-              무료 점검으로 홈페이지와 구글 비즈니스 기본 상태부터 확인해보세요.
+              지금 내 가게가 구글에서 몇 위인지 궁금하다면,
+              손님이 칠 검색어 3개만 알려주세요. 현재 순위와 먼저 고칠 것 한 가지를 보내드립니다.
             </p>
             <Link to="/contact?type=free-check" className="primary-button mt-6 inline-flex">
-              무료 점검 문의하기
+              무료 순위 점검 신청
               <ArrowRight size={18} />
             </Link>
           </div> : null}

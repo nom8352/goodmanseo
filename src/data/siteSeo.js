@@ -17,16 +17,25 @@ export const organizationJsonLd = {
   '@type': 'ProfessionalService',
   '@id': `${siteUrl}/#organization`,
   name: siteName,
+  description:
+    '브리즈번 로컬 비즈니스를 위한 로컬 SEO 서비스. 손님이 구글에서 검색할 때 가게가 위에 나오도록 구글 비즈니스 프로필, 리뷰, 홈페이지를 정리하고 매달 숫자로 보고합니다.',
   url: siteUrl,
   logo: `${siteUrl}/favicon.png`,
   image: defaultSeoImage,
-  areaServed: 'Australia',
-  telephone: '0434-920-114',
+  priceRange: 'AUD 149 - AUD 1,490',
+  knowsLanguage: ['ko', 'en'],
+  areaServed: [
+    { '@type': 'City', name: 'Brisbane' },
+    { '@type': 'Place', name: 'North Lakes, Queensland' },
+    { '@type': 'Place', name: 'Moreton Bay Region, Queensland' },
+    { '@type': 'Country', name: 'Australia' },
+  ],
+  telephone: '+61434920114',
   email: 'goodmanseo.sydney@gmail.com',
   contactPoint: [
     {
       '@type': 'ContactPoint',
-      telephone: '0434-920-114',
+      telephone: '+61434920114',
       contactType: 'customer service',
       areaServed: 'AU',
       availableLanguage: ['ko', 'en'],
@@ -34,10 +43,11 @@ export const organizationJsonLd = {
   ],
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Sydney',
+    addressLocality: 'North Lakes',
+    addressRegion: 'QLD',
     addressCountry: 'AU',
   },
-  sameAs: [siteUrl],
+  sameAs: [siteUrl, 'https://www.instagram.com/goodmanseo_ai/', 'https://www.facebook.com/goodmanseoAi'],
 };
 
 export const websiteJsonLd = {
@@ -66,7 +76,7 @@ export const createServiceJsonLd = ({
   name,
   description,
   path = '/',
-  serviceType = 'Online channel review and SEO service',
+  serviceType = 'Local SEO and Google Business Profile ranking service',
 }) => ({
   '@context': 'https://schema.org',
   '@type': 'Service',
