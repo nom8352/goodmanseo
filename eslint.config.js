@@ -5,7 +5,8 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  // Vendored tooling (Impeccable skill scripts) and build output are not project source.
+  globalIgnores(['dist', 'dist-ssr', '.agents/**', '.codex/**', '.codex-social/**', '_workspace/**', 'tmp/**', 'public/samples/**']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [

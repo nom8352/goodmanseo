@@ -4,128 +4,87 @@ This file is the first place to read when starting a new thread in this project.
 
 ## Project Summary
 
-GoodmanSEO is positioned as a service for local service businesses that need a clearer online presence and better inquiry flow.
+GoodmanSEO is a local SEO service for Brisbane small businesses: it gets a business to show up on Google (Search and Maps) when customers search for the service, not the business name.
 
-The current core message is:
+The one-sentence positioning (confirmed 2026-11-08):
 
-`How does my business look online right now?`
+`손님이 구글에서 검색할 때, 사장님 가게가 위에 나오게 합니다. 홈페이지는 그걸 위한 도구입니다.`
 
-GoodmanSEO helps review and align:
+The main promise is **ranking / visibility**. The method is always **SEO website + Google Business Profile together** (owner clarification 2026-11-08): the website is the base of the ranking work, so every program includes building a 3–5 page SEO website or restructuring the existing one. Website production is never sold as the lead message, but it is never optional either.
 
-- Google Business Profile
-- Website
-- Instagram
-- Facebook Page
+## Proof Story (handle with care)
 
-The service should read as:
-
-- not a generic website builder
-- not a vague "online structure" consultancy
-- a practical review and cleanup service that helps businesses see what is missing and what should be fixed first
-
-## Current Positioning
-
-Prefer language like:
-
-- online channels
-- review
-- check what is missing
-- see everything together
-- free check
-- inquiry flow
-
-Avoid leading with language like:
-
-- structure
-- online structure
-- website builder
-- abstract consulting language
+- The owner also runs a baby photography studio in North Lakes (North Brisbane) and ranked it with the same method. Three months (2026-05-19 to 2026-08-18): 131 clicks, 4,450 impressions, daily impressions from 0 to about 170, main keyword +84 positions. Checked 2026-11-05 from Brisbane: main keyword #3 organic, #1–2 in the Maps pack.
+- On the public site this case is **anonymised**: "브리즈번 북부의 아기 사진 스튜디오, 직접 관리하는 가게". Never publish the studio name, URL, address, or keyword list. Never call it a "client". The real business is shown only in consultation.
+- Use the Search Console screenshot (`img/case-search-console-2026-08.webp`) as the hero visual. Do not publish the rank-tracker table that reveals keywords.
+- Never claim guaranteed rankings. Use dated facts and the monthly report instead. Keep the two data periods visibly separate: Search Console figures are 2026-05-19~08-18, the ranking check is 2026-11-05 from Brisbane. Do not claim enquiry or revenue increases on the site unless backed by records the owner can show.
+- Avoid absolute causal claims (e.g. "리뷰가 멈추면 순위도 멈춥니다"); Google Maps ranking depends on relevance, distance and prominence.
+- Owner rule (2026-11-08): do not write absolute commitments that could bind the owner (e.g. "작업 내역 전체 공개", "효과 없는 작업 중단", unqualified day counts). Describe the way of working instead: 월간 리포트 공유, Search Console 기준, 결과 기반 조정, 영업일 기준 timelines. Keep standard terms that build trust: 작업 시작 전 100% 환불, 월 관리 언제든 해지.
 
 ## Audience
 
-Primary audience:
+Primary: Korean-owned local service businesses in Brisbane and nearby (North Lakes, Moreton Bay, Sunnybank), whose customers find them by searching "service + suburb" in English. Consultation in Korean, visibility in English search.
 
-- Sydney and Australia-based Korean local service businesses
+Priority industries (from the Breezeburn directory of ~815 Korean businesses in QLD):
 
-Secondary audience:
+1. Beauty: lashes, nails, skin, brows, hair
+2. Trades: air conditioning, electrical, plumbing, refrigeration
+3. Cleaning: bond, carpet, commercial
 
-- remote clients who need Korean and English support
+Also a fit: mechanics, massage/physio, tutoring. Low fit: restaurants/cafes (profile only), accountants/lawyers/real estate (community referral driven), medical (advertising rules), photographers in Brisbane (competitors).
 
-## Current Funnel Direction
+## Offers (only three public products)
 
-Homepage entry point:
+Source of truth: `src/data/programs.js`. Change prices there only.
 
-- free online check
+1. 무료 순위 점검 (free): current rank for three customer searches, one reason it is not showing, one thing to fix first, by email in 2–3 days.
+2. 구글 상위 노출 3개월 프로그램 — SEO 홈페이지 + 구글 비즈니스 프로필 (AUD 4,400 +GST with a new 3–5 page website; AUD 3,400 +GST when restructuring an existing website; paid in two halves): keyword selection, SEO website build/restructure, Google Business Profile optimisation linked to the site, review system, monthly report.
+3. 월 유지 관리 (AUD 390 +GST/month, optional after the program, cancel anytime): hosting and small edits, profile posts/photos, review replies, monthly report. Hosting only, without care: AUD 49 +GST/month.
 
-Then:
+All prices are shown **GST exclusive** (owner decision 2026-11-08). Included in the program: website build, profile optimisation, review system, three months of work, monthly reports, three months of hosting. Extra: domain purchase (owner's name), logo/photography, ad spend, additional pages, GST.
 
-- paid diagnostic / setup / website / SEO / ongoing support options
+Pricing rationale (2026-11-08): Australian single-area local SEO runs AUD 800–1,500/month (website excluded) and agencies start around AUD 1,500/month. AUD 4,400 covers the website build plus three months of ranking work for a solo operator (roughly 50–60 hours). Sales policy, not shown on the site: the first two clients may be offered a discount (about AUD 3,600) in exchange for a publishable (anonymisable) case study and review.
 
-The homepage should create interest and trust.
-The pricing page should explain the paid options after that.
+The pricing page has an "SEO 홈페이지 제작" section describing the website spec included in the program (`websiteSpec` in `programs.js`); website-only requests are handled by consultation. Retired and not to be re-added: AI 진단, AI 비즈니스 리포트, 사이트 케어 Basic/Plus, 온라인 관리 서포트, GBP 유지 add-on, Business/Growth website packages, hosting as a separate item.
 
-## Current Priorities
+## Wording Rules
 
-Read [current-status.md](F:\Antigravity\goodmanseo\docs\current-status.md) for the latest working state.
+Owner rule (2026-11-08): write in compact industry terms, noun-first, not explanatory sentences. "구글에서 위에 나오게 하는 일" is simply "구글 상위 노출". Long, soft, over-explaining copy reads as AI-written and is rejected.
 
-High-level current priorities:
+Prefer: 구글 상위 노출, 로컬 SEO, 키워드, 순위, 구글 비즈니스 프로필 최적화, 리뷰 관리, 온페이지 SEO, 월간 리포트, 지도 1~2위, 무료 순위 점검. Headline in use: `브리즈번 구글 상위 노출, 결과는 숫자로 보여드립니다.` ("증명" was softened after an external review flagged it as guarantee-like).
 
-- keep positioning unified around free online check + online channel review
-- align homepage, pricing, and social messaging
-- keep Google + website + Instagram + Facebook as a bundled story
-- make every message easier to understand for a small business owner
+Avoid as lead language: 홈페이지 제작, 기본 SEO, 세팅/정리합니다 as the main verb, 온라인 구조, SNS 마케팅, integrated marketing, 보장. Do not reintroduce AI mentoring, AI report, or AI course sections into the main site navigation or homepage.
 
-## Daily AI Key News Series
+## Contact and Trust Signals
 
-GoodmanSEO also publishes one global AI key-news brief per day. Preserve these rules:
+- No KakaoTalk channel and no personal photo on the site (owner decision 2026-11-08). Contact is phone, form, and email.
+- Phone `0434 920 114` and email are in `src/data/contact.js`.
+- Social links: Instagram and Facebook only. The YouTube channel is AI-content and stays off the site.
+- Location signal: North Lakes, Brisbane QLD; online across Australia. Remove any remaining "Sydney" references.
 
-- publish one searchable Korean blog post and one matching `1080x1920` PNG image
-- use fresh AI News Radar data and an authenticated Apify/X search sample as mandatory primary discovery inputs, then verify every selected fact against its original source
-- cover global AI only; do not force an Australia angle
-- use 3 to 6 high-signal items verified against original sources
-- keep the writing factual and compact, without GoodmanSEO commentary or filler
-- retain a clickable original-source link for every item in the blog post
-- derive the image from the same post data so titles, dates, figures, and source names match
-- use the white newsprint design: large serif `AI NEWS BRIEF`, teal rules and labels, and a simple single-column news flow
-- keep the `1080x1920` share image phone-first for Shorts, Instagram, and X: use mid-sized headlines at roughly twice the original scale, the complete compact 1–2 sentence summary, and a source label
-- do not add market indexes, ads, weather, tool rankings, or decorative icon-card grids
-- publish to the GoodmanSEO site only; KakaoTalk and X sharing remain manual user actions
+## Site Structure (after the 2026-11 reset)
 
-Implementation sources:
+- Navigation: 홈 / 서비스 및 가격 / 작업 방식 (`/#how`) / 블로그 + CTA 무료 순위 점검.
+- Home (`src/pages/Home.jsx`): fixed headline, anonymised proof visual, results band, "구글 상위 노출 작업 5단계" (키워드 → SEO 홈페이지 → 프로필 → 리뷰 → 리포트), three target industries, three programs, "보장하지 않습니다" approach section, FAQ, CTA. No sample-site grid, no AI sections.
+- Pricing (`src/pages/WebPricing.jsx`): three programs, what happens in each month, SEO website spec with six sample previews, FAQ (`pricingFaqs`).
+- Contact (`src/components/ContactForm.jsx`): five enquiry types. Required fields are name, email (reply channel, also `_replyto`) and 업종/지역, plus business identification: at least one of 업체명 / 홈페이지 주소 / 구글 지도 주소, or the "아직 업체가 없어요" checkbox (validated on submit). Phone, keywords and the message are optional for the free check so the "키워드 3개(모르시면 업종·지역)만" promise holds. Legacy `?type=` values map to new types.
+- Blog: evergreen posts only. AI key news is archived (`src/data/archivedAiKeyNews.js`) and redirected; do not publish new AI news on this site.
+- `/ai-business`, `/ai-course`, `/ai-report` pages still exist but are unlinked. They are to be separated from GoodmanSEO later.
 
-- daily post data: `src/data/blogPosts.js`
-- page rendering: `src/pages/BlogDetail.jsx`
-- image renderer: `scripts/generate-ai-keynews-image.mjs`
-- image command: `npm run generate:ai-keynews-image`
+## Known Technical Debt
+
+- The build only injects meta tags per route; the HTML body is empty until JavaScript runs (`scripts/generate-static-pages.mjs`). Prerendering the body (react-dom/server + StaticRouter) is planned as a separate change. Any solution must run in the Cloudflare Pages build without a browser.
+- The local Windows checkout (`F:\Antigravity\goodmanseo`) diverged from GitHub (8 local-only commits, many uncommitted files). Build and deploy from GitHub `main`, not from that tree.
+
+## Other Channels
+
+- Breezeburn (`breezeburn.com`): the owner's Brisbane Korean community site with the business directory. It is the outreach channel for plan A and must be separated from the photography domain (`briz.sweetlifephotography.com.au` should not serve it).
+- Threads posts: `claude/threads-posts-batch1.md` in the Claude project. Keep them consistent with the ranking-first message.
 
 ## Working Rules For Future Threads
 
-When starting a new task in this repo:
-
-1. Read this file.
-2. Read [current-status.md](F:\Antigravity\goodmanseo\docs\current-status.md).
-3. If the task is about blog writing or blog copy editing, read [blog-writing-tone-guide.md](F:\Antigravity\goodmanseo\docs\blog-writing-tone-guide.md) and follow its tone rules.
-4. If the task is about messaging, design, homepage, pricing, or social content, preserve the positioning above.
-5. If there is a conflict between older copy and this file, prefer this file and the current-status document.
-
-
-## Important Recent Context
-
-- Instagram planner posts were prepared for a two-week, three-posts-per-week cadence.
-- Social post image assets live under `F:\Antigravity\goodmanseo\.codex-social\planner-assets`.
-- Cropped Instagram-ready JPEGs `001.jpeg` to `006.jpeg` were prepared as `1080x1080`.
-- A Notion page was created to store the rewritten social post analysis and final copy:
-  `SNS 포스팅 6개 재작성 및 분석 - 2026-04-12`
-
-## If You Need More Context
-
-Useful project folders:
-
-- `src/` for site code
-- `docs/` for local reference docs
-- `wiki/` for structured LLM project memory and source maps
-- `.codex-social/planner-assets/` for social planner assets
-
-If a future thread feels missing context, update `docs/current-status.md` rather than relying on chat memory.
-
-
+1. Read this file, then `docs/current-status.md` (newest entry first).
+2. For blog writing or copy editing, read `docs/blog-writing-tone-guide.md`.
+3. For design work, read `PRODUCT.md`, `DESIGN.md` and the Impeccable skill. The navy/off-white design system stays; this reset changed content and offers, not the visual system.
+4. If older copy, wiki pages, or chat memory conflict with this file, this file wins.
+5. Run `git status --short` before editing and treat existing modified or untracked files as user work.

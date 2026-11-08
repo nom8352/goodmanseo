@@ -43,17 +43,17 @@ Use `$impeccable <command> <target>` semantics when the task is design-related. 
 
 ## Positioning Guardrail
 
-GoodmanSEO should read as a practical online-channel review and cleanup service for Korean/Australian local service businesses.
+GoodmanSEO should read as a local SEO service that gets Brisbane small businesses to show up on Google when customers search for the service.
 
 Preserve this story:
 
-- free online check
-- Google Business Profile, website, Instagram, and Facebook together
-- what is missing
-- what to fix first
-- inquiry flow
+- 무료 순위 점검 as the entry point
+- 구글 상위 노출 3개월 프로그램 as the main offer, 월 유지 관리 after it
+- the anonymised North Brisbane studio case as proof, with dated numbers
+- "보장하지 않습니다" plus a monthly report as the trust stance, described as a way of working rather than binding promises
+- a website is a tool inside the program, not the lead offer
 
-Avoid turning the project into a generic website-agency pitch or abstract consulting language.
+Avoid turning the project back into a website-agency pitch, a basic-setup service, or an AI education brand. See `CLAUDE.md` for the full wording rules and the proof-story handling rules.
 
 ## Editing Guardrail
 

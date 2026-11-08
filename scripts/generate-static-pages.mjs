@@ -20,28 +20,28 @@ const canonicalForRoute = (route) => `https://goodmanseo.com${route === '/' ? '/
 const baseRoutePages = [
   {
     route: '/',
-    title: '홈페이지 제작 · 구글 비즈니스 · 기본 SEO | Goodman SEO',
+    title: '브리즈번 로컬 구글 상위 노출 | Goodman SEO',
     description:
-      'GoodmanSEO는 홈페이지 제작, Google Business Profile 세팅, On-page SEO 기본 정리를 도와드립니다.',
+      '브리즈번 로컬 비즈니스 구글 상위 노출 · 로컬 SEO. SEO 홈페이지 제작과 구글 비즈니스 프로필 최적화를 함께 진행하고 월간 리포트로 보고합니다. 한국어 상담, 영어 키워드 노출.',
     canonical: canonicalForRoute('/'),
     type: 'website',
-    imageAlt: 'GoodmanSEO 홈페이지, 구글 비즈니스, 기본 SEO 안내',
+    imageAlt: 'GoodmanSEO 브리즈번 로컬 구글 상위 노출',
     keywords:
-      '홈페이지 제작, 구글 비즈니스 프로필, 온페이지 SEO, 비즈니스 홈페이지, 시드니 홈페이지 제작',
+      '브리즈번 구글 상위 노출, 로컬 SEO 브리즈번, 구글 비즈니스 프로필 상위 노출, 구글 지도 상위 노출, 한인 사장님 구글 노출, 노스레이크 SEO',
     jsonLd: [organizationJsonLd, websiteJsonLd],
     locale: 'ko',
     alternates: [{ lang: 'ko', route: '/' }, { lang: 'en', route: '/en' }],
   },
   {
     route: '/en',
-    title: 'Websites · Google Business · SEO Basics | Goodman SEO',
+    title: 'Local Google Rankings for Brisbane Businesses | Goodman SEO',
     description:
-      'GoodmanSEO helps Australian local businesses improve their website, Google Business Profile and on-page SEO basics.',
+      'We get local service businesses found on Google in Brisbane. Google Business Profile, reviews and website copy aligned to the searches customers actually type, with monthly numbers.',
     canonical: canonicalForRoute('/en'),
     type: 'website',
-    imageAlt: 'GoodmanSEO website, Google Business Profile and SEO basics',
+    imageAlt: 'GoodmanSEO local Google rankings for Brisbane businesses',
     keywords:
-      'small business website Australia, Google Business Profile setup, local SEO basics, Sydney website design, business website review',
+      'Brisbane local SEO, Google Business Profile ranking, Google Maps ranking Brisbane, North Lakes SEO, local SEO for small business',
     jsonLd: [organizationJsonLd, websiteJsonLd],
     locale: 'en',
     alternates: [{ lang: 'ko', route: '/' }, { lang: 'en', route: '/en' }],
@@ -51,30 +51,30 @@ const baseRoutePages = [
     redirectTo: '/pricing',
     title: '서비스 및 가격 | Goodman SEO',
     description:
-      '스타터 패키지 안내는 /pricing으로 이동했습니다. Goodman SEO의 무료 점검, 홈페이지 제작, 구글 비즈니스 세팅과 기본 SEO 범위를 확인하세요.',
+      '스타터 패키지 안내는 /pricing으로 이동했습니다. 무료 순위 점검, 구글 상위 노출 3개월 프로그램, 월 유지 관리 가격을 확인하세요.',
     canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:
-      '호주 홈페이지 제작 가격, 스타터 홈페이지, 비즈니스 홈페이지 가격, 구글 지도 등록 가격',
+      '구글 상위 노출 가격, 로컬 SEO 가격, 브리즈번 SEO, 무료 순위 점검',
     jsonLd: [organizationJsonLd],
   },
   {
     route: '/pricing',
-    title: '서비스 및 가격 | Goodman SEO',
+    title: '구글 상위 노출 프로그램 · 서비스 및 가격 | Goodman SEO',
     description:
-      'Goodman SEO의 서비스 및 가격 안내 페이지입니다. 무료 점검, AI 진단, AI 비즈니스 리포트, 홈페이지 제작, 구글 비즈니스 세팅과 기본 SEO 범위를 확인할 수 있습니다.',
+      '무료 순위 점검 · 구글 상위 노출 3개월 프로그램 AUD 4,400 (SEO 홈페이지 + 구글 비즈니스 프로필) · 월 유지 관리 AUD 390. 브리즈번 로컬 SEO 서비스 가격과 진행 순서.',
     canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:
-      '호주 홈페이지 제작 가격, AI 비즈니스 리포트, 홈페이지 진단 가격, 비즈니스 홈페이지 가격, 구글 지도 등록 가격',
+      '구글 상위 노출 가격, 로컬 SEO 가격, 구글 비즈니스 프로필 세팅 가격, 브리즈번 SEO, 무료 순위 점검',
     jsonLd: [
       organizationJsonLd,
       createServiceJsonLd({
-        name: 'Goodman SEO 서비스 및 가격',
+        name: '구글 상위 노출 3개월 프로그램',
         description:
-          '무료 점검, AI 진단, AI 비즈니스 리포트, 홈페이지 제작, SEO 패키지와 구글 비즈니스 프로필 세팅 서비스입니다.',
+          '브리즈번 로컬 비즈니스를 위한 로컬 SEO 프로그램. 키워드 선정, SEO 홈페이지 제작, 구글 비즈니스 프로필 최적화, 리뷰 관리, 월간 리포트를 3개월 동안 진행합니다.',
         path: '/pricing',
-        serviceType: 'Website, Google Business Profile, and SEO setup services',
+        serviceType: 'Local SEO and Google Business Profile ranking program',
       }),
     ],
   },
@@ -82,16 +82,16 @@ const baseRoutePages = [
     route: '/blog',
     title: '블로그 | Goodman SEO',
     description:
-      '호주와 시드니 비즈니스를 위한 Goodman SEO의 블로그입니다. 구글 지도/검색 등록, 홈페이지 기본기, 고객 유입에 대한 쉬운 가이드를 제공합니다.',
+      '구글 상위 노출 · 구글 비즈니스 프로필 · 리뷰 관리 · 홈페이지 SEO 가이드. 브리즈번 로컬 비즈니스를 위한 로컬 SEO 블로그.',
     canonical: canonicalForRoute('/blog'),
     type: 'website',
     keywords:
-      '호주 구글 지도 등록 가이드, 시드니 홈페이지 제작 가이드, 비즈니스 홈페이지, 고객 유입 기본기',
+      '구글 상위 노출 방법, 구글 비즈니스 프로필 가이드, 로컬 SEO 가이드, 호주 소상공인 구글 노출, 브리즈번 한인 사장님',
     jsonLd: [
       createWebPageJsonLd({
         name: 'Goodman SEO 블로그',
         description:
-          '호주와 시드니 비즈니스를 위한 구글 비즈니스 프로필, 홈페이지, 기본 SEO 가이드입니다.',
+          '브리즈번과 호주 로컬 비즈니스를 위한 구글 상위 노출, 구글 비즈니스 프로필, 리뷰, 홈페이지 기본기 가이드입니다.',
         path: '/blog',
         type: 'Blog',
       }),
@@ -99,18 +99,18 @@ const baseRoutePages = [
   },
   {
     route: '/contact',
-    title: '상담 신청 | Goodman SEO',
+    title: '무료 순위 점검 신청 | Goodman SEO',
     description:
-      'Goodman SEO 상담 신청 페이지입니다. 호주와 시드니 비즈니스를 위한 홈페이지 제작, 구글 비즈니스 세팅, 기본 SEO 문의를 받고 있습니다.',
+      '키워드 3개로 현재 구글 순위, 미노출 원인, 1순위 개선 항목을 영업일 2~3일 내 이메일로 전달. 브리즈번 로컬 비즈니스 무료 순위 점검.',
     canonical: canonicalForRoute('/contact'),
     type: 'website',
     keywords:
-      '호주 홈페이지 상담, 시드니 홈페이지 상담, 호주 구글 지도 등록 상담, 비즈니스 홈페이지 문의',
+      '무료 순위 점검, 구글 순위 확인, 구글 상위 노출 상담, 브리즈번 SEO 상담, 구글 비즈니스 프로필 상담',
     jsonLd: [
       createWebPageJsonLd({
-        name: 'Goodman SEO 상담 신청',
+        name: 'Goodman SEO 무료 순위 점검 신청',
         description:
-          '호주와 시드니 비즈니스를 위한 무료 점검 및 홈페이지, SEO, 구글 비즈니스 상담 신청 페이지입니다.',
+          '브리즈번 로컬 비즈니스를 위한 무료 순위 점검과 구글 상위 노출 프로그램 상담 신청 페이지입니다.',
         path: '/contact',
         type: 'ContactPage',
       }),
@@ -200,18 +200,18 @@ const baseRoutePages = [
   },
   {
     route: '/en/contact',
-    title: 'Free Check & Enquiries | Goodman SEO',
+    title: 'Free Ranking Check | Goodman SEO',
     description:
-      'Contact GoodmanSEO about a free online check, website design, Google Business Profile setup, SEO basics or practical AI support.',
+      'Send three searches your customers would type and get current rankings, one reason you are not showing, and one thing to fix first within 2–3 days.',
     canonical: canonicalForRoute('/en/contact'),
     type: 'website',
     keywords:
-      'free website check Australia, website design enquiry, Google Business Profile help, local SEO enquiry, GoodmanSEO contact',
+      'free Google ranking check, local SEO Brisbane enquiry, Google Business Profile help, GoodmanSEO contact',
     jsonLd: [
       createWebPageJsonLd({
-        name: 'GoodmanSEO Free Check and Enquiries',
+        name: 'GoodmanSEO Free Ranking Check',
         description:
-          'Contact GoodmanSEO about website design, Google Business Profile setup, SEO basics and practical AI support.',
+          'Request a free Google ranking check or ask about the 3-month Google ranking program for Brisbane local businesses.',
         path: '/en/contact',
         type: 'ContactPage',
       }),

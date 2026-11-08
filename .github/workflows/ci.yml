@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+      - name: Check generated pages
+        run: |
+          test -f dist/index.html
+          test -f dist/pricing/index.html
+          test -f dist/contact/index.html
+          grep -q "브리즈번 로컬 구글 상위 노출" dist/index.html
