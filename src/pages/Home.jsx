@@ -57,9 +57,9 @@ const HOME_CONTENT = {
     headlineAccent: '사장님 가게가 위에 나오게 합니다.',
     heroCopy: (
       <>
-        홈페이지를 파는 일이 아니라, 검색 결과를 바꾸는 일을 합니다.
+        홈페이지를 파는 일이 아니라, 검색 결과를 바꾸는 일을 합니다.{' '}
         <br className="hidden sm:block" />
-        구글 프로필, 리뷰, 홈페이지 문구를 손님이 실제로 치는 검색어에 맞춰 정리하고
+        구글 프로필, 리뷰, 홈페이지 문구를 손님이 실제로 치는 검색어에 맞춰 정리하고{' '}
         <br className="hidden sm:block" />
         매달 노출·클릭·순위를 숫자로 보여드립니다. 상담은 한국어로, 노출은 영어 검색에서.
       </>
@@ -205,9 +205,9 @@ const HOME_CONTENT = {
     headlineAccent: 'your business shows up.',
     heroCopy: (
       <>
-        We do not sell websites. We change what customers see when they search.
+        We do not sell websites. We change what customers see when they search.{' '}
         <br className="hidden sm:block" />
-        Your Google profile, reviews and website copy are aligned to the searches people actually type,
+        Your Google profile, reviews and website copy are aligned to the searches people actually type,{' '}
         <br className="hidden sm:block" />
         and you get impressions, clicks and rankings in numbers every month.
       </>
@@ -297,15 +297,15 @@ const CaseProofVisual = ({ proof }) => (
     <div className="absolute inset-x-10 bottom-0 h-16 rounded-full bg-[#102133]/10 blur-3xl" aria-hidden="true" />
 
     <div className="relative overflow-hidden rounded-[0.45rem] border border-[#d8dee5] bg-white shadow-[0_18px_40px_rgba(16,33,51,0.10)]">
-      <div className="flex items-center justify-between gap-3 border-b border-[#e7ebef] bg-[#f6f8fa] px-3.5 py-2.5">
+      <div className="flex items-center gap-3 border-b border-[#e7ebef] bg-[#f6f8fa] px-3.5 py-2.5 pr-[9.5rem] sm:pr-[12rem]">
         <div className="flex items-center gap-1.5" aria-hidden="true">
           <span className="h-2 w-2 rounded-full bg-[#e4e8ec]" />
           <span className="h-2 w-2 rounded-full bg-[#e4e8ec]" />
           <span className="h-2 w-2 rounded-full bg-[#e4e8ec]" />
         </div>
-        <p className="flex items-center gap-1.5 text-[0.62rem] font-bold tracking-[0.02em] text-[#64748b] sm:text-[0.68rem]">
-          <GoogleLogo className="h-3 w-3" />
-          {proof.windowLabel}
+        <p className="flex min-w-0 items-center gap-1.5 truncate text-[0.62rem] font-bold tracking-[0.02em] text-[#64748b] sm:text-[0.68rem]">
+          <GoogleLogo className="h-3 w-3 shrink-0" />
+          <span className="truncate">{proof.windowLabel}</span>
         </p>
       </div>
 
