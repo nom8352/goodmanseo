@@ -22,4 +22,7 @@ jobs:
           test -f dist/index.html
           test -f dist/pricing/index.html
           test -f dist/contact/index.html
-          grep -q "브리즈번 로컬 구글 상위 노출" dist/index.html
+          test -f dist/ai-course/index.html
+          test -f dist/ai-report/index.html
+          test -f dist/en/index.html
+          grep -q "홈페이지 제작 · 구글 비즈니스 · 기본 SEO" dist/index.html

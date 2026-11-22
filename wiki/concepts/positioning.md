@@ -1,6 +1,13 @@
 # Positioning
 
-Last updated: 2026-06-16
+Last updated: 2026-11-22
+
+## Current Owner Decision
+
+- decision: Restore the full pre-November-8 service and content presentation, including AI course/report, website examples and English navigation, instead of the ranking-only reset.
+- reason: The owner preferred the earlier fuller site and explicitly authorised restoration, GitHub push and production deployment on November 22.
+- applies_to: Home, navigation, pricing, inquiry types, blog CTAs and SEO metadata. Retired AI news remains excluded. Required reply email and form-state fixes remain.
+- revisit_if: The owner explicitly requests another positioning change. Facebook advertising is in the owner's scope, but this restoration does not invent new packages or prices.
 
 ## Core Position
 
