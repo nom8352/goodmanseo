@@ -6,8 +6,8 @@ import { CONTACT_PHONE_DISPLAY, CONTACT_PHONE_HREF } from '../data/contact';
 const FOOTER_CONTENT = {
   ko: {
     homePath: '/',
-    meta: '홈페이지 · 구글 비즈니스 · 기본 SEO',
-    description: <>고객이 검색해서 보고, 믿고, 문의할 수 있도록<br />홈페이지와 구글 기본 세팅을 정리합니다.</>,
+    meta: 'AI 코칭 · 홈페이지 · 마케팅',
+    description: <>AI로 직접 배우고, 함께 진행하고,<br />필요한 일은 맡길 수 있도록 돕습니다.</>,
     quickHeading: '빠른 메뉴',
     quickLinks: [
       ['홈', '/'],
@@ -20,7 +20,7 @@ const FOOTER_CONTENT = {
       ['홈페이지 제작', '/pricing'],
       ['구글 비즈니스 세팅', '/pricing'],
       ['On-page SEO', '/pricing'],
-      ['AI 실전 멘토링', '/ai-business'],
+      ['AI 실전 코칭', '/ai-business'],
       ['AI 비즈니스 리포트', '/ai-report'],
     ],
     contactHeading: '문의하기',
@@ -31,8 +31,8 @@ const FOOTER_CONTENT = {
   },
   en: {
     homePath: '/en',
-    meta: 'WEBSITES · GOOGLE BUSINESS · SEO BASICS',
-    description: <>We organise the website and Google basics<br />your customers need to find, trust and contact you.</>,
+    meta: 'AI COACHING · WEBSITES · MARKETING',
+    description: <>Learn with AI, work together,<br />or let us handle the agreed work.</>,
     quickHeading: 'Quick Links',
     quickLinks: [
       ['Home', '/en'],

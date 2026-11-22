@@ -10,6 +10,8 @@ import {
   websiteJsonLd,
 } from '../src/data/siteSeo.js';
 
+import { approachSeo } from '../src/data/serviceApproach.js';
+
 const distDir = path.resolve('dist');
 const indexPath = path.join(distDir, 'index.html');
 const defaultImage = 'https://goodmanseo.com/og-home-2026-07.png';
@@ -20,9 +22,9 @@ const canonicalForRoute = (route) => `https://goodmanseo.com${route === '/' ? '/
 const baseRoutePages = [
   {
     route: '/',
-    title: '홈페이지 제작 · 구글 비즈니스 · 기본 SEO | Goodman SEO',
+    title: `${approachSeo.ko.title} | Goodman SEO`,
     description:
-      'GoodmanSEO는 홈페이지 제작, Google Business Profile 세팅, On-page SEO 기본 정리를 도와드립니다.',
+      approachSeo.ko.description,
     canonical: canonicalForRoute('/'),
     type: 'website',
     imageAlt: 'GoodmanSEO 홈페이지, 구글 비즈니스, 기본 SEO 안내',
@@ -34,9 +36,9 @@ const baseRoutePages = [
   },
   {
     route: '/en',
-    title: 'Websites · Google Business · SEO Basics | Goodman SEO',
+    title: `${approachSeo.en.title} | Goodman SEO`,
     description:
-      'GoodmanSEO helps Australian local businesses improve their website, Google Business Profile and on-page SEO basics.',
+      approachSeo.en.description,
     canonical: canonicalForRoute('/en'),
     type: 'website',
     imageAlt: 'GoodmanSEO website, Google Business Profile and SEO basics',
@@ -62,7 +64,7 @@ const baseRoutePages = [
     route: '/pricing',
     title: '서비스 및 가격 | Goodman SEO',
     description:
-      'Goodman SEO의 서비스 및 가격 안내 페이지입니다. 무료 점검, AI 진단, AI 비즈니스 리포트, 홈페이지 제작, 구글 비즈니스 세팅과 기본 SEO 범위를 확인할 수 있습니다.',
+      '직접 배우기, 함께 진행하기, 맡겨서 진행하기 중 선택하세요. 기존 홈페이지 제작·SEO 설정 가격과 코칭·광고 지원 문의 방법을 확인할 수 있습니다.',
     canonical: canonicalForRoute('/pricing'),
     type: 'website',
     keywords:
@@ -118,9 +120,9 @@ const baseRoutePages = [
   },
   {
     route: '/ai-business',
-    title: 'AI 비즈니스 멘토링 | Goodman SEO',
+    title: 'AI 실전 코칭 | Goodman SEO',
     description:
-      'Goodman SEO의 AI 비즈니스 멘토링 안내 페이지입니다. 소상공인을 위한 AI 자동화, 업무 생산성 향상, 맞춤형 멘토링 서비스를 만나보세요.',
+      '홈페이지, 구글 검색, 광고와 반복 업무를 내 사업에 직접 적용하는 AI 실전 코칭. 필요한 기본기를 배우고 함께 실습하며, 어려운 부분은 제작·설정 지원을 상담하세요.',
     canonical: canonicalForRoute('/ai-business'),
     type: 'website',
     keywords:
@@ -128,9 +130,9 @@ const baseRoutePages = [
     jsonLd: [
       organizationJsonLd,
       createServiceJsonLd({
-        name: 'Goodman SEO AI 비즈니스 멘토링',
+        name: 'Goodman SEO AI 실전 코칭',
         description:
-          '소상공인을 위한 AI 실전 멘토링, 업무 자동화, 콘텐츠 및 고객 응대 자동화 서비스입니다.',
+          '내 사업의 실제 과제로 AI 활용과 홈페이지·검색·광고·반복 업무를 배우는 실전 코칭입니다.',
         path: '/ai-business',
         serviceType: 'AI mentoring and business automation service',
       }),

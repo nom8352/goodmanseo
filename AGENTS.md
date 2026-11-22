@@ -43,6 +43,8 @@ Use `$impeccable <command> <target>` semantics when the task is design-related. 
 
 ## Positioning Guardrail
 
+Owner-approved update: the homepage leads with practical AI coaching ("내 사업의 홈페이지와 마케팅, AI로 직접 해보세요.") and retains done-for-you services. Separate work areas (website, search, advertising/content, routine tasks) from support modes (learn, coach, delegate). Keep existing prices and examples; do not invent prices or promise outcomes. This supersedes narrower historical guidance below. See PRODUCT.md and the newest docs/current-status.md entry. No deployment of this redesign without approval.
+
 GoodmanSEO should read as a practical online-channel review and cleanup service for Korean/Australian local service businesses.
 
 Preserve this story:

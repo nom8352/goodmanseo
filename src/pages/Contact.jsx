@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { motion as Motion } from 'framer-motion';
 import ContactForm from '../components/ContactForm';
 import Seo from '../components/Seo';
+import { getWorkMode } from '../data/serviceApproach';
 
 const CONTACT_CONTENT = {
   ko: {
@@ -12,7 +13,7 @@ const CONTACT_CONTENT = {
     seoKeywords: ['무료 점검 신청', 'AI 진단', 'AI 비즈니스 리포트', '홈페이지 제작 문의', '구글 비즈니스 세팅', '문의 폼'],
     badge: '무료 점검 / 문의 신청',
     heading: <>지금 상황에 맞는<br /><span className="text-[#102133] font-black">무료 점검</span> 또는 <span className="text-[#102133] font-black">문의</span>를<br />남겨보세요.</>,
-    description: <>필요한 항목을 선택하고 간단한 정보를 남겨주시면,<br />확인 후 최대한 빨리 연락드리겠습니다.</>,
+    description: <>직접 배우기, 함께 진행하기, 제작·대행 중<br />원하는 방식과 지금 필요한 일을 알려주세요.</>,
     formTitle: '무료 점검 / 문의 신청',
     footerText: '입력하신 정보는 안전하게 보호되며, 문의 접수 및 상담 목적으로만 사용됩니다.',
   },
@@ -22,7 +23,7 @@ const CONTACT_CONTENT = {
     seoKeywords: ['free website check Australia', 'website design enquiry', 'Google Business Profile help', 'local SEO enquiry', 'GoodmanSEO contact'],
     badge: 'Free Check / Enquiry',
     heading: <>Tell us what your business<br />needs help with <span className="text-[#102133] font-black">online.</span></>,
-    description: <>Choose the closest enquiry type and share a few details.<br />We will review your request and respond as soon as possible.</>,
+    description: <>Choose learning, coaching or done-for-you support.<br />Tell us what you would like to work on.</>,
     formTitle: 'Free Check / Enquiry',
     footerText: 'Your information is protected and used only to review and respond to your enquiry.',
   },
@@ -31,6 +32,7 @@ const CONTACT_CONTENT = {
 const Contact = ({ locale = 'ko' }) => {
   const [searchParams] = useSearchParams();
   const initialInquiryType = searchParams.get('type') || 'free-check';
+  const initialWorkMode = getWorkMode(searchParams.get('mode'));
   const content = CONTACT_CONTENT[locale] || CONTACT_CONTENT.ko;
 
   const ease = [0.16, 1, 0.3, 1];
@@ -85,7 +87,8 @@ const Contact = ({ locale = 'ko' }) => {
             <h2 className="text-[1.85rem] font-black tracking-[-0.04em] text-[#102133] mb-6">{content.formTitle}</h2>
 
             <ContactForm
-              key={`${locale}-${initialInquiryType}`}
+              key={`${locale}-${initialInquiryType}-${initialWorkMode}`}
+              initialWorkMode={initialWorkMode}
               initialInquiryType={initialInquiryType}
               footerText={content.footerText}
               locale={locale}

@@ -4,6 +4,11 @@ Last updated: 2026-11-22
 
 ## Current Owner Decision
 
+- decision: Coaching-led homepage with existing done-for-you services retained. Approved headline: "내 사업의 홈페이지와 마케팅, AI로 직접 해보세요." Three support modes: learn, coach, delegate.
+- reason: Customers may want to learn and operate with AI, or may lack the time or confidence and prefer delegation.
+- applies_to: Home, coaching page, pricing introduction, enquiry mode, navigation and metadata. Existing prices, samples, course/report and retired-news exclusion remain unchanged. Owner approved publication on 2026-11-23; deployment evidence is in docs/current-status.md.
+- revisit_if: Owner approves a new offer, price or production release. This decision supersedes the earlier restoration-only presentation below.
+
 - decision: Restore the full pre-November-8 service and content presentation, including AI course/report, website examples and English navigation, instead of the ranking-only reset.
 - reason: The owner preferred the earlier fuller site and explicitly authorised restoration, GitHub push and production deployment on November 22.
 - applies_to: Home, navigation, pricing, inquiry types, blog CTAs and SEO metadata. Retired AI news remains excluded. Required reply email and form-state fixes remain.

@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 const NAV_CONTENT = {
   ko: {
     homePath: '/',
-    meta: '홈페이지 · 구글 비즈니스 · 기본 SEO',
+    meta: 'AI 코칭 · 홈페이지 · 마케팅',
     links: [
       { name: '홈', href: '/' },
       { name: '서비스 및 가격', href: '/pricing' },
       { name: '블로그', href: '/blog' },
-      { name: 'AI 실전 멘토링', href: '/ai-business' },
+      { name: 'AI 실전 코칭', href: '/ai-business' },
       { name: 'AI 비즈니스 리포트', href: '/ai-report' },
       { name: 'AI 강의', href: '/ai-course' },
     ],
@@ -24,7 +24,7 @@ const NAV_CONTENT = {
   },
   en: {
     homePath: '/en',
-    meta: 'WEBSITES · GOOGLE BUSINESS · SEO BASICS',
+    meta: 'AI COACHING · WEBSITES · MARKETING',
     links: [
       { name: 'Home', href: '/en' },
       { name: 'Services', href: '/en#services' },

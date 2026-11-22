@@ -1,12 +1,13 @@
 import React, { useMemo, useState } from 'react';
 import { Send, Search, Zap, MessageSquare, Lock } from 'lucide-react';
+import { getWorkMode, workModeLabel, workModes } from '../data/serviceApproach';
 
 const INQUIRY_TYPES = {
   ko: [
     { value: 'free-check', label: '무료 점검', heading: '무료 점검 신청', helper: '홈페이지와 구글 비즈니스 기본 상태 확인만 필요해요.', icon: Search, messageLabel: '현재 가장 고민인 점', messagePlaceholder: '예: 홈페이지가 오래됐어요, 구글에서 잘 안 보여요 등', submitLabel: '무료 점검 신청하기' },
     { value: 'quick-diagnosis', label: 'AI 진단', heading: 'AI 진단 문의', helper: '무료 점검보다 더 깊은 유료 AI 진단으로 우선 개선 항목을 정리하고 싶어요.', icon: Zap, messageLabel: '현재 가장 고민인 점', messagePlaceholder: '예: 홈페이지와 구글 지도 프로필 중 시급히 개선해야 할 1순위가 궁금해요', submitLabel: 'AI 진단 신청하기' },
     { value: 'ai-report-standard', label: 'AI 비즈니스 리포트', heading: 'AI 비즈니스 리포트 문의', helper: '업종별 맞춤 분석과 30일·90일 실행 로드맵을 신청하고 싶어요.', icon: Zap, messageLabel: '현재 가장 큰 고민 / 목표', messagePlaceholder: '예: 매출 정체, 낮은 전환율, 경쟁사 대비 차별화 부족, 구글 노출 개선 등', submitLabel: 'AI 비즈니스 리포트 문의하기' },
-    { value: 'ai-mentoring', label: 'AI 실전 멘토링', heading: 'AI 실전 멘토링 문의', helper: '실무에 바로 적용할 AI 활용법을 멘토링으로 받고 싶어요.', icon: Zap, messageLabel: '현재 가장 고민인 점', messagePlaceholder: '예: 콘텐츠 자동화, 고객 응대, 리뷰 답변 등', submitLabel: 'AI 실전 멘토링 문의하기' },
+    { value: 'ai-mentoring', label: 'AI 실전 코칭', heading: 'AI 실전 코칭 문의', helper: '홈페이지·검색·광고·반복 업무를 내 사업에 직접 적용하며 배우고 싶어요.', icon: Zap, messageLabel: '현재 가장 고민인 점', messagePlaceholder: '예: 홈페이지 직접 만들기, 광고 소재와 설정, 고객 안내문 등', submitLabel: 'AI 실전 코칭 문의하기' },
     { value: 'ai-study-group', label: 'AI 스튜디오 그룹', heading: 'AI 스튜디오 그룹 문의', helper: '반복 콘텐츠 업무와 운영 데이터를 정리하는 그룹 프로그램을 상담하고 싶어요.', icon: MessageSquare, messageLabel: '현재 가장 고민인 점', messagePlaceholder: '예: 콘텐츠 업무가 많아요, 운영 데이터를 정리하고 싶어요 등', submitLabel: 'AI 스튜디오 그룹 문의하기' },
     { value: 'ai-workshop', label: 'AI 워크숍', heading: 'AI 워크숍 문의', helper: '팀 또는 조직을 위한 맞춤 AI 워크숍·교육을 문의하고 싶어요.', icon: MessageSquare, messageLabel: '교육 / 워크숍 요청 내용', messagePlaceholder: '예: 팀 규모, 원하는 주제, 희망 일정 등', submitLabel: 'AI 워크숍 문의하기' },
     { value: 'starter-homepage', label: '스타터 홈페이지', heading: '스타터 홈페이지 문의', helper: '꼭 필요한 페이지만 담은 기본 홈페이지 제작을 상담하고 싶어요.', icon: MessageSquare, messageLabel: '제작 요청 내용', messagePlaceholder: '예: 업종, 필요한 페이지, 현재 준비된 자료 등', submitLabel: '스타터 홈페이지 문의하기' },
@@ -52,6 +53,7 @@ const getInquiryMeta = (type, locale = 'ko') => {
 
 const initialForm = {
   inquiryType: 'free-check',
+  workMode: 'unsure',
   company: '',
   name: '',
   email: '',
@@ -90,12 +92,14 @@ const buildMailtoLink = ({
   businessStage,
   message,
   inquiryType,
+  workMode,
 }, locale = 'ko') => {
   const inquiryMeta = getInquiryMeta(inquiryType, locale);
   const copy = FORM_COPY[locale] || FORM_COPY.ko;
   const isAIReport = inquiryType === 'ai-report-standard';
   const subject = `[Goodman SEO] ${inquiryMeta.label}${company ? ` - ${company}` : ''}`;
   const baseBody = [
+    `${locale === 'en' ? 'Preferred support' : '희망 진행 방식'}: ${workModeLabel(workMode, locale)}`,
     `${locale === 'en' ? 'Email' : '이메일'}: ${email || '-'}`,
     `${copy.mailLabels[0]}: ${inquiryMeta.label}`,
     `${copy.mailLabels[1]}: ${company || '-'}`,
@@ -132,6 +136,7 @@ const ContactForm = ({
   formName = 'contact',
   footerText = '메일로도 바로 이어집니다.',
   initialInquiryType = 'free-check',
+  initialWorkMode = 'unsure',
   locale = 'ko',
 }) => {
   const copy = FORM_COPY[locale] || FORM_COPY.ko;
@@ -139,6 +144,7 @@ const ContactForm = ({
   const [form, setForm] = useState({
     ...initialForm,
     inquiryType: getInquiryMeta(initialInquiryType, locale).value,
+    workMode: getWorkMode(initialWorkMode),
   });
   const [status, setStatus] = useState('idle');
   const [notice, setNotice] = useState('');
@@ -181,6 +187,7 @@ const ContactForm = ({
           _replyto: form.email,
           inquiryType: inquiryMeta.label,
           ...form,
+          preferredSupport: workModeLabel(form.workMode, locale),
         }),
       });
 
@@ -195,6 +202,7 @@ const ContactForm = ({
       setForm((current) => ({
         ...initialForm,
         inquiryType: current.inquiryType,
+        workMode: current.workMode,
       }));
     } catch {
       setStatus('fallback');
@@ -215,7 +223,18 @@ const ContactForm = ({
       <input type="hidden" name="bot-field" value={form['bot-field']} readOnly />
       <input type="hidden" name="_template" value="table" />
       <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="preferredSupport" value={workModeLabel(form.workMode, locale)} />
       <input type="hidden" name="_subject" value={`[Goodman SEO] ${inquiryMeta.label}${form.company ? ` - ${form.company}` : ''}`} />
+
+      <fieldset className="grid gap-3 rounded-lg border border-[#ded8cf] p-4">
+        <legend className="px-2 text-sm font-bold text-[#102133]">{locale === 'en' ? 'How would you like us to help?' : '어떤 방식으로 도움받고 싶으세요?'}</legend>
+        {[...(workModes[locale] || workModes.ko), { value: 'unsure', title: workModeLabel('unsure', locale) }].map(mode => (
+          <label key={mode.value} className="flex min-h-10 cursor-pointer items-center gap-3 text-sm text-[#44515d]">
+            <input type="radio" name="workMode" value={mode.value} checked={form.workMode === mode.value} onChange={handleChange} />{mode.title}
+          </label>
+        ))}
+        <p className="text-xs leading-relaxed text-[#44515d]">{locale === 'en' ? 'Tell us your task below. Scope, responsibilities, tool fees and ad spend are discussed before work begins.' : '아래에서 필요한 일을 알려주세요. 작업 범위·역할·도구 비용·광고비는 진행 전에 협의합니다.'}</p>
+      </fieldset>
 
       <div className="rounded-[0.7rem] border border-[var(--glass-border)] bg-[var(--bg-darker)] px-4 py-4 text-sm leading-relaxed text-text-muted">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#44515d]">{copy.typeHeading}</p>

@@ -1,5 +1,13 @@
 # Product
 
+## Approved direction — coaching-led, with done-for-you support
+
+Publication of this implementation was approved by the owner on 2026-11-23. Check docs/current-status.md for the deployment outcome; the earlier preview-only wording below is historical.
+
+The homepage leads with the owner's approved copy: "내 사업의 홈페이지와 마케팅, AI로 직접 해보세요." Supporting line: "소상공인·1인 사업자를 위한 AI 도입과 실전 코칭". The primary action is AI coaching enquiry; the secondary action shows work areas. AX may be explained in plain language, not used as the main headline.
+
+Separate WHAT (websites, Google/SEO, Facebook ads/content, routine AI tasks) from HOW (learn yourself, work together, delegate). Customers without time or confidence can keep using the existing production and setup services. Keep current prices, twelve sample websites, course and report. Do not invent coaching prices, new packages, guarantees or student success stories. Use the sample collection as labelled examples, not testimonials. This decision supersedes narrower historical positioning below. Current implementation is a local preview, not production approval.
+
 ## Register
 
 brand

@@ -1,5 +1,11 @@
 # GoodmanSEO Project Context
 
+## Current approved direction: learn, coach, delegate
+
+The owner approved pushing this implementation on 2026-11-23. The earlier preview-only restriction below is superseded for this revision; see docs/current-status.md for verified deployment state.
+
+Lead the homepage with "내 사업의 홈페이지와 마케팅, AI로 직접 해보세요." and the exact owner-approved supporting copy. Teach practical AI use on the customer's own business, while retaining existing done-for-you website/SEO services for customers without time or confidence. Facebook ads/content support is in scope; its work and cost are agreed individually. Three support choices: learn, coach, done-for-you. Keep existing prices and all twelve samples; no new prices or result guarantees. The older ranking-only and narrow setup-only positioning are superseded. Implementation is preview-only until the owner approves this new version for publication; the previous restoration deployment approval is not reused.
+
 ## Owner-approved restoration (2026-11-22)
 
 The owner requested restoration of the full pre-reset site, including the service catalogue, AI course, AI business report, twelve sample websites and English navigation. This supersedes the November 8 ranking-only positioning. Preserve the restored content and prices; do not redesign or narrow it again without asking. Facebook advertising is also part of the owner's work, but adding new advertising packages or prices is outside this restoration.

@@ -1,6 +1,18 @@
 # Current Status
 
-Last updated: 2026-11-22
+Last updated: 2026-11-23
+
+- 2026-11-23 publication authorised: the owner requested “푸쉬” after reviewing the coaching-led implementation summary. Publishing the verified local changes to GitHub main; CI and public deployment verification pending. This supersedes the preview-only restriction below for this exact revision.
+
+## Coaching-led homepage preview (not deployed)
+
+- Current local branch: `codex/learn-coach-done-for-you`, based on `7fe19155706b7f24e7f498d8009dff3a7fe2dfec`, in `F:/Antigravity/goodmanseo/tmp/restore-release-20261122`. The original checkout remains stale/dirty and must not be used for promotion.
+- Approved hero: “내 사업의 홈페이지와 마케팅, / AI로 직접 해보세요.” Supporting copy: “무엇부터 시작할지 막막하다면 굳맨과 함께하세요. / 필요한 기본기를 배우고, 내 사업에 적용하고, 직접 운영하는 방법까지 익힙니다.” Eyebrow: “소상공인·1인 사업자를 위한 AI 도입과 실전 코칭”. Buttons: “AI 실전 코칭 상담하기” and “함께 할 수 있는 일 보기”.
+- Implemented local changes: homepage and coaching page; shared three-way learn/coach/done-for-you section; pricing-page introduction; inquiry mode selection and payload; navigation/footer wording; homepage and coaching metadata, static generator and CI title assertion. Existing package prices, twelve website examples, AI course and AI report remain. Samples are labelled as examples, not student outcomes. Coaching and advertising scope/cost are agreed individually, with no invented prices or results.
+- Shared positioning guidance updated in PRODUCT.md, CLAUDE.md, AGENTS.md and wiki/concepts/positioning.md. The new owner-approved direction supersedes the historical website/search-only guardrail. Root wiki tooling/schema are absent in this historical release clone; full wiki lint is not available here.
+- Validation: lint and production build passed (existing bundle-size warning remains); desktop/tablet/mobile checks at 1440/768/390 px across home, coaching, pricing, contact and English routes found no overflow, broken images or page errors. Home retains twelve sample links. Contact mode/type, required email, invalid-mode fallback, both hero CTAs and mocked submit payload/success were verified. No real inquiry email was sent. `git diff --check` passed.
+- Local preview: http://127.0.0.1:4183/ (temporary running preview). Reviewed screenshots: `F:/Antigravity/goodmanseo/output/playwright/coaching-home-1440.png` and `F:/Antigravity/goodmanseo/output/playwright/coaching-home-390.png`.
+- Changes remain uncommitted and unpushed. Production still has the completed restoration described below, not this coaching-led preview. Next step: owner preview/review, then obtain explicit publication approval before committing/pushing/deploying the new direction.
 
 - Production restoration COMPLETE: commit c8e99abb2457d96ad201a680e67a060926dd934e pushed to GitHub main; Cloudflare deployment b21efaa3-c275-4962-9919-764cf04909ba and GitHub build succeeded. Public goodmanseo.com serves index-DtNEbldV.js. Six routes checked at 1440px/390px: HTTP 200, no overflow, broken images or page errors. All 12 sample URLs returned 200. Required email and AI report inquiry selection verified; sitemap excludes retired AI news. No real inquiry submitted. Live screenshots: F:/Antigravity/goodmanseo/output/playwright/restored-live-1440.png and restored-live-390.png. Original checkout remains stale/dirty; continue from this release checkout or current remote main. Earlier IN PROGRESS notes below are the pre-deployment record and superseded by this completion entry.
 

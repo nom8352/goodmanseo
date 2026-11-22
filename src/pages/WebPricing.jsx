@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, CircleCheckBig, ChevronDown } from 'lucide-react';
 import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
+import WorkWays from '../components/WorkWays';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -232,16 +233,21 @@ const WebPricing = () => {
             서비스
           </div>
           <h1 className="text-[clamp(2.3rem,4.5vw,3.6rem)] font-black leading-[1.15] tracking-[-0.04em] text-[#102133] text-balance">
-            검색과 문의를 위한
+            배우거나, 함께하거나,
             <br />
-            <span className="text-[#102133]">홈페이지</span> 기본 세팅
+            <span className="text-[#102133]">필요한 일을 맡기세요.</span>
           </h1>
           <p className="mt-5 text-[1.05rem] leading-[1.75] text-[#44515d] font-medium max-w-xl mx-auto text-pretty">
-            홈페이지 제작, 구글 비즈니스, On-page SEO를 필요한 범위에 맞춰 정리합니다.
+            진행 방식부터 선택하세요. 아래의 기존 제작·설정 가격은 그대로이며, 코칭과 광고 지원은 목표와 범위를 확인한 뒤 비용을 안내합니다.
           </p>
         </Motion.div>
 
         {/* 1. 홈페이지 제작 */}
+        <WorkWays />
+        <div className="my-8 flex flex-wrap gap-4 text-sm font-bold text-[#102133]">
+          <Link to="/contact?type=ai-mentoring&mode=coach" className="underline underline-offset-4">코칭 범위·비용 문의</Link>
+          <Link to="/contact?type=general-inquiry&mode=done-for-you" className="underline underline-offset-4">광고·부분 대행 문의</Link>
+        </div>
         <section id="website-packages" className="section-block !min-h-0 px-0">
           <div className="w-full">
             <div className="section-heading text-center">

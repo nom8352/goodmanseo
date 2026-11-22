@@ -6,16 +6,15 @@ import {
   MessageSquare,
   Monitor,
   Cpu,
-  CheckCircle,
   ClipboardCheck,
   Bot,
   PlayCircle
 } from 'lucide-react';
-import { motion as Motion, AnimatePresence } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import Seo from '../components/Seo';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
-import heroLadyImage from '../../img/home-hero-consultant.png';
-import testimonialAvatarOne from '../../img/testimonial-avatar-1.png';
+import WorkWays from '../components/WorkWays';
+import { approachSeo } from '../data/serviceApproach';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -26,187 +25,44 @@ const fadeUp = (delay = 0, y = 32) => ({
   viewport: { once: true, amount: 0.15 },
 });
 
-const GoogleLogo = ({ className = 'h-4 w-4' }) => (
-  <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
-    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
-    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
-    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
-    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
-  </svg>
+const HeroWorkVisual = ({ locale }) => (
+  <figure className="my-6 overflow-hidden rounded-xl border border-[#ded8cf] bg-white lg:my-12">
+    <img src="/samples/previews/north-lakes-local-cafe.jpg" alt={locale === 'en' ? 'Example cafe website from the GoodmanSEO sample collection' : '굳맨의 로컬 카페 홈페이지 제작 예시'} className="aspect-[16/10] w-full object-cover object-top" width="800" height="500" />
+    <figcaption className="p-5 text-[#102133]">
+      <p className="text-xs font-semibold text-[#44515d]">{locale === 'en' ? 'Website example · not a student testimonial' : '홈페이지 제작 예시 · 수강생 사례가 아닙니다'}</p>
+      <p className="mt-2 text-lg font-bold">{locale === 'en' ? 'Your business. Your way of working.' : '내 사업에 맞게, 내 상황에 맞게.'}</p>
+      <p className="mt-2 text-sm leading-relaxed text-[#44515d]">{locale === 'en' ? 'Learn to create and update your website, build it with guidance, or have us handle production.' : '만들고 수정하는 법을 배우거나, 함께 진행하거나, 제작을 맡길 수 있습니다.'}</p>
+    </figcaption>
+  </figure>
 );
-
-const ReviewAvatar = ({ src, className = 'h-8 w-8' }) => (
-  <span className={`block shrink-0 overflow-hidden rounded-full bg-[#f1ebe3] ${className}`}>
-    <img
-      src={src}
-      alt=""
-      aria-hidden="true"
-      className="h-full w-full object-cover"
-    />
-  </span>
-);
-
-const HeroSocialProofVisual = ({ locale = 'ko' }) => {
-  const isEnglish = locale === 'en';
-
-  return (
-    <Motion.div
-      initial={{ opacity: 0, y: 22 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 0.7, delay: 0.15, ease }}
-      className="relative mx-auto w-full max-w-[430px] lg:mx-0 lg:max-w-[560px]"
-      aria-label={isEnglish ? 'GoodmanSEO website and Google Business review visual' : 'GoodmanSEO 홈페이지와 구글 비즈니스 점검 안내 이미지'}
-    >
-      <div className="absolute inset-x-8 bottom-2 h-20 rounded-full bg-[#102133]/10 blur-3xl" />
-
-      <div className="relative min-h-[330px] sm:min-h-[420px] lg:min-h-[500px]">
-        <div className="absolute bottom-8 right-2 z-0 h-[66%] w-[54%] rounded-[1.1rem] border border-white/60 bg-white/34 shadow-[0_18px_40px_rgba(16,33,51,0.06)] backdrop-blur-[2px] sm:right-8 lg:right-12" />
-
-        <div className="absolute bottom-0 right-0 z-30 h-full w-full overflow-hidden pointer-events-none">
-          <Motion.img
-            src={heroLadyImage}
-            alt={isEnglish ? 'GoodmanSEO consultant holding a laptop' : '노트북을 들고 홈페이지 점검을 안내하는 GoodmanSEO 상담자'}
-            initial={{ opacity: 0, y: 20, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.78, delay: 0.18, ease }}
-            className="absolute right-0 top-0 h-[430px] w-auto max-w-none object-contain drop-shadow-[0_22px_34px_rgba(16,33,51,0.10)] sm:h-[548px] lg:h-[620px]"
-            loading="eager"
-          />
-        </div>
-
-        <Motion.div
-          initial={{ opacity: 0, x: 24, y: 8 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.55, ease }}
-          className="absolute left-0 top-2 z-20 w-[112px] rounded-[0.7rem] border border-[#d8dee5] bg-white/92 p-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-2 sm:top-5 sm:w-[144px] sm:p-3.5"
-        >
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <p className="text-[0.5rem] font-extrabold uppercase tracking-[0.08em] text-[#64748b] sm:text-[0.58rem]">Inquiry Flow</p>
-              <p className="mt-0.5 text-sm font-black tracking-[-0.04em] text-[#1d4ed8] sm:text-base">
-                {isEnglish ? 'Clearer enquiry path' : '문의 흐름 정리'}
-              </p>
-            </div>
-            <span className="rounded-full bg-[#eef3f7] px-2 py-0.5 text-[0.55rem] font-bold text-[#2d6fa3]">
-              30d
-            </span>
-          </div>
-          <svg className="mt-2 h-9 w-full overflow-visible sm:h-11" viewBox="0 0 150 64" role="img" aria-label={isEnglish ? 'Rising enquiry trend graph' : '문의 흐름 상승 그래프'}>
-            <path d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8" fill="none" stroke="#dce4eb" strokeWidth="8" strokeLinecap="round" />
-            <Motion.path
-              d="M4 56 C28 50 39 48 55 39 C72 29 84 35 99 24 C116 12 130 15 146 8"
-              fill="none"
-              stroke="#2d6fa3"
-              strokeWidth="4"
-              strokeLinecap="round"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 0.9, delay: 0.82, ease }}
-            />
-          </svg>
-        </Motion.div>
-
-        <Motion.div
-          initial={{ opacity: 0, x: -22, y: 12 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.55, delay: 0.68, ease }}
-          className="absolute left-1 top-[12.2rem] z-20 w-[142px] rounded-[0.7rem] border border-[#ddd6cc] bg-white/94 p-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-0 sm:top-[14.8rem] sm:w-[190px] sm:p-3.5"
-        >
-          <div className="flex items-center gap-3">
-            <ReviewAvatar src={testimonialAvatarOne} className="h-8 w-8 ring-2 ring-white" />
-            <div>
-              <p className="text-[0.68rem] font-extrabold text-[#102133] sm:text-xs">Client Review</p>
-              <p className="text-[0.56rem] font-semibold text-[#9a6b2f] sm:text-[0.6rem]">Local owner</p>
-            </div>
-          </div>
-          <p className="mt-2 text-[0.65rem] font-semibold leading-relaxed text-[#102133] sm:text-[0.72rem]">
-            "Search brought us more direct inquiries."
-          </p>
-          <div className="mt-2 flex items-center gap-0.5 text-xs text-[#f5b84b] sm:text-sm" aria-label={isEnglish ? '5 out of 5 stars' : '별점 5점'}>
-            {'★★★★★'.split('').map((star, index) => (
-              <Motion.span
-                key={`${star}-${index}`}
-                initial={{ opacity: 0, scale: 0.7 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.22, delay: 0.95 + index * 0.06, ease }}
-              >
-                {star}
-              </Motion.span>
-            ))}
-          </div>
-        </Motion.div>
-
-        <Motion.div
-          initial={{ opacity: 0, x: 18, y: 8 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.42, delay: 0.84, ease }}
-          className="absolute left-[4.4rem] top-[7.7rem] z-20 flex items-center gap-2 rounded-[0.7rem] border border-[#d8dee5] bg-white/94 px-3 py-2.5 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-[5.4rem] sm:top-[9.7rem] sm:px-3.5 sm:py-3"
-        >
-          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white shadow-sm">
-            <GoogleLogo className="h-5 w-5" />
-          </span>
-          <div>
-            <p className="text-xs font-black leading-none text-[#102133]">Google</p>
-            <p className="mt-1 text-[0.62rem] font-bold text-[#64748b]">
-              {isEnglish ? 'Profile setup (example)' : '프로필 설정 예시'}
-            </p>
-          </div>
-        </Motion.div>
-
-        <Motion.div
-          initial={{ opacity: 0, x: 18, y: 8 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.42, delay: 0.96, ease }}
-          className="absolute left-[3.8rem] top-[19.1rem] z-20 w-[132px] rounded-[0.7rem] border border-[#d8dee5] bg-white/94 p-3 shadow-[0_8px_18px_rgba(16,33,51,0.10)] sm:left-[4.8rem] sm:top-[23.4rem] sm:w-[154px]"
-        >
-          <p className="text-[0.58rem] font-bold text-[#64748b]">
-            {isEnglish ? 'Enquiries' : '문의 연결'}
-          </p>
-          <p className="mt-1 text-base font-black tracking-[-0.04em] text-[#102133]">
-            {isEnglish ? 'Direct enquiry path' : '직접 문의로 연결'}
-          </p>
-          <p className="mt-1 text-[0.56rem] font-bold text-[#2d6fa3]">
-            {isEnglish ? 'From search & profile' : '검색·프로필에서'}
-          </p>
-        </Motion.div>
-
-      </div>
-    </Motion.div>
-  );
-};
 
 const problemsKo = [
-  { num: '01', title: '구글 검색에 잘 나오지 않아요', desc: '검색해도 내 업체가 보이지 않아요.' },
-  { num: '02', title: '홈페이지가 오래되고 취약해요', desc: '첫인상이 중요하지만 홈페이지가 낡았어요.' },
-  { num: '03', title: '리뷰가 없거나 평가가 낮아요', desc: '리뷰가 부족해서 신뢰가 가지 않아요.' },
-  { num: '04', title: '홈페이지로 문의가 잘 안 와요', desc: '방문자는 있는데 연락으로 이어지지 않아요.' },
-  { num: '05', title: '업체 정보가 제각각 달라요', desc: '주소, 전화번호가 여기저기 달라요.' },
-  { num: '06', title: '경쟁업체보다 신뢰감이 떨어져요', desc: '비슷한 서비스인데 선택받지 못해요.' }
+  { num: '01', title: 'AI, 어디부터 시작할까요?', desc: '도구보다 내 사업에 필요한 일부터 정하고 싶어요.' },
+  { num: '02', title: '직접 만들고 수정하고 싶어요', desc: '홈페이지와 콘텐츠를 스스로 다루는 법을 배우고 싶어요.' },
+  { num: '03', title: '혼자 하다가 막혔어요', desc: '방향이 맞는지, 무엇을 고칠지 함께 확인하고 싶어요.' },
+  { num: '04', title: '배울 시간이 부족해요', desc: '본업에 집중하고 제작과 설정은 맡기고 싶어요.' },
+  { num: '05', title: '어려운 부분만 맡길 수 있나요?', desc: '할 수 있는 일은 직접 하고 필요한 부분만 도움받고 싶어요.' },
+  { num: '06', title: '만든 뒤 운영도 고민이에요', desc: '기본 수정 방법을 배우거나 관리 지원을 받고 싶어요.' },
 ];
-
 const problemsEn = [
-  { num: '01', title: 'My business is hard to find on Google', desc: 'Customers search, but my business does not appear clearly.' },
-  { num: '02', title: 'My website looks dated or unreliable', desc: 'The first impression does not match the quality of my service.' },
-  { num: '03', title: 'I have too few reviews', desc: 'Customers cannot see enough proof to feel confident.' },
-  { num: '04', title: 'Website visits are not becoming enquiries', desc: 'People visit, but they do not take the next step.' },
-  { num: '05', title: 'My business details do not match', desc: 'Phone numbers, addresses or opening hours differ online.' },
-  { num: '06', title: 'Competitors look more trustworthy', desc: 'Similar businesses are being chosen ahead of mine.' },
+  { num: '01', title: 'Where should I start with AI?', desc: 'Choose a useful business task before choosing the tools.' },
+  { num: '02', title: 'I want to build and edit it myself', desc: 'Learn to manage your website and content.' },
+  { num: '03', title: 'I am stuck doing it alone', desc: 'Get direction and feedback on your work.' },
+  { num: '04', title: 'I do not have time to learn', desc: 'Focus on your business and delegate the setup.' },
+  { num: '05', title: 'Can I delegate just one part?', desc: 'Do what you can and get help where you need it.' },
+  { num: '06', title: 'What happens after launch?', desc: 'Learn basic updates or discuss ongoing care.' },
 ];
-
 const servicesKo = [
-  { icon: Monitor, title: '홈페이지 제작', desc: '신뢰를 만드는 전문적인 홈페이지' },
-  { icon: Search, title: '구글 비즈니스 세팅', desc: '검색과 지도 기본 정보를 정리합니다' },
-  { icon: CheckCircle, title: 'On-page SEO', desc: '검색 기본 구조를 정리합니다' },
-  { icon: MessageSquare, title: '소셜 링크 연결 지원', desc: '홈페이지에 기본 링크를 연결합니다' },
-  { icon: Cpu, title: 'AI 업무 지원', desc: '문구와 반복 안내를 가볍게 돕습니다' }
+  { icon: Monitor, title: '홈페이지', desc: 'AI로 제작·수정을 배우거나, 필요한 홈페이지 제작을 맡깁니다.' },
+  { icon: Search, title: '구글 검색·SEO', desc: '검색 기본기를 익히고 적용하거나, 프로필·페이지 설정을 맡깁니다.' },
+  { icon: MessageSquare, title: '광고·콘텐츠', desc: '페이스북 광고 소재·설정을 함께 살펴보거나 대행 범위를 상담합니다.' },
+  { icon: Cpu, title: 'AI·반복 업무', desc: '고객 안내·리뷰 답변·자료 정리에 AI를 활용하는 방법을 익힙니다.' },
 ];
-
 const servicesEn = [
-  { icon: Monitor, title: 'Website Design', desc: 'A clear, professional website that builds trust' },
-  { icon: Search, title: 'Google Business Setup', desc: 'Essential business details organised for Search and Maps' },
-  { icon: CheckCircle, title: 'On-page SEO', desc: 'Core page structure prepared for search visibility' },
-  { icon: MessageSquare, title: 'Social Link Setup', desc: 'Your key social profiles connected to the website' },
-  { icon: Cpu, title: 'AI Workflow Support', desc: 'Practical help with copy and repeat customer messages' },
+  { icon: Monitor, title: 'Websites', desc: 'Learn to build and edit with AI, or have your website made for you.' },
+  { icon: Search, title: 'Google & SEO', desc: 'Learn search basics or delegate profile and on-page setup.' },
+  { icon: MessageSquare, title: 'Ads & content', desc: 'Work on Facebook ad creative and settings, or discuss managed support.' },
+  { icon: Cpu, title: 'AI & routine tasks', desc: 'Use AI for customer messages, review replies and organising information.' },
 ];
 
 const sampleSitesKo = [
@@ -290,23 +146,19 @@ const sampleTitlesEn = [
 const HOME_CONTENT = {
   ko: {
     headlines: [
-      { text: '비즈니스,', highlight: '홈페이지가 없나요?' },
-      { text: '구글에서,', highlight: '검색이 안 되시나요?' },
-      { text: 'SEO 기본,', highlight: '어디부터 손볼까요?' },
+      { text: '내 사업의 홈페이지와 마케팅,', highlight: 'AI로 직접 해보세요.' },
     ],
-    seoTitle: '홈페이지 제작 · 구글 비즈니스 · 기본 SEO',
-    seoDescription: 'GoodmanSEO는 홈페이지 제작, Google Business Profile 세팅, On-page SEO 기본 정리를 도와드립니다.',
-    seoKeywords: ['홈페이지 제작', '구글 비즈니스 프로필', '온페이지 SEO', '비즈니스 홈페이지', '시드니 홈페이지 제작'],
-    heroCopy: <>홈페이지, 구글 비즈니스, 기본 SEO를 정리해<br />고객이 믿고 문의할 수 있는 기본 환경을 만듭니다.<br />필요하면 소셜 계정 링크 연결도 기본으로 도와드립니다.</>,
-    primaryCta: '무료 점검 신청',
-    secondaryCta: '서비스 및 가격 보기',
-    contactPath: '/contact',
-    pricingPath: '/pricing',
+    seoKeywords: ['AI 실전 코칭', 'AI 도입', '홈페이지 제작', '구글 SEO', '온라인 마케팅'],
+    heroCopy: <>무엇부터 시작할지 막막하다면 굳맨과 함께하세요.<br />필요한 기본기를 배우고, 내 사업에 적용하고, 직접 운영하는 방법까지 익힙니다.</>,
+    primaryCta: 'AI 실전 코칭 상담하기',
+    secondaryCta: '함께 할 수 있는 일 보기',
+    contactPath: '/contact?type=ai-mentoring&mode=coach',
+    pricingPath: '/#services',
     issuesLabel: 'Common Issues',
     issuesTitle: '혹시 이런 문제로 고민하고 계신가요?',
     solutionsLabel: 'Our Solutions',
-    solutionsTitle: '서비스 소개',
-    solutionsCopy: '홈페이지 제작부터 구글 비즈니스, 기본 SEO까지 정리하고, 소셜은 링크 연결 정도로 지원합니다.',
+    solutionsTitle: '어떤 일을 함께 할까요?',
+    solutionsCopy: '홈페이지·검색·광고·반복 업무 중 지금 필요한 일부터 선택하세요. 배우기, 코칭, 대행의 범위는 상담에서 정합니다.',
     courseLabel: '굳팀장 AI 실무 강의',
     courseTitle: 'Codex로 콘텐츠와 반복업무를 직접 정리하고 싶다면',
     courseCopy: '홈페이지 문구, 고객문의, 반복 안내문에 바로 쓰는 AI 활용법을 사장님 눈높이에 맞춰 정리한 비개발자용 실무 강의입니다.',
@@ -318,34 +170,30 @@ const HOME_CONTENT = {
     reportCta: '비즈니스 리포트 보기',
     reportPath: '/ai-report',
     samplesLabel: 'Sample Websites',
-    samplesTitle: '업종별 샘플 사이트',
+    samplesTitle: '어떤 홈페이지를 만들 수 있을까요?',
     samplesCopy: '청소, 음식점, 스튜디오, 수리, 전문 서비스처럼 호주 로컬 비즈니스에 맞춘 홈페이지 예시입니다. 내 업종에 가까운 형태를 먼저 확인해보세요.',
     sampleCta: '보기',
     sampleAlt: (title) => `${title} 샘플 홈페이지 미리보기`,
-    sampleFooter: '마음에 드는 샘플이 있으면 무료 점검 신청 때 업종과 원하는 방향을 함께 남겨주세요.',
+    sampleFooter: '마음에 드는 예시와 함께, 직접 배우고 싶은지 제작을 맡기고 싶은지 알려주세요.',
     problems: problemsKo,
     services: servicesKo,
     sampleSites: sampleSitesKo,
   },
   en: {
     headlines: [
-      { text: 'Does your business', highlight: 'need a website?' },
-      { text: 'Not showing up', highlight: 'clearly on Google?' },
-      { text: 'Not sure where', highlight: 'to start with SEO?' },
+      { text: 'Your website and marketing.', highlight: 'Learn to do it with AI.' },
     ],
-    seoTitle: 'Websites · Google Business · SEO Basics',
-    seoDescription: 'GoodmanSEO helps Australian local businesses improve their website, Google Business Profile and on-page SEO basics.',
-    seoKeywords: ['small business website Australia', 'Google Business Profile setup', 'local SEO basics', 'Sydney website design', 'business website review'],
-    heroCopy: <>We organise your website, Google Business Profile and SEO basics<br className="hidden sm:block" /> so customers can find, trust and contact your business.<br className="hidden sm:block" /> We can also connect your key social profiles.</>,
-    primaryCta: 'Request a Free Check',
-    secondaryCta: 'Explore Our Services',
-    contactPath: '/en/contact',
+    seoKeywords: ['AI coaching', 'small business AI', 'website design Australia', 'Google SEO', 'online marketing'],
+    heroCopy: <>Not sure where to start? Work with GoodmanSEO to learn the basics, apply them to your business and learn to manage the work yourself.</>,
+    primaryCta: 'Enquire about AI coaching',
+    secondaryCta: 'Explore what we can work on',
+    contactPath: '/en/contact?type=ai-mentoring&mode=coach',
     pricingPath: '/en#services',
     issuesLabel: 'Common Issues',
     issuesTitle: 'Do any of these problems sound familiar?',
     solutionsLabel: 'Our Solutions',
-    solutionsTitle: 'Practical support for your online basics',
-    solutionsCopy: 'We organise your website, Google Business Profile and on-page SEO, with simple social profile connections where needed.',
+    solutionsTitle: 'What would you like to work on?',
+    solutionsCopy: 'Start with a website, search, ads or a routine task. We agree what you will do and where we will help.',
     courseLabel: 'Practical AI Training',
     courseTitle: 'Want to organise content and repeat tasks with Codex?',
     courseCopy: 'A practical, non-technical course for using AI with website copy, customer enquiries and repeat business messages.',
@@ -361,7 +209,7 @@ const HOME_CONTENT = {
     samplesCopy: 'Explore practical website examples for cleaning, hospitality, studios, repairs and professional services. Start with the example closest to your business.',
     sampleCta: 'View',
     sampleAlt: (title) => `${title} sample website preview`,
-    sampleFooter: 'Found a direction you like? Tell us your industry and preferred example when you request a free check.',
+    sampleFooter: 'Found an example you like? Tell us whether you want to learn, work together or delegate the build.',
     problems: problemsEn,
     services: servicesEn,
     sampleSites: sampleSitesKo.map((site, index) => ({ ...site, title: sampleTitlesEn[index] })),
@@ -372,20 +220,11 @@ const Home = ({ locale = 'ko' }) => {
   const content = HOME_CONTENT[locale] || HOME_CONTENT.ko;
   const { headlines } = content;
 
-  const [headlineIndex, setHeadlineIndex] = React.useState(0);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      setHeadlineIndex((prev) => (prev + 1) % headlines.length);
-    }, 9500); // Slowed down by 2.5x (from 3.8s to 9.5s)
-    return () => clearInterval(timer);
-  }, [headlines.length]);
-
   return (
     <div className="overflow-hidden bg-[var(--bg-dark)] pt-20">
       <Seo
-        title={content.seoTitle}
-        description={content.seoDescription}
+        title={approachSeo[locale]?.title || approachSeo.ko.title}
+        description={approachSeo[locale]?.description || approachSeo.ko.description}
         path={locale === 'en' ? '/en' : '/'}
         imageAlt={locale === 'en'
           ? 'GoodmanSEO website, Google Business Profile and SEO basics'
@@ -408,52 +247,33 @@ const Home = ({ locale = 'ko' }) => {
               transition={{ duration: 0.75, ease }}
               className="flex flex-col text-left lg:pt-14"
             >
-              <h1
-                style={{ perspective: 1000 }}
-                className="font-serif text-[clamp(1.8rem,4.0vw,3.6rem)] font-bold leading-[1.15] tracking-tight text-[var(--text-main)] min-h-[5.2rem] sm:min-h-[6.8rem] lg:min-h-[8.8rem] flex flex-col justify-center overflow-hidden"
-              >
-                <AnimatePresence mode="wait">
-                  <Motion.span
-                    key={headlineIndex}
-                    initial={{ opacity: 0, y: 50, rotateX: -90 }}
-                    animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                    exit={{ opacity: 0, y: -50, rotateX: 90 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 140, // High stiffness for elastic snap
-                      damping: 12,    // Snappy damping for back-bounce
-                      mass: 0.6       // Light feel to accelerate quickly
-                    }}
-                    style={{ transformOrigin: "50% 50% -40px", transformStyle: "preserve-3d" }}
-                    className="block"
-                  >
-                    <span className="block">{headlines[headlineIndex].text}</span>
-                    <span className="block text-[var(--accent-primary)]">
-                      {headlines[headlineIndex].highlight}
-                    </span>
-                  </Motion.span>
-                </AnimatePresence>
+              <p className="mb-4 text-sm font-semibold text-[#44515d]">{locale === 'en' ? 'AI adoption and practical coaching for small businesses' : '소상공인·1인 사업자를 위한 AI 도입과 실전 코칭'}</p>
+              <h1 className="font-sans text-[clamp(1.9rem,3.5vw,3.1rem)] font-extrabold leading-[1.25] tracking-[-0.03em] text-[#102133]">
+                <span className="block">{headlines[0].text}</span>
+                <span className="mt-2 block">{headlines[0].highlight}</span>
               </h1>
 
               <p className="mt-6 max-w-[42rem] text-[clamp(0.95rem,2vw,1.1rem)] leading-relaxed text-text-muted">{content.heroCopy}</p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link to={content.contactPath} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[0.2rem] border border-[#102133] bg-[#102133] px-5 py-3 text-xs font-black text-white shadow-[0_8px_18px_rgba(16,33,51,0.12)] transition hover:-translate-y-0.5 hover:bg-[#172d42]">
+                <Link to={content.contactPath} className="inline-flex min-h-11 items-center justify-center gap-2 rounded-[0.2rem] border border-[#102133] bg-[#102133] px-5 py-3 text-xs font-black text-white transition hover:-translate-y-0.5 hover:bg-[#172d42]">
                   {content.primaryCta}
                   <ArrowRight size={15} />
                 </Link>
-                <Link to={content.pricingPath} className="inline-flex min-h-11 items-center justify-center rounded-[0.2rem] border border-[#aeb6bc] bg-white/60 px-5 py-3 text-xs font-black text-[#102133] shadow-[0_8px_18px_rgba(16,33,51,0.04)] transition hover:-translate-y-0.5 hover:bg-white">
+                <Link to={content.pricingPath} className="inline-flex min-h-11 items-center justify-center rounded-[0.2rem] border border-[#aeb6bc] bg-white/60 px-5 py-3 text-xs font-black text-[#102133] transition hover:-translate-y-0.5 hover:bg-white">
                   {content.secondaryCta}
                 </Link>
               </div>
             </Motion.div>
 
             {/* Right Column: Social proof and performance preview */}
-            <HeroSocialProofVisual locale={locale} />
+            <HeroWorkVisual locale={locale} />
 
           </div>
         </div>
       </section>
+
+      <WorkWays locale={locale} />
 
       {/* 2. Problem Section (6대 고민 라인 그리드) */}
       <section className="max-w-none py-12 md:py-14 lg:py-16 border-t border-[#e7e0d8] bg-white">
@@ -494,14 +314,14 @@ const Home = ({ locale = 'ko' }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:gap-3.5 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 md:gap-3.5 lg:grid-cols-4">
             {content.services.map((svc, i) => {
               const Icon = svc.icon;
               return (
                 <Motion.div
                   key={svc.title}
                   {...fadeUp(i * 0.08, 24)}
-                  className="last:col-span-2 rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.1] sm:p-5 lg:last:col-span-1 flex flex-col items-center justify-between"
+                  className="rounded-[0.45rem] border border-white/10 bg-white/[0.07] p-4 text-center transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/[0.1] sm:p-5 flex flex-col items-center justify-between"
                 >
                   <div className="flex flex-col items-center">
                     <div className="mb-3 md:mb-4 flex h-9 w-9 shrink-0 items-center justify-center rounded-[0.35rem] border border-[#d8c8af]/30 bg-white/[0.06] text-[#d8c8af]">
@@ -626,8 +446,8 @@ const Home = ({ locale = 'ko' }) => {
             <p className="text-[0.76rem] md:text-[0.82rem] leading-relaxed text-[#566471]">
               {content.sampleFooter}
             </p>
-            <Link to={content.contactPath} className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-[0.76rem] font-extrabold text-white transition hover:bg-[#1b3145]">
-              {content.primaryCta}
+            <Link to={locale === 'en' ? '/en/contact?type=general-inquiry' : '/contact?type=general-inquiry'} className="inline-flex items-center justify-center gap-2 rounded-[0.25rem] bg-[#102133] px-5 py-3 text-[0.76rem] font-extrabold text-white transition hover:bg-[#1b3145]">
+              {locale === 'en' ? 'Discuss your project' : '내 상황에 맞는 도움 문의하기'}
               <ArrowRight size={15} />
             </Link>
           </div>
