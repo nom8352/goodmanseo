@@ -27,13 +27,13 @@ const fadeUp = (delay = 0, y = 32) => ({
 });
 
 const HeroWorkVisual = ({ locale }) => (
-  <figure className="my-6 overflow-hidden rounded-xl border border-[#ded8cf] bg-white lg:my-12">
-    <img src={heroConsultant} alt={locale === 'en' ? 'Woman holding a laptop' : '노트북을 들고 있는 여성'} className="h-72 w-full bg-[#f6f2eb] object-contain object-bottom sm:h-96 lg:h-[440px]" width="1024" height="1536" />
-    <figcaption className="p-5 text-[#102133]">
-      <p className="text-lg font-bold">{locale === 'en' ? 'Your business. Your way of working.' : '내 사업에 맞게, 내 상황에 맞게.'}</p>
-      <p className="mt-2 text-sm leading-relaxed text-[#44515d]">{locale === 'en' ? 'Learn to create and update your website, build it with guidance, or have us handle production.' : '만들고 수정하는 법을 배우거나, 함께 진행하거나, 제작을 맡길 수 있습니다.'}</p>
-    </figcaption>
-  </figure>
+  <img
+    src={heroConsultant}
+    alt={locale === 'en' ? 'Woman holding a laptop' : '노트북을 들고 있는 여성'}
+    className="block h-[430px] w-full self-end object-contain object-bottom sm:h-[548px] lg:h-[620px] lg:object-right-bottom"
+    width="1024"
+    height="1536"
+  />
 );
 
 const problemsKo = [
