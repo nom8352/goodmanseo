@@ -2,6 +2,8 @@
 
 Last updated: 2026-11-23
 
+- Coaching-led publication COMPLETE: code commit `b0603feddb7569ba4019ab6d7e417272ba094358` pushed to GitHub main. GitHub Actions run `45031637904` and Cloudflare Pages deployment `e32747b6-9abc-4c08-a40b-287104432614` succeeded. Public goodmanseo.com serves `index-DOs_rGKx.js` with the exact approved hero. Home, coaching, pricing, contact and English home checked at 1440px and 390px: HTTP 200, no horizontal overflow, broken images or page errors. Twelve samples retained; primary hero CTA selects coaching mode. No real inquiry sent. Public screenshot: `F:/Antigravity/goodmanseo/output/playwright/coaching-live-mobile.png`. Earlier pending and preview-only status below is historical and superseded.
+
 - 2026-11-23 publication authorised: the owner requested “푸쉬” after reviewing the coaching-led implementation summary. Publishing the verified local changes to GitHub main; CI and public deployment verification pending. This supersedes the preview-only restriction below for this exact revision.
 
 ## Coaching-led homepage preview (not deployed)
