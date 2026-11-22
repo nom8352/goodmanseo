@@ -15,6 +15,7 @@ import Seo from '../components/Seo';
 import { organizationJsonLd, websiteJsonLd } from '../data/siteSeo';
 import WorkWays from '../components/WorkWays';
 import { approachSeo } from '../data/serviceApproach';
+import heroConsultant from '../../img/home-hero-consultant.png';
 
 const ease = [0.16, 1, 0.3, 1];
 
@@ -27,10 +28,9 @@ const fadeUp = (delay = 0, y = 32) => ({
 
 const HeroWorkVisual = ({ locale }) => (
   <figure className="my-6 overflow-hidden rounded-xl border border-[#ded8cf] bg-white lg:my-12">
-    <img src="/samples/previews/north-lakes-local-cafe.jpg" alt={locale === 'en' ? 'Example cafe website from the GoodmanSEO sample collection' : '굳맨의 로컬 카페 홈페이지 제작 예시'} className="aspect-[16/10] w-full object-cover object-top" width="800" height="500" />
+    <img src={heroConsultant} alt={locale === 'en' ? 'Woman holding a laptop' : '노트북을 들고 있는 여성'} className="h-72 w-full bg-[#f6f2eb] object-contain object-bottom sm:h-96 lg:h-[440px]" width="1024" height="1536" />
     <figcaption className="p-5 text-[#102133]">
-      <p className="text-xs font-semibold text-[#44515d]">{locale === 'en' ? 'Website example · not a student testimonial' : '홈페이지 제작 예시 · 수강생 사례가 아닙니다'}</p>
-      <p className="mt-2 text-lg font-bold">{locale === 'en' ? 'Your business. Your way of working.' : '내 사업에 맞게, 내 상황에 맞게.'}</p>
+      <p className="text-lg font-bold">{locale === 'en' ? 'Your business. Your way of working.' : '내 사업에 맞게, 내 상황에 맞게.'}</p>
       <p className="mt-2 text-sm leading-relaxed text-[#44515d]">{locale === 'en' ? 'Learn to create and update your website, build it with guidance, or have us handle production.' : '만들고 수정하는 법을 배우거나, 함께 진행하거나, 제작을 맡길 수 있습니다.'}</p>
     </figcaption>
   </figure>
@@ -266,7 +266,6 @@ const Home = ({ locale = 'ko' }) => {
               </div>
             </Motion.div>
 
-            {/* Right Column: Social proof and performance preview */}
             <HeroWorkVisual locale={locale} />
 
           </div>
